@@ -1,5 +1,25 @@
 const CANDIDATES = [
   {
+    id: "hd12-graff-schultz",
+    race: "House District 12 — Roy / Hooper",
+    caseNumber: "CASE 06",
+    names: "Graff vs. Schultz",
+    verdict: "The Three-PAC Ecosystem",
+    tags: ["Speaker of the House", "PAC Network", "Platform vs. Record"],
+    stamp: "Active",
+    href: "hd12-graff-schultz.html"
+  },
+  {
+    id: "hd11-calder-hall",
+    race: "House District 11 — Washington Terrace / Riverdale",
+    caseNumber: "CASE 05",
+    names: "Calder vs. Hall",
+    verdict: "The Stock Portfolio That Funds Her Campaign",
+    tags: ["Stock Overlap", "Disclosure Gap", "PAC Funding"],
+    stamp: "Active",
+    href: "hd11-calder-hall.html"
+  },
+  {
     id: "hd10-lesser-alvey",
     race: "House District 10 — East / South Ogden",
     caseNumber: "CASE 04",
@@ -50,4 +70,3 @@ const CANDIDATES = [
     href: "joseph-kerry.html"
   }
 ];
-
