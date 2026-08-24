@@ -44,7 +44,7 @@
   .stat-num{font-family:var(--display);font-size:32px;font-weight:900;color:var(--amber);line-height:1;}
   .stat-label{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-faint);text-transform:uppercase;margin-top:5px;}
 
-  .docket-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
+  .docket-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;align-items:center;}
   .filter-btn{
     font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;
     background:var(--paper-card);border:1px solid var(--line-strong);color:var(--ink-soft);
@@ -52,12 +52,37 @@
   }
   .filter-btn:hover{border-color:var(--rust);color:var(--rust);}
   .filter-btn.active{background:var(--burgundy);border-color:var(--burgundy);color:#f4e9dd;}
+  .filter-divider{width:1px;height:20px;background:var(--line-strong);margin:0 4px;}
   .search-box{
     font-family:var(--serif);font-size:14px;color:var(--ink);
     background:var(--paper-card);border:1px solid var(--line-strong);border-radius:20px;
     padding:8px 16px;flex:1 1 200px;min-width:180px;
   }
   .search-box::placeholder{color:var(--ink-faint);}
+
+  .level-section{margin-bottom:44px;}
+  .level-section:last-child{margin-bottom:0;}
+  .level-heading{
+    font-family:var(--display);font-size:20px;font-weight:900;color:var(--burgundy);
+    margin-bottom:18px;display:flex;align-items:baseline;gap:10px;
+  }
+  .level-count{
+    font-family:var(--mono);font-size:12px;color:var(--ink-faint);font-weight:400;letter-spacing:.02em;
+  }
+
+  .county-section{margin-bottom:28px;}
+  .county-section:last-child{margin-bottom:0;}
+  .county-heading{
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:600;margin-bottom:14px;padding-bottom:8px;
+    border-bottom:1px solid var(--line-strong);display:flex;align-items:baseline;gap:10px;
+  }
+  .county-count{color:var(--ink-faint);font-weight:400;letter-spacing:.02em;text-transform:none;}
+  .county-empty{
+    font-family:var(--mono);font-size:13px;color:var(--ink-faint);
+    background:var(--paper-card);border:1px dashed var(--line-strong);border-radius:4px;
+    padding:16px 20px;
+  }
 
   .case-grid{display:flex;flex-direction:column;gap:14px;}
   .case-card{
@@ -87,7 +112,7 @@
     <div>
       <div class="hd-kicker">The Weber County Hive</div>
       <div class="hd-title">2026 Candidates — Case Files</div>
-      <div class="hd-sub">Public records on every Weber County race we're tracking heading into November. We report what's documented. You decide.</div>
+      <div class="hd-sub">Public records on every race we're tracking heading into November — federal races first, then state races by county. We report what's documented. You decide.</div>
     </div>
   </div>
 </div>
@@ -99,11 +124,14 @@
   <div id="stat-strip" class="stat-strip"></div>
 
   <div class="docket-filters">
-    <button class="filter-btn active" data-filter="all">All Races</button>
+    <button class="filter-btn active" data-scope="all">All Races</button>
+    <button class="filter-btn" data-scope="Federal">Federal</button>
+    <span class="filter-divider"></span>
+    <div id="county-filter-buttons" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
     <input id="search" class="search-box" type="text" placeholder="Search by name or race&hellip;">
   </div>
 
-  <div id="case-grid" class="case-grid"></div>
+  <div id="level-groups"></div>
 
   <footer>
     <div class="tagline">We report public records. You decide.</div>
@@ -114,25 +142,62 @@
 
 </div>
 
-<script src="candidates-data.js?v=1"></script>
+<script src="candidates-data.js?v=3"></script>
 <script>
-  const grid = document.getElementById('case-grid');
+  const groupsEl = document.getElementById('level-groups');
   const statStrip = document.getElementById('stat-strip');
   const search = document.getElementById('search');
+  const countyFilterBtns = document.getElementById('county-filter-buttons');
+
+  // County display order within State races — Weber first, then others as added (Davis, etc.)
+  const COUNTY_ORDER = ["Weber", "Davis"];
+
+  function stateCounties(list){
+    const stateRaces = list.filter(c => c.level === "State");
+    const present = [...new Set(stateRaces.map(c => c.county || "Other"))];
+    const known = COUNTY_ORDER.filter(c => present.includes(c));
+    const unknown = present.filter(c => !COUNTY_ORDER.includes(c)).sort();
+    return [...known, ...unknown];
+  }
 
   const daysToElection = Math.ceil((new Date('2026-11-03') - new Date()) / 86400000);
+  const federalCount = CANDIDATES.filter(c => c.level === "Federal").length;
+  const stateCount = CANDIDATES.filter(c => c.level === "State").length;
+  const countyCountAll = stateCounties(CANDIDATES).length;
   statStrip.innerHTML = `
     <div class="stat"><div class="stat-num">${CANDIDATES.length}</div><div class="stat-label">Races on file</div></div>
     <div class="stat"><div class="stat-num">${CANDIDATES.length * 2}+</div><div class="stat-label">Candidates covered</div></div>
+    <div class="stat"><div class="stat-num">${stateCount} / ${federalCount}</div><div class="stat-label">State / Federal</div></div>
     <div class="stat"><div class="stat-num">${daysToElection}</div><div class="stat-label">Days to election</div></div>
   `;
 
-  function renderCases(list){
-    grid.innerHTML = '';
-    if(list.length === 0){
-      grid.innerHTML = `<p style="color:var(--ink-faint);font-family:var(--mono);font-size:14px;">No matching case files.</p>`;
-      return;
-    }
+  let activeScope = 'all'; // 'all' | 'Federal' | a county name
+
+  function buildCountyButtons(){
+    const counties = stateCounties(CANDIDATES);
+    countyFilterBtns.innerHTML = counties.map(county =>
+      `<button class="filter-btn" data-scope="${county}">${county} County</button>`
+    ).join('');
+  }
+
+  function setActiveScope(scope, btn){
+    activeScope = scope;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyFilters();
+  }
+
+  document.querySelectorAll('.docket-filters').forEach(container => {
+    container.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-btn');
+      if(!btn) return;
+      setActiveScope(btn.dataset.scope, btn);
+    });
+  });
+
+  function renderCaseGrid(list){
+    const grid = document.createElement('div');
+    grid.className = 'case-grid';
     list.forEach(c => {
       const a = document.createElement('a');
       a.className = 'case-card';
@@ -148,18 +213,95 @@
       `;
       grid.appendChild(a);
     });
+    return grid;
   }
-  renderCases(CANDIDATES);
 
-  search.addEventListener('input', () => {
+  function renderGroups(list){
+    groupsEl.innerHTML = '';
+    const hasSearchTerm = search.value.trim().length > 0;
+    // Show the generic "no matches" message only for a genuine empty search result.
+    // A scope filter (Federal, or a specific county) with no search term and no
+    // matches yet should fall through to the section placeholders below instead.
+    if(list.length === 0 && (activeScope === 'all' || hasSearchTerm)){
+      groupsEl.innerHTML = `<p style="color:var(--ink-faint);font-family:var(--mono);font-size:14px;">No matching case files.</p>`;
+      return;
+    }
+
+    const federalList = list.filter(c => c.level === "Federal");
+    const stateList = list.filter(c => c.level === "State");
+
+    // FEDERAL section — only rendered if there's at least one federal race,
+    // or if the user is actively filtering to Federal (shows the "coming soon" placeholder)
+    if(federalList.length > 0 || activeScope === 'Federal'){
+      const section = document.createElement('div');
+      section.className = 'level-section';
+      const heading = document.createElement('div');
+      heading.className = 'level-heading';
+      heading.innerHTML = `Federal Races <span class="level-count">(${federalList.length})</span>`;
+      section.appendChild(heading);
+      if(federalList.length === 0){
+        const empty = document.createElement('div');
+        empty.className = 'county-empty';
+        empty.textContent = 'Case files coming soon.';
+        section.appendChild(empty);
+      } else {
+        section.appendChild(renderCaseGrid(federalList));
+      }
+      groupsEl.appendChild(section);
+    }
+
+    // STATE section, subdivided by county
+    if(stateList.length > 0 || activeScope !== 'Federal'){
+      const stateSection = document.createElement('div');
+      stateSection.className = 'level-section';
+      const stateHeading = document.createElement('div');
+      stateHeading.className = 'level-heading';
+      stateHeading.innerHTML = `State Races <span class="level-count">(${stateList.length})</span>`;
+      stateSection.appendChild(stateHeading);
+
+      const counties = stateCounties(list.length === CANDIDATES.length ? CANDIDATES : list);
+      counties.forEach(county => {
+        const inCounty = stateList.filter(c => (c.county || "Other") === county);
+        if(inCounty.length === 0 && activeScope !== county) return; // skip empty counties unless actively filtered to them
+        const countySection = document.createElement('div');
+        countySection.className = 'county-section';
+        const countyHeading = document.createElement('div');
+        countyHeading.className = 'county-heading';
+        countyHeading.innerHTML = `${county} County <span class="county-count">(${inCounty.length} race${inCounty.length === 1 ? '' : 's'})</span>`;
+        countySection.appendChild(countyHeading);
+        if(inCounty.length === 0){
+          const empty = document.createElement('div');
+          empty.className = 'county-empty';
+          empty.textContent = 'Case files coming soon.';
+          countySection.appendChild(empty);
+        } else {
+          countySection.appendChild(renderCaseGrid(inCounty));
+        }
+        stateSection.appendChild(countySection);
+      });
+      groupsEl.appendChild(stateSection);
+    }
+  }
+
+  function applyFilters(){
     const q = search.value.toLowerCase();
-    renderCases(CANDIDATES.filter(c =>
+    let list = CANDIDATES.filter(c =>
       c.names.toLowerCase().includes(q) ||
       c.race.toLowerCase().includes(q) ||
       c.verdict.toLowerCase().includes(q) ||
       c.tags.some(t => t.toLowerCase().includes(q))
-    ));
-  });
+    );
+    if(activeScope === 'Federal'){
+      list = list.filter(c => c.level === 'Federal');
+    } else if(activeScope !== 'all'){
+      list = list.filter(c => c.level === 'State' && (c.county || 'Other') === activeScope);
+    }
+    renderGroups(list);
+  }
+
+  buildCountyButtons();
+  renderGroups(CANDIDATES);
+  search.addEventListener('input', applyFilters);
 </script>
 
 </body>

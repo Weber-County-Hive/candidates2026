@@ -2,6 +2,8 @@ const CANDIDATES = [
   {
     id: "hd12-graff-schultz",
     race: "House District 12 — Roy / Hooper",
+    level: "State",
+    county: "Weber",
     caseNumber: "CASE 06",
     names: "Graff vs. Schultz",
     verdict: "The Three-PAC Ecosystem",
@@ -12,6 +14,8 @@ const CANDIDATES = [
   {
     id: "hd11-calder-hall",
     race: "House District 11 — Washington Terrace / Riverdale",
+    level: "State",
+    county: "Weber",
     caseNumber: "CASE 05",
     names: "Calder vs. Hall",
     verdict: "The Stock Portfolio That Funds Her Campaign",
@@ -22,6 +26,8 @@ const CANDIDATES = [
   {
     id: "hd10-lesser-alvey",
     race: "House District 10 — East / South Ogden",
+    level: "State",
+    county: "Weber",
     caseNumber: "CASE 04",
     names: "Lesser vs. Alvey",
     verdict: "The Nonprofit That Wasn't",
@@ -32,6 +38,8 @@ const CANDIDATES = [
   {
     id: "hd9-choberka-sawyer",
     race: "House District 9 — West Haven",
+    level: "State",
+    county: "Weber",
     caseNumber: "CASE 03",
     names: "Choberka vs. Sawyer",
     verdict: "The Vendor Loop",
@@ -42,6 +50,8 @@ const CANDIDATES = [
   {
     id: "hd8-kyle-james-shelton",
     race: "House District 8 — Ogden Valley",
+    level: "State",
+    county: "Weber",
     caseNumber: "CASE 02",
     names: "Kyle vs. James vs. Shelton",
     verdict: "The Career Total vs. The Six-Contribution Cycle",
@@ -52,6 +62,8 @@ const CANDIDATES = [
   {
     id: "hd7-mittendorf-wilcox",
     race: "House District 7 — North Ogden",
+    level: "State",
+    county: "Weber",
     caseNumber: "CASE 01",
     names: "Mittendorf vs. Wilcox",
     verdict: "The Uncle, The PAC, and the Amendment Pattern",
@@ -62,6 +74,8 @@ const CANDIDATES = [
   {
     id: "joseph-kerry",
     race: "Utah State Board of Education — District 2",
+    level: "State",
+    county: "Weber",
     caseNumber: "CASE 00",
     names: "Kerry vs. Weaver",
     verdict: "The Path Forward Utah Network",
