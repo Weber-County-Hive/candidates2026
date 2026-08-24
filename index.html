@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 Candidates — The Weber County Hive</title>
+<title>2026 Candidates — Case Files | The Weber County Hive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -20,208 +20,146 @@
     --burgundy-deep:#3d0f1c;
     --line:#ddd6c4;
     --line-strong:#c7bda3;
-    --green:#3f6b3b;
     --serif:'Source Serif 4', Georgia, serif;
     --display:'Playfair Display', Georgia, serif;
     --mono:'IBM Plex Mono', 'Courier New', monospace;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--serif);
-    line-height:1.6;
-  }
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.65;font-size:17px;}
   a{color:var(--rust);text-decoration:none;}
+  a:hover{text-decoration:underline;}
 
-  .header-band{
-    background:var(--burgundy-deep);
-    background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);
-    padding:44px 0 38px;
-  }
-  .header-inner{
-    max-width:920px;margin:0 auto;padding:0 24px;
-  }
-  .hb-top{display:flex;align-items:center;gap:16px;margin-bottom:26px;}
-  .hex{width:44px;height:44px;flex:0 0 auto;}
-  .hd-kicker{
-    font-family:var(--mono);
-    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-    color:#d9b8bf;
-  }
-  .hd-title-small{
-    font-family:var(--display);font-size:18px;font-weight:700;
-    color:#f4e9dd;
-  }
-  .hd-headline{
-    font-family:var(--display);
-    font-size:clamp(30px,4.5vw,44px);
-    font-weight:900;
-    color:#f8f2e8;
-    margin:0 0 12px;
-    line-height:1.1;
-  }
-  .hd-dek{
-    font-size:17px;
-    color:#e2c9cf;
-    max-width:60ch;
-    margin:0;
-  }
+  .header-band{background:var(--burgundy-deep);background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);padding:44px 0 40px;}
+  .header-inner{max-width:920px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:18px;}
+  .hex{width:56px;height:56px;flex:0 0 auto;}
+  .hd-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#d9b8bf;margin-bottom:4px;}
+  .hd-title{font-family:var(--display);font-size:28px;font-weight:900;color:#f4e9dd;line-height:1.15;}
+  .hd-sub{font-family:var(--serif);font-size:15px;color:#e3c4cb;margin-top:6px;max-width:520px;}
 
-  .wrap{max-width:920px;margin:0 auto;padding:44px 24px 90px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 24px 80px;}
 
-  .docket-label{
-    font-family:var(--mono);
-    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--ink-faint);
-    margin-bottom:20px;
-    padding-bottom:14px;
-    border-bottom:2px solid var(--line-strong);
-  }
+  .intro{font-size:17px;color:var(--ink-soft);max-width:620px;margin-bottom:8px;}
+  .stat-strip{display:flex;gap:32px;flex-wrap:wrap;margin:28px 0 40px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stat{flex:0 0 auto;}
+  .stat-num{font-family:var(--display);font-size:32px;font-weight:900;color:var(--amber);line-height:1;}
+  .stat-label{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-faint);text-transform:uppercase;margin-top:5px;}
 
-  .case-row{
-    display:grid;
-    grid-template-columns:110px 1fr auto;
-    gap:20px;
-    align-items:center;
-    background:var(--paper-card);
-    border:1px solid var(--line-strong);
-    border-left:4px solid var(--burgundy);
-    padding:22px 24px;
-    margin-bottom:16px;
-    text-decoration:none;
-    color:inherit;
-    transition:border-color .15s ease;
+  .docket-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
+  .filter-btn{
+    font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+    background:var(--paper-card);border:1px solid var(--line-strong);color:var(--ink-soft);
+    padding:8px 16px;border-radius:20px;cursor:pointer;transition:all .15s ease;
   }
-  .case-row:hover{border-left-color:var(--rust);}
-  .case-number{
-    font-family:var(--mono);
-    font-size:12px;
-    color:var(--ink-faint);
-    letter-spacing:.05em;
+  .filter-btn:hover{border-color:var(--rust);color:var(--rust);}
+  .filter-btn.active{background:var(--burgundy);border-color:var(--burgundy);color:#f4e9dd;}
+  .search-box{
+    font-family:var(--serif);font-size:14px;color:var(--ink);
+    background:var(--paper-card);border:1px solid var(--line-strong);border-radius:20px;
+    padding:8px 16px;flex:1 1 200px;min-width:180px;
   }
-  .case-main .race{
-    font-family:var(--mono);
-    font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;
-    color:var(--rust);margin-bottom:6px;
-  }
-  .case-main .names{
-    font-family:var(--display);
-    font-size:22px;font-weight:700;
-    color:var(--ink);
-    margin-bottom:8px;
-  }
-  .case-main .verdict{
-    font-size:15px;color:var(--ink-soft);
-    margin-bottom:10px;
-  }
-  .tags{display:flex;flex-wrap:wrap;gap:6px;}
-  .tag{
-    font-family:var(--mono);
-    font-size:10.5px;
-    text-transform:uppercase;letter-spacing:.04em;
-    color:var(--burgundy);
-    background:#f0e2e6;
-    padding:3px 9px;
-    border:1px solid #e0c5cc;
-  }
-  .stamp{
-    font-family:var(--mono);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    color:var(--amber);
-    border:1.5px solid var(--amber);
-    padding:6px 12px;
-    white-space:nowrap;
-    transform:rotate(-3deg);
-  }
+  .search-box::placeholder{color:var(--ink-faint);}
 
-  .next-case{
-    border:1.5px dashed var(--line-strong);
-    padding:22px 24px;
-    margin-bottom:16px;
-    font-family:var(--mono);
-    font-size:13px;
-    color:var(--ink-faint);
-    text-align:center;
+  .case-grid{display:flex;flex-direction:column;gap:14px;}
+  .case-card{
+    display:block;background:var(--paper-card);border:1px solid var(--line-strong);border-left:4px solid var(--burgundy);
+    border-radius:4px;padding:20px 24px;transition:border-color .15s ease, transform .15s ease;
   }
+  .case-card:hover{border-left-color:var(--rust);transform:translateX(2px);text-decoration:none;}
+  .case-top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px;}
+  .case-num{font-family:var(--mono);font-size:12px;color:var(--burgundy);font-weight:600;letter-spacing:.04em;}
+  .case-race{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;}
+  .case-names{font-family:var(--display);font-size:20px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+  .case-verdict{font-family:var(--serif);font-style:italic;font-size:15.5px;color:var(--ink-soft);margin-bottom:10px;}
+  .case-tags{display:flex;gap:8px;flex-wrap:wrap;}
+  .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;background:#efe6d8;color:var(--ink-soft);padding:3px 10px;border-radius:10px;}
 
-  @media (max-width:640px){
-    .case-row{grid-template-columns:1fr;gap:12px;}
-    .case-number{order:1;}
-    .stamp{justify-self:start;transform:rotate(0);}
-  }
-
-  footer{
-    margin-top:56px;
-    padding-top:24px;
-    border-top:2px solid var(--line-strong);
-    font-family:var(--mono);
-    font-size:13px;
-    color:var(--ink-faint);
-  }
-  footer .tagline{
-    font-family:var(--display);
-    font-size:18px;font-weight:700;
-    color:var(--burgundy);
-    margin-bottom:10px;
-  }
+  footer{margin-top:60px;padding-top:24px;border-top:2px solid var(--line-strong);}
+  .tagline{font-family:var(--display);font-style:italic;font-size:16px;color:var(--burgundy);margin-bottom:10px;}
+  footer nav{display:flex;gap:18px;flex-wrap:wrap;}
+  .nav{font-family:var(--mono);font-size:13px;letter-spacing:.04em;}
 </style>
 </head>
 <body>
 
 <div class="header-band">
   <div class="header-inner">
-    <div class="hb-top">
-      <svg class="hex" viewBox="0 0 100 100" aria-hidden="true">
-        <polygon points="50,4 93,27 93,73 50,96 7,73 7,27" fill="none" stroke="#f4e9dd" stroke-width="3"/>
-        <text x="50" y="58" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="28" fill="#f4e9dd">WCH</text>
-      </svg>
-      <div>
-        <div class="hd-kicker">The Weber County Hive</div>
-        <div class="hd-title-small">Candidates Docket</div>
-      </div>
+    <svg class="hex" viewBox="0 0 100 100"><polygon points="50,3 93,25 93,75 50,97 7,75 7,25" fill="none" stroke="#d9a441" stroke-width="4"/><text x="50" y="60" font-family="Playfair Display" font-size="34" font-weight="900" fill="#f4e9dd" text-anchor="middle">H</text></svg>
+    <div>
+      <div class="hd-kicker">The Weber County Hive</div>
+      <div class="hd-title">2026 Candidates — Case Files</div>
+      <div class="hd-sub">Public records on every Weber County race we're tracking heading into November. We report what's documented. You decide.</div>
     </div>
-    <h1 class="hd-headline">2026 Candidates</h1>
-    <p class="hd-dek">Public-record case files on Weber County-area candidates &mdash; conflicts of interest, campaign finance, and the networks behind them. We report public records. You decide.</p>
   </div>
 </div>
 
 <div class="wrap">
-  <div class="docket-label">Open cases</div>
-  <div id="docket"></div>
+
+  <p class="intro">Every candidate profile is built entirely from public filings &mdash; campaign finance disclosures, corporate registry records, property records, and candidates' own campaign materials. Click a case to read the full file.</p>
+
+  <div id="stat-strip" class="stat-strip"></div>
+
+  <div class="docket-filters">
+    <button class="filter-btn active" data-filter="all">All Races</button>
+    <input id="search" class="search-box" type="text" placeholder="Search by name or race&hellip;">
+  </div>
+
+  <div id="case-grid" class="case-grid"></div>
 
   <footer>
     <div class="tagline">We report public records. You decide.</div>
-    <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">The Weber County Hive on Substack &rarr;</a>
+    <nav>
+      <a class="nav" href="https://webercountyhive.substack.com" target="_blank" rel="noopener">The Weber County Hive</a>
+    </nav>
   </footer>
+
 </div>
 
-<script src="candidates-data.js"></script>
+<script src="candidates-data.js?v=1"></script>
 <script>
-  const docket = document.getElementById('docket');
-  CANDIDATES.forEach(c => {
-    const row = document.createElement('a');
-    row.href = c.href;
-    row.className = 'case-row';
-    row.innerHTML = `
-      <div class="case-number">${c.caseNumber}</div>
-      <div class="case-main">
-        <div class="race">${c.race}</div>
-        <div class="names">${c.names}</div>
-        <div class="verdict">${c.verdict}</div>
-        <div class="tags">${c.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-      </div>
-      <div class="stamp">${c.stamp}</div>
-    `;
-    docket.appendChild(row);
+  const grid = document.getElementById('case-grid');
+  const statStrip = document.getElementById('stat-strip');
+  const search = document.getElementById('search');
+
+  const daysToElection = Math.ceil((new Date('2026-11-03') - new Date()) / 86400000);
+  statStrip.innerHTML = `
+    <div class="stat"><div class="stat-num">${CANDIDATES.length}</div><div class="stat-label">Races on file</div></div>
+    <div class="stat"><div class="stat-num">${CANDIDATES.length * 2}+</div><div class="stat-label">Candidates covered</div></div>
+    <div class="stat"><div class="stat-num">${daysToElection}</div><div class="stat-label">Days to election</div></div>
+  `;
+
+  function renderCases(list){
+    grid.innerHTML = '';
+    if(list.length === 0){
+      grid.innerHTML = `<p style="color:var(--ink-faint);font-family:var(--mono);font-size:14px;">No matching case files.</p>`;
+      return;
+    }
+    list.forEach(c => {
+      const a = document.createElement('a');
+      a.className = 'case-card';
+      a.href = c.href;
+      a.innerHTML = `
+        <div class="case-top">
+          <span class="case-num">${c.caseNumber}</span>
+          <span class="case-race">${c.race}</span>
+        </div>
+        <div class="case-names">${c.names}</div>
+        <div class="case-verdict">${c.verdict}</div>
+        <div class="case-tags">${c.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      `;
+      grid.appendChild(a);
+    });
+  }
+  renderCases(CANDIDATES);
+
+  search.addEventListener('input', () => {
+    const q = search.value.toLowerCase();
+    renderCases(CANDIDATES.filter(c =>
+      c.names.toLowerCase().includes(q) ||
+      c.race.toLowerCase().includes(q) ||
+      c.verdict.toLowerCase().includes(q) ||
+      c.tags.some(t => t.toLowerCase().includes(q))
+    ));
   });
-  const nextCase = document.createElement('div');
-  nextCase.className = 'next-case';
-  nextCase.textContent = 'next case pending';
-  docket.appendChild(nextCase);
 </script>
 
 </body>
