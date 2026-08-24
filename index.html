@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 Candidates — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4f0e6;
+    --paper-card:#fbf9f3;
+    --ink:#2a261e;
+    --ink-soft:#5c5647;
+    --ink-faint:#8b8470;
+    --rust:#c0572e;
+    --amber:#d9a441;
+    --burgundy:#5c1a2b;
+    --burgundy-deep:#3d0f1c;
+    --line:#ddd6c4;
+    --line-strong:#c7bda3;
+    --green:#3f6b3b;
+    --serif:'Source Serif 4', Georgia, serif;
+    --display:'Playfair Display', Georgia, serif;
+    --mono:'IBM Plex Mono', 'Courier New', monospace;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    line-height:1.6;
+  }
+  a{color:var(--rust);text-decoration:none;}
+
+  .header-band{
+    background:var(--burgundy-deep);
+    background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);
+    padding:44px 0 38px;
+  }
+  .header-inner{
+    max-width:920px;margin:0 auto;padding:0 24px;
+  }
+  .hb-top{display:flex;align-items:center;gap:16px;margin-bottom:26px;}
+  .hex{width:44px;height:44px;flex:0 0 auto;}
+  .hd-kicker{
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:#d9b8bf;
+  }
+  .hd-title-small{
+    font-family:var(--display);font-size:18px;font-weight:700;
+    color:#f4e9dd;
+  }
+  .hd-headline{
+    font-family:var(--display);
+    font-size:clamp(30px,4.5vw,44px);
+    font-weight:900;
+    color:#f8f2e8;
+    margin:0 0 12px;
+    line-height:1.1;
+  }
+  .hd-dek{
+    font-size:17px;
+    color:#e2c9cf;
+    max-width:60ch;
+    margin:0;
+  }
+
+  .wrap{max-width:920px;margin:0 auto;padding:44px 24px 90px;}
+
+  .docket-label{
+    font-family:var(--mono);
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-bottom:20px;
+    padding-bottom:14px;
+    border-bottom:2px solid var(--line-strong);
+  }
+
+  .case-row{
+    display:grid;
+    grid-template-columns:110px 1fr auto;
+    gap:20px;
+    align-items:center;
+    background:var(--paper-card);
+    border:1px solid var(--line-strong);
+    border-left:4px solid var(--burgundy);
+    padding:22px 24px;
+    margin-bottom:16px;
+    text-decoration:none;
+    color:inherit;
+    transition:border-color .15s ease;
+  }
+  .case-row:hover{border-left-color:var(--rust);}
+  .case-number{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--ink-faint);
+    letter-spacing:.05em;
+  }
+  .case-main .race{
+    font-family:var(--mono);
+    font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--rust);margin-bottom:6px;
+  }
+  .case-main .names{
+    font-family:var(--display);
+    font-size:22px;font-weight:700;
+    color:var(--ink);
+    margin-bottom:8px;
+  }
+  .case-main .verdict{
+    font-size:15px;color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .tag{
+    font-family:var(--mono);
+    font-size:10.5px;
+    text-transform:uppercase;letter-spacing:.04em;
+    color:var(--burgundy);
+    background:#f0e2e6;
+    padding:3px 9px;
+    border:1px solid #e0c5cc;
+  }
+  .stamp{
+    font-family:var(--mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--amber);
+    border:1.5px solid var(--amber);
+    padding:6px 12px;
+    white-space:nowrap;
+    transform:rotate(-3deg);
+  }
+
+  .next-case{
+    border:1.5px dashed var(--line-strong);
+    padding:22px 24px;
+    margin-bottom:16px;
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--ink-faint);
+    text-align:center;
+  }
+
+  @media (max-width:640px){
+    .case-row{grid-template-columns:1fr;gap:12px;}
+    .case-number{order:1;}
+    .stamp{justify-self:start;transform:rotate(0);}
+  }
+
+  footer{
+    margin-top:56px;
+    padding-top:24px;
+    border-top:2px solid var(--line-strong);
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--ink-faint);
+  }
+  footer .tagline{
+    font-family:var(--display);
+    font-size:18px;font-weight:700;
+    color:var(--burgundy);
+    margin-bottom:10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header-band">
+  <div class="header-inner">
+    <div class="hb-top">
+      <svg class="hex" viewBox="0 0 100 100" aria-hidden="true">
+        <polygon points="50,4 93,27 93,73 50,96 7,73 7,27" fill="none" stroke="#f4e9dd" stroke-width="3"/>
+        <text x="50" y="58" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="28" fill="#f4e9dd">WCH</text>
+      </svg>
+      <div>
+        <div class="hd-kicker">The Weber County Hive</div>
+        <div class="hd-title-small">Candidates Docket</div>
+      </div>
+    </div>
+    <h1 class="hd-headline">2026 Candidates</h1>
+    <p class="hd-dek">Public-record case files on Weber County-area candidates &mdash; conflicts of interest, campaign finance, and the networks behind them. We report public records. You decide.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="docket-label">Open cases</div>
+  <div id="docket"></div>
+
+  <footer>
+    <div class="tagline">We report public records. You decide.</div>
+    <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">The Weber County Hive on Substack &rarr;</a>
+  </footer>
+</div>
+
+<script src="candidates-data.js"></script>
+<script>
+  const docket = document.getElementById('docket');
+  CANDIDATES.forEach(c => {
+    const row = document.createElement('a');
+    row.href = c.href;
+    row.className = 'case-row';
+    row.innerHTML = `
+      <div class="case-number">${c.caseNumber}</div>
+      <div class="case-main">
+        <div class="race">${c.race}</div>
+        <div class="names">${c.names}</div>
+        <div class="verdict">${c.verdict}</div>
+        <div class="tags">${c.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      </div>
+      <div class="stamp">${c.stamp}</div>
+    `;
+    docket.appendChild(row);
+  });
+  const nextCase = document.createElement('div');
+  nextCase.className = 'next-case';
+  nextCase.textContent = 'next case pending';
+  docket.appendChild(nextCase);
+</script>
+
+</body>
+</html>

@@ -6,101 +6,103 @@
 <title>Joseph Kerry — Case File | The Weber County Hive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #0c0b09;
-    --bg-2: #131210;
-    --gold: #c9a24b;
-    --gold-bright: #e8c877;
-    --gold-dim: #8a713a;
-    --ink: #ece7db;
-    --ink-dim: #b6b0a0;
-    --ink-faint: #837d6f;
-    --red: #a23b3b;
-    --line: #2a2620;
-    --serif: 'Source Serif 4', Georgia, serif;
-    --display: 'Playfair Display', Georgia, serif;
-    --sans: 'Libre Franklin', Arial, sans-serif;
+    --paper:#f4f0e6;
+    --paper-card:#fbf9f3;
+    --ink:#2a261e;
+    --ink-soft:#5c5647;
+    --ink-faint:#8b8470;
+    --rust:#c0572e;
+    --amber:#d9a441;
+    --burgundy:#5c1a2b;
+    --burgundy-deep:#3d0f1c;
+    --line:#ddd6c4;
+    --line-strong:#c7bda3;
+    --red:#a5301e;
+    --green:#3f6b3b;
+    --serif:'Source Serif 4', Georgia, serif;
+    --display:'Playfair Display', Georgia, serif;
+    --mono:'IBM Plex Mono', 'Courier New', monospace;
   }
   *{box-sizing:border-box;}
   body{
     margin:0;
-    background:var(--bg);
+    background:var(--paper);
     color:var(--ink);
     font-family:var(--serif);
     line-height:1.65;
     font-size:17px;
   }
-  a{color:var(--gold-bright);}
-  a:hover{color:var(--gold);}
+  a{color:var(--rust);text-decoration:none;}
+  a:hover{text-decoration:underline;}
 
-  .wrap{max-width:880px;margin:0 auto;padding:0 24px 80px;}
+  .header-band{
+    background:var(--burgundy-deep);
+    background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);
+    padding:34px 0 30px;
+  }
+  .header-inner{
+    max-width:880px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;gap:16px;
+  }
+  .hex{width:46px;height:46px;flex:0 0 auto;}
+  .hd-kicker{
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:#d9b8bf;
+  }
+  .hd-title{
+    font-family:var(--display);font-size:21px;font-weight:700;
+    color:#f4e9dd;
+  }
 
-  header.masthead{
-    border-bottom:1px solid var(--line);
-    padding:28px 0 22px;
-    display:flex;
-    align-items:center;
-    gap:16px;
-  }
-  .hex{
-    width:46px;height:46px;flex:0 0 auto;position:relative;
-  }
-  .hex svg{width:100%;height:100%;}
-  .masthead-text{font-family:var(--sans);}
-  .masthead-text .kicker{
-    font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dim);
-  }
-  .masthead-text .title{
-    font-family:var(--display);
-    font-size:22px;font-weight:700;color:var(--gold-bright);
-    letter-spacing:.01em;
-  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px 90px;}
 
   .eyebrow{
-    font-family:var(--sans);
-    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--gold-dim);margin:44px 0 10px;
+    font-family:var(--mono);
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--rust);margin:44px 0 10px;
   }
   h1.headline{
     font-family:var(--display);
     font-weight:900;
-    font-size:clamp(32px,5vw,50px);
-    line-height:1.08;
+    font-size:clamp(32px,5vw,48px);
+    line-height:1.1;
     margin:0 0 18px;
     color:var(--ink);
   }
   .dek{
     font-size:19px;
-    color:var(--ink-dim);
+    color:var(--ink-soft);
     max-width:66ch;
     margin:0 0 6px;
   }
   .byline{
-    font-family:var(--sans);
-    font-size:13px;
+    font-family:var(--mono);
+    font-size:12.5px;
     color:var(--ink-faint);
     margin:22px 0 0;
     padding-bottom:24px;
-    border-bottom:1px solid var(--line);
+    border-bottom:2px solid var(--line-strong);
   }
-  .byline b{color:var(--gold);font-weight:600;}
+  .byline b{color:var(--burgundy);font-weight:600;}
 
   section{margin:52px 0;}
   h2.section-head{
     font-family:var(--display);
-    font-size:26px;font-weight:700;
-    color:var(--gold-bright);
+    font-size:25px;font-weight:700;
+    color:var(--burgundy);
     margin:0 0 6px;
     padding-bottom:10px;
-    border-bottom:1px solid var(--line);
+    border-bottom:2px solid var(--line-strong);
   }
   h3.sub-head{
-    font-family:var(--sans);
-    font-size:15px;font-weight:700;
+    font-family:var(--mono);
+    font-size:13.5px;font-weight:600;
     color:var(--ink);
-    text-transform:uppercase;letter-spacing:.05em;
+    text-transform:uppercase;letter-spacing:.06em;
     margin:30px 0 10px;
   }
   p{margin:0 0 16px;}
@@ -111,36 +113,38 @@
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
     gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
     margin:26px 0;
-    font-family:var(--sans);
+    font-family:var(--mono);
   }
   .stat{
-    background:var(--bg-2);
+    background:var(--paper-card);
     padding:18px 16px;
   }
   .stat .label{
-    font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+    font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;
     color:var(--ink-faint);margin-bottom:8px;
   }
   .stat .value{
     font-family:var(--display);
-    font-size:24px;font-weight:700;color:var(--ink);
+    font-size:23px;font-weight:700;color:var(--ink);
   }
   .stat .value.neg{color:var(--red);}
-  .stat .value.pos{color:#7fa06a;}
+  .stat .value.pos{color:var(--green);}
+  .stat .value.amber{color:var(--amber);}
 
   .record-card{
-    border:1px solid var(--line);
-    background:var(--bg-2);
+    border:1px solid var(--line-strong);
+    background:var(--paper-card);
     padding:22px 24px;
     margin:20px 0;
+    border-left:4px solid var(--burgundy);
   }
   .record-card .rc-title{
-    font-family:var(--sans);
-    font-weight:700;font-size:14px;
-    color:var(--gold);
+    font-family:var(--mono);
+    font-weight:600;font-size:13px;
+    color:var(--burgundy);
     text-transform:uppercase;letter-spacing:.05em;
     margin-bottom:10px;
   }
@@ -149,86 +153,87 @@
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
     margin:24px 0;
-    font-family:var(--sans);
-    font-size:14px;
+    font-family:var(--serif);
+    font-size:15px;
   }
   .compare .col-head{
-    background:var(--bg-2);
+    background:var(--paper-card);
     padding:14px 16px;
-    font-weight:700;
-    color:var(--gold);
-    border-bottom:1px solid var(--line);
-    font-size:13px;text-transform:uppercase;letter-spacing:.05em;
+    font-weight:600;
+    color:var(--burgundy);
+    border-bottom:1px solid var(--line-strong);
+    font-family:var(--mono);
+    font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;
   }
   .compare .cell{
-    background:var(--bg-2);
+    background:var(--paper-card);
     padding:12px 16px;
   }
   @media (max-width:640px){ .compare{grid-template-columns:1fr;} }
 
   .caveat{
-    border-left:3px solid var(--gold-dim);
+    border-left:3px solid var(--amber);
     padding:14px 18px;
     margin:20px 0;
-    background:var(--bg-2);
-    font-family:var(--sans);
-    font-size:14px;
-    color:var(--ink-dim);
+    background:var(--paper-card);
+    font-family:var(--serif);
+    font-size:15px;
+    color:var(--ink-soft);
   }
-  .caveat b{color:var(--gold);}
+  .caveat b{color:var(--ink);}
 
   .flag{
     border-left:3px solid var(--red);
     padding:14px 18px;
     margin:20px 0;
-    background:var(--bg-2);
-    font-family:var(--sans);
-    font-size:14px;
+    background:var(--paper-card);
+    font-size:15px;
     color:var(--ink);
   }
   .flag .flag-label{
-    font-weight:700;color:var(--red);
+    font-family:var(--mono);
+    font-weight:600;color:var(--red);
     text-transform:uppercase;font-size:11px;letter-spacing:.08em;
     margin-bottom:6px;
   }
 
   details{
-    border:1px solid var(--line);
-    background:var(--bg-2);
+    border:1px solid var(--line-strong);
+    background:var(--paper-card);
     margin:14px 0;
   }
   summary{
     cursor:pointer;
     padding:14px 18px;
-    font-family:var(--sans);
+    font-family:var(--mono);
     font-weight:600;
-    font-size:14px;
-    color:var(--gold-bright);
+    font-size:13.5px;
+    color:var(--rust);
     list-style:none;
   }
   summary::-webkit-details-marker{display:none;}
-  summary:before{content:"+ ";color:var(--gold-dim);}
+  summary:before{content:"+ ";color:var(--amber);}
   details[open] summary:before{content:"– ";}
-  details .details-body{padding:0 18px 18px;font-size:15px;color:var(--ink-dim);}
+  details .details-body{padding:0 18px 18px;font-size:15px;color:var(--ink-soft);}
   details .details-body ul{margin-top:0;}
 
   table.led{
     width:100%;border-collapse:collapse;
-    font-family:var(--sans);font-size:13px;
+    font-family:var(--mono);font-size:13px;
     margin:14px 0;
   }
   table.led th{
     text-align:left;padding:8px 10px;
-    border-bottom:1px solid var(--gold-dim);
-    color:var(--gold);font-weight:700;
-    text-transform:uppercase;font-size:11px;letter-spacing:.05em;
+    border-bottom:2px solid var(--burgundy);
+    color:var(--burgundy);font-weight:600;
+    text-transform:uppercase;font-size:10.5px;letter-spacing:.05em;
   }
   table.led td{
     padding:8px 10px;border-bottom:1px solid var(--line);
-    color:var(--ink-dim);
+    color:var(--ink-soft);
   }
   table.led tr:last-child td{border-bottom:none;}
 
@@ -236,50 +241,51 @@
   .t-item{
     display:grid;grid-template-columns:110px 1fr;gap:16px;
     padding:14px 0;border-bottom:1px solid var(--line);
-    font-family:var(--sans);
+    font-family:var(--serif);
   }
   .t-item:last-child{border-bottom:none;}
-  .t-date{color:var(--gold);font-weight:700;font-size:13px;}
-  .t-body{color:var(--ink-dim);font-size:14px;}
+  .t-date{font-family:var(--mono);color:var(--rust);font-weight:600;font-size:12.5px;}
+  .t-body{color:var(--ink-soft);font-size:15px;}
   .t-body b{color:var(--ink);}
 
   footer{
     margin-top:70px;
     padding-top:26px;
-    border-top:1px solid var(--line);
-    font-family:var(--sans);
+    border-top:2px solid var(--line-strong);
+    font-family:var(--mono);
     font-size:13px;
     color:var(--ink-faint);
   }
   footer .tagline{
     font-family:var(--display);
-    font-size:20px;font-weight:700;
-    color:var(--gold-bright);
+    font-size:19px;font-weight:700;
+    color:var(--burgundy);
     margin-bottom:10px;
   }
-  footer a.nav{color:var(--gold-dim);margin-right:18px;}
+  footer a.nav{color:var(--rust);margin-right:18px;}
 
-  .sources{font-family:var(--sans);font-size:13px;color:var(--ink-faint);}
+  .sources{font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);}
   .sources li{margin-bottom:6px;}
 </style>
 </head>
 <body>
+
+<div class="header-band">
+  <div class="header-inner">
+    <svg class="hex" viewBox="0 0 100 100" aria-hidden="true">
+      <polygon points="50,4 93,27 93,73 50,96 7,73 7,27" fill="none" stroke="#f4e9dd" stroke-width="3"/>
+      <text x="50" y="58" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="28" fill="#f4e9dd">WCH</text>
+    </svg>
+    <div>
+      <div class="hd-kicker">2026 Candidates &middot; The Weber County Hive</div>
+      <div class="hd-title">Case File</div>
+    </div>
+  </div>
+</div>
+
 <div class="wrap">
 
-  <header class="masthead">
-    <div class="hex" aria-hidden="true">
-      <svg viewBox="0 0 100 100">
-        <polygon points="50,4 93,27 93,73 50,96 7,73 7,27" fill="none" stroke="#c9a24b" stroke-width="3"/>
-        <text x="50" y="58" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="30" fill="#e8c877">WCH</text>
-      </svg>
-    </div>
-    <div class="masthead-text">
-      <div class="kicker">The Weber County Hive · Case File</div>
-      <div class="title">Accountability Journalism for Weber County</div>
-    </div>
-  </header>
-
-  <div class="eyebrow">2026 Candidates &middot; Utah State Board of Education, District 2</div>
+  <div class="eyebrow">Utah State Board of Education, District 2</div>
   <h1 class="headline">Joseph Kerry</h1>
   <p class="dek">A sitting State Board of Education member, running for re-election against Kacee Weaver. Public records show an undisclosed nonprofit directorship, a state contract tied to a campaign donor, and a governing network that overlaps with the exact policy area he's now promoting publicly.</p>
   <p class="byline">Compiled from Utah Division of Corporations filings, IRS Form 990 returns, USBE Conflict of Interest disclosures, and campaign finance reports filed with the Utah Lieutenant Governor's Office. <b>We report public records. You decide.</b></p>
@@ -326,8 +332,8 @@
 
     <h3 class="sub-head">FY2025 financials</h3>
     <div class="stat-grid">
-      <div class="stat"><div class="label">Total revenue</div><div class="value">$166,972</div></div>
-      <div class="stat"><div class="label">Total expenses</div><div class="value">$127,549</div></div>
+      <div class="stat"><div class="label">Total revenue</div><div class="value amber">$166,972</div></div>
+      <div class="stat"><div class="label">Total expenses</div><div class="value amber">$127,549</div></div>
       <div class="stat"><div class="label">Net assets, end of year</div><div class="value pos">$39,671</div></div>
       <div class="stat"><div class="label">Public support</div><div class="value" style="font-size:20px;">100%</div></div>
     </div>
@@ -364,7 +370,7 @@
       <div class="t-item"><div class="t-date">May 2026</div><div class="t-body">Most recent Form 990-EZ filed, covering FY2025</div></div>
     </div>
 
-    <p style="font-size:14px;color:var(--ink-faint);font-family:var(--sans);">Three directors of record, per the Utah Division of Corporations: Jamie Renda (2351 Grant Ave Ste 102, Ogden), Jaime Wadman (362 N. Fort Lane, Layton), Joseph Kerry (2326 Washington Blvd, Ogden). "Path4Utah," used in Path Forward Utah's own promotional materials, is not a separately registered legal entity &mdash; confirmed by both the Utah business registry and OpenCorporates.</p>
+    <p style="font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);">Three directors of record, per the Utah Division of Corporations: Jamie Renda (2351 Grant Ave Ste 102, Ogden), Jaime Wadman (362 N. Fort Lane, Layton), Joseph Kerry (2326 Washington Blvd, Ogden). "Path4Utah," used in Path Forward Utah's own promotional materials, is not a separately registered legal entity &mdash; confirmed by both the Utah business registry and OpenCorporates.</p>
   </section>
 
   <section>
@@ -373,11 +379,26 @@
     <div class="record-card">
       <div class="rc-title">Contract USBE210055CT &mdash; Scholarship Granting Organization Services</div>
       <p style="margin-bottom:8px;">USBE selected Children First Education Fund through a competitive procurement to administer Utah's Special Needs Opportunity Scholarship Program. CFEF's responsibilities under the contract: fundraising, operating the application system, determining eligibility, making award decisions on an income-based sliding scale, issuing state tax-credit certificates, tracking donations against the statutory cap, monitoring continuing eligibility, and maintaining student records. USBE's role: creating the tax-credit certificate and monitoring CFEF's compliance.</p>
-      <p style="margin-bottom:8px;"><b style="color:var(--gold);">Coleman's named role in the contract:</b> point of contact, CEO and board chair, "essential key personnel," and CFEF's "Program &amp; Contract Manager."</p>
-      <p style="margin-bottom:0;"><b style="color:var(--gold);">Financial structure:</b> CFEF permitted to retain up to 5% of donations for administration plus 3% for marketing/fundraising, capped at a maximum of $2,901,144 across the contract period &mdash; a ceiling, not proof of what was actually paid or retained.</p>
+      <p style="margin-bottom:8px;"><b style="color:var(--burgundy);">Coleman's named role in the contract:</b> point of contact, CEO and board chair, "essential key personnel," and CFEF's "Program &amp; Contract Manager."</p>
+      <p style="margin-bottom:0;"><b style="color:var(--burgundy);">Financial structure:</b> CFEF permitted to retain up to 5% of donations for administration plus 3% for marketing/fundraising, capped at a maximum of $2,901,144 across the contract period &mdash; a ceiling, not proof of what was actually paid or retained.</p>
     </div>
     <p>The agreement took effect March 11, 2021 and listed a termination date of December 31, 2025 unless extended. USBE continues to identify Children First as the program's SGO on its website, but the public contract reviewed here does not establish whether the agreement was extended or replaced after 2025.</p>
     <div class="caveat">The contract predates Kerry's 2022 election to the board, so these records do not establish that Kerry participated in selecting CFEF, or that Coleman currently receives compensation. What they establish is an ongoing organizational relationship between Kerry's board, his campaign donor, and the policy mechanism &mdash; scholarship granting organizations &mdash; now being promoted publicly.</div>
+  </section>
+
+  <section>
+    <h2 class="section-head">Colonial Specialty Co. and his largest donor</h2>
+    <p>Kerry also serves as registered agent for Colonial Specialty Co., Inc., a Utah corporation formed in 1989, operating from the same Washington Boulevard address as Littlecloud Media and Bible Rescue. That role does not appear anywhere on his Conflict of Interest disclosure.</p>
+    <div class="record-card">
+      <div class="rc-title">What the company does, and who it represents</div>
+      <p style="margin-bottom:8px;">Colonial Specialty Co. does business as <b style="color:var(--burgundy);">Colonial Flag</b>, a Sandy, Utah retailer founded in 1979 that sells and services flagpoles, custom flags, banners, and memorial and cemetery flag equipment, along with gift items and home decor.</p>
+      <p style="margin-bottom:0;">Its officers, per the Utah Division of Corporations: <b>Paul Swenson</b> (President, Owner/CEO), <b>David K. Swenson</b> (Director), and <b>Elizabeth R. Swenson</b> (Director, Secretary) &mdash; all at the company's Sandy address.</p>
+    </div>
+    <div class="flag">
+      <div class="flag-label">Who Paul Swenson is to this race</div>
+      Paul Swenson is Kerry's largest documented campaign donor &mdash; $3,000 total ($1,000 cash plus $2,000 in-kind), both later deleted from Kerry's campaign finance filings with no explanation given. Kerry serves as registered agent for the company Swenson owns and runs.
+    </div>
+    <p style="font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);">Colonial Specialty Co. is a separate legal entity from Colonial Flag Foundation, the nonprofit where Kerry serves as Trustee &mdash; the two share branding but are not the same organization; avoid conflating them.</p>
   </section>
 
   <section>
@@ -396,10 +417,10 @@
     <div class="compare">
       <div class="col-head">Joseph Kerry (incumbent)</div>
       <div class="col-head">Kacee Weaver</div>
-      <div class="cell">Faculty &amp; Dept. Chair, Ensign College; also Bible Rescue (4 roles), Colonial Flag Foundation (Trustee), Path Forward Utah (Chair, undisclosed), Joe for Utah LLC (Manager, undisclosed)</div>
+      <div class="cell">Faculty &amp; Dept. Chair, Ensign College; also Bible Rescue (4 roles), Colonial Flag Foundation (Trustee), Colonial Specialty Co./Colonial Flag (Registered Agent, undisclosed), Path Forward Utah (Chair, undisclosed), Joe for Utah LLC (Manager, undisclosed)</div>
       <div class="cell">School Director, Maria Montessori Academy, North Ogden</div>
       <div class="cell">Campaign balance: <b style="color:var(--red);">($3,945.03)</b> &mdash; $3,470.74 raised, $4,737.57 spent</div>
-      <div class="cell">Campaign balance: <b style="color:#7fa06a;">positive</b>, small-dollar individual donations, no PAC or corporate contributions</div>
+      <div class="cell">Campaign balance: <b style="color:var(--green);">positive</b>, small-dollar individual donations, no PAC or corporate contributions</div>
       <div class="cell">Donors include a fellow legislator's committee (Rep. Karianne Lisonbee), a school-district employee giving via a corporate entity, and education-choice network figures (Coleman, Sharette)</div>
       <div class="cell">Donors include sitting Rep. Jennifer Dailey-Provost and fellow USBE board member Carol Lear (Democratic, District 6) &mdash; no PAC or corporate money identified</div>
     </div>
@@ -416,7 +437,7 @@
       <summary>Full sourcing</summary>
       <div class="details-body">
         <ul class="sources">
-          <li>Utah Division of Corporations filings &mdash; Path Forward Utah (Entity #12647238-0140), Joe for Utah, LLC (Entity #12739877-0160), Children First Education Fund (Entity #11885409-0140)</li>
+          <li>Utah Division of Corporations filings &mdash; Path Forward Utah (Entity #12647238-0140), Joe for Utah, LLC (Entity #12739877-0160), Children First Education Fund (Entity #11885409-0140), Colonial Specialty Co., Inc. (Entity #1041335-0142)</li>
           <li>Path Forward Utah IRS Form 990-EZ, tax year 2025, filed May 12, 2026</li>
           <li>Path Forward Utah Articles of Incorporation and Articles/Statement of Conversion, filed with the Utah Division of Corporations</li>
           <li>Joseph Kerry's Utah State Board of Education Conflict of Interest filings, 2026 and prior years</li>
@@ -434,8 +455,8 @@
   <footer>
     <div class="tagline">We report public records. You decide.</div>
     <nav>
+      <a class="nav" href="index.html">&larr; 2026 Candidates index</a>
       <a class="nav" href="https://webercountyhive.substack.com" target="_blank" rel="noopener">The Weber County Hive</a>
-      <a class="nav" href="#" onclick="return false;">2026 Candidates Index</a>
     </nav>
   </footer>
 
