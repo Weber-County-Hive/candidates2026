@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kyle vs. James vs. Shelton — Case File | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4f0e6;
+    --paper-card:#fbf9f3;
+    --ink:#2a261e;
+    --ink-soft:#5c5647;
+    --ink-faint:#8b8470;
+    --rust:#c0572e;
+    --amber:#d9a441;
+    --burgundy:#5c1a2b;
+    --burgundy-deep:#3d0f1c;
+    --line:#ddd6c4;
+    --line-strong:#c7bda3;
+    --red:#a5301e;
+    --green:#3f6b3b;
+    --serif:'Source Serif 4', Georgia, serif;
+    --display:'Playfair Display', Georgia, serif;
+    --mono:'IBM Plex Mono', 'Courier New', monospace;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    line-height:1.65;
+    font-size:17px;
+  }
+  a{color:var(--rust);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  .header-band{
+    background:var(--burgundy-deep);
+    background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);
+    padding:34px 0 30px;
+  }
+  .header-inner{
+    max-width:880px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;gap:16px;
+  }
+  .hex{width:46px;height:46px;flex:0 0 auto;}
+  .hd-kicker{
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:#d9b8bf;
+  }
+  .hd-title{
+    font-family:var(--display);font-size:21px;font-weight:700;
+    color:#f4e9dd;
+  }
+
+  .wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px;}
+
+  .case-hero{padding:8px 0 28px;border-bottom:2px solid var(--line-strong);margin-bottom:32px;}
+  .case-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:10px;}
+  .case-title{font-family:var(--display);font-size:36px;font-weight:900;line-height:1.15;margin:0 0 14px;color:var(--burgundy-deep);}
+  .case-dek{font-size:18px;color:var(--ink-soft);max-width:640px;}
+
+  .verdict-box{
+    background:var(--paper-card);
+    border:1px solid var(--line-strong);
+    border-left:4px solid var(--burgundy);
+    padding:18px 22px;
+    margin:24px 0;
+    border-radius:2px;
+  }
+  .verdict-box b{color:var(--burgundy);}
+
+  .stat-row{display:flex;gap:28px;flex-wrap:wrap;margin:24px 0;}
+  .stat{flex:1 1 160px;}
+  .stat-num{font-family:var(--display);font-size:28px;font-weight:900;color:var(--amber);line-height:1.1;}
+  .stat-label{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-faint);text-transform:uppercase;margin-top:4px;}
+
+  h2.sect{font-family:var(--display);font-size:24px;font-weight:700;color:var(--burgundy-deep);margin:44px 0 6px;border-top:1px solid var(--line);padding-top:28px;}
+  h3.sub-head{font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin:22px 0 10px;}
+  p{margin:0 0 16px;}
+
+  table.led{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:15px;}
+  table.led th{
+    font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;
+    text-align:left;color:var(--ink-faint);border-bottom:2px solid var(--line-strong);padding:6px 10px 8px 0;
+  }
+  table.led td{padding:7px 10px 7px 0;border-bottom:1px solid var(--line);}
+  table.led tr:last-child td{border-bottom:none;}
+
+  .record-card{
+    background:var(--paper-card);
+    border:1px solid var(--line-strong);
+    border-radius:4px;
+    padding:18px 22px;
+    margin:18px 0;
+  }
+  .rc-title{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--burgundy);margin-bottom:10px;font-weight:600;}
+
+  .flag-open{
+    background:#fbf3e6;
+    border:1px dashed var(--amber);
+    border-radius:4px;
+    padding:14px 18px;
+    font-family:var(--mono);
+    font-size:13.5px;
+    color:var(--ink-soft);
+    margin:16px 0;
+  }
+
+  details{margin:20px 0;border-top:1px solid var(--line);padding-top:14px;}
+  summary{font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust);cursor:pointer;}
+  .details-body{margin-top:12px;}
+  ul.sources{margin:0;padding-left:20px;font-size:14.5px;color:var(--ink-soft);}
+  ul.sources li{margin-bottom:6px;}
+
+  .docket-filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 22px;}
+  .filter-btn{
+    font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+    background:var(--paper-card);border:1px solid var(--line-strong);color:var(--ink-soft);
+    padding:7px 14px;border-radius:20px;cursor:pointer;transition:all .15s ease;
+  }
+  .filter-btn:hover{border-color:var(--rust);color:var(--rust);}
+  .filter-btn.active{background:var(--burgundy);border-color:var(--burgundy);color:#f4e9dd;}
+
+  .bill-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:8px;}
+  .bill-card{
+    background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;
+    overflow:hidden;transition:border-color .15s ease;
+  }
+  .bill-card[open]{border-color:var(--burgundy);}
+  .bill-card summary{
+    list-style:none;cursor:pointer;padding:14px 18px;display:flex;align-items:center;gap:12px;
+  }
+  .bill-card summary::-webkit-details-marker{display:none;}
+  .bill-chevron{font-family:var(--mono);color:var(--ink-faint);transition:transform .15s ease;flex:0 0 auto;}
+  .bill-card[open] .bill-chevron{transform:rotate(90deg);color:var(--burgundy);}
+  .bill-status{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;
+    padding:3px 9px;border-radius:10px;flex:0 0 auto;font-weight:600;
+  }
+  .bill-status.signed{background:#e3ede0;color:var(--green);}
+  .bill-status.failed{background:#f5e2df;color:var(--red);}
+  .bill-num{font-family:var(--mono);font-size:13px;color:var(--burgundy);flex:0 0 auto;font-weight:600;}
+  .bill-title{font-family:var(--serif);font-weight:600;flex:1 1 auto;font-size:15.5px;}
+  .bill-body{padding:0 18px 18px 18px;font-size:15px;color:var(--ink-soft);border-top:1px solid var(--line);}
+  .bill-body p{margin:14px 0 0;}
+  .bill-footnote{font-size:14.5px;color:var(--ink-soft);margin-top:14px;}
+
+  .bubble-row{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-end;justify-content:space-around;margin:24px 0 8px;text-align:center;}
+  .bubble-col{flex:1 1 160px;max-width:220px;}
+  .bubble-svg{width:100%;height:auto;display:block;}
+  .bubble-name{font-family:var(--display);font-weight:700;font-size:16px;color:var(--burgundy-deep);margin-top:6px;}
+  .bubble-total{font-family:var(--mono);font-size:13px;color:var(--ink-faint);margin:2px 0 6px;}
+  .bubble-split{font-size:13px;color:var(--ink-soft);line-height:1.5;}
+
+  footer{margin-top:60px;padding-top:24px;border-top:2px solid var(--line-strong);}
+  .tagline{font-family:var(--display);font-style:italic;font-size:16px;color:var(--burgundy);margin-bottom:10px;}
+  footer nav{display:flex;gap:18px;flex-wrap:wrap;}
+  .nav{font-family:var(--mono);font-size:13px;letter-spacing:.04em;}
+</style>
+</head>
+<body>
+
+<div class="header-band">
+  <div class="header-inner">
+    <svg class="hex" viewBox="0 0 100 100"><polygon points="50,3 93,25 93,75 50,97 7,75 7,25" fill="none" stroke="#d9a441" stroke-width="4"/><text x="50" y="60" font-family="Playfair Display" font-size="34" font-weight="900" fill="#f4e9dd" text-anchor="middle">H</text></svg>
+    <div>
+      <div class="hd-kicker">The Weber County Hive</div>
+      <div class="hd-title">2026 Candidates — Case File</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="case-hero">
+    <div class="case-kicker">Case 02 &middot; Utah House District 8 &middot; Ogden Valley, Pleasant View, North Ogden &amp; Mountain Green</div>
+    <h1 class="case-title">The Career Total vs. The Six-Contribution Cycle</h1>
+    <p class="case-dek">Rep. Jason Kyle (R) says he'll "fight against tax increases" and "protect your tax dollars." His own six-year fundraising record and 2026 legislative record tell a different story. Kim James (D) and Libby Shelton (Utah Forward Party) are also on the November ballot.</p>
+  </div>
+
+  <div class="verdict-box">
+    <b>The three-way race:</b> Jason Kyle (R, incumbent since 2023) vs. Kim James (D, retired United Methodist pastor) vs. Libby Shelton (Utah Forward Party). Kyle advanced from the 2026 Republican convention; James and Shelton also appear on the Weber County general-election ballot per the County Clerk's official candidate list.
+  </div>
+
+  <div class="flag-open">
+    <b style="color:var(--burgundy);">What his campaign says vs. what the record shows:</b> Kyle's campaign site (jasonbkyle.com) pledges he'll "fight against tax increases" and "protect your tax dollars." Going through his full sponsorship record and campaign finance history, we could not find a bill he authored, cosponsored, or voted on that actually delivers a tax cut or blocks a tax increase &mdash; and no donor pattern suggesting a specific tax fight he's waging on constituents' behalf. His one enacted tax bill (HB 300, below) is a school-district funding mechanism, not relief. Where this claim fits in his actual record is not something the public documents show; the bill docket below is the full record we found, for readers to check against the claim themselves.
+  </div>
+
+  <div class="stat-row">
+    <div class="stat"><div class="stat-num">$79,736</div><div class="stat-label">Kyle's career total, 6 cycles</div></div>
+    <div class="stat"><div class="stat-num">69%</div><div class="stat-label">of it is PAC/corporate money</div></div>
+    <div class="stat"><div class="stat-num">0</div><div class="stat-label">Weber County donors, 2026 cycle</div></div>
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label">years with a [DELETED] entry on file</div></div>
+  </div>
+
+  <h2 class="sect">The career-long money</h2>
+  <p>Computed from the full itemized ledger across six reporting cycles (2018, 2022, 2023, 2024, 2025, 2026 through 6/11/26), excluding trivial credit-union interest credits: <b>$79,736.39 raised total.</b> Of that, <b>$55,265.43 (69%)</b> is PAC, corporate, or trade-association money across 95 separate line items; <b>$17,055.86 (21%)</b> is Kyle's own self-funding; only <b>$7,415.10 (9%)</b> came from other individuals.</p>
+
+  <h3 class="sub-head">Top donors, lifetime</h3>
+  <table class="led">
+    <tr><th>Donor</th><th>Lifetime total</th></tr>
+    <tr><td>Utah Association of Realtors</td><td>$9,065.43</td></tr>
+    <tr><td>Utah House Republican Election Committee PAC</td><td>$7,500.00</td></tr>
+    <tr><td>Northern Utah Legislative PAC (NUPAC)</td><td>$5,000.00</td></tr>
+    <tr><td>Wilson Leadership PAC (Speaker Brad Wilson's PAC)</td><td>$4,000.00</td></tr>
+    <tr><td>Reagan Outdoor Advertising</td><td>$2,600.00</td></tr>
+    <tr><td>Conservative Millennials</td><td>$2,500.00</td></tr>
+    <tr><td>Utah Bankers Association</td><td>$2,350.00</td></tr>
+    <tr><td>Elect Mike Schultz LLC</td><td>$1,500.00</td></tr>
+    <tr><td>Utah Credit Union PAC</td><td>$1,500.00</td></tr>
+    <tr><td>Durbano Metals</td><td>$1,400.00</td></tr>
+  </table>
+
+  <h2 class="sect">The 2026 cycle: six contributions, zero from Weber County</h2>
+  <p>Kyle's full 2026 itemized ledger, through the primary period, is just six real contributions (plus two trivial interest credits): Tourism Works PAC $250 (Monticello), Bridger Bolinder $1,000 (Grantsville — Tooele County, not Weber), Howard Rich $500 (Bala Cynwyd, PA), Utah Association of Realtors $1,500 (Sandy), Utah Bankers Association $500 (Salt Lake City), Boeing PAC $500 (Arlington, VA). <b>None of the six donors is from Weber County</b> — the district he represents.</p>
+  <p>By contrast, Kim James's 2026 cycle has more than 140 distinct contributions, dozens from named Weber-area individuals. The donor-count gap — 140+ vs. 6 — is the starkest single data point in the comparison.</p>
+
+  <div class="record-card">
+    <div class="rc-title">The deletion pattern — Kyle's own filings</div>
+    <p style="margin-bottom:0;"><b>Jason Kyle's</b> ledger shows <code>[DELETED]</code> contribution entries with blank donor/date fields in every cycle on file: 2018, 2022, 2023, 2024, and 2025 — five documented years running, seven total entries across his career ledger. No deletions have been found in James's filings.</p>
+  </div>
+
+  <h2 class="sect">2026 money: individual donors vs. PAC/corporate money</h2>
+  <p>Every real-money contribution reported in 2026 by each candidate, all reports filed to date. Circle size scales to total dollars raised; the split shows what share came from individual people versus PACs, trade associations, and corporations. In-kind gifts (data, T-shirts, door hangers) aren't counted — these are cash contributions only, the same subtotal each candidate's own report highlights.</p>
+
+  <div class="bubble-row">
+    <div class="bubble-col">
+      <svg viewBox="0 0 200 200" class="bubble-svg">
+        <path d="M 100 100 L 100 54 A 46 46 0 0 1 130.42 134.50 Z" fill="var(--rust)"/>
+        <path d="M 100 100 L 130.42 134.50 A 46 46 0 1 1 100 54 Z" fill="var(--burgundy)"/>
+      </svg>
+      <div class="bubble-name">Jason Kyle (R)</div>
+      <div class="bubble-total">$6,500 total</div>
+      <div class="bubble-split"><span style="color:var(--rust);">&#9679;</span> $2,500 individual (38%) &nbsp; <span style="color:var(--burgundy);">&#9679;</span> $4,000 PAC/corp (62%)</div>
+    </div>
+    <div class="bubble-col">
+      <svg viewBox="0 0 200 200" class="bubble-svg">
+        <path d="M 100 100 L 100 10 A 90 90 0 1 1 14.97 129.45 Z" fill="var(--rust)"/>
+        <path d="M 100 100 L 14.97 129.45 A 90 90 0 0 1 100 10 Z" fill="var(--burgundy)"/>
+      </svg>
+      <div class="bubble-name">Kim James (D)</div>
+      <div class="bubble-total">$24,767 total</div>
+      <div class="bubble-split"><span style="color:var(--rust);">&#9679;</span> $17,267 individual (70%) &nbsp; <span style="color:var(--burgundy);">&#9679;</span> $7,500 PAC/corp (30%)</div>
+    </div>
+    <div class="bubble-col">
+      <svg viewBox="0 0 200 200" class="bubble-svg">
+        <circle cx="100" cy="100" r="16" fill="var(--rust)"/>
+      </svg>
+      <div class="bubble-name">Libby Shelton (UFP)</div>
+      <div class="bubble-total">$768 total</div>
+      <div class="bubble-split"><span style="color:var(--rust);">&#9679;</span> $768 individual (100%) &nbsp; <span style="color:var(--burgundy);">&#9679;</span> $0 PAC/corp (0%)</div>
+    </div>
+  </div>
+  <p class="bill-footnote">Kyle's PAC/corp share includes the sole institutional gift in James's total: a one-time $7,500 from UINPAC (Utah Investment Network PAC), part of a coordinated multi-candidate Democratic slate, not a recurring funder — see the James section below. Shelton's only PAC-adjacent money, a $2,365 in-kind voter-data package from the Forward Party of Utah, is excluded here because it's in-kind, not cash.</p>
+
+  <h2 class="sect">The bill docket</h2>
+  <p>Every 2026 bill tied to Kyle's name, sortable by category or status. Click a bill to read the full record.</p>
+
+  <div class="docket-filters">
+    <button class="filter-btn active" data-filter="all">All (9)</button>
+    <button class="filter-btn" data-filter="tax">Tax (3)</button>
+    <button class="filter-btn" data-filter="judicial">Judicial (5)</button>
+    <button class="filter-btn" data-filter="enacted">Enacted (2)</button>
+    <button class="filter-btn" data-filter="failed">Failed (7)</button>
+  </div>
+
+  <div id="bill-grid" class="bill-grid"></div>
+
+  <p class="bill-footnote">Of 3 tax bills tied to his name, the one he authored isn't tax relief, and the two matching his campaign language belong to other legislators. Of the judicial bills, only the two he voted <i>yes</i> on as a rider actually passed — everything he personally chief-sponsored on judicial selection failed.</p>
+
+  <h2 class="sect">The other candidates</h2>
+  <h3 class="sub-head">Kim James (D)</h3>
+  <p>Retired United Methodist pastor (Ogden First UMC, 2013–2025), 40 years in ministry across Colorado and Utah, lives on Ogden's East Bench. Campaign is heavily family- and small-dollar-funded: repeated in-kind and cash gifts from "Kimal James" and "Oscar James" (same home address as the candidate), plus a broad out-of-state small-dollar donor base consistent with a long ministry network. Received a one-time $7,500 gift from UINPAC (Utah Investment Network PAC, part of the Utah Donor Collaborative's multi-candidate Democratic slate) in the 2026 convention period — not a recurring funder; no PAC money appears in any subsequent report. Total 2026-cycle-to-date fundraising, combining all reports through the interim general-period ledger, runs well above $40,000, almost entirely small-dollar and local.</p>
+
+  <h3 class="sub-head">Libby Shelton (Utah Forward Party)</h3>
+  <p>Full name per her own site: Libby Hernandez Shelton (CFIS/COI filings use Elizabeth Anne Shelton). Weber County resident 20+ years; works as a therapist specializing in substance use and domestic violence treatment (MSW, Utah State University; BA Anthropology, Weber State University). Politically active for 15 years as a state/county caucus delegate, including a decade as her local caucus's vice chair before switching to the Forward Party in 2025. Currently Weber County Vice-Chair of the Forward Party of Utah &mdash; a local party officer, not just a candidate. Platform centers on election reform (fair maps, open primaries, expanded voting access), ethics and campaign-finance oversight of lawmakers, and a balanced-market economic approach; as a Forward Party candidate she says she isn't bound to any single party platform.</p>
+  <p><b>Campaign finance is almost entirely self- and small-dollar-funded.</b> Her 2026 Convention Report (1/1&ndash;3/30/26) was 100% self-funded &mdash; $386.96 total, all three contributions from Shelton herself, covering the filing fee and campaign setup costs. Her Primary Report (3/31&ndash;6/11/26) added $381.10 in real money from five individual donors ($41.50&ndash;$103 each), plus two in-kind gifts that don't count toward her cash total: $110.47 in T-shirts from a supporter, and a $2,365.00 voter-data package from the Forward Party of Utah &mdash; by far her largest contribution of any kind, but data/services from the state party rather than cash. YTD cash total: $768.06.</p>
+  <div class="flag-open">Two things worth noting for context: <b>no general-period report has been filed yet</b> &mdash; her most recent filing on record is the primary report ending 6/11/26, so any dollar comparison to Kyle (filed through 8/4/26) or James (filed through 8/21/26) is comparing different points in time, not a fundraising lull. And <b>every single itemized contribution in both her reports was entered as an amendment, not in the original filing</b> &mdash; the same "shell report, add real numbers later" pattern already documented for HD10's Jim Alvey. Legally compliant if each amendment lands within Utah's 31-day window, but it means her filings look current on the surface while the real contribution data arrives afterward. A genuine deletion also appears in her Primary Report: a $53.99 in-kind "door hangers" gift was fully wiped via amendment on 6/16/26.</div>
+
+
+  <section>
+    <details>
+      <summary>Full sourcing</summary>
+      <div class="details-body">
+        <ul class="sources">
+          <li>Jason Kyle campaign finance disclosures, disclosures.utah.gov — 2018, 2022, 2023 Year End, 2024, 2025 Year End, 2026 Convention/Primary Reports (through 6/11/2026)</li>
+          <li>Kim James campaign finance disclosures, disclosures.utah.gov — 2025 Year End through 2026 interim general-period ledger</li>
+          <li>UINPAC (Utah Investment Network PAC) 2026 Convention Report and 2024 Convention Report, disclosures.utah.gov</li>
+          <li>jasonbkyle.com, campaign messaging</li>
+          <li>Utah State Legislature, HB 300, HB 236, HB 449/HJR 20, HJR 5, HB 424, HB 262, HB 530, HB 543 — full enrolled/substitute bill text and floor vote records, le.utah.gov</li>
+          <li>House Revenue & Taxation Committee minutes, 1/29/26; House Business/Labor/Commerce Committee minutes, 2/26/26 — house.utleg.gov</li>
+          <li>Utah State Bar public statement opposing HB 424</li>
+          <li>Alliance for a Better Utah, 2026 Progress Report / legislative scorecard</li>
+          <li>Weber County Clerk/Auditor, 2026 official candidate list, weberelections.gov</li>
+          <li>libbyforutah.com; Ballotpedia, "Utah House of Representatives District 8"</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <footer>
+    <div class="tagline">We report public records. You decide.</div>
+    <nav>
+      <a class="nav" href="index.html">&larr; 2026 Candidates index</a>
+      <a class="nav" href="https://webercountyhive.substack.com" target="_blank" rel="noopener">The Weber County Hive</a>
+    </nav>
+  </footer>
+
+</div>
+<script>
+  const BILLS = [
+    {
+      num: "HB 300", title: "School District Taxation Amendments",
+      status: "signed", cats: ["tax","enacted"],
+      body: "Kyle's own bill, chief sponsor, signed into law. Extends a school-district hold-harmless period and phases out \"excess\" state guarantee funding over three years. A district-finance stability mechanism, not a tax cut &mdash; and a bill Granite School District's own superintendent testified in favor of."
+    },
+    {
+      num: "HB 236", title: "Truth in Taxation Amendments",
+      status: "signed", cats: ["tax"],
+      body: "Karen Peterson's bill, not Kyle's. He cosponsored and made the committee motion to pass it, but passed unanimously with no fight involved &mdash; doesn't match the campaign framing of a personal fight for taxpayers."
+    },
+    {
+      num: "HB 449 / HJR 20", title: "Taxpayer Oversight of Government Spending",
+      status: "failed", cats: ["tax"],
+      body: "Tiara Auxier's TABOR-style bill &mdash; voter approval for tax/debt increases, a spending cap, and excess-revenue refunds. Kyle cosponsored only; never passed."
+    },
+    {
+      num: "HJR 5", title: "Judicial Nominations (constitutional amendment)",
+      status: "failed", cats: ["judicial"],
+      body: "Kyle, chief sponsor. Would let the governor appoint any judicial candidate without nomination by the Judicial Nominating Commission, removing the chief justice's backstop authority. Killed by a midnight procedural strike on 3/6/26, after a $767,900 fiscal note to publish the amendment for a vote that never happened."
+    },
+    {
+      num: "HB 424", title: "Judicial Nomination Amendments",
+      status: "failed", cats: ["judicial"],
+      body: "Kyle, chief sponsor. The implementing statute for HJR 5. The Utah State Bar formally opposed it by name &mdash; rare &mdash; calling it a direct conflict with Utah Constitution Article VIII &sect;8."
+    },
+    {
+      num: "HB 262", title: "Judicial Election Amendments",
+      status: "failed", cats: ["judicial"],
+      body: "Kyle, chief sponsor. Raises the \"yes\" vote threshold for judicial retention from a simple majority to 67%. A judge winning 60% \"yes\" &mdash; a clear majority &mdash; would still lose the seat. Paired with HJR 5/HB 424, the throughline: easier to install a governor-favored judge, easier to remove one who draws a mobilized minority's opposition."
+    },
+    {
+      num: "S.B. 134", title: "Court Amendments",
+      status: "signed", cats: ["judicial","enacted"],
+      body: "Kyle voted yes; not his bill. Expands the Utah Supreme Court from 5 to 7 justices and the Court of Appeals from 7 to 9 judges, and shifts the Chief Justice from a peer-elected position to one the governor appoints with Senate consent &mdash; by the end of 2026, the governor controls appointment of 5 of the 7 Supreme Court seats. Currently under active constitutional challenge; oral arguments scheduled at the Utah Supreme Court for 9/9/2026."
+    },
+    {
+      num: "H.B. 392", title: "District Court Amendments",
+      status: "signed", cats: ["judicial","enacted"],
+      body: "Kyle voted yes; not his bill. Creates a 3-judge panel process for constitutional challenges to state law, giving the Attorney General, Legislature, and Governor &mdash; but not private plaintiffs or defendants &mdash; the power to move a pending case to that panel, including mid-litigation. Also under active constitutional challenge, oral arguments 9/9/2026."
+    },
+    {
+      num: "HB 543", title: "UCC Amendments",
+      status: "failed", cats: ["judicial"],
+      body: "Kyle, chief sponsor. The original text would have repealed creditor-priority exceptions that let a securities intermediary's own creditors jump ahead of ordinary individual investors in an insolvency &mdash; real investor protection. The substitute (S1), adopted in Kyle's own committee where he serves as Vice Chair, stripped that entirely, leaving only an after-the-fact disclosure requirement. The committee record shows zero recorded testimony or discussion for this item. Kyle's top donor list includes the Utah Bankers Association and Utah Credit Union PAC, both of which would sit on the creditor side of exactly this dispute."
+    },
+    {
+      num: "HB 530", title: "State Permitting Council",
+      status: "signed", cats: ["enacted"],
+      body: "Kyle's own bill, chief sponsor, signed into law. Creates a political-appointee \"permitting coordinator\" post inside the Governor's Office of Economic Opportunity to facilitate large multi-agency industrial/development permitting &mdash; not a citizen-services or taxpayer-facing office. One of only two bills Kyle chief-sponsored that actually became law."
+    }
+  ];
+
+  const grid = document.getElementById('bill-grid');
+  function renderBills(filter){
+    grid.innerHTML = '';
+    BILLS.filter(b => filter === 'all' || b.cats.includes(filter) || b.status === filter)
+      .forEach(b => {
+        const card = document.createElement('details');
+        card.className = 'bill-card';
+        card.innerHTML = `
+          <summary>
+            <span class="bill-chevron">&#9656;</span>
+            <span class="bill-num">${b.num}</span>
+            <span class="bill-title">${b.title}</span>
+            <span class="bill-status ${b.status}">${b.status === 'signed' ? 'Signed' : 'Failed'}</span>
+          </summary>
+          <div class="bill-body"><p>${b.body}</p></div>
+        `;
+        grid.appendChild(card);
+      });
+  }
+  renderBills('all');
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderBills(btn.dataset.filter);
+    });
+  });
+</script>
+
+</body>
+</html>
