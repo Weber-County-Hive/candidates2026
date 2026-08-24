@@ -14,7 +14,7 @@ const CANDIDATES = [
     race: "House District 9 — West Haven",
     caseNumber: "CASE 03",
     names: "Choberka vs. Sawyer",
-    verdict: "The Vendor Loop and the 56 Deletions",
+    verdict: "The Vendor Loop",
     tags: ["Vendor Network", "Deletion Pattern", "Rematch"],
     stamp: "Active",
     href: "hd9-choberka-sawyer.html"
