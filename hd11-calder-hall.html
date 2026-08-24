@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case File: Hall vs. Calder — House District 11 | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #f4f0e6;
+    --color-card-bg: #fbf9f3;
+    --color-header-start: #5c1a2b;
+    --color-header-end: #3d0f1c;
+    --gradient-header: linear-gradient(135deg, var(--color-header-start), var(--color-header-end));
+    --color-link: #c0572e;
+    --color-stat: #d9a441;
+    --color-ink: #241c18;
+    --color-ink-soft: #5a4f47;
+    --color-border: #ddd3c2;
+    --font-headline: 'Playfair Display', serif;
+    --font-body: 'Source Serif 4', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  a { color: var(--color-link); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--color-link); outline-offset: 2px; }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- HEADER BAND ---------- */
+  .header-band {
+    background: var(--gradient-header);
+    color: #f4ead9;
+    padding: 14px 0;
+  }
+  .header-band .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .brand {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f4ead9;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand .dot { color: var(--color-stat); }
+  .header-band nav a {
+    color: #e8d9c4;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-left: 18px;
+  }
+  .header-band nav a:hover { color: var(--color-stat); }
+
+  /* ---------- CASE HERO ---------- */
+  .case-hero {
+    padding: 64px 0 40px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-link);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .kicker::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--color-link);
+    display: inline-block;
+  }
+  .case-hero h1 {
+    font-family: var(--font-headline);
+    font-weight: 900;
+    font-size: clamp(2.1rem, 5vw, 3.2rem);
+    line-height: 1.08;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+  .case-hero h1 .vs {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--color-ink-soft);
+    font-size: 0.55em;
+    display: block;
+    margin: 6px 0;
+  }
+  .dek {
+    font-size: 1.15rem;
+    color: var(--color-ink-soft);
+    max-width: 62ch;
+    margin: 0;
+  }
+  .case-meta {
+    display: flex;
+    gap: 28px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--color-ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .case-meta span b { color: var(--color-ink); font-weight: 600; }
+
+  /* ---------- VERDICT BOX ---------- */
+  .verdict-box {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-left: 5px solid var(--color-header-start);
+    border-radius: 3px;
+    padding: 26px 30px;
+    margin: 36px 0;
+  }
+  .verdict-box .label {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-header-start);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .verdict-box p {
+    margin: 0;
+    font-size: 1.08rem;
+  }
+  .verdict-box p + p { margin-top: 12px; }
+
+  /* ---------- STAT ROW ---------- */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--color-border);
+    border: 1px solid var(--color-border);
+    margin: 40px 0;
+  }
+  .stat {
+    background: var(--color-card-bg);
+    padding: 22px 20px;
+  }
+  .stat .num {
+    font-family: var(--font-headline);
+    font-weight: 900;
+    font-size: 1.9rem;
+    color: var(--color-stat);
+    line-height: 1;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .stat .lbl {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+    line-height: 1.4;
+  }
+
+  /* ---------- NARRATIVE SECTIONS ---------- */
+  section.sect { padding: 48px 0; border-bottom: 1px solid var(--color-border); }
+  section.sect:last-of-type { border-bottom: none; }
+  h2.sect-title {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin: 0 0 22px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  h2.sect-title .n {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-link);
+    font-weight: 500;
+  }
+  h3.sub-title {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 32px 0 14px;
+  }
+  .sect p { margin: 0 0 18px; }
+  .sect ul, .sect ol { margin: 0 0 18px; padding-left: 22px; }
+  .sect li { margin-bottom: 8px; }
+
+  /* ---------- RECORD CARD ---------- */
+  .record-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+  .record-card .rc-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .record-card .rc-name {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .record-card .rc-amount {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--color-stat);
+    font-weight: 600;
+  }
+  .record-card p { margin: 0; font-size: 0.98rem; }
+  .record-card .rc-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-header-start);
+    background: #efe2d3;
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-top: 12px;
+    margin-right: 6px;
+  }
+
+  /* ---------- FLAG-OPEN CALLOUT ---------- */
+  .flag-open {
+    background: #fbf3e6;
+    border: 1px dashed #c98a3f;
+    border-radius: 3px;
+    padding: 20px 24px;
+    margin: 22px 0;
+  }
+  .flag-open .fo-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a5661f;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .flag-open p { margin: 0; }
+  .flag-open p + p { margin-top: 10px; }
+
+  /* ---------- FUNDING COMPARISON (interactive) ---------- */
+  .fund-donut-wrap {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 20px 0 28px;
+    flex-wrap: wrap;
+  }
+  .fund-donut {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .fund-donut::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border-radius: 50%;
+    background: var(--color-bg);
+  }
+  .fund-donut-center {
+    position: absolute;
+    inset: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-ink-soft);
+    text-align: center;
+    line-height: 1.3;
+  }
+  .fund-donut-legend {
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+  .fund-donut-legend-row {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    margin-bottom: 8px;
+  }
+  .fund-donut-swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    position: relative;
+    top: 1px;
+  }
+  .fund-donut-legend-amt {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+  .fund-donut-legend-lbl {
+    color: var(--color-ink-soft);
+  }
+
+  .fund-toggle {
+    display: flex;
+    gap: 0;
+    margin-bottom: 24px;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    overflow: hidden;
+    width: fit-content;
+  }
+  .fund-toggle button {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    background: var(--color-card-bg);
+    color: var(--color-ink-soft);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .fund-toggle button.active {
+    background: var(--color-header-start);
+    color: #f4ead9;
+  }
+  .fund-toggle button:not(.active):hover { background: #ece3d3; }
+
+  .fund-panel { display: none; }
+  .fund-panel.active { display: block; }
+
+  .fund-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .fund-bar-label {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    width: 190px;
+    flex-shrink: 0;
+    color: var(--color-ink-soft);
+  }
+  .fund-bar-track {
+    flex: 1;
+    background: var(--color-border);
+    height: 22px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .fund-bar-fill {
+    height: 100%;
+    background: var(--color-stat);
+  }
+  .fund-panel[data-panel="calder"] .fund-bar-fill { background: var(--color-link); }
+  .fund-bar-amt {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    width: 80px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* ---------- SOURCING ---------- */
+  details.sourcing {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 18px 24px;
+    margin: 40px 0;
+  }
+  details.sourcing summary {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-header-start);
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  details.sourcing[open] summary { margin-bottom: 14px; }
+  details.sourcing ul { margin: 0; padding-left: 20px; font-size: 0.92rem; color: var(--color-ink-soft); }
+  details.sourcing li { margin-bottom: 8px; }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 40px 0 60px;
+    text-align: center;
+  }
+  footer .fine {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-ink-soft);
+    letter-spacing: 0.03em;
+  }
+  footer .star { color: var(--color-stat); }
+
+  @media (max-width: 600px) {
+    body { font-size: 16.5px; }
+    .fund-bar-label { width: 130px; font-size: 11px; }
+    .fund-bar-amt { width: 64px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header-band">
+  <div class="wrap">
+    <a class="brand" href="#"><span class="dot">⬡</span> The Weber County Hive</a>
+    <nav>
+      <a href="#">Docket</a>
+      <a href="#">Substack</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="case-hero">
+    <div class="kicker">House District 11 · General Election, Nov. 3, 2026</div>
+    <h1>Katy Hall <span class="vs">vs.</span> Dave Calder</h1>
+    <p class="dek">A registered nurse turned four-year incumbent, funded almost entirely by out-of-district PACs and industry committees, against a first-time Air Force veteran running on small-dollar and family support. Washington Terrace and Riverdale, Weber and Davis counties.</p>
+    <div class="case-meta">
+      <span>Incumbent: <b>Katy Hall (R)</b>, since 2023</span>
+      <span>Challenger: <b>Dave Calder (D)</b></span>
+      <span>Primary: <b>Uncontested</b></span>
+    </div>
+  </div>
+
+  <div class="verdict-box">
+    <span class="label">What the records show</span>
+    <p>Hall's campaign has raised roughly $77,800 across the 2022&ndash;2026 cycles, the large majority of it from PACs, industry committees, and legislator-to-legislator transfers rather than individual constituents. Calder's campaign has raised roughly $6,000, almost entirely from himself, neighbors, and Democratic candidates in adjoining districts.</p>
+    <p>Hall's own financial disclosures show a $500&ndash;plus stake in three companies whose PACs also fund her campaign, and a family financial footprint inside the same regional hospital system where she works as a nurse. Her July 2026 disclosure omits conflict-of-interest detail that appeared on her January 2026 filing.</p>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat"><span class="num">$77.8K</span><span class="lbl">Hall total raised, 2022&ndash;26</span></div>
+    <div class="stat"><span class="num">$6.1K</span><span class="lbl">Calder total raised, 2025&ndash;26</span></div>
+    <div class="stat"><span class="num">~90%</span><span class="lbl">Hall funding from PACs &amp; committees</span></div>
+    <div class="stat"><span class="num">~90%</span><span class="lbl">Calder funding from individuals</span></div>
+  </div>
+
+  <!-- ============ SECTION: THE RACE ============ -->
+  <section class="sect" id="race">
+    <h2 class="sect-title"><span class="n">01</span> The race</h2>
+    <p>Katy Hall, a registered nurse, has represented House District 11 since defeating incumbent Kelly Miles in the 2022 Republican primary. She faces Dave Calder, a retired Air Force officer and mechanical engineer making his first run for office, in the November general election. A third Democrat, Josh R. Koskan, filed and then withdrew before the June 23 primary, leaving both candidates unopposed within their own parties this cycle.</p>
+    <p>The district covers Washington Terrace and Riverdale, spanning Weber and Davis counties.</p>
+  </section>
+
+  <!-- ============ SECTION: HALL'S RECORD ============ -->
+  <section class="sect" id="record">
+    <h2 class="sect-title"><span class="n">02</span> Hall's legislative record</h2>
+    <p>Hall's signature 2026 legislation was HB 51, Adoption Amendments, which she primary-sponsored after a former colleague flagged a rise in what she described as transaction-like adoptions; the bill passed the House 66&ndash;1 and is publicly framed as strengthening protections for birth parents.</p>
+    <p>In 2024 she was primary sponsor of HB 261, Equal Opportunity Initiatives, which bars public education institutions and government employers from requiring diversity-related trainings, statements, or offices.</p>
+    <p>In 2023 she sponsored Utah's ban on gender-affirming care for transgender minors. A subsequent University of Utah Drug Regimen Review Center report found low risk associated with the standard hormonal treatments covered by the ban, and found that access to treatment was associated with reduced risk of youth suicide; Hall maintained that the ban had a scientific basis. She also joined 81 other state lawmakers and the American Family Association &mdash; designated a hate group by the Southern Poverty Law Center &mdash; on an amicus brief in <em>United States v. Skrmetti</em> that cited biblical verses, a position at odds with briefs filed by the American Academy of Pediatrics, the American Psychological Association, and the American Bar Association.</p>
+
+    <h3 class="sub-title">2026 session: a healthcare-heavy record</h3>
+    <p>Of the nine bills Hall primary-sponsored in the 2026 General Session, seven touch healthcare, pharmacy, or hospital policy directly: Health Care Transparency Amendments, Pharmacy Pricing Amendments, Hospital Workplace Violence Reporting Requirements, Healthcare Worker Post-Employment Amendments, and the Adoption Amendments described above, alongside a school-athlete-protection bill and a school-activity resolution. She also floor-sponsored Health Insurance Preauthorization Amendments and three more healthcare bills &mdash; Pediatric Care, Veterinary Post-employment, and Anesthesia Dosage Amendments &mdash; each paired with Sen. Jen Plumb, a Democrat.</p>
+    <p>That concentration lines up with her professional background as a registered nurse. It also lines up with her donor base: this cycle Hall has taken PAC contributions from UnitedHealth Group, Johnson &amp; Johnson PAC, PhRMA, the Utah Medical Political Action Committee, Utah HOSPAC, and Revere Health &mdash; all companies or associations with a direct stake in the healthcare policy she writes.</p>
+
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">HB 273, Classroom Technology Amendments</span></div>
+      <p>Hall co-sponsored this bill (primary sponsor Ariel Defay, floor sponsor Chris Wilson), a guardrails measure that mandates the Utah State Board of Education adopt model AI/technology policies, sets grade-level screen-time limits, requires written parental notification before classroom AI use, bans AI from independently grading students or making high-stakes decisions about them, and imposes privacy-compliance requirements. It's the same bill later cited as the legislative basis for USBE's rollout of Google Gemini for Education to roughly 680,000 students &mdash; a rollout that proceeded without a full board vote. Whether that rollout actually complied with HB 273's own requirements remains an open question.</p>
+      <span class="rc-tag">Cross-reference</span>
+    </div>
+
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">HB 236, Truth in Taxation Amendments</span></div>
+      <p>Hall also co-sponsored HB 236 (chief sponsor Karen Peterson, floor sponsor Daniel McCay), which requires taxing entities proposing a property tax rate increase to produce a new "property tax impact schedule" &mdash; a disclosure document laying out the dollar and percentage impact &mdash; and to hold the additional revenue in a restricted budget account until final adoption. It also creates a one-year enforcement grace period for the fiscal year beginning July 2026: the State Tax Commission cannot deny a taxing entity's rate increase even if that entity skips the new requirement. Like HB 273, it's a mixed record &mdash; a new disclosure mandate paired with softened enforcement in its first year.</p>
+      <span class="rc-tag">Cross-reference</span>
+    </div>
+
+    <h3 class="sub-title">Platform vs. record</h3>
+    <p>Hall's own campaign site states she supports "market solutions like price transparency, reduced regulations, and telemedicine instead of government mandates or socialized medicine." It specifically credits her with HB 270 and SB 319 as bills that let patients "continue care seamlessly... without unnecessary delays or confusion" &mdash; and she did sponsor and co-sponsor both.</p>
+    <div class="flag-open">
+      <span class="fo-label">Worth reading side by side</span>
+      <p>Her platform frames her approach as favoring reduced regulation over government mandates. Her own primary-sponsored healthcare bills this session &mdash; Health Care Transparency Amendments, Hospital Workplace Violence Reporting Requirements, and Pharmacy Pricing Amendments &mdash; are themselves new reporting and disclosure requirements placed on the healthcare industry, not a reduction in regulation.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION: FOLLOW THE MONEY ============ -->
+  <section class="sect" id="money">
+    <h2 class="sect-title"><span class="n">03</span> Follow the money</h2>
+    <p>The two candidates' funding bases look nothing alike. Toggle between them below.</p>
+
+    <div class="fund-toggle">
+      <button class="active" data-target="hall">Katy Hall</button>
+      <button data-target="calder">Dave Calder</button>
+    </div>
+
+    <div class="fund-panel active" data-panel="hall">
+      <div class="fund-donut-wrap">
+        <div class="fund-donut" style="background: conic-gradient(var(--color-link) 0% 90%, var(--color-stat) 90% 100%);">
+          <div class="fund-donut-center">HALL</div>
+        </div>
+        <div class="fund-donut-legend">
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-link);"></span><span class="fund-donut-legend-amt">~90%</span> <span class="fund-donut-legend-lbl">PACs &amp; committees</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-stat);"></span><span class="fund-donut-legend-amt">~10%</span> <span class="fund-donut-legend-lbl">Individual donors</span></div>
+        </div>
+      </div>
+      <div class="fund-bar-row">
+        <div class="fund-bar-label">PACs &amp; committees</div>
+        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 90%;"></div></div>
+        <div class="fund-bar-amt">~90%</div>
+      </div>
+      <div class="fund-bar-row">
+        <div class="fund-bar-label">Individual donors</div>
+        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 10%;"></div></div>
+        <div class="fund-bar-amt">~10%</div>
+      </div>
+
+      <h3 class="sub-title">Where Hall's PAC money comes from</h3>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Doers Network</span><span class="rc-amount">$500</span></div>
+        <p>A Utah political operation incorporated by Matthew T. Sanderson, a nationally prominent Republican campaign-finance attorney. Its recipient list reaches dozens of sitting Utah House Republicans.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Northern Utah Legislative PAC (NUPAC)</span><span class="rc-amount">$1,000</span></div>
+        <p>Controlled by Kyle Palmer, whose consulting firm Irish Elk LLC has drawn more than $88,000 from the PAC since 2022.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">H3 PAC</span><span class="rc-amount">$500</span></div>
+        <p>Successor to Utahns for Safer Communities, funded through Sage Government Solutions LLC.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Elect Bridger Bolinder</span><span class="rc-amount">$2,000</span></div>
+        <p>Paid Hall $1,000 in both 2024 and 2026. After Bolinder left the legislature, his committee continued paying Kyle Palmer's Irish Elk LLC before distributing $1,000 checks to more than a dozen allied candidates in a single day.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Clyde Companies</span><span class="rc-amount">$500</span></div>
+        <p>The construction and development conglomerate behind the Nordic Village Public Infrastructure District, a $80 million bonded-debt authorization in Ogden Valley.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Energy Solutions</span><span class="rc-amount">$800</span></div>
+        <p>One of four companies &mdash; alongside PacifiCorp, Chevron, and Torus &mdash; that have given Gov. Spencer Cox more than $341,000 combined as part of the state's nuclear-energy push.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Johnson &amp; Johnson PAC</span><span class="rc-amount">$600</span></div>
+        <p>A national PAC that has never reported receiving a contribution since it was created in 2016, and has run on an undisclosed funding source ever since.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Kim Coleman / Path Forward Utah</span><span class="rc-amount">$625</span></div>
+        <p>Coleman, founder of the Children First Education Fund and an architect of Utah's scholarship-granting-organization tax mechanism, gave Hall $25 in 2022. Separately, Hall's campaign paid $600 to Path Forward Utah, an organization co-directed by Utah State Board of Education member Joseph Kerry.</p>
+      </div>
+    </div>
+
+    <div class="fund-panel" data-panel="calder">
+      <div class="fund-donut-wrap">
+        <div class="fund-donut" style="background: conic-gradient(var(--color-ink-soft) 0% 15%, var(--color-stat) 15% 98%, var(--color-link) 98% 100%);">
+          <div class="fund-donut-center">CALDER</div>
+        </div>
+        <div class="fund-donut-legend">
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-ink-soft);"></span><span class="fund-donut-legend-amt">~15%</span> <span class="fund-donut-legend-lbl">Self-funded &amp; family</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-stat);"></span><span class="fund-donut-legend-amt">~83%</span> <span class="fund-donut-legend-lbl">Individual donors</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-link);"></span><span class="fund-donut-legend-amt">~2%</span> <span class="fund-donut-legend-lbl">Party &amp; PAC</span></div>
+        </div>
+      </div>
+      <div class="fund-bar-row">
+        <div class="fund-bar-label">Self-funded &amp; family</div>
+        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 15%;"></div></div>
+        <div class="fund-bar-amt">~15%</div>
+      </div>
+      <div class="fund-bar-row">
+        <div class="fund-bar-label">Individual donors</div>
+        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 83%;"></div></div>
+        <div class="fund-bar-amt">~83%</div>
+      </div>
+      <div class="fund-bar-row">
+        <div class="fund-bar-label">Party &amp; PAC</div>
+        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 2%;"></div></div>
+        <div class="fund-bar-amt">~2%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION: CONFLICT OF INTEREST ============ -->
+  <section class="sect" id="coi">
+    <h2 class="sect-title"><span class="n">04</span> Conflicts of interest</h2>
+    <p>Hall's own state-required conflict-of-interest disclosure lists a Fidelity brokerage account holding stock in 29 companies, including Boeing, Johnson &amp; Johnson, and Nucor. All three also gave her campaign PAC money this cycle.</p>
+
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Stock &amp; PAC overlap</span></div>
+      <p>Boeing PAC gave Hall $500; Johnson &amp; Johnson PAC gave $600 across two cycles; Nucor Corporation PAC gave $1,800 across four separate contributions. Hall personally holds stock in all three companies, per her own disclosure.</p>
+    </div>
+
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Family medical-industry ties</span></div>
+      <p>Hall is a registered nurse at Ogden Regional Medical Center. Her spouse, Michael Hall, works at Ogden Clinic, holds ownership stakes in IHC Layton Surgical Center and North Ogden Surgical Center, and sits on the board at Ogden Regional Medical Center &mdash; the same hospital where Hall is employed.</p>
+    </div>
+
+    <div class="flag-open">
+      <span class="fo-label">Disclosure gap, dated</span>
+      <p>Hall's January 2026 conflict-of-interest filing disclosed her spouse's surgical-center ownership, his hospital board seat, and her own ownership in a separate LLC. Her July 2026 filing, submitted five months later, leaves that entire section blank.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION: CALDER ============ -->
+  <section class="sect" id="calder">
+    <h2 class="sect-title"><span class="n">05</span> Dave Calder</h2>
+    <p>Calder is an Air Force veteran and mechanical engineer who worked as an aircraft battle-damage engineer at Hill Air Force Base before joining the University of Dayton Research Institute, where he remains employed as a Distinguished Research Engineer supporting aging-aircraft systems for military and commercial clients. A former Davis County Republican delegate, he says he left the party the day it nominated Donald Trump for president in 2016.</p>
+    <p>His conflict-of-interest disclosure shows no owned entities, no stock or bond holdings above the $5,000 reporting threshold, and a single unpaid board position on his neighborhood homeowners association.</p>
+    <p>His campaign has drawn support from Democratic nominees in neighboring districts, including Rosemary Lesser and her spouse (HD10) and Bianca Mittendorf (HD7), alongside donations from Washington Terrace neighbors and family.</p>
+
+    <h3 class="sub-title">His platform, in his own words</h3>
+    <p>Calder's campaign site lists nine issue positions:</p>
+    <ul>
+      <li><b>Affordable housing</b> for young families, citing Wasatch Front median home prices more than doubling since 2015.</li>
+      <li><b>Healthcare access</b> &mdash; supports Medicaid expansion to cover gaps left by federal ACA cuts.</li>
+      <li><b>Wages and prices</b> &mdash; eliminate the state grocery tax; support living wages.</li>
+      <li><b>Protect fair elections</b> &mdash; opposes the legislature's handling of Proposition 4, the voter-enacted measure barring congressional gerrymandering.</li>
+      <li><b>End state support for ICE activity</b> he describes as unconstitutional, including opposition to a proposed ICE detention center in Utah.</li>
+      <li><b>Women's health</b> &mdash; keep reproductive healthcare decisions free of government interference.</li>
+      <li><b>Protect vote by mail.</b></li>
+      <li><b>Protect higher education funding</b> against budget cuts he characterizes as tied to "unscientific mandates."</li>
+      <li><b>Opposition to discrimination</b> based on race, gender, or sexual orientation.</li>
+    </ul>
+  </section>
+
+  <details class="sourcing">
+    <summary>Sourcing &amp; methodology</summary>
+    <ul>
+      <li>Campaign finance figures: disclosures.utah.gov, individual candidate reports, 2022&ndash;2026 filings for both candidates.</li>
+      <li>Conflict-of-interest disclosures: disclosures.utah.gov, filings dated January and July 2026 (Hall) and 2026 (Calder).</li>
+      <li>Legislative record: Utah State Legislature bill tracking (le.utah.gov), House floor vote records.</li>
+      <li>PAC and network cross-references: prior Weber County Hive reporting on NUPAC, H3 PAC, Doers Network, the Nordic Village Public Infrastructure District, and Operation Gigawatt donor networks.</li>
+      <li>Candidates' own campaign websites: <a href="https://www.katyhallutah.com/" target="_blank" rel="noopener">katyhallutah.com</a> (Hall) and <a href="https://www.votedavecalder.com/" target="_blank" rel="noopener">votedavecalder.com</a> (Calder), for platform and biographical claims attributed to each candidate directly.</li>
+    </ul>
+  </details>
+
+</div>
+
+<footer>
+  <p class="fine">This is public record. We report it. You decide what it means. <span class="star">★</span></p>
+</footer>
+
+<script>
+  document.querySelectorAll('.fund-toggle button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.fund-toggle button').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelectorAll('.fund-panel').forEach(function(p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelector('.fund-panel[data-panel="' + btn.dataset.target + '"]').classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
