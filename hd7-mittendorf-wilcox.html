@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mittendorf vs. Wilcox — Case File | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4f0e6;
+    --paper-card:#fbf9f3;
+    --ink:#2a261e;
+    --ink-soft:#5c5647;
+    --ink-faint:#8b8470;
+    --rust:#c0572e;
+    --amber:#d9a441;
+    --burgundy:#5c1a2b;
+    --burgundy-deep:#3d0f1c;
+    --line:#ddd6c4;
+    --line-strong:#c7bda3;
+    --red:#a5301e;
+    --green:#3f6b3b;
+    --serif:'Source Serif 4', Georgia, serif;
+    --display:'Playfair Display', Georgia, serif;
+    --mono:'IBM Plex Mono', 'Courier New', monospace;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    line-height:1.65;
+    font-size:17px;
+  }
+  a{color:var(--rust);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  .header-band{
+    background:var(--burgundy-deep);
+    background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);
+    padding:34px 0 30px;
+  }
+  .header-inner{
+    max-width:880px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;gap:16px;
+  }
+  .hex{width:46px;height:46px;flex:0 0 auto;}
+  .hd-kicker{
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:#d9b8bf;
+  }
+  .hd-title{
+    font-family:var(--display);font-size:21px;font-weight:700;
+    color:#f4e9dd;
+  }
+
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px 90px;}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--rust);margin:44px 0 10px;
+  }
+  h1.headline{
+    font-family:var(--display);
+    font-weight:900;
+    font-size:clamp(30px,5vw,44px);
+    line-height:1.1;
+    margin:0 0 18px;
+    color:var(--ink);
+  }
+  .dek{
+    font-size:19px;
+    color:var(--ink-soft);
+    max-width:66ch;
+    margin:0 0 6px;
+  }
+  .byline{
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--ink-faint);
+    margin:22px 0 0;
+    padding-bottom:24px;
+    border-bottom:2px solid var(--line-strong);
+  }
+  .byline b{color:var(--burgundy);font-weight:600;}
+
+  section{margin:52px 0;}
+  h2.section-head{
+    font-family:var(--display);
+    font-size:25px;font-weight:700;
+    color:var(--burgundy);
+    margin:0 0 6px;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--line-strong);
+  }
+  h3.sub-head{
+    font-family:var(--mono);
+    font-size:13.5px;font-weight:600;
+    color:var(--ink);
+    text-transform:uppercase;letter-spacing:.06em;
+    margin:30px 0 10px;
+  }
+  p{margin:0 0 16px;}
+  ul, ol{margin:0 0 16px;padding-left:22px;}
+  li{margin-bottom:8px;}
+
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin:26px 0;
+    font-family:var(--mono);
+  }
+  .stat{
+    background:var(--paper-card);
+    padding:18px 16px;
+  }
+  .stat .label{
+    font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--ink-faint);margin-bottom:8px;
+  }
+  .stat .value{
+    font-family:var(--display);
+    font-size:23px;font-weight:700;color:var(--ink);
+  }
+  .stat .value.neg{color:var(--red);}
+  .stat .value.pos{color:var(--green);}
+  .stat .value.amber{color:var(--amber);}
+
+  .record-card{
+    border:1px solid var(--line-strong);
+    background:var(--paper-card);
+    padding:22px 24px;
+    margin:20px 0;
+    border-left:4px solid var(--burgundy);
+  }
+  .record-card .rc-title{
+    font-family:var(--mono);
+    font-weight:600;font-size:13px;
+    color:var(--burgundy);
+    text-transform:uppercase;letter-spacing:.05em;
+    margin-bottom:10px;
+  }
+
+  .compare{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin:24px 0;
+    font-family:var(--serif);
+    font-size:15px;
+  }
+  .compare .col-head{
+    background:var(--paper-card);
+    padding:14px 16px;
+    font-weight:600;
+    color:var(--burgundy);
+    border-bottom:1px solid var(--line-strong);
+    font-family:var(--mono);
+    font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;
+  }
+  .compare .cell{
+    background:var(--paper-card);
+    padding:12px 16px;
+  }
+  @media (max-width:640px){ .compare{grid-template-columns:1fr;} }
+
+  .caveat{
+    border-left:3px solid var(--amber);
+    padding:14px 18px;
+    margin:20px 0;
+    background:var(--paper-card);
+    font-family:var(--serif);
+    font-size:15px;
+    color:var(--ink-soft);
+  }
+  .caveat b{color:var(--ink);}
+
+  .flag{
+    border-left:3px solid var(--red);
+    padding:14px 18px;
+    margin:20px 0;
+    background:var(--paper-card);
+    font-size:15px;
+    color:var(--ink);
+  }
+  .flag .flag-label{
+    font-family:var(--mono);
+    font-weight:600;color:var(--red);
+    text-transform:uppercase;font-size:11px;letter-spacing:.08em;
+    margin-bottom:6px;
+  }
+
+  details{
+    border:1px solid var(--line-strong);
+    background:var(--paper-card);
+    margin:14px 0;
+  }
+  summary{
+    cursor:pointer;
+    padding:14px 18px;
+    font-family:var(--mono);
+    font-weight:600;
+    font-size:13.5px;
+    color:var(--rust);
+    list-style:none;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary:before{content:"+ ";color:var(--amber);}
+  details[open] summary:before{content:"– ";}
+  details .details-body{padding:0 18px 18px;font-size:15px;color:var(--ink-soft);}
+  details .details-body ul{margin-top:0;}
+
+  table.led{
+    width:100%;border-collapse:collapse;
+    font-family:var(--mono);font-size:13px;
+    margin:14px 0;
+  }
+  table.led th{
+    text-align:left;padding:8px 10px;
+    border-bottom:2px solid var(--burgundy);
+    color:var(--burgundy);font-weight:600;
+    text-transform:uppercase;font-size:10.5px;letter-spacing:.05em;
+  }
+  table.led td{
+    padding:8px 10px;border-bottom:1px solid var(--line);
+    color:var(--ink-soft);
+  }
+  table.led tr:last-child td{border-bottom:none;}
+
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:2px solid var(--line-strong);
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--ink-faint);
+  }
+  footer .tagline{
+    font-family:var(--display);
+    font-size:19px;font-weight:700;
+    color:var(--burgundy);
+    margin-bottom:10px;
+  }
+  footer a.nav{color:var(--rust);margin-right:18px;}
+
+  .sources{font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);}
+  .sources li{margin-bottom:6px;}
+</style>
+</head>
+<body>
+
+<div class="header-band">
+  <div class="header-inner">
+    <svg class="hex" viewBox="0 0 100 100" aria-hidden="true">
+      <polygon points="50,4 93,27 93,73 50,96 7,73 7,27" fill="none" stroke="#f4e9dd" stroke-width="3"/>
+      <text x="50" y="58" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="28" fill="#f4e9dd">WCH</text>
+    </svg>
+    <div>
+      <div class="hd-kicker">2026 Candidates &middot; The Weber County Hive</div>
+      <div class="hd-title">Case File</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="eyebrow">Utah House District 7 &middot; North Ogden</div>
+  <h1 class="headline">Mittendorf vs. Wilcox</h1>
+  <p class="dek">A state legislator whose campaign has drawn PAC money from a committee run by his own uncle's wife &mdash; a former legislator, county commissioner, and state cabinet official whose own tenure drew a criminal investigation. Alongside a challenger whose fundraising record is current while his is weeks stale.</p>
+  <p class="byline">Compiled from campaign finance reports filed with the Utah Lieutenant Governor's Office. <b>We report public records. You decide.</b></p>
+
+  <section>
+    <div class="eyebrow" style="margin-top:0;">At a glance</div>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="label">Office</div>
+        <div class="value" style="font-size:17px;">Utah House, District 7</div>
+      </div>
+      <div class="stat">
+        <div class="label">Wilcox balance (Primary Rpt.)</div>
+        <div class="value pos">$4,150.39</div>
+      </div>
+      <div class="stat">
+        <div class="label">Wilcox latest filing</div>
+        <div class="value" style="font-size:16px;">Primary period only</div>
+      </div>
+      <div class="stat">
+        <div class="label">Mittendorf latest batch</div>
+        <div class="value amber">$4,516.00</div>
+      </div>
+    </div>
+    <div class="caveat"><b>A note on this comparison:</b> Wilcox's most recent filing on record covers March 31&ndash;June 11, 2026 (the Primary Report, submitted June 16). No general-period report has posted yet. Mittendorf's contributions batch below runs through July 25. The two records are not on equal footing as of this writing &mdash; that gap is itself part of the story until Wilcox's next filing appears. Separately: roughly $1,250 of Wilcox's reported 2026 fundraising has not been itemized by donor name in the filings reviewed here &mdash; an unresolved gap worth noting given his years of experience with these disclosure requirements.</div>
+  </section>
+
+  <section>
+    <h2 class="section-head">The incumbent: Ryan Wilcox</h2>
+    <p>Prior reporting on this race documented Wilcox raising roughly ten times Mittendorf's cash over the full cycle, more than $4,000 in a single reporting period from developer-aligned PACs (Utah Forward PAC, Lincoln Hill Partners PAC &mdash; whose full support across multiple years totals far more, detailed below), and an undisclosed family relationship &mdash; Katrina Gibson is his aunt by marriage.</p>
+
+    <h3 class="sub-head">Every contribution documented across both filings on record</h3>
+    <p>Wilcox's 2026 Convention Report (1/1&ndash;3/30/2026) reported $6,500 raised year-to-date through that period. Only $4,000 of that is itemized by name in the sources reviewed for this case file &mdash; the two PAC payments below. The remaining roughly $1,250 from that period has not been identified. That gap is listed here rather than smoothed over: Wilcox is the incumbent, has filed these disclosures for multiple cycles, and knows what itemization requires.</p>
+    <table class="led">
+      <tr><th>Date</th><th>Donor</th><th>Amount</th><th>Note</th></tr>
+      <tr><td>1/16/2026</td><td>Lincoln Hill Partners PAC</td><td>$1,000.00</td><td>Registered MIDA lobbyists</td></tr>
+      <tr><td>Jan 2026</td><td>Utah Forward PAC</td><td>$3,000.00</td><td>Managed by his aunt, Katrina Gibson</td></tr>
+      <tr><td>&mdash;</td><td><i>Unitemized balance, Convention Report period</i></td><td><i>~$1,250.00</i></td><td><i>Not identified in reports reviewed</i></td></tr>
+      <tr><td>5/1/2026</td><td>NUCOR Corporation PAC of Utah</td><td>$500.00</td><td>Steel industry</td></tr>
+      <tr><td>5/14/2026</td><td>SEL Inc.</td><td>$250.00</td><td>Pleasant Grove</td></tr>
+      <tr><td>6/9/2026</td><td>Utah Bankers Association</td><td>$500.00</td><td>&nbsp;</td></tr>
+    </table>
+    <div class="flag">
+      <div class="flag-label">Every dollar itemized in Wilcox's Primary Report period came from institutions, not individuals</div>
+      All three named contributions in the 3/31&ndash;6/11/2026 reporting period &mdash; NUCOR, SEL Inc., and the Utah Bankers Association &mdash; are PACs and corporations, not individual Weber County residents. No individual donor appears in that period's itemized list at all.
+    </div>
+
+    <h3 class="sub-head">Expenditures of note, same period</h3>
+    <table class="led">
+      <tr><th>Date</th><th>Recipient</th><th>Purpose</th><th>Amount</th></tr>
+      <tr><td>4/1</td><td>Weber County Republican Party</td><td>Donations</td><td>$500.00</td></tr>
+      <tr><td>4/1</td><td>Weber County Republican Party</td><td>Donations</td><td>$500.00</td></tr>
+      <tr><td>4/13</td><td>Weber County Republican Women</td><td>Donations</td><td>$300.00</td></tr>
+      <tr><td>5/30</td><td>Unified Defense Systems</td><td>Other &ndash; Security Services</td><td>$1,500.00</td></tr>
+      <tr><td>6/9</td><td>Richard Hyer Campaign</td><td>Donations</td><td>$500.00</td></tr>
+    </table>
+    <div class="flag">
+      <div class="flag-label">An unresolved donor-identification mismatch, not a resolved one</div>
+      Wilcox's report lists a 6/9/2026 expenditure as "Richard Hyer Campaign &ndash; Donations &ndash; $500," implying a personal gift from Wilcox to fellow candidate Richard Hyer's county commission campaign. But Hyer's own 2026 report lists that same-date $500 gift as coming from an entity called <b>"Friends of Ryan Wilcox"</b> &mdash; not from Wilcox personally. No PAC or organization by that name is registered anywhere in Utah's records reviewed for this case file. Whether this is a personal gift misreported as an entity, an unregistered PAC operating without disclosure, or a bookkeeping error on one side, remains unresolved.
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-head">A career-long pattern, not a single cycle</h2>
+    <p>Utah Forward PAC and Lincoln Hill Partners PAC are recent additions to Wilcox's funding, appearing starting in 2023. But institutional and out-of-state PAC money has defined his campaigns since his very first race. Full itemized disclosure records for his first tenure in the House (2008&ndash;2014) confirm it:</p>
+    <div class="stat-grid">
+      <div class="stat"><div class="label">Total raised, 2008-2014</div><div class="value amber">$117,386.81</div></div>
+      <div class="stat"><div class="label">Unique donor names</div><div class="value">246</div></div>
+      <div class="stat"><div class="label">Deleted entries</div><div class="value pos">0</div></div>
+      <div class="stat"><div class="label">Institutional / PAC share</div><div class="value" style="font-size:20px;">~62%</div></div>
+    </div>
+    <table class="led">
+      <tr><th>Year</th><th>Raised</th><th>Note</th></tr>
+      <tr><td>2008</td><td>$39,111</td><td>First race, 128 transactions</td></tr>
+      <tr><td>2009</td><td>$1,100</td><td>Off-year</td></tr>
+      <tr><td>2010</td><td>$35,758</td><td>Re-election, 78 transactions</td></tr>
+      <tr><td>2011</td><td>$9,969</td><td>Off-year</td></tr>
+      <tr><td>2012</td><td>$28,329</td><td>Re-election</td></tr>
+      <tr><td>2013</td><td>$5,700</td><td>Off-year</td></tr>
+      <tr><td>2014</td><td>$3,950</td><td>Partial year, through April, on file</td></tr>
+    </table>
+    <div class="flag">
+      <div class="flag-label">Energy-sector money in every single cycle</div>
+      Combining name-variant spellings (PacifiCorp/Rocky Mtn. Power appears three different ways across filings; Arch Coal appears two ways), energy-sector donors total <b>$9,450 across 23 transactions from 13 distinct entities</b> between 2008 and 2014, with no gap year: Energy Solutions ($2,600), Chevron ($1,400), Bill Barrett Corporation, oil and gas ($1,000), PacifiCorp/Rocky Mountain Power ($2,000 combined across name variants), Questar Employee PAC ($550), Arch Coal ($1,000 combined), Utah Rural Electric ($600 combined), and Utah Petroleum Marketers &amp; Retailers Association ($100). Chevron, Bill Barrett, and Altria all appear again in his 2026 giving pattern, discussed above.
+    </div>
+    <p style="font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);">Top donors across this period: Utah Credit Union PAC $8,206.20; U-PAC $3,489.73; Utah Association of Realtors PAC $3,000; Energy Solutions $2,600; Sprint Nextel $2,500; Utah Association of Realtors $2,000; Weber County Republican Party $2,000; Workers Compensation Fund $1,950; Merit Medical $1,800; Utah Medical PAC $1,600. Zero deleted entries were found anywhere in this record &mdash; a genuine point of contrast with other candidates' filings reviewed elsewhere in this repository.</p>
+    <div class="caveat">The gap between this record (2008-2014) and the 2026 filings documented above (2015-2025) has not yet been fully pulled. What's shown here establishes that the institutional-donor pattern is longstanding, not that every intervening year matches it exactly &mdash; a complete pull of 2015-2025 would close that gap.</div>
+
+    <h3 class="sub-head">Confirmed: contributions reported as a same-day bundle at the filing deadline</h3>
+    <p>His 2024 Year End Report (covering 10/25&ndash;12/31/2024, submitted 1/10/2025) shows the pattern directly. Every single itemized contribution in the report &mdash; all seven, the entire $2,650 &mdash; was added as an amendment on <b>1/10/2025, the exact same day the report itself was due</b>. The original filing had zero itemized contributions; everything was bundled in at the deadline.</p>
+    <table class="led">
+      <tr><th>Date received</th><th>Donor</th><th>Amount</th><th>Amended in on</th></tr>
+      <tr><td>11/8/2024</td><td>Utah Petroleum Marketers and Retailers Association</td><td>$100.00</td><td>1/10/2025</td></tr>
+      <tr><td>11/8/2024</td><td>Utah Beer Wholesalers Association</td><td>$250.00</td><td>1/10/2025</td></tr>
+      <tr><td>11/8/2024</td><td>United Health Group (Washington, DC)</td><td>$300.00</td><td>1/10/2025</td></tr>
+      <tr><td>11/8/2024</td><td>American Property Casualty Insurance Association (Chicago)</td><td>$500.00</td><td>1/10/2025</td></tr>
+      <tr><td>11/8/2024</td><td>Altria Client Services (Virginia)</td><td>$500.00</td><td>1/10/2025</td></tr>
+      <tr><td>11/8/2024</td><td>Utah HOSPAC</td><td>$500.00</td><td>1/10/2025</td></tr>
+      <tr><td>12/19/2024</td><td>eBay Inc. (San Jose)</td><td>$500.00</td><td>1/10/2025</td></tr>
+    </table>
+    <div class="flag">
+      <div class="flag-label">Two vendors this report ties into other Weber County candidates already documented in this repository</div>
+      This same report shows <b>Colonial Specialty Co. paid $209.62 for "Advertising" (11/7/2024)</b> &mdash; the same Colonial Flag/Swenson family company where Joseph Kerry serves as registered agent and Paul Swenson is Kerry's largest campaign donor. It also shows <b>Kevin Johnson Media paid $2,700 (11/8/2024, "Advertising")</b> &mdash; a vendor already documented as receiving payments from five other Weber County candidates (Jake Sawyer, James Ebert, Sharon Bolos, Richard Hyer, Katrina Gibson), previously flagged as a possibly-dissolved LLC still taking payments. Wilcox is now a sixth confirmed candidate paying that same vendor.
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-head">Where the PAC money actually comes from</h2>
+    <h3 class="sub-head">The people behind Utah Forward PAC's $3,000</h3>
+    <p>Utah Forward PAC's $3,000 to Wilcox didn't come from nowhere. Its own itemized donor history, documented through prior disclosure research, traces back to real estate developers and a sitting state Senate leader:</p>
+    <table class="led">
+      <tr><th>Donor</th><th>Amount</th><th>Note</th></tr>
+      <tr><td>Nilson Homes / Nilson &amp; Company Inc.</td><td>$20,000</td><td>Largest documented donor to the PAC</td></tr>
+      <tr><td>Building Construction Partners LLC</td><td>$10,000</td><td>&nbsp;</td></tr>
+      <tr><td>Shane Dunleavy</td><td>&mdash;</td><td>Gave both personally and through his corporate vehicle, Rincon Financial</td></tr>
+      <tr><td>John Lewis</td><td>&mdash;</td><td>Of the Lewis+Dunleavy development partnership</td></tr>
+      <tr><td>Adams Leadership PAC</td><td>&mdash;</td><td>Controlled by then-Senate President Stuart Adams</td></tr>
+    </table>
+    <p>In other words: the $3,000 that reached Wilcox from his aunt's PAC traces upstream to real estate developers and a sitting Senate President's own leadership PAC, not an anonymous committee.</p>
+
+    <h3 class="sub-head">Lincoln Hill Partners PAC: what's confirmed, and what isn't</h3>
+    <p>Lincoln Hill Partners PAC's support for Wilcox is larger than a single gift. Across four separate contributions from 2023 through 2026, the PAC gave him <b>$6,750 total</b>:</p>
+    <table class="led">
+      <tr><th>Date</th><th>Amount</th></tr>
+      <tr><td>1/5/2023</td><td>$750.00</td></tr>
+      <tr><td>9/18/2024</td><td>$2,500.00</td></tr>
+      <tr><td>5/27/2025</td><td>$2,500.00</td></tr>
+      <tr><td>1/16/2026</td><td>$1,000.00</td></tr>
+    </table>
+    <p>The PAC is the distribution arm of Lincoln Hill Partners, a lobbying firm co-founded by Lincoln Shurtz and Casey Hill. It's funded upstream through Fides LLC, a money-collection vehicle that has moved more than $332,500 through the network since 2023. What is documented: the distribution side &mdash; a long list of Utah legislators who've received Lincoln Hill Partners PAC money, and Lincoln Shurtz's dual role as Fides LLC's manager and, separately, Director of Government Affairs for the Utah Association of Counties. What is NOT yet documented, and shouldn't be asserted as fact: the specific individual or corporate names who gave money directly into Fides LLC or Lincoln Hill PAC itself. That upstream donor list has not been itemized by name in the research behind this piece.</p>
+  </section>
+
+  <section>
+    <h2 class="section-head">The fuller record: deletions and amendments, 2022-2026</h2>
+    <p>A more complete pull covering 2022 through mid-2026 &mdash; closing most of the gap between his first House tenure and the current cycle &mdash; adds real detail and one correction to the clean-record impression the earlier 2008-2014 data gave.</p>
+    <div class="stat-grid">
+      <div class="stat"><div class="label">Total raised, 2022-2026</div><div class="value amber">$83,586.65</div></div>
+      <div class="stat"><div class="label">Deleted entries</div><div class="value neg">17</div></div>
+      <div class="stat"><div class="label">Amended entries</div><div class="value neg">114 of 743</div></div>
+      <div class="stat"><div class="label">Amendment rate</div><div class="value" style="font-size:20px;">~15%</div></div>
+    </div>
+    <div class="flag">
+      <div class="flag-label">The zero-deletion record didn't hold once the fuller history was pulled</div>
+      His 2008-2014 filings, examined on their own, showed zero deleted entries &mdash; a genuine point of contrast with several other Weber County candidates' records. That record doesn't hold once 2022-2026 is added: 17 contributions were deleted across the Convention, General, Primary, and Year End reports in that window.
+    </div>
+
+    <h3 class="sub-head">The bundling rate roughly triples between 2022 and 2024</h3>
+    <p>Rather than a flat average, the year-by-year amendment rate shows a real progression &mdash; and it climbs right around when Utah Forward PAC and Lincoln Hill Partners PAC money starts appearing in his filings:</p>
+    <div style="position:relative;width:100%;height:280px;margin:16px 0 8px;">
+      <canvas id="bundleChart" role="img" aria-label="Line chart showing the share of Wilcox's campaign finance line items filed as same-day amendments, rising from 4.2% in 2022 to 28.0% in 2024">2022: 4.2% amended. 2023: 7.0% amended. 2024: 28.0% amended. 2025: 20.6% amended. 2026 (partial): 4.9% amended.</canvas>
+    </div>
+    <p style="font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);">Share of each year's total campaign finance line items filed as amendments rather than reported on time. 2026 is a partial year, through the convention period only.</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+    <script>
+    new Chart(document.getElementById('bundleChart'), {
+      type: 'line',
+      data: {
+        labels: ['2022', '2023', '2024', '2025', '2026*'],
+        datasets: [{
+          label: 'Amendment rate',
+          data: [4.2, 7.0, 28.0, 20.6, 4.9],
+          borderColor: '#c0572e',
+          backgroundColor: 'rgba(192,87,46,0.12)',
+          borderWidth: 2,
+          pointRadius: 5,
+          pointBackgroundColor: '#c0572e',
+          pointBorderColor: '#fbf9f3',
+          pointBorderWidth: 2,
+          fill: true,
+          tension: 0.15
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { family: "'IBM Plex Mono', monospace", size: 11 }, color: '#5c5647' } },
+          y: { beginAtZero: true, max: 32, ticks: { callback: (v) => v + '%', font: { family: "'IBM Plex Mono', monospace", size: 11 }, color: '#5c5647' }, grid: { color: '#ddd6c4' } }
+        },
+        plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => ctx.parsed.y.toFixed(1) + '% amended' } } }
+      }
+    });
+    </script>
+    <p>Two individual reports stand out even against that rising trend: the <b>2024 Year End Report</b>, where all seven contributions were bundled in on the exact filing deadline, and the <b>2025 Year End Report</b>, where 50 of 58 total line items &mdash; contributions and routine expenditures alike &mdash; were amended in the day after.</p>
+    <p style="font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);">Deadlines confirmed via disclosures.utah.gov: Year End Report due Jan 10 each year. The 2024 report (7 contributions) was fully amended in on the due date itself. The 2025 report went further &mdash; 50 of its 58 total line items, contributions and routine expenditures alike, were added the day after the deadline.</p>
+
+    <p style="font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);">Other confirmed top donors, 2022-2026: Larry H Miller Company $5,000; Select Health $4,500; Utah Association of Realtors PAC $4,000; Wilson Leadership PAC $4,000 (Brad Wilson's leadership PAC, 2 gifts) plus a separate Committee to Elect Brad Wilson $1,000; Utah HOSPAC $3,000; Energy Solutions $3,000; U-CAR PAC (Utah Auto Dealers) $2,253; Altria Client Services $2,000 (four more gifts, continuing the pattern documented in his earlier career); Utah Metal Works Inc. $2,000; H3 PAC $1,000 (two gifts) &mdash; the same Hartley brothers PAC documented elsewhere in this publication's reporting; NUCOR Corporation PAC $1,300; PacifiCorp $1,000; Enterprise Holdings PAC $1,000; Home Builders Association of Utah PAC $1,000.</p>
+  </section>
+
+  <section>
+    <h2 class="section-head">Past relationships: the Gibson family network</h2>
+    <p>Wilcox's own family history connects him directly to a PAC that has funded his campaigns, established through cross-referenced public obituaries. <b>Wayne B. Gibson</b> (d. December 2021) &mdash; longtime Weber County Planning Commission member, nearly 30-year Weber Basin Water District President, Weber County Farm Bureau President, and a Reagan-era appointee to the State ASC Committee &mdash; had three children: Kerry Gibson, Ron Gibson, and Melanie Gibson Wilcox. Melanie married Roy Wilcox; their son is <b>Ryan Wilcox</b>. Kerry Gibson married <b>Katrina Gibson</b>.</p>
+    <p>That makes <b style="color:var(--burgundy);">Kerry Gibson Ryan Wilcox's uncle</b>, and Katrina Gibson his aunt by marriage. Neither relationship has been disclosed on any campaign filing by either party.</p>
+
+    <h3 class="sub-head">Kerry Gibson's career in Utah politics</h3>
+    <p>The uncle at the center of this network is not a private citizen who happened to fund a PAC. He is one of Weber County's best-known former officials, with a career spanning elected office, a governor's cabinet, and a failed congressional bid:</p>
+    <table class="led">
+      <tr><th>Years</th><th>Position</th></tr>
+      <tr><td>2005-2010</td><td>Utah House of Representatives (three terms); chaired Natural Resources Appropriations Committee</td></tr>
+      <tr><td>2011-2018</td><td>Weber County Commissioner (two terms); President, Utah Association of Counties</td></tr>
+      <tr><td>2018-2019</td><td>Deputy Director, Utah Department of Natural Resources</td></tr>
+      <tr><td>2019-2020</td><td>Commissioner, Utah Department of Agriculture and Food (Gov. Gary Herbert appointee)</td></tr>
+      <tr><td>2020</td><td>Republican candidate, Utah's 1st Congressional District &ndash; won GOP convention, lost June primary to Blake Moore</td></tr>
+      <tr><td>2021-present</td><td>Registered Utah lobbyist (NRAE Solutions LLC)</td></tr>
+    </table>
+    <div class="flag">
+      <div class="flag-label">His county commission tenure was under criminal investigation</div>
+      Gibson resigned his Weber County Commission seat amid an Ogden Police Department investigation, opened in late 2017, into allegations he misused county equipment, personnel, and funds &mdash; including diverting resources from a federally funded river project on his family's dairy farm, an employee's claim she was directed to collect political donations while on the job, and a PAC event held at the Ogden airport. The investigation concluded in May 2018 with no charges filed. His later tenure at the Utah Department of Agriculture and Food was separately the subject of a state audit citing staff turnover, rising travel spending, procedural errors, and conflict-of-interest concerns.
+    </div>
+
+    <h3 class="sub-head">The documented flow of money</h3>
+    <svg width="100%" viewBox="0 0 680 460" role="img" style="margin:8px 0 20px;" aria-label="Diagram: developers fund Utah Forward PAC, which paid Ryan Wilcox 3,000 dollars in January 2026; Wilcox then gave 500 dollars to Katrina Gibson's own campaign and endorsed her">
+      <defs><marker id="wfa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+      <rect x="220" y="30" width="240" height="56" rx="8" fill="#fbf9f3" stroke="#c0572e" stroke-width="1"/>
+      <text x="340" y="50" text-anchor="middle" dominant-baseline="central" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;fill:#c0572e;">Developers</text>
+      <text x="340" y="68" text-anchor="middle" dominant-baseline="central" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;fill:#8b8470;">Nilson Homes + others, $30k+</text>
+
+      <line x1="340" y1="86" x2="340" y2="126" stroke="#8b8470" stroke-width="1" marker-end="url(#wfa)"/>
+
+      <rect x="220" y="126" width="240" height="56" rx="8" fill="#fbf9f3" stroke="#5c1a2b" stroke-width="1"/>
+      <text x="340" y="146" text-anchor="middle" dominant-baseline="central" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;fill:#5c1a2b;">Utah Forward PAC</text>
+      <text x="340" y="164" text-anchor="middle" dominant-baseline="central" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;fill:#8b8470;">Run by Katrina Gibson</text>
+
+      <line x1="340" y1="182" x2="340" y2="222" stroke="#8b8470" stroke-width="1" marker-end="url(#wfa)"/>
+      <text x="352" y="202" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;fill:#d9a441;">$3,000</text>
+
+      <rect x="220" y="222" width="240" height="56" rx="8" fill="#fbf9f3" stroke="#d9a441" stroke-width="1"/>
+      <text x="340" y="242" text-anchor="middle" dominant-baseline="central" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;fill:#8c6a1f;">Ryan Wilcox</text>
+      <text x="340" y="260" text-anchor="middle" dominant-baseline="central" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;fill:#8b8470;">HD7 incumbent, PAC's nephew</text>
+
+      <line x1="340" y1="278" x2="340" y2="318" stroke="#8b8470" stroke-width="1" marker-end="url(#wfa)"/>
+      <text x="352" y="298" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;fill:#d9a441;">$500</text>
+
+      <rect x="220" y="318" width="240" height="56" rx="8" fill="#fbf9f3" stroke="#5c1a2b" stroke-width="1"/>
+      <text x="340" y="338" text-anchor="middle" dominant-baseline="central" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;fill:#5c1a2b;">Katrina Gibson campaign</text>
+      <text x="340" y="356" text-anchor="middle" dominant-baseline="central" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;fill:#8b8470;">Weber County Commission</text>
+
+      <text x="340" y="400" text-anchor="middle" style="font-family:var(--serif);font-size:12.5px;fill:#5c5647;">Wilcox then publicly endorsed Gibson for Commission Seat A</text>
+      <text x="340" y="420" text-anchor="middle" style="font-family:var(--serif);font-size:12.5px;fill:#5c5647;">Neither transaction disclosed the aunt/nephew relationship</text>
+    </svg>
+      <p style="margin-bottom:8px;">Kerry Gibson is a registered Utah lobbyist (since 1/17/2021, via NRAE Solutions LLC), with clients including Ogden City, Plain City, Mountain Green Sewer Improvement District, and Wolf Creek Management. Katrina Gibson founded and controls <b>Utah Forward PAC</b>, funded by developers including Nilson Homes, Building Construction Partners, Lewis, and Dunleavy.</p>
+      <p style="margin-bottom:8px;">In January 2026, <b>Utah Forward PAC paid Ryan Wilcox $3,000</b>. That same month, <b>Wilcox personally donated $500 to Katrina Gibson's own Weber County Commission campaign</b> (jointly with his wife, Kristina). Wilcox then publicly endorsed Katrina Gibson for Commission Seat A.</p>
+      <p style="margin-bottom:0;">Separately, Utah Forward PAC also paid <b>Steven Gibson</b> &mdash; a cousin of Kerry Gibson's, confirmed via a public Facebook exchange between the two &mdash; $1,000 on 7/29/2025, listed as "Donations." Wilcox's own campaign additionally paid someone named <b>Ryder Wilcox</b> $1,750 (1/27/2026, "Campaign Expense") &mdash; a possible family member whose relationship to the candidate has not been confirmed.</p>
+    <div class="flag">
+      <div class="flag-label">What isn't disclosed</div>
+      Katrina Gibson's own candidate filing does not disclose Kerry Gibson's lobbying relationships with Ogden City and Plain City &mdash; municipalities she would have voted on as a Weber County Commissioner. Neither Wilcox's nor Gibson's campaign filings disclose that PAC money and personal donations moving between them involve family members.
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-head">The challenger: Bianca Mittendorf</h2>
+    <p>Mittendorf's most recent contributions report covers June 16 through July 25, 2026, totaling $4,516.00 &mdash; roughly matching Wilcox's primary-period total, though the two periods aren't directly comparable given the reporting gap above.</p>
+
+    <h3 class="sub-head">Contributions, 6/16/2026 &ndash; 7/25/2026 ($4,516.00 total)</h3>
+    <table class="led">
+      <tr><th>Date</th><th>Donor</th><th>Amount</th></tr>
+      <tr><td>6/16, 7/16</td><td>Catherine McNeel</td><td>$10.00 + $10.00</td></tr>
+      <tr><td>6/17</td><td>Yonathan Workalemahu</td><td>$20.00</td></tr>
+      <tr><td>6/19</td><td>David Lesser</td><td>$250.00</td></tr>
+      <tr><td>6/20</td><td>Paula Smith</td><td>$100.00</td></tr>
+      <tr><td>6/23</td><td>Karen Loveridge</td><td>$25.00</td></tr>
+      <tr><td>6/24</td><td>Doug Nielsen</td><td>$50.00</td></tr>
+      <tr><td>6/27, 7/25</td><td>Rosalba Dominguez</td><td>$5.00 + $5.00</td></tr>
+      <tr><td>6/28</td><td>Lisa Nentl-Bloom (North Branch, MN)</td><td>$200.00</td></tr>
+      <tr><td>6/30</td><td>Carla Trentelman</td><td>$50.00</td></tr>
+      <tr><td>7/2</td><td>Angela Choberka</td><td>$25.00</td></tr>
+      <tr><td>7/2</td><td>Stacy Bernal</td><td>$25.00</td></tr>
+      <tr><td>7/9</td><td>Tamara Kentch-Jones</td><td>$100.00</td></tr>
+      <tr><td>7/9</td><td>Hilaree Lowry</td><td>$20.00</td></tr>
+      <tr><td>7/10</td><td>Ashley Marks</td><td>$5.00</td></tr>
+      <tr><td>7/12</td><td>Gretchen Vallaro (West Milford, NJ)</td><td>$20.00</td></tr>
+      <tr><td>7/15</td><td>Oscar Mata</td><td>$150.00</td></tr>
+      <tr><td>7/15</td><td>Chelsea Rodriguez</td><td>$20.00</td></tr>
+      <tr><td>7/19</td><td>Peggy Troyer (Westchester, IL)</td><td>$1.00</td></tr>
+      <tr><td>7/20</td><td>Katherine Matheson</td><td>$2,000.00</td></tr>
+      <tr><td>7/20</td><td>Cindy Formeller</td><td>$100.00</td></tr>
+      <tr><td>7/20</td><td>Rosalind Van Vleet</td><td>$50.00</td></tr>
+      <tr><td>7/21</td><td>IBEW PAC Voluntary Fund</td><td>$1,000.00</td></tr>
+      <tr><td>7/21</td><td>Women's Democratic Club</td><td>$150.00</td></tr>
+      <tr><td>7/22</td><td>Michael Stevenson</td><td>$25.00</td></tr>
+      <tr><td>7/23</td><td>Jeremy Thompson (Roy)</td><td>$100.00</td></tr>
+    </table>
+
+    <div class="record-card">
+      <div class="rc-title">Cross-race donor patterns</div>
+      <p style="margin-bottom:8px;"><b style="color:var(--burgundy);">David Lesser's $250 gift</b> is the third different Weber-area Democratic race the Lesser household has given to this cycle, alongside Kim James (HD8) and Kacee Weaver (USBE District 2).</p>
+      <p style="margin-bottom:8px;"><b style="color:var(--burgundy);">Angela Choberka's $25 personal gift</b> confirms mutual HD7/HD9 support already on record &mdash; Choberka's campaign separately paid $380 to "Bianca Mittendorf for HD7."</p>
+      <p style="margin-bottom:0;"><b style="color:var(--burgundy);">Jeremy Thompson's $100 gift (7/23, Roy)</b> shares a name, city, and exact date with a "Jeremy A Thompson" $50 gift to Kacee Weaver's USBE campaign the same day &mdash; likely the same person giving to two different candidates, not yet independently confirmed.</p>
+    </div>
+    <p style="font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);">Katherine Matheson's $2,000 gift (7/20) is the largest single contribution in this batch and is not yet identified beyond the disclosure record.</p>
+  </section>
+
+  <section>
+    <h2 class="section-head">Individual donors vs. PAC money</h2>
+    <p>Toggle between the two candidates to compare where their most recent itemized dollars actually came from.</p>
+    <div style="display:flex;gap:8px;margin:18px 0;">
+      <button id="btn-wilcox" onclick="showHD7Candidate('wilcox')" style="flex:1;padding:10px;font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;background:var(--burgundy);color:#f4e9dd;border:1px solid var(--burgundy);border-radius:2px;cursor:pointer;">Ryan Wilcox</button>
+      <button id="btn-mittendorf" onclick="showHD7Candidate('mittendorf')" style="flex:1;padding:10px;font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;background:var(--paper-card);color:var(--burgundy);border:1px solid var(--burgundy);border-radius:2px;cursor:pointer;">Bianca Mittendorf</button>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><div class="label">Individual donors</div><div class="value" id="hd7-ind-pct" style="color:var(--rust);">0%</div><div style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);margin-top:4px;" id="hd7-ind-amt">$0</div></div>
+      <div class="stat"><div class="label">PAC / institutional</div><div class="value" id="hd7-pac-pct" style="color:var(--burgundy);">0%</div><div style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);margin-top:4px;" id="hd7-pac-amt">$0</div></div>
+    </div>
+    <div style="position:relative;width:100%;height:240px;margin:16px 0 4px;">
+      <canvas id="hd7DonorChart" role="img" aria-label="Doughnut chart of individual versus PAC and institutional donations for the selected HD7 candidate">Wilcox 2026 itemized: 100% institutional. Mittendorf latest report: 74.5% individual, 25.5% institutional.</canvas>
+    </div>
+    <p id="hd7-chart-note" style="font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);"></p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+    <script>
+    const hd7Data = {
+      wilcox: { ind: 0, pac: 5250, note: "2026 Convention + Primary Report, itemized only. Every named donor is a PAC or corporation; a further $1,250 from the Convention period is unidentified in the reports reviewed.", label: "Wilcox, 2026 cycle to date" },
+      mittendorf: { ind: 3366, pac: 1150, note: "Received Contributions Report, 6/16-7/25/2026. Includes one $2,000 individual gift and two small PAC gifts.", label: "Mittendorf, latest report" }
+    };
+    let hd7Chart;
+    function showHD7Candidate(who) {
+      const d = hd7Data[who];
+      const total = d.ind + d.pac;
+      document.getElementById('hd7-ind-pct').textContent = total ? Math.round(d.ind/total*100) + '%' : '0%';
+      document.getElementById('hd7-pac-pct').textContent = total ? Math.round(d.pac/total*100) + '%' : '0%';
+      document.getElementById('hd7-ind-amt').textContent = '$' + d.ind.toLocaleString();
+      document.getElementById('hd7-pac-amt').textContent = '$' + d.pac.toLocaleString();
+      document.getElementById('hd7-chart-note').textContent = d.label + ' \u2014 ' + d.note;
+      const active = 'background:var(--burgundy);color:#f4e9dd;border:1px solid var(--burgundy);';
+      const inactive = 'background:var(--paper-card);color:var(--burgundy);border:1px solid var(--burgundy);';
+      document.getElementById('btn-wilcox').style.cssText = 'flex:1;padding:10px;font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;border-radius:2px;cursor:pointer;' + (who==='wilcox'?active:inactive);
+      document.getElementById('btn-mittendorf').style.cssText = 'flex:1;padding:10px;font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;border-radius:2px;cursor:pointer;' + (who==='mittendorf'?active:inactive);
+      if (hd7Chart) hd7Chart.destroy();
+      hd7Chart = new Chart(document.getElementById('hd7DonorChart'), {
+        type: 'doughnut',
+        data: { labels: ['Individual', 'PAC / institutional'], datasets: [{ data: [d.ind, d.pac], backgroundColor: ['#c0572e', '#5c1a2b'], borderWidth: 0 }] },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: (ctx) => ctx.label + ': $' + ctx.parsed.toLocaleString() } } } }
+      });
+    }
+    showHD7Candidate('wilcox');
+    </script>
+  </section>
+
+  <section>
+    <details>
+      <summary>Full sourcing</summary>
+      <div class="details-body">
+        <ul class="sources">
+          <li>Ryan Wilcox 2026 Primary Report and 2026 Convention Report, filed with the Utah Lieutenant Governor's Office</li>
+          <li>Bianca Mittendorf Received Contributions Report, 6/16/2026 &ndash; 7/25/2026</li>
+          <li>Wayne B. Gibson obituary (d. 12/4/2021) and Betty Wilcox obituary (4/2017), cross-referenced to establish family relationships</li>
+          <li>Utah Forward PAC 2026 Convention Report and itemized expenditures, filed with the Utah Lieutenant Governor's Office</li>
+          <li>Utah Forward PAC Utah Division of Corporations filing (formed 4/13/2022)</li>
+          <li>Kerry Gibson Utah lobbyist registration (registered 1/17/2021, via NRAE Solutions LLC)</li>
+          <li>Katrina Gibson candidate Conflict of Interest filing</li>
+          <li>News coverage of Kerry Gibson's career: Standard-Examiner, Salt Lake Tribune, KSL, Deseret News, Utah Investigative Journalism Project, Utah News Dispatch, Utah Farm Bureau, Utah Public Radio (2019-2026)</li>
+          <li>Utah Forward PAC itemized contribution filings, Utah Division of Corporations entity filing (formed 4/13/2022)</li>
+          <li>Lincoln Hill Partners PAC itemized distribution records; Fides LLC entity filing</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <footer>
+    <div class="tagline">We report public records. You decide.</div>
+    <nav>
+      <a class="nav" href="index.html">&larr; 2026 Candidates index</a>
+      <a class="nav" href="https://webercountyhive.substack.com" target="_blank" rel="noopener">The Weber County Hive</a>
+    </nav>
+  </footer>
+
+</div>
+</body>
+</html>
