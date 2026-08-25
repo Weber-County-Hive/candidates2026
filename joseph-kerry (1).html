@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joseph Kerry — USBE District 2 | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstyle.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4f0e6;
+    --paper-card:#fbf9f3;
+    --ink:#2a261e;
+    --ink-soft:#5c5647;
+    --ink-faint:#8b8470;
+    --rust:#c0572e;
+    --amber:#d9a441;
+    --burgundy:#5c1a2b;
+    --burgundy-deep:#3d0f1c;
+    --line:#ddd6c4;
+    --line-strong:#c7bda3;
+    --red:#a5301e;
+    --green:#3f6b3b;
+    --serif:'Source Serif 4', Georgia, serif;
+    --display:'Playfair Display', Georgia, serif;
+    --mono:'IBM Plex Mono', 'Courier New', monospace;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    line-height:1.65;
+    font-size:17px;
+  }
+  a{color:var(--rust);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  .header-band{
+    background:var(--burgundy-deep);
+    background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);
+    padding:34px 0 30px;
+  }
+  .header-inner{
+    max-width:880px;margin:0 auto;padding:0 24px;
+    display:flex;align-items:center;gap:16px;
+  }
+  .hex{width:46px;height:46px;flex:0 0 auto;}
+  .hd-kicker{
+    font-family:var(--mono);
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:#d9b8bf;
+  }
+  .hd-title{
+    font-family:var(--display);font-size:21px;font-weight:700;
+    color:#f4e9dd;
+  }
+
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px 90px;}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--rust);margin:44px 0 10px;
+  }
+  h1.headline{
+    font-family:var(--display);
+    font-weight:900;
+    font-size:clamp(32px,5vw,48px);
+    line-height:1.1;
+    margin:0 0 18px;
+    color:var(--ink);
+  }
+  .dek{
+    font-size:19px;
+    color:var(--ink-soft);
+    max-width:66ch;
+    margin:0 0 6px;
+  }
+  .byline{
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--ink-faint);
+    margin:22px 0 0;
+    padding-bottom:24px;
+    border-bottom:2px solid var(--line-strong);
+  }
+  .byline b{color:var(--burgundy);font-weight:600;}
+
+  section{margin:52px 0;}
+  h2.section-head{
+    font-family:var(--display);
+    font-size:25px;font-weight:700;
+    color:var(--burgundy);
+    margin:0 0 6px;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--line-strong);
+  }
+  h3.sub-head{
+    font-family:var(--mono);
+    font-size:13.5px;font-weight:600;
+    color:var(--ink);
+    text-transform:uppercase;letter-spacing:.06em;
+    margin:30px 0 10px;
+  }
+  p{margin:0 0 16px;}
+  ul, ol{margin:0 0 16px;padding-left:22px;}
+  li{margin-bottom:8px;}
+
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin:26px 0;
+    font-family:var(--mono);
+  }
+  @media (max-width:768px){
+    .stat-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:480px){
+    .stat-grid{grid-template-columns:1fr;}
+  }
+  .stat{
+    background:var(--paper-card);
+    padding:18px 16px;
+  }
+  .stat .label{
+    font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--ink-faint);margin-bottom:8px;
+  }
+  .stat .value{
+    font-family:var(--display);
+    font-size:23px;font-weight:700;color:var(--ink);
+  }
+  .stat .value.neg{color:var(--red);}
+
+  .record-card{
+    border:1px solid var(--line-strong);
+    background:var(--paper-card);
+    padding:22px 24px;
+    margin:20px 0;
+    border-left:4px solid var(--burgundy);
+  }
+  .record-card .rc-title{
+    font-family:var(--mono);
+    font-weight:600;font-size:13px;
+    color:var(--burgundy);
+    text-transform:uppercase;letter-spacing:.05em;
+    margin-bottom:10px;
+  }
+
+  .compare{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line-strong);
+    border:1px solid var(--line-strong);
+    margin:24px 0;
+    font-family:var(--serif);
+    font-size:15px;
+  }
+  .compare .col-head{
+    background:var(--paper-card);
+    padding:14px 16px;
+    font-weight:600;
+    color:var(--burgundy);
+    border-bottom:1px solid var(--line-strong);
+    font-family:var(--mono);
+    font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;
+  }
+  .compare .cell{
+    background:var(--paper-card);
+    padding:12px 16px;
+  }
+  @media (max-width:640px){ .compare{grid-template-columns:1fr;} }
+
+  .caveat{
+    border-left:3px solid var(--amber);
+    padding:14px 18px;
+    margin:20px 0;
+    background:var(--paper-card);
+    font-family:var(--serif);
+    font-size:15px;
+    color:var(--ink-soft);
+  }
+  .caveat b{color:var(--ink);}
+
+  .flip-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:16px;
+    margin:24px 0;
+  }
+  .flip-card{
+    cursor:pointer;
+    background:var(--paper-card);
+    border:1px solid var(--line-strong);
+    border-left:4px solid var(--burgundy);
+    padding:24px;
+    min-height:200px;
+    position:relative;
+    perspective:1000px;
+  }
+  .flip-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:transform 0.6s;
+    transform-style:preserve-3d;
+  }
+  .flip-card.flipped .flip-inner{
+    transform:rotateY(180deg);
+  }
+  .flip-face{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+  }
+  .flip-front{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+  }
+  .flip-back{
+    transform:rotateY(180deg);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+    text-align:left;
+    padding:24px;
+    overflow-y:auto;
+  }
+  .flip-num{
+    font-family:var(--display);
+    font-size:48px;font-weight:700;
+    color:var(--amber);
+    margin-bottom:10px;
+  }
+  .flip-q{
+    font-weight:600;
+    color:var(--ink);
+    font-size:15px;
+    line-height:1.25;
+    margin-bottom:12px;
+  }
+  .flip-tap{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--ink-faint);
+    text-transform:uppercase;letter-spacing:.05em;
+  }
+  .flip-label{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--burgundy);
+    text-transform:uppercase;letter-spacing:.05em;
+    margin-bottom:10px;
+    font-weight:600;
+  }
+  .flip-a{
+    font-size:14px;
+    color:var(--ink);
+    line-height:1.4;
+  }
+
+  .details-body{
+    padding:18px 0;
+  }
+  .sources{
+    list-style:none;
+    padding:0;
+    font-size:14.5px;
+  }
+  .sources li{
+    margin-bottom:6px;
+    padding-left:0;
+  }
+
+  footer{
+    border-top:2px solid var(--line-strong);
+    padding:40px 0;
+    margin-top:80px;
+    text-align:center;
+  }
+  .tagline{
+    font-family:var(--display);
+    font-size:20px;font-weight:700;
+    color:var(--burgundy);
+    margin-bottom:18px;
+  }
+  footer nav{
+    display:flex;flex-direction:column;gap:12px;font-size:14px;
+  }
+  footer a{
+    color:var(--rust);
+  }
+</style>
+</head>
+<body>
+
+<div class="header-band">
+  <div class="header-inner">
+    <div class="hex">◆</div>
+    <div>
+      <div class="hd-kicker">2026 CANDIDATE FILE</div>
+      <div class="hd-title">Joseph Kerry & Kacee Weaver</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <h1 class="headline">Joseph Kerry: Six-Layer Regulatory Capture Through a USBE Board Position</h1>
+  <p class="dek">A sitting state education official chairs an USBE committee while simultaneously chairing a nonprofit funded by charter-school executives, running a private education-advocacy firm, and receiving donations from those same charter leaders. Disclosure forms show omissions.</p>
+  <p class="byline">Reporting: <b>The Weber County Hive</b> | Updated: August 25, 2026</p>
+
+  <section>
+    <h2 class="section-head">Utah State Board of Education District 2: The Race</h2>
+    
+    <div class="caveat">
+      <b>District coverage:</b> USBE District 2 represents Ogden Valley and surrounding areas in Weber County. The board member makes decisions affecting charter-school oversight, educator licensing and discipline (UPPAC), curriculum standards, and school finance policy statewide.
+    </div>
+
+    <h3 class="sub-head">Kerry — Incumbent</h3>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="label">Full Legal Name</div>
+        <div class="value">Joseph Edwyn Kerry</div>
+      </div>
+      <div class="stat">
+        <div class="label">Position</div>
+        <div class="value">USBE District 2 (Incumbent)</div>
+      </div>
+      <div class="stat">
+        <div class="label">Committee Role</div>
+        <div class="value">Law & Licensing Chair</div>
+      </div>
+      <div class="stat">
+        <div class="label">2026 Campaign Balance</div>
+        <div class="value neg">Deficit: $3,945</div>
+      </div>
+      <div class="stat">
+        <div class="label">2026 Contributions</div>
+        <div class="value">$3,470.74</div>
+      </div>
+      <div class="stat">
+        <div class="label">2026 Expenditures</div>
+        <div class="value">$4,737.57</div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Weaver — Challenger</h3>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="label">Full Legal Name</div>
+        <div class="value">Kacee Weaver</div>
+      </div>
+      <div class="stat">
+        <div class="label">Position</div>
+        <div class="value">USBE District 2 (Challenger)</div>
+      </div>
+      <div class="stat">
+        <div class="label">Current Role</div>
+        <div class="value">Head of School, Maria Montessori Academy (North Ogden)</div>
+      </div>
+      <div class="stat">
+        <div class="label">2026 Campaign Balance</div>
+        <div class="value" style="color:var(--green);">Solvent: $2,364</div>
+      </div>
+      <div class="stat">
+        <div class="label">2026 Contributions</div>
+        <div class="value">$936.55 (primary) + additional individual donors</div>
+      </div>
+      <div class="stat">
+        <div class="label">2026 Expenditures</div>
+        <div class="value">$466.13 (primary)</div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Bar Discipline History</h3>
+    <p><strong>New Jersey Disciplinary Review Board, October 25, 2021:</strong> Joseph Edwyn Kerry received a Letter of Admonition (Docket No. DRB 21-159) for practicing law in Utah while unlicensed. He established and operated Peace Legal, PLLC in Utah from 2017–2020 without a Utah license, billing Utah clients and maintaining sole control of the firm's financial accounts.</p>
+    <p>Kerry has been licensed in New Jersey and Pennsylvania since 1997. The Board cited mitigating factors: expressed remorse, no additional violations, the firm was closed, no clients harmed, and an "unblemished disciplinary record of more than twenty years" prior. The result was an admonition (the lowest level of formal attorney discipline).</p>
+    <p><strong>Relevance:</strong> A sitting USBE member who chairs the committee overseeing teacher licensing and discipline has his own bar-discipline history for a licensing-related violation (unauthorized practice)—directly analogous subject matter.</p>
+
+    <h3 class="sub-head">Business & Nonprofit Entities</h3>
+    <p>Kerry holds multiple overlapping roles across education, nonprofit, and for-profit entities. Click each to see the full details.</p>
+
+    <div class="flip-grid">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card - Ensign College">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">•</div>
+            <div class="flip-q">Ensign College</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Primary Employment</div>
+            <div class="flip-a">Associate Dean of Technical & Vocational Education; Department Chair, Communication. Specializes in Digital Marketing, Social Media Marketing, and Technology Account Management—the exact workforce/vocational-ed policy space where Burgess Owens and Education Opportunity Night operate.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card - Joe for Utah">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">•</div>
+            <div class="flip-q">Joe for Utah, LLC</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Education Advocacy Firm — Undisclosed</div>
+            <div class="flip-a"><strong>NOT on his USBE conflict-of-interest form.</strong> Manager/Owner, formed March 7, 2022. Stated purpose: "To be an advocate for education by working with parents and teachers to create policies that support the youth of the state." This is a business entity dedicated to education policy—the exact subject matter of his USBE role—yet it doesn't appear on any COI filing.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card - Path Forward Utah">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">•</div>
+            <div class="flip-q">Path Forward Utah</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Nonprofit Chair — Major Omission</div>
+            <div class="flip-a"><strong>NOT on any USBE conflict-of-interest form despite disclosure requirements.</strong> Kerry serves as Chair (2025) and VP (2024). Reports $166,972 in 2025 revenue; Jamie Renda (President) received $60,000 in compensation (~36% of revenue, 47% of expenses). Submitted formal advocacy on UPPAC reform directly to Kerry's Law & Licensing Committee (December 9, 2025) while he chaired the meeting. This is the nonprofit whose advocacy goes directly into his committee—and Kerry's disclosure forms don't mention his leadership role.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card - Bible Rescue">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">•</div>
+            <div class="flip-q">Bible Rescue</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Multiple Roles, Significant Income</div>
+            <div class="flip-a">President, Treasurer, and Director (since May 29, 2020). Reports $5,000+ annual income per his USBE conflict-of-interest form. This is a nonprofit where Kerry holds all three senior positions simultaneously, generating meaningful compensation that overlaps with his public service.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card - Colonial Entities">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">•</div>
+            <div class="flip-q">Colonial Flag Foundation & Colonial Specialty Co.</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Trustee & Registered Agent</div>
+            <div class="flip-a">Kerry is Trustee of Colonial Flag Foundation (nonprofit) and registered agent for Colonial Specialty Co. (for-profit entity owned by Paul Swenson, Sandy UT). Paul Swenson is Kerry's largest deleted campaign donor: $3,000 total contributions later removed from amended filings. Kerry's formal role as registered agent for this donor's company raises questions about the nature of the relationship.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card - Littlecloud Media">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">•</div>
+            <div class="flip-q">Littlecloud Media</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Communications Firm</div>
+            <div class="flip-a">Founder and President. Kerry's media/communications venture, registered at 2326 Washington Blvd, Ogden—the same address used for Bible Rescue and near Path Forward Utah's office complex (2351 Grant Ave, downtown Ogden). This is part of Kerry's coordinated office network for his various overlapping roles.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="caveat">
+      <b>Critical disclosure gap:</b> Kerry's 2026 USBE conflict-of-interest form lists only Littlecloud Media and Bible Rescue, omitting Joe for Utah LLC, Path Forward Utah, and Colonial Specialty Co.—an incomplete accounting of his overlapping roles in education policy and nonprofit leadership.
+    </div>
+
+    <h3 class="sub-head">Campaign Finance Summary</h3>
+    <p><strong>2026 Year-End Report (through July 22):</strong></p>
+    <ul>
+      <li>Beginning balance: $2,678.20</li>
+      <li>Contributions: $3,470.74</li>
+      <li>Expenditures: $4,737.57</li>
+      <li>Ending balance: ($3,945.03)—in deficit</li>
+    </ul>
+
+    <h3 class="sub-head">The Donor Network: Six Layers of Regulatory Capture</h3>
+    <p>Kerry receives contributions from stakeholders at every level of the education-policy ecosystem he oversees. Click each layer to see how the network connects.</p>
+
+    <div class="flip-grid">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Layer 1 - Carolyn Sharette">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">1</div>
+            <div class="flip-q">Institutional Charter Executive</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Carolyn Sharette — APS/APA CEO</div>
+            <div class="flip-a"><strong>Donations:</strong> $261.28 (4/15/2026) + $1,000 (7/20/2026) = $1,261.28. <strong>Deleted:</strong> $522.23 from earlier filing. <strong>Overlap:</strong> Sharette leads a charter-school network managing $65M+ annually with oversight from Kerry's USBE board. Address: 12894 S. Pony Express Road, Draper, UT 84020.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Layer 2 - Kim Coleman">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">2</div>
+            <div class="flip-q">Education Privatization Architect</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Kim Coleman — CFEF Co-founder</div>
+            <div class="flip-a"><strong>Donations:</strong> $100 (6/17/2024). <strong>Role:</strong> Co-founder of CFEF (Charity Foundation for Education Fund), which diverts millions in state income tax credits from public schools to private scholarships. Former House Public Education Committee VP. <strong>Network tie:</strong> Co-sponsors anti-Common Core resolutions on Utah GOP State Central Committee alongside Jaime Wadman, Kerry's co-director on Path Forward Utah's board.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Layer 3 - Path Forward Utah">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">3</div>
+            <div class="flip-q">Education Advocacy Nonprofit (Chaired by Kerry)</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Path Forward Utah — Kerry's Own Nonprofit</div>
+            <div class="flip-a"><strong>Formation:</strong> LLC (January 2022), converted to nonprofit (August 2023). <strong>Revenue growth:</strong> $0 (2021–2022) → $166,972 (2025). <strong>Kerry's role:</strong> Chair (2025), VP (2024). <strong>Critical conflict:</strong> On December 9, 2025, Path Forward Utah submitted formal advocacy directly to Kerry's Law & Licensing Committee regarding UPPAC reform—while Kerry chaired the meeting. This submission does NOT appear on any public disclosure.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Layer 4 - Jamie Renda">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">4</div>
+            <div class="flip-q">Nonprofit Employee with Dual Role</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Jamie Renda — Path Forward Utah President</div>
+            <div class="flip-a"><strong>Compensation:</strong> $60,000 (2025, ~36% of nonprofit revenue). <strong>Network ties:</strong> Endorsed Kerry in his 2022 USBE campaign. Runs PoliticIt, a political podcast hosted by Sen. John D. Johnson, who co-sponsors the same UPPAC-reform bills Renda advocates for. Creates a three-way alignment: Kerry (board), Renda (nonprofit), Johnson (legislation).</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Layer 5 - Sandra Buendia">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">5</div>
+            <div class="flip-q">Teacher Discipline Whistleblower (Also a Kerry Donor)</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Sandra Buendia — Public Educator</div>
+            <div class="flip-a"><strong>Donation:</strong> $51.45 (7/20/2026). <strong>Background:</strong> ~40-year Utah public educator disciplined by UPPAC in 2024 for an unintentional inaccuracy; barred from public-education work. <strong>Advocacy:</strong> Testified for SB312 (teacher-discipline reform). <strong>The alignment:</strong> Buendia represents exactly the constituency Kerry's own April 2026 report argues "needs reform"—and she gave to his campaign while advocating for the very reforms he's publicly supporting.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Layer 6 - Lori Wheelwright">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">6</div>
+            <div class="flip-q">School District Employee Using Corporate Shell</div>
+            <div class="flip-tap">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Lori Jean Wheelwright — Weber SD OT via Wheel05</div>
+            <div class="flip-a"><strong>Direct donation:</strong> $500 via Wheel05 Management Inc. (Entity #13867508-0142) on March 5, 2026. <strong>Timing anomaly:</strong> Six days later (March 11), Utah Forward PAC donated $500—same amount. <strong>The pattern:</strong> A school-district employee donates through a corporate shell, then a PAC gives identical amount 6 days later. No rule requires disclosure of coordination, so voters can't see if these were planned together.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="record-card">
+      <div class="rc-title">Deleted Contributors</div>
+      <p>Large donors scrubbed from amended filings across 2022–2026: Paul Swenson ($3,000), Carolyn Sharette ($522.23), Matt MacPherson ($500), John Balderree ($100), Howard Headlee ($250), Luke Raglund ($250). Total deleted: $4,622.23. Pattern matches Keep Our Valley PAC deletions from Nordic Village PID investigation.</p>
+    </div>
+
+  </section>
+
+  <section>
+    <h2 class="section-head">The Conflict Questions: 9 Open Points</h2>
+    <p>Kerry's official disclosures and legislative voting record leave these accountability questions unanswered. Click any card to see why each matters.</p>
+
+    <div class="flip-grid">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card 1">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">01</div>
+            <div class="flip-q">Why does Kerry's COI form omit his LLC and nonprofit leadership roles?</div>
+            <div class="flip-tap">Tap to see why it matters</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Why it matters</div>
+            <div class="flip-a">Omitting Joe for Utah LLC (formed in 2022, stated purpose: education advocacy) and Path Forward Utah (where he chairs the board) means voters and ethics boards can't see the full scope of his overlapping policy roles.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card 2">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">02</div>
+            <div class="flip-q">Did Kerry disclose or recuse when his own nonprofit submitted advocacy to his committee?</div>
+            <div class="flip-tap">Tap to see why it matters</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Why it matters</div>
+            <div class="flip-a">Path Forward Utah submitted formal policy advocacy on UPPAC reform to the Law & Licensing Committee on December 9, 2025, while Kerry was chairing the meeting. The committee record does not show whether Kerry disclosed his Path Forward role, recused, or sought ethics guidance.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card 3">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">03</div>
+            <div class="flip-q">Is $60K compensation to Jamie Renda approved by Path Forward's board?</div>
+            <div class="flip-tap">Tap to see why it matters</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Why it matters</div>
+            <div class="flip-a">Renda earned $60,000 (40 hrs/week) from a $166,972 nonprofit—36% of revenue, 47% of expenses. The Form 990-EZ doesn't disclose who approved the compensation, what comparison data was used, or whether it was justified. Governance questions are different from evidence of illegality, but they're unanswered.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card 4">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">04</div>
+            <div class="flip-q">Has Kerry taken official action affecting charter schools after receiving donations from their executives?</div>
+            <div class="flip-tap">Tap to see why it matters</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Why it matters</div>
+            <div class="flip-a">Sharette (APS/APA CEO) gave in 2024 and 2026 while leading companies under USBE oversight. The records reviewed don't establish a specific board action tied to those gifts, but the timeline and donor profile raise the question.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card 5">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">05</div>
+            <div class="flip-q">Who are the $166,972 donors to Path Forward Utah in 2025?</div>
+            <div class="flip-tap">Tap to see why it matters</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Why it matters</div>
+            <div class="flip-a">The Form 990-EZ doesn't name individual donors (only IRS-required for larger nonprofits). An 11-fold revenue jump with no public donor list means voters can't see who funds the nonprofit whose advocacy Kerry chairs and whose positions he advances on the USBE.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card 6">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">06</div>
+            <div class="flip-q">Why did Wheel05 Management ($500) and Utah Forward PAC ($500) donate 6 days apart, same amount?</div>
+            <div class="flip-tap">Tap to see why it matters</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Why it matters</div>
+            <div class="flip-a">Campaign finance law allows individuals and entities to donate separately. No rule prohibits coordination between them. But when a school-district employee donates via corporate shell ($500, 3/5) and then a PAC donates identical amount exactly 6 days later ($500, 3/11), voters deserve to know if these were planned together.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card 7">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">07</div>
+            <div class="flip-q">Does Kerry's April 2026 UPPAC-reform report disclose his Path Forward affiliation?</div>
+            <div class="flip-tap">Tap to see why it matters</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Why it matters</div>
+            <div class="flip-a">Kerry authored a Salt Lake Tribune piece arguing UPPAC "is in need of reform"—the exact advocacy Path Forward Utah is simultaneously promoting. The op-ed doesn't mention his nonprofit role, leaving readers unaware of the alignment.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card 8">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">08</div>
+            <div class="flip-q">What safeguards exist against donors getting committee access through nonprofit intermediaries?</div>
+            <div class="flip-tap">Tap to see why it matters</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Why it matters</div>
+            <div class="flip-a">Path Forward Utah donors can fund a nonprofit whose advocacy goes directly to Kerry's committee, and the committee record doesn't surface whether Kerry sees this as a conflict. No disclosed ethics review or recusal appears in the official minutes.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')" tabindex="0" role="button" aria-label="Flip card 9">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="flip-num">09</div>
+            <div class="flip-q">Will Kerry amend disclosures to show all roles in one place?</div>
+            <div class="flip-tap">Tap to see why it matters</div>
+          </div>
+          <div class="flip-face flip-back">
+            <div class="flip-label">Why it matters</div>
+            <div class="flip-a">Seeing the full picture requires cross-referencing IRS returns, Utah corporate filings, and meeting packets separately. That's what the disclosure form exists to make unnecessary.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-head">Kerry v. Weaver: Direct Comparison</h2>
+    
+    <div class="compare">
+      <div class="col-head">Kerry (Incumbent)</div>
+      <div class="col-head">Weaver (Challenger)</div>
+    </div>
+    
+    <div class="compare">
+      <div class="cell"><strong>Outside roles:</strong> Joe for Utah LLC (education advocacy), Path Forward Utah (Chair), Bible Rescue, Colonial Flag Foundation, Littlecloud Media, serves as registered agent for charter-company owner's for-profit</div>
+      <div class="cell"><strong>Outside roles:</strong> Ogden Nordic Resort board seat only</div>
+    </div>
+
+    <div class="compare">
+      <div class="cell"><strong>2026 campaign balance:</strong> ($3,945)—in deficit</div>
+      <div class="cell"><strong>2026 campaign balance:</strong> $2,364—solvent</div>
+    </div>
+
+    <div class="compare">
+      <div class="cell"><strong>Campaign donors:</strong> Sharette (APS CEO), Coleman (CFEF), Wheel05 (school-district employee via shell), Utah Forward PAC, Buendia (UPPAC whistleblower), Renda, Lisonbee, deleted donors ($4,622 total)</div>
+      <div class="cell"><strong>Campaign donors:</strong> Lear (sitting USBE member), Lesser (household), Dailey-Provost (House Minority Whip), Patrick de Freitas, individual citizens—no PAC money</div>
+    </div>
+
+    <div class="compare">
+      <div class="cell"><strong>COI disclosures:</strong> Omits Joe for Utah LLC, Path Forward Utah, Colonial Specialty Co.—incomplete</div>
+      <div class="cell"><strong>COI disclosures:</strong> All "N/A" except Ogden Nordic Resort—fully disclosed</div>
+    </div>
+
+    <div class="compare">
+      <div class="cell"><strong>Bar discipline:</strong> 2021 New Jersey admonition for unauthorized law practice in Utah</div>
+      <div class="cell"><strong>Bar discipline:</strong> None documented</div>
+    </div>
+
+    <div class="compare">
+      <div class="cell"><strong>Charter-school ties:</strong> Direct donations from APS CEO, CFEF founder, overlapping nonprofit board with Path Forward co-director</div>
+      <div class="cell"><strong>Charter-school ties:</strong> None documented</div>
+    </div>
+
+    <div class="compare">
+      <div class="cell"><strong>Employment:</strong> Ensign College (education tech/training focus aligned with Kerry's policy work)</div>
+      <div class="cell"><strong>Employment:</strong> Maria Montessori Academy (Head of School), spouse at Walmart Home Office</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-head">Why It Matters</h2>
+    <p>Utah's State Board of Education makes decisions affecting millions of students, teachers, charter schools, and taxpayers. Its members operate in a system where campaign donors may simultaneously be regulated stakeholders, and where nonprofit advocates may be colleagues, endorsers, or organizational partners.</p>
+    <p>Those relationships aren't automatically corrupt. They become a public-trust problem when they're difficult to see—when disclosure forms omit major roles, when nonprofit advocacy goes directly to a committee chaired by that nonprofit's own leader, and when deleted campaign contributions erase the full donor picture.</p>
+    <p>This article puts the relationships in one place: who contributed, who endorsed, who leads which organization, what those organizations advocate, and what the official disclosure doesn't clearly show. Voters can decide what weight each fact deserves. They shouldn't have to reconstruct the network themselves.</p>
+  </section>
+
+  <section>
+    <details>
+      <summary>Full sourcing & technical notes</summary>
+      <div class="details-body">
+        <h3 class="sub-head">Joseph Kerry & USBE</h3>
+        <ul class="sources">
+          <li>Joseph Kerry USBE biography & conflict-of-interest statement (2022–2026)</li>
+          <li>Utah Code §20A-11-1604 (conflict-of-interest disclosures)</li>
+          <li>USBE Law & Licensing Committee Summary of Actions, December 9, 2025</li>
+          <li>New Jersey Disciplinary Review Board Letter of Admonition, Docket DRB 21-159 (10/25/2021)</li>
+          <li>Salt Lake Tribune: Kerry argues UPPAC needs reform (Carmen Nesbitt, 4/8/2026)</li>
+          <li>Utah Division of Corporations: Joe for Utah LLC (#12739877-0160), Peace Legal PLLC (#10361478-0162), Colonial Flag Foundation, Bible Rescue</li>
+          <li>Avvo attorney profile: Joseph Edwyn Kerry (licensed NJ, PA since 1997)</li>
+        </ul>
+        
+        <h3 class="sub-head">Path Forward Utah & Jamie Renda</h3>
+        <ul class="sources">
+          <li>Path Forward Utah IRS Form 990-EZ (2023–2025), ProPublica Nonprofit Explorer</li>
+          <li>Path Forward Utah Nonprofit Corp. Certificate of Incorporation (#12647238-0140, formed 8/1/2023; prior LLC #12646902-0144, formed 1/11/2022)</li>
+          <li>Jamie Renda endorsement video on Kerry's YouTube channel (~2022)</li>
+          <li>Fox13 investigation: Renda testified on USBE bullying/harassment rules (8/10/2022)</li>
+          <li>PoliticIt: Jamie Renda interview with Sen. John D. Johnson (3/17/2025)</li>
+          <li>KSL: Renda quoted supporting SB312 teacher-discipline reform (Jason Swensen, 3/25/2026)</li>
+        </ul>
+
+        <h3 class="sub-head">Donor Network & Campaign Finance</h3>
+        <ul class="sources">
+          <li>Utah campaign-finance disclosure search (disclosures.utah.gov), reviewed through August 25, 2026</li>
+          <li>Kerry 2026 campaign disclosure: beginning balance $2,678.20, contributions $3,470.74, expenditures $4,737.57, ending ($3,945.03)</li>
+          <li>Carolyn Sharette donations: $261.28 (4/15/2026) + $1,000 (7/20/2026); amended filing showing $522.23 deleted</li>
+          <li>Wheel05 Management Inc. donation $500 (3/5/2026, Entity #13867508-0142, registered agent Lori Jean Wheelwright)</li>
+          <li>Utah Forward PAC donation $500 (3/11/2026)</li>
+          <li>Sandra Buendia donation $51.45 (7/20/2026)</li>
+          <li>Paul Swenson donations $3,000 total (deleted from filings)</li>
+          <li>Weaver 2026 campaign finance through 8/11/2026; donors include Carol Barlow Lear ($500), Rosemary & David Lesser ($300), Jennifer Dailey-Provost ($200)</li>
+        </ul>
+
+        <h3 class="sub-head">Business & Professional Records</h3>
+        <ul class="sources">
+          <li>Utah Division of Corporations entity searches confirmed</li>
+          <li>Ensign College faculty directory listing Kerry as Associate Dean & Department Chair</li>
+          <li>Littlecloud Media, Bible Rescue, Colonial Flag Foundation, Colonial Specialty Co. corporate filings</li>
+          <li>New Jersey Disciplinary Review Board disciplinary history</li>
+        </ul>
+
+        <h3 class="sub-head">UPPAC, SB312 & Teacher Discipline Reform</h3>
+        <ul class="sources">
+          <li>Sandra Buendia UPPAC case file (referenced in KSL SB312 reporting)</li>
+          <li>SB312 legislative history & testimony (2026 session)</li>
+          <li>Path Forward Utah December 9, 2025 committee submissions (Documents 1 & 2)</li>
+          <li>Utah Rule 277-211 (educator restrictions post-discipline)</li>
+          <li>Utah Statute §53E-6-603 (suspension & dismissal provisions)</li>
+        </ul>
+
+        <p style="font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);margin-top:24px;"><strong>Reporting note:</strong> Campaign amounts were transcribed from Utah disclosure filings reviewed through August 25, 2026. Corporate roles and compensation were checked against Utah Division of Corporations and IRS Form 990-EZ filings. Bar discipline records retrieved from New Jersey Disciplinary Review Board archives. The December 9, 2025 USBE committee record is the primary source for Path Forward Utah's formal advocacy submission; that submission is not disclosed on any of Kerry's USBE conflict-of-interest forms.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2 class="section-head">Candidate Profile: Kacee Weaver (Challenger)</h2>
+    
+    <h3 class="sub-head">Background & Current Role</h3>
+    <p>Kacee Weaver serves as Director and Head of School at Maria Montessori Academy in North Ogden. She holds a background in Montessori education and community leadership. Her spouse, Tony Weaver, works at Walmart Home Office in Bentonville, Arkansas. She is the Democratic nominee for Utah State Board of Education District 2, challenging incumbent Joseph Kerry in the November 2026 general election.</p>
+
+    <h3 class="sub-head">Outside Roles & Disclosure</h3>
+    <p>Weaver's conflict-of-interest disclosure form lists all entries as "N/A" with the sole exception of her Ogden Nordic Resort board membership. She has no documented involvement in nonprofit leadership, no external for-profit business entities, no LLC registrations, and no financial relationships with charter schools or education companies. Her disclosure is complete and unambiguous.</p>
+
+    <h3 class="sub-head">Campaign Finance Summary</h3>
+    <p><strong>Primary Cycle (through June 12, 2026):</strong></p>
+    <ul>
+      <li>Beginning balance: $1,893.72</li>
+      <li>Contributions: $936.55</li>
+      <li>Expenditures: $466.13</li>
+      <li>Ending balance: $2,364.14—solvent and cash-positive</li>
+    </ul>
+
+    <p><strong>General Election Update (June 12–August 11, 2026):</strong> $2,359.28 in additional individual contributions, no PAC money, no corporate donations.</p>
+
+    <h3 class="sub-head">Donor Network — Individual & Institutional</h3>
+    
+    <p><strong>Key Institutional Donors:</strong></p>
+    <ul>
+      <li><strong>Carol Barlow Lear ($500, 6/25/2026):</strong> Sitting Democratic USBE member (District 6) since 2016; former Law & Licensing Committee chair. Lear is also on the USBE, making her donation to Weaver a direct peer endorsement from within the board itself.</li>
+      <li><strong>Jennifer Dailey-Provost ($200, 7/14/2026):</strong> Utah House Minority Whip (D-Salt Lake City, District 22). A legislative leader supporting Weaver's campaign.</li>
+      <li><strong>Rosemary and David Lesser ($300 household, 6/12+):</strong> Both appear to support education-reform candidates; they also donated to other challengers in 2026.</li>
+    </ul>
+
+    <p><strong>Individual Donors:</strong> Weaver's remaining contributors are ordinary citizens: Sara Dunn, Jessica Stegen, John Otoshi, Thomas Marlowe, Genevieve Carnell, Lisa Holiday, Marianne Tate, Tito Thanadabouth, Jeremy Thompson, Patrick de Freitas, Mary Glad. None show documented political footprints; all appear to be community-level supporters.</p>
+
+    <div class="caveat">
+      <b>Donor profile contrast:</b> While Kerry's donations come from charter-school executives, nonprofit founders, school-district employees using corporate shells, and deleted contributors, Weaver's donations come from sitting USBE members, legislative leaders, and individual citizens. No overlapping interests; no disclosure gaps.
+    </div>
+
+    <h3 class="sub-head">What This Comparison Shows</h3>
+    <p>The two candidates present a stark contrast in campaign finance, outside roles, and disclosure completeness. Kerry operates a complex web of overlapping entities—some disclosed, some not—funded by stakeholders whose business interests fall under USBE oversight. Weaver operates a single, transparent campaign funded by individual supporters and peer endorsement from within the USBE itself.</p>
+  </section>
+
+  <footer>
+    <div class="tagline">We report public records. You decide.</div>
+    <nav>
+      <a class="nav" href="https://webercountyhive.substack.com">The Weber County Hive</a>
+      <a class="nav" href="https://github.com/Weber-County-Hive/candidates2026">2026 Candidates Repository</a>
+    </nav>
+  </footer>
+
+</div>
+
+<script>
+  document.querySelectorAll('.flip-card').forEach(function(card){
+    card.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        card.classList.toggle('flipped');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
