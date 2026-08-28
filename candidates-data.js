@@ -94,5 +94,17 @@ const CANDIDATES = [
     tags: ["COI Omissions", "PAC Network", "USBE"],
     stamp: "Active",
     href: "joseph-kerry.html"
+  },
+  {
+    id: "davis-county-lee-millburn",
+    race: "Davis County Commission — Seat A & Seat B",
+    level: "County",
+    county: "Davis",
+    caseNumber: "CASE 08",
+    names: "Lee vs. Millburn",
+    verdict: "Self-Funded vs. Unfiled",
+    tags: ["Campaign Finance Gap", "Platform vs. Record", "Unopposed Seat"],
+    stamp: "Active",
+    href: "davis-county-commission-2026.html"
   }
 ];
