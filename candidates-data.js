@@ -98,7 +98,7 @@ const CANDIDATES = [
   {
     id: "davis-county-lee-millburn",
     race: "Davis County Commission — Seat A & Seat B",
-    level: "County",
+    level: "State",
     county: "Davis",
     caseNumber: "CASE 08",
     names: "Lee vs. Millburn",
