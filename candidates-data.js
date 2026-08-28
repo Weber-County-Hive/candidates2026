@@ -1,5 +1,17 @@
 const CANDIDATES = [
   {
+    id: "hd42-okerlund-williams",
+    race: "House District 42 — Sandy",
+    level: "State",
+    county: "Salt Lake",
+    caseNumber: "CASE 07",
+    names: "Okerlund vs. Williams",
+    verdict: "The Water Bill That Didn't Survive",
+    tags: ["PAC Pipeline", "Water Bill Died", "Platform vs. Record"],
+    stamp: "Active",
+    href: "hd42-okerlund-williams.html"
+  },
+  {
     id: "hd12-graff-schultz",
     race: "House District 12 — Roy / Hooper",
     level: "State",
