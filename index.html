@@ -142,15 +142,15 @@
 
 </div>
 
-<script src="candidates-data.js?v=3"></script>
+<script src="candidates-data.js?v=4"></script>
 <script>
   const groupsEl = document.getElementById('level-groups');
   const statStrip = document.getElementById('stat-strip');
   const search = document.getElementById('search');
   const countyFilterBtns = document.getElementById('county-filter-buttons');
 
-  // County display order within State races — Weber first, then others as added (Davis, etc.)
-  const COUNTY_ORDER = ["Weber", "Davis"];
+  // County display order within State races — Weber first, then others as added (Davis, Wasatch, etc.)
+  const COUNTY_ORDER = ["Weber", "Davis", "Wasatch"];
 
   function stateCounties(list){
     const stateRaces = list.filter(c => c.level === "State");
