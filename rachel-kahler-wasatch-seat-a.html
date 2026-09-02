@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What the Park Email Left Out — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-paper: #f4f0e6;
+    --color-ink: #241c14;
+    --color-ink-soft: #5a4f42;
+    --color-link: #c0572e;
+    --color-stat: #d9a441;
+    --color-burgundy-light: #5c1a2b;
+    --color-burgundy-deep: #3d0f1c;
+    --color-line: #d8cfbe;
+    --color-card: #fbf9f3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: 'Source Serif 4', serif;
+    line-height: 1.6;
+  }
+  a { color: var(--color-link); }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+
+  header.masthead {
+    background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep));
+    color: #f4ece5;
+    padding: 18px 24px;
+  }
+  .masthead-row {
+    max-width: 880px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .masthead-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+  }
+  .masthead-nav a {
+    color: #f0d9c9;
+    text-decoration: none;
+    margin-left: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+  }
+  .masthead-nav a:hover { text-decoration: underline; }
+
+  .hero {
+    background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep));
+    color: #f4ece5;
+    padding: 56px 24px 64px;
+  }
+  .hero-inner { max-width: 780px; margin: 0 auto; }
+  .case-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: #e0b89a;
+    margin-bottom: 14px;
+  }
+  h1.headline {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    line-height: 1.12;
+    margin: 0 0 18px;
+  }
+  .dek {
+    font-size: 1.15rem;
+    color: #ecd9cc;
+    max-width: 640px;
+    margin: 0;
+  }
+
+  main { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+
+  .pull-quote {
+    margin: 48px 0;
+    padding: 30px 32px;
+    background: var(--color-card);
+    border-left: 4px solid var(--color-link);
+  }
+  .pull-quote p.q {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.35;
+    margin: 0 0 10px;
+    color: var(--color-ink);
+  }
+  .pull-quote .attribution {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--color-ink-soft);
+  }
+
+  section.block { margin: 56px 0; }
+  h2.section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 0 0 8px;
+    border-bottom: 1px solid var(--color-line);
+    padding-bottom: 10px;
+  }
+  p { font-size: 1.05rem; }
+
+  .record-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    padding: 22px 24px;
+    margin: 20px 0;
+  }
+  .record-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    margin: 0 0 10px;
+  }
+
+  table.claim-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 8px;
+    font-size: 0.98rem;
+  }
+  table.claim-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    text-align: left;
+    color: var(--color-ink-soft);
+    border-bottom: 2px solid var(--color-ink);
+    padding: 10px 12px 10px 0;
+  }
+  table.claim-table td {
+    padding: 14px 12px 14px 0;
+    border-bottom: 1px solid var(--color-line);
+    vertical-align: top;
+  }
+  table.claim-table td.claim { color: var(--color-ink-soft); }
+  table.claim-table td.record strong { color: var(--color-link); }
+
+  .stat-row { display: flex; gap: 28px; flex-wrap: wrap; margin: 18px 0; }
+  .stat {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .stat .num {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: var(--color-stat);
+    display: block;
+    line-height: 1;
+  }
+  .stat .label { font-size: 0.78rem; color: var(--color-ink-soft); }
+
+  .rc-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border: 1px solid var(--color-line);
+    color: var(--color-ink-soft);
+    text-decoration: none;
+    margin: 4px 6px 4px 0;
+    background: var(--color-paper);
+  }
+  a.rc-tag { text-decoration: none; color: var(--color-link); border-color: var(--color-link); }
+
+  .source-note {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--color-ink-soft);
+    margin-top: 14px;
+    line-height: 1.5;
+  }
+
+  .timeline { border-left: 2px solid var(--color-line); margin: 24px 0 24px 6px; padding-left: 24px; }
+  .timeline-item { margin-bottom: 22px; position: relative; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--color-link);
+  }
+  .timeline-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--color-link);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  footer.pagefoot {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--color-ink-soft);
+    border-top: 1px solid var(--color-line);
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <div class="masthead-brand">The Weber County Hive</div>
+    <nav class="masthead-nav">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="case-label">WASATCH COUNTY COUNCIL — SEAT A · CANDIDATE RECORD</div>
+    <h1 class="headline">What the Park Email Left Out</h1>
+    <p class="dek">A county council candidate organized a private campaign against Heber City's park plans, told
+      recipients not to post it publicly, and pointed them toward a nearby development whose numbers don't match
+      the public record.</p>
+  </div>
+</div>
+
+<main>
+
+  <section class="block">
+    <p>Rachel Kahler is a candidate for Wasatch County Council Seat A on the November 2026 ballot, running against
+      Democrat Patrick Saucier and write-in candidates Jami Hewlett and Shawn Taylor. She is also the paid
+      Executive Director of the Community Alliance for Main Street (CAMS), a $39,900-a-year, three-year contract
+      position funded by Heber City.</p>
+    <p>In that CAMS capacity, Kahler recently sent an email to a small group of recipients asking them to organize
+      a letter-writing campaign against Heber City's Phase 2 redesign of Main Street Park — and to keep the effort
+      off social media.</p>
+  </section>
+
+  <div class="pull-quote">
+    <p class="q">"I am encouraging the public to participate in a professional email campaign, asking the City
+      Council to reconsider the Main Street Park Phase 2 redesign plan. ... Please DO NOT put this information on
+      Social Media Networks."</p>
+    <div class="attribution">— Rachel Kahler, Executive Director, Community Alliance for Main Street, in an email
+      obtained by The Weber County Hive</div>
+  </div>
+
+  <section class="block">
+    <h2 class="section-title">What the email asked for</h2>
+    <p>The email lays out talking points for residents to send to Heber City Council (ccpublic@heberut.gov) opposing
+      the current Phase 2 concept for Main Street Park — which Terracon Consultants has estimated at $15–18 million,
+      funded through Utah Outdoor Recreation Grants, Impact Fees, and the local Trails, Arts and Parks (TAP) sales
+      tax. The proposed amenities include a splash pad, a skate-and-ice ribbon, and an all-abilities playground.</p>
+    <p>Kahler's alternative: split the amenities off to a different, city-owned parcel known as the Duke property,
+      near 500 North and 550 East, citing parking and winter-access concerns at Main Street Park. The email
+      includes a full set of ready-made talking points for recipients to send as their own letters — all built
+      around the same argument.</p>
+    <p>The email cites two pieces of supporting data: a Placer.ai commercial visitor-analytics report on Main
+      Street Park, and a map of the Duke property. Both were independently verified against the source documents.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">The claim that does the most work</h2>
+    <p>The single sentence doing the heaviest lifting in the email is this one, explaining why the Duke property is
+      the better site: it "is also adjacent to the Ritchie Group apartment development currently under
+      construction, which is expected to include approximately 600 residential units and bring more than 2,000+
+      residents to the immediate area."</p>
+    <p>That development is Station Seven, a Ritchie Group project at the intersection of US-40 and Heritage Farms
+      Parkway — the same site near Smith's referenced in the email's own map. Here is what the public record
+      actually shows about it, as of the most recent reporting:</p>
+
+    <table class="claim-table">
+      <tr>
+        <th>Kahler's email</th>
+        <th>The public record</th>
+      </tr>
+      <tr>
+        <td class="claim">"Approximately 600 residential units"</td>
+        <td class="record"><strong>245–267 units</strong>, per the developer's own filings with Heber City's
+          Community Reinvestment Agency (Park Record, Oct.–Nov. 2025)</td>
+      </tr>
+      <tr>
+        <td class="claim">"Currently under construction"</td>
+        <td class="record"><strong>Not yet approved or under construction.</strong> Heber's CRA board narrowly
+          backed a tax-sharing framework 3–2 in November 2025; first delivery was targeted for 2027, with
+          construction phasing in over five years after that. Heber City, Wasatch County, and the Wasatch County
+          School Board all still had to enter a required interlocal agreement — as of the most recent reporting,
+          none had</td>
+      </tr>
+      <tr>
+        <td class="claim">"Bring more than 2,000+ residents"</td>
+        <td class="record">Follows from the inflated unit count above; not independently supported at the
+          245–267-unit figure</td>
+      </tr>
+    </table>
+
+    <p>Not mentioned in the email at all: Station Seven's retail and hotel components were, as of late 2025,
+      contingent on a still-undecided UDOT highway route through the area. UDOT selected its preferred route in
+      January 2026 in a way that leaves the project intact, though that route has since drawn enough public
+      opposition that UDOT is considering redesigning it — meaning even the site's own future was not settled at
+      the time the email describes it as a done deal.</p>
+    <p>Even the tax-sharing vote that got Station Seven this far was contested on the record: Councilmember Yvonne
+      Barney voted no, saying the CRA "is meant for central Heber, not the area around Smith's," and Mayor Heidi
+      Franco later called annexing the property "the one decision she regrets" making in office.</p>
+    <span class="rc-tag">Cross-reference: The Ritchie Group's Utah financing footprint (unpublished — no case file
+      yet)</span>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">What the visitor data actually shows</h2>
+    <p>The email's Placer.ai attachment is real — a paid commercial analytics report, not a casual pull, showing
+      genuine attendance spikes at Main Street Park on event days. But the same report complicates the
+      "overwhelmed local park" framing rather than supporting it outright: a meaningful share of visits come from
+      well outside Heber — American Fork, Pleasant Grove, Wallsburg, Bountiful, Eagle Mountain, and other zip codes
+      up to 30+ miles away. That's a park drawing a regional crowd on event days, not simply a neighborhood
+      amenity being overrun by its own residents.</p>
+    <div class="stat-row">
+      <div class="stat"><span class="num">~32K</span><span class="label">visits, Jun 4–Jul 9, 2026 (Placer.ai)</span></div>
+      <div class="stat"><span class="num">~60%</span><span class="label">of visits from within 5 miles</span></div>
+      <div class="stat"><span class="num">~85%</span><span class="label">of visits from within 30 miles</span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Who's making the ask</h2>
+    <div class="record-card">
+      <h3>What the disclosure form actually asks</h3>
+      <p>Kahler's Wasatch County candidacy filing, submitted with her January 2026 Declaration of Candidacy,
+        checked "I have no conflict of interest to report" and left every supporting line blank. The form itself
+        asks candidates to describe:</p>
+    </div>
+
+    <div class="pull-quote">
+      <p class="q">"...other county, nonprofit, and for-profit boards you (and your spouse) sit on, any for-profit
+        businesses for which you or an immediate family member are an officer, manager or director, or a majority
+        shareholder, and the name of your employer and any businesses you or a family member own..."</p>
+      <div class="attribution">— Wasatch County Conflict of Interest Disclosure Form</div>
+    </div>
+
+    <div class="record-card">
+      <p>Left off that form: her paid CAMS directorship, a directorship of Red White and Blue Festival Inc., and
+        sole management of 5 In The Hive, LLC — an entity whose 2023 Certificate of Organization, which she
+        signed, states its purpose as being "to acquire, own, sell, and otherwise manage real estate investments."</p>
+      <p>The form's opening language does leave room for judgment — it asks candidates to list only what they
+        "believe could contribute to a conflict of interest." So the question isn't simply whether the form was
+        filled out correctly; it's whether concluding that an employer, a nonprofit board seat, and an owned LLC
+        couldn't contribute to a conflict was a reasonable call for someone seeking a seat that votes on land use
+        and zoning.</p>
+    </div>
+
+    <div class="pull-quote">
+      <p class="q">"I do not consider my employment with CAMS, by itself, to constitute a conflict of interest with
+        service on the Wasatch County Council... 5 In The Hive, LLC... is not an operating business that contracts
+        with Wasatch County."</p>
+      <div class="attribution">— Rachel Kahler, in a public response to this reporting</div>
+    </div>
+
+    <div class="record-card">
+      <p>Kahler's response describes 5 In The Hive, LLC as her and her siblings' childhood home, held jointly
+        after their parents' deaths and rented long-term, including below-market rates to seasonal workers. That's
+        her account of how the entity is actually used today — it doesn't change what she filed with the state in
+        2023, which is the record above. Both are part of the story: what she filed, and what she now says about
+        it.</p>
+      <p>Her response doesn't address why CAMS — her employer, by the form's own category — or her Red White &amp;
+        Blue Festival board seat, which the form's language covers "volunteer or otherwise," were left off
+        entirely.</p>
+    </div>
+
+    <div class="record-card">
+      <h3>A same-seat comparison</h3>
+      <p>Luke Searle, the outgoing Seat A councilman Kahler is running to replace, filed the identical county form
+        about a year earlier. He checked the opposite box — "I have the following conflict of interest to
+        report" — and listed his employer, Wasatch County School District, and his wife's business, Heber
+        Balloons. The form isn't unusually hard to fill out; the county's own outgoing officeholder for this exact
+        seat did it without incident.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Where this stands</h2>
+    <p>Kahler was not asked for comment on the park email, consistent with this publication's practice of
+      reporting from public records and documents in hand. She responded publicly and unprompted to earlier
+      reporting on her disclosure form, and that response is included above in full context, alongside what the
+      public record shows.</p>
+  </section>
+
+</main>
+
+<footer class="pagefoot">
+  Sources: email obtained by The Weber County Hive; Park Record, "Mixed-use development in Heber City pitches
+  tax-sharing proposal worth $20M" (Oct. 28, 2025) and "Developer says Station Seven will bring millions in tax
+  revenue to Heber City" (Nov. 25, 2025); KPCW, "Heber City considers tax sharing proposal to support New London
+  development" (Oct. 20, 2025) and "Heber leaders narrowly support Station Seven redevelopment plans" (Dec. 2,
+  2025); UDOT Heber Valley Corridor EIS public records (Jan.–May 2026); Wasatch County Conflict of Interest
+  Disclosure Form (Kahler, Jan. 2026; Searle, Jan. 2025); Utah Division of Corporations business filings; Rachel
+  Kahler's public response, posted to The Weber County Hive's Facebook page.
+</footer>
+
+</body>
+</html>
