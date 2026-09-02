@@ -118,5 +118,17 @@ const CANDIDATES = [
     tags: ["Disclosure Gap", "Same-Seat Comparison", "Park Campaign"],
     stamp: "Active",
     href: "rachel-kahler-wasatch-seat-a.html"
+  },
+  {
+    id: "wasatch-seat-c-rowland",
+    race: "Wasatch County Council — Seat C",
+    level: "State",
+    county: "Wasatch",
+    caseNumber: "CASE 10",
+    names: "Erik Rowland — Unopposed",
+    verdict: "The Wrong Form, Four Times",
+    tags: ["MIDA Board", "Unopposed", "Disclosure Gap"],
+    stamp: "Active",
+    href: "erik-rowland-seat-c.html"
   }
 ];
