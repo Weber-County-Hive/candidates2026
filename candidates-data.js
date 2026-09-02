@@ -106,5 +106,17 @@ const CANDIDATES = [
     tags: ["Campaign Finance Gap", "Platform vs. Record", "Unopposed Seat"],
     stamp: "Active",
     href: "davis-county-commission-2026.html"
+  },
+  {
+    id: "wasatch-seat-a-kahler",
+    race: "Wasatch County Council — Seat A (At-Large)",
+    level: "State",
+    county: "Wasatch",
+    caseNumber: "CASE 09",
+    names: "Kahler vs. Saucier",
+    verdict: "The Form She Left Blank",
+    tags: ["Disclosure Gap", "Same-Seat Comparison", "Park Campaign"],
+    stamp: "Active",
+    href: "rachel-kahler-wasatch-seat-a.html"
   }
 ];
