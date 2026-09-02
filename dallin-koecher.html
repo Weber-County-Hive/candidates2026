@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dallin Koecher — Unelected Power — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3ECE0;
+    --paper-dim:#E9E0D0;
+    --void:#181210;
+    --void-2:#241A17;
+    --maroon:#6E1F2B;
+    --maroon-dim:#8C3B44;
+    --ink:#211714;
+    --ink-soft:#4A3B35;
+    --line:#C9BBA4;
+    --gold:#B4863C;
+    --max:760px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Sans 3',sans-serif;
+    font-size:17px;
+    line-height:1.62;
+  }
+  ::selection{background:var(--maroon);color:var(--paper);}
+  a{color:var(--maroon);}
+  a:hover{color:var(--maroon-dim);}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;color:var(--ink);margin:0;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  .topbar{
+    background:var(--void);
+    color:var(--paper-dim);
+    padding:12px 24px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .topbar .wrap{max-width:900px;width:100%;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:0;}
+  .topbar a{color:var(--paper-dim);text-decoration:none;opacity:.8;}
+  .topbar a:hover{opacity:1;color:#fff;}
+
+  header.masthead{
+    padding:56px 24px 40px;
+    border-bottom:3px solid var(--void);
+    max-width:900px;
+    margin:0 auto;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--maroon);display:inline-block;}
+  h1.title{
+    font-size:clamp(32px,5.4vw,50px);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    max-width:720px;
+  }
+  h1.title em{font-style:italic;color:var(--maroon);}
+  .dek{
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:640px;
+    margin-top:18px;
+    line-height:1.5;
+  }
+
+  main{max-width:var(--max);margin:0 auto;padding:48px 24px 80px;}
+
+  .pull-quote{
+    margin:44px 0;
+    padding:26px 28px;
+    background:#fff;
+    border-left:4px solid var(--maroon);
+  }
+  .pull-quote p.q{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:1.35rem;
+    line-height:1.35;
+    margin:0 0 10px;
+  }
+  .pull-quote .attribution{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+  }
+
+  section.block{margin:52px 0;}
+  h2.section-title{
+    font-size:1.5rem;
+    margin:0 0 8px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:10px;
+  }
+  p{font-size:1.02rem;}
+
+  .record-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:4px solid var(--maroon);
+    padding:22px 24px;
+    margin:20px 0;
+  }
+  .record-card h3{font-size:1.1rem;margin:0 0 10px;}
+
+  table.claim-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0 8px;
+    font-size:0.96rem;
+  }
+  table.claim-table th{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    text-align:left;
+    color:var(--ink-soft);
+    border-bottom:2px solid var(--ink);
+    padding:10px 12px 10px 0;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+  }
+  table.claim-table td{
+    padding:14px 12px 14px 0;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  table.claim-table td strong{color:var(--maroon);}
+
+  .flip-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+    gap:16px;
+    margin:22px 0;
+  }
+  .flip-card{background:transparent;perspective:1000px;height:180px;cursor:pointer;}
+  .flip-card-inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d;}
+  .flip-card.is-flipped .flip-card-inner{transform:rotateY(180deg);}
+  .flip-card-face{position:absolute;width:100%;height:100%;backface-visibility:hidden;border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;justify-content:center;}
+  .flip-card-front{background:var(--void);color:var(--paper-dim);text-align:center;}
+  .flip-card-front .num{font-family:'Fraunces',serif;font-weight:700;font-size:1.9rem;color:var(--gold);line-height:1;margin-bottom:10px;}
+  .flip-card-front .name{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;line-height:1.25;}
+  .flip-card-front .tap-hint{font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:var(--maroon-dim);margin-top:12px;text-transform:uppercase;letter-spacing:.05em;}
+  .flip-card-back{background:#fff;transform:rotateY(180deg);}
+  .flip-card-back .role{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--maroon);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;}
+  .flip-card-back .detail{font-size:0.85rem;color:var(--ink-soft);line-height:1.4;}
+
+  details.sources-collapse{margin:20px 0 0;}
+  details.sources-collapse summary{
+    cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--maroon);
+    padding:14px 18px;background:#fff;border:1px solid var(--line);list-style:none;
+  }
+  details.sources-collapse summary::-webkit-details-marker{display:none;}
+  details.sources-collapse summary::before{content:'+ ';font-weight:700;}
+  details.sources-collapse[open] summary::before{content:'– ';}
+  details.sources-collapse .record-card{border-top:none;margin-top:0;border-left:4px solid var(--maroon);}
+
+  footer.site-footer{
+    background:var(--void);
+    color:var(--paper-dim);
+    padding:40px 24px 50px;
+    margin-top:40px;
+  }
+  footer.site-footer .wrap{display:flex;flex-direction:column;gap:14px;}
+  footer.site-footer h3{color:#fff;font-size:20px;}
+  footer.site-footer p{color:#B8A899;font-size:14px;max-width:560px;line-height:1.6;margin:0;}
+  footer.site-footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px;}
+  footer.site-footer a{color:var(--gold);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.03em;}
+  footer.site-footer a:hover{color:#fff;}
+
+  @media(max-width:600px){
+    header.masthead{padding:40px 18px 28px;}
+    main{padding:36px 18px 60px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>The Weber County Hive · Unelected Power</span>
+    <a href="index.html">← All profiles</a>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="eyebrow">Wasatch Open Lands Board · Executive Director, Heber Valley Chamber/CVB</div>
+  <h1 class="title">One Line, <em>Four Boards</em> Short</h1>
+  <p class="dek">Dallin Koecher runs Heber Valley's tourism and economic development office and sits on the county
+    board that recommends how open-space bond money gets spent. His own disclosure form for that board lists one
+    thing. The public record shows at least four more.</p>
+</header>
+
+<main>
+
+  <section class="block">
+    <p>Dallin Koecher has never run for office. He is the Executive Director of the Heber Valley Chamber, Tourism,
+      and Economic Development office — the same organization known publicly as the Heber Valley Chamber and the
+      Heber Valley CVB — a position he's held since March 2020, after six years as the office's Communications
+      Manager. He also sits on the Wasatch Open Lands Board (WOLB), the county board that reviews conservation
+      easement applications and recommends how Wasatch County's Open Space bond money gets spent.</p>
+    <p>WOLB requires an annual conflict-of-interest disclosure under Utah Code 17-70-505 through -507. Koecher's
+      is one of only three, out of seven board members, actually posted on the county's own WOLB page.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">What his own form says</h2>
+    <p>Signed Feb. 4, 2026, notarized. Question 1 asks for any business entity where the filer is an officer,
+      director, agent, employee, or 10%-or-greater owner, if that entity is subject to regulation by Wasatch
+      County, Heber City, Midway City, the Chamber, or WOLB itself. Koecher listed exactly one:</p>
+  </section>
+
+  <div class="pull-quote">
+    <p class="q">"Heber Valley Chamber of Commerce — Director"</p>
+    <div class="attribution">— Dallin Koecher, Wasatch Open Lands Board Conflict of Interest Disclosure Form,
+      Feb. 4, 2026</div>
+  </div>
+
+  <section class="block">
+    <p>That line is accurate as far as it goes — it's a shorthand for his actual job, Executive Director of the
+      Heber Valley Chamber, Tourism, and Economic Development office. What it doesn't mention is anything else.</p>
+    <table class="claim-table">
+      <tr><th>Form line</th><th>What should have appeared</th></tr>
+      <tr>
+        <td>Employer</td>
+        <td><strong>Heber Valley Chamber, Tourism, and Economic Development</strong> (the line he did write, in
+          shorthand)</td>
+      </tr>
+      <tr>
+        <td>Boards you sit on — "other county, nonprofit, and for-profit boards"</td>
+        <td><strong>CAMS</strong> (Director since 2019); <strong>Heber Valley Music</strong> (Director/Trustee
+          since 2019); <strong>Wasatch County Arts Council</strong> (incorporator/Director since 2016);
+          <strong>Red White &amp; Blue Festival Inc.</strong> (Director); <strong>Heber City Board of
+          Adjustments</strong> (2019-2021, per public payroll records)</td>
+      </tr>
+    </table>
+    <p>Five separate positions, none of them appearing on the one form the county has on file for him — sourced
+      from OpenCorporates, Utah Division of Corporations state filings, and Heber City payroll records, not from
+      any single leaked document.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">The entities, one at a time</h2>
+    <div class="flip-grid">
+      <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-face flip-card-front">
+            <div class="num">1</div>
+            <div class="name">CAMS</div>
+            <div class="tap-hint">Tap for detail</div>
+          </div>
+          <div class="flip-card-face flip-card-back">
+            <div class="role">Director, since 2019</div>
+            <div class="detail">The Heber City nonprofit with a $39,900/year, three-year events contract with
+              Heber City.</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-face flip-card-front">
+            <div class="num">2</div>
+            <div class="name">Heber Valley Music</div>
+            <div class="tap-hint">Tap for detail</div>
+          </div>
+          <div class="flip-card-face flip-card-back">
+            <div class="role">Director &amp; Trustee, since 2019</div>
+            <div class="detail">Per Utah Division of Corporations filing.</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-face flip-card-front">
+            <div class="num">3</div>
+            <div class="name">Wasatch County Arts Council</div>
+            <div class="tap-hint">Tap for detail</div>
+          </div>
+          <div class="flip-card-face flip-card-back">
+            <div class="role">Incorporator &amp; Director, since 2016</div>
+            <div class="detail">His own LinkedIn separately lists this board service since 2014.</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-face flip-card-front">
+            <div class="num">4</div>
+            <div class="name">Red White &amp; Blue Festival Inc.</div>
+            <div class="tap-hint">Tap for detail</div>
+          </div>
+          <div class="flip-card-face flip-card-back">
+            <div class="role">Director</div>
+            <div class="detail">Same board Rachel Kahler and Heber City Manager Matt Brower also sit on.</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-face flip-card-front">
+            <div class="num">5</div>
+            <div class="name">Heber City Board of Adjustments</div>
+            <div class="tap-hint">Tap for detail</div>
+          </div>
+          <div class="flip-card-face flip-card-back">
+            <div class="role">2019-2021</div>
+            <div class="detail">Per Heber City public payroll records — not documented anywhere else in this
+              research.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">A small, tightly connected hub</h2>
+    <p>CAMS, Red White &amp; Blue Festival Inc., and the Wasatch County Arts Council all share the same address —
+      475 N. Main Street, Heber City — and Koecher is attached to all three. Two other names sit inside the same
+      cluster: Matt Brower, Heber City's own City Manager, is a director of both CAMS (since 2019) and Red White
+      &amp; Blue Festival Inc. (since 2023), and is the subject of a separate state auditor complaint over the
+      CAMS seat; and Rachel Kahler, CAMS's paid Executive Director and a 2026 candidate for Wasatch County
+      Council, sits on the Red White &amp; Blue Festival board too. The Heber Valley Chamber/CVB's own governing
+      Executive Board, meanwhile, is chaired by Mark Nelson — a sitting Wasatch County Councilman.</p>
+    <p>CAMS itself was founded in 2003 by Tom Stone and Jeff Bradshaw as a nonprofit from the start, using a
+      $15,000 Winter Olympics community grant. It went dormant during the 2008 recession and was revived around
+      2018. Its federal tax-exempt status is recent — granted September 2025, effective November 2024 — but that's
+      a tax designation, not a change in what kind of organization it's always been.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Where this stands</h2>
+    <p>Koecher was not asked for comment, consistent with this publication's practice of reporting from public
+      records and documents in hand. He was not elected to any of these positions and holds no ballot-facing role
+      himself — his authority runs entirely through appointment and employment, which is exactly the kind of power
+      this series exists to document.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Sources</h2>
+    <details class="sources-collapse">
+      <summary>9 sources — tap to expand</summary>
+      <div class="record-card">
+        <p style="margin:0 0 10px;">Dallin Koecher's Wasatch Open Lands Board Conflict of Interest Disclosure
+          Form (signed Feb. 4, 2026)</p>
+        <p style="margin:0 0 10px;">Wasatch County's Open Lands Board (WOLB) page, wasatchcounty.gov</p>
+        <p style="margin:0 0 10px;">Utah Code 17-70-505 through -507</p>
+        <p style="margin:0 0 10px;">Utah Division of Corporations filings — Community Alliance for Main Street
+          Inc., Heber Valley Music, Wasatch County Arts Council, Red White and Blue Festival Inc.</p>
+        <p style="margin:0 0 10px;">OpenCorporates officer records for the above entities</p>
+        <p style="margin:0 0 10px;">Heber City and Wasatch County public payroll records</p>
+        <p style="margin:0 0 10px;">Dallin Koecher's LinkedIn profile</p>
+        <p style="margin:0 0 10px;">Heber Valley Chamber/CVB staff directory, gohebervalley.com</p>
+        <p style="margin:0;">CAMS's own April 2026 board announcement</p>
+      </div>
+    </details>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <h3>The Weber County Hive · Unelected Power</h3>
+    <p>An accountability journalism series covering Utah officials who hold appointed rather than elected
+      positions — how they got the appointment, what authority it carries, and how they've used it. Built
+      exclusively from primary documents.</p>
+    <div class="links">
+      <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
