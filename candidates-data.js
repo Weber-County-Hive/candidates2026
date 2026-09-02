@@ -130,5 +130,17 @@ const CANDIDATES = [
     tags: ["MIDA Board", "Unopposed", "Disclosure Gap"],
     stamp: "Active",
     href: "erik-rowland-seat-c.html"
+  },
+  {
+    id: "hd59-searle-johnson",
+    race: "Utah House District 59 — Summit / Wasatch",
+    level: "State",
+    county: "Wasatch",
+    caseNumber: "CASE 11",
+    names: "Searle vs. Johnson",
+    verdict: "Half the Ledger, Six PACs",
+    tags: ["PAC Network", "Open Seat", "Fundraising"],
+    stamp: "Active",
+    href: "luke-searle-hd59.html"
   }
 ];

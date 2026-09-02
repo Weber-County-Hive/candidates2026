@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Half the Ledger, Six PACs — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-paper: #f4f0e6;
+    --color-ink: #241c14;
+    --color-ink-soft: #5a4f42;
+    --color-link: #c0572e;
+    --color-stat: #d9a441;
+    --color-burgundy-light: #5c1a2b;
+    --color-burgundy-deep: #3d0f1c;
+    --color-line: #d8cfbe;
+    --color-card: #fbf9f3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: 'Source Serif 4', serif; line-height: 1.6; }
+  a { color: var(--color-link); }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+
+  header.masthead { background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep)); color: #f4ece5; padding: 18px 24px; }
+  .masthead-row { max-width: 880px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .masthead-brand { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.05rem; letter-spacing: 0.02em; }
+  .masthead-nav a { color: #f0d9c9; text-decoration: none; margin-left: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 0.82rem; }
+  .masthead-nav a:hover { text-decoration: underline; }
+
+  .hero { background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep)); color: #f4ece5; padding: 56px 24px 64px; }
+  .hero-inner { max-width: 780px; margin: 0 auto; }
+  .case-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: #e0b89a; margin-bottom: 14px; }
+  h1.headline { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.12; margin: 0 0 18px; }
+  .dek { font-size: 1.15rem; color: #ecd9cc; max-width: 640px; margin: 0; }
+
+  main { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+
+  section.block { margin: 56px 0; }
+  h2.section-title { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.6rem; margin: 0 0 8px; border-bottom: 1px solid var(--color-line); padding-bottom: 10px; }
+  p { font-size: 1.05rem; }
+
+  .record-card { background: var(--color-card); border: 1px solid var(--color-line); padding: 22px 24px; margin: 20px 0; }
+  .record-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 0 0 10px; }
+
+  table.claim-table { width: 100%; border-collapse: collapse; margin: 18px 0 8px; font-size: 0.98rem; }
+  table.claim-table th { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; text-align: left; color: var(--color-ink-soft); border-bottom: 2px solid var(--color-ink); padding: 10px 12px 10px 0; }
+  table.claim-table td { padding: 14px 12px 14px 0; border-bottom: 1px solid var(--color-line); vertical-align: top; }
+  table.claim-table td.record strong { color: var(--color-link); }
+
+  .stat-row { display: flex; gap: 28px; flex-wrap: wrap; margin: 18px 0; }
+  .stat { font-family: 'IBM Plex Mono', monospace; }
+  .stat .num { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 2.1rem; color: var(--color-stat); display: block; line-height: 1; }
+  .stat .label { font-size: 0.78rem; color: var(--color-ink-soft); }
+
+  .fund-donut-wrap { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; margin: 24px 0; }
+  .fund-donut {
+    width: 170px; height: 170px; border-radius: 50%; flex: 0 0 auto; position: relative;
+    background: conic-gradient(#c0572e 0deg 179deg, #d9a441 179deg 340deg, #5a4f42 340deg 360deg);
+  }
+  .fund-donut-center {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 108px; height: 108px; border-radius: 50%; background: var(--color-paper);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: 'IBM Plex Mono', monospace; text-align: center;
+  }
+  .fund-donut-center .amt { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; color: var(--color-ink); line-height: 1.1; }
+  .fund-donut-center .lbl { font-size: 0.62rem; color: var(--color-ink-soft); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+  .fund-donut-legend { list-style: none; margin: 0; padding: 0; font-size: 0.92rem; }
+  .fund-donut-legend li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .fund-donut-legend .swatch { width: 14px; height: 14px; flex: 0 0 auto; border-radius: 3px; }
+  .fund-donut-legend .pct { font-family: 'IBM Plex Mono', monospace; color: var(--color-ink-soft); margin-left: auto; padding-left: 12px; }
+
+  .diagram-wrap { background: var(--color-card); border: 1px solid var(--color-line); padding: 26px 22px; margin: 28px 0; }
+  .diagram-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--color-ink-soft); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 18px; }
+  .diagram-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin-bottom: 22px; }
+  .diagram-col h4 { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-link); margin: 0 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--color-line); }
+  .diagram-item { font-size: 0.88rem; padding: 8px 0; border-bottom: 1px dashed var(--color-line); line-height: 1.35; }
+  .diagram-item:last-child { border-bottom: none; }
+  .diagram-item .tag-mini { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--color-ink-soft); margin-top: 2px; }
+  .diagram-hub { text-align: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; color: #f4ece5; background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep)); padding: 12px 18px; margin: 0 auto 20px; max-width: 300px; }
+  .diagram-funnel { text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 0.74rem; color: var(--color-ink-soft); margin: 18px 0 10px; }
+  .diagram-out { text-align: center; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 600; font-size: 0.98rem; background: var(--color-stat); color: #241c14; padding: 10px 16px; max-width: 440px; margin: 0 auto; }
+
+  .entity-list { list-style: none; margin: 18px 0; padding: 0; counter-reset: entity; }
+  .entity-list li { counter-increment: entity; padding: 14px 0 14px 40px; border-bottom: 1px solid var(--color-line); position: relative; }
+  .entity-list li::before { content: counter(entity); position: absolute; left: 0; top: 14px; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--color-stat); }
+  .entity-list li strong { color: var(--color-ink); }
+
+  footer.pagefoot { max-width: 720px; margin: 0 auto; padding: 40px 24px 60px; font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--color-ink-soft); border-top: 1px solid var(--color-line); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <div class="masthead-brand">The Weber County Hive</div>
+    <nav class="masthead-nav">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="case-label">UTAH HOUSE DISTRICT 59 · SUMMIT / WASATCH · OPEN SEAT</div>
+    <h1 class="headline">Half the Ledger, Six PACs</h1>
+    <p class="dek">Luke Searle is leaving his unopposed Wasatch County Council seat to run for an open,
+      no-incumbent House seat this fall. Nearly half of everything he's raised has come from just six political
+      action committees.</p>
+  </div>
+</div>
+
+<main>
+
+  <section class="block">
+    <p>Luke Searle has represented Wasatch County Council Seat A (At-Large) since 2023. Rather than seek
+      reelection, he's running for Utah House District 59 — the seat Rep. Mike Kohler is vacating. HD59 covers
+      Summit and Wasatch counties, including Park City. Searle won the June 2026 Republican primary against
+      William "Brett" Vance and now faces Democrat <strong>Celeste Johnson</strong> in the Nov. 3 general
+      election. With no incumbent on the ballot, in a district that came within about 200 votes of flipping in
+      the last comparable wave year (2018), both sides describe this as a genuinely competitive race.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Where the money comes from</h2>
+    <p>Across his full 2026 campaign — Convention and Primary reports plus the itemized contributions that
+      followed — Searle has raised roughly $56,800. Just under half of it traces to six political action
+      committees.</p>
+
+    <div class="fund-donut-wrap">
+      <div class="fund-donut">
+        <div class="fund-donut-center">
+          <span class="amt">$56.8K</span>
+          <span class="lbl">Raised</span>
+        </div>
+      </div>
+      <ul class="fund-donut-legend">
+        <li><span class="swatch" style="background:#c0572e;"></span> PAC money <span class="pct">~50%</span></li>
+        <li><span class="swatch" style="background:#d9a441;"></span> Individuals &amp; other <span class="pct">~45%</span></li>
+        <li><span class="swatch" style="background:#5a4f42;"></span> Self-funded <span class="pct">~6%</span></li>
+      </ul>
+    </div>
+
+    <p>The six PACs, together, account for about $28,200:</p>
+    <table class="claim-table">
+      <tr><th>PAC</th><th>Amount</th><th>Who controls it</th></tr>
+      <tr><td>House Speaker Leadership PAC</td><td>$10,000</td><td class="record"><strong>Mike Schultz's</strong> own leadership PAC</td></tr>
+      <tr><td>Utah House Republican Election Committee</td><td>$5,000</td><td class="record">Schultz, Majority Leader Casey Snider, and Majority Whip Candice Pierucci; <strong>Kyle Palmer</strong> holds sole signature authority as treasurer</td></tr>
+      <tr><td>All in Utah PAC</td><td>$6,246</td><td class="record">Almost certainly <strong>All In For Utah PAC</strong> — Chair <strong>Owen Fuller</strong>, who also directs Gov. Cox's "Disagree Better" initiative and First Lady Abby Cox's foundation; Treasurer <strong>Dan Hemmert</strong>, MIDA's Executive Director, processed through <strong>Election Hive</strong></td></tr>
+      <tr><td>Utah Chamber PAC</td><td>$5,000</td><td class="record">The <strong>Salt Lake Chamber's</strong> own PAC — its largest donor is the Chamber itself ($50,000); gave Searle $5,000 as part of a broad, bipartisan slate of identical gifts the same day</td></tr>
+      <tr><td>Elevating Local Leaders PAC</td><td>$1,000</td><td class="record"><strong>Karen Peterson</strong> (HD-13), who also gave Searle a personal check the day before</td></tr>
+      <tr><td>American Conservation Coalition PAC</td><td>$1,000</td><td class="record">D.C.-based national group</td></tr>
+    </table>
+    <p>Two of the six — House Speaker Leadership PAC and UHREC — arrived on the same day, Aug. 10, 2026. Both sit
+      inside the same donor and leadership network already documented funding dozens of other Utah legislative
+      candidates.</p>
+    <p>All In For Utah PAC's money moves through Election Hive, the campaign-services firm run by Matthew Lusty
+      that processes payments for a long list of Utah candidates and PACs. The PAC's own leadership sits close to
+      the governor's office: Owen Fuller, its chair, also runs Gov. Cox's "Disagree Better" initiative and First
+      Lady Abby Cox's personal foundation. Its treasurer and secretary, Dan Hemmert, is the Military Installation
+      Development Authority's Executive Director.</p>
+    <p>The PAC's own filings show where a lot of its money actually comes from — and it's not always individual
+      donors. In its 2026 Primary report, $50,000 of $50,000.12 total raised was a single transfer from an entity
+      called "All In For Utah," registered at nearly the same address as the PAC itself. That entity isn't a PAC
+      and doesn't appear to disclose its own donors. A later filing shows a second, $11,000 transfer from the
+      same source — the pass-through is a recurring channel, not a one-time event. The same later period also
+      shows a real, named contributor: A. Scott Anderson, the retired Zions Bank CEO, gave $10,000 directly.</p>
+
+    <div class="diagram-wrap">
+      <p class="diagram-label">All In For Utah PAC, mapped</p>
+      <div class="diagram-hub">All In For Utah PAC</div>
+      <div class="diagram-cols">
+        <div class="diagram-col">
+          <h4>Leadership</h4>
+          <div class="diagram-item">Owen Fuller — Chair<span class="tag-mini">also runs Gov. Cox's "Disagree Better" &amp; the First Lady's foundation</span></div>
+          <div class="diagram-item">Dan Hemmert — Treasurer &amp; Secretary<span class="tag-mini">MIDA Executive Director</span></div>
+          <div class="diagram-item">Jonathan Freedman — Director</div>
+        </div>
+        <div class="diagram-col">
+          <h4>Money In</h4>
+          <div class="diagram-item">"All In For Utah" (pass-through)<span class="tag-mini">$50,000 + $11,000, two transfers</span></div>
+          <div class="diagram-item">A. Scott Anderson<span class="tag-mini">$10,000 direct — retired Zions Bank CEO</span></div>
+          <div class="diagram-item">Election Hive<span class="tag-mini">$1,884.76 — also processes the PAC's outgoing payments</span></div>
+        </div>
+        <div class="diagram-col">
+          <h4>Money Out</h4>
+          <div class="diagram-item">Processed via Election Hive (Matthew Lusty)<span class="tag-mini">same firm funds many other Utah candidates/PACs</span></div>
+          <div class="diagram-item">Luke Searle<span class="tag-mini">$6,246 to date</span></div>
+        </div>
+      </div>
+      <div class="diagram-funnel">↓</div>
+      <div class="diagram-out">Original source of "All In For Utah"'s own money: not visible in any public filing</div>
+    </div>
+
+    <p>"All In For Utah" itself is not a mystery entity — it was incorporated by <strong>Matthew T. Sanderson</strong>,
+      a nationally prominent Republican campaign-finance attorney at Caplin &amp; Drysdale in Washington, D.C.
+      (past General Counsel to Rand Paul's 2016 campaign, Finance Counsel to McCain 2008, counsel to Mitt
+      Romney's Commonwealth PACs). Sanderson has incorporated at least eight Utah political entities using the
+      same Midvale-based registered-agent service, including both "All In For Utah Foundation" and "All In For
+      Utah PAC" — and, separately, <strong>Utah Doers Network</strong>, a similarly "grassroots"-branded vehicle
+      that has funded dozens of sitting Utah legislators. Same legal architecture, two differently branded
+      funding operations, the same election cycle.</p>
+
+    <p>Utah Chamber PAC is a different kind of relationship — the Salt Lake Chamber's own vehicle, funded largely
+      by the Chamber itself and major Utah construction and development firms, giving identical $5,000 checks to
+      a broad, bipartisan slate of candidates the same day, including a Democrat. That's standard
+      business-community hedging across many races, not a targeted relationship the way the leadership PACs
+      are.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">The Karen Peterson pattern</h2>
+    <p>Peterson personally gave Searle $250 on June 3, 2026. Her PAC, Elevating Local Leaders — where she's the
+      registered Primary Officer — gave him $1,000 the very next day. It's the same personal-then-PAC,
+      back-to-back pattern she used with another candidate, Chris McConnehey, earlier the same cycle.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">What the filings themselves look like</h2>
+    <div class="stat-row">
+      <div class="stat"><span class="num">35</span><span class="label">deleted contribution entries, Convention + Primary reports</span></div>
+      <div class="stat"><span class="num">~15%</span><span class="label">of all contribution-side transactions</span></div>
+    </div>
+    <p>All 35 deletions are zeroed-out contribution records with no dates, sitting inside the normal transaction
+      sequence — the same pattern documented across several other Utah campaign committees. Not unusual for this
+      dataset, but on the higher end of what's been found elsewhere.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Where this stands</h2>
+    <p>Searle was not asked for comment, consistent with this publication's practice of reporting from public
+      records and documents in hand. HD59 remains a genuinely contested race, and campaign filings will continue
+      through the November election.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Sources</h2>
+    <div class="record-card">
+      <p style="margin:0 0 10px;">Searle's full 2026 DEX export (Convention and Primary reports, Jan.-June 2026)</p>
+      <p style="margin:0 0 10px;">Itemized individual contribution report, disclosures.utah.gov (June-August 2026)</p>
+      <p style="margin:0 0 10px;">Karen Peterson's own DEX filings</p>
+      <p style="margin:0 0 10px;">House Speaker Leadership PAC and UHREC statements of organization</p>
+      <p style="margin:0 0 10px;">All In For Utah PAC statement of organization and 2026 filings; Utah Division of Corporations filing for "All In For Utah"</p>
+      <p style="margin:0;">Park Record and KPCW campaign coverage, Jan.-June 2026</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pagefoot">
+  The Weber County Hive — public records reporting on Wasatch, Summit, and Weber County government.
+</footer>
+
+</body>
+</html>
