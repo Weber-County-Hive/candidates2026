@@ -142,15 +142,14 @@
 
 </div>
 
-<script src="candidates-data.js?v=4"></script>
+<script src="candidates-data.js?v=7"></script>
 <script>
   const groupsEl = document.getElementById('level-groups');
   const statStrip = document.getElementById('stat-strip');
   const search = document.getElementById('search');
   const countyFilterBtns = document.getElementById('county-filter-buttons');
 
-  // County display order within State races — Weber first, then others as added (Davis, Wasatch, etc.)
-  const COUNTY_ORDER = ["Weber", "Davis", "Wasatch"];
+  const COUNTY_ORDER = ["Box Elder", "Davis", "Wasatch", "Weber"];
 
   function stateCounties(list){
     const stateRaces = list.filter(c => c.level === "State");
@@ -171,7 +170,7 @@
     <div class="stat"><div class="stat-num">${daysToElection}</div><div class="stat-label">Days to election</div></div>
   `;
 
-  let activeScope = 'all'; // 'all' | 'Federal' | a county name
+  let activeScope = 'all';
 
   function buildCountyButtons(){
     const counties = stateCounties(CANDIDATES);
@@ -219,9 +218,6 @@
   function renderGroups(list){
     groupsEl.innerHTML = '';
     const hasSearchTerm = search.value.trim().length > 0;
-    // Show the generic "no matches" message only for a genuine empty search result.
-    // A scope filter (Federal, or a specific county) with no search term and no
-    // matches yet should fall through to the section placeholders below instead.
     if(list.length === 0 && (activeScope === 'all' || hasSearchTerm)){
       groupsEl.innerHTML = `<p style="color:var(--ink-faint);font-family:var(--mono);font-size:14px;">No matching case files.</p>`;
       return;
@@ -230,8 +226,6 @@
     const federalList = list.filter(c => c.level === "Federal");
     const stateList = list.filter(c => c.level === "State");
 
-    // FEDERAL section — only rendered if there's at least one federal race,
-    // or if the user is actively filtering to Federal (shows the "coming soon" placeholder)
     if(federalList.length > 0 || activeScope === 'Federal'){
       const section = document.createElement('div');
       section.className = 'level-section';
@@ -250,7 +244,6 @@
       groupsEl.appendChild(section);
     }
 
-    // STATE section, subdivided by county
     if(stateList.length > 0 || activeScope !== 'Federal'){
       const stateSection = document.createElement('div');
       stateSection.className = 'level-section';
@@ -262,7 +255,7 @@
       const counties = stateCounties(list.length === CANDIDATES.length ? CANDIDATES : list);
       counties.forEach(county => {
         const inCounty = stateList.filter(c => (c.county || "Other") === county);
-        if(inCounty.length === 0 && activeScope !== county) return; // skip empty counties unless actively filtered to them
+        if(inCounty.length === 0 && activeScope !== county) return;
         const countySection = document.createElement('div');
         countySection.className = 'county-section';
         const countyHeading = document.createElement('div');
