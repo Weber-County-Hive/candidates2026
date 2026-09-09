@@ -142,5 +142,17 @@ const CANDIDATES = [
     tags: ["PAC Network", "Open Seat", "Fundraising"],
     stamp: "Active",
     href: "luke-searle-hd59.html"
+  },
+  {
+    id: "box-elder-seat-a-smith-williams",
+    race: "Box Elder County Commission — Seat A",
+    level: "State",
+    county: "Box Elder",
+    caseNumber: "CASE 12",
+    names: "Smith vs. Williams",
+    verdict: "Twenty Dollars In, Thirteen Thousand Out",
+    tags: ["Campaign Finance Gap", "Business Network", "Voting Record"],
+    stamp: "Active",
+    href: "box-elder-seat-a-smith-williams.html"
   }
 ];
