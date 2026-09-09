@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twenty Dollars In, Thirteen Thousand Out — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f4f0e6;
+    --paper:#faf7f0;
+    --ink:#2a211c;
+    --ink-soft:#6b5d52;
+    --rust:#c0572e;
+    --amber:#d9a441;
+    --burgundy-light:#5c1a2b;
+    --burgundy-deep:#3d0f1c;
+    --line:#ddd4c4;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Source Serif 4",Georgia,serif;
+    line-height:1.6;
+  }
+  a{color:var(--rust);}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.72rem;
+    letter-spacing:.04em;
+    color:var(--ink-soft);
+  }
+  header.band{
+    background:linear-gradient(135deg,var(--burgundy-light),var(--burgundy-deep));
+    color:#f4e9dd;
+    padding:18px 24px;
+  }
+  .band-inner{
+    max-width:960px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .band-inner nav a{
+    color:#f4e9dd;
+    text-decoration:none;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.78rem;
+    margin-left:20px;
+    border-bottom:1px solid rgba(244,233,221,.4);
+    padding-bottom:2px;
+  }
+  .band-inner .site{
+    font-family:"Playfair Display",serif;
+    font-weight:700;
+    font-size:1.05rem;
+  }
+  main{max-width:760px;margin:0 auto;padding:0 24px 100px;}
+  .hero{padding:56px 0 20px;border-bottom:1px solid var(--line);}
+  .hero .eyebrow{margin-bottom:14px;}
+  h1{
+    font-family:"Playfair Display",serif;
+    font-weight:800;
+    font-size:2.7rem;
+    line-height:1.08;
+    margin:0 0 18px;
+  }
+  .dek{
+    font-size:1.18rem;
+    color:var(--ink-soft);
+    max-width:640px;
+    margin:0 0 22px;
+  }
+  .matchup{
+    display:flex;
+    gap:28px;
+    margin:26px 0 8px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.82rem;
+  }
+  .matchup .who{color:var(--ink);}
+  .matchup .who b{color:var(--rust);}
+  section{padding:44px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  h2{
+    font-family:"Playfair Display",serif;
+    font-size:1.65rem;
+    font-weight:700;
+    margin:0 0 8px;
+  }
+  h2 + .section-sub{color:var(--ink-soft);font-size:1.02rem;margin-bottom:24px;}
+  p{margin:0 0 18px;}
+  .stat-row{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+    margin:26px 0 30px;
+  }
+  .stat{
+    flex:1;
+    min-width:150px;
+    border-left:2px solid var(--amber);
+    padding-left:14px;
+  }
+  .stat .num{
+    font-family:"Playfair Display",serif;
+    font-weight:800;
+    font-size:2.1rem;
+    color:var(--amber);
+    line-height:1;
+  }
+  .stat .cap{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.72rem;
+    color:var(--ink-soft);
+    margin-top:6px;
+  }
+  blockquote{
+    margin:22px 0;
+    padding:4px 0 4px 20px;
+    border-left:3px solid var(--rust);
+    font-style:italic;
+    color:var(--ink);
+  }
+  blockquote cite{
+    display:block;
+    margin-top:8px;
+    font-family:"IBM Plex Mono",monospace;
+    font-style:normal;
+    font-size:.72rem;
+    color:var(--ink-soft);
+  }
+  .record-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:20px 22px;
+    margin:18px 0;
+  }
+  .record-card h3{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.82rem;
+    letter-spacing:.02em;
+    margin:0 0 10px;
+    color:var(--burgundy-light);
+  }
+  /* entity grid */
+  .entity-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+    gap:14px;
+    margin:26px 0;
+  }
+  .entity-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:16px 16px 14px;
+  }
+  .entity-card .name{
+    font-family:"Playfair Display",serif;
+    font-weight:700;
+    font-size:1.02rem;
+    margin-bottom:4px;
+  }
+  .entity-card .meta{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.68rem;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+  .tag{
+    display:inline-block;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.62rem;
+    letter-spacing:.02em;
+    padding:2px 7px;
+    border-radius:2px;
+    margin-top:8px;
+  }
+  .tag.active{background:#e4ecdf;color:#3f5c33;}
+  .tag.inactive{background:#f0ded9;color:#8f3b23;}
+  .tag.dba{background:#efe6cf;color:#8a6a1d;}
+  .tag.spouse{background:#e3e1f2;color:#453f8a;}
+  /* donut */
+  .donut-wrap{
+    display:flex;
+    gap:34px;
+    align-items:center;
+    flex-wrap:wrap;
+    margin:30px 0;
+  }
+  .fund-donut{
+    width:180px;height:180px;border-radius:50%;flex-shrink:0;
+    background:conic-gradient(
+      var(--rust) 0% 34%,
+      var(--burgundy-light) 34% 61%,
+      var(--amber) 61% 82%,
+      #9c8f7d 82% 88%,
+      #c9bfa8 88% 91%,
+      #ddd4c4 91% 94%,
+      #b8a98d 94% 100%
+    );
+    position:relative;
+  }
+  .fund-donut::after{
+    content:"";
+    position:absolute;
+    inset:26px;
+    background:var(--cream);
+    border-radius:50%;
+  }
+  .fund-donut-center{
+    position:absolute;
+    inset:26px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.68rem;
+    color:var(--ink-soft);
+    z-index:2;
+  }
+  .fund-legend{list-style:none;margin:0;padding:0;font-size:.92rem;}
+  .fund-legend li{display:flex;align-items:baseline;gap:10px;margin-bottom:9px;}
+  .fund-legend .swatch{width:11px;height:11px;border-radius:2px;flex-shrink:0;}
+  .fund-legend .amt{font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--ink-soft);margin-left:auto;padding-left:12px;}
+  details.sources{margin-top:10px;}
+  details.sources summary{
+    cursor:pointer;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.78rem;
+    color:var(--rust);
+    margin-bottom:10px;
+  }
+  details.sources ol{padding-left:20px;font-size:.88rem;color:var(--ink-soft);}
+  details.sources li{margin-bottom:8px;}
+  .caveat{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.72rem;
+    color:var(--ink-soft);
+    background:var(--paper);
+    border:1px dashed var(--line);
+    padding:12px 14px;
+    margin:18px 0;
+    border-radius:3px;
+  }
+  footer{
+    max-width:760px;margin:0 auto;padding:30px 24px 70px;
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<header class="band">
+  <div class="band-inner">
+    <span class="site">The Weber County Hive</span>
+    <nav>
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="eyebrow">BOX ELDER COUNTY &middot; COMMISSION SEAT A &middot; GENERAL ELECTION NOV. 3, 2026</div>
+    <h1>Twenty Dollars In, Thirteen Thousand Out</h1>
+    <p class="dek">Vance Smith beat an incumbent who voted to approve the Stratos data center. His own campaign report doesn't explain how it was paid for, and his own disclosure form lists a dozen companies he's built since 2016 &mdash; the same year he started subdividing his own land through the county he now wants to help run.</p>
+    <div class="matchup">
+      <span class="who"><b>Vance Smith</b> &middot; Republican</span>
+      <span class="who">vs.</span>
+      <span class="who"><b>Alan Williams</b> &middot; Unaffiliated</span>
+    </div>
+  </div>
+
+  <section>
+    <h2>The seat</h2>
+    <p>Box Elder County's three-member commission voted unanimously in May 2026 to let the Stratos Area Project &mdash; a hyperscale data center campus planned for roughly 20,000 acres in the Hansel Valley &mdash; move forward under Utah's Military Installation Development Authority. Two of the three commissioners who cast that vote, Boyd Bingham and Lee Perry, were up for re-election weeks later. Both lost their Republican primaries.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">4,165</div><div class="cap">Smith's primary votes</div></div>
+      <div class="stat"><div class="num">3,849</div><div class="cap">Bingham's (incumbent)</div></div>
+      <div class="stat"><div class="num">52%</div><div class="cap">Smith's margin</div></div>
+    </div>
+    <p>Smith, a former member of the county's Planning &amp; Zoning Commission, is now the Republican nominee for Seat A. He faces Alan Williams, an unaffiliated candidate who gathered signatures to get on the ballot without a primary &mdash; and who is married to Brenna Williams, one of the more visible organizers against the Stratos project.</p>
+  </section>
+
+  <section>
+    <h2>What he says, and what he voted for</h2>
+    <p class="section-sub">Asked directly about the data center by the Tremonton Leader, Smith gave a careful answer &mdash; one that doesn't accuse the outgoing commissioners of wrongdoing.</p>
+    <blockquote>
+      &ldquo;Our current leadership didn't take bribes or campaign to bring this project into our county&hellip; While local leadership could not stop this particular project, they could set clear expectations to protect our surrounding community.&rdquo;
+      <cite>Vance Smith, candidate Q&amp;A, Tremonton Leader, June 1, 2026</cite>
+    </blockquote>
+    <p>His platform leans on the same language: &ldquo;responsible growth,&rdquo; protecting &ldquo;rural character,&rdquo; and property rights. But the clearest record of how he actually approaches land use isn't a campaign answer &mdash; it's a vote he cast as a sitting Planning Commissioner.</p>
+    <div class="record-card">
+      <h3>FEBRUARY 20, 2025 &middot; PLANNING COMMISSION MINUTES &middot; APPLICATION Z25-002</h3>
+      <p style="margin-bottom:12px;">A request to rezone 1.5 acres in the Bothwell area &mdash; surrounded by agricultural and residential land &mdash; from Residential to General Industrial, to allow a cabinet and machine shop.</p>
+      <p style="margin-bottom:12px;"><b>Commissioner Bonnie Robinson</b> objected on the record: the request broke from the General Plan's policy of keeping industry near the cities, and would set a precedent &mdash; &ldquo;if one is allowed, the commission will have to allow all.&rdquo; Commissioner Jennifer Jacobsen agreed.</p>
+      <p style="margin-bottom:0;"><b>Commissioner Vance Smith</b> spoke in favor: he &ldquo;champions the idea,&rdquo; is &ldquo;personally in favor of the zone change,&rdquo; and acknowledged &ldquo;the zoning does mess with it being harmonious to the area, but things do change and they have got to start somewhere.&rdquo; He seconded the motion to recommend approval. It carried, with Robinson the lone dissenting vote.</p>
+    </div>
+    <p>Smith served on the Planning Commission from at least April 2024 to sometime before November 2025, stepping down before filing for County Commission in January 2026.</p>
+  </section>
+
+  <section>
+    <h2>The businesses</h2>
+    <p class="section-sub">Smith's own conflict-of-interest disclosure, filed with his candidacy, lists 14 entities he owns, manages, or is an officer of. The Weber County Hive checked every one against Utah's business registry.</p>
+    <p>Two turned out to be trade names, not separate companies &mdash; SFRP Supply and Timber and Limestone are both Assumed Names filed under LLCs already on the list. The rest are real, distinct registrations, most of them tied to his home address in Garland. His stated employer, SHRED Group Inc., is registered at that Garland address but physically headquartered in Smithfield &mdash; the same building as Century 21 Naomi, the real-estate brokerage where his wife, Randi Smith, is broker and owner.</p>
+    <div class="entity-grid">
+      <div class="entity-card">
+        <div class="name">SHRED Group Inc.</div>
+        <div class="meta">Formed 3/5/2021 &middot; President<br>His stated "employer" &mdash; a holding company that itself manages at least one subsidiary, SGRBP LLC</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">SGRBP LLC</div>
+        <div class="meta">Formed 7/22/2024 &middot; Managed directly by SHRED Group Inc.</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">SFRP Properties LLC</div>
+        <div class="meta">Formed 3/28/2016 &middot; Member/agent<br>Does business as SFRP Supply</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">SFRP Supply</div>
+        <div class="meta">DBA of SFRP Properties LLC, filed 6/12/2025</div>
+        <span class="tag dba">Trade name</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">Fifth Industries LLC</div>
+        <div class="meta">Formed 3/31/2016, three days after SFRP Properties &middot; Metal design &amp; fabrication</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">RE Development Company LLC</div>
+        <div class="meta">Formed 2/17/2021 &middot; General contractor<br>Does business as Timber and Limestone</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">Timber and Limestone</div>
+        <div class="meta">DBA of RE Development Co., filed 9/25/2025</div>
+        <span class="tag dba">Trade name</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">Henry Edison Company LLC</div>
+        <div class="meta">Formed 1/10/2024, ~3 months before he joined the Planning Commission &middot; General contractor</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">BLID Company LLC</div>
+        <div class="meta">Formed 4/7/2021 &middot; Agent and manager</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">VSL Holdings LLC</div>
+        <div class="meta">Formed 8/23/2021, registered to his full name, Vance Levi Smith</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">RK123 LLC</div>
+        <div class="meta">Formed 8/24/2021, one day after VSL Holdings</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">MS Main LLC</div>
+        <div class="meta">Formed 8/30/2022</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">25MM LLC</div>
+        <div class="meta">Formed 8/13/2025, ~5 months before he filed for County Commission</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">Brookside Ranch Rentals LLC</div>
+        <div class="meta">Formed 9/17/2020 &mdash; traces back to his multi-phase "Brookside Estates" subdivision, filed with the county starting in 2016</div>
+        <span class="tag active">Active</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">Brookside Land Investments LLC</div>
+        <div class="meta">Formed 1/21/2020 &middot; Voluntarily dissolved March 2026, weeks into his campaign &mdash; was still active when he signed his disclosure</div>
+        <span class="tag inactive">Dissolved</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">Naomi Real Estate LLC</div>
+        <div class="meta">Formed 1/27/2022 &middot; Registered manager is his wife, Randi Smith, not Vance Smith. Does business as Century 21 Naomi</div>
+        <span class="tag spouse">Registered to spouse</span>
+      </div>
+      <div class="entity-card">
+        <div class="name">Century 21 Naomi</div>
+        <div class="meta">DBA of Naomi Real Estate LLC, filed 2022 &middot; Registration expired 9/1/2025, about four months before he listed it on his signed disclosure</div>
+        <span class="tag inactive">Expired DBA</span>
+      </div>
+    </div>
+    <div class="caveat">Note on the count: Smith's disclosure form lists 14 lines. Two of those (SFRP Supply, Timber and Limestone) are trade names under entities already counted here, not separate businesses &mdash; so the true number of distinct registrations is 12, plus his wife's LLC and its now-expired trade name.</div>
+    <p>His own COI form marks the "real property I hold an interest in" section N/A &mdash; even though several of these entities are explicitly named as land or rental businesses. That isn't necessarily a contradiction: property held through an LLC isn't the same as property he holds personally. But it's the kind of distinction that matters for a commissioner whose office votes on land use, and it's one the form itself doesn't resolve.</p>
+  </section>
+
+  <section>
+    <h2>The ledger</h2>
+    <p class="section-sub">Smith's first financial disclosure report, filed with the County Clerk, lists $20 in contributions and $13,009.67 in expenses.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">$20</div><div class="cap">Total reported contributions</div></div>
+      <div class="stat"><div class="num">$13,009.67</div><div class="cap">Total reported expenses</div></div>
+      <div class="stat"><div class="num">$3,520</div><div class="cap">Paid for "Gather Signatures," no recipient named</div></div>
+    </div>
+    <p>The report names exactly one donor &mdash; a $20 gift from Earnie Harlow of Brigham City. Every other dollar spent has no funding source shown on the form. The report's own "balance at end of period" line reads $12,989.67, a figure that doesn't reconcile against $20 coming in and $13,009.67 going out. It's the kind of gap that a self-funding or candidate-loan disclosure would ordinarily explain &mdash; but no such disclosure accompanies this report.</p>
+    <div class="donut-wrap">
+      <div class="fund-donut"><div class="fund-donut-center">$13,009.67<br>reported spending</div></div>
+      <ul class="fund-legend">
+        <li><span class="swatch" style="background:var(--rust);"></span>Mailers (Sunprint Solutions)<span class="amt">$4,481.67</span></li>
+        <li><span class="swatch" style="background:var(--burgundy-light);"></span>"Gather Signatures," no payee named<span class="amt">$3,520.00</span></li>
+        <li><span class="swatch" style="background:var(--amber);"></span>Campaign signs (3 vendors)<span class="amt">$2,688.60</span></li>
+        <li><span class="swatch" style="background:#9c8f7d;"></span>Consulting ("Campaigning")<span class="amt">$1,000.00</span></li>
+        <li><span class="swatch" style="background:#c9bfa8;"></span>Filing fee<span class="amt">$366.57</span></li>
+        <li><span class="swatch" style="background:#ddd4c4;"></span>Caucus fliers<span class="amt">$362.83</span></li>
+        <li><span class="swatch" style="background:#b8a98d;"></span>Party luncheon &amp; benefit dinner<span class="amt">$590.00</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>The opponent</h2>
+    <p class="section-sub">Alan Williams filed as an unaffiliated candidate, gathering signatures rather than running in a primary.</p>
+    <p>A fifth-generation Box Elder County resident, Williams describes 40 years working in engineering for the "Space and Power Industries" before returning home. He's the husband of Brenna Williams, who told a reporter she decided to push for a referendum the moment the commission approved the Stratos project, and who has led public tours of the proposed site. Alan Williams joined one of those tours himself in July 2026.</p>
+    <p>His own campaign site doesn't mention Stratos or the data center by name &mdash; its language stays general, about growth bringing both good and "detrimental" change. His financial disclosure report lists no contributions and no expenditures.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">$0</div><div class="cap">Reported contributions</div></div>
+      <div class="stat"><div class="num">$0</div><div class="cap">Reported expenditures</div></div>
+    </div>
+  </section>
+
+  <details class="sources">
+    <summary>Sources for this piece &darr;</summary>
+    <ol>
+      <li>Vance Smith, Declaration of Candidacy and Conflict of Interest Disclosure, filed with the Box Elder County Clerk, Jan. 8, 2026</li>
+      <li>Vance Smith, Financial Campaign Report, filed with the Box Elder County Clerk, posted at boxeldercountyut.gov (DocumentCenter/View/2343)</li>
+      <li>Alan Williams, Declaration of Candidacy and Certificate of Nomination, filed with the Box Elder County Clerk</li>
+      <li>Box Elder County Planning Commission Minutes, Feb. 20, 2025, and meeting agendas April 2024 &ndash; Nov. 2025, utah.gov Public Notice Website</li>
+      <li>Box Elder County Planning Commission agenda notices, 2016, utah.gov Public Notice Website</li>
+      <li>Utah Division of Corporations and Commercial Code, official entity records for SHRED Group Inc., SGRBP LLC, SFRP Properties LLC, Naomi Real Estate LLC, Century 21 Naomi, Brookside Land Investments LLC, Timber and Limestone, and related entities</li>
+      <li>"Candidate profile: Vance Smith for County Commission," Tremonton Leader/hjnews.com, June 1, 2026</li>
+      <li>"Box Elder County commissioners at center of Data center controversy fall behind in primaries," ABC4, June 24, 2026</li>
+      <li>"Box Elder data center campus claims two casualties: a pair of incumbent commissioners," Utah Public Radio, June 24, 2026</li>
+      <li>"Box Elder County commissioners face data center questions in their reelection bids," KSL.com, June 9, 2026</li>
+      <li>"Sacred, pristine: Data center foes redouble calls to protect area where facility would be built," KSL.com, July 14, 2026</li>
+      <li>Alan Williams campaign site, alanwilliamsforboxelder.wordpress.com</li>
+    </ol>
+  </details>
+
+</main>
+
+<footer>
+  The Weber County Hive &middot; Box Elder County candidate coverage, 2026 general election
+</footer>
+
+</body>
+</html>
