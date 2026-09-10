@@ -95,8 +95,17 @@
   .case-race{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;}
   .case-names{font-family:var(--display);font-size:20px;font-weight:700;color:var(--ink);margin-bottom:4px;}
   .case-verdict{font-family:var(--serif);font-style:italic;font-size:15.5px;color:var(--ink-soft);margin-bottom:10px;}
-  .case-tags{display:flex;gap:8px;flex-wrap:wrap;}
+  .case-tags{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
   .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;background:#efe6d8;color:var(--ink-soft);padding:3px 10px;border-radius:10px;}
+  .updated-badge{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;
+    background:#f4e3c4;color:#8a5a1f;padding:3px 10px;border-radius:10px;
+    display:inline-flex;align-items:center;gap:4px;
+  }
+  .case-dates{
+    font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.02em;
+    margin-top:8px;
+  }
 
   footer{margin-top:60px;padding-top:24px;border-top:2px solid var(--line-strong);}
   .tagline{font-family:var(--display);font-style:italic;font-size:16px;color:var(--burgundy);margin-bottom:10px;}
@@ -112,7 +121,7 @@
     <div>
       <div class="hd-kicker">The Weber County Hive</div>
       <div class="hd-title">2026 Candidates — Case Files</div>
-      <div class="hd-sub">Public records on every race we're tracking heading into November &mdash; federal races first, then state legislative races, then true county-government races, each grouped by county. We report what's documented. You decide.</div>
+      <div class="hd-sub">Public records on every race we're tracking heading into November — federal races first, then state races by county. We report what's documented. You decide.</div>
     </div>
   </div>
 </div>
@@ -126,8 +135,6 @@
   <div class="docket-filters">
     <button class="filter-btn active" data-scope="all">All Races</button>
     <button class="filter-btn" data-scope="Federal">Federal</button>
-    <button class="filter-btn" data-scope="State">State Legislative</button>
-    <button class="filter-btn" data-scope="County">County Government</button>
     <span class="filter-divider"></span>
     <div id="county-filter-buttons" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
     <input id="search" class="search-box" type="text" placeholder="Search by name or race&hellip;">
@@ -151,11 +158,11 @@
   const search = document.getElementById('search');
   const countyFilterBtns = document.getElementById('county-filter-buttons');
 
-  const COUNTY_ORDER = ["Statewide", "Box Elder", "Davis", "Salt Lake", "Wasatch", "Weber"];
+  const COUNTY_ORDER = ["Box Elder", "Davis", "Wasatch", "Weber"];
 
-  function presentCounties(list){
-    const localRaces = list.filter(c => c.level === "State" || c.level === "County");
-    const present = [...new Set(localRaces.map(c => c.county || "Other"))];
+  function stateCounties(list){
+    const stateRaces = list.filter(c => c.level === "State" || c.level === "County");
+    const present = [...new Set(stateRaces.map(c => c.county || "Other"))];
     const known = COUNTY_ORDER.filter(c => present.includes(c));
     const unknown = present.filter(c => !COUNTY_ORDER.includes(c)).sort();
     return [...known, ...unknown];
@@ -163,21 +170,20 @@
 
   const daysToElection = Math.ceil((new Date('2026-11-03') - new Date()) / 86400000);
   const federalCount = CANDIDATES.filter(c => c.level === "Federal").length;
-  const stateCount = CANDIDATES.filter(c => c.level === "State").length;
-  const countyLevelCount = CANDIDATES.filter(c => c.level === "County").length;
+  const stateCount = CANDIDATES.filter(c => c.level === "State" || c.level === "County").length;
   statStrip.innerHTML = `
     <div class="stat"><div class="stat-num">${CANDIDATES.length}</div><div class="stat-label">Races on file</div></div>
     <div class="stat"><div class="stat-num">${CANDIDATES.length * 2}+</div><div class="stat-label">Candidates covered</div></div>
-    <div class="stat"><div class="stat-num">${stateCount} / ${countyLevelCount} / ${federalCount}</div><div class="stat-label">State / County / Federal</div></div>
+    <div class="stat"><div class="stat-num">${stateCount} / ${federalCount}</div><div class="stat-label">State / Federal</div></div>
     <div class="stat"><div class="stat-num">${daysToElection}</div><div class="stat-label">Days to election</div></div>
   `;
 
   let activeScope = 'all';
 
   function buildCountyButtons(){
-    const counties = presentCounties(CANDIDATES);
+    const counties = stateCounties(CANDIDATES);
     countyFilterBtns.innerHTML = counties.map(county =>
-      `<button class="filter-btn" data-scope="${county}">${county === "Statewide" ? "Statewide" : county + " County"}</button>`
+      `<button class="filter-btn" data-scope="${county}">${county} County</button>`
     ).join('');
   }
 
@@ -196,6 +202,15 @@
     });
   });
 
+  // Dates: accepts 'YYYY-MM-DD' strings. Both fields are optional —
+  // cards render fine with neither, either, or both present.
+  function formatDate(iso){
+    if(!iso) return null;
+    const d = new Date(iso + 'T00:00:00');
+    if(isNaN(d)) return null;
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
   function renderCaseGrid(list){
     const grid = document.createElement('div');
     grid.className = 'case-grid';
@@ -203,6 +218,21 @@
       const a = document.createElement('a');
       a.className = 'case-card';
       a.href = c.href;
+
+      const posted = formatDate(c.datePosted);
+      const updated = formatDate(c.dateUpdated);
+      const wasUpdated = c.datePosted && c.dateUpdated && c.datePosted !== c.dateUpdated;
+
+      let datesHtml = '';
+      if(posted || updated){
+        const parts = [];
+        if(posted) parts.push(`Posted ${posted}`);
+        if(updated && wasUpdated) parts.push(`Updated ${updated}`);
+        datesHtml = `<div class="case-dates">${parts.join(' &middot; ')}</div>`;
+      }
+
+      const updatedBadge = wasUpdated ? `<span class="updated-badge">&#8635; Updated</span>` : '';
+
       a.innerHTML = `
         <div class="case-top">
           <span class="case-num">${c.caseNumber}</span>
@@ -210,46 +240,12 @@
         </div>
         <div class="case-names">${c.names}</div>
         <div class="case-verdict">${c.verdict}</div>
-        <div class="case-tags">${c.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+        <div class="case-tags">${c.tags.map(t => `<span class="tag">${t}</span>`).join('')}${updatedBadge}</div>
+        ${datesHtml}
       `;
       grid.appendChild(a);
     });
     return grid;
-  }
-
-  function renderCountyGroupedSection(list, level, headingLabel){
-    const levelList = list.filter(c => c.level === level);
-    const section = document.createElement('div');
-    section.className = 'level-section';
-    const heading = document.createElement('div');
-    heading.className = 'level-heading';
-    heading.innerHTML = `${headingLabel} <span class="level-count">(${levelList.length})</span>`;
-    section.appendChild(heading);
-
-    const counties = presentCounties(list.length === CANDIDATES.length ? CANDIDATES.filter(c => c.level === level) : levelList);
-    let renderedAny = false;
-    counties.forEach(county => {
-      const inCounty = levelList.filter(c => (c.county || "Other") === county);
-      if(inCounty.length === 0 && activeScope !== county) return;
-      renderedAny = true;
-      const countySection = document.createElement('div');
-      countySection.className = 'county-section';
-      const countyHeading = document.createElement('div');
-      countyHeading.className = 'county-heading';
-      const countyLabel = county === "Statewide" ? "Statewide" : `${county} County`;
-      countyHeading.innerHTML = `${countyLabel} <span class="county-count">(${inCounty.length} race${inCounty.length === 1 ? '' : 's'})</span>`;
-      countySection.appendChild(countyHeading);
-      if(inCounty.length === 0){
-        const empty = document.createElement('div');
-        empty.className = 'county-empty';
-        empty.textContent = 'Case files coming soon.';
-        countySection.appendChild(empty);
-      } else {
-        countySection.appendChild(renderCaseGrid(inCounty));
-      }
-      section.appendChild(countySection);
-    });
-    return { section, hasContent: levelList.length > 0 || renderedAny };
   }
 
   function renderGroups(list){
@@ -261,6 +257,8 @@
     }
 
     const federalList = list.filter(c => c.level === "Federal");
+    const stateList = list.filter(c => c.level === "State" || c.level === "County");
+
     if(federalList.length > 0 || activeScope === 'Federal'){
       const section = document.createElement('div');
       section.className = 'level-section';
@@ -279,14 +277,35 @@
       groupsEl.appendChild(section);
     }
 
-    if(activeScope !== 'Federal' && activeScope !== 'County'){
-      const { section } = renderCountyGroupedSection(list, "State", "State Legislative Races");
-      groupsEl.appendChild(section);
-    }
+    if(stateList.length > 0 || activeScope !== 'Federal'){
+      const stateSection = document.createElement('div');
+      stateSection.className = 'level-section';
+      const stateHeading = document.createElement('div');
+      stateHeading.className = 'level-heading';
+      stateHeading.innerHTML = `State &amp; County Races <span class="level-count">(${stateList.length})</span>`;
+      stateSection.appendChild(stateHeading);
 
-    if(activeScope !== 'Federal' && activeScope !== 'State'){
-      const { section } = renderCountyGroupedSection(list, "County", "County Government Races");
-      groupsEl.appendChild(section);
+      const counties = stateCounties(list.length === CANDIDATES.length ? CANDIDATES : list);
+      counties.forEach(county => {
+        const inCounty = stateList.filter(c => (c.county || "Other") === county);
+        if(inCounty.length === 0 && activeScope !== county) return;
+        const countySection = document.createElement('div');
+        countySection.className = 'county-section';
+        const countyHeading = document.createElement('div');
+        countyHeading.className = 'county-heading';
+        countyHeading.innerHTML = `${county} County <span class="county-count">(${inCounty.length} race${inCounty.length === 1 ? '' : 's'})</span>`;
+        countySection.appendChild(countyHeading);
+        if(inCounty.length === 0){
+          const empty = document.createElement('div');
+          empty.className = 'county-empty';
+          empty.textContent = 'Case files coming soon.';
+          countySection.appendChild(empty);
+        } else {
+          countySection.appendChild(renderCaseGrid(inCounty));
+        }
+        stateSection.appendChild(countySection);
+      });
+      groupsEl.appendChild(stateSection);
     }
   }
 
@@ -300,10 +319,6 @@
     );
     if(activeScope === 'Federal'){
       list = list.filter(c => c.level === 'Federal');
-    } else if(activeScope === 'State'){
-      list = list.filter(c => c.level === 'State');
-    } else if(activeScope === 'County'){
-      list = list.filter(c => c.level === 'County');
     } else if(activeScope !== 'all'){
       list = list.filter(c => (c.level === 'State' || c.level === 'County') && (c.county || 'Other') === activeScope);
     }
