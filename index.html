@@ -112,7 +112,7 @@
     <div>
       <div class="hd-kicker">The Weber County Hive</div>
       <div class="hd-title">2026 Candidates — Case Files</div>
-      <div class="hd-sub">Public records on every race we're tracking heading into November — federal races first, then state races by county. We report what's documented. You decide.</div>
+      <div class="hd-sub">Public records on every race we're tracking heading into November &mdash; federal races first, then state legislative races, then true county-government races, each grouped by county. We report what's documented. You decide.</div>
     </div>
   </div>
 </div>
@@ -126,6 +126,8 @@
   <div class="docket-filters">
     <button class="filter-btn active" data-scope="all">All Races</button>
     <button class="filter-btn" data-scope="Federal">Federal</button>
+    <button class="filter-btn" data-scope="State">State Legislative</button>
+    <button class="filter-btn" data-scope="County">County Government</button>
     <span class="filter-divider"></span>
     <div id="county-filter-buttons" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
     <input id="search" class="search-box" type="text" placeholder="Search by name or race&hellip;">
@@ -142,18 +144,18 @@
 
 </div>
 
-<script src="candidates-data.js?v=8"></script>
+<script src="candidates-data.js?v=9"></script>
 <script>
   const groupsEl = document.getElementById('level-groups');
   const statStrip = document.getElementById('stat-strip');
   const search = document.getElementById('search');
   const countyFilterBtns = document.getElementById('county-filter-buttons');
 
-  const COUNTY_ORDER = ["Box Elder", "Davis", "Wasatch", "Weber"];
+  const COUNTY_ORDER = ["Statewide", "Box Elder", "Davis", "Salt Lake", "Wasatch", "Weber"];
 
-  function stateCounties(list){
-    const stateRaces = list.filter(c => c.level === "State");
-    const present = [...new Set(stateRaces.map(c => c.county || "Other"))];
+  function presentCounties(list){
+    const localRaces = list.filter(c => c.level === "State" || c.level === "County");
+    const present = [...new Set(localRaces.map(c => c.county || "Other"))];
     const known = COUNTY_ORDER.filter(c => present.includes(c));
     const unknown = present.filter(c => !COUNTY_ORDER.includes(c)).sort();
     return [...known, ...unknown];
@@ -162,20 +164,20 @@
   const daysToElection = Math.ceil((new Date('2026-11-03') - new Date()) / 86400000);
   const federalCount = CANDIDATES.filter(c => c.level === "Federal").length;
   const stateCount = CANDIDATES.filter(c => c.level === "State").length;
-  const countyCountAll = stateCounties(CANDIDATES).length;
+  const countyLevelCount = CANDIDATES.filter(c => c.level === "County").length;
   statStrip.innerHTML = `
     <div class="stat"><div class="stat-num">${CANDIDATES.length}</div><div class="stat-label">Races on file</div></div>
     <div class="stat"><div class="stat-num">${CANDIDATES.length * 2}+</div><div class="stat-label">Candidates covered</div></div>
-    <div class="stat"><div class="stat-num">${stateCount} / ${federalCount}</div><div class="stat-label">State / Federal</div></div>
+    <div class="stat"><div class="stat-num">${stateCount} / ${countyLevelCount} / ${federalCount}</div><div class="stat-label">State / County / Federal</div></div>
     <div class="stat"><div class="stat-num">${daysToElection}</div><div class="stat-label">Days to election</div></div>
   `;
 
   let activeScope = 'all';
 
   function buildCountyButtons(){
-    const counties = stateCounties(CANDIDATES);
+    const counties = presentCounties(CANDIDATES);
     countyFilterBtns.innerHTML = counties.map(county =>
-      `<button class="filter-btn" data-scope="${county}">${county} County</button>`
+      `<button class="filter-btn" data-scope="${county}">${county === "Statewide" ? "Statewide" : county + " County"}</button>`
     ).join('');
   }
 
@@ -215,6 +217,41 @@
     return grid;
   }
 
+  function renderCountyGroupedSection(list, level, headingLabel){
+    const levelList = list.filter(c => c.level === level);
+    const section = document.createElement('div');
+    section.className = 'level-section';
+    const heading = document.createElement('div');
+    heading.className = 'level-heading';
+    heading.innerHTML = `${headingLabel} <span class="level-count">(${levelList.length})</span>`;
+    section.appendChild(heading);
+
+    const counties = presentCounties(list.length === CANDIDATES.length ? CANDIDATES.filter(c => c.level === level) : levelList);
+    let renderedAny = false;
+    counties.forEach(county => {
+      const inCounty = levelList.filter(c => (c.county || "Other") === county);
+      if(inCounty.length === 0 && activeScope !== county) return;
+      renderedAny = true;
+      const countySection = document.createElement('div');
+      countySection.className = 'county-section';
+      const countyHeading = document.createElement('div');
+      countyHeading.className = 'county-heading';
+      const countyLabel = county === "Statewide" ? "Statewide" : `${county} County`;
+      countyHeading.innerHTML = `${countyLabel} <span class="county-count">(${inCounty.length} race${inCounty.length === 1 ? '' : 's'})</span>`;
+      countySection.appendChild(countyHeading);
+      if(inCounty.length === 0){
+        const empty = document.createElement('div');
+        empty.className = 'county-empty';
+        empty.textContent = 'Case files coming soon.';
+        countySection.appendChild(empty);
+      } else {
+        countySection.appendChild(renderCaseGrid(inCounty));
+      }
+      section.appendChild(countySection);
+    });
+    return { section, hasContent: levelList.length > 0 || renderedAny };
+  }
+
   function renderGroups(list){
     groupsEl.innerHTML = '';
     const hasSearchTerm = search.value.trim().length > 0;
@@ -224,8 +261,6 @@
     }
 
     const federalList = list.filter(c => c.level === "Federal");
-    const stateList = list.filter(c => c.level === "State");
-
     if(federalList.length > 0 || activeScope === 'Federal'){
       const section = document.createElement('div');
       section.className = 'level-section';
@@ -244,35 +279,14 @@
       groupsEl.appendChild(section);
     }
 
-    if(stateList.length > 0 || activeScope !== 'Federal'){
-      const stateSection = document.createElement('div');
-      stateSection.className = 'level-section';
-      const stateHeading = document.createElement('div');
-      stateHeading.className = 'level-heading';
-      stateHeading.innerHTML = `State Races <span class="level-count">(${stateList.length})</span>`;
-      stateSection.appendChild(stateHeading);
+    if(activeScope !== 'Federal' && activeScope !== 'County'){
+      const { section } = renderCountyGroupedSection(list, "State", "State Legislative Races");
+      groupsEl.appendChild(section);
+    }
 
-      const counties = stateCounties(list.length === CANDIDATES.length ? CANDIDATES : list);
-      counties.forEach(county => {
-        const inCounty = stateList.filter(c => (c.county || "Other") === county);
-        if(inCounty.length === 0 && activeScope !== county) return;
-        const countySection = document.createElement('div');
-        countySection.className = 'county-section';
-        const countyHeading = document.createElement('div');
-        countyHeading.className = 'county-heading';
-        countyHeading.innerHTML = `${county} County <span class="county-count">(${inCounty.length} race${inCounty.length === 1 ? '' : 's'})</span>`;
-        countySection.appendChild(countyHeading);
-        if(inCounty.length === 0){
-          const empty = document.createElement('div');
-          empty.className = 'county-empty';
-          empty.textContent = 'Case files coming soon.';
-          countySection.appendChild(empty);
-        } else {
-          countySection.appendChild(renderCaseGrid(inCounty));
-        }
-        stateSection.appendChild(countySection);
-      });
-      groupsEl.appendChild(stateSection);
+    if(activeScope !== 'Federal' && activeScope !== 'State'){
+      const { section } = renderCountyGroupedSection(list, "County", "County Government Races");
+      groupsEl.appendChild(section);
     }
   }
 
@@ -286,8 +300,12 @@
     );
     if(activeScope === 'Federal'){
       list = list.filter(c => c.level === 'Federal');
+    } else if(activeScope === 'State'){
+      list = list.filter(c => c.level === 'State');
+    } else if(activeScope === 'County'){
+      list = list.filter(c => c.level === 'County');
     } else if(activeScope !== 'all'){
-      list = list.filter(c => c.level === 'State' && (c.county || 'Other') === activeScope);
+      list = list.filter(c => (c.level === 'State' || c.level === 'County') && (c.county || 'Other') === activeScope);
     }
     renderGroups(list);
   }
