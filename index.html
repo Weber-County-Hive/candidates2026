@@ -99,8 +99,9 @@
   .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;background:#efe6d8;color:var(--ink-soft);padding:3px 10px;border-radius:10px;}
   .updated-badge{
     font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;
-    background:#f4e3c4;color:#8a5a1f;padding:3px 10px;border-radius:10px;
+    background:#d4ecd8;color:#1e7a3b;padding:3px 10px;border-radius:10px;
     display:inline-flex;align-items:center;gap:4px;
+    border:1px solid #8fcf9e;
   }
   .case-dates{
     font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.02em;
@@ -219,19 +220,18 @@
       a.className = 'case-card';
       a.href = c.href;
 
-      const posted = formatDate(c.datePosted);
-      const updated = formatDate(c.dateUpdated);
-      const wasUpdated = c.datePosted && c.dateUpdated && c.datePosted !== c.dateUpdated;
+      const posted = formatDate(c.date);
+      const updated = formatDate(c.updated);
 
       let datesHtml = '';
       if(posted || updated){
         const parts = [];
         if(posted) parts.push(`Posted ${posted}`);
-        if(updated && wasUpdated) parts.push(`Updated ${updated}`);
+        if(updated) parts.push(`Updated ${updated}`);
         datesHtml = `<div class="case-dates">${parts.join(' &middot; ')}</div>`;
       }
 
-      const updatedBadge = wasUpdated ? `<span class="updated-badge">&#8635; Updated</span>` : '';
+      const updatedBadge = c.updated ? `<span class="updated-badge">&#10003; Updated</span>` : '';
 
       a.innerHTML = `
         <div class="case-top">
