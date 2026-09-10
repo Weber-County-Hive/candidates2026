@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HD-13: Craythorne vs. Anderson vs. De Mille | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-paper:#f4f0e6;
+    --color-paper-deep:#ece5d4;
+    --color-ink:#241a16;
+    --color-ink-soft:#5c534c;
+    --color-link:#c0572e;
+    --color-stat:#d9a441;
+    --color-burgundy-light:#5c1a2b;
+    --color-burgundy-deep:#3d0f1c;
+    --color-line:#d8cfbc;
+    --color-card:#fbf8f1;
+    --color-good:#4d7c5f;
+    --color-flag:#a5372a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--color-paper);
+    color:var(--color-ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    line-height:1.6;
+  }
+  h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif; font-weight:700; margin:0 0 .4em;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.06em;
+    color:var(--color-ink-soft);
+  }
+  a{color:var(--color-link);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header.band{
+    background:linear-gradient(135deg, var(--color-burgundy-light), var(--color-burgundy-deep));
+    color:#f4ece6;
+    padding:22px 0;
+  }
+  header.band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .brandmark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#f4ece6;text-decoration:none;}
+  nav.topnav a{
+    color:#f4ece6cc;
+    text-decoration:none;
+    margin-left:22px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.78rem;
+    letter-spacing:.03em;
+    border-bottom:1px solid transparent;
+  }
+  nav.topnav a:hover{border-bottom-color:#f4ece6cc;}
+
+  .hero{padding:56px 0 40px;border-bottom:1px solid var(--color-line);}
+  .hero .eyebrow{margin-bottom:14px;}
+  .hero h1{font-size:2.5rem;line-height:1.15;max-width:760px;}
+  .hero .dek{font-size:1.12rem;color:var(--color-ink-soft);max-width:640px;margin-top:14px;}
+  .hero-meta{
+    display:flex;
+    gap:28px;
+    margin-top:28px;
+    flex-wrap:wrap;
+  }
+  .hero-meta .stat-num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-stat);}
+  .hero-meta .stat-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);letter-spacing:.02em;}
+
+  section{padding:44px 0;border-bottom:1px solid var(--color-line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:1.6rem;margin-bottom:6px;}
+  section .section-dek{color:var(--color-ink-soft);max-width:640px;margin-bottom:26px;font-size:1rem;}
+
+  .record-card{
+    background:var(--color-card);
+    border:1px solid var(--color-line);
+    border-radius:2px;
+    padding:24px 26px;
+    margin-bottom:18px;
+  }
+  .record-card h3{font-size:1.15rem;margin-bottom:8px;}
+  .record-card p{margin:.6em 0;}
+  .record-card p:first-of-type{margin-top:0;}
+  .rc-tag{
+    display:inline-block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.68rem;
+    letter-spacing:.03em;
+    color:var(--color-link);
+    border:1px solid var(--color-link);
+    padding:3px 9px;
+    border-radius:20px;
+    margin:2px 6px 2px 0;
+    text-decoration:none;
+  }
+  .rc-flag{border-color:var(--color-flag);color:var(--color-flag);}
+  .rc-good{border-color:var(--color-good);color:var(--color-good);}
+
+  .quote-block{
+    border-left:3px solid var(--color-stat);
+    padding:4px 0 4px 18px;
+    font-style:italic;
+    color:var(--color-ink-soft);
+    margin:14px 0;
+  }
+
+  /* fund toggle + donut */
+  .fund-toggle{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap;}
+  .fund-toggle button{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.78rem;
+    background:none;
+    border:1px solid var(--color-ink-soft);
+    color:var(--color-ink);
+    padding:8px 16px;
+    border-radius:20px;
+    cursor:pointer;
+  }
+  .fund-toggle button.active{
+    background:var(--color-burgundy-light);
+    border-color:var(--color-burgundy-light);
+    color:#f4ece6;
+  }
+  .fund-panel{display:none;}
+  .fund-panel.active{display:block;}
+  .fund-row{display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;margin-bottom:20px;}
+  .fund-donut{
+    width:150px;height:150px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .fund-donut-center{
+    width:96px;height:96px;background:var(--color-paper);border-radius:50%;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+  }
+  .fund-donut-center .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.2rem;color:var(--color-ink);}
+  .fund-donut-center .lbl{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--color-ink-soft);}
+  .fund-donut-legend{list-style:none;padding:0;margin:8px 0 0;font-size:.92rem;}
+  .fund-donut-legend li{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0;}
+  .fund-bars{margin-top:6px;}
+  .fund-bar-row{margin-bottom:10px;}
+  .fund-bar-row .bar-label{display:flex;justify-content:space-between;font-size:.86rem;margin-bottom:4px;}
+  .fund-bar-track{background:var(--color-paper-deep);border-radius:3px;height:8px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);}
+
+  .entity-table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px;}
+  .entity-table th{
+    text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;
+    letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);
+    padding:8px 10px;
+  }
+  .entity-table td{padding:10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .status-pill{
+    font-family:'IBM Plex Mono',monospace;font-size:.65rem;padding:3px 8px;border-radius:12px;
+    white-space:nowrap;display:inline-block;
+  }
+  .status-confirmed{background:#e2ede4;color:var(--color-good);}
+  .status-flag{background:#f3dedb;color:var(--color-flag);}
+  .status-unresolved{background:#f4ecd9;color:#8a6d1f;}
+
+  .timeline{border-left:2px solid var(--color-line);padding-left:22px;margin-left:6px;}
+  .timeline-item{position:relative;margin-bottom:22px;}
+  .timeline-item::before{
+    content:"";position:absolute;left:-28px;top:5px;width:10px;height:10px;border-radius:50%;
+    background:var(--color-stat);
+  }
+  .timeline-item .t-date{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);}
+  .timeline-item h4{font-size:1rem;margin:.2em 0;}
+
+  .candidate-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media (max-width:640px){.candidate-grid{grid-template-columns:1fr;} .hero h1{font-size:1.9rem;} .fund-row{flex-direction:column;}}
+
+  footer{padding:40px 0 60px;text-align:center;color:var(--color-ink-soft);font-size:.85rem;}
+  footer a{color:var(--color-link);}
+</style>
+</head>
+<body>
+
+<header class="band">
+  <div class="wrap">
+    <a class="brandmark" href="index.html">Weber County Hive — Candidates 2026</a>
+    <nav class="topnav">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">HOUSE DISTRICT 13 — OPEN SEAT — GENERAL ELECTION NOV. 3, 2026</div>
+    <h1>Three Campaigns, Three Kinds of Money</h1>
+    <p class="dek">Rep. Karen Peterson is retiring from one of Utah's safest Republican seats. Erik Craythorne (R), Jeffrey Anderson (D), and Tony De Mille (Utah Forward Party) are running to replace her — and their campaign finance filings, business records, and city meeting minutes tell three very different stories.</p>
+    <div class="hero-meta">
+      <div><div class="stat-num">R+32.0</div><div class="stat-label">2024 PRESIDENTIAL BASELINE</div></div>
+      <div><div class="stat-num">$5,500</div><div class="stat-label">CRAYTHORNE RAISED</div></div>
+      <div><div class="stat-num">$3,363</div><div class="stat-label">ANDERSON RAISED</div></div>
+      <div><div class="stat-num">$630</div><div class="stat-label">DE MILLE, SELF-LOANED</div></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">THE MONEY</div>
+    <h2>Where Each Candidate's Dollars Come From</h2>
+    <p class="section-dek">Both party primaries went uncontested. Below is each candidate's full 2026 campaign finance picture, from their own disclosures.utah.gov filings.</p>
+
+    <div class="fund-toggle">
+      <button class="active" onclick="showFund('craythorne', this)">Craythorne (R)</button>
+      <button onclick="showFund('anderson', this)">Anderson (D)</button>
+      <button onclick="showFund('demille', this)">De Mille (UFP)</button>
+    </div>
+
+    <div class="fund-panel active" id="fund-craythorne">
+      <div class="fund-row">
+        <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 68%, var(--color-stat) 68% 77%, var(--color-ink-soft) 77% 100%);">
+          <div class="fund-donut-center"><div class="num">$5,500</div><div class="lbl">RAISED</div></div>
+        </div>
+        <ul class="fund-donut-legend">
+          <li><span class="swatch" style="background:var(--color-link)"></span> Organizational (Doers Network, Utah Bankers Assoc.) — 68%</li>
+          <li><span class="swatch" style="background:var(--color-stat)"></span> Individual developer donors (Ray Ward, ASG) — 23%</li>
+          <li><span class="swatch" style="background:var(--color-ink-soft)"></span> Party — 9%</li>
+        </ul>
+      </div>
+      <div class="fund-bars">
+        <div class="fund-bar-row"><div class="bar-label"><span>The Doers Network</span><span>$3,750</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:68%"></div></div></div>
+        <div class="fund-bar-row"><div class="bar-label"><span>Ray Ward (real estate developer)</span><span>$1,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:18%"></div></div></div>
+        <div class="fund-bar-row"><div class="bar-label"><span>Utah Bankers Association</span><span>$500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:9%"></div></div></div>
+        <div class="fund-bar-row"><div class="bar-label"><span>ASG (Adam Gardiner / Doers Network board)</span><span>$250</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:5%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="fund-panel" id="fund-anderson">
+      <div class="fund-row">
+        <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 63%, var(--color-stat) 63% 78%, var(--color-ink-soft) 78% 100%);">
+          <div class="fund-donut-center"><div class="num">$3,363</div><div class="lbl">RAISED</div></div>
+        </div>
+        <ul class="fund-donut-legend">
+          <li><span class="swatch" style="background:var(--color-link)"></span> Individual small-dollar donors — 63%</li>
+          <li><span class="swatch" style="background:var(--color-stat)"></span> Party / club support — 15%</li>
+          <li><span class="swatch" style="background:var(--color-ink-soft)"></span> Self-funded — 15% (out-of-state: 14%)</li>
+        </ul>
+      </div>
+      <div class="fund-bars">
+        <div class="fund-bar-row"><div class="bar-label"><span>Individual donors (mostly $10–$100)</span><span>~$2,120</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:63%"></div></div></div>
+        <div class="fund-bar-row"><div class="bar-label"><span>Self-funded</span><span>$493.86</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:15%"></div></div></div>
+        <div class="fund-bar-row"><div class="bar-label"><span>Utah Democratic Party + Davis Co. Dems + Women's Dem Club</span><span>$770</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:23%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="fund-panel" id="fund-demille">
+      <div class="fund-row">
+        <div class="fund-donut" style="background:conic-gradient(var(--color-ink-soft) 0% 100%);">
+          <div class="fund-donut-center"><div class="num">$630</div><div class="lbl">RAISED</div></div>
+        </div>
+        <ul class="fund-donut-legend">
+          <li><span class="swatch" style="background:var(--color-ink-soft)"></span> Personal loans from the candidate — 100%</li>
+        </ul>
+      </div>
+      <p style="color:var(--color-ink-soft);font-size:.92rem;">Every one of De Mille's seven contributions is a personal loan to his own campaign. No PAC, party, or outside individual donor appears anywhere in his filing.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">THE H.B. 33 MONEY TRAIL</div>
+    <h2>Same Day, Three Filings, One Pattern</h2>
+    <p class="section-dek">Confirmed from all three parties' own campaign finance disclosures — not a tip, not a claim, but three independent primary sources agreeing on a single date.</p>
+    <div class="record-card">
+      <h3>February 12, 2026</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="t-date">CRAYTHORNE'S OWN FILING</div>
+          <h4>Received $3,750 from The Doers Network</h4>
+        </div>
+        <div class="timeline-item">
+          <div class="t-date">REP. JORDAN TEUSCHER'S OWN FILING</div>
+          <h4>Received $2,000 from The Doers Network — same day</h4>
+        </div>
+        <div class="timeline-item">
+          <div class="t-date">SEN. EVAN VICKERS' OWN FILING</div>
+          <h4>Paid $4,518.44 to Election Hive LLC — same day</h4>
+        </div>
+      </div>
+      <p>Teuscher sponsored H.B. 33 (Political Signs Amendments) in the House; Vickers carried it in the Senate. Craythorne was not a sitting legislator when the bill passed and had no vote on it — the connection is to the funding network around the bill's sponsors, not to his own legislative record, which doesn't exist yet.</p>
+      <span class="rc-tag">Cross-reference: H.B. 33 Political Signs Amendments</span>
+      <span class="rc-tag">Cross-reference: Election Hive LLC</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">THE BUSINESS PARTNERSHIP</div>
+    <h2>A Long-Running Real Estate Partner: Speaker Mike Schultz</h2>
+    <p class="section-dek">Two LLCs, formed nearly a decade apart, with the identical three-party ownership structure.</p>
+
+    <div class="record-card">
+      <h3>Willow Tree, LLC <span class="status-pill status-confirmed">CONFIRMED — HIS</span></h3>
+      <p>Formed October 2015, administratively dissolved January 2022. Registered agent: Erik Craythorne, individually. Members: Craythorne Development, Inc.; Ed Green Construction, Inc.; and <strong>Mike Schultz, Inc.</strong> — with Schultz also listed personally as Manager.</p>
+    </div>
+
+    <div class="record-card">
+      <h3>Whitesides Place, LLC <span class="status-pill status-confirmed">CONFIRMED — HIS</span></h3>
+      <p>Formed February 2024 — the identical three-party partnership, reconstituted about three months after Schultz became House Speaker (November 2023). This entity is one of the eight Craythorne discloses on his own conflict-of-interest form.</p>
+      <p>The actual project behind this LLC: a 43-lot single-family subdivision at approximately 2600 West 300 North in West Point. The city approved its rezone and development agreement on June 20, 2023.</p>
+      <span class="rc-tag rc-flag">Timing: dissolved before Speakership, re-formed after</span>
+    </div>
+
+    <div class="quote-block">Willow Tree dissolved in January 2022, well before Schultz became Speaker. The same three-party partnership was re-formed as Whitesides Place roughly three months after he took the gavel. That could read as an established partnership simply continuing — or as one worth reviving once the connection's value changed. The public record supports either reading; it doesn't settle which.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">HIS OWN CITY</div>
+    <h2>A Sitting Mayor's Company, Before the Council He Led</h2>
+    <p class="section-dek">Craythorne served as West Point Mayor for 13 years. His family's development company had active land-use business before that city across multiple years — with a mixed record on disclosure.</p>
+
+    <div class="record-card">
+      <h3>December 21, 2021 <span class="status-pill status-confirmed">PROPERLY DISCLOSED</span></h3>
+      <p>West Point City Council considered removing the Craythorne Homestead Subdivision Phase 1 from its one-year warranty — his final meeting as Mayor. The minutes record it plainly:</p>
+      <div class="quote-block">"Mayor Craythorne disclosed that he is involved with the Craythorn Homestead project and recused himself from the discussion. Mayor Pro Tem Petersen presided over the meeting for this item."</div>
+      <p>He identified the conflict himself and stepped aside. This is the process working as intended.</p>
+    </div>
+
+    <div class="record-card">
+      <h3>2019 — Two Craythorne-Entity Items, Same Cycle</h3>
+      <p>A March 2019 West Point meeting document lists both "Discussion Regarding the Murray PRUD Overlay Zone" and, separately, "PRUD Overlay Zone – Craythorne Const." — two distinct family development matters before the city in the same period, during his mayoral tenure. Whether these carried the same disclosure and recusal as the 2021 item has not been independently checked.</p>
+    </div>
+
+    <div class="record-card">
+      <h3>2023–2024 — Continuing After Office</h3>
+      <p>The city approved the Whitesides Place rezone and development agreement in June 2023. In May 2024, Craythorn Homestead, LLC applied to rezone 20.85 acres from R-2 to R-4 — nearly tripling allowed density — at a property the city had already granted a general plan amendment for in December 2023. Both came after he'd left office.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">THE DISCLOSURE FORM</div>
+    <h2>What's On It, What Isn't</h2>
+    <p class="section-dek">Craythorne's conflict-of-interest disclosure lists eight business entities and one board seat. State corporate registry records were checked against every one, plus several more not listed, to establish who actually controls what.</p>
+
+    <table class="entity-table">
+      <tr><th>Entity</th><th>Status</th><th>Note</th></tr>
+      <tr><td>Craythorne Inc.</td><td><span class="status-pill status-confirmed">His, disclosed</span></td><td>President — matches his own home address exactly</td></tr>
+      <tr><td>Craythorne Construction Co., Inc. (1979)</td><td><span class="status-pill status-confirmed">His</span></td><td>Vice President — separate address from his father, President Richard D. Craythorne</td></tr>
+      <tr><td>Craythorne Commercial / Tin Cup, LLC</td><td><span class="status-pill status-confirmed">Likely his</span></td><td>Sole member "Erik R. Craythorne" — matches his confirmed middle name pattern</td></tr>
+      <tr><td>Sevier Canyon Properties, LLC</td><td><span class="status-pill status-unresolved">Nuance</span></td><td>COI form says "manager/partner" — state's own record lists his father as sole Member</td></tr>
+      <tr><td>Craythorne Investment, LLC</td><td><span class="status-pill status-flag">Not his</span></td><td>Registered agent is Richard Craythorne — his father</td></tr>
+      <tr><td>Bennett Legacy Farms HOA</td><td><span class="status-pill status-flag">Undisclosed</span></td><td>President &amp; Trustee, full name on filing — not on his COI form</td></tr>
+    </table>
+
+    <div class="record-card" style="margin-top:20px;">
+      <h3>Bennett Legacy Farms — Not an Abstract Board Seat</h3>
+      <p>Craythorne's own company markets an active West Point neighborhood, "Bennett Farms," off 4000 West — almost certainly the same development as Bennett Legacy Farms, where state filings show him as President and Trustee under his full name, Erik Richard Craythorne. That role does not appear on his conflict-of-interest form, which lists only his Sportsmen for Fish &amp; Wildlife board seat. His wife, Jil, is also a Trustee; his father, Richard D. Craythorne, is a separate Officer.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">THE OTHER TWO CANDIDATES</div>
+    <h2>Anderson and De Mille</h2>
+    <div class="candidate-grid">
+      <div class="record-card">
+        <h3>Jeffrey Anderson (D)</h3>
+        <p>Retired. His only disclosed business is Tidy Time Rentals LLC, an appliance rental company he co-owns with his wife, Donna Faye Anderson. No board or leadership positions disclosed. His campaign ran almost entirely on small individual checks, most under $100.</p>
+      </div>
+      <div class="record-card">
+        <h3>Tony De Mille (Utah Forward Party)</h3>
+        <p>Realtor, owner of Big Tony Realty LLC. Previously a warehouse and transportation manager at Hale Center Theater. His campaign has taken in no outside money at all — every dollar is a personal loan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">THE RACE</div>
+    <h2>District Context</h2>
+    <p>HD-13 covers Clearfield, Clinton, and West Point — R+32.0 on the 2024 presidential baseline, one of the state's safest Republican seats. Karen Peterson won her two full elections 61.4% and 71.9% before retiring. Both party primaries this year were uncontested; a fourth Republican candidate, Roxayn Elmer, filed but reported zero campaign finance activity.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Compiled from itemized Utah campaign-finance disclosures (disclosures.utah.gov), candidates' own sworn conflict-of-interest forms, Utah corporate registry records, and West Point City's own public meeting minutes.<br>
+    <a href="index.html">&larr; Back to the Candidates 2026 docket</a>
+  </div>
+</footer>
+
+<script>
+function showFund(id, btn){
+  document.querySelectorAll('.fund-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.fund-toggle button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('fund-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>
