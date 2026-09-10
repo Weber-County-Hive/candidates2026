@@ -9,7 +9,9 @@ const CANDIDATES = [
     verdict: "Two LLCs and a Sitting Speaker",
     tags: ["Speaker Business Partner", "Disclosure Gap", "Three-Way Money Contrast"],
     stamp: "Active",
-    href: "hd13-craythorne-anderson.html"
+    href: "hd13-craythorne-anderson.html",
+    datePosted: "2026-09-10",
+    dateUpdated: "2026-09-10"
   },
   {
     id: "hd42-okerlund-williams",
