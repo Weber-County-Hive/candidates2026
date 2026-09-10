@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doers Network: The Endorsement List | The Weber County Hive</title>
+<style>
+  :root{
+    --cream:#f4f0e6;
+    --ink:#1f1b16;
+    --ink-soft:#5a5248;
+    --navy:#123449;
+    --navy-deep:#0b2230;
+    --rust:#c0572e;
+    --amber:#d9a441;
+    --line:#ddd5c3;
+    --card:#fffdf8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Source Serif 4", Georgia, serif;
+    line-height:1.6;
+  }
+  h1,h2,h3{font-family:"Playfair Display", Georgia, serif; font-weight:700; margin:0 0 .4em;}
+  .eyebrow, .mono{font-family:"IBM Plex Mono", monospace; letter-spacing:.04em;}
+  a{color:var(--rust);}
+  .band{background:linear-gradient(160deg, var(--navy), var(--navy-deep)); color:#f4f0e6; padding:2.4rem 1.5rem 2rem;}
+  .band-inner{max-width:880px; margin:0 auto;}
+  .eyebrow{color:var(--amber); font-size:.8rem; text-transform:uppercase; margin-bottom:.6rem;}
+  .band h1{font-size:2rem; max-width:720px;}
+  .meta-row{display:flex; flex-wrap:wrap; gap:1.2rem; margin-top:1rem; font-size:.85rem; color:#cfd8de;}
+  .wrap{max-width:880px; margin:0 auto; padding:2rem 1.5rem 4rem;}
+  .jump{display:flex; flex-wrap:wrap; gap:.5rem; margin:1.5rem 0 2rem;}
+  .jump a{font-family:"IBM Plex Mono", monospace; font-size:.75rem; text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:.35rem .8rem; color:var(--ink-soft);}
+  .jump a:hover{border-color:var(--rust); color:var(--rust);}
+  .box{background:var(--card); border:1px solid var(--line); border-radius:6px; padding:1.2rem 1.4rem; margin:1.2rem 0;}
+  .box.new-here{border-left:4px solid var(--amber);}
+  .callout-finding{border-left:4px solid var(--rust);}
+  .callout-note{border-left:4px solid var(--ink-soft);}
+  .stat-strip{display:flex; flex-wrap:wrap; gap:1rem; margin:1.5rem 0;}
+  .stat-cell{flex:1 1 140px; background:var(--card); border:1px solid var(--line); border-radius:6px; padding:1rem; text-align:center;}
+  .stat-cell .num{font-family:"IBM Plex Mono", monospace; font-size:1.5rem; color:var(--rust); font-weight:700;}
+  .stat-cell .label{font-size:.75rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.03em;}
+  table{width:100%; border-collapse:collapse; margin:1rem 0; font-size:.92rem;}
+  th,td{text-align:left; padding:.5rem .6rem; border-bottom:1px solid var(--line); vertical-align:top;}
+  th{font-family:"IBM Plex Mono", monospace; font-size:.72rem; text-transform:uppercase; color:var(--ink-soft); letter-spacing:.03em;}
+  tr.tracked td{background:rgba(217,164,65,.10);}
+  .star{color:var(--rust); font-weight:700;}
+  .section-num{font-family:"IBM Plex Mono", monospace; color:var(--amber); font-size:.8rem; margin-bottom:.2rem; display:block;}
+  details{margin:.6rem 0; border:1px solid var(--line); border-radius:6px; padding:.6rem 1rem; background:var(--card);}
+  summary{cursor:pointer; font-family:"IBM Plex Mono", monospace; font-size:.8rem; color:var(--navy);}
+  ul{padding-left:1.2rem;}
+  li{margin-bottom:.35rem;}
+  .tag{display:inline-block; font-family:"IBM Plex Mono", monospace; font-size:.68rem; background:var(--navy); color:#fff; border-radius:3px; padding:.1rem .4rem; margin-left:.3rem;}
+  tr:target{background:rgba(192,87,46,.15);}
+  tr[id]{scroll-margin-top:1.5rem;}
+  footer{border-top:1px solid var(--line); margin-top:3rem; padding-top:1.5rem; font-size:.8rem; color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<div class="band">
+  <div class="band-inner">
+    <div class="eyebrow">The Weber County Hive &middot; PAC / Endorsement Network</div>
+    <h1>Doers Network: The Endorsement List</h1>
+    <p style="max-width:640px; color:#dce3e7;">A Utah political network that says it identifies, endorses, and supports "principled candidates." Its own site lists 34 endorsements for 2026. Its own campaign-finance filings show a wider, and not identical, list of who it has actually paid.</p>
+    <div class="meta-row">
+      <span class="mono">2026 election cycle</span>
+      <span class="mono">Sources: doersnetwork.org, disclosures.utah.gov, Utah Division of Corporations</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="jump">
+    <a href="#new-here">New Here?</a>
+    <a href="#structure">Entity Structure</a>
+    <a href="#board">Who Runs It</a>
+    <a href="#endorsed">The Endorsement List</a>
+    <a href="#funded">Who It Paid</a>
+    <a href="#gap">Endorsed vs. Funded</a>
+    <a href="#networks">Networks</a>
+    <a href="#questions">Questions Worth Asking</a>
+    <a href="#sources">Sources</a>
+  </div>
+
+  <div class="box new-here" id="new-here">
+    <strong>New here?</strong> The Doers Network is a Utah political organization that publicly endorses candidates it calls "Doers." Separately, its campaign committees have made direct dollar contributions to dozens of Utah candidates in 2026. This page lays both lists side by side, along with who actually runs the organization &mdash; including one board member whose spouse is a sitting state senator who received the network's money.
+  </div>
+
+  <div class="stat-strip">
+    <div class="stat-cell"><div class="num">34</div><div class="label">Publicly endorsed candidates</div></div>
+    <div class="stat-cell"><div class="num">32+</div><div class="label">Candidates/committees given money</div></div>
+    <div class="stat-cell"><div class="num">~$77.8K</div><div class="label">Documented 2026 contributions</div></div>
+    <div class="stat-cell"><div class="num">3</div><div class="label">Distinct legal entities identified</div></div>
+    <div class="stat-cell"><div class="num">22</div><div class="label">Board members across 3 county boards</div></div>
+  </div>
+
+  <h2 id="structure"><span class="section-num">01</span>Entity Structure</h2>
+  <p>At least three separate legal entities carry the Doers Network name, and their paperwork doesn't line up neatly with the money.</p>
+  <ol>
+    <li><strong>The original giving vehicle</strong> that made roughly $70,000 in 2026 candidate contributions (below) &mdash; the exact entity/EIN behind these earliest filings is still unconfirmed.</li>
+    <li><strong>Utah Doers Network</strong>, a 501(c)(4), incorporated July 16, 2026 &mdash; after most of that $70,000 had already gone out the door. Its incorporator, Matthew T. Sanderson, is a nationally known campaign-finance attorney (Caplin &amp; Drysdale) who has also incorporated All In For Utah Foundation and All In For Utah PAC, entities already tied to a separate Cox-orbit money network documented elsewhere on this site.</li>
+    <li><strong>Utah Doers PAC</strong>, a registered Utah PAC created July 20, 2026, four days after the 501(c)(4). Its treasurer is a CPA whose phone number matches a separate "Doers Network Inc." filing that reported one independent expenditure &mdash; for Jake Hunsaker's campaign.</li>
+  </ol>
+  <div class="box callout-note">Which exact entity funded the earliest contributions is an open question, not a settled conclusion &mdash; presented here as a timeline gap in the paperwork, not an allegation about intent.</div>
+
+  <h2 id="board"><span class="section-num">02</span>Who Runs It</h2>
+  <p>The Doers Network organizes its board by county. Utah County, Salt Lake County, and Davis County each have their own regional board; nearly every seat across all three is held by a current or former elected official, party officer, or professional in government relations/lobbying &mdash; not a cross-section of community volunteers.</p>
+  <div class="box callout-finding">
+    <strong>The single most important fact on this page:</strong> the Utah County board's Chair is <strong>Nicki Brammer</strong> &mdash; spouse of Sen. Brady Brammer, who personally received $2,000 from the Doers Network on 4/27/26. This isn't an arms-length donor relationship; his own household sits on the organization's leadership.
+  </div>
+
+  <details open>
+    <summary><strong>Utah County Board</strong> &mdash; 8 members</summary>
+    <table>
+      <thead><tr><th>Name</th><th>Background</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Nicki Brammer</strong><br><span class="tag">Chair</span></td><td>Spouse of Sen. Brady Brammer (SD 21), who received $2,000 from Doers Network 4/27/26.</td></tr>
+        <tr><td>Wade Eyerly</td><td>National security veteran (White House, Pentagon, Iraq); founded an insurer and two airlines, including Surf Air; Romney National Finance Committee (both campaigns); worked for Gov. Huntsman.</td></tr>
+        <tr><td>Tobin Gardner</td><td>Co-Founder, Utah Blockchain Coalition. Married to Amelia Powers Gardner, sitting Utah County Commissioner (censured by county GOP 2025/26 over a residency dispute; not seeking reelection).</td></tr>
+        <tr><td>Melissa Clark</td><td>Sitting Eagle Mountain City Council member; CEO, Valley Crossroads Chamber; founded LaunchPad Business Resource Center.</td></tr>
+        <tr><td>Justin Jones</td><td>Senior Director, Herbert Institute for Public Policy at UVU; former Chief of Staff to two UVU Presidents; earlier roles at the Salt Lake Chamber, Rio Tinto, UTA, under Govs. Leavitt and Walker.</td></tr>
+        <tr><td>Crystal Muhlestein</td><td>Sitting Orem City Council member; Utah County GOP house district chair.</td></tr>
+        <tr><td>Amber Smith</td><td>Former Deputy Assistant to the Secretary of Defense (Pentagon); Army Kiowa Warrior pilot/Air Mission Commander, two combat tours (Iraq/Afghanistan); press secretary of Caucus Operations at the 2016 GOP Convention; author of two books; national TV defense commentator.</td></tr>
+        <tr><td>Jeremiah Jewkes</td><td>Chief Development/Strategy Officer, PCF Insurance; prior VP at HGGC, Principal at JH Advisors, Senior Associate at Audax Group (all private equity); Harvard Business School + BYU.</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:.85rem; color:var(--ink-soft);">6 of 8 Utah County members hold or have held elected or party office, or carry major national political/defense credentials.</p>
+  </details>
+
+  <details>
+    <summary><strong>Salt Lake County Board</strong> &mdash; 6 members</summary>
+    <table>
+      <thead><tr><th>Name</th><th>Background</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Laurel Price</strong><br><span class="tag">Chair</span></td><td>Senior Policy Advisor to Salt Lake County Commissioner Amelia Powers Gardner &mdash; a direct staff link to the Utah County board via Tobin Gardner, Powers Gardner's spouse.</td></tr>
+        <tr><td>Emilie De Azevedo Brown</td><td>Voice actress/producer (Signing Time!) &mdash; not a political background.</td></tr>
+        <tr><td>Laura Miller</td><td>Financial manager for three of Gov. Gary Herbert's gubernatorial campaigns; runs her own "common sense conservatives" PAC.</td></tr>
+        <tr><td>Adam Gardiner</td><td>Principal, ASG Consulting (lobbying firm); currently State Director for Sen. Mitt Romney; former Salt Lake County Recorder; youngest-ever Utah legislator (elected 2016); aide and campaign manager for Rob Bishop's 2010 congressional win.</td></tr>
+        <tr><td>Seth Sunderland</td><td>Former UBS investment banker ($35B+ cumulative M&amp;A, headed UBS Southeast Asia M&amp;A); now CEO of Spring Canyon Capital, itself a UCL PAC donor; BYU + NYU.</td></tr>
+        <tr><td>David Young</td><td>Mortgage lending/construction supply background; Salt Lake Board of Realtors/Home Builders committee member; GOP legislative district chair; Taylorsville Planning Commission; unsuccessful legislative candidate in 2018 and 2020.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <details>
+    <summary><strong>Davis County Board</strong> &mdash; 6 members</summary>
+    <table>
+      <thead><tr><th>Name</th><th>Background</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Jason Sanders</strong><br><span class="tag">Chair</span></td><td>IP attorney; physics BS/MS plus a law degree.</td></tr>
+        <tr><td>Steve Hiatt</td><td>Former Kaysville Mayor (8 years) and City Council member; past President, Utah League of Cities/Towns; owns Wasatch Capital Mortgage and a lobbying firm, The Hiatt Group. Predecessor Kaysville Mayor to Tamara Tran, a Doers-funded 2026 candidate &mdash; a second Kaysville-mayor pipeline into this network.</td></tr>
+        <tr><td>Cody Stewart</td><td>~30 years in politics/government relations; Congressional Legislative/Staff Director; Policy Director in the Governor's Office; now President of a lobbying firm, Integrated Government Services; Utah State + Johns Hopkins dual degrees.</td></tr>
+        <tr><td>Rachel George Terry</td><td>Current Division Director, Utah Division of Risk Management; prior Deputy Director, Utah League of Cities/Towns; 7 years civil-rights litigation at the Utah AG's Office; 8 years at Fabian VanCott; 2 years at USBE.</td></tr>
+        <tr><td>Beverly Ward</td><td>12-year campaign manager; Davis County GOP Elections Chair; current Bountiful City Planning Commissioner.</td></tr>
+        <tr><td>Rod Hall</td><td>Youth pastor for 25 years; Honorary Wing Commander, 388th Fighter Wing; Salt Lake City PD chaplain.</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:.85rem; color:var(--ink-soft);">5 of 6 Davis County members hold or have held elected or party office, or work professionally in government/lobbying &mdash; essentially a GOP/government-affairs professional network.</p>
+  </details>
+
+  <details>
+    <summary><strong>Staff</strong> &mdash; 2 people</summary>
+    <table>
+      <thead><tr><th>Name</th><th>Role / Background</th></tr></thead>
+      <tbody>
+        <tr><td>Zachary Wilson</td><td>State Director. Campaigns/grassroots/government-engagement/small-business/capital-markets background; BYU Finance.</td></tr>
+        <tr><td>Sydney Hendershot</td><td>Regional Director. Recent BYU Political Science graduate; interned for the Utah Senate President, Rep. Celeste Maloy, and the Utah GOP.</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:.85rem; color:var(--ink-soft);">Both staff directors have direct pipelines into Utah GOP legislative leadership predating their time at Doers Network.</p>
+  </details>
+
+
+  <h2 id="endorsed"><span class="section-num">03</span>The Endorsement List</h2>
+  <p>The Doers Network's own "All" page lists 34 endorsed candidates across federal, state, and county races, as of 9/10/26.</p>
+  <table>
+    <thead><tr><th>Name</th><th>Home city</th><th>Race</th><th>Status</th></tr></thead>
+    <tbody id="endorsed-table">
+      <!-- rows inserted below -->
+      <tr id="cand-mike-bird"><td>Mike Bird</td><td>Salt Lake City</td><td>Salt Lake County Council District 3</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 9/10/26</td></tr>
+      <tr id="cand-jr-bird"><td>JR Bird</td><td>Roosevelt</td><td>Utah House District 67</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 9/10/26</td></tr>
+      <tr><td>Lili Bitner</td><td>Fruit Heights</td><td>Utah House District 27</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Brady Brammer</td><td>Highland</td><td>Utah Senate District 21</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 8/15/26</td></tr>
+      <tr><td>Kristen S. Chevrier</td><td>Highland</td><td>Utah House District 54</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr id="cand-craythorne"><td>Erik R. Craythorne</td><td>West Point</td><td>Utah House District 13</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 9/10/26</td></tr>
+      <tr><td>Traci Crockett</td><td>Bluffdale</td><td>Salt Lake County Council District 5</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Kirk Cullimore</td><td>Draper</td><td>Utah State Senate District 19</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 8/31/26</td></tr>
+      <tr><td>Paul A. Cutler</td><td>Centerville</td><td>Utah House District 18</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Kent F. Davis</td><td>Cottonwood Heights</td><td>Salt Lake County District Attorney</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Ariel Defay</td><td>Kaysville</td><td>Utah House District 15</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 8/28/26</td></tr>
+      <tr><td>James Dunnigan</td><td>Taylorsville</td><td>Utah House District 36</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr id="cand-gricius"><td>Stephanie Gricius</td><td>Eagle Mountain</td><td>Utah House District 50</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 9/10/26</td></tr>
+      <tr><td>Katy Hall</td><td>South Ogden</td><td>Utah House District 11</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 8/24/26</td></tr>
+      <tr><td>Christopher Harding</td><td>South Jordan</td><td>Salt Lake County Auditor</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Jon Hawkins</td><td>Pleasant Grove</td><td>Utah House District 55</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Jake Hunsaker</td><td>Riverton</td><td>Utah House District 48</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Michelle Kaufusi</td><td>Provo</td><td>Utah County Commission Seat A</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Jill Koford</td><td>Ogden</td><td>Utah Senate District 5</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 8/11/26</td></tr>
+      <tr><td>Susan Lee</td><td>Kaysville</td><td>Davis County Commissioner</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 8/28/26</td></tr>
+      <tr><td>Erin Longacre</td><td>Draper</td><td>State School Board District 7</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Anthony Loubet</td><td>West Valley City</td><td>Utah State House District 27</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Matt MacPherson</td><td>West Valley City</td><td>Utah House District 26</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Shane Manwaring</td><td>Bluffdale</td><td>Salt Lake County Sheriff</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Chris McConnehey</td><td>West Jordan</td><td>Utah House District 38</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Brian McKenzie</td><td>Kaysville</td><td>Davis County Clerk</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Tracy Miller</td><td>South Jordan</td><td>Utah House District 45</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Clinton David Okerlund</td><td>Sandy</td><td>Utah House District 42</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 8/28/26</td></tr>
+      <tr><td>Dave Parke</td><td>West Valley City</td><td>Utah House District 30</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Cal Roberts</td><td>Draper</td><td>Utah House District 46</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 8/11/26</td></tr>
+      <tr id="cand-saxton"><td>Casey Saxton</td><td>Kearns</td><td>State House District 37</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Michael L Smith</td><td>Lindon</td><td>Utah County Sheriff</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Gina Tanner</td><td>Benjamin</td><td>Utah County Auditor</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+      <tr><td>Jordan Teuscher</td><td>South Jordan</td><td>Utah House District 44</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 9/10/26</td></tr>
+      <tr id="cand-tran"><td>Tamara Tran</td><td>Kaysville</td><td>Utah Senate District 6</td><td class="mono" style="color:var(--rust); font-size:.75rem;">&#10003; Data gathered &mdash; 9/10/26</td></tr>
+      <tr><td>Raymond Ward</td><td>Bountiful</td><td>Utah House District 19</td><td class="mono" style="color:var(--ink-soft); font-size:.75rem;">Data coming</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="funded"><span class="section-num">04</span>Who It Paid</h2>
+  <p>Utah campaign-finance disclosures show direct 2026 contributions from Doers Network entities to a wider list than the 34 public endorsements &mdash; roughly $77,800 documented across the year, entirely a 2026 phenomenon (no 2025 activity exists).</p>
+  <div class="box callout-finding">
+    <strong>Three findings, together, form a pattern:</strong> Senate President Stuart Adams ($500, filed as "J Adams," 7/1/26) and House Speaker Mike Schultz ($500, 9/2/26) both received Doers Network money &mdash; neither appears on the organization's public endorsement list, and neither is a contested-seat or open-seat race the way most listed endorsements are. Adams lost his own 2026 primary, but remains Senate President &mdash; still holding the gavel and the power that comes with it &mdash; until his term actually ends January 1; the payment went to a sitting, currently-powerful leader, not a departed one. On 9/9/26, Jordan Teuscher and Matt MacPherson each received a second payment of $1,500, this time filed from a new address &mdash; 421 Office Park Drive, Mountain Brook, AL 35223 &mdash; distinct from both the Wilmington, DE and Midvale, UT addresses used on every earlier filing.
+  </div>
+  <table>
+    <thead><tr><th>Recipient</th><th>Amount</th><th>Also publicly endorsed?</th></tr></thead>
+    <tbody>
+      <tr><td>Tamara Tran</td><td>$10,600 (2 payments)</td><td class="star">&#9733;</td></tr>
+      <tr><td>Jake Hunsaker</td><td>$7,000 (2 payments)</td><td class="star">&#9733;</td></tr>
+      <tr><td>Daniel McCay</td><td>$7,000 (2 payments)</td><td>&ndash;</td></tr>
+      <tr><td>Erik Craythorne</td><td>$3,750</td><td class="star">&#9733;</td></tr>
+      <tr><td>Dave Parke</td><td>$3,750</td><td class="star">&#9733;</td></tr>
+      <tr><td>David Benson</td><td>$3,000</td><td>&ndash;</td></tr>
+      <tr><td>JR Bird</td><td>$3,000</td><td class="star">&#9733;</td></tr>
+      <tr><td>Casey Saxton</td><td>$3,000</td><td class="star">&#9733;</td></tr>
+      <tr><td>Brady Brammer</td><td>$7,000 (2 payments, corrected 9/10/26 &mdash; a $5,000 second payment was found in an existing case file)</td><td class="star">&#9733;</td></tr>
+      <tr><td>Kirk Cullimore</td><td>$2,000</td><td class="star">&#9733;</td></tr>
+      <tr><td>Matt MacPherson</td><td>$3,500 (2 payments, incl. 9/9/26 from a new Mountain Brook, AL address)</td><td class="star">&#9733;</td></tr>
+      <tr><td>Jim Dunnigan</td><td>$2,000</td><td class="star">&#9733;</td></tr>
+      <tr><td>Jordan Teuscher</td><td>$3,500 (2 payments, incl. 9/9/26 from a new Mountain Brook, AL address)</td><td class="star">&#9733;</td></tr>
+      <tr><td>Jon Hawkins</td><td>$2,000</td><td class="star">&#9733;</td></tr>
+      <tr><td>Tracy Miller</td><td>$2,000</td><td class="star">&#9733;</td></tr>
+      <tr><td>Anthony Loubet</td><td>$2,000</td><td class="star">&#9733;</td></tr>
+      <tr><td>SAFE PAC (Utah Co. Sheriffs)</td><td>$2,000</td><td>&ndash;</td></tr>
+      <tr><td>Terry Hutchinson</td><td>$1,500</td><td>&ndash;</td></tr>
+      <tr><td>Trina Christensen</td><td>$1,500</td><td>&ndash;</td></tr>
+      <tr><td>Erin Longacre</td><td>$500</td><td class="star">&#9733;</td></tr>
+      <tr><td>Cal Roberts</td><td>$500</td><td class="star">&#9733;</td></tr>
+      <tr><td>Jill Koford</td><td>$500</td><td class="star">&#9733;</td></tr>
+      <tr><td>Ariel Defay</td><td>$500</td><td class="star">&#9733;</td></tr>
+      <tr><td>Paul Cutler</td><td>$500</td><td class="star">&#9733;</td></tr>
+      <tr><td>Stephanie Gricius</td><td>$500</td><td class="star">&#9733;</td></tr>
+      <tr><td>Raymond Ward</td><td>$500</td><td class="star">&#9733;</td></tr>
+      <tr><td>Darlene Pierucci</td><td>$500</td><td>&ndash;</td></tr>
+      <tr><td>Katrina Hall</td><td>$500</td><td>unclear &mdash; see note below</td></tr>
+      <tr><td>J Adams <span style="font-size:.75rem; color:var(--ink-soft);">(= Senate President Stuart Adams)</span></td><td>$500</td><td>&ndash;</td></tr>
+      <tr><td>Melissa Garff Ballard</td><td>$500</td><td>&ndash;</td></tr>
+      <tr><td>Steven Eliason</td><td>$500</td><td>&ndash;</td></tr>
+      <tr><td>Jason Thompson</td><td>$2,000</td><td>&ndash;</td></tr>
+      <tr><td>Salt Lake County Republican Party</td><td>$200</td><td>&ndash;</td></tr>
+      <tr><td>Kristen Chevrier</td><td>$500 (9/4/26)</td><td class="star">&#9733;</td></tr>
+      <tr><td>Mike Schultz (Speaker)</td><td>$500 (9/2/26)</td><td>&ndash;</td></tr>
+      <tr><td>Mike Bird</td><td>$1,500 (3/9/26, filed as "Utah Doers" &mdash; found via county disclosure, not state system)</td><td class="star">&#9733;</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:.85rem; color:var(--ink-soft);">"Katrina Hall" appears in the contribution filings; the endorsement page lists "Katy Hall" for HD 11. Whether these are the same person is not yet confirmed.</p>
+
+  <div class="box callout-finding">
+    <strong>New (9/10/26), from state corporate records: JR Bird (HD-67 endorsee) has an entity missing from his own conflict-of-interest disclosure.</strong> Titan Investments, LLC was formed November 18, 2025 and remains active, with Bird as both registered agent and manager. It does not appear on his COI form's list of five disclosed entities, despite falling squarely within the "current or preceding year" disclosure window. What the entity does isn't stated in any public filing found so far.
+  </div>
+
+  <div class="box callout-finding">
+    <strong>New (9/10/26): Tamara Tran's own full disclosures show something bigger than the Doers Network gift itself.</strong> All In For Utah PAC &mdash; a separate political committee &mdash; gave her $12,037.22, more than her Doers Network total. Both PACs' Utah filings for Tran use the exact same registered-agent suite address: 6905 S 1300 E #224. Two ostensibly separate political money vehicles, operating out of the same suite, both funding the same Senate candidate.
+  </div>
+
+  <h2 id="gap"><span class="section-num">05</span>Endorsed vs. Funded</h2>
+  <p>Overlaying both lists shows they aren't the same list. The clearest examples are Utah's two legislative leaders: Senate President Stuart Adams and House Speaker Mike Schultz both received Doers Network money in 2026, and neither appears on the organization's own public endorsement page. Several other sitting legislators &mdash; Melissa Garff Ballard, Steven Eliason, Jason Thompson, and Daniel McCay among them &mdash; are in the same position. Conversely, several endorsed candidates in county-level races (Salt Lake County Council, Salt Lake County Sheriff, Davis County Clerk, and others) have no matching contribution yet found in this year's disclosures. Money and formal endorsement, in other words, are two separate signals from the same organization, not two views of the same list.</p>
+
+  <h2 id="networks"><span class="section-num">06</span>Networks</h2>
+  <p>The Doers Network doesn't operate alone. Digging into individual candidates' own disclosures surfaces the same names, addresses, and vendors reaching into other, ostensibly separate parts of Utah's political-money apparatus.</p>
+
+  <h3>Shared incorporator and address</h3>
+  <p><strong>Matthew T. Sanderson</strong>, a Washington DC campaign-finance attorney, incorporated both Utah Doers Network and <strong>All In For Utah Foundation/PAC</strong> &mdash; a separate entity already tied to a Cox-orbit money network documented elsewhere. On Tamara Tran's own disclosures, All In For Utah PAC and Doers Network file from the <strong>exact same suite address</strong>, 6905 S 1300 E #224. Two "separate" political committees, one office.</p>
+
+  <h3>Board members giving personally, beyond the PAC's own checks</h3>
+  <ul>
+    <li><strong>Adam Gardiner</strong> (Salt Lake County board) gave Stephanie Gricius $250 via ASG Consulting and <a href="#cand-mike-bird">Mike Bird</a> $500 directly.</li>
+    <li><strong>Seth Sunderland</strong> (Salt Lake County board) gave <a href="#cand-jr-bird">JR Bird</a> $143.70 personally and <a href="#cand-mike-bird">Mike Bird</a> $500 via his firm, Spring Canyon Capital LLC.</li>
+  </ul>
+  <p>Two separate Salt Lake County board members, each funding two separate candidates individually &mdash; on top of whatever the Doers Network PAC itself gave.</p>
+
+  <h3>Candidate-to-candidate money</h3>
+  <p><a href="#cand-mike-bird">Mike Bird's</a> own disclosures show small contributions from <strong>Luke Searle</strong> (an HD-59 candidate tracked elsewhere on this site) and <a href="#cand-saxton">Casey Saxton</a> (a Doers-endorsed HD-37 candidate) &mdash; the endorsed roster isn't just receiving from the same PAC, some of them are funding each other directly.</p>
+
+  <h3>Shared vendors</h3>
+  <p><strong>Tactical Campaigns</strong> appears in both <a href="#cand-tran">Tamara Tran's</a> and <a href="#cand-gricius">Stephanie Gricius's</a> expenditures. <strong>Majority 51</strong> shows up as a vendor paid by both <a href="#cand-tran">Tran's</a> and <a href="#cand-craythorne">Erik Craythorne's</a> campaigns. Tran's campaign also paid $12,000 to a vendor called <strong>"Gathering"</strong> &mdash; not yet confirmed as the same Gathering Inc. tied to the 2025 signature-forgery prosecutions documented elsewhere on this site, but the name match is worth tracking.</p>
+
+  <h3>A succession pipeline</h3>
+  <p>Davis County board member <strong>Steve Hiatt</strong> is the former Kaysville Mayor who preceded <a href="#cand-tran">Tamara Tran</a> in that office &mdash; she's now the Doers-backed candidate for the state Senate seat Jerry Stevenson is vacating. Separately, Salt Lake County Council Chair <strong>Aimee Winder Newton</strong> gave <a href="#cand-mike-bird">Mike Bird</a> $6,000 personally, reading as a backing-the-successor relationship rather than a contested primary.</p>
+
+  <h2 id="questions"><span class="section-num">07</span>Questions Worth Asking</h2>
+  <ul>
+    <li>Which exact legal entity funded the earliest 2026 contributions, before either the 501(c)(4) or the PAC existed on paper?</li>
+    <li>Do the county-level endorsed candidates with no matching contribution reflect a later filing period not yet reported, or a purely endorsement-only relationship?</li>
+    <li>Why did some sitting legislators receive contributions without a matching public endorsement &mdash; a lag in updating the website, or a deliberate distinction between "funded" and "endorsed"?</li>
+    <li>Who or what is at 421 Office Park Drive, Mountain Brook, AL &mdash; the address used for the two most recent (9/9/26) payments?</li>
+    <li>What does Titan Investments, LLC (JR Bird's undisclosed entity) actually do?</li>
+    <li>Is "Gathering," Tamara Tran's $12,000 vendor, the same Gathering Inc. tied to the 2025 forgery prosecutions?</li>
+  </ul>
+
+  <footer id="sources">
+    <strong>Sources:</strong> doersnetwork.org ("All" endorsed-candidate page, pulled 9/10/26); Utah campaign-finance disclosures, disclosures.utah.gov; Utah Division of Corporations entity records; SAFE PAC's own disclosure filing.
+  </footer>
+
+</div>
+</body>
+</html>
