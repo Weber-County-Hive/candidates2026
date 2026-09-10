@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case File: Bird vs. Maynes — Salt Lake County Council District 3 | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #f4f0e6;
+    --color-card-bg: #fbf9f3;
+    --color-header-start: #5c1a2b;
+    --color-header-end: #3d0f1c;
+    --gradient-header: linear-gradient(135deg, var(--color-header-start), var(--color-header-end));
+    --color-link: #c0572e;
+    --color-stat: #d9a441;
+    --color-ink: #241c18;
+    --color-ink-soft: #5a4f47;
+    --color-border: #ddd3c2;
+    --font-headline: 'Playfair Display', serif;
+    --font-body: 'Source Serif 4', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  a { color: var(--color-link); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--color-link); outline-offset: 2px; }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- HEADER BAND ---------- */
+  .header-band {
+    background: var(--gradient-header);
+    color: #f4ead9;
+    padding: 14px 0;
+  }
+  .header-band .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .brand {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f4ead9;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand .dot { color: var(--color-stat); }
+  .header-band nav a {
+    color: #e8d9c4;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-left: 18px;
+  }
+  .header-band nav a:hover { color: var(--color-stat); }
+
+  /* ---------- CASE HERO ---------- */
+  .case-hero {
+    padding: 64px 0 40px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-link);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .kicker::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--color-link);
+    display: inline-block;
+  }
+  .case-hero h1 {
+    font-family: var(--font-headline);
+    font-weight: 900;
+    font-size: clamp(2.1rem, 5vw, 3.2rem);
+    line-height: 1.08;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+  .case-hero h1 .vs {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--color-ink-soft);
+    font-size: 0.55em;
+    display: block;
+    margin: 6px 0;
+  }
+  .dek {
+    font-size: 1.15rem;
+    color: var(--color-ink-soft);
+    max-width: 62ch;
+    margin: 0;
+  }
+  .case-meta {
+    display: flex;
+    gap: 28px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--color-ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .case-meta span b { color: var(--color-ink); font-weight: 600; }
+
+  /* ---------- VERDICT BOX ---------- */
+  .verdict-box {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-left: 5px solid var(--color-header-start);
+    border-radius: 3px;
+    padding: 26px 30px;
+    margin: 36px 0;
+  }
+  .verdict-box .label {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-header-start);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .verdict-box p {
+    margin: 0;
+    font-size: 1.08rem;
+  }
+  .verdict-box p + p { margin-top: 12px; }
+
+  /* ---------- STAT ROW ---------- */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--color-border);
+    border: 1px solid var(--color-border);
+    margin: 40px 0;
+  }
+  .stat {
+    background: var(--color-card-bg);
+    padding: 22px 20px;
+  }
+  .stat .num {
+    font-family: var(--font-headline);
+    font-weight: 900;
+    font-size: 1.9rem;
+    color: var(--color-stat);
+    line-height: 1;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .stat .lbl {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+    line-height: 1.4;
+  }
+
+  /* ---------- NARRATIVE SECTIONS ---------- */
+  section.sect { padding: 48px 0; border-bottom: 1px solid var(--color-border); }
+  section.sect:last-of-type { border-bottom: none; }
+  h2.sect-title {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin: 0 0 22px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  h2.sect-title .n {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-link);
+    font-weight: 500;
+  }
+  h3.sub-title {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 32px 0 14px;
+  }
+  .sect p { margin: 0 0 18px; }
+  .sect ul, .sect ol { margin: 0 0 18px; padding-left: 22px; }
+  .sect li { margin-bottom: 8px; }
+
+  /* ---------- RECORD CARD ---------- */
+  .record-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+  .record-card .rc-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .record-card .rc-name {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .record-card .rc-amount {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--color-stat);
+    font-weight: 600;
+  }
+  .record-card p { margin: 0; font-size: 0.98rem; }
+  .record-card .rc-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-header-start);
+    background: #efe2d3;
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-top: 12px;
+    margin-right: 6px;
+  }
+
+  /* ---------- FLAG-OPEN CALLOUT ---------- */
+  .flag-open {
+    background: #fbf3e6;
+    border: 1px dashed #c98a3f;
+    border-radius: 3px;
+    padding: 20px 24px;
+    margin: 22px 0;
+  }
+  .flag-open .fo-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a5661f;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .flag-open p { margin: 0; }
+  .flag-open p + p { margin-top: 10px; }
+
+  /* ---------- FUNDING COMPARISON (interactive) ---------- */
+  .fund-donut-wrap {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 20px 0 28px;
+    flex-wrap: wrap;
+  }
+  .fund-donut {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .fund-donut::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border-radius: 50%;
+    background: var(--color-bg);
+  }
+  .fund-donut-center {
+    position: absolute;
+    inset: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-ink-soft);
+    text-align: center;
+    line-height: 1.3;
+  }
+  .fund-donut-legend {
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+  .fund-donut-legend-row {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    margin-bottom: 8px;
+  }
+  .fund-donut-swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    position: relative;
+    top: 1px;
+  }
+  .fund-donut-legend-amt {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+  .fund-donut-legend-lbl {
+    color: var(--color-ink-soft);
+  }
+
+  .fund-toggle {
+    display: flex;
+    gap: 0;
+    margin-bottom: 24px;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    overflow: hidden;
+    width: fit-content;
+  }
+  .fund-toggle button {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    background: var(--color-card-bg);
+    color: var(--color-ink-soft);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .fund-toggle button.active {
+    background: var(--color-header-start);
+    color: #f4ead9;
+  }
+  .fund-toggle button:not(.active):hover { background: #ece3d3; }
+
+  .fund-panel { display: none; }
+  .fund-panel.active { display: block; }
+
+  .fund-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .fund-bar-label {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    width: 190px;
+    flex-shrink: 0;
+    color: var(--color-ink-soft);
+  }
+  .fund-bar-track {
+    flex: 1;
+    background: var(--color-border);
+    height: 22px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .fund-bar-fill {
+    height: 100%;
+    background: var(--color-stat);
+  }
+  .fund-panel[data-panel="calder"] .fund-bar-fill { background: var(--color-link); }
+  .fund-bar-amt {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    width: 80px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* ---------- SOURCING ---------- */
+  details.sourcing {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 18px 24px;
+    margin: 40px 0;
+  }
+  details.sourcing summary {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-header-start);
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  details.sourcing[open] summary { margin-bottom: 14px; }
+  details.sourcing ul { margin: 0; padding-left: 20px; font-size: 0.92rem; color: var(--color-ink-soft); }
+  details.sourcing li { margin-bottom: 8px; }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 40px 0 60px;
+    text-align: center;
+  }
+  footer .fine {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-ink-soft);
+    letter-spacing: 0.03em;
+  }
+  footer .star { color: var(--color-stat); }
+
+  @media (max-width: 600px) {
+    body { font-size: 16.5px; }
+    .fund-bar-label { width: 130px; font-size: 11px; }
+    .fund-bar-amt { width: 64px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+
+</head>
+<body>
+
+<div class="header-band">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="dot">&#11041;</span> The Weber County Hive</a>
+    <nav>
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="case-hero">
+    <div class="kicker">Salt Lake County Council &middot; District 3 &middot; General Election, Nov. 3, 2026</div>
+    <h1>Mike Bird <span class="vs">vs.</span> Luke Maynes</h1>
+    <p class="dek">A Doers Network-endorsed Republican backed personally by the seat's own sitting Council Chair, running against a Democratic LGBTQ challenger &mdash; funded more by his own family than by any PAC.</p>
+    <div class="case-meta">
+      <span>Republican nominee: <b>Mike Bird</b></span>
+      <span>Democratic nominee: <b>Luke Maynes</b></span>
+      <span>District: <b>Murray, Taylorsville, West Jordan, Midvale, West Valley</b></span>
+    </div>
+  </div>
+
+  <div class="verdict-box">
+    <span class="label">What the records show</span>
+    <p>Bird has raised $31,305 through his June 15, 2026 report &mdash; and more than half of it, $17,000, came from three people who share his last name. The seat's sitting Council Chair, Aimee Winder Newton, personally gave him $6,000, reading less like a contested primary and more like a hand-off. Doers Network gave him $1,500 through its Utah filing, and two separate Doers Network Salt Lake County board members &mdash; Adam Gardiner and Seth Sunderland &mdash; each gave him money personally on top of that.</p>
+    <p>His race isn't on the state's disclosure system at all; Salt Lake County runs its own portal, a distinction worth knowing before concluding any county-level Doers-endorsed candidate has "no matching contribution."</p>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat"><span class="num">$31.3K</span><span class="lbl">Total raised through 6/15/26</span></div>
+    <div class="stat"><span class="num">$17K</span><span class="lbl">From three Bird-surname donors</span></div>
+    <div class="stat"><span class="num">$6K</span><span class="lbl">From sitting Council Chair Winder Newton</span></div>
+    <div class="stat"><span class="num">$1.5K</span><span class="lbl">Doers Network, 3/9/26</span></div>
+  </div>
+
+  <!-- ============ SECTION: THE RACE ============ -->
+  <section class="sect" id="race">
+    <h2 class="sect-title"><span class="n">01</span> The race</h2>
+    <p>Mike Bird, a Director of Operations and Finance at University of Utah Health, announced his candidacy for Salt Lake County Council District 3 in January 2026 and won the seat's Republican convention nomination that April. He faces Democrat Luke Maynes in the November general election. District 3 covers Murray, Taylorsville, West Jordan, Midvale, and West Valley.</p>
+    <p>Bird previously ran for Utah House District 35 in 2024 and lost to Rosalba Dominguez.</p>
+    <p>The seat is currently held by Aimee Winder Newton, who chairs the County Council. Her own campaign contributions to Bird &mdash; detailed below &mdash; suggest she is stepping back and backing him as her successor rather than seeking re-election against him.</p>
+  </section>
+
+  <!-- ============ SECTION: FOLLOW THE MONEY ============ -->
+  <section class="sect" id="money">
+    <h2 class="sect-title"><span class="n">02</span> Follow the money</h2>
+    <p>Two reporting periods are in hand (through 3/31/26 and through 6/15/26), totaling $31,305 raised and $19,435.58 spent, leaving an $11,869.42 balance. Family money is by far the largest single category.</p>
+
+    <div class="fund-donut-wrap">
+      <div class="fund-donut" style="background: conic-gradient(var(--color-ink-soft) 0% 54%, var(--color-link) 54% 73%, var(--color-stat) 73% 87%, #8b7355 87% 95%, #b0a68f 95% 100%);">
+        <div class="fund-donut-center">BIRD</div>
+      </div>
+      <div class="fund-donut-legend">
+        <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-ink-soft);"></span><span class="fund-donut-legend-amt">54%</span> <span class="fund-donut-legend-lbl">Family (Kimberlee, Justin &amp; Nancy Bird)</span></div>
+        <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-link);"></span><span class="fund-donut-legend-amt">19%</span> <span class="fund-donut-legend-lbl">Aimee Winder Newton (sitting Chair)</span></div>
+        <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-stat);"></span><span class="fund-donut-legend-amt">14%</span> <span class="fund-donut-legend-lbl">Labor unions &amp; Realtors</span></div>
+        <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #8b7355;"></span><span class="fund-donut-legend-amt">8%</span> <span class="fund-donut-legend-lbl">Doers Network &amp; its board members</span></div>
+        <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #b0a68f;"></span><span class="fund-donut-legend-amt">5%</span> <span class="fund-donut-legend-lbl">Individual small-dollar donors</span></div>
+      </div>
+    </div>
+
+    <div class="fund-bar-row"><div class="fund-bar-label">Family</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 54%; background: var(--color-ink-soft);"></div></div><div class="fund-bar-amt">$17,000</div></div>
+    <div class="fund-bar-row"><div class="fund-bar-label">Winder Newton</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 19%;"></div></div><div class="fund-bar-amt">$6,000</div></div>
+    <div class="fund-bar-row"><div class="fund-bar-label">Unions &amp; Realtors</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 14%; background: #8b7355;"></div></div><div class="fund-bar-amt">$4,250</div></div>
+    <div class="fund-bar-row"><div class="fund-bar-label">Doers Network &amp; board</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 8%; background: #b0a68f;"></div></div><div class="fund-bar-amt">$2,500</div></div>
+    <div class="fund-bar-row"><div class="fund-bar-label">Small individual donors</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 5%;"></div></div><div class="fund-bar-amt">$1,555</div></div>
+
+    <h3 class="sub-title">Family giving: $17,000 from three people</h3>
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Kimberlee Bird</span><span class="rc-amount">$5,000</span></div>
+      <p>Given 12/16/2025, before the reporting period officially opened &mdash; the earliest contribution on file.</p>
+    </div>
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Justin Bird</span><span class="rc-amount">$6,000</span></div>
+      <p>Given 2/23/2026.</p>
+    </div>
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Nancy Bird</span><span class="rc-amount">$6,000</span></div>
+      <p>Given 6/12/2026, listed occupation "Health Care."</p>
+    </div>
+
+    <h3 class="sub-title">The Doers Network connection</h3>
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Doers Network</span><span class="rc-amount">$1,500</span></div>
+      <p>Filed as "Utah Doers," 3/9/26. Bird is also one of 34 candidates on the organization's own public endorsement roster.</p>
+      <span class="rc-tag">Cross-reference</span>
+    </div>
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Adam Gardiner</span><span class="rc-amount">$500</span></div>
+      <p>Personal contribution, 1/1/26. Gardiner is a Doers Network Salt Lake County board member, and separately gave Stephanie Gricius (HD 50) $250 through his firm, ASG Consulting.</p>
+      <span class="rc-tag">Cross-reference</span>
+    </div>
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Spring Canyon Capital LLC</span><span class="rc-amount">$500</span></div>
+      <p>Given 4/17/26. This is Seth Sunderland's company &mdash; Sunderland is also a Doers Network Salt Lake County board member, and separately gave JR Bird (HD 67) $143.70 personally.</p>
+      <span class="rc-tag">Cross-reference</span>
+    </div>
+
+    <h3 class="sub-title">Labor and business support</h3>
+    <p>IBEW PAC gave $1,000; Salt Lake Board of Realtors gave $1,500; Laborers' Local Union No. 295 gave $750 across two contributions; Operating Engineers Local 3 gave $1,000 &mdash; a notable labor-union presence for a Republican county candidate, alongside the more expected realtor and business PAC money.</p>
+  </section>
+
+  <!-- ============ SECTION: THE SUCCESSION QUESTION ============ -->
+  <section class="sect" id="succession">
+    <h2 class="sect-title"><span class="n">03</span> The succession question</h2>
+    <p>Aimee Winder Newton, the sitting Chair of the Salt Lake County Council representing District 3, personally gave Bird $1,000 on January 6, 2026 and a second $5,000 on January 30, 2026 &mdash; $6,000 total, and his single largest institutional-adjacent donor after his own family. A sitting officeholder funding a candidate for her own seat, at this scale, reads as a backing-the-successor relationship rather than a contested race, though her own 2026 filing status hasn't been independently confirmed.</p>
+    <div class="flag-open">
+      <span class="fo-label">Worth confirming</span>
+      <p>Whether Winder Newton has filed for re-election to this seat, is term-limited, or is stepping back voluntarily hasn't been independently verified beyond the pattern her own contributions suggest.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION: EQUALITY UTAH ============ -->
+  <section class="sect" id="equality-utah">
+    <h2 class="sect-title"><span class="n">04</span> The Equality Utah expenditure</h2>
+    <p>Equality Utah's endorsement of Bird &mdash; a Republican &mdash; over Democratic and LGBTQ candidate Luke Maynes drew public pushback from several sitting Democratic officials, including Sen. Nate Blouin and Salt Lake County Councilmembers Jiro Johnson and Natalie Pinkney. Separately, and around the same period, Bird's own campaign finance report shows a direct payment:</p>
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Equality Utah Foundation</span><span class="rc-amount">$1,000</span></div>
+      <p>Expenditure, 5/1/2026, purpose listed as "Sponsorship."</p>
+    </div>
+    <div class="flag-open">
+      <span class="fo-label">Stated as filed</span>
+      <p>The $1,000 sponsorship payment and the endorsement both fall in the same general window. The exact date of the endorsement itself, and whether it followed or preceded the payment, hasn't been independently confirmed against Equality Utah's own announcement.</p>
+    </div>
+  </section>
+
+  <details class="sourcing">
+    <summary>Sourcing &amp; methodology</summary>
+    <ul>
+      <li>Campaign finance figures: Salt Lake County Clerk's Financial Disclosure Reports, periods ending 3/31/26 and 6/15/26, filed by the candidate directly (disclosure.saltlakecounty.gov) &mdash; not the state system, which does not cover county races.</li>
+      <li>Doers Network cross-references: prior Weber County Hive reporting on the Doers Network's board roster, entity structure, and full 2026 recipient list.</li>
+      <li>Race and biographical background: Utah Policy, Ballotpedia, ABC4 News, and the candidate's own campaign site, electmikebird.com.</li>
+      <li>Equality Utah endorsement coverage: ABC4 News.</li>
+    </ul>
+  </details>
+
+</div>
+
+<footer>
+  <p class="fine">This is public record. We report it. You decide what it means. <span class="star">&#9733;</span></p>
+</footer>
+
+</body>
+</html>

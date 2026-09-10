@@ -110,7 +110,7 @@ const CANDIDATES = [
   {
     id: "davis-county-lee-millburn",
     race: "Davis County Commission — Seat A & Seat B",
-    level: "State",
+    level: "County",
     county: "Davis",
     caseNumber: "CASE 08",
     names: "Lee vs. Millburn",
@@ -122,7 +122,7 @@ const CANDIDATES = [
   {
     id: "wasatch-seat-a-kahler",
     race: "Wasatch County Council — Seat A (At-Large)",
-    level: "State",
+    level: "County",
     county: "Wasatch",
     caseNumber: "CASE 09",
     names: "Kahler vs. Saucier",
@@ -134,7 +134,7 @@ const CANDIDATES = [
   {
     id: "wasatch-seat-c-rowland",
     race: "Wasatch County Council — Seat C",
-    level: "State",
+    level: "County",
     county: "Wasatch",
     caseNumber: "CASE 10",
     names: "Erik Rowland — Unopposed",
@@ -158,7 +158,7 @@ const CANDIDATES = [
   {
     id: "box-elder-seat-a-smith-williams",
     race: "Box Elder County Commission — Seat A",
-    level: "State",
+    level: "County",
     county: "Box Elder",
     caseNumber: "CASE 12",
     names: "Smith vs. Williams",
@@ -166,5 +166,29 @@ const CANDIDATES = [
     tags: ["Campaign Finance Gap", "Business Network", "Voting Record"],
     stamp: "Active",
     href: "box-elder-seat-a-smith-williams.html"
+  },
+  {
+    id: "doers-network",
+    race: "Doers Network — Statewide Endorsement & PAC Network",
+    level: "State",
+    county: "Statewide",
+    caseNumber: "CASE 14",
+    names: "Doers Network",
+    verdict: "34 Endorsed. More Than That Funded.",
+    tags: ["PAC Network", "Board Overlap", "22-Member Board"],
+    stamp: "Active",
+    href: "doers-network.html"
+  },
+  {
+    id: "slco-d3-bird-maynes",
+    race: "Salt Lake County Council — District 3",
+    level: "County",
+    county: "Salt Lake",
+    caseNumber: "CASE 15",
+    names: "Bird vs. Maynes",
+    verdict: "Family Money and a Chair's Blessing",
+    tags: ["Doers Network", "Family Funding", "Succession"],
+    stamp: "Active",
+    href: "mike-bird-slco.html"
   }
 ];
