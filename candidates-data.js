@@ -1,5 +1,17 @@
 const CANDIDATES = [
   {
+    id: "hd13-craythorne-anderson",
+    race: "House District 13 — Clearfield / Clinton / West Point",
+    level: "State",
+    county: "Davis",
+    caseNumber: "CASE 13",
+    names: "Craythorne vs. Anderson vs. De Mille",
+    verdict: "Two LLCs and a Sitting Speaker",
+    tags: ["Speaker Business Partner", "Disclosure Gap", "Three-Way Money Contrast"],
+    stamp: "Active",
+    href: "hd13-craythorne-anderson.html"
+  },
+  {
     id: "hd42-okerlund-williams",
     race: "House District 42 — Sandy",
     level: "State",
