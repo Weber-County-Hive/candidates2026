@@ -376,6 +376,55 @@
     max-width: 480px;
     margin: 0 auto;
   }
+
+  /* ---------- RUBRIC TABLE ---------- */
+  .rubric-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.92rem;
+  }
+  .rubric-table th, .rubric-table td {
+    border: 1px solid var(--color-line);
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+  }
+  .rubric-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+    background: var(--color-card);
+  }
+  .rubric-table .grade-letter {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-link);
+  }
+  .rubric-overall {
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-left: 4px solid var(--color-burgundy-light);
+    padding: 18px 24px;
+    margin: 18px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .rubric-overall .grade-letter { font-size: 2rem; }
+
+  .cross-ref {
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-left: 4px solid var(--color-link);
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 0.98rem;
+  }
 </style>
 </head>
 <body>
@@ -392,11 +441,12 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="case-label">WASATCH COUNTY COUNCIL — SEAT C · UNOPPOSED · MIDA BOARD</div>
+    <div class="case-label">WASATCH COUNTY COUNCIL — SEAT C · WRITE-IN CHALLENGER · MIDA BOARD</div>
     <h1 class="headline">The Wrong Form, Four Times</h1>
-    <p class="dek">Erik Rowland is running unopposed for reelection. He also sits on a state authority that
-      requires a detailed annual disclosure — and on the authority's own website, his listed disclosure is a blank
-      county form that doesn't ask the questions the state form does.</p>
+    <p class="dek">Erik Rowland's reelection bid, previously uncontested, now faces a write-in challenger, Alex
+      Folmer. He also sits on a state authority that requires a detailed annual disclosure — and on the authority's
+      own website, his listed disclosure is a blank county form that doesn't ask the questions the state form
+      does.</p>
   </div>
 </div>
 
@@ -407,7 +457,7 @@
   <div class="diagram-cols">
     <div class="diagram-col">
       <h4>Elected &amp; Appointed Seats</h4>
-      <div class="diagram-item">County Council Seat C<span class="tag-mini">unopposed, 2026</span></div>
+      <div class="diagram-item">County Council Seat C<span class="tag-mini">write-in challenger filed Aug. 2026</span></div>
       <div class="diagram-item">MIDA Board<span class="tag-mini">appointed May 2026 — wrong form covers 4 seats</span></div>
       <div class="diagram-item">Wasatch Open Lands Board<span class="tag-mini">no disclosure form on file at all</span></div>
     </div>
@@ -433,17 +483,19 @@
 <main>
 
   <section class="block">
-    <p>Erik Rowland has served on the Wasatch County Council since January 2023 and is running unopposed for
-      reelection to Seat C in 2026. In May 2026, the governor appointed him to the Military Installation
+    <p>Erik Rowland has served on the Wasatch County Council since January 2023. His bid for reelection to Seat C
+      in 2026 was uncontested until the write-in filing period closed Aug. 28, 2026, when Alex Folmer entered the
+      race. In May 2026, the governor appointed him to the Military Installation
       Development Authority (MIDA) board — a state authority with its own project areas, its own public
       infrastructure districts, and its own statutory disclosure requirement for the people who sit on it.</p>
     <p>Utah Code requires MIDA board members to file a conflict-of-interest disclosure statement every January,
       publicly posted on MIDA's own website. Failing to do so can be a class B misdemeanor with a referral to the
       Attorney General. MIDA's board page links to every voting member's disclosure — and all but two of them,
       Rowland's and Froerer's, are genuine MIDA-branded statutory forms.</p>
-    <p>His county campaign has raised nothing and spent only the $265.66 filing fee — a no-fundraising, unopposed
-      race with no opponent to raise any of this. That's part of why it sits on the public record rather than in
-      the campaign conversation this fall.</p>
+    <p>His county campaign has raised nothing and spent only the $265.66 filing fee — a no-fundraising race run
+      for most of the year without an opponent to raise any of this. Folmer's own campaign finance record is not
+      yet available given her late entry. That's part of why this piece draws on public records rather than the
+      campaign conversation this fall.</p>
   </section>
 
   <section class="block">
@@ -692,9 +744,71 @@
   </section>
 
   <section class="block">
+    <h2 class="section-title">Rowland's report card</h2>
+    <p>This outlet grades documented patterns against five standing criteria, applied the same way across every
+      piece: Power, Transparency, Financial Accountability, Environmental Impact, and Community Impact. Graded here
+      against Rowland's documented disclosure record specifically — what he actually filed, set against what's
+      independently confirmed and absent from it.</p>
+    <table class="rubric-table">
+      <thead>
+        <tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Power</td>
+          <td><span class="grade-letter">D</span> Bad</td>
+          <td>Rowland holds a county council seat plus four MIDA-linked positions and a WOLB seat — real authority
+            over public infrastructure districts and open-space bond spending. A disclosure record this incomplete
+            removes the public's ability to check how that authority is being used.</td>
+        </tr>
+        <tr>
+          <td>Transparency</td>
+          <td><span class="grade-letter">F</span> Bad</td>
+          <td>A blanket "no conflict of interest to report" against eight independently confirmed entities and
+            positions, plus a ninth board (WOLB) with no disclosure filed at all. MIDA's own site uses the same
+            blank county form to cover four separate disclosure obligations.</td>
+        </tr>
+        <tr>
+          <td>Financial accountability</td>
+          <td><span class="grade-letter">D</span> Bad</td>
+          <td>Ownership or officer roles in four business entities — including a development LLC formed while
+            already a sitting councilmember — don't appear on the form. No filed disclosure exists to confirm
+            whether any conflict-review or recusal process was ever triggered around them.</td>
+        </tr>
+        <tr>
+          <td>Environmental impact</td>
+          <td><span class="grade-letter">C</span> Mixed</td>
+          <td>WOLB specifically screens open-space bond funding against a board member's own property interests.
+            Rowland's undisclosed development LLC sits against that exact screen, though no specific vote or
+            funding decision has been documented here as improperly influenced.</td>
+        </tr>
+        <tr>
+          <td>Community impact</td>
+          <td><span class="grade-letter">C</span> Mixed</td>
+          <td>The gap limits public visibility into decisions on tourism, school-district administration, and
+            land boards Rowland sits on, though no specific harmed party has been documented in this record.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rubric-overall">
+      <span class="grade-letter">D</span>
+      <span>Overall — averaged across the five criteria. The clearest, best-documented problem is transparency
+        itself: a blanket denial set against nine independently confirmed positions. The environmental and
+        community grades sit higher only because no specific vote or funding decision has been documented here as
+        actually altered by the undisclosed interests — a distinction between an unreviewed record and a proven
+        outcome.</span>
+    </div>
+  </section>
+
+  <section class="block">
     <h2 class="section-title">Where this stands</h2>
+    <div class="cross-ref">
+      Rowland now faces a write-in challenger, Alex Folmer, whose own disclosure form takes the opposite approach
+      to his — see the full side-by-side, including her report card, in
+      <a href="rowland-folmer-seat-c.html">"One Disclosed. One Didn't."</a>
+    </div>
     <p>Rowland was not asked for comment, consistent with this publication's practice of reporting from public
-      records and documents in hand. He is running unopposed for Seat C this November.</p>
+      records and documents in hand. He faces write-in candidate Alex Folmer for Seat C this November.</p>
   </section>
 
   <section class="block">
@@ -720,6 +834,10 @@
         <p style="margin:0 0 10px;">Wasatch County candidate filing and campaign finance records</p>
         <p style="margin:0 0 10px;">Park Record, "Erik Rowland is running unopposed for his Wasatch County
           Council seat" (Jan. 30, 2026)</p>
+        <p style="margin:0 0 10px;">KPCW, "Write-in candidates jump into Wasatch County races" (Sept. 2, 2026) —
+          confirms Alex Folmer's write-in entry for Seat C after the Aug. 28 filing deadline</p>
+        <p style="margin:0 0 10px;">Alex Folmer's Wasatch County Conflict of Interest Disclosure Form (Aug. 31,
+          2026, hosted at wasatchcounty.gov)</p>
         <p style="margin:0 0 10px;">Park Record, "Wasatch County Councilor Erik Rowland joins MIDA board" (June
           26, 2026)</p>
         <p style="margin:0 0 10px;">Park Record, "Wasatch County Council sends letter to UDOT rejecting highway
