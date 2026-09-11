@@ -84,6 +84,12 @@
     max-width: 640px;
     margin: 0;
   }
+  .byline {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: #e0b89a;
+    margin-top: 18px;
+  }
 
   main { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
 
@@ -217,6 +223,56 @@
     color: var(--color-ink-soft);
     border-top: 1px solid var(--color-line);
   }
+
+  /* ---------- RUBRIC TABLE ---------- */
+  .rubric-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.92rem;
+  }
+  .rubric-table th, .rubric-table td {
+    border: 1px solid var(--color-line);
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+  }
+  .rubric-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+    background: var(--color-card);
+  }
+  .rubric-table .grade-letter {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-link);
+  }
+  .rubric-overall {
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-left: 4px solid var(--color-burgundy-light);
+    padding: 18px 24px;
+    margin: 18px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .rubric-overall .grade-letter { font-size: 2rem; }
+
+  .callout-warning {
+    background: #fbf0e4;
+    border: 1px solid var(--color-stat);
+    border-left: 4px solid var(--color-stat);
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 0.98rem;
+  }
+  .callout-warning strong { color: var(--color-burgundy-light); }
 </style>
 </head>
 <body>
@@ -233,22 +289,26 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <div class="case-label">WASATCH COUNTY COUNCIL — SEAT A · CANDIDATE RECORD</div>
+    <div class="case-label">WASATCH COUNTY COUNCIL — SEAT A (AT-LARGE) · FOUR-CANDIDATE FIELD</div>
     <h1 class="headline">What the Park Email Left Out</h1>
-    <p class="dek">A county council candidate organized a private campaign against Heber City's park plans, told
-      recipients not to post it publicly, and pointed them toward a nearby development whose numbers don't match
-      the public record.</p>
+    <p class="dek">Four candidates are now on the ballot for Seat A. Two have filed disclosures that check out on
+      paper but raise their own questions; two are too new to the race to have a record yet.</p>
+    <div class="byline">Published Sept. 1, 2026 · Last updated Sept. 11, 2026</div>
   </div>
 </div>
 
 <main>
 
   <section class="block">
-    <p>Rachel Kahler is a candidate for Wasatch County Council Seat A on the November 2026 ballot, running against
-      Democrat Patrick Saucier and write-in candidates Jami Hewlett and Shawn Taylor. She is also the paid
-      Executive Director of the Community Alliance for Main Street (CAMS), a $39,900-a-year, three-year contract
-      position funded by Heber City.</p>
-    <p>In that CAMS capacity, Kahler recently sent an email to a small group of recipients asking them to organize
+    <p>Rachel Kahler is the Republican nominee for Wasatch County Council Seat A on the November 2026 ballot. She
+      won a contested June 2026 primary and is also the paid Executive Director of the Community Alliance for Main
+      Street (CAMS), a $39,900-a-year, three-year contract position funded by Heber City.</p>
+    <p>The Democratic nominee has changed since this piece was first published: Patrick Saucier withdrew his
+      candidacy on Aug. 31, 2026 to take a new job in his home state of New Hampshire, and the Wasatch County
+      Democratic Party replaced him with Robert Duncan McNeill on Sept. 1. Two write-in candidates, Jami Hewlett
+      and Shawn Taylor, joined the race after the write-in filing period closed Aug. 28. All four candidates'
+      records are covered below, in the order their material actually developed.</p>
+    <p>In her CAMS capacity, Kahler recently sent an email to a small group of recipients asking them to organize
       a letter-writing campaign against Heber City's Phase 2 redesign of Main Street Park — and to keep the effort
       off social media.</p>
   </section>
@@ -338,7 +398,7 @@
   </section>
 
   <section class="block">
-    <h2 class="section-title">Who's making the ask</h2>
+    <h2 class="section-title">Rachel Kahler's disclosure record</h2>
     <div class="record-card">
       <h3>What the disclosure form actually asks</h3>
       <p>Kahler's Wasatch County candidacy filing, submitted with her January 2026 Declaration of Candidacy,
@@ -364,7 +424,9 @@
       </tr>
       <tr>
         <td>Boards you sit on — "volunteer or otherwise"</td>
-        <td class="record"><strong>Red White &amp; Blue Festival Inc.</strong> (Director)</td>
+        <td class="record"><strong>Red White &amp; Blue Festival Inc.</strong> (Director), <strong>North Village
+          Special Service District</strong>, <strong>Heber Light &amp; Power Board</strong> — the latter two
+          self-disclosed by Kahler in her own campaign messaging, not found via records research</td>
       </tr>
       <tr>
         <td>For-profit businesses — officer, manager, director, or majority shareholder</td>
@@ -375,18 +437,20 @@
         <td class="record"><strong>5 In The Hive, LLC</strong></td>
       </tr>
     </table>
-    <p>Four lines, four real entries — built entirely from her own state filings, her own CAMS contract, and her
-      own campaign posts. Every one was left blank.</p>
+    <p>Six real entries — built entirely from her own state filings, her own CAMS contract, and her own campaign
+      posts. Every one was left blank on the form itself.</p>
 
     <div class="record-card">
-      <p>Left off that form: her paid CAMS directorship, a directorship of Red White and Blue Festival Inc., and
-        sole management of 5 In The Hive, LLC — an entity whose 2023 Certificate of Organization, which she
-        signed, states its purpose as being "to acquire, own, sell, and otherwise manage real estate investments."</p>
+      <p>Left off that form: her paid CAMS directorship, a directorship of Red White and Blue Festival Inc., sole
+        management of 5 In The Hive, LLC — an entity whose 2023 Certificate of Organization, which she signed,
+        states its purpose as being "to acquire, own, sell, and otherwise manage real estate investments" — and,
+        per her own campaign messaging, service on the North Village Special Service District and the Heber Light
+        &amp; Power Board.</p>
       <p>The form's opening language does leave room for judgment — it asks candidates to list only what they
         "believe could contribute to a conflict of interest." So the question isn't simply whether the form was
-        filled out correctly; it's whether concluding that an employer, a nonprofit board seat, and an owned LLC
-        couldn't contribute to a conflict was a reasonable call for someone seeking a seat that votes on land use
-        and zoning.</p>
+        filled out correctly; it's whether concluding that an employer, two special-district/utility boards, a
+        nonprofit board seat, and an owned LLC couldn't contribute to a conflict was a reasonable call for someone
+        seeking a seat that votes on land use and zoning.</p>
     </div>
 
     <div class="pull-quote">
@@ -402,9 +466,9 @@
         her account of how the entity is actually used today — it doesn't change what she filed with the state in
         2023, which is the record above. Both are part of the story: what she filed, and what she now says about
         it.</p>
-      <p>Her response doesn't address why CAMS — her employer, by the form's own category — or her Red White &amp;
-        Blue Festival board seat, which the form's language covers "volunteer or otherwise," were left off
-        entirely.</p>
+      <p>Her response doesn't address why CAMS — her employer, by the form's own category — her Red White &amp;
+        Blue Festival board seat, or her North Village SSD/Heber Light &amp; Power service, all covered by the
+        form's language, were left off entirely.</p>
     </div>
 
     <div class="record-card">
@@ -433,14 +497,254 @@
         direct them to file a corrected version. The gap here isn't only what Kahler wrote on the form — it's
         what the form itself was ever built to ask, and whether anyone at the county was checking.</p>
     </div>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin:32px 0 6px;">Kahler's report card</h3>
+    <p>This outlet grades documented patterns against five standing criteria, applied the same way across every
+      piece: Power, Transparency, Financial Accountability, Environmental Impact, and Community Impact. Kahler
+      hasn't held county office, so this grades her documented candidacy-disclosure and current CAMS conduct
+      specifically — not a county governing record, since she doesn't have one yet at this level.</p>
+    <table class="rubric-table">
+      <thead>
+        <tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Power</td>
+          <td><span class="grade-letter">D</span> Bad</td>
+          <td>Not county power — she doesn't hold that office — but real power exercised right now: a paid,
+            city-funded CAMS directorship used to organize a private pressure campaign on a city council decision,
+            with explicit instructions to recipients to keep it off social media. That's public money and a public
+            role deployed to shape a public decision through a channel designed to avoid public visibility.</td>
+        </tr>
+        <tr>
+          <td>Transparency</td>
+          <td><span class="grade-letter">F</span> Bad</td>
+          <td>A blanket "no conflict of interest to report" against six independently confirmed
+            entities/positions (CAMS, Red White &amp; Blue Festival Inc., 5 In The Hive LLC, North Village SSD,
+            Heber Light &amp; Power Board — two of the six self-disclosed by Kahler herself in campaign
+            messaging, after the fact). Separately, the Main Street Park email's explicit instruction not to post
+            the campaign publicly is its own transparency-relevant conduct, in her capacity as a paid public-facing
+            official steering public opinion on a city decision.</td>
+        </tr>
+        <tr>
+          <td>Financial accountability</td>
+          <td><span class="grade-letter">D</span> Bad</td>
+          <td>A real-estate investment LLC she sole-manages went undisclosed on a form for a seat that votes on
+            land use and zoning. Her own account of the LLC's actual use (a family home, rented long-term) doesn't
+            change what she filed at formation, which is the primary-source record.</td>
+        </tr>
+        <tr>
+          <td>Environmental impact</td>
+          <td><span class="grade-letter">N/A</span></td>
+          <td>No county vote or land-use decision exists yet to grade. Her Main Street Park advocacy is a CAMS/
+            city-level matter, not a county environmental decision.</td>
+        </tr>
+        <tr>
+          <td>Community impact</td>
+          <td><span class="grade-letter">D</span> Bad</td>
+          <td>The Main Street Park email inflated a nearby development's unit count roughly 2.5x and described it
+            as "currently under construction" when it wasn't yet approved — steering a public campaign against a
+            city park plan using numbers the public record doesn't support.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rubric-overall">
+      <span class="grade-letter">F — 4 of 5 graded</span>
+      <span>Averaged across the four criteria with a record to measure. The Main Street Park email, the
+        disclosure gap, and the CAMS-power finding all point the same direction: public money and a public role,
+        deployed in ways the public wasn't fully able to see or check.</span>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Jami Hewlett</h2>
+    <p>Hewlett filed as a write-in candidate for Seat A on Aug. 26, 2026, days after the write-in filing period
+      opened. This is her fourth run for Heber-area office (also 2023, 2024 for Wasatch County Council and Heber
+      City Council).</p>
+    <p>Her Wasatch County Conflict of Interest Disclosure Form, also dated Aug. 26, 2026, checks the opposite box
+      from Kahler's — "I have the following conflict of interest to report" — and lists three items: "My husband
+      owns Hewlett Life &amp; Health — Health Insurance and Life Insurance," "I own Summit Cleaning," and "I have a
+      lot on 100 S. in Heber." Item two independently checks out: Utah's business registry confirms Summit
+      Cleaning, LLC (entity #9699050-0160, formed 2016, active) with Hewlett as both registered agent and
+      principal, listed under her full legal name, Jami Smith. The other two items — Hewlett Life &amp; Health and
+      the 100 S. property — haven't yet been cross-checked against state filings or the county assessor.</p>
+    <p>Not on that form: Twelve Point Muley LLC (entity #13150857-0160, formed 2022, active), a four-member LLC
+      that lists Hewlett as a Member alongside Bart Smith, Jennifer Jolley, and Bret Smith — the shared Smith
+      surname consistent with her own legal name, Jami Smith Hewlett, suggesting a family-held entity. This one
+      is squarely within the form's "businesses you or a family member own" category, and it doesn't appear
+      anywhere on her disclosure.</p>
+
+    <div class="record-card">
+      <h3>Also on the public record</h3>
+      <ul style="margin:6px 0 0; padding-left: 20px;">
+        <li>Nov. 2024: removed 4–1 from the Heber City Planning Commission (an alternate seat) after distributing
+          a letter opposing a downtown redevelopment plan under the name of a local business owner, Winston Lee of
+          Lee Music, without his consent — reported by KSL, Park Record, and KPCW. Lee said the letter did not
+          represent him; Hewlett has said her intent was to promote transparency and that the letter was
+          "mischaracterized."</li>
+        <li>Multiple pending criminal cases reported by Park Record (June 2025), unrelated to county disclosure or
+          governance — not detailed here, as this outlet's rubric grades governance and disclosure conduct, not
+          personal legal matters.</li>
+      </ul>
+    </div>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin:32px 0 6px;">Hewlett's report card</h3>
+    <p>Graded on the same standard applied to every candidate in this series: what the disclosure form asked, and
+      what she actually filed.</p>
+    <table class="rubric-table">
+      <thead>
+        <tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Power</td>
+          <td><span class="grade-letter">N/A</span></td>
+          <td>Holds no county office. Her Planning Commission seat was a city, not county, appointment, and she
+            no longer holds it.</td>
+        </tr>
+        <tr>
+          <td>Transparency</td>
+          <td><span class="grade-letter">D</span> Bad</td>
+          <td>Checked "I have the following conflict of interest to report" and listed three items — real
+            disclosure effort, unlike Kahler's or Rowland's blank forms. But a fourth item, Twelve Point Muley
+            LLC, a family-held business she's a member of, doesn't appear anywhere on the form, and it wasn't
+            found through anything she volunteered — it surfaced through a separate registry search.</td>
+        </tr>
+        <tr>
+          <td>Financial accountability</td>
+          <td><span class="grade-letter">C</span> Mixed</td>
+          <td>Her own Summit Cleaning, LLC is independently confirmed active, with her listed as registered agent
+            and principal — the disclosed item checks out. Set against that: an undisclosed membership in Twelve
+            Point Muley LLC, a real for-profit entity in the exact category ("businesses you or a family member
+            own") the form asks about.</td>
+        </tr>
+        <tr>
+          <td>Environmental impact</td>
+          <td><span class="grade-letter">N/A</span></td>
+          <td>No county vote or land-use decision exists yet to grade.</td>
+        </tr>
+        <tr>
+          <td>Community impact</td>
+          <td><span class="grade-letter">N/A</span></td>
+          <td>No county-level decision exists yet to grade for its effect on any community.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rubric-overall">
+      <span class="grade-letter">D — 2 of 5 graded</span>
+      <span>Graded on disclosure alone, the same standard as every candidate here: she made a real effort, listing
+        three items where Kahler and Rowland listed none — but a fourth, real, for-profit family business went
+        unmentioned, and it took a separate records search to find, not anything she offered. The Planning
+        Commission incident above is a separate, documented public-record matter and doesn't factor into this
+        score.</span>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Robert McNeill</h2>
+    <p>McNeill, a Democrat and Heber City resident since 2020, replaced Patrick Saucier on the ballot Sept. 1,
+      2026 after Saucier withdrew to take a new job in New Hampshire. McNeill is an actor, director, and producer
+      — best known for playing Lt. Tom Paris on "Star Trek: Voyager" — and studied theater at The Juilliard
+      School; he says he's directed roughly 200 television episodes and produced roughly 1,000. He's a political
+      newcomer — a "freshman," in his own words, with no prior elected experience.</p>
+    <p>His platform centers on growth ("the No. 1 issue," in his words), accountability, and transparency. He's
+      proposed a formal "response process" giving the public time to weigh in on major development issues beyond
+      standard public-comment periods, and says the County Council "has consistently shown its cards" on
+      transparency but could do more. (Park Record, "Wasatch County Council candidate Robert McNeill values
+      transparency, accountability," Sept. 11, 2026.)</p>
+    <p>No COI disclosure or campaign finance filing has appeared yet for McNeill — unsurprising, given he entered
+      the race just over a week before this update. His Declaration of Candidacy, filed with the county, confirms
+      only the standard nomination paperwork (residency, party affiliation, campaign-finance obligations) — it
+      isn't a conflict-of-interest disclosure and contains no conflict-related content.</p>
+    <p>One business is confirmed tied to him on the state registry: Here We Go Productions, Inc., based in Heber
+      City — his own production company, consistent with his real production credits (Executive Producer/Director
+      on "Resident Alien," among other credits). There's no COI form yet to check it against, since none has been
+      filed. That will be revisited as his filings develop.</p>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin:32px 0 6px;">McNeill's report card</h3>
+    <div class="callout-warning">
+      <strong>Not gradable yet.</strong> McNeill has no board seats, votes, or disclosure filings on record. His
+      production company is confirmed but has nothing to be checked against, since he hasn't filed a COI form yet
+      — there is nothing to measure against any of the five criteria. This is a function of when he entered the
+      race, not a mark against him.
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Shawn Taylor</h2>
+    <p>Taylor, from Charleston (a small town within Wasatch County), filed his write-in candidacy for Seat A on
+      Aug. 27, 2026. He ran for Charleston mayor in 2025, placing third in both the primary and general election.
+      Married to Addie, with four children; he says he's lived in Charleston more than nine years and grew up in
+      rural Utah around ranching, livestock, and irrigation. His campaign materials describe him and his wife as
+      having "built several businesses in a variety of markets," without naming any of them, and list him as
+      Charleston's GOP precinct vice chair, a member of the NFIB (National Federation of Independent Business)
+      State Legislative Council, a former state delegate and precinct chair, and — per his 2026 campaign site —
+      a current member of the Wasatch County GOP Board, serving as Media Specialist.</p>
+    <p>His Wasatch County Conflict of Interest Disclosure Form, filed alongside his write-in candidacy, checks "I
+      have no conflict of interest to report." That board seat doesn't appear on the form, though a party-organizing
+      role carries no obvious financial or personal stake in a county vote, and Charleston's population is small
+      enough (roughly 500 people) that it's plausibly common knowledge rather than a concealed interest. No
+      specific business has been named to check against the "no conflict" answer on financial grounds; the
+      "several businesses" claim isn't attached to any company this outlet can independently verify. No campaign
+      finance filing has been located yet for this county race.</p>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin:32px 0 6px;">Taylor's report card</h3>
+    <p>Graded on the same standard applied to every candidate in this series: what the disclosure form asked, and
+      what she or he actually filed.</p>
+    <table class="rubric-table">
+      <thead>
+        <tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Power</td>
+          <td><span class="grade-letter">N/A</span></td>
+          <td>Holds no county office. His GOP Board seat is a party position, not a governing vote.</td>
+        </tr>
+        <tr>
+          <td>Transparency</td>
+          <td><span class="grade-letter">A</span> Good</td>
+          <td>Checked "no conflict of interest to report." His own campaign site names a current seat on the
+            Wasatch County GOP Board (Media Specialist) that isn't on the form — but he volunteers it openly on
+            his own campaign site as part of his public bio, not something found by digging through state or
+            corporate filings the way Rowland's and Kahler's omissions were. A party-organizing role also carries
+            no plausible financial or personal stake in a county council vote, unlike an undisclosed business or
+            land-holding entity, and in a town of roughly 500 people it's the kind of thing residents would likely
+            already know. Publicly volunteering the seat himself is the opposite of concealment.</td>
+        </tr>
+        <tr>
+          <td>Financial accountability</td>
+          <td><span class="grade-letter">N/A</span></td>
+          <td>No named business or ownership stake has surfaced to grade — "several businesses in a variety of
+            markets" names no company this outlet can check.</td>
+        </tr>
+        <tr>
+          <td>Environmental impact</td>
+          <td><span class="grade-letter">N/A</span></td>
+          <td>No county vote or land-use decision exists yet to grade.</td>
+        </tr>
+        <tr>
+          <td>Community impact</td>
+          <td><span class="grade-letter">N/A</span></td>
+          <td>No county-level decision exists yet to grade for its effect on any community.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rubric-overall">
+      <span class="grade-letter">A — 1 of 5 graded</span>
+      <span>A checked "no conflict" box that holds up well — the one board seat found isn't a financial or
+        personal-interest conflict of the kind this rubric is built to catch, he volunteers it himself on his own
+        campaign site rather than it surfacing through outside digging, and it's plausibly common knowledge in a
+        town this size besides. The other four criteria stay ungraded for lack of any county-level record yet.</span>
+    </div>
   </section>
 
   <section class="block">
     <h2 class="section-title">Where this stands</h2>
-    <p>Kahler was not asked for comment on the park email, consistent with this publication's practice of
-      reporting from public records and documents in hand. She responded publicly and unprompted to earlier
-      reporting on her disclosure form, and that response is included above in full context, alongside what the
-      public record shows.</p>
+    <p>None of the four candidates were asked for comment on the material above, consistent with this
+      publication's practice of reporting from public records and documents in hand. Kahler responded publicly and
+      unprompted to earlier reporting on her disclosure form, and that response is included above in full context,
+      alongside what the public record shows. The general election is Nov. 3, 2026.</p>
   </section>
 
 </main>
@@ -451,8 +755,12 @@
   revenue to Heber City" (Nov. 25, 2025); KPCW, "Heber City considers tax sharing proposal to support New London
   development" (Oct. 20, 2025) and "Heber leaders narrowly support Station Seven redevelopment plans" (Dec. 2,
   2025); UDOT Heber Valley Corridor EIS public records (Jan.–May 2026); Wasatch County Conflict of Interest
-  Disclosure Form (Kahler, Jan. 2026; Searle, Jan. 2025); Utah Division of Corporations business filings; Rachel
-  Kahler's public response, posted to The Weber County Hive's Facebook page; Utah Code §17-70-304, §20A-11-1604.
+  Disclosure Forms (Kahler, Jan. 2026; Searle, Jan. 2025; Hewlett, Aug. 26, 2026); Utah Division of Corporations
+  business filings; Rachel Kahler's public response, posted to The Weber County Hive's Facebook page; Utah Code
+  §17-70-304, §20A-11-1604; Park Record, "Wasatch County Democrat withdraws from council race; new candidate
+  replaces him" (Sept. 8, 2026) and "Wasatch County Council candidate Robert McNeill values transparency,
+  accountability" (Sept. 11, 2026); KPCW, "Write-in candidates jump into Wasatch County races" (Sept. 2, 2026);
+  KSL, "Letter shared in business owner's name prompts removal of Heber City commission member" (Nov. 6, 2024).
 </footer>
 
 </body>
