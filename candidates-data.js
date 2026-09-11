@@ -139,9 +139,9 @@ const CANDIDATES = [
     level: "County",
     county: "Wasatch",
     caseNumber: "CASE 10",
-    names: "Erik Rowland — Unopposed",
+    names: "Rowland vs. Folmer",
     verdict: "The Wrong Form, Four Times",
-    tags: ["MIDA Board", "Unopposed", "Disclosure Gap"],
+    tags: ["MIDA Board", "Write-In Challenger", "Disclosure Gap"],
     stamp: "Active",
     href: "erik-rowland-seat-c.html"
   },
@@ -206,5 +206,17 @@ const CANDIDATES = [
     href: "sd5-koford-hernandez.html",
     datePosted: "2026-09-10",
     dateUpdated: "2026-09-10"
+  },
+  {
+    id: "wasatch-seat-c-rowland-folmer",
+    race: "Wasatch County Council — Seat C",
+    level: "County",
+    county: "Wasatch",
+    caseNumber: "CASE 17",
+    names: "Rowland vs. Folmer",
+    verdict: "One Disclosed. One Didn't.",
+    tags: ["Disclosure Gap", "Write-In Challenger", "Legislative Record: D"],
+    stamp: "Active",
+    href: "rowland-folmer-seat-c.html"
   }
 ];
