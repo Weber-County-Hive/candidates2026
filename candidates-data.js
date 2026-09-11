@@ -127,11 +127,13 @@ const CANDIDATES = [
     level: "County",
     county: "Wasatch",
     caseNumber: "CASE 09",
-    names: "Kahler vs. Saucier",
+    names: "Kahler vs. McNeill vs. Hewlett vs. Taylor",
     verdict: "The Form She Left Blank",
-    tags: ["Disclosure Gap", "Same-Seat Comparison", "Park Campaign"],
+    tags: ["Disclosure Gap", "Four-Candidate Field", "Park Campaign"],
     stamp: "Active",
-    href: "rachel-kahler-wasatch-seat-a.html"
+    href: "rachel-kahler-wasatch-seat-a.html",
+    datePosted: "2026-09-01",
+    dateUpdated: "2026-09-11"
   },
   {
     id: "wasatch-seat-c-rowland",
@@ -143,7 +145,9 @@ const CANDIDATES = [
     verdict: "The Wrong Form, Four Times",
     tags: ["MIDA Board", "Write-In Challenger", "Disclosure Gap"],
     stamp: "Active",
-    href: "erik-rowland-seat-c.html"
+    href: "erik-rowland-seat-c.html",
+    datePosted: "2026-09-02",
+    dateUpdated: "2026-09-11"
   },
   {
     id: "hd59-searle-johnson",
@@ -217,6 +221,8 @@ const CANDIDATES = [
     verdict: "One Disclosed. One Didn't.",
     tags: ["Disclosure Gap", "Write-In Challenger", "Legislative Record: D"],
     stamp: "Active",
-    href: "rowland-folmer-seat-c.html"
+    href: "rowland-folmer-seat-c.html",
+    datePosted: "2026-09-11",
+    dateUpdated: "2026-09-11"
   }
 ];
