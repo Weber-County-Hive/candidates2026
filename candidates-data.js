@@ -192,5 +192,19 @@ const CANDIDATES = [
     tags: ["Doers Network", "Family Funding", "Succession"],
     stamp: "Active",
     href: "mike-bird-slco.html"
+  },
+  {
+    id: "sd5-koford-hernandez",
+    race: "Senate District 5 — Davis / Morgan / Weber",
+    level: "State",
+    county: "Weber",
+    caseNumber: "CASE 16",
+    names: "Koford vs. Hernandez",
+    verdict: "The Seat Her Own PAC Built",
+    tags: ["PAC Network", "Irish Elk LLC", "Legislative Record: D"],
+    stamp: "Active",
+    href: "sd5-koford-hernandez.html",
+    datePosted: "2026-09-10",
+    dateUpdated: "2026-09-10"
   }
 ];
