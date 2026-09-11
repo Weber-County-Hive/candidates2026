@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Disclosed. One Didn't. — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-paper: #f4f0e6;
+    --color-ink: #241c14;
+    --color-ink-soft: #5a4f42;
+    --color-link: #c0572e;
+    --color-stat: #d9a441;
+    --color-burgundy-light: #5c1a2b;
+    --color-burgundy-deep: #3d0f1c;
+    --color-line: #d8cfbe;
+    --color-card: #fbf9f3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: 'Source Serif 4', serif;
+    line-height: 1.6;
+  }
+  a { color: var(--color-link); }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+
+  header.masthead {
+    background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep));
+    color: #f4ece5;
+    padding: 18px 24px;
+  }
+  .masthead-row {
+    max-width: 880px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .masthead-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+  }
+  .masthead-nav a {
+    color: #f0d9c9;
+    text-decoration: none;
+    margin-left: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+  }
+  .masthead-nav a:hover { text-decoration: underline; }
+
+  .hero {
+    background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep));
+    color: #f4ece5;
+    padding: 56px 24px 64px;
+  }
+  .hero-inner { max-width: 780px; margin: 0 auto; }
+  .case-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: #e0b89a;
+    margin-bottom: 14px;
+  }
+  h1.headline {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    line-height: 1.12;
+    margin: 0 0 18px;
+  }
+  .dek {
+    font-size: 1.15rem;
+    color: #ecd9cc;
+    max-width: 640px;
+    margin: 0;
+  }
+
+  main { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+
+  section.block { margin: 56px 0; }
+  h2.section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 0 0 8px;
+    border-bottom: 1px solid var(--color-line);
+    padding-bottom: 10px;
+  }
+  p { font-size: 1.05rem; }
+
+  .record-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    padding: 22px 24px;
+    margin: 20px 0;
+  }
+  .record-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    margin: 0 0 10px;
+  }
+
+  table.claim-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 8px;
+    font-size: 0.98rem;
+  }
+  table.claim-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    text-align: left;
+    color: var(--color-ink-soft);
+    border-bottom: 2px solid var(--color-ink);
+    padding: 10px 12px 10px 0;
+  }
+  table.claim-table td {
+    padding: 14px 12px 14px 0;
+    border-bottom: 1px solid var(--color-line);
+    vertical-align: top;
+  }
+  table.claim-table td.record strong { color: var(--color-link); }
+
+  details.sources-collapse {
+    margin: 20px 0 0;
+  }
+  details.sources-collapse summary {
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--color-link);
+    padding: 14px 18px;
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    list-style: none;
+  }
+  details.sources-collapse summary::-webkit-details-marker { display: none; }
+  details.sources-collapse summary::before {
+    content: '+ ';
+    font-weight: 700;
+  }
+  details.sources-collapse[open] summary::before {
+    content: '– ';
+  }
+  details.sources-collapse .record-card {
+    border-top: none;
+    margin-top: 0;
+  }
+
+  footer.pagefoot {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--color-ink-soft);
+    border-top: 1px solid var(--color-line);
+  }
+
+  /* ---------- RUBRIC TABLE ---------- */
+  .rubric-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.92rem;
+  }
+  .rubric-table th, .rubric-table td {
+    border: 1px solid var(--color-line);
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+  }
+  .rubric-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+    background: var(--color-card);
+  }
+  .rubric-table .grade-letter {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-link);
+  }
+  .rubric-overall {
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-left: 4px solid var(--color-burgundy-light);
+    padding: 18px 24px;
+    margin: 18px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .rubric-overall .grade-letter { font-size: 2rem; }
+
+  .note-scope {
+    font-size: 13.5px;
+    border-top: 1px solid var(--color-line);
+    padding-top: 14px;
+    margin-top: 14px;
+    color: var(--color-ink-soft);
+  }
+
+  .callout-warning {
+    background: #fbf0e4;
+    border: 1px solid var(--color-stat);
+    border-left: 4px solid var(--color-stat);
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 0.98rem;
+  }
+  .callout-warning strong { color: var(--color-burgundy-light); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <div class="masthead-brand">The Weber County Hive</div>
+    <nav class="masthead-nav">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="case-label">WASATCH COUNTY COUNCIL — SEAT C · CONTESTED RACE</div>
+    <h1 class="headline">One Disclosed. One Didn't.</h1>
+    <p class="dek">Erik Rowland's own conflict-of-interest form says he has none to report. Alex Folmer, the
+      write-in candidate now challenging him, checked the opposite box on the same county form and named her own.</p>
+  </div>
+</div>
+
+<main>
+
+  <section class="block">
+    <h2 class="section-title">The race</h2>
+    <p>Erik Rowland has held Wasatch County Council Seat C since January 2023. His bid for a second term was
+      uncontested until the write-in filing period closed Aug. 28, 2026, when Alex Folmer entered the race. The
+      general election is Nov. 3, 2026.</p>
+    <p class="note-scope"><b>A note on scope:</b> this outlet reviews every candidate's available public record in
+      full. Rowland, a sitting councilmember since 2023 and a May 2026 appointee to the Military Installation
+      Development Authority (MIDA) board, has years of board seats, business filings, and conflict-of-interest
+      disclosures on the public record. Folmer, a first-time write-in candidate, has never held office, so there's
+      no board or voting record to review — but she does have a documented pre-candidacy public record on the
+      exact growth and development questions this race turns on, detailed below. The difference in volume between
+      the two candidates' sections reflects the kind of record each has actually generated, not a decision to
+      scrutinize one candidate more than the other.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Erik Rowland's disclosure record</h2>
+    <p>Rowland's Wasatch County Conflict of Interest Disclosure Form, filed Jan. 2, 2026 and used to cover his
+      county seat as well as his MIDA-linked positions, checks "I have no conflict of interest to report" and
+      leaves every line blank. Independently confirmed against his own LinkedIn profile, his own words to the Park
+      Record, and Utah Division of Corporations filings, at least eight entities and positions don't appear
+      anywhere on that form: a CAMS board seat, ownership/officer roles in JASE Medical / SignalRx LLC and TimeMD
+      Inc., sole membership in Rowland Development LLC, a manager role in Triumph Assurance Group LLC, and seats
+      on the Heber Valley Tourism &amp; Economic Development Board and the North Village SSD Administrative
+      Control Board.</p>
+    <p>A ninth board — the Wasatch Open Lands Board (WOLB), which reviews conservation-easement applications and
+      recommends how the county's open-space bond money gets spent — has no disclosure form on file for Rowland at
+      all, not even the wrong one. WOLB's own rule bars a member (or their spouse, parent, sibling, or child) from
+      holding a 10%-or-greater interest in any property under consideration for that funding. Rowland owns a
+      development LLC. No filed disclosure means no record of whether that rule was ever checked against it.</p>
+    <p>The full build of this finding — the MIDA board comparison table, the WOLB gap, the state-law framework
+      requiring a sectioned disclosure form, and the open question of whether the county clerk's own enforcement
+      duty was ever triggered — is in this outlet's original case file, <a href="erik-rowland-seat-c.html">"The
+      Wrong Form, Four Times."</a></p>
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin:32px 0 6px;">Rowland's report card</h3>
+    <p>This outlet grades documented patterns against five standing criteria, applied the same way across every
+      piece: Power, Transparency, Financial Accountability, Environmental Impact, and Community Impact. Graded here
+      against Rowland's documented disclosure record specifically — what he actually filed, set against what's
+      independently confirmed and absent from it. All five criteria apply to him because he's held office since
+      2023; Folmer's card below is graded differently, for reasons explained there.</p>
+    <table class="rubric-table">
+      <thead>
+        <tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Power</td>
+          <td><span class="grade-letter">D</span> Bad</td>
+          <td>Rowland holds a county council seat plus four MIDA-linked positions and a WOLB seat — real authority
+            over public infrastructure districts and open-space bond spending. A disclosure record this incomplete
+            removes the public's ability to check how that authority is being used.</td>
+        </tr>
+        <tr>
+          <td>Transparency</td>
+          <td><span class="grade-letter">F</span> Bad</td>
+          <td>A blanket "no conflict of interest to report" against eight independently confirmed entities and
+            positions, plus a ninth board (WOLB) with no disclosure filed at all. MIDA's own site uses the same
+            blank county form to cover four separate disclosure obligations.</td>
+        </tr>
+        <tr>
+          <td>Financial accountability</td>
+          <td><span class="grade-letter">D</span> Bad</td>
+          <td>Ownership or officer roles in four business entities — including a development LLC formed while
+            already a sitting councilmember — don't appear on the form. No filed disclosure exists to confirm
+            whether any conflict-review or recusal process was ever triggered around them.</td>
+        </tr>
+        <tr>
+          <td>Environmental impact</td>
+          <td><span class="grade-letter">C</span> Mixed</td>
+          <td>WOLB specifically screens open-space bond funding against a board member's own property interests.
+            Rowland's undisclosed development LLC sits against that exact screen, though no specific vote or
+            funding decision has been documented here as improperly influenced.</td>
+        </tr>
+        <tr>
+          <td>Community impact</td>
+          <td><span class="grade-letter">C</span> Mixed</td>
+          <td>The gap limits public visibility into decisions on tourism, school-district administration, and
+            land boards Rowland sits on, though no specific harmed party has been documented in this record.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rubric-overall">
+      <span class="grade-letter">D</span>
+      <span>Overall — averaged across the five criteria. The clearest, best-documented problem is transparency
+        itself: a blanket denial set against nine independently confirmed positions. The environmental and
+        community grades sit higher only because no specific vote or funding decision has been documented here as
+        actually altered by the undisclosed interests — a distinction between an unreviewed record and a proven
+        outcome.</span>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Alex Folmer</h2>
+    <p>Folmer's own Wasatch County Conflict of Interest Disclosure Form, filed Aug. 31, 2026 for the same Seat C
+      race, checks the opposite box from Rowland's — "I have the following conflict of interest to report" — and
+      lists two items: her employer, the University of Utah, where she works as a Software Design Engineer, and her
+      ownership of Runa Digital, LLC, a Midway-based company. On the disclosure itself, the documented facts hold
+      up: she's independently confirmed as both the registered agent and sole member of Runa Digital, LLC in
+      Utah's own business registry — not just self-reported.</p>
+    <p>That LLC was formed Feb. 5, 2021 and renewed through Jan. 31, 2024; its renewal lapsed after Feb. 28, 2025,
+      and the state marked it administratively dissolved on July 21, 2026, about five weeks before she signed her
+      disclosure form listing it as a current business interest. Two other LLCs tied to her name in the same
+      registry search — Into the Mystic Mountain LLC and Wild Utah Provisions LLC — are also administratively
+      dissolved, a lapsed-renewal pattern common to solo LLC owners who let side ventures go inactive rather than a
+      sign of anything disclosure-related.</p>
+    <p>Before filing to run, Folmer has a real public record on the growth and development questions this race
+      centers on. At the Jan. 28, 2026 public hearing on UDOT's Heber Valley Corridor bypass, she testified in
+      person opposing both proposed alternatives, described a 20-year background in tech and data consulting for
+      state agencies, said she had independently reviewed UDOT's own traffic projections and found them
+      overstated, and closed by committing to "continue to make GRAMA requests, pull the data, and get a different
+      perspective on where we are today with this bypass." Weeks earlier, a Feb. 4, 2026 Park Record letter to the
+      editor under her name urged the developer behind the "Slopes" project in Heber Valley to pursue a
+      conservation-easement partnership with a land trust rather than build, citing the valley's agricultural
+      heritage. Both predate her candidacy and are consistent with each other in substance and voice.</p>
+    <p>No campaign finance record is available for Folmer yet, consistent with a write-in filing that closed only
+      days before her disclosure form was signed.</p>
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;margin:32px 0 6px;">Folmer's report card</h3>
+    <div class="callout-warning">
+      <strong>Read this differently than Rowland's grades above.</strong> Rowland's D is a score of what he's
+      actually done in office. Folmer's grades below cover only whether her disclosure is honest — they are not a
+      measure of how she'd perform in office, because she isn't in office. A perfect score here means her paperwork
+      checks out, nothing more.
+    </div>
+    <p>Folmer has never held office, so three of the five criteria — Power, Environmental Impact, and Community
+      Impact — measure the exercise of authority she doesn't have yet, and grading her on them would mean scoring
+      something that doesn't exist. Transparency and Financial Accountability are different: those can be graded
+      right now, against what she actually filed and what's independently confirmed about it.</p>
+    <table class="rubric-table">
+      <thead>
+        <tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Power</td>
+          <td><span class="grade-letter">N/A</span></td>
+          <td>Holds no elected or appointed office. No exercised authority exists yet to grade.</td>
+        </tr>
+        <tr>
+          <td>Transparency</td>
+          <td><span class="grade-letter">A</span> Good</td>
+          <td>Checked "I have the following conflict of interest to report" and named both her employer and her
+            business ownership. Both items independently confirmed accurate: the University of Utah campus
+            directory lists her as an IT Software Engineer IV at the same building named on her form, and Utah's
+            business registry confirms her as registered agent and sole member of Runa Digital, LLC.</td>
+        </tr>
+        <tr>
+          <td>Financial accountability</td>
+          <td><span class="grade-letter">A</span> Good</td>
+          <td>Disclosed sole ownership of Runa Digital, LLC without qualification. The LLC's state registration
+            lapsed in 2025 after four years active — a separate administrative fact that doesn't change the
+            accuracy of what she reported: she owns it, and she said so.</td>
+        </tr>
+        <tr>
+          <td>Environmental impact</td>
+          <td><span class="grade-letter">N/A</span></td>
+          <td>No vote or funding decision exists yet to grade. Her pre-candidacy public record — a Jan. 28, 2026
+            EIS hearing comment and a Feb. 4, 2026 Park Record letter, both opposing specific Heber Valley
+            development proposals — is advocacy, not an exercise of governmental authority.</td>
+        </tr>
+        <tr>
+          <td>Community impact</td>
+          <td><span class="grade-letter">N/A</span></td>
+          <td>Same reasoning as environmental impact — nothing decided in office yet to grade for its effect on any
+            community.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rubric-overall">
+      <span class="grade-letter" style="font-size:1.3rem;">A — 2 of 5 graded</span>
+      <span>Not a five-criteria score like Rowland's D above, and not a preview of how she'd govern — it's a grade
+        on two questions only: did she disclose what she owns and where she works, and was it true. Both check
+        out. The other three criteria stay ungraded, not passing, until she either holds office or the race ends
+        without her.</span>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Follow the money</h2>
+    <table class="claim-table">
+      <tr>
+        <th>Candidate</th>
+        <th>Campaign finance record</th>
+      </tr>
+      <tr>
+        <td>Erik Rowland</td>
+        <td class="record">$0 raised, $265.66 spent (filing fee only) — confirmed current</td>
+      </tr>
+      <tr>
+        <td>Alex Folmer</td>
+        <td class="record">Not yet available — write-in filing closed Aug. 28, 2026</td>
+      </tr>
+    </table>
+    <p>Rowland's is a no-fundraising campaign that ran for most of the year without an opponent to raise any of
+      it. Folmer's own filings aren't due on a timeline that's produced anything yet; this will be revisited as
+      her disclosure record develops.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Where this stands</h2>
+    <p>Neither candidate was asked for comment, consistent with this publication's practice of reporting from
+      public records and documents in hand. The general election is Nov. 3, 2026.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="section-title">Sources</h2>
+    <details class="sources-collapse">
+      <summary>10 sources — tap to expand</summary>
+      <div class="record-card">
+        <p style="margin:0 0 10px;">Erik Rowland's Wasatch County Conflict of Interest Disclosure Form (Jan. 2,
+          2026, hosted at wasatchcounty.gov) — full sourcing for the underlying findings is in "The Wrong Form,
+          Four Times," this outlet's original Rowland case file</p>
+        <p style="margin:0 0 10px;">Alex Folmer's Wasatch County Conflict of Interest Disclosure Form (Aug. 31,
+          2026, hosted at wasatchcounty.gov)</p>
+        <p style="margin:0 0 10px;">University of Utah campus directory (people.utah.edu) — Alexandra Folmer, IT
+          Software Engineer IV, UIT Univ Support Services, 102 South 200 East, Salt Lake City</p>
+        <p style="margin:0 0 10px;">Utah Division of Corporations &amp; Commercial Code entity registry —
+          Runa Digital, LLC (entity #12153333-0160), Into the Mystic Mountain LLC, Wild Utah Provisions LLC</p>
+        <p style="margin:0 0 10px;">UDOT, "Comments on the Heber Valley Corridor Draft EIS, Volume 1 of 2" (May
+          2026, hebervalleyeis.udot.utah.gov) — Comment #120, Alexandra Folmer's verbal comment at the Jan. 28,
+          2026 public hearing</p>
+        <p style="margin:0 0 10px;">Park Record, "Please don't build," letter to the editor by Alexandra Folmer
+          (Feb. 4, 2026)</p>
+        <p style="margin:0 0 10px;">KPCW, "Write-in candidates jump into Wasatch County races" (Sept. 2, 2026)</p>
+        <p style="margin:0 0 10px;">Park Record, "Erik Rowland is running unopposed for his Wasatch County
+          Council seat" (Jan. 30, 2026)</p>
+        <p style="margin:0 0 10px;">Wasatch County candidate filing and campaign finance records</p>
+        <p style="margin:0;">This outlet's collective-impact rubric — Power, Transparency, Financial
+          Accountability, Environmental Impact, Community Impact — applied consistently across all pieces</p>
+      </div>
+    </details>
+  </section>
+
+</main>
+
+<footer class="pagefoot">
+  The Weber County Hive — public records reporting on Wasatch and Weber County government.
+</footer>
+
+</body>
+</html>
