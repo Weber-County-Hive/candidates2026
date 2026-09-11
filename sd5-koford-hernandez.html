@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case File: Koford vs. Hernandez — Senate District 5 | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #f4f0e6;
+    --color-card-bg: #fbf9f3;
+    --color-header-start: #5c1a2b;
+    --color-header-end: #3d0f1c;
+    --gradient-header: linear-gradient(135deg, var(--color-header-start), var(--color-header-end));
+    --color-link: #c0572e;
+    --color-stat: #d9a441;
+    --color-ink: #241c18;
+    --color-ink-soft: #5a4f47;
+    --color-border: #ddd3c2;
+    --font-headline: 'Playfair Display', serif;
+    --font-body: 'Source Serif 4', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  a { color: var(--color-link); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--color-link); outline-offset: 2px; }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- HEADER BAND ---------- */
+  .header-band {
+    background: var(--gradient-header);
+    color: #f4ead9;
+    padding: 14px 0;
+  }
+  .header-band .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .brand {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f4ead9;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand .dot { color: var(--color-stat); }
+  .header-band nav a {
+    color: #e8d9c4;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-left: 18px;
+  }
+  .header-band nav a:hover { color: var(--color-stat); }
+
+  /* ---------- CASE HERO ---------- */
+  .case-hero {
+    padding: 64px 0 40px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-link);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .kicker::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--color-link);
+    display: inline-block;
+  }
+  .case-hero h1 {
+    font-family: var(--font-headline);
+    font-weight: 900;
+    font-size: clamp(2.1rem, 5vw, 3.2rem);
+    line-height: 1.08;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+  .case-hero h1 .vs {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--color-ink-soft);
+    font-size: 0.55em;
+    display: block;
+    margin: 6px 0;
+  }
+  .dek {
+    font-size: 1.15rem;
+    color: var(--color-ink-soft);
+    max-width: 62ch;
+    margin: 0;
+  }
+  .case-meta {
+    display: flex;
+    gap: 28px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--color-ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .case-meta span b { color: var(--color-ink); font-weight: 600; }
+
+  /* ---------- VERDICT BOX ---------- */
+  .verdict-box {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-left: 5px solid var(--color-header-start);
+    border-radius: 3px;
+    padding: 26px 30px;
+    margin: 36px 0;
+  }
+  .verdict-box .label {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-header-start);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .verdict-box p { margin: 0; font-size: 1.08rem; }
+  .verdict-box p + p { margin-top: 12px; }
+
+  /* ---------- STAT ROW ---------- */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--color-border);
+    border: 1px solid var(--color-border);
+    margin: 40px 0;
+  }
+  .stat { background: var(--color-card-bg); padding: 22px 20px; }
+  .stat .num {
+    font-family: var(--font-headline);
+    font-weight: 900;
+    font-size: 1.9rem;
+    color: var(--color-stat);
+    line-height: 1;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .stat .lbl {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+    line-height: 1.4;
+  }
+
+  /* ---------- NARRATIVE SECTIONS ---------- */
+  section.sect { padding: 48px 0; border-bottom: 1px solid var(--color-border); }
+  section.sect:last-of-type { border-bottom: none; }
+  h2.sect-title {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin: 0 0 22px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  h2.sect-title .n {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-link);
+    font-weight: 500;
+  }
+  h3.sub-title {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 32px 0 14px;
+  }
+  .sect p { margin: 0 0 18px; }
+  .sect ul, .sect ol { margin: 0 0 18px; padding-left: 22px; }
+  .sect li { margin-bottom: 8px; }
+
+  /* ---------- RECORD CARD ---------- */
+  .record-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+  .record-card .rc-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .record-card .rc-name { font-family: var(--font-headline); font-weight: 700; font-size: 1.1rem; }
+  .record-card .rc-amount { font-family: var(--font-mono); font-size: 1rem; color: var(--color-stat); font-weight: 600; }
+  .record-card p { margin: 0; font-size: 0.98rem; }
+  .record-card .rc-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-header-start);
+    background: #efe2d3;
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-top: 12px;
+    text-decoration: none;
+    margin-right: 6px;
+  }
+
+  /* ---------- FLAG-OPEN CALLOUT ---------- */
+  .flag-open {
+    background: #fbf3e6;
+    border: 1px dashed #c98a3f;
+    border-radius: 3px;
+    padding: 20px 24px;
+    margin: 22px 0;
+  }
+  .flag-open .fo-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a5661f;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .flag-open p { margin: 0; }
+  .flag-open p + p { margin-top: 10px; }
+
+  /* ---------- FUNDING COMPARISON (interactive) ---------- */
+  .fund-donut-wrap { display: flex; align-items: center; gap: 28px; margin: 20px 0 28px; flex-wrap: wrap; }
+  .fund-donut { width: 150px; height: 150px; border-radius: 50%; flex-shrink: 0; position: relative; }
+  .fund-donut::after { content: ''; position: absolute; inset: 20px; border-radius: 50%; background: var(--color-bg); }
+  .fund-donut-center {
+    position: absolute; inset: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-size: 11px; color: var(--color-ink-soft);
+    text-align: center; line-height: 1.3;
+  }
+  .fund-donut-legend { font-family: var(--font-mono); font-size: 13px; }
+  .fund-donut-legend-row { display: flex; align-items: baseline; gap: 9px; margin-bottom: 8px; }
+  .fund-donut-swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; position: relative; top: 1px; }
+  .fund-donut-legend-amt { color: var(--color-ink); font-weight: 600; }
+  .fund-donut-legend-lbl { color: var(--color-ink-soft); }
+
+  .fund-toggle {
+    display: flex; gap: 0; margin-bottom: 24px;
+    border: 1px solid var(--color-border); border-radius: 3px; overflow: hidden; width: fit-content;
+  }
+  .fund-toggle button {
+    font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.04em; text-transform: uppercase;
+    padding: 10px 20px; border: none; background: var(--color-card-bg); color: var(--color-ink-soft);
+    cursor: pointer; transition: background 0.15s, color 0.15s;
+  }
+  .fund-toggle button.active { background: var(--color-header-start); color: #f4ead9; }
+  .fund-toggle button:not(.active):hover { background: #ece3d3; }
+
+  .fund-panel { display: none; }
+  .fund-panel.active { display: block; }
+
+  .fund-bar-row { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+  .fund-bar-label { font-family: var(--font-mono); font-size: 12.5px; width: 190px; flex-shrink: 0; color: var(--color-ink-soft); }
+  .fund-bar-track { flex: 1; background: var(--color-border); height: 22px; border-radius: 2px; overflow: hidden; position: relative; }
+  .fund-bar-fill { height: 100%; background: var(--color-stat); }
+  .fund-panel[data-panel="hernandez"] .fund-bar-fill { background: var(--color-link); }
+  .fund-bar-amt { font-family: var(--font-mono); font-size: 12.5px; font-weight: 600; width: 90px; text-align: right; flex-shrink: 0; }
+
+  /* ---------- PENDING CALLOUT ---------- */
+  .pending-box {
+    background: #eef1ec;
+    border: 1px dashed #7c8a76;
+    border-radius: 3px;
+    padding: 20px 24px;
+    margin: 22px 0;
+  }
+  .pending-box .pb-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #56634f;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .pending-box p { margin: 0; }
+
+  /* ---------- SOURCING ---------- */
+  details.sourcing {
+    background: var(--color-card-bg); border: 1px solid var(--color-border);
+    border-radius: 3px; padding: 18px 24px; margin: 40px 0;
+  }
+  details.sourcing summary {
+    font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--color-header-start); cursor: pointer; outline-offset: 4px;
+  }
+  details.sourcing[open] summary { margin-bottom: 14px; }
+  details.sourcing ul { margin: 0; padding-left: 20px; font-size: 0.92rem; color: var(--color-ink-soft); }
+  details.sourcing li { margin-bottom: 8px; }
+
+  /* ---------- FOOTER ---------- */
+  footer { padding: 40px 0 60px; text-align: center; }
+  footer .fine { font-family: var(--font-mono); font-size: 12px; color: var(--color-ink-soft); letter-spacing: 0.03em; }
+  footer .star { color: var(--color-stat); }
+
+  @media (max-width: 600px) {
+    body { font-size: 16.5px; }
+    .fund-bar-label { width: 130px; font-size: 11px; }
+    .fund-bar-amt { width: 74px; }
+  }
+
+  /* ---------- START HERE BOX ---------- */
+  .start-here {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-header-start);
+    border-radius: 3px;
+    padding: 24px 28px;
+    margin: 36px 0;
+  }
+  .start-here h2 {
+    font-family: var(--font-headline);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+  .start-here p { margin: 0 0 10px; font-size: 0.98rem; color: var(--color-ink-soft); }
+  .start-here p:last-child { margin-bottom: 0; }
+  .start-here b { color: var(--color-ink); }
+
+  /* ---------- WIDE FLIP CARDS (who's who) ---------- */
+  .wide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+    margin: 24px 0 40px;
+  }
+  .wtile { perspective: 1400px; height: 180px; }
+  .wtile.wtile-wide { grid-column: 1 / -1; height: 130px; }
+  .wtile-inner {
+    position: relative; width: 100%; height: 100%;
+    transition: transform 0.5s cubic-bezier(.4,.2,.2,1);
+    transform-style: preserve-3d; cursor: pointer;
+  }
+  .wtile.flipped .wtile-inner { transform: rotateY(180deg); }
+  .wface {
+    position: absolute; inset: 0; backface-visibility: hidden;
+    border: 1px solid var(--color-border); border-radius: 3px;
+    padding: 20px 22px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .wfront { background: var(--color-card-bg); }
+  .wfront .wname { font-family: var(--font-headline); font-weight: 700; font-size: 1.2rem; margin: 0 0 8px; }
+  .wfront .wrole { font-family: var(--font-mono); font-size: 11.5px; color: var(--color-link); line-height: 1.4; }
+  .wfront .whint { font-family: var(--font-mono); font-size: 10.5px; color: #a6a08e; margin-top: 14px; }
+  .wback {
+    background: var(--color-header-start); color: #f4ead9;
+    transform: rotateY(180deg); overflow-y: auto;
+  }
+  .wback .wlabel { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.03em; color: var(--color-stat); margin-bottom: 8px; display: block; }
+  .wback p { margin: 0; font-size: 13px; line-height: 1.5; color: #e8d9c4; }
+
+  @media (max-width: 600px) {
+    .wide-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- MONEY FLOW DIAGRAM ---------- */
+  .flow-diagram { margin: 28px 0 40px; text-align: center; }
+  .flow-diagram svg { max-width: 100%; height: auto; }
+  .flow-diagram figcaption { font-family: var(--font-mono); font-size: 11.5px; color: var(--color-ink-soft); margin-top: 10px; }
+
+  .record-details {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    margin: 22px 0;
+    padding: 0;
+  }
+  .record-details summary {
+    padding: 22px 24px;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    outline-offset: 4px;
+  }
+  .record-details summary::-webkit-details-marker { display: none; }
+  .record-details summary::before {
+    content: "▸";
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--color-link);
+    transition: transform 0.15s;
+  }
+  .record-details[open] summary::before { transform: rotate(90deg); }
+  .record-details summary .rc-amount { margin-left: auto; font-family: var(--font-mono); font-size: 1rem; color: var(--color-stat); font-weight: 600; }
+  .record-details .rd-body { padding: 0 24px 22px; }
+  .record-details .rd-body p { margin: 0 0 12px; font-size: 0.98rem; }
+  .record-details .rd-body p:last-child { margin-bottom: 0; }
+
+  .rubric-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.92rem;
+  }
+  .rubric-table th, .rubric-table td {
+    border: 1px solid var(--color-border);
+    padding: 10px 14px;
+    text-align: left;
+  }
+  .rubric-table th {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+    background: var(--color-card-bg);
+  }
+  .rubric-table .grade-letter {
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-link);
+  }
+  .rubric-overall {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-header-start);
+    border-radius: 3px;
+    padding: 18px 24px;
+    margin: 18px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .rubric-overall .grade-letter { font-size: 2rem; }
+
+  .bill-grade {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-family: var(--font-headline);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-right: 10px;
+    flex-shrink: 0;
+    color: #fff;
+  }
+  .bill-grade.grade-a { background: #4a7c59; }
+  .bill-grade.grade-b { background: #5c8a6a; }
+  .bill-grade.grade-c { background: var(--color-stat); }
+  .bill-grade.grade-d { background: #b5652f; }
+  .bill-grade.grade-f { background: var(--color-header-start); }
+
+  .timeline { position: relative; margin: 28px 0 32px; padding-left: 28px; }
+  .timeline::before { content: ""; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: var(--color-border); }
+  .tl-item { position: relative; margin-bottom: 20px; }
+  .tl-item:last-child { margin-bottom: 0; }
+  .tl-item::before {
+    content: ""; position: absolute; left: -28px; top: 3px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--color-link); border: 2px solid var(--color-bg);
+  }
+  .tl-date { font-family: var(--font-mono); font-size: 11px; color: var(--color-link); letter-spacing: 0.03em; display: block; margin-bottom: 3px; }
+  .tl-item p { margin: 0; font-size: 0.96rem; }
+
+  .status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--color-border);
+    border: 1px solid var(--color-border);
+    margin: 20px 0;
+  }
+  .status-cell { background: var(--color-card-bg); padding: 14px 16px; }
+  .status-cell .sc-bill { font-family: var(--font-headline); font-weight: 700; font-size: 0.98rem; display: block; margin-bottom: 4px; }
+  .status-cell .sc-status { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.02em; }
+  .status-cell .sc-status.pass { color: #4a7c59; }
+  .status-cell .sc-status.fail { color: var(--color-header-start); }
+
+</style>
+</head>
+<body>
+
+<div class="header-band">
+  <div class="wrap">
+    <a class="brand" href="#"><span class="dot">⬡</span> The Weber County Hive</a>
+    <nav>
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="case-hero">
+    <div class="kicker">Senate District 5 · General Election, Nov. 3, 2026</div>
+    <h1>Jill Koford <span class="vs">vs.</span> CJ Hernandez</h1>
+    <p class="dek">An open seat, vacated by one of the network's own founding officers, going to the same PAC treasurer's network that first funded her rise. Davis, Morgan, and Weber counties.</p>
+    <div class="case-meta">
+      <span>Seat: <b>Open</b> — Sen. Ann Millner (R) not seeking reelection</span>
+      <span>Republican: <b>Rep. Jill Koford</b>, House District 10 since 2025</span>
+      <span>Democrat: <b>Christina "CJ" Hernandez</b></span>
+      <span>Primary: <b>Koford unopposed</b> · Hernandez defeated Dakota Wurth, June 23, 2026</span>
+    </div>
+  </div>
+
+  <div class="start-here">
+    <h2>Start here</h2>
+    <p>Jill Koford (R) and CJ Hernandez (D) are running for the Senate seat Ann Millner is giving up. Koford is a sitting House member who's raised money her whole career from a network of PACs run largely by one man, Kyle Palmer, and who sponsors most of the state's current water and data-center legislation. Hernandez is a first-time candidate running almost entirely on small donations and her own money.</p>
+    <p>Several names come up again and again in what follows — <b>tap a card below</b> to see who each one is and why they matter, before reading the full breakdown.</p>
+    <p style="font-size:13.5px;border-top:1px solid var(--color-border);padding-top:14px;margin-top:14px;"><b>A note on scope:</b> this outlet reviews every candidate's available public record in full. Koford, a sitting House member since 2025, has years of campaign filings, sponsored bills, floor votes, and conflict-of-interest disclosures on the public record. Hernandez, a first-time candidate, doesn't — there's no legislative history to review because she hasn't held office. The difference in how much material appears below reflects the record each has actually generated, not a decision to scrutinize one candidate more than the other.</p>
+  </div>
+
+  <h3 class="sub-title" style="margin-top:0;">Who's who</h3>
+  <div class="wide-grid">
+    <div class="wtile">
+      <div class="wtile-inner">
+        <div class="wface wfront">
+          <div class="wname">Kyle Palmer</div>
+          <div class="wrole">Treasurer, NUPAC &amp; UHREC · owns Irish Elk LLC</div>
+          <div class="whint">tap for why this name matters →</div>
+        </div>
+        <div class="wface wback">
+          <span class="wlabel">WHY THIS NAME MATTERS</span>
+          <p>He's treasurer of both PACs that fund Koford, with sole signature authority over UHREC's money — and his own consulting firm, Irish Elk LLC, gets paid by those same committees. $229,830.73 has gone to him or his firm across NUPAC, UHREC, and Koford's own campaign. Full job history below.</p>
+        </div>
+      </div>
+    </div>
+    <div class="wtile">
+      <div class="wtile-inner">
+        <div class="wface wfront">
+          <div class="wname">NUPAC</div>
+          <div class="wrole">Northern Utah Legislative PAC</div>
+          <div class="whint">tap for why this name matters →</div>
+        </div>
+        <div class="wface wback">
+          <span class="wlabel">WHY THIS NAME MATTERS</span>
+          <p>Founded 2018 by Ann Millner, Casey Snider, and Kyle Palmer. Seeded Koford's first House run with $5,000 in 2022, then $42,500 total by 2024 — the PAC that first backed her rise, run by the senator whose seat she's now seeking.</p>
+        </div>
+      </div>
+    </div>
+    <div class="wtile">
+      <div class="wtile-inner">
+        <div class="wface wfront">
+          <div class="wname">UHREC</div>
+          <div class="wrole">Utah House Republican Election Committee</div>
+          <div class="whint">tap for why this name matters →</div>
+        </div>
+        <div class="wface wback">
+          <span class="wlabel">WHY THIS NAME MATTERS</span>
+          <p>The House GOP caucus's own PAC, also treasured by Kyle Palmer. Gave Koford $60,000 gross across six payments — including a $10,000 check that was sent back and then vanished from her own filings.</p>
+        </div>
+      </div>
+    </div>
+    <div class="wtile">
+      <div class="wtile-inner">
+        <div class="wface wfront">
+          <div class="wname">Clyde Companies</div>
+          <div class="wrole">Construction &amp; development conglomerate</div>
+          <div class="whint">tap for why this name matters →</div>
+        </div>
+        <div class="wface wback">
+          <span class="wlabel">WHY THIS NAME MATTERS</span>
+          <p>Gave Koford $500 directly. Its subsidiary, Clyde Capital Group, owns 45% of the Nordic Village PID — an $80M taxpayer-backed bonding district run by an unelected board, the exact structure Koford's own platform criticizes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="wtile">
+      <div class="wtile-inner">
+        <div class="wface wfront">
+          <div class="wname">Google</div>
+          <div class="wrole">Donor — and a data center operator</div>
+          <div class="whint">tap for why this name matters →</div>
+        </div>
+        <div class="wface wback">
+          <span class="wlabel">WHY THIS NAME MATTERS</span>
+          <p>Gave Koford $2,000 while building a $1.2 billion Utah data-center campus — the exact category of company her own HB 76 regulates. She also personally holds Google stock, disclosed on her own conflict-of-interest form.</p>
+        </div>
+      </div>
+    </div>
+    <div class="wtile">
+      <div class="wtile-inner">
+        <div class="wface wfront">
+          <div class="wname">Ann Millner</div>
+          <div class="wrole">Outgoing SD5 senator</div>
+          <div class="whint">tap for why this name matters →</div>
+        </div>
+        <div class="wface wback">
+          <span class="wlabel">WHY THIS NAME MATTERS</span>
+          <p>A founding NUPAC officer who's now retiring from the exact seat Koford — a candidate her own PAC helped build — is running for unopposed. Millner and her own committee also gave Koford money directly this cycle.</p>
+        </div>
+      </div>
+    </div>
+    <div class="wtile">
+      <div class="wtile-inner">
+        <div class="wface wfront">
+          <div class="wname">House Speaker Leadership PAC</div>
+          <div class="wrole">Speaker Mike Schultz's own leadership PAC</div>
+          <div class="whint">tap for why this name matters →</div>
+        </div>
+        <div class="wface wback">
+          <span class="wlabel">WHY THIS NAME MATTERS</span>
+          <p>Gave Koford $27,000 — one of the five PACs/party committees behind her $177,500 in institutional support. Schultz himself and his campaign also gave her money directly. Kyle Palmer's Irish Elk LLC draws fees from this PAC too, not just NUPAC and UHREC.</p>
+        </div>
+      </div>
+    </div>
+    <div class="wtile wtile-wide">
+      <div class="wtile-inner">
+        <div class="wface wfront">
+          <div class="wname">Casey Snider</div>
+          <div class="wrole">House Majority Leader · officer on both PACs</div>
+          <div class="whint">tap for why this name matters →</div>
+        </div>
+        <div class="wface wback">
+          <span class="wlabel">WHY THIS NAME MATTERS</span>
+          <p>A founding NUPAC officer since 2018 who is also, as House Majority Leader, a Primary Officer of UHREC — the only person in this network holding a leadership role on both of the PACs Kyle Palmer treasures. Full bio below.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="verdict-box">
+    <span class="label">What the records show</span>
+    <p>Koford's rise runs directly through the Northern Utah Legislative PAC (NUPAC) — a committee controlled by Sen. Ann Millner, Rep. Casey Snider, and treasurer Kyle Palmer, who operates through his own firm, Irish Elk LLC. NUPAC seeded Koford's first House run in 2024; Irish Elk took over her campaign's compliance work in 2025; and when Millner declined to seek reelection to Senate District 5 in January 2026, Koford filed for that exact seat and ran unopposed through convention.</p>
+    <p>Full raw disclosure exports covering every report Koford has filed since 2021 show <b>$426,114.03</b> raised and $330,347.88 spent over her career. Five PAC or party committees account for $177,500 of that: UHREC, NUPAC, the Weber County Republican Party, House Speaker Leadership PAC, and Wilson Leadership PAC. Across her own campaign and the two committees most closely tied to it (NUPAC and UHREC), Kyle Palmer's Irish Elk LLC and its principal have been paid <b>$229,830.73</b> combined — while serving as treasurer of the committees making those payments.</p>
+    <p>Hernandez's full 2026 record — Convention, Primary, and a General-period report running through 9/9/2026 — shows a different shape: $73,877.15 raised, $25,000 of it (34%) her own money. No PAC or party money appears until after her June 23 primary win; since then, five committees have given $12,550, led by two $5,000 checks from Women and Politics PAC. The remaining $36,327.15 comes from individual donors, including several sitting Utah Democratic legislators giving personally.</p>
+  </div>
+
+  <table class="rubric-table">
+    <thead>
+      <tr><th>Candidate</th><th>Total raised</th><th>PAC/party</th><th>Self-funded</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Koford (2021&ndash;2026, every report)</td>
+        <td><span class="grade-letter">$426,114</span></td>
+        <td><span class="grade-letter">$177,500</span> <span style="font-size:0.8em;color:var(--color-ink-soft);">(5 PACs/party committees)</span></td>
+        <td><span class="grade-letter">$24,215</span> <span style="font-size:0.8em;color:var(--color-ink-soft);">(6% of total)</span></td>
+      </tr>
+      <tr>
+        <td>Hernandez (2026 cycle to date)</td>
+        <td><span class="grade-letter">$73,877</span></td>
+        <td>$12,550 <span style="font-size:0.8em;color:var(--color-ink-soft);">(began after her primary win)</span></td>
+        <td><span class="grade-letter">34%</span> <span style="font-size:0.8em;color:var(--color-ink-soft);">of her total</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ============ SECTION: THE NUPAC PIPELINE ============ -->
+  <section class="sect" id="pipeline">
+    <h2 class="sect-title"><span class="n">01</span> The NUPAC pipeline</h2>
+    <p>The path from PAC to Senate seat, in order:</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <span class="tl-date">AUGUST 20, 2018</span>
+        <p>Northern Utah Legislative PAC is created. Its Statement of Organization lists Sen. F. Ann Millner and Rep. Casey Snider as Primary Officers and Kyle M. Palmer as Chief Financial Officer/Treasurer — a role he later fills through his own consulting firm, Irish Elk LLC, formed February 2021. All three officers list the same Layton address and phone number on the PAC's own filing.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-date">2022</span>
+        <p>NUPAC gives $5,000 to Koford's first campaign — a losing House District 10 bid against incumbent Rosemary Lesser.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-date">2024</span>
+        <p>NUPAC gives another $5,000 when Koford wins the seat outright.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-date">2025</span>
+        <p>Now a sitting representative, Koford's campaign pays Irish Elk LLC $3,000 to take over her compliance and ledger work.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-date">JANUARY 2026</span>
+        <p>Millner — the NUPAC officer whose seat this is — declines to file for reelection. Koford files for Millner's exact seat within days, clears the Republican convention unopposed, and draws no primary opponent.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-date">JUNE 23, 2026</span>
+        <p>On the other side, Hernandez wins a contested Democratic primary against Dakota Wurth and is endorsed by the Weber Democratic Women's Club.</p>
+      </div>
+    </div>
+    <p style="font-size:13.5px;color:var(--color-ink-soft);">Millner chairs the Senate Economic Development and Workforce Services Committee, the Higher Education Appropriations Subcommittee, the School Security Task Force, and the Senate Ethics Committee. Koford sits on that same Higher Education Appropriations Subcommittee in the House.</p>
+  </section>
+
+  <!-- ============ SECTION: FOLLOW THE MONEY ============ -->
+  <section class="sect" id="money">
+    <h2 class="sect-title"><span class="n">02</span> Follow the money</h2>
+    <p>Full raw disclosure exports for both candidates are now in hand — though Hernandez's most recent report runs further into the year (through 9/9/2026) than Koford's (through her Primary report, early June). That gap is noted below rather than smoothed over.</p>
+
+    <figure class="flow-diagram">
+      <svg viewBox="0 0 680 380" role="img" aria-label="Diagram showing how PAC money reaches Jill Koford's campaign and Kyle Palmer">
+        <defs>
+          <marker id="famarrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#5a4f47" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+        <path d="M340 96 L340 160" fill="none" stroke="#5a4f47" stroke-width="1" marker-end="url(#famarrow)"/>
+        <text x="360" y="132" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">$177,500</text>
+
+        <path d="M340 216 L340 280" fill="none" stroke="#5a4f47" stroke-width="1" marker-end="url(#famarrow)"/>
+        <text x="360" y="252" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">$38,712 direct</text>
+
+        <path d="M190 68 L140 68 L140 308 L190 308" fill="none" stroke="#5a4f47" stroke-width="1" marker-end="url(#famarrow)"/>
+        <text x="20" y="188" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">$191,119</text>
+        <text x="20" y="204" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">(NUPAC+UHREC)</text>
+
+        <path d="M490 308 L560 308 L560 68 L490 68" fill="none" stroke="#5a4f47" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#famarrow)"/>
+        <text x="500" y="180" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">Treasurer of</text>
+        <text x="500" y="196" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">both committees</text>
+
+        <g>
+          <rect x="190" y="40" width="300" height="56" rx="8" fill="#fbf9f3" stroke="#ddd3c2" stroke-width="0.5"/>
+          <text x="340" y="60" text-anchor="middle" dominant-baseline="central" font-family="Playfair Display, serif" font-weight="700" font-size="14" fill="#241c18">PACs &amp; party committees</text>
+          <text x="340" y="80" text-anchor="middle" dominant-baseline="central" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">$177,500 to Koford</text>
+        </g>
+
+        <g>
+          <rect x="190" y="160" width="300" height="56" rx="8" fill="#fbf9f3" stroke="#ddd3c2" stroke-width="0.5"/>
+          <text x="340" y="180" text-anchor="middle" dominant-baseline="central" font-family="Playfair Display, serif" font-weight="700" font-size="14" fill="#241c18">Koford's campaign</text>
+          <text x="340" y="200" text-anchor="middle" dominant-baseline="central" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">$426,114 raised, lifetime</text>
+        </g>
+
+        <g>
+          <rect x="190" y="280" width="300" height="56" rx="8" fill="#fbf9f3" stroke="#ddd3c2" stroke-width="0.5"/>
+          <text x="340" y="300" text-anchor="middle" dominant-baseline="central" font-family="Playfair Display, serif" font-weight="700" font-size="14" fill="#241c18">Kyle Palmer / Irish Elk LLC</text>
+          <text x="340" y="320" text-anchor="middle" dominant-baseline="central" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">$229,830.73 paid total</text>
+        </g>
+      </svg>
+      <figcaption>NUPAC and UHREC fund Koford's campaign; both also pay Kyle Palmer's Irish Elk LLC, while Palmer serves as treasurer of both committees.</figcaption>
+    </figure>
+
+    <div class="fund-toggle">
+      <button class="active" data-target="koford">Jill Koford</button>
+      <button data-target="hernandez">CJ Hernandez</button>
+    </div>
+
+    <div class="fund-panel active" data-panel="koford">
+      <div class="fund-donut-wrap">
+        <div class="fund-donut" style="background: conic-gradient(var(--color-stat) 0% 54.3%, var(--color-link) 54.3% 69.1%, var(--color-header-start) 69.1% 78.9%, var(--color-ink-soft) 78.9% 100%);">
+          <div class="fund-donut-center">KOFORD<br>2026</div>
+        </div>
+        <div class="fund-donut-legend">
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-stat);"></span><span class="fund-donut-legend-amt">54.3%</span> <span class="fund-donut-legend-lbl">Individual donors ($33,177.47)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-link);"></span><span class="fund-donut-legend-amt">14.8%</span> <span class="fund-donut-legend-lbl">PACs, party &amp; trade associations ($9,050)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-header-start);"></span><span class="fund-donut-legend-amt">9.8%</span> <span class="fund-donut-legend-lbl">Corporate donors ($6,000)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-ink-soft);"></span><span class="fund-donut-legend-amt">21.1%</span> <span class="fund-donut-legend-lbl">Transfer from House account ($12,873.67)</span></div>
+        </div>
+      </div>
+      <p>Koford's 2026 cycle (Convention + Primary reports) raised $61,101.14. Zoomed out to her full career (2021&ndash;2026, every report), the picture skews further toward institutional money: $426,114.03 raised lifetime, with $177,500 of it from just five PACs and party committees.</p>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Five PACs and party committees</span><span class="rc-amount">$177,500 combined, lifetime</span></div>
+        <p>Utah House Republican Election Committee (UHREC) — $60,000 gross across six $10,000 payments (9/22/22, 10/7/22, 8/28/24, 9/20/24, 10/17/24, 12/18/25), the last of which was returned (see below), for a net $50,000. Northern Utah Legislative PAC (NUPAC) — $42,500 across five payments, 2022–2024. Weber County Republican Party — $28,000. House Speaker Leadership PAC — $27,000 (Mike Schultz's own leadership PAC). Wilson Leadership PAC — $20,000 (former House Speaker Brad Wilson's leadership PAC).</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">The $10,000 round trip</span><span class="rc-amount">Resolved from both sides</span></div>
+        <p>UHREC's own filings show a $10,000 expenditure to "Jill Koford Campaign" on 12/23/2025 (Koford recorded receiving it 12/18/2025), then a $10,000 <i>contribution</i> received FROM "Jill Koford Campaign" on 1/15/2026 — the money went back. The amendment record on Koford's own side reads verbatim: an entry dated 1/11/2025, payee "Utah House Repbulcain Election Committee," purpose "Return of a Contribution," amount ($10,000.00) — deleted in full on 1/11/2026 and never re-entered. Her current public filings show no record of returning any $10,000. A plausible, non-accusatory explanation: UHREC is the House caucus committee, and by mid-January 2026 Koford had already filed for a Senate seat.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Utah Association of Realtors</span><span class="rc-amount">$15,359.88, lifetime</span></div>
+        <p>$5,000 in direct cash across three election cycles, plus $10,359.88 in in-kind campaign literature during her 2022 general election alone — $1,800 for door hangers (9/30/22), $5,725 for more door hangers (10/22/22), and $2,834.88 for a mailer (10/24/22).</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Citizens to Elect Jeff Burton</span><span class="rc-amount">$5,000</span></div>
+        <p>Received 6/8/2026, from the wind-down account of former Rep. Jeff Burton (R), who resigned his House seat earlier that year. Burton's committee made exactly two disbursements in 2026 — this one and an identical $5,000 to Rep. Douglas Fiefia two weeks earlier — both after Burton had already left office.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">A transfer, not a new contribution</span></div>
+        <p>On 1/15/2026, Koford's Senate campaign recorded a $12,873.67 contribution described as a "Transfer of Balance from House Account" — her leftover House campaign funds, carried over into her new Senate account when she switched races. That's a legal, disclosed mechanism, not outside money, noted here for completeness rather than as a concern.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Other notable 2026 donors</span></div>
+        <p>Charles L. Smith $4,000 (her single largest individual gift — likely Chuck Smith, co-founder of Get Away Today, the South Ogden travel company; he and his wife Julie also publicly endorse her campaign, though the endorsement page doesn't include a middle initial to confirm the match beyond the shared name and area); Five T Corporation $8,500 (see below); Dan Hemmert $2,500 personally; Elect Mike Schultz $4,500 combined; Committee to Elect Mike McKell $2,000; Friends of Ann Millner $500 and Ann Millner personally $500 — Millner's own committee and Millner herself both gave directly to the person succeeding her. Out-of-state corporate PAC money also includes Airbnb ($1,000), Cigna ($250), Comcast ($500 x2 = $1,000), Entertainment Software Association ($500), and Republic Services ($250).</p>
+        <div class="fund-bar-row"><div class="fund-bar-label">Five T Corporation</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 100%; background: var(--color-link);"></div></div><div class="fund-bar-amt">$8,500</div></div>
+        <div class="fund-bar-row"><div class="fund-bar-label">Elect Mike Schultz</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 53%; background: var(--color-link);"></div></div><div class="fund-bar-amt">$4,500</div></div>
+        <div class="fund-bar-row"><div class="fund-bar-label">Charles L. Smith</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 47%; background: var(--color-link);"></div></div><div class="fund-bar-amt">$4,000</div></div>
+        <div class="fund-bar-row"><div class="fund-bar-label">Dan Hemmert</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 29%; background: var(--color-stat);"></div></div><div class="fund-bar-amt">$2,500</div></div>
+        <div class="fund-bar-row"><div class="fund-bar-label">Elect Mike McKell</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 24%; background: var(--color-stat);"></div></div><div class="fund-bar-amt">$2,000</div></div>
+        <div class="fund-bar-row"><div class="fund-bar-label">Comcast (x2)</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 12%; background: var(--color-stat);"></div></div><div class="fund-bar-amt">$1,000</div></div>
+        <div class="fund-bar-row"><div class="fund-bar-label">Airbnb</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 12%; background: var(--color-stat);"></div></div><div class="fund-bar-amt">$1,000</div></div>
+        <div class="fund-bar-row"><div class="fund-bar-label">Friends of Millner</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 6%; background: var(--color-ink-soft);"></div></div><div class="fund-bar-amt">$500</div></div>
+        <div class="fund-bar-row"><div class="fund-bar-label">Ann Millner (personal)</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 6%; background: var(--color-ink-soft);"></div></div><div class="fund-bar-amt">$500</div></div>
+        <div class="fund-bar-row"><div class="fund-bar-label">Entertainment SW Assn</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 6%; background: var(--color-ink-soft);"></div></div><div class="fund-bar-amt">$500</div></div>
+        <div class="fund-bar-row"><div class="fund-bar-label">Cigna</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 3%; background: var(--color-ink-soft);"></div></div><div class="fund-bar-amt">$250</div></div>
+        <div class="fund-bar-row"><div class="fund-bar-label">Republic Services</div><div class="fund-bar-track"><div class="fund-bar-fill" style="width: 3%; background: var(--color-ink-soft);"></div></div><div class="fund-bar-amt">$250</div></div>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Five T Corporation, identified</span><span class="rc-amount">$8,500</span></div>
+        <p>A South Ogden family corporation (registered 1995) run by President/Director Michael L. Hendry and Secretary Sandi L. Hendry. Michael Hendry is also a named endorser on Koford's campaign site, listed there as Vice President of Old Republic Title &amp; Escrow — a title/escrow business whose revenue tracks real-estate transaction volume, the same category her water and land-use bills touch. The corporation's own stated business activity isn't specified in its registry filing.</p>
+      </div>
+
+      <div class="flag-open">
+        <span class="fo-label">A data center gave to the data-center bill's sponsor — and she holds its stock</span>
+        <p>Google gave Koford $2,000 (5/18/2026). Google has purchased 300 acres in Eagle Mountain, Utah for a future data center campus, publicly committing $1.2 billion in investment over 30 years, and already leases space for a Google Cloud Platform region in Salt Lake City — putting it squarely in the category of company her own HB 76 (data center water reporting) regulates, and among the operators her stated "comprehensive policy" on data centers' water, land, and tax impact would apply to. Separately, her own conflict-of-interest disclosure lists Google among the stocks she holds valued at $5,000 or more. The donation and the stock are two different things — a contribution and a personal investment — but both mean Google's business outcomes are something she has a stake in, disclosed on her own form, while she writes its regulatory rules.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Her disclosed business holdings</span><span class="rc-amount">21 entities disclosed, 5 confirmed active</span></div>
+        <p>Her 2026 conflict-of-interest disclosure lists 21 LLCs and corporations she's a manager, member, or president of — most described only as "Management of Businesses" with no further detail. A public corporate-registry search confirms only 5 of those 21 disclosed entities are still active: Koford Holdings LLC, Rake LLC, and Richochet Bear Cave LLC (all Manager), Creative Design Ink LLC (Member), and Rechieve Foundation (Director). The rest either don't turn up as active officer roles in that registry or aren't indexed there — not confirmed inactive across the board, just not confirmed active. Two more entities are confirmed active in the registry but aren't on this list of 21 at all — North Fork Meadows Owners Association and Scoots Industries, LLC, both flagged separately below as omissions from her disclosure rather than counted here. Rechieve LLC (the disclosed motor vehicle dealership, distinct from Rechieve Foundation) — registered agent Protean Edge, Inc., which Koford manages, at a real business address separate from her home — missed its March 2026 renewal and was administratively dissolved as of August 2026, meaning it lapsed sometime during her current term. Her stock holdings of $5,000 or more span 33 companies, including Google, Union Pacific, Philip Morris, Tesla, and several other large publicly traded firms — a standard diversified portfolio disclosure, listed here for completeness rather than as a finding in itself.</p>
+      </div>
+
+      <div class="flag-open">
+        <span class="fo-label">Protean Edge, Inc. — registered, but only to her husband</span>
+        <p><b>Correction:</b> an earlier version of this piece said Protean Edge, Inc. wasn't actively registered — that was wrong. It is: a Domestic Business Corporation formed December 29, 2011, active status, last renewed December 2025. The 2005 "assumed name" filing found earlier was a separate, unrelated, long-dissolved registration under the same name, not this corporation. The real finding is different: the registry lists only her husband, Rodney G. Koford, as both Officer and Director. Jill Koford's own COI form describes herself as "Manager" of Protean Edge and lists it as her previous employer, but she doesn't appear in the corporation's own state filing at all. That could simply mean Utah's registry wasn't updated to add her, or that her actual role there isn't the kind the state requires listing — it's noted here as a discrepancy between two public records, not a claim about which one is wrong.</p>
+      </div>
+
+      <div class="flag-open">
+        <span class="fo-label">Two entities not on her own disclosure form</span>
+        <p>A public corporate-registry search turns up two active roles that don't appear on her 2026 COI form's business-entity list (Item 2A), which asks for every entity where she is or was, in the preceding year, an owner or officer: she's listed as an active Director of North Fork Meadows Owners Association, Inc. (an HOA, since 2013) and as an active Manager of Scoots Industries, LLC (since 2015). Neither appears among the 20 entities she disclosed. A separate role — Director of Ogden Regional Airport Association Inc., a formal incorporated nonprofit, not just a "member" as her official House bio still describes it — missed its January 31, 2026 renewal deadline and was administratively dissolved April 21, 2026. Her official bio has not been updated to reflect that the entity no longer exists. Presented as a documented gap between public records, not a claim about intent — an HOA board seat, a dormant LLC, and an unrenewed nonprofit filing are common, easy things to leave off a form or a bio without meaning anything by it.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Matt Jensen, endorser — Partner, The Boyer Company</span></div>
+        <p>Boyer is a major Utah real estate developer with an existing Weber County footprint: it co-developed Business Depot Ogden, a 1,000+ acre industrial/business park. Not a campaign donation on file — a public endorsement from a partner at a firm whose business is exactly the kind of large-scale land development Koford's committee work (Revenue and Taxation, and her current TIF review) touches directly.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Self-funding</span><span class="rc-amount">$24,215.40 lifetime</span></div>
+        <p>Structured as loans, not straight contributions: $5,000 (2021), $15,000 (2022), $649 (2024), $3,000 and $566.40 (both 2025). A $20,000 expenditure on 12/23/2024, coded "Loans," matches her first two payments dollar-for-dollar — that money funded her own campaign, it wasn't paid back to her. All $24,215.40 is self-funding, not a loan she recovered — a different financing style from Hernandez's $25,000 straight contribution.</p>
+      </div>
+
+      <div class="flag-open">
+        <span class="fo-label">Not a routine corporate PAC</span>
+        <p>Koford also received $500 from Johnson &amp; Johnson PAC (JJPAC) on 12/23/2025. JJPAC's own 2026 Primary Report shows why that's notable: a beginning balance of ($69,000), zero contributions received, $10,000 in expenditures, and an ending balance of ($79,000) — a PAC that has reported no incoming contributions at all this cycle while continuing to pay out to Utah candidates. This outlet has already documented the same pattern funding Kirk Cullimore, Calvin Musselman, and other legislators. Koford is one more name on that list; her $500 gift isn't evidence of anything beyond what's already documented about the PAC itself.</p>
+      </div>
+
+      <div class="flag-open">
+        <span class="fo-label">Personal relationship confirmed, entity link still open</span>
+        <p>A cluster of donors sharing the surname Kier gave $11,956.19 combined across 2022–2026: Kier Construction ($6,956.19 across four gifts), Norma Kier ($3,000), Steve &amp; Tammy Kier, Scott &amp; Lora Kier, Scott Kier, Stephen Kier, and Kier Girls LLC. Steve Kier, identified on Koford's own endorsement page as "Founder of Kier Construction," publicly endorsed her campaign, describing a 20-year friendship through the Weber School District Foundation — confirming this is a personal relationship, not a coincidental donor cluster. Whether Kier Construction is the same Kier family behind Kier Development, the entity tied to the Nordic Village PID in this outlet's prior reporting, remains unconfirmed — flagged as a name match worth checking, not asserted as a connection.</p>
+      </div>
+    </div>
+
+    <div class="fund-panel" data-panel="hernandez">
+      <div class="fund-donut-wrap">
+        <div class="fund-donut" style="background: conic-gradient(var(--color-link) 0% 33.8%, var(--color-stat) 33.8% 83%, var(--color-header-start) 83% 100%);">
+          <div class="fund-donut-center">HERNANDEZ<br>2026</div>
+        </div>
+        <div class="fund-donut-legend">
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-link);"></span><span class="fund-donut-legend-amt">33.8%</span> <span class="fund-donut-legend-lbl">Self-funded ($25,000)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-stat);"></span><span class="fund-donut-legend-amt">49.2%</span> <span class="fund-donut-legend-lbl">Individual donors ($36,327.15)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-header-start);"></span><span class="fund-donut-legend-amt">17.0%</span> <span class="fund-donut-legend-lbl">PACs &amp; party committees ($12,550)</span></div>
+        </div>
+      </div>
+      <p>Hernandez's full 2026 record now runs through her Convention, Primary, and a General-period report covering 6/17&ndash;9/9/2026 — later than Koford's most recent report on file (Primary, through early June). Across all three: $73,877.15 raised, $25,000 of it her own money (contributed 2/25/2026). Individual donors, all periods combined, account for $36,327.15. PAC and party money — $12,550 — didn't appear until after she won her primary.</p>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">PAC money arrives after the primary</span><span class="rc-amount">$12,550</span></div>
+        <p>No PAC or party money appears in Hernandez's Convention or Primary reports. After her June 23 primary win, five committees gave: Women and Politics PAC $5,000 (7/23/2026) and another $5,000 (8/27/2026); Operating Engineers 3 PAC $1,000; Teamsters Local Union No. 222 $750; Utah Democratic Party $500 cash (plus a separate $500 in-kind contribution, "reduced service cost," not counted in this total); and the Women's Democratic Club of Utah $300.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Sitting Democratic officials gave personally</span></div>
+        <p>Sen. Kathleen Riebe (D-SD15) $1,000; Sen. Karen Kwan (D-SD12) $500; Senate Minority Leader Luz Escamilla $250; former Salt Lake City Mayor Jackie Biskupski $250; SD9 candidate Silvia Catten $100; Rep. Patrice Arent $50. California Lt. Gov. Eleni Kounalakis also gave $1,000 from San Francisco — the largest out-of-state gift of the cycle. George and Mary Hall's $2,000 (8/29/2026) is the largest single gift from anyone besides Hernandez.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Rosemary Lesser</span><span class="rc-amount">$1,750 combined</span></div>
+        <p>The former HD10 representative Koford unseated in 2024 has now given Hernandez $1,750 across four contributions spanning the Convention, Primary, and General periods — the largest total from any individual besides Hernandez herself.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Small cross-support from fellow Weber County Democrats</span></div>
+        <p>Several other 2026 Democratic candidates gave Hernandez small individual amounts: Angela Choberka ($150 combined, HD9), Bianca Mittendorf ($25, HD7), David Calder ($40, HD11), and Peter Crosby ($10, UT-2 congressional). These read as candidate-to-candidate individual solidarity, not PAC coordination — a different pattern from the institutional cross-funding documented on Koford's side.</p>
+      </div>
+
+      <div class="record-card">
+        <div class="rc-head"><span class="rc-name">Apollo Political</span><span class="rc-amount">~$19,426 combined</span></div>
+        <p>Hernandez's dominant vendor through her Primary report, appearing under three slightly different name spellings across dozens of line items — digital/media consulting, by far her largest expenditure category to that point. Other spending includes $3,105 to the Utah State Democratic Party's coordinated campaign and ActBlue accounts, and smaller print/design vendors (Lyon Printing, Service Press, Sun Lithographing). Expenditure detail for the General-reporting period hasn't been provided yet — only its contributions have.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ SECTION: A CLOSER LOOK ============ -->
+  <section class="sect" id="closer-look">
+    <h2 class="sect-title"><span class="n">03</span> A closer look: Snider and Palmer</h2>
+    <p>Before the full money trail, two names worth knowing in more depth — one an elected official who sits atop both PACs in this story, the other a private consultant paid by nearly all of them.</p>
+
+    <details class="record-details">
+      <summary>Casey Snider <span class="rc-amount">House District 5 since 2018</span></summary>
+      <div class="rd-body">
+        <p>Casey Snider represents House District 5 (Cache County — Mendon, Providence, Millville, Nibley, Wellsville, Hyrum, Paradise, and Avon), first elected in 2018. He's been House Majority Leader since June 2025, succeeding Jefferson Moss; before that he was Majority Assistant Whip starting in 2023. Outside the legislature, he's a rancher/farmer in Cache County and volunteer firefighter, and serves as Executive Director of the Bear River Land Conservancy. He holds a B.S. from Utah State University and a Master's from Johns Hopkins. He's a founding NUPAC officer (2018–present) and, in his capacity as Majority Leader, also a Primary Officer of UHREC.</p>
+      </div>
+    </details>
+
+    <details class="record-details">
+      <summary>Kyle Palmer <span class="rc-amount">Never elected to office</span></summary>
+      <div class="rd-body">
+        <p>Kyle Palmer has never held elected office. His current, self-described full-time role is Principal of Irish Elk LLC (January 2021–present), the consulting firm through which he's paid by NUPAC, UHREC, and Koford's own campaign. Immediately before and overlapping with that, he was Associate Director at the Governor's Office of Economic Opportunity (July 2021–January 2024, also full-time per his own LinkedIn). Earlier: Senior Policy Advisor to the Salt Lake County Council (December 2020–July 2021), Senior Policy Advisor to the Utah County Commission (January 2019–December 2020), and a partner at Election Hive (January 2018–January 2019). He holds a B.B.A. in accountancy from the University of Notre Dame (2016). Beyond NUPAC and UHREC, this outlet's broader PAC research has documented him holding treasurer or CFO roles on at least three more committees — House Speaker Leadership PAC, UCL PAC, and Adams Leadership PAC — five PACs in total.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ SECTION: WHERE THE MONEY GOES ============ -->
+  <section class="sect" id="downstream">
+    <h2 class="sect-title"><span class="n">04</span> Where the money goes</h2>
+    <p>The money flowing into Koford's campaign doesn't stop with her — a share of it, and much more besides, flows onward to the same treasurer who helped raise it.</p>
+
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Kyle Palmer / Irish Elk LLC</span><span class="rc-amount">$229,830.73 combined</span></div>
+      <p>Palmer serves as treasurer of both NUPAC and UHREC — with sole signature authority on UHREC — while his firm, Irish Elk LLC, draws consulting fees from the same committees he controls. Across NUPAC ($108,280.18, including $19,755.18 paid to Palmer personally), UHREC ($82,838.55), and direct payments from Koford's own campaign ($38,712.00), the combined total paid to Palmer or his firm reaches $229,830.73. This arrangement is permissible under current state statute; it's presented here as a documented structure, not a legal conclusion.</p>
+      <span class="rc-tag">Cross-reference: NUPAC network</span>
+    </div>
+
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Palmer's overlap with state government</span></div>
+      <p>From July 2021 to January 2024, Palmer simultaneously held a full-time state government position — Associate Director for the Unified Economic Opportunity Commission at the Governor's Office of Economic Opportunity ("Go Utah") — per the office's own August 2021 press release, while also running Irish Elk LLC and serving as NUPAC's treasurer, both of which he lists on his own LinkedIn as full-time roles for the same period. During that 2-year-7-month overlap, NUPAC and Koford's campaign paid Palmer or Irish Elk LLC $59,531.29 combined. Palmer's LinkedIn profile itself describes the state role as "Director," a title the Go Utah announcement doesn't use — it names him Associate Director.</p>
+    </div>
+
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Clyde Companies</span><span class="rc-amount">$500 to Koford · $11,500 to UHREC</span></div>
+      <p>Clyde Companies, Inc. gave Koford's Senate campaign $500 directly — far smaller than the $11,500 combined it and subsidiary Staker Parson Companies gave UHREC across 2023–2025 ($5,000, $1,500, $5,000, and $3,500). Clyde Companies is separately documented in connection with land acquisition for the Nordic Village PID.</p>
+    </div>
+
+    <div class="flag-open">
+      <span class="fo-label">Background context, not about Koford directly</span>
+      <p>NUPAC's own five-year DEX exports show 29 deleted line items total — 27 of them fall in the identical "September 30th" report period, every year from 2022 through 2025. This is a pattern in the PAC's own filing history, not a finding about Koford's campaign specifically, but it's part of the same funding pipeline documented above.</p>
+    </div>
+
+    <div class="flag-open">
+      <span class="fo-label">Name correction in the amendment history</span>
+      <p>Two 2021 expenditures from Koford's own campaign were originally recorded as payments to "Kyle Palmer" personally ($4,000 on 11/20/2021 and $4,000 on 12/9/2021). Both entries were deleted on 12/30/2021; the currently-live record shows two Irish Elk LLC expenditures of the identical amounts on the identical dates — meaning the payments were re-filed under the LLC's name rather than Palmer's own, not a new or additional expense.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION: JILL KOFORD ============ -->
+  <section class="sect" id="koford-bio">
+    <h2 class="sect-title"><span class="n">05</span> Jill Koford</h2>
+    <p>Koford, a Republican from Ogden, holds a B.A. in English from Weber State University and an M.A.T. (Master of Arts in Teaching) from the University of Southern California. She owns Creative Design Ink, a graphic design company; is president of the Rechieve Foundation; and is co-owner and CFO of Protean Edge, Inc. — both smaller, family-run entities registered to her home address alongside her husband, Rod Koford. She has represented House District 10 (South Ogden, Riverdale, Washington Terrace, and Uintah) since January 1, 2025, after defeating incumbent Rosemary Lesser in the 2024 general election — her second run for the seat, having lost to Lesser in 2022.</p>
+    <p>Her House committee assignments are the Higher Education Appropriations Subcommittee, House Natural Resources, Agriculture, and Environment, House Revenue and Taxation, the Political Subdivisions Interim Committee, and the Revenue and Taxation Interim Committee.</p>
+    <p>She is running for the seat vacated by Sen. Ann Millner, who has represented the district since 2015 (as District 18 before 2023 redistricting, District 5 after). Millner chairs the Senate Economic Development and Workforce Services Committee, the Higher Education Appropriations Subcommittee, the School Security Task Force, and the Senate Ethics Committee.</p>
+
+    <h3 class="sub-title">Correction: her legislative record</h3>
+    <p>An earlier version of this piece said Koford had not sponsored comparable legislation to Millner's. That was wrong. Koford is the House sponsor of three of the four bills in the 2026 water-rights package this outlet has separately documented as the "Stratos legislative ecosystem" — legislation that passed and was signed before the Stratos AI data center project was publicly announced. Six bills, expanded below — click any one to read the detail. The letter badge on each is this bill's own grade against the same five-criteria rubric applied to her whole record in the "Graded by the rubric" section further down; individual bills can score higher or lower than her overall average.</p>
+
+    <details class="record-details">
+      <summary><span class="bill-grade grade-c">C</span>HB 76, Data Center Water Policy Amendments <span class="rc-amount">Signed — 2 loopholes found</span></summary>
+      <div class="rd-body">
+        <p>Requires large data centers to report water use to the state, with fines for non-compliance. Senate floor sponsor Sen. Scott Sandall. Drafted by Legislative Counsel attorney Patricia Owen, who also drafted HB 60, 348, 410, and several related bills in the same package. Passed the House 62-2-11 on final concurrence (3/5/2026) — broad bipartisan support, though it nearly failed in the Senate before a late amendment limited it to new data centers only.</p>
+        <p style="font-size:0.92rem;color:var(--color-ink-soft);"><b>Correction:</b> an earlier version of this piece said the penalty was $10,000/day. The enrolled bill text (§73-5-8.3(6)(c)) sets it at up to $100/day — that was wrong here and is fixed.</p>
+        <p><b>Not retroactive — the existing fleet is exempt.</b> The bill defines a "new large data center" as one that "begins operations on or after July 1, 2026" (§73-5-8.3(1)(f)), and only new large data centers are covered by any part of the law. Utah had roughly 48 operational data-center facilities before this bill took effect. None of them are required to report anything under HB 76.</p>
+        <p><b>A second loophole: what "transparency" doesn't cover.</b> The bill does require actual water withdrawal amounts to be published per facility, not in the aggregate (§(5)(a)). But §(5)(b) — added after the original draft — lets the division treat several other categories as proprietary and shield them entirely if the operator invokes Utah's trade-secret statute: discharge treatment plans, discharge temperature changes, water reuse or replacement plans, and a facility's own conservation and pollution-protection efforts. For those categories the public only gets a county-level aggregate, published once a year — not the facility-level detail the bill's title promises.</p>
+      </div>
+    </details>
+
+    <details class="record-details">
+      <summary><span class="bill-grade grade-c">C</span>HB 348, Dedicated Water Amendments <span class="rc-amount">Signed</span></summary>
+      <div class="rd-body">
+        <p>Creates a new "dedicated water application" (§73-3-30.3) for water rights holders to redirect water toward instream flow, sovereign lands, or Colorado River System reservoir delivery. The state engineer must prioritize processing these applications, and approval does not require the applicant to ever actually deliver the dedicated water in any given year or specific quantity (§(3)(c)) — confirmed directly against the bill's own text, not a secondhand characterization. This wasn't weakened into the bill through a later substitute; it's how the bill was written from its introduced version. The bill does include real, if discretionary, safeguards: the state engineer may deny an application that would pull agricultural land out of irrigation more than two years out of five, and may require ongoing annual reporting to confirm the dedication is actually happening. Floor sponsor Sandall.</p>
+      </div>
+    </details>
+
+    <details class="record-details">
+      <summary><span class="bill-grade grade-b">B</span>HB 410, Great Salt Lake Preservation Program <span class="rc-amount">Signed, $2.75M</span></summary>
+      <div class="rd-body">
+        <p>Establishes a program compensating farmers who temporarily lease water to the lake without permanently surrendering their water rights — reduced from an original $5M ask to $2.75M after a Senate amendment and a brief conference committee. Floor sponsor Sandall.</p>
+      </div>
+    </details>
+
+    <details class="record-details">
+      <summary><span class="bill-grade grade-d">D</span>S.B. 284, House floor sponsor <span class="rc-amount">Signed — absorbed her own dead bill</span></summary>
+      <div class="rd-body">
+        <p>Senate chief sponsor Lincoln Fillmore. Creates a "reasonable future water requirement" standard that limits when a municipality can deny a water exaction to a developer — but the municipality can't rely on that standard unless it has a completed written water plan, and the rule defining the standard isn't due until January 1, 2028. HB 439 (Water Planning Amendments) was merged into it on the House floor on March 6, 2026.</p>
+        <p>The bill is bigger than its water-planning framing suggests. Koford's own HB 477 (Land Use Regulation Revisions, floor sponsor Kirk Cullimore) died as its own bill number at Sine Die — but its substance (municipal-incorporation feasibility requests, planning commission powers, a detached-ADU mandate, and infrastructure-assurance accounts) was carried into this same bill across later substitutes. SB 284 was retitled twice as its scope grew: "Local Land Use Modifications" by its 5th substitute, then "Local Land and Water Modifications" by its 7th. A bill Koford floor-sponsors under a water-planning name ended up absorbing land-use policy from her own dead bill — a documented pattern this outlet has tracked across several other 2026 bills, not unique to this one.</p>
+        <p>The full introduced-to-final compare document confirms the water-exaction "kill switch" word for word: new §10-20-912(6) reads "a municipality may not impose an exaction for a water interest if... the municipality or the municipality's culinary water authority does not have a written plan," and that written plan isn't required until "beginning on January 1, 2028." It also adds a new §10-20-626, "Structure height," that's narrower and more specific than the bill's general land-use provisions: it bars a municipality from limiting the number of above-ground stories on any "commercial lodging structure" that had already been approved on or before September 1, 2025, so long as the new limit would conflict with a height the municipality had already approved. This outlet's prior reporting connected an earlier draft of this same structure-height provision to a specific Francis, Utah hotel project — that link is from separate research, not re-verified against this particular document, and is noted here as a lead worth confirming rather than a settled fact.</p>
+      </div>
+    </details>
+
+    <details class="record-details">
+      <summary><span class="bill-grade grade-b">B</span>HB 422, Public Infrastructure Districts Amendments <span class="rc-amount">Passed House 66-1 — didn't become law</span></summary>
+      <div class="rd-body">
+        <p>Koford's own PID reform bill, Senate sponsor Daniel McCay. This is directly relevant to the taxing-districts tension raised above — and cuts against a simple reading of it. The final version would have required an appointed PID board member to provide a conflict-of-interest disclosure, with a House floor amendment adding a requirement to regularly update that disclosure and post it publicly on the state's own public-notice website and the district's website. It also modified PID dissolution, owner-consent, and annexation rules. An earlier draft also required anyone selling residential property inside a PID to disclose that fact to buyers — that provision was dropped before the final version.</p>
+        <p>The bill passed the House 66-1 and got a favorable Senate committee recommendation (5-0-2), but never received a Senate floor vote. It was killed via an 11:59 PM enacting-clause strike on March 6, 2026 — the same night and the same procedural mechanism used to kill five other 2026 bills this outlet has separately tracked (HB 468, HB 286, HB 349, HB 167, and SB 318). Per Koford's own official sponsor record, its final status is "House/filed": it did not become law.</p>
+      </div>
+    </details>
+
+    <details class="record-details">
+      <summary><span class="bill-grade grade-f">F</span>HB 533, the bill she killed <span class="rc-amount">Held in committee</span></summary>
+      <div class="rd-body">
+        <p>The same legislative session, Koford personally moved to hold — killing in committee — a different water bill: H.B. 533, Groundwater Amendments, chief-sponsored by Rep. Michael L. Kohler. The official House Natural Resources, Agriculture, and Environment Committee minutes for 2/23/2026 record: "Rep. Koford moved to hold HB0533S02." HB 533 would have required land use authorities to weigh groundwater preservation before approving a change from agricultural to another land use — the kind of review that would complicate large-scale development on former farmland. Presented here as a documented committee action, not a claim about her reasoning for it.</p>
+      </div>
+    </details>
+
+    <div class="flag-open">
+      <span class="fo-label">Worth noting, not a claim about intent</span>
+      <p>UHREC gave Koford $60,000 gross across the same years she introduced and passed this package (2022, 2024, and a 2025 payment later returned) — the same PAC network already documented in the "Follow the money" section above. This is a timeline fact, not a claim about why the money moved.</p>
+    </div>
+    <p>Her official le.utah.gov sponsor record also shows several other 2026 bills she chief- or floor-sponsored. One is substantive: <b>HJR 7</b> proposed a constitutional amendment raising the cap on Utah's residential property-tax exemption from 45% to 60% of a home's fair market value — a real, specific attempt at the property-tax relief her platform and later newsletter both talk about, not just rhetoric. But unlike HB 422, it never got a recorded vote anywhere: its full status history shows every action, including the House Revenue and Taxation Committee's own "recommends returned to Rules," with no vote tally attached. It simply sat, then expired via the same 11:59 PM enacting-clause strike on March 6, 2026 that killed HB 422, HB 468, HB 286, HB 349, HB 167, and SB 318 — dying by the clock running out, not by anyone voting it down. The rest of her 2026 record:</p>
+    <div class="status-grid">
+      <div class="status-cell"><span class="sc-bill">HB 161</span><span class="sc-status fail">Did not pass — path unconfirmed</span></div>
+      <div class="status-cell"><span class="sc-bill">HB 477</span><span class="sc-status fail">Died — absorbed into SB 284</span></div>
+      <div class="status-cell"><span class="sc-bill">HB 441</span><span class="sc-status fail">Did not pass</span></div>
+      <div class="status-cell"><span class="sc-bill">HB 150</span><span class="sc-status fail">Did not pass</span></div>
+      <div class="status-cell"><span class="sc-bill">SB 252</span><span class="sc-status pass">Signed</span></div>
+      <div class="status-cell"><span class="sc-bill">SB 94</span><span class="sc-status fail">Did not pass</span></div>
+    </div>
+    <p>Her campaign's own "Results" page claims several accomplishments this cycle. Two are now confirmed against her own official sponsor record: HB 177 (ROTC Resident Student Status, floor sponsor Millner) was signed, matching her in-state-tuition claim, and SB 22 (Minor Driving Hours Amendments, floor sponsor Wayne Harper) was signed, matching her claim about letting parents designate a trusted adult to supervise a teen driver. One claim is corrected: an earlier version of this piece said HB 124 (the veterans' property-tax exemption bill, later substituted as "Veterans Amendments," Musselman Senate sponsor) was enacted. It wasn't — her own sponsor record lists its final status as "House/filed," meaning it did not become law. The epinephrine-access and SOAR/Northern Utah Youth Network funding claims don't appear anywhere on her official sponsor list at all — likely an appropriations line item or another member's bill she supported rather than something she sponsored — and remain unverified.</p>
+
+    <h3 class="sub-title">Her cosponsorships, cross-checked against bills already documented elsewhere</h3>
+    <p>Koford cosponsored roughly a dozen bills in 2026 she didn't sponsor or floor-manage — cosponsorship is a low bar dozens of members typically clear on any given bill, so this isn't the same weight of connection as the bills above. Four of her cosponsorships happen to be bills this outlet has separately documented in detail as cases where a bill's substance shifted away from its stated purpose. <b>Tap a card</b> for the detail.</p>
+    <div class="wide-grid">
+      <div class="wtile wtile-wide">
+        <div class="wtile-inner">
+          <div class="wface wfront">
+            <div class="wname">HB 125</div>
+            <div class="wrole">DNR Related Modifications, Shipp/Hinkins</div>
+            <div class="whint">tap for what changed →</div>
+          </div>
+          <div class="wface wback">
+            <span class="wlabel">WHAT CHANGED</span>
+            <p>A $5 million water-litigation appropriation was inserted the same day it was stripped from a different bill (HB 157), then removed again six hours later in a further substitute. The underlying litigation-funding authority became law; no funding source for it is disclosed. The same bill also quietly changed a separate rule: the state engineer used to have to automatically reverse a water application's approval if the applicant defaulted on a royalty contract or mineral lease tied to it (the kind used for lithium and other mineral extraction from water) — confirmed against the enrolled text, that's now discretionary.</p>
+          </div>
+        </div>
+      </div>
+      <div class="wtile wtile-wide">
+        <div class="wtile-inner">
+          <div class="wface wfront">
+            <div class="wname">HB 236</div>
+            <div class="wrole">Truth in Taxation Amendments, Peterson/McCay</div>
+            <div class="whint">tap for what changed →</div>
+          </div>
+          <div class="wface wback">
+            <span class="wlabel">WHAT CHANGED</span>
+            <p>Adds a new property-tax disclosure requirement, paired with a one-year grace period in which the State Tax Commission can't deny a rate increase even if a taxing entity skips the new requirement entirely in its first year.</p>
+          </div>
+        </div>
+      </div>
+      <div class="wtile wtile-wide">
+        <div class="wtile-inner">
+          <div class="wface wfront">
+            <div class="wname">HB 273</div>
+            <div class="wrole">Classroom Technology Amendments, Defay/Wilson</div>
+            <div class="whint">tap for what changed →</div>
+          </div>
+          <div class="wface wback">
+            <span class="wlabel">WHAT CHANGED</span>
+            <p>A Senate floor amendment from the bill's own sponsor loosened the standard for classroom instructional technology from "designed specifically for instructional use" to "demonstrated to have significant educational value" — a change this outlet's reporting ties to keeping general-purpose tools like Google's products eligible. Worth noting alongside the Google donation and stock holding already covered above — not because cosponsoring a bill 27 other members also signed shows anything on its own, but because it's one more data point in the same direction.</p>
+          </div>
+        </div>
+      </div>
+      <div class="wtile wtile-wide">
+        <div class="wtile-inner">
+          <div class="wface wfront">
+            <div class="wname">H.C.R. 9</div>
+            <div class="wrole">Elison/Sandall — the strangest case here</div>
+            <div class="whint">tap for what changed →</div>
+          </div>
+          <div class="wface wback">
+            <span class="wlabel">WHAT CHANGED</span>
+            <p>Introduced as a resolution about the federal national debt — deficit figures, Social Security and Medicare trust fund depletion, urging Congress to balance the budget. A later substitute deleted that text entirely and replaced it with a resolution about the Great Salt Lake, asking the federal government for restoration assistance. Same bill number, same sponsors, an entirely different subject. It passed and was signed under the Great Salt Lake title. Koford is listed as a cosponsor on the final version; whether she signed on before or after the swap isn't established.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Koford ran unopposed through the Republican convention for Senate District 5, and the GOP primary was canceled.</p>
+
+    <h3 class="sub-title">Platform vs. network</h3>
+    <p>Koford's campaign platform names taxing districts run by unelected boards as a specific problem, saying Utah's tax structure is "unduly complicated" partly because of "the creation of taxing districts led by unelected board members," and that she wants to "put the authority back in the hands of elected officials that voters hold accountable." <b>Tap below</b> to see how that compares to the record.</p>
+
+    <details class="record-details">
+      <summary>Worth reading side by side <span class="rc-amount">real bill, not just rhetoric</span></summary>
+      <div class="rd-body">
+        <p>Public Infrastructure Districts are exactly that structure: the Nordic Village PID discussed elsewhere in this outlet's reporting is run by a three-person board of appointed trustees, not elected officials. Two of those three trustees work for Clyde Capital Group — the same Clyde Companies subsidiary that gave $500 to Koford's campaign. Koford did act on this in 2026: her own HB 422 would have required PID board members to file and regularly update a public conflict-of-interest disclosure — precisely the kind of accountability measure the Nordic Village trustees' situation raises. It passed the House 66-1 but did not become law (see above). Separately, as of her September 2026 constituent newsletter, she says she's now "working on tax increment financing and evaluating how that is impacting property taxes" — a distinct, forward-looking effort on the tax side, with no bill filed yet.</p>
+        <p>Her broader platform describes self-reliance as "the Utah way," drawing a line between "a hand up" and "a handout" and saying Utahns shouldn't turn to government for their answers. A PID is a government-created financing tool that lets a private developer build infrastructure with publicly issued bonds while property owners inside the district — not the developer — carry the repayment risk. Whether that counts as a "handout" is a matter of interpretation the platform itself doesn't address; it's presented here as a question the two positions raise together, not an answer either way.</p>
+      </div>
+    </details>
+
+    <div class="record-card">
+      <div class="rc-head"><span class="rc-name">Also underway: data center policy</span></div>
+      <p>The same September 2026 newsletter says she's developing "a comprehensive policy to protect Utah's air, water, land, and tax revenue" around data centers, so that "if we build data centers in Utah, they serve Utah's best interests" rather than "special interests" — a continuation of the HB 76 water-transparency work above, expanded into land and tax revenue.</p>
+    </div>
+    <h3 class="sub-title">Housing affordability: platform vs. pattern</h3>
+    <p>Koford's platform says the way to keep housing affordable is to get government out of the way — cut regulatory burden and simplify permitting to lower construction costs. Her actual legislative record this session is a repeated pattern of doing exactly that for water, specifically — but the beneficiaries so far are large-scale commercial and resort developers and data centers, not affordable housing construction.</p>
+    <ul>
+      <li><b>HB 348</b> creates a new "dedicated water" application that doesn't require the applicant to ever actually deliver the water, and requires the State Engineer to prioritize processing it. The Utah Association of Realtors — one of her own donors — testified in support at the House hearing.</li>
+      <li><b>S.B. 284</b>, which she floor-sponsored, restricts when a municipality can deny a water exaction to a developer, and the standard that's supposed to protect municipalities isn't enforceable until a written plan exists — not required until 1/1/2028.</li>
+      <li><b>HB 533</b>, which she personally moved to kill, would have required checking groundwater impacts before converting farmland to development. Killing it removed that check — one less procedural step between agricultural land and a building permit.</li>
+      <li><b>HB 76</b> covers data centers — themselves large competing water users — but only new ones, with real gaps in what has to be disclosed (see above).</li>
+    </ul>
+
+    <details class="record-details">
+      <summary>What the eased water rules are actually being used for</summary>
+      <div class="rd-body">
+        <p>The clearest documented beneficiary of the easier water/land-use path is the Nordic Village PID — a Clyde Capital Group-backed development that includes 428 condos, 159 chalets, and 230 hotel rooms, against 50 units of workforce housing (about 6% of the residential total), per this outlet's prior Nordic Village reporting. Separately, that same reporting found new-construction buyers in the area face an additional $18,000–$22,500-plus per unit in water and sewer impact/connection fees once a district's own utility sets its rates — a cost layer that stacks on top of, not instead of, the PID's own special assessments. None of this is Koford's doing specifically; it's the broader system her bills make easier to build inside. But "reduce regulatory burden to lower housing costs" and "the record shows the eased path mostly serving a luxury resort and higher fees for buyers" are both true at once, and worth holding side by side.</p>
+        <p style="font-size:0.92rem;color:var(--color-ink-soft);">This is a pattern-level observation across multiple documented bills and one documented project, not a claim that Koford personally intended this outcome or that she's responsible for Nordic Village's unit mix or fee structure. It's also not the whole picture of her record: her own HB 422 this session would have added public conflict-of-interest disclosure requirements for PID board members, and HJR 7 would have raised the constitutional cap on the residential property-tax exemption from 45% to 60% — both real, specific accountability and affordability measures, detailed above, that didn't survive. That cuts against reading her record as uniformly one-directional.</p>
+      </div>
+    </details>
+    <p style="font-size:13.5px;color:var(--color-ink-soft);">Her public endorsement page also includes Joseph Kerry, the USBE District 2 board member covered separately in this outlet's reporting on donor-network and disclosure questions — noted here only as a cross-reference between two subjects already tracked in this outlet's work, not as a claim about either one.</p>
+  </section>
+
+  <!-- ============ SECTION: CJ HERNANDEZ ============ -->
+  <section class="sect" id="hernandez-bio">
+    <h2 class="sect-title"><span class="n">06</span> CJ Hernandez</h2>
+    <p>Christina "CJ" Hernandez was raised in Weber County by a single mother who worked as a public-school teacher. She and her husband are raising a blended family of five young adults. This is her first run for state office; she has no prior elected record to compare against her platform.</p>
+    <p>Hernandez's campaign site organizes her platform around five stated priorities: lowering the cost of housing, health care, child care, and groceries; strengthening public schools through investment in teachers and classrooms; protecting Utah's air, water, public lands, and the Great Salt Lake; building an economy that supports small businesses and job growth; and increasing government transparency and accountability.</p>
+    <p>She defeated Dakota Wurth in the June 23, 2026 Democratic primary and is endorsed by the Weber Democratic Women's Club. Her 2026 campaign has raised $73,877.15 to date — $25,000 of it a self-funded contribution she made 2/25/2026 — with PAC and party money ($12,550) only beginning to arrive after her primary win. Full detail in the "Follow the money" section above.</p>
+  </section>
+
+  <!-- ============ SECTION: GRADED BY THE RUBRIC ============ -->
+  <section class="sect" id="rubric">
+    <h2 class="sect-title"><span class="n">07</span> Graded by the rubric</h2>
+    <p>This outlet grades legislative and financing patterns against five standing criteria, applied the same way across every piece: Power, Transparency, Financial Accountability, Environmental Impact, and Community Impact. Graded here against Koford's documented 2026 legislative record specifically — not her fundraising, and not a judgment of her character.</p>
+    <table class="rubric-table">
+      <thead>
+        <tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Power</td>
+          <td><span class="grade-letter">D</span> Bad</td>
+          <td>Personally moved to kill HB 533 (a groundwater-review check on development). SB 284, which she floor-sponsors, limits municipalities' power to deny water exactions until 2028. Her one bill adding a check — HB 422's PID trustee disclosure requirement — passed the House but was killed by procedural strike before a floor vote.</td>
+        </tr>
+        <tr>
+          <td>Transparency</td>
+          <td><span class="grade-letter">F</span> Bad</td>
+          <td>SB 284 absorbed her own dead HB 477 through undisclosed substitutes and two retitlings. HB 76's facility-level transparency promise was narrowed by a later "Notwithstanding" proprietary-data clause. HB 422 died via an 11:59 PM enacting-clause strike, avoiding a recorded Senate floor vote.</td>
+        </tr>
+        <tr>
+          <td>Financial accountability</td>
+          <td><span class="grade-letter">C</span> Mixed</td>
+          <td>HB 410's farmer water-leasing program is a modest, disclosed $2.75M figure. HB 422 attempted to add PID financial/conflict disclosure. No hidden-cost mechanism found inside her own sponsored bills specifically, though the PID system she operates in (Nordic Village) has well-documented financial-accountability problems elsewhere in this outlet's reporting.</td>
+        </tr>
+        <tr>
+          <td>Environmental impact</td>
+          <td><span class="grade-letter">C</span> Mixed</td>
+          <td>HB 348 and HB 410 are genuine, substantive Great Salt Lake conservation programs. Set against that: killing HB 533 removed a groundwater-preservation check, and SB 284 eases water-availability constraints on development.</td>
+        </tr>
+        <tr>
+          <td>Community impact</td>
+          <td><span class="grade-letter">D</span> Bad</td>
+          <td>SB 284, expanded with HB 477's content, reduces municipalities' leverage over developers on water and land use. HB 422 would have given the public more visibility into PID board conflicts — the one bill in her record built around community standing — and it didn't survive.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rubric-overall">
+      <span class="grade-letter">D</span>
+      <span>Overall — averaged across the five criteria. The genuine Great Salt Lake conservation wins (HB 348, HB 410) and the good-faith PID accountability attempt (HB 422) keep this from grading lower; the enacted, still-law parts of her record (SB 284, the HB 533 kill) consistently move power and transparency away from the public.</span>
+    </div>
+  </section>
+
+  <details class="sourcing">
+    <summary>Sourcing &amp; methodology</summary>
+    <ul>
+      <li>NUPAC, UHREC, and Irish Elk LLC figures: full DEX exports and Statement of Organization filings from disclosures.utah.gov, 2018–2026, previously compiled for this outlet's NUPAC investigation.</li>
+      <li>Koford campaign finance: full raw DEX transaction exports from disclosures.utah.gov, covering every report filed 2021 Year End through 2026 Convention (846 transaction rows).</li>
+      <li>Hernandez campaign finance: full raw DEX transaction export from disclosures.utah.gov for her 2026 Convention and Primary reports (222 transaction rows), plus a separately-provided Contributions Received report for the General period, 6/17&ndash;9/9/2026.</li>
+      <li>Hernandez biographical and platform information: cjforsenate.com (candidate's own campaign site), accessed directly.</li>
+      <li>Primary and convention results: Ballotpedia's Utah State Senate District 5 and Jill Koford candidate pages; Weber Democrats' own post confirming Hernandez's primary win over Dakota Wurth.</li>
+      <li>Legislative record and committee assignments: le.utah.gov official House and Senate listings.</li>
+      <li>Koford's campaign platform: her own campaign website's issues page, accessed directly.</li>
+      <li>Water-legislation record: house.utleg.gov official 2026 session summaries; ABC4, Deseret News, Fox 13, Utah Public Radio, and S.J. Quinney College of Law's Great Salt Lake Project 2026 policy guide; primary bill text at le.utah.gov (HB 76, HB 348, HB 410, HB 124/S01); cross-referenced against this outlet's own "Stratos legislative ecosystem" water-bill-package research.</li>
+      <li>TIF and data-center policy in progress: Koford's own constituent newsletter, September 2026.</li>
+      <li>Biographical detail and business affiliations: her official le.utah.gov House bio page.</li>
+      <li>S.B. 284 floor sponsorship and the HB 533 committee-hold motion: le.utah.gov official committee minutes (House Natural Resources, Agriculture, and Environment Committee, 2/23/2026) and bill status pages; Utah Public Radio's water-policy session recap.</li>
+      <li>HB 76's penalty amount, the "new large data center" definition, and the proprietary-data provision: the enrolled bill text, le.utah.gov (§73-5-8.3), read directly rather than relied on from an earlier secondhand summary.</li>
+      <li>Nordic Village PID unit mix and water/sewer impact-fee stacking: this outlet's own prior Nordic Village PID reporting.</li>
+      <li>Google's Eagle Mountain data-center land purchase and investment commitment: Data Center Frontier and DGTL Infra trade-press reporting.</li>
+      <li>Business holdings and stock disclosures: her own 2026 Conflict of Interest / Financial Disclosure form, filed with the state.</li>
+      <li>Corporate registry cross-check (North Fork Meadows HOA, Scoots Industries, Ogden Regional Airport Association): a public Utah business-entity registry search under her name.</li>
+      <li>Kyle Palmer's overlapping state employment and Irish Elk LLC: Palmer's own LinkedIn profile and the Governor's Office of Economic Opportunity's August 2021 press release announcing his appointment.</li>
+      <li>Casey Snider's biography and legislative role: Wikipedia, Ballotpedia, and house.utleg.gov's official profile and House Majority Leader announcement.</li>
+      <li>Koford's full 2026 sponsor record (HB 422, HJR 7, HB 477, HB 441, HB 161, HB 150, HB 177, SB 252, SB 94, HB 124's actual status): her official le.utah.gov "Browse Bills by Legislator" page; HB 422's provisions and vote margins cross-checked against LegiScan and the bill's own substitute-comparison PDFs.</li>
+      <li>Clyde Companies / Nordic Village PID cross-reference: this outlet's prior Nordic Village PID reporting.</li>
+    </ul>
+  </details>
+
+</div>
+
+<footer>
+  <p class="fine">This is public record. We report it. You decide what it means. <span class="star">★</span></p>
+</footer>
+
+<script>
+  document.querySelectorAll('.fund-toggle button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.fund-toggle button').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelectorAll('.fund-panel').forEach(function(p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelector('.fund-panel[data-panel="' + btn.dataset.target + '"]').classList.add('active');
+    });
+  });
+  document.querySelectorAll('.wtile').forEach(function(tile) {
+    tile.addEventListener('click', function() { tile.classList.toggle('flipped'); });
+  });
+</script>
+
+</body>
+</html>
