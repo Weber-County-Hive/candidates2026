@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senate District 21 — 2026 Race | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<style>
+  :root{
+    --color-bg:#f4f0e6;
+    --color-band-light:#5c1a2b;
+    --color-band-deep:#3d0f1c;
+    --color-ink:#241b17;
+    --color-ink-soft:#5c534c;
+    --color-link:#c0572e;
+    --color-stat:#d9a441;
+    --color-border:#ddd5c3;
+    --color-card:#fffdf8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--color-bg);
+    color:var(--color-ink);
+    font-family:'Source Serif 4', serif;
+    line-height:1.65;
+  }
+  a{color:var(--color-link);}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  .breadcrumb{
+    max-width:880px;margin:0 auto;padding:18px 24px 0;
+    font-family:'IBM Plex Mono', monospace;font-size:0.78rem;
+    color:var(--color-ink-soft);letter-spacing:.03em;
+  }
+  .breadcrumb a{color:var(--color-ink-soft);text-decoration:none;border-bottom:1px dotted var(--color-ink-soft);}
+  header.band{
+    background:linear-gradient(135deg, var(--color-band-light), var(--color-band-deep));
+    color:#f4ece2;
+    padding:40px 24px 32px;
+    margin-top:14px;
+  }
+  .band-inner{max-width:880px;margin:0 auto;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;letter-spacing:.14em;font-size:0.72rem;
+    color:#e3b98f;margin-bottom:14px;
+  }
+  h1{
+    font-family:'Playfair Display', serif;
+    font-weight:800;
+    font-size:2.3rem;
+    line-height:1.16;
+    margin:0 0 10px;
+  }
+  .subtitle{
+    font-family:'Source Serif 4', serif;
+    font-style:italic;
+    font-size:1.1rem;
+    color:#e9d9c8;
+    max-width:660px;
+  }
+  .meta-row{
+    display:flex;flex-wrap:wrap;gap:10px;
+    margin-top:22px;
+  }
+  .meta-pill{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;letter-spacing:.04em;
+    background:rgba(255,255,255,0.09);
+    border:1px solid rgba(255,255,255,0.25);
+    padding:5px 10px;border-radius:3px;
+    color:#f4ece2;
+  }
+  nav.jump{
+    max-width:880px;margin:0 auto;padding:16px 24px;
+    display:flex;flex-wrap:wrap;gap:8px 14px;
+    font-family:'IBM Plex Mono', monospace;font-size:0.75rem;
+    border-bottom:1px solid var(--color-border);
+  }
+  nav.jump a{
+    text-decoration:none;color:var(--color-ink-soft);
+    padding:4px 0;border-bottom:2px solid transparent;
+  }
+  nav.jump a:hover{border-bottom:2px solid var(--color-link);color:var(--color-ink);}
+  main{max-width:880px;margin:0 auto;padding:8px 24px 60px;}
+  .callout-box{
+    background:#fbf3e6;
+    border:1px solid #e6d3ae;
+    border-left:4px solid var(--color-stat);
+    padding:16px 20px;border-radius:3px;
+    margin:22px 0;font-size:0.98rem;
+  }
+  .callout-box p:first-child{margin-top:0;}
+  .callout-box p:last-child{margin-bottom:0;}
+  .callout-finding{border-left-color:#7a8f5c;background:#f2f4ea;border-color:#d7dcc5;}
+  .callout-note{border-left-color:var(--color-ink-soft);background:#f2efe9;border-color:var(--color-border);}
+  section{margin:44px 0;}
+  h2{
+    font-family:'Playfair Display', serif;
+    font-size:1.5rem;
+    border-bottom:2px solid var(--color-link);
+    padding-bottom:8px;
+    margin-bottom:18px;
+  }
+  h3{
+    font-family:'Playfair Display', serif;
+    font-size:1.15rem;
+    margin:26px 0 10px;
+  }
+  .stat-strip{
+    display:flex;flex-wrap:wrap;gap:14px;
+    margin:20px 0 26px;
+  }
+  .stat-cell{
+    background:var(--color-card);
+    border:1px solid var(--color-border);
+    border-radius:4px;
+    padding:14px 18px;
+    min-width:150px;flex:1;
+  }
+  .stat-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1.4rem;font-weight:600;
+    color:var(--color-stat);display:block;
+  }
+  .stat-label{font-size:0.78rem;color:var(--color-ink-soft);}
+
+  /* candidate profile cards */
+  .candidate-card{
+    background:var(--color-card);
+    border:1px solid var(--color-border);
+    border-radius:6px;
+    padding:20px 22px;
+    margin:18px 0;
+  }
+  .candidate-card h3{margin-top:0;}
+  .candidate-meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--color-ink-soft);
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    margin-bottom:10px;
+  }
+  .candidate-meta .party-r{color:#8c3b2e;}
+  .candidate-meta .party-d{color:#2e5c8c;}
+  .candidate-meta .party-f{color:#5c6b3b;}
+
+  /* funding bars */
+  .fund-bar-row{display:flex;align-items:center;gap:12px;margin:8px 0;}
+  .fund-toggle-group{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 18px;}
+  .fund-toggle{
+    font-family:'IBM Plex Mono', monospace;font-size:0.78rem;
+    background:var(--color-card);border:1px solid var(--color-border);
+    color:var(--color-ink);padding:7px 14px;border-radius:20px;cursor:pointer;
+    transition:all .15s ease;
+  }
+  .fund-toggle:hover{border-color:var(--color-link);}
+  .fund-toggle.active{background:var(--color-band-light);color:#f4ece2;border-color:var(--color-band-light);}
+  .fund-panel{display:none;}
+  .fund-panel.active{display:block;}
+  .fund-donut-wrap{
+    display:flex;align-items:center;gap:28px;flex-wrap:wrap;
+    margin:8px 0 20px;
+  }
+  .fund-donut{
+    position:relative;width:150px;height:150px;border-radius:50%;flex-shrink:0;
+  }
+  .fund-donut-center{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:68%;height:68%;background:var(--color-card);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;flex-direction:column;
+    text-align:center;font-family:'IBM Plex Mono', monospace;font-weight:700;
+    font-size:0.92rem;color:var(--color-ink);line-height:1.35;
+  }
+  .fund-donut-center span{font-weight:500;font-size:0.62rem;color:var(--color-ink-soft);text-transform:uppercase;letter-spacing:.03em;}
+  .fund-donut-legend{font-family:'IBM Plex Mono', monospace;font-size:0.85rem;color:var(--color-ink-soft);}
+  .fund-donut-legend .legend-row{margin:8px 0;display:flex;align-items:flex-start;gap:9px;}
+  .fund-donut-legend .swatch{width:12px;height:12px;border-radius:3px;display:inline-block;flex-shrink:0;margin-top:3px;}
+  .fund-donut-legend .legend-pct{font-weight:700;color:var(--color-ink);}
+  .fund-caption{font-size:0.8rem;color:var(--color-ink-soft);font-style:italic;margin:6px 0 0;}
+
+  /* timeline */
+  .timeline{
+    display:flex;justify-content:space-between;position:relative;
+    margin:28px 0 8px;padding-top:6px;
+  }
+  .timeline::before{
+    content:"";position:absolute;top:15px;left:4%;right:4%;height:2px;
+    background:var(--color-border);
+  }
+  .timeline-node{
+    position:relative;flex:1;text-align:center;z-index:1;
+  }
+  .timeline-dot{
+    width:14px;height:14px;border-radius:50%;background:var(--color-link);
+    border:3px solid var(--color-bg);margin:0 auto 8px;
+  }
+  .timeline-node.future .timeline-dot{background:var(--color-ink-soft);}
+  .timeline-date{font-family:'IBM Plex Mono', monospace;font-size:0.72rem;color:var(--color-ink-soft);}
+  .timeline-label{font-size:0.88rem;font-weight:600;margin-top:2px;}
+
+  /* accordion (candidate bios, promises) */
+  details.acc{
+    background:var(--color-card);border:1px solid var(--color-border);
+    border-radius:6px;margin:14px 0;overflow:hidden;
+  }
+  details.acc summary{
+    cursor:pointer;padding:16px 20px;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+  }
+  details.acc summary::-webkit-details-marker{display:none;}
+  details.acc summary::after{
+    content:"+";font-family:'IBM Plex Mono', monospace;font-size:1.1rem;
+    color:var(--color-link);flex-shrink:0;transition:transform .15s ease;
+  }
+  details.acc[open] summary::after{content:"–";}
+  details.acc .acc-body{padding:0 20px 18px;}
+  details.acc .acc-summary-text{font-family:'IBM Plex Mono', monospace;font-size:0.72rem;color:var(--color-ink-soft);text-transform:uppercase;letter-spacing:.03em;}
+  details.acc summary h3{margin:0;}
+  details.claim summary{
+    font-weight:600;font-family:'Source Serif 4', serif;font-size:1rem;
+  }
+
+  /* grade bars */
+  .grade-bar-row{display:grid;grid-template-columns:150px 46px 1fr;gap:12px;align-items:center;margin:10px 0;}
+  .grade-bar-crit{font-family:'IBM Plex Mono', monospace;font-size:0.8rem;}
+  .grade-bar-badge{
+    width:36px;height:36px;border-radius:5px;display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono', monospace;font-weight:700;color:#fff;font-size:0.95rem;
+  }
+  .grade-bar-note{font-size:0.86rem;color:var(--color-ink-soft);}
+  .grade-F{background:#8B2E20;} .grade-D{background:#B5602E;} .grade-C{background:#C98A2E;}
+  .grade-B{background:#7A8F5C;} .grade-A{background:#4A7A4A;}
+
+  .mermaid-wrap{background:var(--color-card);border:1px solid var(--color-border);border-radius:6px;padding:18px;margin:20px 0;overflow-x:auto;}
+  .fund-bar-label{
+    font-family:'IBM Plex Mono', monospace;font-size:0.78rem;
+    width:150px;flex-shrink:0;color:var(--color-ink-soft);
+  }
+  .fund-bar-track{flex-grow:1;background:#eee3d0;border-radius:3px;height:22px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);border-radius:3px 0 0 3px;display:flex;align-items:center;}
+  .fund-bar-amt{
+    font-family:'IBM Plex Mono', monospace;font-size:0.78rem;font-weight:600;
+    width:90px;text-align:right;flex-shrink:0;
+  }
+
+  table.compare{
+    width:100%;border-collapse:collapse;margin:18px 0;
+    font-size:0.9rem;background:var(--color-card);
+  }
+  table.compare th, table.compare td{
+    border:1px solid var(--color-border);
+    padding:10px 12px;text-align:left;
+    vertical-align:top;
+  }
+  table.compare th{
+    font-family:'IBM Plex Mono', monospace;font-size:0.72rem;
+    text-transform:uppercase;letter-spacing:.04em;
+    background:#efe7d6;
+  }
+  .scope-note{
+    font-size:0.9rem;color:var(--color-ink-soft);
+    border-top:1px dashed var(--color-border);
+    padding-top:14px;margin-top:24px;
+  }
+  ul.tidy li{margin-bottom:8px;}
+  details.sources{
+    background:var(--color-card);border:1px solid var(--color-border);
+    border-radius:4px;padding:14px 20px;margin-top:14px;
+  }
+  details.sources summary{
+    cursor:pointer;font-family:'IBM Plex Mono', monospace;
+    font-size:0.85rem;font-weight:600;
+  }
+  details.sources ul{padding-left:20px;font-size:0.9rem;}
+  footer{
+    max-width:880px;margin:0 auto;padding:30px 24px 60px;
+    font-family:'IBM Plex Mono', monospace;font-size:0.75rem;
+    color:var(--color-ink-soft);border-top:1px solid var(--color-border);
+    margin-top:20px;
+  }
+  .profile-link-box{
+    background:var(--color-card);
+    border:1px solid var(--color-border);
+    border-left:4px solid var(--color-link);
+    border-radius:4px;
+    padding:16px 20px;
+    margin:18px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .profile-link-box .cta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.8rem;font-weight:600;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+</style>
+</head>
+<body>
+
+<div class="breadcrumb"><a href="index.html">Candidates 2026</a> / State / Senate District 21</div>
+
+<header class="band">
+  <div class="band-inner">
+    <div class="eyebrow">Case File · Senate District 21 · Highland</div>
+    <h1>Senate District 21: The Primary a Judicial-Independence PAC Came For</h1>
+    <p class="subtitle">Incumbent Brady Brammer defeated a primary challenger funded by a PAC formed specifically over concerns about judicial independence — the same concerns raised by bills Brammer himself sponsored. He now faces two little-funded opponents in November.</p>
+    <div class="meta-row">
+      <span class="meta-pill">Republican Primary: Brammer defeated Kelly Smith, June 23, 2026</span>
+      <span class="meta-pill">General Election: Nov. 3, 2026 — Brammer (R) vs. Myers (D) vs. Woodfield (Forward)</span>
+      <span class="meta-pill">$217,005 Brammer raised vs. $65,000 Smith / $17,808 Myers / $3,285 Woodfield</span>
+    </div>
+  </div>
+</header>
+
+<nav class="jump">
+  <a href="#race">The Race</a>
+  <a href="#primary">The Primary</a>
+  <a href="#pac">The PAC Finding</a>
+  <a href="#general">The General</a>
+  <a href="#record">Brammer's Record</a>
+  <a href="#scorecard">Scorecard</a>
+  <a href="#funding">Funding at a Glance</a>
+  <a href="#scope">Note on Scope</a>
+  <a href="#questions">Questions Worth Asking</a>
+  <a href="#conclusion">Conclusion</a>
+  <a href="#sources">Sources</a>
+</nav>
+
+<main>
+
+<div class="callout-box">
+<p><strong>New here?</strong> Brady Brammer is the Republican incumbent for Senate District 21 (Highland, Utah County), first appointed to the seat in late 2024 and elected in his own right in 2024. This file covers his 2026 re-election: a Republican primary against Cedar Hills City Councilmember Kelly Smith, decided June 23, and a November 3 general election against Democratic nominee Kandee Myers and Forward Party candidate Wayne Woodfield. For Brammer's full legislative record — every bill he's sponsored, graded — see his profile in the Utah Senators series, linked below.</p>
+</div>
+
+<section id="race">
+<h2>1. The Race</h2>
+<p>Brammer was selected by Utah County Republican Party delegates to fill Senate District 21 after Mike Kennedy's departure in late 2024, then won the seat outright in the 2024 general election. His 2026 re-election bid initially drew two Republican primary challengers — Kelly Smith and Seth Stewart — but Stewart withdrew in March 2026 to pursue a federal congressional race, leaving a two-person primary between Brammer and Smith, a Cedar Hills City Council member and retired educator.</p>
+<p>Brammer won that June 23 primary. He advances to the November 3 general election against Kandee Myers, the Democratic nominee, and Wayne Woodfield of the Forward Party of Utah.</p>
+
+<div class="timeline">
+  <div class="timeline-node"><div class="timeline-dot"></div><div class="timeline-date">Mar 2026</div><div class="timeline-label">Stewart withdraws</div></div>
+  <div class="timeline-node"><div class="timeline-dot"></div><div class="timeline-date">Apr 18</div><div class="timeline-label">Convention — 68% delegate vote</div></div>
+  <div class="timeline-node"><div class="timeline-dot"></div><div class="timeline-date">Jun 23</div><div class="timeline-label">Primary — Brammer beats Smith</div></div>
+  <div class="timeline-node future"><div class="timeline-dot"></div><div class="timeline-date">Nov 3</div><div class="timeline-label">General Election</div></div>
+</div>
+
+<div class="stat-strip">
+  <div class="stat-cell"><span class="stat-num">$217,005</span><span class="stat-label">Brammer total raised, 2024–2026</span></div>
+  <div class="stat-cell"><span class="stat-num">$65,000</span><span class="stat-label">Kelly Smith total raised (primary)</span></div>
+  <div class="stat-cell"><span class="stat-num">$17,808</span><span class="stat-label">Kandee Myers total raised (general)</span></div>
+  <div class="stat-cell"><span class="stat-num">$3,285</span><span class="stat-label">Wayne Woodfield total raised (general)</span></div>
+</div>
+</section>
+
+<section id="primary">
+<h2>2. The Primary — Brammer vs. Kelly Smith</h2>
+<details class="acc" open>
+  <summary>
+    <div><span class="acc-summary-text party-r">Republican · Cedar Hills City Council · Challenger</span><h3>Kelly Smith</h3></div>
+  </summary>
+  <div class="acc-body">
+    <p>A Cedar Hills City Council member for five years and a retired educator, Smith ran on government transparency, fiscal conservatism, term limits, local control, and stronger communication with constituents. She was endorsed by more than two dozen mayors and city councilmembers from across the district. At a May 19 American Fork Chamber of Commerce debate, Smith argued the state had "moved too fast" on a major recent proposal and said "we need to slow things down" — a process-focused contrast with Brammer's record-of-results framing.</p>
+  </div>
+</details>
+<p>Smith raised roughly $65,000. Of that, only about 8% — roughly $5,147 — came from individual donors outside her own household. The rest was overwhelmingly self-loaned and PAC-funded: $20,725 in loans she made to her own campaign, $22,627.99 from the Checks and Balances PAC, and $16,500 in cash from a second PAC, Fresh Air PAC, headed by David Garbett.</p>
+</section>
+
+<div class="callout-box callout-finding" id="pac">
+<h3 style="margin-top:0;">3. The PAC Finding</h3>
+<p><strong>A PAC formed specifically to defend judicial independence funded Smith's campaign against Brammer.</strong> The Checks and Balances PAC — which also files under the name "Rule of Law PAC" — gave Smith $14,627.99 in in-kind signature-gathering (April 21 and May 11, 2026) plus $8,000 in cash (May 21, 2026). The PAC's own stated purpose is defending an independent judiciary in Utah.</p>
+<p>This is not a coincidence of timing, and it isn't even two separate stories — it's one continuous conflict. The diagram below traces how a single legislative fight led directly to the money working against Brammer's re-election.</p>
+
+<div class="mermaid-wrap">
+<div class="mermaid">
+flowchart TD
+    A["2025: Brammer sponsors<br/>'Redistricting Standards'<br/>narrowing Prop 4's fairness test"] --> B["Better Boundaries, MWEG, and<br/>League of Women Voters publicly<br/>oppose him BY NAME"]
+    B --> C["Feb 2026: Brammer chief-sponsors SJR005 +<br/>Senate-sponsors HB0366 —<br/>creates 3-judge panel + AG/Gov/Legislature<br/>power to redirect pending cases"]
+    C --> D["AG and Legislature use it to move<br/>the SAME Prop 4 redistricting case<br/>(plus 3 others) to a friendlier panel"]
+    D --> E["Better Boundaries Accountability PAC<br/>gives $23,100 to Checks & Balances PAC"]
+    E --> F["Checks & Balances PAC funds<br/>Kelly Smith's primary challenge<br/>against Brammer: $22,628"]
+    F --> G["Brammer + Teuscher request state<br/>investigation into the PAC"]
+    G --> H["PAC fined $1,000 for<br/>late disclosure, June 2026"]
+    style A fill:#fbf3e6,stroke:#d9a441
+    style C fill:#fbf3e6,stroke:#c0572e
+    style E fill:#f2f4ea,stroke:#7a8f5c
+    style F fill:#f2f4ea,stroke:#7a8f5c
+    style H fill:#fdeeea,stroke:#8B2E20
+</div>
+</div>
+
+<p>The PAC's own Statement of Organization, filed with the state, shows it was created December 24, 2025 — shortly before the legislative session that produced SJR005, HB0366, and SB0134 — and names its officers as Chair Alexandra Dorius, a paralegal, and Treasurer Caroline Morris, a student, both based in Millcreek. This reads as a real citizen-organized PAC responding to a specific legislative fight, not an anonymous or corporate-backed operation. The same PAC also funded signature-gathering ($6,264.84) plus a further $1,000 cash payment for the primary opponent of Rep. Jordan Teuscher, HB0366's own House chief sponsor, and separately gave $4,000 to a third candidate, Chris Mcconey, not yet connected to any other thread in this research. Smith's primary campaign separately drew $16,500 from a second PAC, Fresh Air PAC, headed by David Garbett — not yet independently researched.</p>
+<p>Put plainly: the fine landed on the PAC that was actively working against Brammer's re-election, in a case Brammer himself pushed for. He and Teuscher jointly asked the Lt. Governor's office to investigate the PAC over its late disclosure filings — the same PAC funding the primary challenges against them both — and the PAC was fined $1,000 in June 2026 as a result. Smith told KSL she was initially unaware "Rule of Law PAC" was an alternate name for "Checks and Balances," then confirmed the connection once informed.</p>
+<p style="margin-bottom:0;"><strong>For balance:</strong> Brammer's own campaign finance reports contain 17 deleted transaction entries across the 2024–2026 period — a disclosure-process issue worth weighing on both sides of this race, not just the PAC's late filing.</p>
+</div>
+
+<section id="general">
+<h2>4. The General Election — Brammer vs. Myers vs. Woodfield</h2>
+<p>Click a name to expand their bio and funding story.</p>
+
+<details class="acc">
+  <summary>
+    <div><span class="acc-summary-text party-d">Democratic Nominee · Real Estate Broker</span><h3>Kandee Myers</h3></div>
+  </summary>
+  <div class="acc-body">
+    <p>An independent-contractor real estate agent, currently Branch Broker for REMAX Lighthouse's new American Fork location (opened January 2026) under broker Cheri Salazar; previously an Associate Broker at REMAX Select since 2018, until that brokerage was sold to Salazar at the end of 2025. Runs her own entity, Kandee Myers Real Estate.</p>
+    <p>Myers raised $17,807.66, of which $15,000 — 84.2% — came from her own household: $5,000 from Myers herself and $10,000 loaned by her husband, Marvin Barentsen. The remaining roughly $2,800 came from about 20 small individual donors, many out of state, several in unusual fractional-cent amounts consistent with a round-up or micro-donation platform. Her spending has leaned toward Democratic-aligned civic organizations — Mormon Women for Ethical Government, the League of Women Voters, and the Utah County Democratic Party.</p>
+  </div>
+</details>
+
+<details class="acc">
+  <summary>
+    <div><span class="acc-summary-text party-f">Forward Party · Software Architect</span><h3>Wayne Woodfield</h3></div>
+  </summary>
+  <div class="acc-body">
+    <p>A Software Architect at RainFocus, a Lehi-based event-management software company, where he also trains other software engineers. Woodfield won the Forward Party of Utah's nomination unopposed, 6 votes to 0, at the Utah County convention in March 2026.</p>
+    <p>Woodfield raised $3,285.00 from 18 small individual donors, mostly neighbors in Lehi, with no PAC or institutional money. Two donors are notable only as intra-party connections rather than outside influence: Teri McCabe, the Forward Party's own elected member of the Provo City School Board, and David Hinckley, the party's own 2026 candidate for Utah County Council At-Large District B.</p>
+  </div>
+</details>
+</section>
+
+<section id="record">
+<h2>5. Brammer's Legislative Record</h2>
+<p>Brammer sponsored or floor-sponsored 18 bills graded in this project's full review of his record — the bills that graded well were narrow and touched a few thousand people at most; the bills that graded poorly reshaped power itself, from a fully governor-appointed backup court to the state's own environmental rulemaking authority. His campaign is also funded in part by the other architects of that same judicial-power program: Sen. Chris Wilson (SB0134's sponsor) and Sen. Mike McKell (sponsor of both halves of the panel-transfer scheme) each gave Brammer's campaign $5,000. Pre-primary reporting also shows a $5,000 donation from the Utah County Legislative PAC, led by Rep. Stephanie Gricius, along with $1,000 from Sen. Evan Vickers and $1,250 from former Utah House Speaker Greg Curtis.</p>
+<p>Brammer is also registered as a director of Central Utah GOP House PAC via a separate nonprofit-corporation filing, alongside Rep. Cory Maloy and Jon Hawkins. Records show all three received $1,000 payments from that PAC within days of each other in December 2024. The PAC's actual officers under Utah election law are a different, though overlapping, group — Maloy, Rep. Bradley Daw, and Sen. Mike McKell as Treasurer — and its full multi-year history includes donor overlap with several other networks already documented in this project.</p>
+<div class="profile-link-box">
+  <span>Full standalone case file: Central Utah GOP House PAC's two-registration structure, self-dealing finding, and a searchable transaction explorer</span>
+  <a class="cta" href="../central-utah-gop-house-pac/central-utah-gop-house-pac.html">Read the PAC case file →</a>
+</div>
+<div class="profile-link-box">
+  <span>Full bill-by-bill breakdown, donor network, and the Doers Network family connection</span>
+  <a class="cta" href="https://webercountyhive-coder.github.io/utah-senators/brady-brammer.html">Read the full Senate profile →</a>
+</div>
+</section>
+
+<section id="scorecard">
+<h2>6. Scorecard — Rubric Grade &amp; Campaign Promises vs. Record</h2>
+<p>Brammer is the only candidate in this race with a governing record to grade — Smith, Myers, and Woodfield have never held state office, so there is nothing yet to check their campaign statements against. His overall rubric grade below is a composite of the 18 bills graded in his full Senate profile, not a new assessment.</p>
+
+<div class="grade-bar-row">
+  <span class="grade-bar-crit">Power</span>
+  <span class="grade-bar-badge grade-F">F</span>
+  <span class="grade-bar-note">Chief or Senate sponsor of the 2026 session's core judicial-power stack (SJR005, HB0366) — case-transfer power concentrated in the offices his own party controls, plus a fully governor-appointed backup court.</span>
+</div>
+<div class="grade-bar-row">
+  <span class="grade-bar-crit">Transparency</span>
+  <span class="grade-bar-badge grade-D">D</span>
+  <span class="grade-bar-note">Sponsored bills that shield commissioner votes (SB0233), make court-decision publication discretionary instead of mandatory (HB0366), and walk back a promised free-audio requirement (HB0540) — partly offset by HB0540's genuine public court-records database.</span>
+</div>
+<div class="grade-bar-row">
+  <span class="grade-bar-crit">Financial Accountability</span>
+  <span class="grade-bar-badge grade-C">C</span>
+  <span class="grade-bar-note">Real donor-industry overlaps across several bills (insurance, banking, litigation funding, EnergySolutions), balanced by at least one genuinely pro-consumer bill (SB0230) passed with bipartisan support.</span>
+</div>
+<div class="grade-bar-row">
+  <span class="grade-bar-crit">Environmental Impact</span>
+  <span class="grade-bar-badge grade-D">D</span>
+  <span class="grade-bar-note">Sponsored bills capping state environmental standards at the federal floor (SB0234) and wrapping refinery production data in a near-total secrecy shield (HB0575).</span>
+</div>
+<div class="grade-bar-row">
+  <span class="grade-bar-crit">Community Impact</span>
+  <span class="grade-bar-badge grade-D">D</span>
+  <span class="grade-bar-note">Sponsored the near-total removal of the public's right to sue over a nuisance (HB0591), a PID meeting-transparency loophole (HB0017), and an ADA-lawsuit bill that risks chilling legitimate accessibility enforcement (SB0068).</span>
+</div>
+<div class="grade-bar-row" style="border-top:2px solid var(--color-link);padding-top:14px;margin-top:14px;">
+  <span class="grade-bar-crit" style="font-weight:700;">Overall</span>
+  <span class="grade-bar-badge grade-D">D</span>
+  <span class="grade-bar-note">Full grade-by-grade detail and sourcing in the linked Senate profile above.</span>
+</div>
+
+<h3>Campaign promises vs. record</h3>
+<p>Brammer's campaign site describes him as an attorney who represents cities and school districts, an adjunct professor of ethics and business law at BYU, a five-year member of the Highland City Planning Commission, and a board member of The Great Outdoors Fund. His 2026 campaign message centers on having "delivered results on tax cuts, conservative spending, public safety, local control and protecting Utah values." Four of those claims can be checked directly against bills he sponsored — click each to see what the record shows.</p>
+
+<details class="acc claim">
+  <summary>"Local control"</summary>
+  <div class="acc-body"><p>Two of his own sponsored bills move authority in the opposite direction: SJR005 and HB0366 concentrate case-transfer power in state-level offices (the AG, the Governor, the Legislature) rather than leaving it with locally assigned judges, and HB0017 broadens where a Public Infrastructure District can hold its meetings from the district's own boundaries out to its much-larger creating city or county — moving meetings further from, not closer to, the residents directly affected. Notably, Brammer himself served over five years on the Highland City Planning Commission, working directly on zoning and development issues — direct hands-on experience with exactly the kind of local land-use transparency question HB0017 weakens.</p></div>
+</details>
+
+<details class="acc claim">
+  <summary>"Conservative spending"</summary>
+  <div class="acc-body"><p>Brammer's own bill, SB0235, began as a pay-raise bill for the Attorney General under a different sponsor; the substitute switched sponsorship to Brammer, retitled it for the Governor, and by enrollment produced a formula pegging the Governor's salary to the Chief Justice's — roughly a 47% raise using 2025 figures. He does separately cite a specific, checkable $1.5 billion tax-cut figure accumulated over six years, which this file has not independently verified bill-by-bill.</p></div>
+</details>
+
+<details class="acc claim">
+  <summary>"Protecting access to the outdoors" (from his Great Outdoors Fund board role)</summary>
+  <div class="acc-body"><p>Sits in tension with two of his own sponsored bills: SB0234 caps Utah's environmental standards at the federal floor, and HB0575 wraps refinery production data in a near-total secrecy shield while creating a new tax-credit subsidy for pipeline and fossil-fuel storage infrastructure. Both bills graded D in the full rubric review.</p></div>
+</details>
+
+<details class="acc claim">
+  <summary>"Cutting the gas tax by 15%" (from his campaign's "Record" page)</summary>
+  <div class="acc-body"><p>Accurate as far as it goes, but incomplete: this refers to HB0575, the same bill that simultaneously raised the tax rate on alternative fuels (CNG/LNG/hydrogen), wrapped refinery production data in a near-total secrecy shield, and created a new tax-credit subsidy for pipeline and fossil-fuel storage infrastructure. His campaign cites only the popular half of a bill whose other half earned a D grade in the full rubric review.</p></div>
+</details>
+
+<details class="acc claim">
+  <summary>"Public safety" / "protecting Utah values"</summary>
+  <div class="acc-body"><p>Not clearly tied to any specific bill in his sponsored record documented in this file — too general to check against a specific action.</p></div>
+</details>
+
+<div class="callout-box callout-note">
+<p><strong>On Smith, Myers, and Woodfield:</strong> none of the three has held elected state office, so none has a legislative record to grade on this rubric or check against campaign statements. Smith campaigned on "government transparency, fiscal conservatism, term limits, local control, and stronger communication with constituents"; Myers's spending pattern suggests alignment with Democratic-aligned civic priorities but no detailed platform was captured in this research; Woodfield's platform beyond his party's general centrist positioning was not documented. All three remain untested promises, not a record — that distinction should stay clear in any published version of this comparison.</p>
+</div>
+</section>
+
+<section id="funding">
+<h2>7. Funding at a Glance</h2>
+<p>Each candidate's donation mix looks different — click a name to see how their money breaks down.</p>
+
+<div class="fund-toggle-group">
+  <button class="fund-toggle active" data-candidate="brammer">Brammer</button>
+  <button class="fund-toggle" data-candidate="smith">Smith</button>
+  <button class="fund-toggle" data-candidate="myers">Myers</button>
+  <button class="fund-toggle" data-candidate="woodfield">Woodfield</button>
+</div>
+
+<div class="fund-panel active" data-candidate="brammer">
+  <div class="fund-donut-wrap">
+    <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 37%, var(--color-stat) 37% 100%);">
+      <div class="fund-donut-center">$217,005<span>total raised</span></div>
+    </div>
+    <div class="fund-donut-legend">
+      <div class="legend-row"><span class="swatch" style="background:var(--color-link);"></span><span><span class="legend-pct">37%</span> — PAC &amp; committee money (Utah Republican Senate Campaign Committee, UCL PAC, Doers Network, Farm Bureau AGPAC, and others named in the full profile)</span></div>
+      <div class="legend-row"><span class="swatch" style="background:var(--color-stat);"></span><span><span class="legend-pct">63%</span> — Individual and business donors (banks, insurers, law firms, and named individuals — full list in the Senate profile)</span></div>
+    </div>
+  </div>
+  <p class="fund-caption">Categories reflect named PAC, committee, and business donors specifically documented in this research; the remainder is not a full line-by-line reconciliation of every entry.</p>
+</div>
+
+<div class="fund-panel" data-candidate="smith">
+  <div class="fund-donut-wrap">
+    <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 35%, var(--color-stat) 35% 60%, #8a7250 60% 92%, #b8ac93 92% 100%);">
+      <div class="fund-donut-center">$65,000<span>total raised</span></div>
+    </div>
+    <div class="fund-donut-legend">
+      <div class="legend-row"><span class="swatch" style="background:var(--color-link);"></span><span><span class="legend-pct">35%</span> — Checks and Balances PAC ($14,627.99 in-kind signature-gathering + $8,000 cash)</span></div>
+      <div class="legend-row"><span class="swatch" style="background:var(--color-stat);"></span><span><span class="legend-pct">25%</span> — Fresh Air PAC, headed by David Garbett ($16,500 cash)</span></div>
+      <div class="legend-row"><span class="swatch" style="background:#8a7250;"></span><span><span class="legend-pct">32%</span> — Loans Smith made to her own campaign ($20,725)</span></div>
+      <div class="legend-row"><span class="swatch" style="background:#b8ac93;"></span><span><span class="legend-pct">8%</span> — Other individual donors (~$5,147)</span></div>
+    </div>
+  </div>
+  <p class="fund-caption">Corrected from an earlier draft of this file, which mischaracterized Smith's funding as mostly individual donors — 92% of her total was actually self-loans plus two PACs.</p>
+</div>
+
+<div class="fund-panel" data-candidate="myers">
+  <div class="fund-donut-wrap">
+    <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 84%, var(--color-stat) 84% 100%);">
+      <div class="fund-donut-center">$17,808<span>total raised</span></div>
+    </div>
+    <div class="fund-donut-legend">
+      <div class="legend-row"><span class="swatch" style="background:var(--color-link);"></span><span><span class="legend-pct">84%</span> — Herself and her husband, Marvin Barentsen ($5,000 + $10,000)</span></div>
+      <div class="legend-row"><span class="swatch" style="background:var(--color-stat);"></span><span><span class="legend-pct">16%</span> — About 20 small individual donors, many out of state</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="fund-panel" data-candidate="woodfield">
+  <div class="fund-donut-wrap">
+    <div class="fund-donut" style="background:conic-gradient(var(--color-stat) 0% 100%);">
+      <div class="fund-donut-center">$3,285<span>total raised</span></div>
+    </div>
+    <div class="fund-donut-legend">
+      <div class="legend-row"><span class="swatch" style="background:var(--color-stat);"></span><span><span class="legend-pct">100%</span> — Individual donors, mostly Lehi neighbors; no PAC or institutional money, no self-funding</span></div>
+    </div>
+  </div>
+</div>
+
+<h3>How the four compare</h3>
+<div class="fund-bar-row">
+  <span class="fund-bar-label mono">Brammer (R)</span>
+  <div class="fund-bar-track"><div class="fund-bar-fill" style="width:100%;"></div></div>
+  <span class="fund-bar-amt">$217,005</span>
+</div>
+<div class="fund-bar-row">
+  <span class="fund-bar-label mono">Smith (R, primary)</span>
+  <div class="fund-bar-track"><div class="fund-bar-fill" style="width:30%;"></div></div>
+  <span class="fund-bar-amt">$65,000</span>
+</div>
+<div class="fund-bar-row">
+  <span class="fund-bar-label mono">Myers (D)</span>
+  <div class="fund-bar-track"><div class="fund-bar-fill" style="width:8%;"></div></div>
+  <span class="fund-bar-amt">$17,808</span>
+</div>
+<div class="fund-bar-row">
+  <span class="fund-bar-label mono">Woodfield (Fwd)</span>
+  <div class="fund-bar-track"><div class="fund-bar-fill" style="width:2%;"></div></div>
+  <span class="fund-bar-amt">$3,285</span>
+</div>
+
+<table class="compare">
+<tr><th>Candidate</th><th>Total Raised</th><th>Largest Funding Source</th><th>% From Self/Household</th></tr>
+<tr><td>Brady Brammer (R)</td><td>$217,005.41</td><td>Utah Republican Senate Campaign Committee ($65,000)</td><td>Minimal — largely PAC/individual donors</td></tr>
+<tr><td>Kelly Smith (R)</td><td>~$65,000</td><td>Checks and Balances PAC + Fresh Air PAC ($39,128 combined, 60%)</td><td>32% (loans to her own campaign)</td></tr>
+<tr><td>Kandee Myers (D)</td><td>$17,807.66</td><td>Herself + husband Marvin Barentsen</td><td>84.2%</td></tr>
+<tr><td>Wayne Woodfield (Forward)</td><td>$3,285.00</td><td>Individual Lehi-area donors</td><td>0% (no self-funding recorded)</td></tr>
+</table>
+</section>
+
+<div class="scope-note" id="scope">
+<p><strong>A note on scope:</strong> Brammer is a sitting incumbent with a multi-year legislative record, generating far more reviewable public documentation — bills, votes, disclosures, floor statements — than any of his three challengers, none of whom have held state office. The coverage-volume difference between this file's treatment of Brammer and its treatment of Smith, Myers, and Woodfield reflects the record each has actually created, not a decision to scrutinize the incumbent more heavily.</p>
+</div>
+
+<section id="questions">
+<h2>8. Questions Worth Asking</h2>
+<ul class="tidy">
+<li>Should a PAC founded around a specific policy concern be required to disclose that founding purpose alongside its contributions, the way its name alone ("Checks and Balances") doesn't fully convey?</li>
+<li>Did Brammer's request that the Lt. Governor's office investigate a PAC opposing his own primary — while his own campaign carried 17 deleted transaction entries — get equal scrutiny in return?</li>
+<li>Brammer personally asked the state to investigate a PAC opposing him, and it was fined for a late disclosure. Separately, the PAC he co-directs, Central Utah GOP House PAC, paid $1,000 each to all three of its own directors — including Brammer himself — out of money it had collected. No wrongdoing has been found in that PAC's own filings, and self-directed PAC giving isn't unusual or necessarily improper. But it's a fair question to sit with: is the same appetite for scrutiny being applied to a PAC he controls that was applied to one working against him?</li>
+<li>What would it take for a Forward Party or a genuinely independent candidate to be financially competitive in a race like this one?</li>
+</ul>
+</section>
+
+<section id="conclusion">
+<h2>9. Conclusion — What to Weigh Before Voting</h2>
+<p>This file isn't a recommendation. It's an attempt to lay out three separate things that don't always line up with each other, so a voter can weigh them for themselves rather than take any single one at face value:</p>
+<ul class="tidy">
+<li><strong>What they say.</strong> Campaign sites, endorsements, and debate answers describe the candidate a campaign wants voters to see. Some of it checks out cleanly against the record — some of it, like a tax-cut claim built from one popular half of a two-sided bill, doesn't tell the whole story on its own.</li>
+<li><strong>What they do.</strong> Bills sponsored, votes cast, and legislative roles held are the part of the record that exists independent of any campaign's framing. This is where the reach imbalance in this project's rubric shows up most clearly: the bills that graded well were narrow, and the bills that graded poorly reshaped power itself.</li>
+<li><strong>Where the money flows.</strong> Who funds a campaign, who a candidate's own PACs pay, and who benefits on both ends of that flow is often the least visible part of a race to an ordinary voter — and, as this file shows, it can reveal both real conflicts (a PAC's founder fighting the exact bill a candidate sponsored) and real complexity (a citizen PAC with no corporate backing, or a self-funded campaign that looks concerning only until the self-funding is understood).</li>
+</ul>
+<p>None of these three lenses alone tells the full story, and this project's standing rubric — weighing power, transparency, financial accountability, environmental impact, and community impact — exists precisely because a candidate's stated values, their actual votes, and their money trail don't always point the same direction. The collective good is served best when all three get checked before a ballot is cast, not just the one a campaign wants a voter to see.</p>
+</section>
+
+<details class="sources">
+<summary>Sources</summary>
+<ul>
+<li>Utah Lieutenant Governor's Office, disclosures.utah.gov — Brammer, Smith, Myers, and Woodfield campaign finance reports and itemized contribution exports</li>
+<li>Kandee Myers and Wayne Woodfield, Conflict of Interest disclosure forms, filed 2026</li>
+<li>Ballotpedia, "Utah State Senate District 21" and "Brady Brammer" candidate pages</li>
+<li>Salt Lake Tribune, "Brady Brammer seeks reelection in SD21 against Cedar Hills City Council member Kelly Smith," June 7, 2026</li>
+<li>Salt Lake Tribune, "Checks and Balances PAC fine for not disclosing money behind attacks on Sen. Brammer, Rep. Teuscher," June 17, 2026</li>
+<li>KSL.com, "Republican lawmakers question political group over late financial disclosures"</li>
+<li>UtahPolitics.news, "Utah Primary 2026: PAC Money Floods Legislative Races as GOP Leaders Back Themselves," June 18, 2026</li>
+<li>Lehi Free Press / American Fork Citizen, "Brammer and Smith vie for Utah Senate District 21 seat," March 18, 2026, and "Brammer, Smith clash on taxes, roads in District 21 debate," June 3, 2026</li>
+<li>Utah Forward Party, 2026 County and Statewide Convention Nomination Results</li>
+<li>Utah Legislature website — full bill text for SJR005, HB0366, and the remaining bills detailed in Brammer's full Senate profile</li>
+</ul>
+</details>
+
+</main>
+
+<footer>
+The Weber County Hive · Independent · Accountability · Journalism · webercountyhive.substack.com
+</footer>
+
+<script>
+(function(){
+  var toggles = Array.prototype.slice.call(document.querySelectorAll('.fund-toggle'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.fund-panel'));
+  toggles.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var cand = btn.getAttribute('data-candidate');
+      toggles.forEach(function(b){ b.classList.toggle('active', b === btn); });
+      panels.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-candidate') === cand); });
+    });
+  });
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'IBM Plex Mono, monospace' });
+  }
+})();
+</script>
+
+</body>
+</html>
