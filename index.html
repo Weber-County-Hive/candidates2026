@@ -136,6 +136,7 @@
   <div class="docket-filters">
     <button class="filter-btn active" data-scope="all">All Races</button>
     <button class="filter-btn" data-scope="Federal">Federal</button>
+    <button class="filter-btn" data-scope="Statement">Candidate Statements</button>
     <span class="filter-divider"></span>
     <div id="county-filter-buttons" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
     <input id="search" class="search-box" type="text" placeholder="Search by name or race&hellip;">
@@ -152,7 +153,7 @@
 
 </div>
 
-<script src="candidates-data.js?v=9"></script>
+<script src="candidates-data.js?v=10"></script>
 <script>
   const groupsEl = document.getElementById('level-groups');
   const statStrip = document.getElementById('stat-strip');
@@ -220,8 +221,8 @@
       a.className = 'case-card';
       a.href = c.href;
 
-      const posted = formatDate(c.date);
-      const updated = formatDate(c.updated);
+      const posted = formatDate(c.datePosted);
+      const updated = formatDate(c.dateUpdated);
 
       let datesHtml = '';
       if(posted || updated){
@@ -231,7 +232,7 @@
         datesHtml = `<div class="case-dates">${parts.join(' &middot; ')}</div>`;
       }
 
-      const updatedBadge = c.updated ? `<span class="updated-badge">&#10003; Updated</span>` : '';
+      const updatedBadge = c.dateUpdated ? `<span class="updated-badge">&#10003; Updated</span>` : '';
 
       a.innerHTML = `
         <div class="case-top">
@@ -257,6 +258,7 @@
     }
 
     const federalList = list.filter(c => c.level === "Federal");
+    const statementList = list.filter(c => c.level === "Statement");
     const stateList = list.filter(c => c.level === "State" || c.level === "County");
 
     if(federalList.length > 0 || activeScope === 'Federal'){
@@ -277,7 +279,29 @@
       groupsEl.appendChild(section);
     }
 
-    if(stateList.length > 0 || activeScope !== 'Federal'){
+    if(statementList.length > 0 || activeScope === 'Statement'){
+      const section = document.createElement('div');
+      section.className = 'level-section';
+      const heading = document.createElement('div');
+      heading.className = 'level-heading';
+      heading.innerHTML = `Candidate Statements <span class="level-count">(${statementList.length})</span>`;
+      section.appendChild(heading);
+      const note = document.createElement('p');
+      note.style.cssText = 'font-family:var(--serif);font-size:14px;color:var(--ink-faint);margin:-8px 0 16px;';
+      note.textContent = 'Submitted directly by candidates in their own words, printed as sent — not case files, and not independently reported.';
+      section.appendChild(note);
+      if(statementList.length === 0){
+        const empty = document.createElement('div');
+        empty.className = 'county-empty';
+        empty.textContent = 'No statements submitted yet.';
+        section.appendChild(empty);
+      } else {
+        section.appendChild(renderCaseGrid(statementList));
+      }
+      groupsEl.appendChild(section);
+    }
+
+    if(stateList.length > 0 || (activeScope !== 'Federal' && activeScope !== 'Statement')){
       const stateSection = document.createElement('div');
       stateSection.className = 'level-section';
       const stateHeading = document.createElement('div');
@@ -319,6 +343,8 @@
     );
     if(activeScope === 'Federal'){
       list = list.filter(c => c.level === 'Federal');
+    } else if(activeScope === 'Statement'){
+      list = list.filter(c => c.level === 'Statement');
     } else if(activeScope !== 'all'){
       list = list.filter(c => (c.level === 'State' || c.level === 'County') && (c.county || 'Other') === activeScope);
     }

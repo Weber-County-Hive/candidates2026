@@ -224,5 +224,18 @@ const CANDIDATES = [
     href: "rowland-folmer-seat-c.html",
     datePosted: "2026-09-11",
     dateUpdated: "2026-09-11"
+  },
+  {
+    id: "ut2-crosby-statement",
+    race: "US House District 2 (Utah)",
+    level: "Statement",
+    caseNumber: "STATEMENT 01",
+    names: "Peter Crosby",
+    verdict: "In His Own Words: What Sets Him Apart from Blake Moore",
+    tags: ["Candidate Statement", "UT-2"],
+    stamp: "Active",
+    href: "crosby-statement-ut2.html",
+    datePosted: "2026-09-12",
+    dateUpdated: "2026-09-12"
   }
 ];
