@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kennedy v. Larsen — Utah's 4th Congressional District | The Weber County Hive</title>
+<style>
+  :root {
+    --color-bg: #f4f0e6;
+    --color-ink: #1c1a17;
+    --color-ink-soft: #6b6459;
+    --color-link: #c0572e;
+    --color-stat: #d9a441;
+    --color-band-light: #16324f;
+    --color-band-deep: #0b1c2e;
+    --color-border: #ddd4c2;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Serif 4', Georgia, serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+
+  a { color: var(--color-link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .header-band {
+    background: linear-gradient(160deg, var(--color-band-light), var(--color-band-deep));
+    color: #f4f0e6;
+    padding: 48px 24px 40px;
+    text-align: center;
+  }
+
+  .case-number {
+    font-family: var(--font-mono);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--color-stat);
+    margin-bottom: 10px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #cbd6df;
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-family: var(--font-serif);
+    font-size: 2.4rem;
+    margin: 0 0 12px;
+    font-weight: 700;
+  }
+
+  .subhead {
+    font-family: var(--font-body);
+    font-style: italic;
+    color: #d7cdb8;
+    font-size: 1.05rem;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .tags {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid var(--color-stat);
+    color: var(--color-stat);
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  section {
+    margin-bottom: 48px;
+  }
+
+  h2 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--color-link);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+
+  .scope-note {
+    background: #ebe4d4;
+    border-left: 4px solid var(--color-stat);
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    color: var(--color-ink-soft);
+    font-style: italic;
+  }
+
+  .redistrict-note {
+    background: #ebe4d4;
+    border-left: 4px solid var(--color-link);
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+
+  .candidate-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  @media (max-width: 680px) {
+    .candidate-cards { grid-template-columns: 1fr; }
+  }
+
+  .candidate-card {
+    border: 1px solid var(--color-border);
+    background: #fbf9f3;
+    padding: 20px;
+    border-radius: 4px;
+  }
+
+  .candidate-card h3 {
+    margin-top: 0;
+  }
+
+  .party-r { color: #7a2e2e; font-weight: 600; }
+  .party-d { color: #24507a; font-weight: 600; }
+
+  .fund-toggle {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .fund-toggle button {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+    border: 1px solid var(--color-ink);
+    background: transparent;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .fund-toggle button.active {
+    background: var(--color-ink);
+    color: var(--color-bg);
+  }
+
+  .fund-panel { display: none; }
+  .fund-panel.active { display: block; }
+
+  .fund-donut-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 16px;
+  }
+
+  .fund-donut {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .fund-donut-center {
+    position: absolute;
+    inset: 22px;
+    background: #fbf9f3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-align: center;
+    color: var(--color-ink-soft);
+  }
+
+  .fund-donut-legend {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .fund-donut-legend li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  .swatch-rust { background: var(--color-link); }
+  .swatch-amber { background: var(--color-stat); }
+  .swatch-soft { background: var(--color-ink-soft); }
+
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--color-border);
+    font-size: 0.95rem;
+  }
+
+  .stat-row .stat-value {
+    color: var(--color-stat);
+    font-weight: 700;
+    font-family: var(--font-mono);
+  }
+
+  .sources {
+    font-size: 0.85rem;
+    color: var(--color-ink-soft);
+  }
+
+  .sources ul {
+    padding-left: 20px;
+  }
+
+  .sources-collapsible {
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 12px 18px;
+    background: #fbf9f3;
+  }
+
+  .sources-collapsible summary {
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--font-serif);
+  }
+
+  .sources-collapsible summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .sources-collapsible summary::before {
+    content: "▶ ";
+    font-size: 0.75rem;
+    color: var(--color-link);
+    display: inline-block;
+    transition: transform 0.15s ease;
+  }
+
+  .sources-collapsible[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  .sources-collapsible .sources {
+    margin-top: 16px;
+  }
+
+  /* Comparison table */
+  .table-scroll {
+    overflow-x: auto;
+    margin: 20px 0;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 4px;
+  }
+
+  .table-scroll::after {
+    content: "";
+  }
+
+  .scroll-hint {
+    display: none;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--color-ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: -14px 0 8px;
+  }
+
+  @media (max-width: 700px) {
+    .scroll-hint { display: block; }
+  }
+
+  .compare-table {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 0.92rem;
+  }
+
+  .compare-table th, .compare-table td {
+    border: 1px solid var(--color-border);
+    padding: 10px 12px;
+    text-align: left;
+  }
+
+  .compare-table th {
+    background: var(--color-band-deep);
+    color: #f4f0e6;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .compare-table td.stat-cell {
+    font-family: var(--font-mono);
+    color: var(--color-link);
+    font-weight: 700;
+  }
+
+  .compare-table tr:nth-child(even) td {
+    background: #ebe4d4;
+  }
+
+  @media (max-width: 700px) {
+    .compare-table { font-size: 0.8rem; }
+    .compare-table th, .compare-table td { padding: 6px 8px; }
+  }
+
+  /* Rubric grade table */
+  .rubric-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.9rem;
+  }
+
+  .rubric-table th, .rubric-table td {
+    border: 1px solid var(--color-border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .rubric-table th {
+    background: var(--color-link);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    width: 130px;
+  }
+
+  .grade-pill {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 3px;
+    color: #fff;
+  }
+
+  .grade-fail { background: #7a2e2e; }
+  .grade-mixed { background: var(--color-stat); color: #1c1a17; }
+  .grade-pass { background: #2e6b3e; }
+
+  /* Bar chart */
+  .bar-chart {
+    margin: 16px 0;
+  }
+
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+  }
+
+  .bar-label {
+    width: 200px;
+    flex-shrink: 0;
+    text-align: right;
+    color: var(--color-ink-soft);
+  }
+
+  .bar-track {
+    flex: 1;
+    background: #ebe4d4;
+    border-radius: 3px;
+    overflow: hidden;
+    height: 20px;
+  }
+
+  .bar-fill {
+    background: var(--color-link);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    white-space: nowrap;
+    border-radius: 3px 0 0 3px;
+  }
+
+  @media (max-width: 700px) {
+    .bar-label { width: 110px; font-size: 0.75rem; }
+  }
+
+  /* Flip cards (glossary) */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin: 16px 0;
+  }
+
+  .flip-card {
+    perspective: 900px;
+    height: 230px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+
+  .flip-card-front {
+    background: #fbf9f3;
+  }
+
+  .flip-card-front .acronym {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-link);
+  }
+
+  .flip-card-front .tap-hint {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--color-ink-soft);
+    margin-top: 8px;
+    text-transform: uppercase;
+  }
+
+  .flip-card-back {
+    background: var(--color-band-deep);
+    color: #f4f0e6;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back .full-name {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 0.78rem;
+    line-height: 1.2;
+    color: var(--color-stat);
+    margin-bottom: 8px;
+  }
+
+  .flip-card-back .definition {
+    font-size: 0.68rem;
+    line-height: 1.35;
+  }
+
+  /* Section dropdowns */
+  .section-dropdown {
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 12px 18px;
+    background: #fbf9f3;
+    margin: 16px 0;
+  }
+
+  .section-dropdown summary {
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.02rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .summary-text {
+    flex: 1;
+  }
+
+  .grade-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #fff;
+    min-width: 30px;
+    height: 26px;
+    padding: 0 8px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-left: 8px;
+  }
+
+  .grade-badge-pattern {
+    font-size: 0.62rem;
+    min-width: auto;
+  }
+
+  .grade-badge-a, .grade-badge-b { background: #2e6b3e; }
+  .grade-badge-c { background: var(--color-stat); color: #1c1a17; }
+  .grade-badge-d, .grade-badge-f { background: #7a2e2e; }
+  .grade-badge-pattern { background: var(--color-ink-soft); }
+
+  .section-dropdown summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .section-dropdown summary::before {
+    content: "▶ ";
+    font-size: 0.7rem;
+    color: var(--color-link);
+    display: inline-block;
+  }
+
+  .section-dropdown[open] summary::before {
+    content: "▼ ";
+  }
+
+  .section-dropdown .dropdown-body {
+    margin-top: 14px;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 28px;
+    border-left: 2px solid var(--color-link);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-stat);
+    border: 2px solid var(--color-band-deep);
+  }
+
+  .timeline-date {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: var(--color-link);
+    letter-spacing: 0.04em;
+  }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-ink-soft);
+    border-top: 1px solid var(--color-border);
+  }
+</style>
+</head>
+<body>
+
+<div class="header-band">
+  <div class="case-number">Case 17</div>
+  <div class="eyebrow">Federal · Utah's 4th Congressional District · General Election Nov. 3, 2026</div>
+  <h1>Kennedy v. Larsen v. Burt</h1>
+  <p class="subhead">A first-term incumbent moving into a redrawn district, financed by nearly half a million dollars in committee money, faces a first-time Marine Corps veteran running almost entirely on loans to himself.</p>
+  <div class="tags">
+    <span class="tag">Redistricting</span>
+    <span class="tag">Incumbent vs. First-Time Candidate</span>
+    <span class="tag">Campaign Finance</span>
+  </div>
+</div>
+
+<main>
+
+  <section id="glossary-top">
+    <h2>Glossary — Tap to Flip</h2>
+    <div class="flip-grid">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner">
+        <div class="flip-card-front"><div class="acronym">OBBBA</div><div class="tap-hint">Tap</div></div>
+        <div class="flip-card-back"><div class="full-name">One Big Beautiful Bill Act</div><div class="definition">The 2025 federal reconciliation law extending 2017 tax cuts, cutting Medicaid/SNAP, and rolling back clean-energy credits.</div></div>
+      </div></div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner">
+        <div class="flip-card-front"><div class="acronym">BLM</div><div class="tap-hint">Tap</div></div>
+        <div class="flip-card-back"><div class="full-name">Bureau of Land Management</div><div class="definition">Federal agency managing most of the public land at issue in the land-sale amendment.</div></div>
+      </div></div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner">
+        <div class="flip-card-front"><div class="acronym">FLPMA</div><div class="tap-hint">Tap</div></div>
+        <div class="flip-card-back"><div class="full-name">Federal Land Policy and Management Act</div><div class="definition">The law setting the normal review process for disposing of federal land — the process the land-sale amendment bypassed.</div></div>
+      </div></div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner">
+        <div class="flip-card-front"><div class="acronym">CBO</div><div class="tap-hint">Tap</div></div>
+        <div class="flip-card-back"><div class="full-name">Congressional Budget Office</div><div class="definition">Nonpartisan agency that scored OBBBA's deficit and coverage-loss impacts cited throughout this file.</div></div>
+      </div></div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner">
+        <div class="flip-card-front"><div class="acronym">KFF</div><div class="tap-hint">Tap</div></div>
+        <div class="flip-card-back"><div class="full-name">KFF (formerly Kaiser Family Foundation)</div><div class="definition">Health policy research org whose state-by-state Medicaid loss estimates are cited in the OBBBA/Utah section.</div></div>
+      </div></div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner">
+        <div class="flip-card-front"><div class="acronym">RECA</div><div class="tap-hint">Tap</div></div>
+        <div class="flip-card-back"><div class="full-name">Radiation Exposure Compensation Act</div><div class="definition">Compensates people exposed to radiation from nuclear testing/mining — reinstated and expanded for Utah downwinders under OBBBA.</div></div>
+      </div></div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner">
+        <div class="flip-card-front"><div class="acronym">IHS</div><div class="tap-hint">Tap</div></div>
+        <div class="flip-card-back"><div class="full-name">Indian Health Service</div><div class="definition">Federal agency providing healthcare to American Indian/Alaska Native patients — subject of Kennedy's H.R. 8658.</div></div>
+      </div></div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner">
+        <div class="flip-card-front"><div class="acronym">PRC</div><div class="tap-hint">Tap</div></div>
+        <div class="flip-card-back"><div class="full-name">Purchased/Referred Care</div><div class="definition">The IHS emergency-care program whose patient notification deadline H.R. 8658 would extend from 72 hours to 15 days.</div></div>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="the-race">
+    <h2>The Race</h2>
+    <p>Rep. Mike Kennedy (R), currently serving Utah's 3rd Congressional District, is running for re-election in the newly drawn 4th Congressional District for the November 3, 2026 general election. His opponent is Jonny Larsen (D), a Marine Corps veteran making his first run for federal office.</p>
+
+    <div class="redistrict-note">
+      <strong>Why Kennedy is running in a different district:</strong> Utah's congressional map was thrown out by a Utah Third District Court judge in late 2025 after finding the Legislature's 2021 map ignored the state's voter-approved redistricting standards. A federal panel later declined to block the court-ordered replacement map from taking effect for 2026. Under the new lines, three of Utah's four sitting House Republicans are running in different-numbered districts than the ones they currently hold — Kennedy is one of them, moving from CD3 into the new CD4. Rep. Burgess Owens, who previously held CD4, did not make this year's ballot.
+    </div>
+
+    <div class="scope-note">
+      Note on scope: Kennedy is an incumbent with a longer prior public record — a full term in Congress plus multiple terms in the Utah House and Senate before that, along with legislative votes, prior campaign cycles, and committee assignments — that naturally generates more to document than a first-time candidate has yet created. Coverage volume here reflects the record each candidate has actually produced, not a decision to scrutinize one campaign more than the other.
+    </div>
+
+    <details class="section-dropdown">
+      <summary>How the district got redrawn — timeline</summary>
+      <div class="dropdown-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">July 11, 2024</div>
+            <div>Utah Supreme Court rules the Legislature's override of Proposition 4 (the independent-redistricting initiative) likely violated voters' constitutional right to participate in government; sends the case back to Third District Court.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Aug. 25, 2025</div>
+            <div>Judge Dianna Gibson strikes down the Legislature's 2021 congressional map.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Sept. 15, 2025</div>
+            <div>Utah Supreme Court rejects the Legislature's request to pause that ruling, clearing the way for a new map by Nov. 10, 2025.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Oct. 6, 2025</div>
+            <div>Utah Legislature approves a new congressional map under the court's order.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">March 2026</div>
+            <div>Candidates file under the new map — three of Utah's four sitting House Republicans (Kennedy included) end up running in different-numbered districts than the ones they currently hold.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Nov. 3, 2026</div>
+            <div>General election under the new UT-4 map.</div>
+          </div>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section id="candidates">
+    <h2>The Candidates</h2>
+    <div class="candidate-cards" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="candidate-card">
+        <h3>Rep. Mike Kennedy <span class="party-r">(R)</span></h3>
+        <p>First-term incumbent, U.S. House (currently UT-3, seeking re-election in the new UT-4; sworn in Jan. 2025). Physician and attorney. Previously served three terms in the Utah House, District 27 (2013–2019), then two terms in the Utah Senate (2021–2025, redistricted from the 14th to the 21st district partway through). Ran unsuccessfully for U.S. Senate in 2018 (lost to Mitt Romney). Sponsors a leadership PAC, Heal America.</p>
+      </div>
+      <div class="candidate-card">
+        <h3>Jonny Larsen <span class="party-d">(D)</span></h3>
+        <p>Fifth-generation Utahn, grew up in Salt Lake City's Fairpark neighborhood on food stamps and free school lunch; entered foster care with his younger brother at 13. Raised largely by his grandmother, a Teamsters Local 222 member whose union pension, Medicare, and Social Security kept the household stable. Served as a Marine Corps Infantry Rifleman (2000–2004, Sergeant), including two Iraq deployments — the initial push into Baghdad and the Battle of Husaybah — and was stationed in Washington, D.C. during the 9/11 Pentagon attack. Worked in IT as a hospital systems/network administrator after his service, then used the GI Bill to study Applied Math and Physics at the University of Utah before the funding ran out. First-time federal candidate; won the Democratic convention field for UT-4. (Biographical detail per his own campaign website — not independently verified beyond what's stated there.)</p>
+      </div>
+      <div class="candidate-card">
+        <h3>Steven Burt <span style="color: var(--color-ink-soft); font-weight: 600;">(Independent)</span></h3>
+        <p>Born and raised in South Jordan, still lives there with his family — states he has spent nearly his entire life in District 4. J.D., University of Utah S.J. Quinney College of Law (2007); BA, BYU (2003). Practiced litigation at Ballard Spahr from 2007–2016, then spent over nine years in high-ranking in-house compliance/regulatory/public-policy roles at solar companies — Vivint, Sunrun (Deputy General Counsel/VP/Head of Compliance), and PosiGen (Chief Compliance & Policy Officer, later Chief Public Policy & Engagement Officer) — before rejoining Ballard Spahr as Counsel in 2026. Currently practices law at Ballard Spahr while running. Recognized as a Distinguished Pro Bono Attorney by Utah Legal Services, the Utah State Bar, the Pro Bono Initiative, the S.J. Quinney College of Law, and the Legal Services Corporation (his own campaign site specifies this pro bono work is particularly focused on immigration cases, a detail not confirmed by the firm's own bio). Reached the general election via the convention path rather than a primary.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="at-a-glance">
+    <h2>At a Glance</h2>
+    <p class="scroll-hint">&larr; Swipe to see all three candidates &rarr;</p>
+    <div class="table-scroll">
+    <table class="compare-table">
+      <tr>
+        <th>&nbsp;</th>
+        <th>Kennedy (R)</th>
+        <th>Larsen (D)</th>
+        <th>Burt (I)</th>
+      </tr>
+      <tr>
+        <td>Status</td>
+        <td>Incumbent (moving from UT-3)</td>
+        <td>First-time candidate</td>
+        <td>First-time candidate</td>
+      </tr>
+      <tr>
+        <td>Background</td>
+        <td>Physician/attorney; ex-state legislator</td>
+        <td>Marine Corps veteran</td>
+        <td>Attorney; solar-industry executive</td>
+      </tr>
+      <tr>
+        <td>Total raised</td>
+        <td class="stat-cell">$971,392.50</td>
+        <td class="stat-cell">$53,578.79</td>
+        <td class="stat-cell">$34,074.00</td>
+      </tr>
+      <tr>
+        <td>Total spent</td>
+        <td class="stat-cell">$705,037.56</td>
+        <td class="stat-cell">$52,449.89</td>
+        <td class="stat-cell">$31,998.53</td>
+      </tr>
+      <tr>
+        <td>Cash on hand</td>
+        <td class="stat-cell">$391,556.75</td>
+        <td class="stat-cell">$1,128.90</td>
+        <td class="stat-cell">$2,075.47</td>
+      </tr>
+      <tr>
+        <td>PAC/committee money</td>
+        <td class="stat-cell">$494,000</td>
+        <td class="stat-cell">$450</td>
+        <td class="stat-cell">$0</td>
+      </tr>
+      <tr>
+        <td>Loans to self</td>
+        <td class="stat-cell">$0</td>
+        <td class="stat-cell">$36,155.42</td>
+        <td class="stat-cell">$0</td>
+      </tr>
+      <tr>
+        <td>Financial disclosure filed</td>
+        <td class="stat-cell">Yes</td>
+        <td class="stat-cell">No</td>
+        <td class="stat-cell">None found</td>
+      </tr>
+    </table>
+    </div>
+    <p style="font-size: 0.8rem; color: var(--color-ink-soft); font-style: italic;">Coverage windows differ by declaration date (see the Campaign Finance section) — Burt in particular has had roughly half the time Kennedy's had to raise money. On disclosures: Larsen's "No" is confirmed by the Campaign Legal Center's own complaint naming him as a non-filer. Burt's "None found" reflects a search that turned up no record either way — not a confirmed non-filing, just the absence of one found so far.</p>
+  </section>
+
+  <style>
+    @media (max-width: 900px) {
+      #candidates .candidate-cards, #finance .candidate-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <section id="larsen-platform">
+    <h2>Larsen's Platform</h2>
+    <p class="scope-note" style="border-left-color: var(--color-link); background: #ebe4d4;">The following is drawn from Larsen's own campaign website ("The Commitment") — his stated positions, not independently fact-checked line by line. Housing and cost-of-living figures below are his campaign's own numbers.</p>
+
+    <div class="redistrict-note">
+      <strong>Larsen's stated policy priority — VA access:</strong> per his campaign site, there is no VA clinic in Tooele, Sevier, Millard, or Sanpete counties, despite the district containing Camp Williams, Dugway Proving Ground, and the Tooele Army Depot — meaning veterans in those counties drive significant distances for basic care (a follow-up page specifies "two hours each way" for Sevier and Millard). This is his own claim, not yet independently verified against VA facility location data; worth confirming before citing in published copy.
+    </div>
+
+    <details class="section-dropdown">
+      <summary>Housing affordability</summary>
+      <div class="dropdown-body">
+        <p>Larsen cites Utah home prices roughly doubling since 2013 — a median South Jordan home now requiring an estimated $180,000 household income to purchase, with medians of $664,000 in Sandy and $960,000 in Draper. He cites 88% of Utah renters as currently unable to afford homeownership, and calls for restricting institutional investors from buying single-family homes as an asset class, alongside first-time-buyer protections.</p>
+      </div>
+    </details>
+
+    <details class="section-dropdown">
+      <summary>Healthcare and veterans' access</summary>
+      <div class="dropdown-body">
+        <p>Larsen discloses on his own campaign site that he was diagnosed with cancer and was treated through the VA, which he cites as the basis for his healthcare platform. He cites a risk of rural Utah hospitals losing "21 cents of every Medicaid dollar" (uncited to a specific source on his site), and calls for insurance-company accountability, expanded rural healthcare access, prescription drug cost controls, and new VA clinic locations where county-level access gaps exist.</p>
+      </div>
+    </details>
+
+    <details class="section-dropdown">
+      <summary>Cost of living</summary>
+      <div class="dropdown-body">
+        <p>Larsen's site attributes rising grocery, clothing, and farm equipment costs in part to tariffs, cites Utah infant childcare costs exceeding $11,000/year, and criticizes the $5 trillion added to the national debt under the reconciliation package Kennedy voted for (not named directly as OBBBA on his site, but consistent with the timeline), framing its tax cuts as skewed toward those who need them least — consistent with the CBO distributional findings already documented in this case file's OBBBA section.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="burt-platform">
+    <h2>Burt's Platform</h2>
+    <p class="scope-note" style="border-left-color: var(--color-link); background: #ebe4d4;">The following is drawn from Burt's own campaign website — his stated positions, not independently fact-checked. He is running as an unaffiliated/independent candidate.</p>
+
+    <details class="section-dropdown">
+      <summary>Why independent</summary>
+      <div class="dropdown-body">
+        <p>Burt held his campaign kickoff event, titled "Our America," on July 2, 2026 — deliberately timed to the Second Continental Congress's actual independence vote (distinct from July 4's Declaration signing), tying into his 250th-anniversary "Declare Your Independence" branding.</p>
+        <p>Burt frames his core beliefs around the Constitution, unalienable rights, federalism, limited government, separation of powers, and rule of law — and states he is unaffiliated because he views both major parties as more committed to their own power than to those principles. He also states a belief that representatives should live in the districts they represent and stay closely familiar with constituents' needs — consistent with his own South Jordan residency claim above.</p>
+        <p>A separate page on his site ("Declare Your Independence") elaborates this at length, styled after the Declaration of Independence and citing historical warnings against partisanship from Washington's Farewell Address, plus Adams, Jefferson, and Hamilton. His specific list of grievances includes: inflation and housing affordability, an unreformed immigration system, unaddressed healthcare costs, unregulated AI risk, social media harms to young people, self-enrichment by elected officials, the absence of term limits, a call for accountability in the Jeffrey Epstein case, and Congress's chronic reliance on continuing resolutions rather than passing spending bills on time (he cites this pattern as unbroken since 1997). He commits to five specific actions: registering unaffiliated, ceasing support for either major party, committing to nonviolent political discourse, opposing rules that disadvantage independent/third-party candidates, and recommitting to founding constitutional principles.</p>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">The Epstein-accountability line is a notably unusual plank for a congressional campaign platform — worth flagging as distinctive rather than a standard talking point.</p>
+      </div>
+    </details>
+
+    <details class="section-dropdown">
+      <summary>Direct exchange with Kennedy — wildfire policy</summary>
+      <div class="dropdown-body">
+        <p>Kennedy published a Deseret News opinion piece (Aug. 2, 2026, "Empowering local officials to fight and prevent wildfires their way") citing 743 wildfires and 387,000+ acres burned in Utah so far in the 2026 season, noting federal agencies oversee roughly 70% of Utah's land, and proposing his own bills (Cross-Boundary Wildfire Solutions Act, Accelerating Forest Management Act, Forest Health and Wildfire Risk Reduction Act, and his TORCH Act — Targeted Operations to Remove Catastrophic Hazards Act, named for the late Rep. Doug LaMalfa) plus expanded Good Neighbor Authority as the fix. Kennedy wrote: "The federal government can help, but will never understand or care for this land the way Utahns do" — confirmed verbatim against his original piece, not a mischaracterization.</p>
+        <p>Burt responded with his own opinion piece, agreeing with Kennedy's Good Neighbor Authority point but arguing the diagnosis is incomplete on two fronts: (1) citing the Center for Western Priorities' claim that the Forest Service treated roughly 35% fewer acres for hazardous fuels in 2025 than 2024, with some prescribed burns cancelled after crews had already traveled to perform them, and a cited ~43% Forest Service funding cut referenced at a June 25, 2026 House Agriculture Committee hearing; and (2) Kennedy's piece not mentioning climate change, where Burt cites a NOAA finding that "climate change, including increased heat, extended drought, and a thirsty atmosphere, has been a key driver" of increased western wildfire risk. Burt also describes personally learning about "wildfire spotting" (embers traveling up to a mile) from an incident-management liaison officer during the Iron Fire near Eureka.</p>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Kennedy's quote and cited statistics are confirmed against his own published piece. Burt's cited figures (Center for Western Priorities, the June 2026 hearing, Taxpayers for Common Sense, NOAA) are attributed to those sources in his own piece but have not yet been independently re-verified against the primary sources themselves.</p>
+      </div>
+    </details>
+
+    <details class="section-dropdown">
+      <summary>Stated priorities</summary>
+      <div class="dropdown-body">
+        <p>In order as listed on his own site: restoring affordability/the "American Dream" for average earners as his top priority; immigration system reform paired with a specific critique that "ICE is out of control," calling instead for ICE to focus on dangerous criminals rather than broader enforcement; a critique of what he calls "intellectuals" within the MAGA movement who he says are critical of America's founding principles, calling for recommitment to those principles instead; and ending the two-party system outright, which he frames under a "Declare Your Independence" banner.</p>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Worth noting for balance: his ICE-focused immigration position and his anti-two-party framing both cut against standard partisan lines in either direction — neither a conventional Republican nor Democratic position as stated.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="voting-record">
+    <h2>Kennedy's Voting Record</h2>
+    <div class="scope-note">
+      Note on scope: Larsen has no federal voting record to compare, having never held office. This section covers Kennedy's record only, for that reason — not as a heavier-handed look at one candidate over the other.
+    </div>
+    <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Rubric grades appearing in this section assess the collective impact of each specific bill or vote — not a character judgment of the candidate who sponsored or voted for it.</p>
+    <div class="stat-row"><span>Missed votes, Jan. 2025&ndash;Aug. 2026</span><span class="stat-value">12 of 647 (1.9%)</span></div>
+    <div class="stat-row"><span>Committee assignments</span><span class="stat-value">Natural Resources (Vice Chair, Federal Lands Subcommittee); Science, Space &amp; Technology; Transportation &amp; Infrastructure</span></div>
+
+    <h3 style="margin-top: 24px;">Most recent votes (as of Sept. 3, 2026)</h3>
+    <p class="scroll-hint">&larr; Swipe to see full titles &rarr;</p>
+    <div class="table-scroll">
+    <table class="compare-table">
+      <tr><th>Date</th><th>RC#</th><th>Bill</th><th>Vote</th><th>Title</th></tr>
+      <tr><td>09/03/26</td><td>295</td><td>H.R.4795</td><td class="stat-cell">Yea</td><td>Protect Economic and Academic Freedom Act</td></tr>
+      <tr><td>09/02/26</td><td>294</td><td>H.R.1501</td><td class="stat-cell">Yea</td><td>Protecting Domestic Mining Act</td></tr>
+      <tr><td>09/02/26</td><td>293</td><td>H.J.Res.1</td><td class="stat-cell">Yea</td><td>Constitutional amendment: fix Supreme Court at nine justices</td></tr>
+      <tr><td>09/01/26</td><td>292</td><td>H.Res.1498</td><td class="stat-cell">Yea</td><td>Censure of Rep. Chuck Edwards (R-NC)</td></tr>
+      <tr><td>09/01/26</td><td>291</td><td>H.R.9436</td><td class="stat-cell">Yea</td><td>Extend North Atlantic right whale regulations</td></tr>
+      <tr><td>09/01/26</td><td>290</td><td>H.R.9436</td><td class="stat-cell">Nay</td><td>Motion to Recommit (same bill)</td></tr>
+      <tr><td>09/01/26</td><td>289</td><td>H.Res.1490</td><td class="stat-cell">Yea</td><td>Condemning socialism "in all its forms"</td></tr>
+      <tr><td>09/01/26</td><td>288</td><td>H.Res.1499</td><td class="stat-cell">Yea</td><td>Rule for considering H.R.1501/9436/4795 &amp; H.Res.1490</td></tr>
+      <tr><td>09/01/26</td><td>287</td><td>H.Res.1499</td><td class="stat-cell">Yea</td><td>Ordering the previous question (same rule)</td></tr>
+      <tr><td>09/01/26</td><td>286</td><td>H.R.6500</td><td class="stat-cell">Yea</td><td>AGOA Extension Act</td></tr>
+    </table>
+    </div>
+    <details class="section-dropdown">
+      <summary>Context on the two most substantive votes</summary>
+      <div class="dropdown-body">
+        <p><strong>H.Res. 1498 — Chuck Edwards censure:</strong> after a House Ethics Committee investigation found Rep. Chuck Edwards (R-NC) had behaved inappropriately with female staffers, the House voted 413&ndash;2 to formally censure him. Kennedy voted yes, joining the near-unanimous majority. Edwards subsequently ended his re-election bid.</p>
+        <p><strong>H.R. 1501 — Protecting Domestic Mining Act:</strong> sits squarely in Kennedy's own committee territory. It permanently codifies mining and mineral-processing projects as eligible for expedited environmental review under the FAST Act's permitting process, and blocks a 2023 proposed rule that would have narrowed which mining projects qualify. Sponsored by Rep. Jefferson Shreve (R-IN) with Utah's Rep. Blake Moore as a lead cosponsor; passed the House 9/2/2026, now in the Senate.</p>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">The Supreme Court constitutional amendment (H.J.Res.1) is functionally symbolic — a constitutional amendment needs two-thirds in both chambers plus ratification by three-quarters of states, a bar this vote alone doesn't come close to clearing.</p>
+      </div>
+    </details>
+
+    <h3 style="margin-top: 24px;">One Big Beautiful Bill Act (H.R. 1)</h3>
+    <p>Kennedy voted yes on both House votes: initial passage (May 22, 2025, 215&ndash;214) and final passage concurring with Senate amendments (July 3, 2025, 218&ndash;214). Utah's full congressional delegation voted yes on both.</p>
+
+    <details class="section-dropdown">
+      <summary>What OBBBA does to Utah specifically — the numbers</summary>
+      <div class="dropdown-body">
+        <div class="table-scroll">
+        <table class="compare-table">
+          <tr><th>Impact</th><th>Figure</th></tr>
+          <tr><td>Federal Medicaid dollars lost to Utah over 10 years</td><td class="stat-cell">$4B&ndash;$7B</td></tr>
+          <tr><td>Utahns losing coverage from Medicaid changes</td><td class="stat-cell">~52,000</td></tr>
+          <tr><td>Utahns losing coverage from related ACA changes</td><td class="stat-cell">~130,000</td></tr>
+          <tr><td>Share of Medicaid expansion adults losing coverage</td><td class="stat-cell">40% (tied for highest of any state)</td></tr>
+          <tr><td>Utahns losing SNAP benefits</td><td class="stat-cell">~3,009</td></tr>
+          <tr><td>Losses to Utah's rural hospitals</td><td class="stat-cell">$872M</td></tr>
+        </table>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Figures per KFF/CBO analyses cited by Utah's own legislative fiscal analysts and the Utah Hospital Association. Utah is one of only three states (with Maryland and New Mexico) where the expansion-adult coverage loss reaches 40%, driven mostly by the law's new work requirements. Offsetting factors: verified tribal members are exempt from the work requirements, and Utah downwinders gained an expanded, doubled-payout RECA program under the same law — see Environmental/Community notes below.</p>
+      </div>
+    </details>
+
+    <details class="section-dropdown">
+      <summary><span class="summary-text">Rubric assessment — OBBBA</span><span class="grade-badge grade-badge-d">D</span></summary>
+      <div class="dropdown-body">
+        <table class="rubric-table">
+          <tr><th>Power</th><td><span class="grade-pill grade-mixed">Mixed</span> Reconciliation exists specifically to bypass the Senate's 60-vote threshold — a real reduction in the normal requirement for bipartisan buy-in, though it's a tool both parties use.</td></tr>
+          <tr><th>Transparency</th><td><span class="grade-pill grade-fail">Fails</span> Compressed timeline: House passed a version May 22, the Senate rewrote it and passed July 1, and the House had to accept those changes July 3 under a self-imposed deadline, leaving little real review window.</td></tr>
+          <tr><th>Financial Accountability</th><td><span class="grade-pill grade-mixed">Disclosed, but lopsided</span> CBO's own numbers show the bottom 10% of earners losing ~3.1% of income by 2034 while the top 10% gains ~$13,600/year on average — clearly disclosed by CBO itself, just heavily uneven in effect.</td></tr>
+          <tr><th>Environmental Impact</th><td><span class="grade-pill grade-fail">Rollback</span> Repeals/phases out major IRA clean-energy credits, ends the $27B Greenhouse Gas Reduction Fund, and mandates expanded oil/gas leasing including in Utah.</td></tr>
+          <tr><th>Community Impact</th><td><span class="grade-pill grade-mixed">Mixed</span> Real win for Utah downwinders (RECA expansion, doubled payout cap); real harm nationally (10.9&ndash;16M projected to lose health coverage, ~4M losing food assistance including 1M children).</td></tr>
+        </table>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Overall: Grade D — two outright fails (Transparency, Environmental Impact) and three mixed dimensions, with no clean pass on any front.</p>
+      </div>
+    </details>
+
+    <h3 style="margin-top: 24px;">Utah/Nevada public land sale amendment — committee vote, unconfirmed by name</h3>
+    <p>In May 2025, the House Natural Resources Committee — where Kennedy sits on the full committee and chairs the Federal Lands Subcommittee — approved an amendment by Reps. Mark Amodei (R-NV) and Celeste Maloy (R-UT) authorizing sale of roughly 11,000 acres of BLM land in Utah's Washington and Beaver counties, plus a much larger Nevada acreage, as part of the reconciliation package. The amendment passed 26&ndash;17, with Rep. Jeff Hurd (R-CO) the lone Republican vote against. The provision fell within Kennedy's own subcommittee's jurisdiction, making a yes vote likely, but the committee's named roll-call record has not yet been located to confirm his individual vote — treat as unconfirmed until verified against that document. The provision was later stripped from the version of H.R. 1 that was signed into law, following a Senate procedural ruling.</p>
+
+    <details class="section-dropdown">
+      <summary>Who was designated to benefit — Utah parcels by acreage</summary>
+      <div class="dropdown-body">
+        <div class="bar-chart">
+          <div class="bar-row">
+            <div class="bar-label">Washington County</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 100%;">6,492 acres</div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Washington Co. Water Conservancy District</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 67%;">4,375 acres</div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">City of St. George</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 8%;">520 acres</div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Beaver County</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 1%;">62 acres</div></div>
+          </div>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">All four designated buyers are public entities, required to pay "not less than fair market value" — no private company or developer is named as a direct purchaser in the amendment text.</p>
+      </div>
+    </details>
+
+    <details class="section-dropdown">
+      <summary><span class="summary-text">Rubric assessment — land sale amendment</span><span class="grade-badge grade-badge-d">D</span></summary>
+      <div class="dropdown-body">
+        <table class="rubric-table">
+          <tr><th>Power</th><td><span class="grade-pill grade-fail">Fails</span> Bypasses FLPMA's normal disposal review process — the standing check requiring planning, environmental review, and public input before federal land changes hands.</td></tr>
+          <tr><th>Transparency</th><td><span class="grade-pill grade-fail">Fails</span> Introduced ~11:20pm at the tail end of a 12+ hour markup; parcel maps weren't distributed to members until ~36 hours <em>after</em> the vote.</td></tr>
+          <tr><th>Financial Accountability</th><td><span class="grade-pill grade-mixed">Lopsided</span> Local governments must pay fair-market-value, but proceeds go to the U.S. Treasury general fund, not back to Utah or the affected counties.</td></tr>
+          <tr><th>Environmental Impact</th><td><span class="grade-pill grade-mixed">Genuinely disputed</span> Conservation groups document parcels near Zion, Red Cliffs, and Beaver Dam Wash conservation areas; proponents counter the parcels were screened for scenic/recreation impact. Neither claim is baseless.</td></tr>
+          <tr><th>Community Impact</th><td><span class="grade-pill grade-mixed">Real need, real cost</span> Washington County's housing/water/infrastructure pressure is documented and genuine; the same land is also the tourism-economy asset conservation groups say it is.</td></tr>
+        </table>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Overall: Grade D — two outright fails (Power, Transparency) and three mixed dimensions, with no clean pass on any front.</p>
+      </div>
+    </details>
+
+
+    <h3 style="margin-top: 24px;">Bills sponsored — issue areas</h3>
+    <p>Per GovTrack's analysis of Kennedy's sponsored legislation:</p>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">Public Lands &amp; Natural Resources</div><div class="bar-track"><div class="bar-fill" style="width: 100%;">26%</div></div></div>
+      <div class="bar-row"><div class="bar-label">Energy</div><div class="bar-track"><div class="bar-fill" style="width: 73%;">19%</div></div></div>
+      <div class="bar-row"><div class="bar-label">Science, Tech &amp; Comms</div><div class="bar-track"><div class="bar-fill" style="width: 58%;">15%</div></div></div>
+      <div class="bar-row"><div class="bar-label">Government Operations</div><div class="bar-track"><div class="bar-fill" style="width: 42%;">11%</div></div></div>
+      <div class="bar-row"><div class="bar-label">Health</div><div class="bar-track"><div class="bar-fill" style="width: 27%;">7%</div></div></div>
+      <div class="bar-row"><div class="bar-label">Transportation &amp; Public Works</div><div class="bar-track"><div class="bar-fill" style="width: 27%;">7%</div></div></div>
+      <div class="bar-row"><div class="bar-label">Immigration</div><div class="bar-track"><div class="bar-fill" style="width: 27%;">7%</div></div></div>
+      <div class="bar-row"><div class="bar-label">Agriculture &amp; Food</div><div class="bar-track"><div class="bar-fill" style="width: 27%;">7%</div></div></div>
+    </div>
+
+    <h3 style="margin-top: 24px;">Recently introduced bills</h3>
+    <details class="section-dropdown">
+      <summary>Full list (7 bills)</summary>
+      <div class="dropdown-body">
+        <ul style="padding-left: 20px;">
+          <li>H.R. 9221 — Outdoor Americans with Disabilities Act</li>
+          <li>H.R. 9193 — Powering the Future of American Space Dominance Act</li>
+          <li>H.R. 8658 — Indian Health Service Emergency Claims Parity Act</li>
+          <li>H.R. 8335 — PROTECT Act of 2026 (<a href="h1b-visa-explainer.html">see our H-1B visa explainer</a> for what it actually does)</li>
+          <li>H.R. 8051 — TECH Act</li>
+          <li>H.R. 7831 — License to Drill Act</li>
+          <li>H.R. 7794 — Stop Child Care Funding Fraud Act of 2026</li>
+        </ul>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Most introduced legislation sees no further action after being introduced — bill titles reflect stated intent, not enacted policy.</p>
+      </div>
+    </details>
+
+  </section>
+
+  <section id="state-federal-alignment">
+    <h2>State-Federal Alignment &amp; Additional Findings</h2>
+    <p class="scope-note">Six findings connecting Kennedy's federal record to Utah's own state legislative history, each graded against this file's standing five-part rubric (Power, Transparency, Financial Accountability, Environmental Impact, Community Impact).</p>
+    <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">These grades assess the collective impact of each bill or vote itself — not a character judgment of the candidate who sponsored or voted for it. A specific transaction, vote, or deal is graded on its own terms, independent of that person's other conduct.</p>
+
+    <details class="section-dropdown">
+      <summary><span class="summary-text">1. H.B. 502 (2024) — Kennedy's own prior vote on mining/zoning</span><span class="grade-badge grade-badge-b">B</span></summary>
+      <div class="dropdown-body">
+        <p>As introduced in the Utah Legislature, H.B. 502 ("Critical Infrastructure and Mining") mandated that by Dec. 31, 2024, every political subdivision's zoning ordinances allow mining/critical-infrastructure operations as a permitted use — overriding existing overlay zoning, barring subdivisions from "unreasonably limiting" these operations, and deeming any non-compliant subdivision to allow it anyway. The House Natural Resources Committee replaced this entirely with a 1st Substitute the same day (2/22/24) after testimony from Millcreek Mayor Jeff Silvestrini, the Utah League of Cities and Towns, and the League of Women Voters — all pushing for the study-only replacement. What passed instead was just a $500,000 state-agency study, with no binding mandate on local governments.</p>
+        <p>The bill remained contested at every stage even after the mandate was stripped: House 3rd reading 57-16-2, Senate committee 5-2-1, Senate floor 19-9-1, House concurrence 54-17-4 (crossing party lines both times). <strong>Then-Sen. Mike Kennedy voted yes at the Senate floor stage</strong> — the same Kennedy now in Congress sponsoring H.R. 1501, a federal mining-permitting bill. This is a documented, two-year-earlier data point showing his interest in mining/critical-infrastructure permitting policy predates his current committee assignment.</p>
+        <p style="background: #ebe4d4; border-left: 4px solid var(--color-stat); padding: 10px 14px;"><strong>Why it changed, stated plainly:</strong> the zoning-override mandate did not survive because a sitting mayor, the statewide municipal association, and citizen/League of Women Voters testimony pushed back on it in open committee — and that pushback succeeded before any floor vote happened. Kennedy's yes vote came at the Senate floor stage, after the override was already gone. He voted for the compromise that citizen and local-government pressure produced, not for the override itself. This is a case where the public process worked, and he backed the outcome of it — not a vote against local control.</p>
+        <table class="rubric-table">
+          <tr><th>Power</th><td><span class="grade-pill grade-fail">Fails as introduced</span> <span class="grade-pill grade-pass">Holds as enacted</span> The introduced bill would have stripped local zoning authority outright; organized local-government pushback got it replaced before passage.</td></tr>
+          <tr><th>Transparency</th><td><span class="grade-pill grade-pass">Passes</span> The substitution happened in open committee testimony with named witnesses on the record, not a hidden late-session swap.</td></tr>
+          <tr><th>Financial Accountability</th><td><span class="grade-pill grade-pass">Passes</span> Straightforward $500,000 line-item appropriation for a study; fiscal note confirms no local government cost.</td></tr>
+          <tr><th>Environmental Impact</th><td><span class="grade-pill grade-pass">Passes</span> The enacted version imposes no zoning override, so no environmental-review bypass occurred.</td></tr>
+          <tr><th>Community Impact</th><td><span class="grade-pill grade-pass">Passes</span> A sitting mayor and the statewide municipal association successfully represented local government interests against a state mandate.</td></tr>
+        </table>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Overall: Grade B — a bad design caught and fixed by real public process, not a quiet reversal.</p>
+      </div>
+    </details>
+
+    <details class="section-dropdown">
+      <summary><span class="summary-text">2. S.B. 254 (2026) ↔ H.R. 1501 — state and federal mining permitting moving together</span><span class="grade-badge grade-badge-d">D</span><span class="grade-badge grade-badge-c">C</span></summary>
+      <div class="dropdown-body">
+        <p>Utah's S.B. 254 sets a goal of cutting critical-minerals permitting timelines to under 18 months and creates "critical minerals zones" with fast-tracked parallel state permitting. Kennedy's federal H.R. 1501 does the same thing at the federal level — codifying mining as a FAST-41 "covered project" eligible for expedited environmental review. Both moved through their respective legislatures in the same 2026 window. This isn't just parallel policy on paper: the Interior Department already approved Utah's Velvet-Wood uranium-vanadium mine (San Juan County) under a new accelerated 14-day federal environmental review, tied to a national energy emergency declaration.</p>
+        <table class="rubric-table">
+          <tr><th>Power</th><td><span class="grade-pill grade-fail">Fails</span> S.B. 254 bars local governments from offering incentives outside state-designated zones and seats the mining industry association's president on the governing council; H.R. 1501 extends a federal fee/permitting framework industry itself asked to keep in place.</td></tr>
+          <tr><th>Transparency</th><td><span class="grade-pill grade-fail">Fails (S.B. 254)</span> <span class="grade-pill grade-pass">Passes (H.R. 1501)</span> S.B. 254 was renamed and substantively rewritten in a 9-hour window the same day it had already passed both Utah legislative chambers under a different name. H.R. 1501 went through an ordinary committee/floor process.</td></tr>
+          <tr><th>Financial Accountability</th><td><span class="grade-pill grade-mixed">Mixed</span> S.B. 254's mining-exploration tax credit caps were reduced in substitute, but its severance-tax transfer was redirected to a broader account than originally proposed. H.R. 1501 is industry-fee-funded, not taxpayer-funded.</td></tr>
+          <tr><th>Environmental Impact</th><td><span class="grade-pill grade-fail">Fails</span> Both bills exist specifically to shorten environmental review timelines for mining — that is their stated purpose, not a side effect.</td></tr>
+          <tr><th>Community Impact</th><td><span class="grade-pill grade-mixed">Mixed</span> Real economic development goals (critical minerals independence, jobs) exist alongside real speed-vs-scrutiny tradeoffs for communities near new mining activity.</td></tr>
+        </table>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Overall: S.B. 254 Grade D (per this publication's standing bill tracker); H.R. 1501 not separately graded elsewhere, assessed here as a Grade C — narrower in scope than S.B. 254 and procedurally clean, but sharing the same environmental-review-speed tradeoff.</p>
+      </div>
+    </details>
+
+    <details class="section-dropdown">
+      <summary><span class="summary-text">3. Outdoor Americans with Disabilities Act ↔ Utah's OHV legislative buildout</span><span class="grade-badge grade-badge-c">C</span></summary>
+      <div class="dropdown-body">
+        <p>Kennedy's bill (House companion to Sen. Mike Lee's S. 2968) would require federal land managers to keep at least 2.5 miles of motorized routes open per square mile of "disability-accessible" land, restricting road closures. The groups that pushed it in the House were ORBA and SEMA — off-road business associations, not disability-advocacy organizations. Utah has spent eight years building the funding and legal infrastructure this bill would benefit: HB143 (2018) standardized OHV registration/fees; HB180 (2022) gave the OHV community enforcement tools; HB409 (2022) dedicated ~$36 million in ongoing sales-tax revenue to recreation infrastructure; HB125 (2022) made the Outdoor Recreational Infrastructure Grant Program permanent.</p>
+        <table class="rubric-table">
+          <tr><th>Power</th><td><span class="grade-pill grade-fail">Fails</span> Removes federal land managers' discretion to close or restrict motorized routes, the one lever Utah's own funding buildout can't reach on its own.</td></tr>
+          <tr><th>Transparency</th><td><span class="grade-pill grade-pass">Passes</span> Ordinary bill introduction and companion-legislation process; no hidden retitling or scope change found.</td></tr>
+          <tr><th>Financial Accountability</th><td><span class="grade-pill grade-pass">N/A</span> No direct federal spending attached; Utah's own funding (HB409/HB125) is separately appropriated and already transparent.</td></tr>
+          <tr><th>Environmental Impact</th><td><span class="grade-pill grade-mixed">Mixed</span> Mandating minimum motorized-route density can conflict with wildlife/habitat management goals on the same land; no environmental review of the tradeoff is built into the bill.</td></tr>
+          <tr><th>Community Impact</th><td><span class="grade-pill grade-mixed">Mixed</span> Genuine accessibility framing exists, but the bill's actual advocacy base is the off-road recreation industry, not disability-rights organizations — a real gap between stated purpose and who is actually driving it.</td></tr>
+        </table>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Overall: Grade C — a real accessibility rationale attached to what is functionally industry-requested access expansion.</p>
+      </div>
+    </details>
+
+    <details class="section-dropdown">
+      <summary><span class="summary-text">4. H.R. 4795 (anti-boycott of Israel) ↔ Utah's S.B. 186</span><span class="grade-badge grade-badge-b">B</span></summary>
+      <div class="dropdown-body">
+        <p>Kennedy voted yes on H.R. 4795, which conditions federal higher-education funding on institutions not participating in "nonexpressive commercial boycotts" of Israel. Utah already has the identical policy at the state level: S.B. 186 (2021), sponsored by then-Sen. Daniel Hemmert and Rep. Joel Ferry, bars Utah government contracts with companies that boycott Israel. Notably, there's a live 2026 push in the Utah Legislature (Rep. Nate Blouin) to repeal S.B. 186 entirely — meaning the state and federal versions of this exact policy fight are playing out simultaneously.</p>
+        <table class="rubric-table">
+          <tr><th>Power</th><td><span class="grade-pill grade-mixed">Mixed</span> Both laws condition public funding/contracts on an institution's political/commercial conduct — a real use of government funding leverage over speech-adjacent decisions, regardless of which side one takes on the underlying issue.</td></tr>
+          <tr><th>Transparency</th><td><span class="grade-pill grade-pass">Passes</span> Both bills went through open, named-sponsor legislative processes with no hidden retitling.</td></tr>
+          <tr><th>Financial Accountability</th><td><span class="grade-pill grade-pass">N/A</span> Neither bill involves a direct spending or appropriation question.</td></tr>
+          <tr><th>Environmental Impact</th><td><span class="grade-pill grade-pass">N/A</span> Not applicable to this subject matter.</td></tr>
+          <tr><th>Community Impact</th><td><span class="grade-pill grade-mixed">Genuinely disputed</span> Supporters frame this as protecting an ally's economic rights; critics frame it as a restriction on institutional autonomy and protected political expression. Both are real, documented positions, not one being asserted here as correct.</td></tr>
+        </table>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Overall: Grade B — no outright failure on any rubric dimension: Transparency and Financial/Environmental Accountability are clean, and the only real friction (Power, Community Impact) reflects a genuine values dispute that cuts both ways rather than a one-sided process or corruption problem.</p>
+      </div>
+    </details>
+
+    <details class="section-dropdown">
+      <summary><span class="summary-text">5. Two bait-and-switch votes: the whale bill and the AGOA shell swap</span><span class="grade-badge grade-badge-f">F</span></summary>
+      <div class="dropdown-body">
+        <p><strong>H.R. 9436</strong> was introduced neutrally as extending "certain regulations concerning the North Atlantic right whale." What it actually does, per the committee's own report: delays new whale-entanglement protection rules from 2028 to 2035 — a 13-year waiver from Endangered Species Act and Marine Mammal Protection Act requirements — while reducing incentives for lobstermen to adopt safer gear. It was renamed mid-process to the "Northeast Lobsterman Protection Act of 2026," reframing a delay of protections as protecting workers. Kennedy voted yes.</p>
+        <p><strong>H.R. 6500</strong> started as the bipartisan "AGOA Extension Act" (African trade preferences), passing the House 340-54 in January 2026. The Senate later struck the entire bill and replaced it with a full government-funding continuing resolution — a completely different subject. Kennedy's Sept. 1, 2026 vote, still labeled "AGOA Extension Act" on his own House website, was actually a vote to fund the government using AGOA's bill number as the vehicle.</p>
+        <table class="rubric-table">
+          <tr><th>Power</th><td><span class="grade-pill grade-fail">Fails (both)</span> Each bypassed the normal expectation that a bill's substance matches what members and the public are told they're voting on.</td></tr>
+          <tr><th>Transparency</th><td><span class="grade-pill grade-fail">Fails (both)</span> The whale bill's rename obscures what it delays; the AGOA vote is still mislabeled on official vote records months after its content changed entirely.</td></tr>
+          <tr><th>Financial Accountability</th><td><span class="grade-pill grade-pass">N/A</span> Neither case is primarily a spending-disclosure issue (the appropriations content swapped into H.R. 6500 would need its own separate review).</td></tr>
+          <tr><th>Environmental Impact</th><td><span class="grade-pill grade-fail">Fails (whale bill only)</span> A direct, quantified delay of species-protection regulation with an acknowledged conservation cost.</td></tr>
+          <tr><th>Community Impact</th><td><span class="grade-pill grade-mixed">Mixed (whale bill)</span> <span class="grade-pill grade-pass">N/A (AGOA)</span> Real economic benefit to Maine's lobster industry, at a documented ecological cost to right whale recovery.</td></tr>
+        </table>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Overall: Grade F on both — not for their underlying subject matter, but for the mismatch between what each bill is called and what it does.</p>
+      </div>
+    </details>
+
+    <details class="section-dropdown">
+      <summary><span class="summary-text">6. The broader pattern: delaying or bypassing environmental review</span><span class="grade-badge grade-badge-pattern">PATTERN</span></summary>
+      <div class="dropdown-body">
+        <p>H.R. 1501 (mining permitting), the Utah/Nevada land-sale amendment, and H.R. 9436 (whale protection delay) all share the same underlying move: delay or bypass an existing environmental review requirement to speed up industry activity. Utah's own H.B. 502 (as introduced, before it was stripped) and S.B. 254 do the identical thing at the state level — override or fast-track past standard review processes for mining specifically. This is a consistent theme across Kennedy's votes and Utah's own recent legislative direction, not a coincidence limited to one bill.</p>
+        <table class="rubric-table">
+          <tr><th>Power</th><td><span class="grade-pill grade-fail">Fails</span> Recurring removal or delay of existing procedural checks, across multiple bills and both levels of government.</td></tr>
+          <tr><th>Transparency</th><td><span class="grade-pill grade-mixed">Mixed</span> Varies by instance — some (H.R. 1501, H.B. 502 as enacted) went through ordinary process; others (the land-sale amendment, the whale bill's rename, S.B. 254's same-day rewrite) did not.</td></tr>
+          <tr><th>Financial Accountability</th><td><span class="grade-pill grade-pass">N/A</span> Not the primary axis of this pattern.</td></tr>
+          <tr><th>Environmental Impact</th><td><span class="grade-pill grade-fail">Fails</span> Every instance in this pattern trades review rigor for speed, by design.</td></tr>
+          <tr><th>Community Impact</th><td><span class="grade-pill grade-mixed">Mixed</span> Real economic development arguments exist in every case; real environmental/community costs are also documented in every case. Neither side of this tradeoff is invented.</td></tr>
+        </table>
+        <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">This is a pattern-level observation across multiple already-graded bills, not a new bill with its own overall letter grade.</p>
+        <p style="background: #ebe4d4; border-left: 4px solid var(--color-link); padding: 10px 14px;"><strong>What this pattern is, and isn't, evidence of:</strong> what's documented here is parallel timing and shared subject matter — state and federal mining/land-use permitting policy moving in the same direction, in the same general window. That is not evidence of coordination or intent between Kennedy and specific Utah officials or industry figures; no communication, meeting, or agreement between them has been found. Questions worth asking before treating this as more than a pattern: Did Kennedy or his office have any direct contact with the sponsors of S.B. 254 or H.B. 502? Did any shared industry group (e.g., the Critical Infrastructure Materials Coalition, named in the H.B. 502 committee record) lobby both the state legislature and Kennedy's federal office on these bills? Is the timing coincidental, driven by a shared national trend (e.g., the administration's energy-emergency declaration), or actually coordinated? None of this is answered by what's in this file — it's a pattern to keep watching, not a conclusion to publish.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="financial-disclosure">
+    <h2>Financial Disclosure</h2>
+    <div class="redistrict-note">
+      <strong>Berkshire Hathaway stock purchase:</strong> Kennedy reported buying Berkshire Hathaway Inc. common stock (BRK.B), $1,001&ndash;$15,000, on May 9, 2025, in a Schwab account, per a STOCK Act Periodic Transaction Report filed June 20, 2025 (Filing ID #20030542). Berkshire Hathaway is PacifiCorp's parent company. Kennedy sits on House Natural Resources, where energy policy makes up 19% of his sponsored-bill portfolio.
+    </div>
+    <p>His most recent annual Financial Disclosure Report (filed August 2025, covering calendar year 2024) reported these assets, each in the House's standard disclosure ranges:</p>
+    <div class="stat-row"><span>Kennedy for U.S. Senate (2018 campaign committee — debt owed to him)</span><span class="stat-value">$250,001&ndash;$500,000</span></div>
+    <div class="stat-row"><span>Mike Kennedy for Utah (House campaign committee — debt owed to him)</span><span class="stat-value">$100,001&ndash;$250,000</span></div>
+    <div class="stat-row"><span>Fidelity Investments &ndash; UUHC 401A &ndash; FID FRDM BLND 2035</span><span class="stat-value">up to $250,000</span></div>
+    <div class="stat-row"><span>Michael Kennedy, MD, Inc. / Premier Family Medical, LLC</span><span class="stat-value">up to $250,000</span></div>
+    <p>Estimated net worth from these ranges is roughly $1.4 million (per NOTUS's and Quiver Quantitative's independent range-based calculations from the same disclosure) — placing him well below the median for a sitting member of Congress. In plain terms: House financial disclosures only require reporting in ranges, not exact figures, so outside groups estimate net worth by working through those ranges themselves — and both groups independently landed on roughly the same number. Congress as a body skews wealthy, with many members worth several million dollars or more, so $1.4 million puts Kennedy on the lower end of his colleagues, not the average or above it — worth noting plainly, since it cuts against any assumption that his committee work or stock purchases are about personal enrichment on an unusual scale.</p>
+    <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">House financial disclosures report values in ranges rather than exact figures, so all amounts above are ranges as filed, not precise dollar values.</p>
+
+    <h3 style="margin-top: 24px;">Larsen — no financial disclosure on file</h3>
+    <p>Congressional candidates must file a financial disclosure report with the Clerk of the House within 30 days of becoming a candidate, generally no later than May 15, with a possible extension to August 15. According to a Campaign Legal Center review of candidate disclosure compliance, Larsen has not filed one, despite reporting over $36,000 in personal loans to his own campaign — more than two-thirds of everything his campaign has raised. CLC's own complaint raises this specific gap: without the filing, there's no way to independently verify he has personal assets sufficient to cover those loans. All disclosure deadlines for this cycle, including the extension window, have passed.</p>
+
+    <h3 style="margin-top: 24px;">Burt — no disclosure located</h3>
+    <p>Burt is subject to the same filing requirement, and his $34,074 in receipts is well above the $5,000 threshold that triggers it. Neither a direct search nor the Campaign Legal Center's complaint (which explicitly names Larsen but does not name Burt) turned up a filing for him. Unlike Larsen's case, this is not a confirmed non-filing from a named source — it's the absence of one found so far. A direct name search on disclosures-clerk.house.gov would settle this either way and hasn't been done yet.</p>
+  </section>
+
+  <section id="finance">
+    <h2>Campaign Finance</h2>
+    <p>Figures below are drawn directly from each candidate's FEC financial summary, covering the reporting period through June 30, 2026.</p>
+    <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Note on comparability: each committee's coverage window starts on a different date, since each candidate declared at a different time — Kennedy's data runs from 1/1/2025 (~18 months), Larsen's from 4/19/2025 (~14 months), and Burt's from 10/1/2025 (~9 months). All three end 6/30/2026, but Burt in particular has had roughly half the time Kennedy's had to raise money, so raw totals alone understate his fundraising pace relative to the others.</p>
+
+    <h3 style="margin-top: 0;">PAC/committee money vs. individual contributions</h3>
+    <div class="candidate-cards" style="margin-bottom: 32px; grid-template-columns: repeat(3, 1fr);">
+      <div class="candidate-card">
+        <h3 style="margin-top: 0;">Kennedy <span class="party-r">(R)</span></h3>
+        <div class="fund-donut-row" style="flex-direction: column; align-items: flex-start; gap: 14px;">
+          <div class="fund-donut" style="background: conic-gradient(var(--color-stat) 0% 50.9%, var(--color-link) 50.9% 100%);">
+            <div class="fund-donut-center">$971,392<br>raised</div>
+          </div>
+          <ul class="fund-donut-legend">
+            <li><span class="swatch swatch-amber"></span> PAC / other committee — $494,000 (50.9%)</li>
+            <li><span class="swatch swatch-rust"></span> Individual contributions — $430,497.50 (44.3%)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="candidate-card">
+        <h3 style="margin-top: 0;">Larsen <span class="party-d">(D)</span></h3>
+        <div class="fund-donut-row" style="flex-direction: column; align-items: flex-start; gap: 14px;">
+          <div class="fund-donut" style="background: conic-gradient(var(--color-stat) 0% 0.8%, var(--color-ink-soft) 0.8% 68.3%, var(--color-link) 68.3% 100%);">
+            <div class="fund-donut-center">$53,579<br>raised</div>
+          </div>
+          <ul class="fund-donut-legend">
+            <li><span class="swatch swatch-amber"></span> PAC + party committee — $450 (0.8%)</li>
+            <li><span class="swatch swatch-soft"></span> Candidate self-loans — $36,155.42 (67.5%)</li>
+            <li><span class="swatch swatch-rust"></span> Individual contributions — $16,973.37 (31.7%)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="candidate-card">
+        <h3 style="margin-top: 0;">Burt <span style="color: var(--color-ink-soft); font-weight: 600;">(I)</span></h3>
+        <div class="fund-donut-row" style="flex-direction: column; align-items: flex-start; gap: 14px;">
+          <div class="fund-donut" style="background: conic-gradient(var(--color-ink-soft) 0% 16.5%, var(--color-link) 16.5% 100%);">
+            <div class="fund-donut-center">$34,074<br>raised</div>
+          </div>
+          <ul class="fund-donut-legend">
+            <li><span class="swatch swatch-soft"></span> Candidate's own contributions — $5,639 (16.5%)</li>
+            <li><span class="swatch swatch-rust"></span> Individual contributions — $28,435 (83.5%)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic; margin-top: -20px; margin-bottom: 32px;">Kennedy's PAC/committee share is over 600 times the size of Larsen's in dollar terms ($494,000 vs. $450) — the near-even split in Larsen's chart is driven almost entirely by his own loans to his campaign, not outside money. Burt is the only one of the three with zero PAC or party money and zero loans — his campaign is entirely individual contributions plus a modest amount of his own money, none of it borrowed.</p>
+
+    <div class="fund-toggle">
+      <button class="toggle-btn active" data-target="panel-kennedy">Kennedy — full detail</button>
+      <button class="toggle-btn" data-target="panel-larsen">Larsen — full detail</button>
+      <button class="toggle-btn" data-target="panel-burt">Burt — full detail</button>
+    </div>
+
+    <div class="fund-panel active" id="panel-kennedy">
+      <div class="fund-donut-row">
+        <div class="fund-donut" style="background: conic-gradient(var(--color-stat) 0% 50.9%, var(--color-link) 50.9% 100%);">
+          <div class="fund-donut-center">$971,392<br>raised</div>
+        </div>
+        <ul class="fund-donut-legend">
+          <li><span class="swatch swatch-amber"></span> PAC / other committee — $494,000 (50.9%)</li>
+          <li><span class="swatch swatch-rust"></span> Individual contributions — $430,497.50 (44.3%)</li>
+        </ul>
+      </div>
+      <div class="stat-row"><span>Total raised</span><span class="stat-value">$971,392.50</span></div>
+      <div class="stat-row"><span>Total spent</span><span class="stat-value">$705,037.56</span></div>
+      <div class="stat-row"><span>Cash on hand</span><span class="stat-value">$391,556.75</span></div>
+      <div class="stat-row"><span>Debt owed by committee</span><span class="stat-value">$225,000.00</span></div>
+      <div class="stat-row"><span>Committee</span><span class="stat-value">Mike Kennedy for Utah (C00864488)</span></div>
+      <div class="stat-row"><span>Sponsored leadership PAC</span><span class="stat-value">Heal America (C00878389)</span></div>
+
+      <h3 style="margin-top: 24px;">Contribution refunds issued to other committees ($5,000 total)</h3>
+      <div class="stat-row"><span>Rudy for Indiana (Rep. Rudy Yakym, R-IN2)</span><span class="stat-value">$2,000.00</span></div>
+      <div class="stat-row"><span>American Society of Plastic Surgeons PlastyPAC</span><span class="stat-value">$1,500.00</span></div>
+      <div class="stat-row"><span>American Cable Association Inc PAC (ACA PAC)</span><span class="stat-value">$1,000.00</span></div>
+      <div class="stat-row"><span>Bose Public Affairs Group LLC / Bose McKinney &amp; Evans LLP PAC</span><span class="stat-value">$500.00</span></div>
+    </div>
+
+    <div class="fund-panel" id="panel-larsen">
+      <div class="fund-donut-row">
+        <div class="fund-donut" style="background: conic-gradient(var(--color-ink-soft) 0% 67.5%, var(--color-link) 67.5% 100%);">
+          <div class="fund-donut-center">$53,579<br>raised</div>
+        </div>
+        <ul class="fund-donut-legend">
+          <li><span class="swatch swatch-soft"></span> Candidate self-loans — $36,155.42 (67.5%)</li>
+          <li><span class="swatch swatch-rust"></span> Individual contributions — $16,973.37 (31.7%)</li>
+        </ul>
+      </div>
+      <div class="stat-row"><span>Total raised</span><span class="stat-value">$53,578.79</span></div>
+      <div class="stat-row"><span>Total spent</span><span class="stat-value">$52,449.89</span></div>
+      <div class="stat-row"><span>Cash on hand</span><span class="stat-value">$1,128.90</span></div>
+      <div class="stat-row"><span>Debt owed by committee (self-loans)</span><span class="stat-value">$35,221.59</span></div>
+      <div class="stat-row"><span>Committee</span><span class="stat-value">Jonny Larsen for Congress (C00904714)</span></div>
+    </div>
+
+    <div class="fund-panel" id="panel-burt">
+      <div class="fund-donut-row">
+        <div class="fund-donut" style="background: conic-gradient(var(--color-ink-soft) 0% 16.5%, var(--color-link) 16.5% 100%);">
+          <div class="fund-donut-center">$34,074<br>raised</div>
+        </div>
+        <ul class="fund-donut-legend">
+          <li><span class="swatch swatch-soft"></span> Candidate's own contributions — $5,639.00 (16.5%)</li>
+          <li><span class="swatch swatch-rust"></span> Individual contributions — $28,435.00 (83.5%)</li>
+        </ul>
+      </div>
+      <div class="stat-row"><span>Total raised</span><span class="stat-value">$34,074.00</span></div>
+      <div class="stat-row"><span>Itemized / unitemized individual</span><span class="stat-value">$24,924.00 / $3,511.00</span></div>
+      <div class="stat-row"><span>Total spent</span><span class="stat-value">$31,998.53</span></div>
+      <div class="stat-row"><span>Cash on hand</span><span class="stat-value">$2,075.47</span></div>
+      <div class="stat-row"><span>PAC / party money</span><span class="stat-value">$0.00</span></div>
+      <div class="stat-row"><span>Loans of any kind</span><span class="stat-value">$0.00</span></div>
+      <div class="stat-row"><span>Debt owed by committee</span><span class="stat-value">$0.00</span></div>
+      <div class="stat-row"><span>Committee</span><span class="stat-value">Vote Steven Burt (C00922898)</span></div>
+
+      <details class="section-dropdown">
+        <summary>Donor network — solar industry and a shared law firm</summary>
+        <div class="dropdown-body">
+          <p>A review of Burt's full itemized Schedule A shows his donor base is heavily drawn from his own professional network — confirmed directly against his LinkedIn work history, not just inferred from industry overlap:</p>
+          <div class="stat-row"><span>Peter Shaper — CEO, PosiGen Solar during Burt's tenure there (Houston, TX)</span><span class="stat-value">Donor</span></div>
+          <div class="stat-row"><span>Benjamin Healey — Manager, PosiGen, Burt's own former employer (Brooklyn, NY)</span><span class="stat-value">Donor</span></div>
+          <div class="stat-row"><span>Jeanna Steele — Attorney, Sunrun, Burt's own former employer (Oakland, CA)</span><span class="stat-value">Donor</span></div>
+          <div class="stat-row"><span>Tommy Kline — VP of Engineering, GoodLeap (South Jordan, UT)</span><span class="stat-value">Donor</span></div>
+          <p style="font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic;">Burt was Deputy General Counsel/VP/Head of Compliance at Sunrun (2020–2022) and Chief Compliance & Policy Officer, then Chief Public Policy & Engagement Officer, at PosiGen (2022–2025) — meaning Shaper and Healey are not just industry contacts, they are former colleagues at a company he helped run.</p>
+          <p>A second, separate cluster: five attorneys at <strong>Ballard Spahr</strong> gave from four different states (Utah, Nevada, Pennsylvania, New Jersey) — Melanie Vartabedian, Robert Kim, Mark Gaylord, Jason A. Leckerman, and Daniel McKenna. This is also now confirmed rather than inferred: Burt is currently "Counsel" at Ballard Spahr himself (since Jan. 2026, after a stint as "Of Counsel" starting Sep. 2025), and Vartabedian is a named colleague in the firm's own Salt Lake City office — meaning Burt is actively practicing law at the same firm as several of his donors while running for Congress.</p>
+          <p style="font-size: 0.9rem;"><strong>Worth stating plainly for contrast:</strong> Kennedy's documented energy-industry money runs through oil and gas (Marathon Petroleum Corporation PAC, his own Berkshire Hathaway/PacifiCorp stock purchase, his License to Drill Act). Burt's runs through solar and clean-energy financing, funded substantially by his own former colleagues and current law firm. If either wins, "the energy industry has a relationship with Utah's 4th District representative" is true either way — just pointed at a different sector.</p>
+        </div>
+      </details>
+
+      <details class="section-dropdown">
+        <summary>Public advocacy on OBBBA's solar provisions</summary>
+        <div class="dropdown-body">
+          <p>On LinkedIn, Burt publicly urged people to call their U.S. Senators while OBBBA was still pending, arguing the bill should be improved to support "all forms of energy, including solar" rather than an "All of the Above" strategy that excludes it. This is a direct, on-the-record policy position taken before the bill's final passage — and it puts him at odds with the version Kennedy ultimately voted for, which phased out the IRA-era solar tax credits already documented in this case file's OBBBA/environmental-impact section.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="sources">
+    <details class="sources-collapsible">
+      <summary><h2 style="display: inline; border-bottom: none; padding-bottom: 0;">Sources</h2></summary>
+      <div class="sources">
+      <ul>
+        <li>FEC.gov candidate profile, Mike Kennedy (H4UT03260) and committee Mike Kennedy for Utah (C00864488) — financial summary, coverage 1/1/2025–6/30/2026</li>
+        <li>FEC.gov disbursements, Mike Kennedy for Utah (C00864488), House/Senate committee refunds (Line 20c), 2025–2026 cycle</li>
+        <li>FEC.gov candidate profile, Jonny Larsen (H6UT02424) and committee Jonny Larsen for Congress (C00904714) — financial summary, coverage 4/19/2025–6/30/2026</li>
+        <li>FEC.gov candidate profile, Steven Burt (H6UT04024) and committee Vote Steven Burt (C00922898) — financial summary, coverage 10/1/2025–6/30/2026</li>
+        <li>FEC Schedule A itemized receipts export, Vote Steven Burt (C00922898), full donor list with employer/occupation, pulled 9/13/2026</li>
+        <li>Jonny Larsen for Congress campaign website ("About Jonny") — self-reported biography, military service record, and VA-access policy claim</li>
+        <li>Jonny Larsen for Congress campaign website ("The Commitment") — housing, healthcare, and cost-of-living platform, including his self-disclosed cancer diagnosis and VA treatment</li>
+        <li>Steven Burt campaign website (stevenburt.com) — self-reported biography and stated policy priorities</li>
+        <li>Steven Burt campaign website, "Declare Your Independence" page — full rationale for running unaffiliated</li>
+        <li>Steven Burt, "Our America" campaign kickoff speech, July 2, 2026</li>
+        <li>Rep. Mike Kennedy, "Empowering local officials to fight and prevent wildfires their way," Deseret News, Aug. 2, 2026</li>
+        <li>Steven Burt, opinion piece responding directly to Kennedy's Deseret News wildfire op-ed</li>
+        <li>Steven Burt, LinkedIn profile — work history (Sunrun, PosiGen, Steven Burt Law Offices, Ballard Spahr), education, and public post urging Senate action to preserve solar provisions in OBBBA</li>
+        <li>Ballard Spahr LLP, official attorney bio for Steven Burt (ballardspahr.com) — confirms Vivint as an additional prior solar-industry employer, 2007–2016 litigation tenure, and pro bono recognitions</li>
+        <li>Ballotpedia, "Steven Burt" candidate page and "United States House of Representatives elections in Utah, 2026"</li>
+        <li>The Salt Lake Tribune, "These Utahns are running for Congress in the 2026 midterm election," March 10, 2026 — Burt's professional background</li>
+        <li>Ballotpedia, "United States House of Representatives elections in Utah, 2026" and individual candidate pages for Kennedy and Larsen</li>
+        <li>Ballotpedia News, "Three of Utah's four U.S. House incumbents are running for different districts this year due to redistricting," May 26, 2026</li>
+        <li>Utah Third Judicial District Court order (Judge Dianna Gibson) adopting the replacement congressional map, and subsequent federal three-judge panel ruling declining to block it</li>
+        <li>Wikipedia, "Mike Kennedy" and "Utah's 3rd congressional district"</li>
+        <li>GovTrack.us, Rep. Mike Kennedy member profile — missed-vote rate, committee assignments, sponsored-bill issue-area breakdown and recently introduced bills</li>
+        <li>Clerk of the House, Periodic Transaction Report, Hon. Mike Kennedy, Filing ID #20030542, filed 6/20/2025 (disclosures-clerk.house.gov)</li>
+        <li>Clerk of the House, Annual Financial Disclosure Report, Hon. Mike Kennedy, filed August 2025, covering calendar year 2024 (disclosures-clerk.house.gov)</li>
+        <li>NOTUS, "Utah's Congressional Delegation is Financially Split in Two" — net worth calculations from members' own disclosed asset/liability ranges</li>
+        <li>Quiver Quantitative, Mike Kennedy politician page and net-worth tracker — independent parsing of the same disclosure filings</li>
+        <li>Campaign Legal Center, "Campaign Legal Center Calls for Ethics Investigations of Nearly 80 Congressional Candidates' Disclosure Violations" — confirms Larsen has not filed a required financial disclosure report despite $36,000+ in personal loans to his campaign</li>
+        <li>Clerk.house.gov, House Roll Call Votes 145 (May 22, 2025) and 189/H.R.1 final passage (July 3, 2025), 119th Congress</li>
+        <li>Utah News Dispatch, "Utah Republicans celebrate 'big, beautiful bill' passage," July 4, 2025 (Standard-Examiner republication) — confirms full Utah delegation voted yes</li>
+        <li>Deseret News, KSL.com, E&amp;E News/POLITICO, Center for Western Priorities, Nevada Current, National Wildlife Federation, and The Wilderness Society — coverage of the May 2025 House Natural Resources Committee land-disposal amendment vote (26-17); individual member roll call not yet located</li>
+        <li>Utah Legislature, H.B. 502 (2024) — introduced text, 1st and 2nd substitute compare documents, fiscal note, full Senate/House committee minutes (2/22/24, 2/27/24), and full floor vote records including by-name breakdowns (le.utah.gov)</li>
+        <li>Utah Legislature, S.B. 254 (2026) and H.B. 143 (2018), H.B. 180 (2022), H.B. 409 (2022), H.B. 125 (2022) — OHV/recreation infrastructure funding history (le.utah.gov, recreation.utah.gov, Standard-Examiner)</li>
+        <li>U.S. Department of the Interior press release, Velvet-Wood uranium-vanadium mine approval, accelerated 14-day environmental review</li>
+        <li>Utah Legislature, S.B. 186 (2021) "Anti-boycott Israel Amendments" — Palestine Legal, JNS, Christians United for Israel coverage; JNS, "Utah Democratic lawmaker seeks to repeal state's anti-boycott law" (2026)</li>
+        <li>GovTrack.us and Congress.gov, H.R. 9436 (Northeast Lobsterman Protection Act of 2026) — introduced text, committee report (H. Rept. 119-766), compare documents</li>
+        <li>GovTrack.us and Congress.gov, H.R. 6500 (AGOA Extension Act / Continuing Appropriations and Extensions Act, 2027) — full legislative history, Senate amendment text, Congressional Record (Aug. 7 and Sept. 1, 2026)</li>
+        <li>Congressman Mike Kennedy official House website, "Votes and Legislation" page — recent roll call votes as of 9/3/2026</li>
+        <li>Clerk.house.gov, Roll Call 292 (H.Res. 1498, Chuck Edwards censure, 413-2, 9/1/2026) and Roll Call 294 (H.R. 1501, 9/2/2026)</li>
+        <li>Wikipedia, "Chuck Edwards" — Ethics Committee investigation and censure outcome</li>
+        <li>House Committee on Natural Resources report (H. Rept. 119-691) and North American Mining Magazine, "House passes the Protecting Domestic Mining Act" — H.R. 1501 provisions and sponsor statements</li>
+      </ul>
+      </div>
+    </details>
+  </section>
+
+</main>
+
+<footer>
+  THE WEBER COUNTY HIVE &middot; INDEPENDENT &middot; ACCOUNTABILITY &middot; JOURNALISM
+</footer>
+
+<script>
+  document.querySelectorAll('.toggle-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.toggle-btn').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.fund-panel').forEach(function (p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.target).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
