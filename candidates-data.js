@@ -237,5 +237,19 @@ const CANDIDATES = [
     href: "crosby-statement-ut2.html",
     datePosted: "2026-09-12",
     dateUpdated: "2026-09-12"
+  },
+  {
+    id: "kennedy-larsen-burt-ut4",
+    race: "US House District 4 (Utah)",
+    level: "Federal",
+    county: "Statewide",
+    caseNumber: "CASE 18",
+    names: "Kennedy vs. Larsen vs. Burt",
+    verdict: "A First Term, A Redrawn District, A Half-Million-Dollar Gap",
+    tags: ["Redistricting", "Disclosure Gap", "State-Federal Pattern"],
+    stamp: "Active",
+    href: "mike-kennedy-jonny-larsen-ut4.html",
+    datePosted: "2026-09-13",
+    dateUpdated: "2026-09-13"
   }
 ];
