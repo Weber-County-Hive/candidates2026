@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choberka vs. Sawyer — Case File | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--paper:#f4f0e6;
+--paper-card:#fbf9f3;
+--ink:#2a261e;
+--ink-soft:#5c5647;
+--ink-faint:#8b8470;
+--rust:#c0572e;
+--amber:#d9a441;
+--burgundy:#5c1a2b;
+--burgundy-deep:#3d0f1c;
+--line:#ddd6c4;
+--line-strong:#c7bda3;
+--red:#a5301e;
+--green:#3f6b3b;
+--serif:'Source Serif 4', Georgia, serif;
+--display:'Playfair Display', Georgia, serif;
+--mono:'IBM Plex Mono', 'Courier New', monospace;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.65;font-size:17px;}
+a{color:var(--rust);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.header-band{background:var(--burgundy-deep);background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);padding:34px 0 30px;}
+.header-inner{max-width:880px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:16px;}
+.hex{width:46px;height:46px;flex:0 0 auto;}
+.hd-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#d9b8bf;}
+.hd-title{font-family:var(--display);font-size:21px;font-weight:700;color:#f4e9dd;}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px;}
+.case-hero{padding:8px 0 28px;border-bottom:2px solid var(--line-strong);margin-bottom:32px;}
+.case-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:10px;}
+.case-title{font-family:var(--display);font-size:36px;font-weight:900;line-height:1.15;margin:0 0 14px;color:var(--burgundy-deep);}
+.case-dek{font-size:18px;color:var(--ink-soft);max-width:640px;}
+.verdict-box{background:var(--paper-card);border:1px solid var(--line-strong);border-left:4px solid var(--burgundy);padding:18px 22px;margin:24px 0;border-radius:2px;}
+.verdict-box b{color:var(--burgundy);}
+.flag-open{background:#fbf3e6;border:1px dashed var(--amber);border-radius:4px;padding:14px 18px;font-family:var(--mono);font-size:13.5px;color:var(--ink-soft);margin:16px 0;}
+.stat-row{display:flex;gap:28px;flex-wrap:wrap;margin:24px 0;}
+.stat{flex:1 1 160px;}
+.stat-num{font-family:var(--display);font-size:28px;font-weight:900;color:var(--amber);line-height:1.1;}
+.stat-label{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-faint);text-transform:uppercase;margin-top:4px;}
+h2.sect{font-family:var(--display);font-size:24px;font-weight:700;color:var(--burgundy-deep);margin:44px 0 6px;border-top:1px solid var(--line);padding-top:28px;}
+h3.sub-head{font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin:22px 0 10px;}
+p{margin:0 0 16px;}
+table.led{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:15px;}
+table.led th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;text-align:left;color:var(--ink-faint);border-bottom:2px solid var(--line-strong);padding:6px 10px 8px 0;}
+table.led td{padding:7px 10px 7px 0;border-bottom:1px solid var(--line);}
+table.led tr:last-child td{border-bottom:none;}
+.record-card{background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;padding:18px 22px;margin:18px 0;}
+.rc-title{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--burgundy);margin-bottom:10px;font-weight:600;}
+.bubble-row{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-end;justify-content:space-around;margin:24px 0 8px;text-align:center;}
+.bubble-col{flex:1 1 200px;max-width:260px;}
+.bubble-svg{width:100%;height:auto;display:block;}
+.bubble-name{font-family:var(--display);font-weight:700;font-size:16px;color:var(--burgundy-deep);margin-top:6px;}
+.bubble-total{font-family:var(--mono);font-size:13px;color:var(--ink-faint);margin:2px 0 6px;}
+.bubble-split{font-size:13px;color:var(--ink-soft);line-height:1.5;}
+.bill-footnote{font-size:14.5px;color:var(--ink-soft);margin-top:14px;}
+.docket-filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 22px;}
+.filter-btn{
+font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+background:var(--paper-card);border:1px solid var(--line-strong);color:var(--ink-soft);
+padding:7px 14px;border-radius:20px;cursor:pointer;transition:all .15s ease;
+}
+.filter-btn:hover{border-color:var(--rust);color:var(--rust);}
+.filter-btn.active{background:var(--burgundy);border-color:var(--burgundy);color:#f4e9dd;}
+.bill-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:8px;}
+.bill-card{
+background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;
+overflow:hidden;transition:border-color .15s ease;
+}
+.bill-card[open]{border-color:var(--burgundy);}
+.bill-card summary{
+list-style:none;cursor:pointer;padding:14px 18px;display:flex;align-items:center;gap:12px;
+}
+.bill-card summary::-webkit-details-marker{display:none;}
+.bill-chevron{font-family:var(--mono);color:var(--ink-faint);transition:transform .15s ease;flex:0 0 auto;}
+.bill-card[open] .bill-chevron{transform:rotate(90deg);color:var(--burgundy);}
+.bill-status{
+font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;
+padding:3px 9px;border-radius:10px;flex:0 0 auto;font-weight:600;
+}
+.bill-status.donor{background:#e3ede0;color:var(--green);}
+.bill-status.vendor{background:#f5e2df;color:var(--red);}
+.bill-num{font-family:var(--mono);font-size:13px;color:var(--burgundy);flex:0 0 auto;font-weight:600;}
+.bill-title{font-family:var(--serif);font-weight:600;flex:1 1 auto;font-size:15.5px;}
+.bill-body{padding:0 18px 18px 18px;font-size:15px;color:var(--ink-soft);border-top:1px solid var(--line);}
+.bill-body p{margin:14px 0 0;}
+details{margin:20px 0;border-top:1px solid var(--line);padding-top:14px;}
+summary{font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust);cursor:pointer;}
+.details-body{margin-top:12px;}
+ul.sources{margin:0;padding-left:20px;font-size:14.5px;color:var(--ink-soft);}
+ul.sources li{margin-bottom:6px;}
+footer{margin-top:60px;padding-top:24px;border-top:2px solid var(--line-strong);}
+.tagline{font-family:var(--display);font-style:italic;font-size:16px;color:var(--burgundy);margin-bottom:10px;}
+footer nav{display:flex;gap:18px;flex-wrap:wrap;}
+.nav{font-family:var(--mono);font-size:13px;letter-spacing:.04em;}
+.year-table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px;background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;overflow:hidden;}
+.year-table th{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;text-align:left;color:var(--ink-faint);background:var(--paper);padding:9px 12px;border-bottom:2px solid var(--line-strong);}
+.year-table td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+.year-table tr:last-child td{border-bottom:none;}
+.year-table td.amt{font-family:var(--mono);white-space:nowrap;}
+.year-table .period-date{font-family:var(--mono);font-size:12px;color:var(--ink-faint);}
+.toggle-row{display:flex;gap:8px;margin:20px 0 6px;}
+.toggle-btn{
+font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;
+background:var(--paper-card);border:1px solid var(--line-strong);color:var(--ink-soft);
+padding:9px 18px;border-radius:20px;cursor:pointer;
+}
+.toggle-btn.active{background:var(--burgundy);border-color:var(--burgundy);color:#f4e9dd;}
+.view-panel{display:none;}
+.view-panel.active{display:block;}
+.pie-row{display:flex;gap:32px;flex-wrap:wrap;justify-content:center;margin:20px 0 28px;text-align:center;}
+.pie-col{flex:1 1 220px;max-width:280px;}
+.pie-svg{width:170px;height:170px;margin:0 auto;}
+.pie-title{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin:10px 0 4px;}
+.pie-legend{font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin-top:6px;}
+.pie-legend .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;}
+.pie-caption{font-size:13.5px;color:var(--ink-faint);text-align:center;margin-top:-6px;}
+.grade-card{background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;overflow:hidden;margin:10px 0;transition:border-color .15s ease;}
+.grade-card[open]{border-color:var(--burgundy);}
+.grade-card summary{list-style:none;cursor:pointer;padding:14px 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.grade-card summary::-webkit-details-marker{display:none;}
+.grade-chevron{font-family:var(--mono);color:var(--ink-faint);transition:transform .15s ease;flex:0 0 auto;}
+.grade-card[open] .grade-chevron{transform:rotate(90deg);color:var(--burgundy);}
+.grade-num{font-family:var(--mono);font-size:13px;color:var(--burgundy);flex:0 0 auto;font-weight:600;}
+.grade-title{font-family:var(--serif);font-weight:600;flex:1 1 auto;font-size:15.5px;}
+.grade-badge{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border-radius:10px;flex:0 0 auto;font-weight:700;}
+.grade-badge.good{background:#e3ede0;color:var(--green);}
+.grade-badge.mixed{background:#fbf0d9;color:#8a6512;}
+.grade-badge.bad{background:#f5e2df;color:var(--red);}
+.grade-badge.na{background:var(--line);color:var(--ink-faint);}
+.grade-body{padding:0 18px 18px;font-size:15px;color:var(--ink-soft);border-top:1px solid var(--line);}
+.grade-body p{margin:14px 0 0;}
+.grade-row{display:flex;gap:10px;align-items:baseline;margin-top:14px;}
+.grade-row b{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);min-width:90px;flex:0 0 auto;}
+.rubric-note{background:#fbf3e6;border:1px dashed var(--amber);border-radius:4px;padding:14px 18px;font-size:14px;color:var(--ink-soft);margin:16px 0;}
+.flow-box{background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;padding:24px 20px;margin:20px 0;}
+.flow-tier{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+.flow-node{background:#fff;border:1px solid var(--line-strong);padding:10px 16px;font-size:13.5px;text-align:center;min-width:130px;max-width:240px;border-radius:3px;}
+.flow-node.hub{background:var(--burgundy);color:#f4e9dd;border-color:var(--burgundy);font-weight:700;}
+.flow-node.money{background:var(--amber);color:#fff;border-color:var(--amber);font-weight:700;}
+.flow-node.flagged{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;}
+.flow-node .sub{display:block;font-family:var(--mono);font-size:11px;opacity:0.9;margin-top:4px;}
+.flow-arrow{text-align:center;color:var(--ink-faint);font-size:1.2rem;margin:2px 0;font-family:var(--mono);}
+.compare-box{background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;padding:24px 20px;margin:20px 0;}
+.compare-cols{display:flex;gap:18px;flex-wrap:wrap;}
+.compare-col{flex:1 1 220px;}
+.compare-head{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;text-align:center;color:var(--ink-faint);margin-bottom:8px;}
+.compare-node{border-radius:3px;padding:10px 14px;text-align:center;font-size:13.5px;margin-bottom:8px;}
+.compare-node.before{background:#e3ede0;border:1px solid var(--green);color:#2b4a28;}
+.compare-node.after{background:#fbf0d9;border:1px solid var(--amber);color:#7a4f0a;}
+.compare-node .sub{display:block;font-family:var(--mono);font-size:11px;opacity:0.85;margin-top:3px;}
+.compare-arrow{text-align:center;color:var(--ink-faint);font-size:1.1rem;margin:2px 0;font-family:var(--mono);}
+.compare-flag{margin-top:14px;background:#f5e2df;border:1px solid var(--red);border-radius:3px;padding:10px 16px;text-align:center;font-size:13.5px;color:#6b2018;}
+.compare-flag .sub{display:block;font-family:var(--mono);font-size:11px;opacity:0.85;margin-top:3px;}
+.tl-wrap{margin:20px 0 28px;position:relative;padding-left:26px;}
+.tl-wrap::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line-strong);}
+.tl-item{position:relative;margin-bottom:20px;}
+.tl-item::before{content:"";position:absolute;left:-26px;top:4px;width:13px;height:13px;border-radius:50%;background:var(--paper-card);border:2px solid var(--ink-faint);}
+.tl-item.hot::before{background:var(--red);border-color:var(--red);}
+.tl-date{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;}
+.tl-label{font-weight:700;margin:2px 0 3px;color:var(--ink);}
+.tl-body{font-size:14.5px;color:var(--ink-soft);}
+.score-strip{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 22px;}
+.score-chip{display:flex;flex-direction:column;align-items:center;gap:4px;background:#fff;border:1px solid var(--line-strong);border-radius:4px;padding:8px 12px;min-width:80px;}
+.score-chip .sc-num{font-family:var(--mono);font-size:11px;color:var(--ink-faint);}
+.score-chip .sc-badge{font-family:var(--mono);font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;}
+.score-chip .sc-badge.good{background:#e3ede0;color:var(--green);}
+.score-chip .sc-badge.mixed{background:#fbf0d9;color:#8a6512;}
+.score-chip .sc-badge.bad{background:#f5e2df;color:var(--red);}
+.score-chip .sc-badge.na{background:var(--line);color:var(--ink-faint);}
+.donor-bar-wrap{margin:18px 0 24px;}
+.donor-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:9px;}
+.donor-bar-label{width:150px;flex-shrink:0;font-size:13px;color:var(--ink-soft);text-align:right;}
+.donor-bar-track{flex:1;background:var(--paper-card);height:22px;border:1px solid var(--line);position:relative;}
+.donor-bar-fill{height:100%;background:var(--rust);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;min-width:fit-content;}
+.donor-bar-fill span{color:#fff;font-family:var(--mono);font-size:11.5px;font-weight:700;white-space:nowrap;padding:0 4px;}
+</style>
+</head>
+<body>
+<div class="header-band">
+<div class="header-inner">
+<svg class="hex" viewBox="0 0 100 100"><polygon points="50,3 93,25 93,75 50,97 7,75 7,25" fill="none" stroke="#d9a441" stroke-width="4"/><text x="50" y="60" font-family="Playfair Display" font-size="34" font-weight="900" fill="#f4e9dd" text-anchor="middle">H</text></svg>
+<div>
+<div class="hd-kicker">The Weber County Hive</div>
+<div class="hd-title">2026 Candidates — Case File</div>
+</div>
+</div>
+</div>
+<div class="wrap">
+
+<div class="case-hero">
+<div class="case-kicker">Case 03 &middot; Utah House District 9 &middot; West Haven</div>
+<h1 class="case-title">The Vendor Loop</h1>
+<p class="case-dek">Rep. Jake Sawyer's (R) campaign money runs through vendors owned by the same family network already documented across three other Weber County races. District 9 covers portions of central Ogden, northern Roy, and West Haven.</p>
+</div>
+
+<div class="verdict-box">
+<b>The rematch:</b> Angela Choberka (D, Ogden City Council Chair, District 1) vs. Rep. Jake Sawyer (R, incumbent). Sawyer defeated Choberka in the 2024 general election, 58.3% to 36.8% (Libertarian Jacob Johnson took the remaining 4.9%). She's running again in 2026.
+</div>
+
+<div class="stat-row">
+<div class="stat"><div class="stat-num">$93,200</div><div class="stat-label">Sawyer's all-years total, 2024-26</div></div>
+<div class="stat"><div class="stat-num">$122,917</div><div class="stat-label">Choberka's all-years total, 2024-26</div></div>
+<div class="stat"><div class="stat-num">$1,550</div><div class="stat-label">Sawyer's late-filing fines</div></div>
+<div class="stat"><div class="stat-num">$0</div><div class="stat-label">Choberka raised all of 2025</div></div>
+</div>
+
+<h2 class="sect">Where the money comes from</h2>
+<p>Two views of the same money, shown separately so neither one misleads on its own: <b>all years combined</b> (2024's losing race, the 2025 year with no contributions raised, and 2026's rematch, added together) and <b>2026 only</b> (just the current rematch). Sawyer has run continuously as an officeholder raising money since his 2024 win; Choberka's 2024 total reflects a race she lost, then a 2025 with no contributions raised, then her current 2026 campaign.</p>
+
+<div class="toggle-row">
+<button class="toggle-btn active" data-view="allyears">All Years (2024-2026)</button>
+<button class="toggle-btn" data-view="cycle">2026 Cycle Only</button>
+</div>
+
+<div id="view-allyears" class="view-panel active">
+
+<div class="pie-row">
+<div class="pie-col">
+<svg viewBox="0 0 42 42" class="pie-svg">
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--burgundy)" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--amber)" stroke-width="6" stroke-dasharray="9.2 90.8" stroke-dashoffset="25"/>
+</svg>
+<div class="pie-title">Choberka — Composition</div>
+<div class="pie-legend"><span class="dot" style="background:var(--amber);"></span>Institutional 9.2% ($1,250)<br><span class="dot" style="background:var(--burgundy);"></span>Individual 90.8% ($12,387)</div>
+</div>
+<div class="pie-col">
+<svg viewBox="0 0 42 42" class="pie-svg">
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--burgundy)" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--amber)" stroke-width="6" stroke-dasharray="98.5 1.5" stroke-dashoffset="25"/>
+</svg>
+<div class="pie-title">Sawyer — Composition</div>
+<div class="pie-legend"><span class="dot" style="background:var(--amber);"></span>Institutional 98.5% ($91,815)<br><span class="dot" style="background:var(--burgundy);"></span>Individual 1.5% ($1,385)</div>
+</div>
+</div>
+<p class="pie-caption">Not a like-for-like time period: Sawyer's chart covers his full all-years total ($93,200); Choberka's covers only her narrowest, most-itemized recent report ($13,637 of her $122,917 all-years total) &mdash; the only slice of her fundraising itemized down to this level so far.</p>
+
+<div class="pie-row" style="margin-top:8px;">
+<div class="pie-col">
+<svg viewBox="0 0 42 42" class="pie-svg">
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--line)" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--rust)" stroke-width="6" stroke-dasharray="56.9 43.1" stroke-dashoffset="25"/>
+</svg>
+<div class="pie-title">All-Years Fundraising Share</div>
+<div class="pie-legend"><span class="dot" style="background:var(--rust);"></span>Choberka $122,917 (56.9%)<br><span class="dot" style="background:var(--line-strong);"></span>Sawyer $93,200 (43.1%)</div>
+</div>
+</div>
+
+<div class="verdict-box">
+<b>Worth sitting with:</b> Choberka out-raises the incumbent overall ($122,917 to $93,200) &mdash; and she does it built almost entirely on individual, public support (90.8% in her most-itemized report). Sawyer's fundraising runs the opposite direction: 98.5% institutional, meaning he isn't building a public individual-donor base at anywhere near the same scale, even though he's the one currently holding the seat.
+</div>
+
+<details class="grade-card">
+<summary>
+<span class="grade-chevron">&#9656;</span>
+<span class="grade-title">Full year-by-year ledger, 2024&ndash;2026 (dates, sources, and the resolved gap)</span>
+</summary>
+<div class="grade-body" style="padding:14px 18px 18px;">
+<table class="year-table">
+<thead><tr><th>Year</th><th>Candidate</th><th>Raised</th><th>Source period</th></tr></thead>
+<tbody>
+<tr><td rowspan="3">2024</td><td>Choberka</td><td class="amt">$88,966.94</td><td class="period-date">Full cycle, Convention&ndash;Year End. Raw export uploaded 9/12/26; reconciles to 475 contribution transactions.</td></tr>
+<tr><td>Sawyer</td><td class="amt">$55,800.00</td><td class="period-date">Full cycle, all 5 report periods (Convention, General, Primary, September 30th, Year End). Raw export uploaded 9/13/26; reconciles to 23 contribution transactions.</td></tr>
+<tr><td colspan="2" style="font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);">2024 general election result: Sawyer 58.3% (9,497 votes) &middot; Choberka 36.8% (5,996) &middot; Johnson (L) 4.9% (799)</td></tr>
+<tr><td rowspan="2">2025</td><td>Choberka</td><td class="amt">$0.00</td><td class="period-date">Full year, raw export uploaded 9/12/26. $2,123.76 spent (24 transactions, routine platform fees + community-goodwill gifts) &mdash; no contributions raised that year.</td></tr>
+<tr><td>Sawyer</td><td class="amt">$7,150.00</td><td class="period-date">Full Year End report, 1/1&ndash;12/31/25, raw export uploaded 9/13/26. Unlike Choberka, he kept fundraising in his off-year (17 contributions, 13 expenditures).</td></tr>
+<tr><td rowspan="2">2024&ndash;2025 combined</td><td>Sawyer</td><td class="amt">$62,950.00</td><td class="period-date">$55,800.00 (2024) + $7,150.00 (2025) &mdash; confirmed via full raw exports for both years, uploaded 9/13/26.</td></tr>
+<tr><td colspan="2" class="period-date">This resolves an earlier ~$4,500 gap: a prior "$58,450 through 2025" estimate undercounted by exactly $4,500. The corrected $62,950 figure now reconciles with his separately-stated career total (below) to within 39 cents.</td></tr>
+<tr><td rowspan="2">2026</td><td>Choberka</td><td class="amt">$33,949.59</td><td class="period-date">Cycle-to-date, Convention+Primary+interim General.</td></tr>
+<tr><td>Sawyer</td><td class="amt">$9,000.00 + $21,250.00</td><td class="period-date">2026 Primary YTD ($9,000.00) plus a newly confirmed 8/21&ndash;8/31/26 report ($21,250.00, uploaded 9/12/26).</td></tr>
+<tr><td><b>All-years total</b></td><td><b>Choberka</b></td><td class="amt"><b>$122,916.53</b></td><td class="period-date">Sum of the three clean, non-overlapping year totals above.</td></tr>
+<tr><td><b>All-years total</b></td><td><b>Sawyer</b></td><td class="amt"><b>$93,200.39</b></td><td class="period-date">$62,950.00 (2024-2025, confirmed above) + $9,000.00 (2026 Primary YTD) + $21,250.00 (Aug. 2026 report) = $93,200.00 &mdash; matching his separately-stated "$71,950.39 career total + $21,250.00" derivation ($93,200.39) to within 39 cents. Both methods now agree.</td></tr>
+</tbody>
+</table>
+</div>
+</details>
+</div>
+
+<div id="view-cycle" class="view-panel">
+
+
+<div class="pie-row">
+<div class="pie-col">
+<svg viewBox="0 0 42 42" class="pie-svg">
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--line)" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--rust)" stroke-width="6" stroke-dasharray="52.9 47.1" stroke-dashoffset="25"/>
+</svg>
+<div class="pie-title">2026 Fundraising Share</div>
+<div class="pie-legend"><span class="dot" style="background:var(--rust);"></span>Choberka $33,950 (52.9%)<br><span class="dot" style="background:var(--line-strong);"></span>Sawyer $30,250 (47.1%)</div>
+</div>
+<div class="pie-col">
+<svg viewBox="0 0 42 42" class="pie-svg">
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--burgundy)" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--amber)" stroke-width="6" stroke-dasharray="9.2 90.8" stroke-dashoffset="25"/>
+</svg>
+<div class="pie-title">Choberka — Her Most Recent Report Only</div>
+<div class="pie-legend"><span class="dot" style="background:var(--amber);"></span>Institutional 9.2% ($1,250)<br><span class="dot" style="background:var(--burgundy);"></span>Individual 90.8% ($12,387)</div>
+</div>
+<div class="pie-col">
+<svg viewBox="0 0 42 42" class="pie-svg">
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--burgundy)" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--amber)" stroke-width="6" stroke-dasharray="100 0" stroke-dashoffset="25"/>
+</svg>
+<div class="pie-title">Sawyer — Both Confirmed 2026 Reports</div>
+<div class="pie-legend"><span class="dot" style="background:var(--amber);"></span>Institutional 100% ($30,250)<br><span class="dot" style="background:var(--burgundy);"></span>Individual 0%</div>
+</div>
+</div>
+<p class="pie-caption">Choberka's chart covers only her narrowest, most-itemized report ($13,637.25 of her $33,949.59 cycle-to-date) &mdash; not a like-for-like scope match with Sawyer's, which covers his two fully-itemized 2026 reports.</p>
+
+<details class="grade-card">
+<summary>
+<span class="grade-chevron">&#9656;</span>
+<span class="grade-title">Full 2026-cycle detail (dates, sources, and scope caveats)</span>
+</summary>
+<div class="grade-body" style="padding:14px 18px 18px;">
+<table class="year-table">
+<thead><tr><th>Candidate</th><th>Period</th><th>Amount</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td rowspan="2">Choberka</td><td class="period-date">Cycle-to-date (Convention+Primary+interim General)</td><td class="amt">$33,949.59</td><td>Broadest 2026 figure on file.</td></tr>
+<tr><td class="period-date">Itemized sub-period, roughly 6/15&ndash;9/12/26</td><td class="amt">$13,637.25</td><td>Her most recent, fully-itemized report &mdash; 90.8% individual ($12,387.25, 79 named donors) / 9.2% institutional ($1,250: Fresh Air PAC $1,000, Women's Democratic Club of Utah $200, Friends of Elizabeth Weight $50). This is a subset of the cycle-to-date total above, not an additional amount.</td></tr>
+<tr><td rowspan="2">Sawyer</td><td class="period-date">Primary Report, 3/31&ndash;6/11/26</td><td class="amt">$3,000.00 this period ($9,000.00 YTD)</td><td>All three contributions institutional: Utah Bankers Association $500, Utah Association of Realtors $1,500, NUPAC $1,000.</td></tr>
+<tr><td class="period-date">Later report, 8/21&ndash;8/31/26</td><td class="amt">$21,250.00</td><td>9 line items, <b>100% institutional, zero individual donors</b> &mdash; the starkest documented institutional-only fundraising window found anywhere in this project.</td></tr>
+</tbody>
+</table>
+<p class="bill-footnote">Sawyer's full 2026-only total can't be cleanly stated as a single number yet &mdash; these are the two confirmed, non-overlapping pieces on file, not necessarily his complete 2026 activity.</p>
+</div>
+</details>
+</div>
+
+<h2 class="sect">Where Sawyer's money goes</h2>
+<p>Every major donor and vendor connection on file, filterable by type. Click a card to read the full detail.</p>
+
+<h3 class="sub-head">Institutional donors, by size</h3>
+<div class="donor-bar-wrap">
+<div class="donor-bar-row"><div class="donor-bar-label">UHREC</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:100%;"><span>$24,500</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">NUPAC</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:85.7%;"><span>$21,000</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">House Speaker Leadership PAC</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:59.2%;"><span>$14,500</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">Weber Co. Republican Party</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:22.4%;"><span>$5,500</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">Education First Utah</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:10.2%;"><span>$2,500</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">Friends of Ann Millner</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:8.2%;"><span>$2,000</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">Governing Group PAC</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:4.1%;"><span>$1,000</span></div></div></div>
+</div>
+
+<div class="docket-filters">
+<button class="filter-btn active" data-filter="all">All (10)</button>
+<button class="filter-btn" data-filter="donor">Donors (7)</button>
+<button class="filter-btn" data-filter="vendor">Vendors (3)</button>
+</div>
+
+<div id="money-grid" class="bill-grid"></div>
+
+<p>NUPAC's real total corrects an earlier "$5,000 twice" estimate &mdash; the actual record shows four separate gifts totaling $21,000 (5/15/24, 8/12/24, 10/15/24, and 6/11/26). NUPAC's own leadership &mdash; Sen. Ann Millner, Rep. Casey Snider, and treasurer Kyle Palmer &mdash; overlaps directly with Sawyer's own vendor payments. Governing Group PAC is the same PAC already documented in Rep. Ariel Defay's campaign finance file.</p>
+
+<h3 class="sub-head">The vendor loop, mapped</h3>
+<p>Two of Sawyer's three vendor relationships trace back to the same small circle of people &mdash; a real, overlapping network, not three unrelated payments.</p>
+<div class="flow-box">
+<div class="flow-tier">
+<div class="flow-node hub">Sawyer Campaign<span class="sub">$11,085.97 combined to these two vendors</span></div>
+</div>
+<div class="flow-arrow">&darr; &nbsp; &darr;</div>
+<div class="flow-tier">
+<div class="flow-node money">Politix LLC<span class="sub">$6,017.79</span></div>
+<div class="flow-node money">Xalisco<span class="sub">$5,068.18</span></div>
+</div>
+<div class="flow-arrow">&uarr; owned by &nbsp; &nbsp; &nbsp; &uarr; owned by</div>
+<div class="flow-tier">
+<div class="flow-node flagged">Kerry Gibson<span class="sub">Co-owns both entities</span></div>
+<div class="flow-node">Katrina Gibson<span class="sub">Politix co-owner; founded Utah Forward PAC</span></div>
+<div class="flow-node">Luis Octavio Lopez<span class="sub">Xalisco co-owner</span></div>
+<div class="flow-node">David Lopez-Carrillo<span class="sub">Xalisco co-owner</span></div>
+</div>
+<div class="flow-arrow">&darr;</div>
+<div class="flow-tier">
+<div class="flow-node flagged">= Luis Lopez<span class="sub">Ogden City Council &rarr; later Mayor Nadolski's Community Engagement Director, without disclosing his Xalisco ownership</span></div>
+</div>
+</div>
+<p class="flow-caption">Kerry Gibson is the one name common to both vendor entities.</p>
+
+
+<div class="record-card">
+<div class="rc-title">Repeat donors, named</div>
+<p style="margin-bottom:0;">Four institutional relationships repeat across separate, dated filings: <b>NUPAC</b> &mdash; $5,000 (5/15/24), $10,000 (8/12/24), $5,000 (10/15/24), $1,000 (6/11/26), $21,000 total, his single largest relationship. <b>UHREC</b> &mdash; five gifts totaling $19,500 (2024-2025) plus a new $5,000 (8/24/26), $24,500 total, still active in his most recent filing. <b>House Speaker Leadership PAC</b> (Speaker Mike Schultz's own PAC) &mdash; grew from $4,500 to $14,500 total with a new $10,000 gift (8/24/26), more than tripling in one period. <b>Weber County Republican Party</b> &mdash; $2,500 plus a new $3,000 (8/25/26), $5,500 total.</p>
+</div>
+
+<div class="record-card">
+<div class="rc-title">Late fees and deletions</div>
+<p>Sawyer has been fined <b>$1,550 total</b> for late-reported contributions: $1,450 from six separate fines on his 2024 General Report (UHREC, Conservative Millennials, Governing Group PAC, Home Builders Association, House Speaker Leadership PAC, and NUPAC all reported late), plus $100 more for a late-reported Utah Behavior Services gift &mdash; a recurring pattern, not a one-off.</p>
+<p style="margin-bottom:0;">His filings also show <b>15 <code>[DELETED]</code> entries</b>. Only one carries a recoverable amendment comment: a <b>$3,000 UHREC contribution dated 9/16/24</b>, wiped via amendment on 10/8/24.</p>
+</div>
+
+<div class="flag-open">Sawyer's newest confirmed filing (period 8/21&ndash;8/31/2026, uploaded 9/12/26) reconciles exactly to $21,250.00 across 9 line items &mdash; House Speaker Leadership PAC $10,000, UHREC $5,000, Weber County Republican Party $3,000, Home Builders Association of Utah PAC Fund $750, Google Client Services LLC $1,000, Maverik Group LLC $500, 1-800 Contacts $500, Strata Networks $250, Association of Utah Nurse Practitioners $250. Not one individual donor across all nine gifts.</div>
+
+<h2 class="sect">What he promised vs. what he's sponsored</h2>
+
+<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:-4px 0 20px;">
+<a href="#overall-grade" class="grade-badge bad" style="font-size:13px;padding:6px 16px;text-decoration:none;">D &middot; Promises Not Kept</a>
+<span style="font-family:var(--mono);font-size:12px;color:var(--ink-faint);">&darr; full grade breakdown in Bill Grades below</span>
+</div>
+
+<p>Sawyer's 2024 campaign named housing his explicit top priority. In a Salt Lake Tribune commentary, he wrote he'd "fight for policies that encourage responsible development and remove unnecessary regulations that drive up the cost of building homes," and told the Standard-Examiner directly: <i>"My top priority will be lowering the cost of housing."</i> He also pledged to prioritize education &mdash; properly funding schools, raising teacher pay, cutting administrative burden, expanding local control.</p>
+
+<p>His full sponsored-bill record across two sessions shows he chief-sponsored one bill that shares "real estate" language with his campaign promise &mdash; but on closer reading, it isn't housing policy.</p>
+
+<div class="record-card">
+<div class="rc-title">His chief-sponsored bills, by outcome</div>
+<div class="grade-row"><b>HB 395</b><span><b>"Real Estate Transaction Amendments."</b> Despite the name, it's the "Utah Real Estate Cybercrime Prevention Act" &mdash; a wire-fraud/cybersecurity measure requiring everyone in a real estate closing to route communications through one state-sanctioned network, regulated by a new 5-member board. Struck via enacting-clause removal 3/6/26 (same night/mechanism as HB 100 and HB 267 below). Never passed.</span></div>
+<div class="grade-row"><b>Rental Dwelling</b><span>His only bill actually touching housing affordability &mdash; abandoned before formal introduction. One of five bills he abandoned pre-introduction that session (also: Emissions Inspection Modifications, a Concurrent Resolution on Federal Currency, Discipline in School, Metal Recycling and Shredding Facility Emission Amendments). Not housing-specific; none of the five were ever numbered.</span></div>
+<div class="grade-row"><b>HB 493</b><span>Consumer Products Amendments &mdash; signed. Escalating weights-and-measures penalties plus a new menstrual-product chemical-disclosure labeling requirement. Unrelated to housing or education.</span></div>
+<div class="grade-row"><b>HB 267</b><span>Public Employee Compensation Amendments &mdash; filed, not passed. Unrelated to housing or education.</span></div>
+<div class="grade-row"><b>HB 100</b><span>Electroconvulsive Therapy Prohibition Amendments &mdash; filed, not passed. Unrelated to housing or education.</span></div>
+</div>
+
+<p>The actual 2026 housing legislation that did pass &mdash; HB 492 (infrastructure fund), HB 436 (Moderate Income Housing Infrastructure), HB 68 &mdash; was carried by other representatives. On education, his only connection is as one of several cosponsors (not chief sponsor) on Rep. Pierucci's teacher-mentoring bill, HB 146 (signed).</p>
+
+<div class="flag-open">A fourth promise, also unfulfilled so far: on 11/14/2024, before taking office, Sawyer signed U.S. Term Limits' Article V convention pledge &mdash; a written commitment to "cosponsor, vote for, and defend" a state resolution applying for a federal constitutional convention limited to congressional term limits. No term-limits or Article V convention resolution appears anywhere in his sponsored, floor-sponsored, or cosponsored bill record across two sessions.</div>
+
+<h2 class="sect">Bill grades</h2>
+<div class="rubric-note">This isn't a personal opinion of the bill. Each grade below asks two questions, applied the same way to every bill in this series &mdash; not whether any one person likes the outcome: <b>1. Power</b> &mdash; does it add or remove a check on power that the public, collectively, would otherwise have no say over? <b>2. Transparency</b> &mdash; does it add or remove what the public can actually see about the process, regardless of who ends up holding the final decision? Design and outcome are graded separately because a bill can be structurally sound and still fail to become law, or vice versa; collapsing the two into one score would hide which one actually happened. Graded here: his five <b>chief-sponsored</b> bills only &mdash; not the ones he merely floor-sponsored or cosponsored for other legislators, which wouldn't fairly reflect his own authorship.</div>
+
+<div class="score-strip">
+<div class="score-chip"><span class="sc-num">OVERALL</span><span class="sc-badge bad">D</span></div>
+<div class="score-chip"><span class="sc-num">HB 493</span><span class="sc-badge good">B+</span></div>
+<div class="score-chip"><span class="sc-num">HB 395</span><span class="sc-badge mixed">C</span></div>
+<div class="score-chip"><span class="sc-num">HB 267</span><span class="sc-badge na">&mdash;</span></div>
+<div class="score-chip"><span class="sc-num">HB 100</span><span class="sc-badge na">&mdash;</span></div>
+<div class="score-chip"><span class="sc-num">Rental Dwelling</span><span class="sc-badge na">&mdash;</span></div>
+</div>
+
+<details class="grade-card" id="overall-grade" open>
+<summary>
+<span class="grade-chevron">&#9656;</span>
+<span class="grade-num">OVERALL</span>
+<span class="grade-title">As a representative, measured against his own campaign promises</span>
+<span class="grade-badge bad">D &middot; Promises Not Kept</span>
+</summary>
+<div class="grade-body">
+<p>This grade asks a different question than the bill-by-bill ones below: not whether any single bill was well-designed, but whether he did what he told voters he'd do. He named four specific priorities. Here's the record against each, one at a time:</p>
+<div class="grade-row"><b>Housing</b><span>His explicit "top priority" ("My top priority will be lowering the cost of housing," Standard-Examiner). His only chief-sponsored bill sharing "real estate" language, HB 395, turned out not to be housing policy at all &mdash; it's a wire-fraud/vendor-mandate bill (see grade above). His one actual housing-adjacent bill, "Rental Dwelling Amendments," was abandoned before it was ever formally introduced &mdash; one of five bills he abandoned pre-introduction that session, not a housing-specific drop. <b>Not delivered.</b></span></div>
+<div class="grade-row"><b>Education</b><span>Pledged to fund schools, raise teacher pay, cut administrative burden, expand local control. His only connection to any education bill is as a cosponsor &mdash; not chief sponsor &mdash; on Rep. Pierucci's teacher-mentoring bill, HB 146. <b>Minimal, secondary involvement only.</b></span></div>
+<div class="grade-row"><b>Working families</b><span>Pledged to "support working families in the face of inflation." No specific bill tied to this promise appears anywhere in his sponsored, floor-sponsored, or cosponsored record. <b>No identifiable action.</b></span></div>
+<div class="grade-row"><b>Term limits</b><span>Signed U.S. Term Limits' Article V convention pledge before taking office (11/14/2024). No term-limits or Article V resolution appears anywhere in his record across two full sessions. <b>Not delivered.</b></span></div>
+<p>Two additional facts inform this grade without being promises themselves: his committee attendance turned into an absence pattern immediately after a same-day cluster of PAC donations (9/4/25), and 98.5% of his all-years fundraising is institutional rather than individual &mdash; context for whose interests he's positioned toward, not a promise question on its own.</p>
+<p style="margin-bottom:0;"><b>D.</b> Three of four named campaign priorities show no delivery; the fourth shows only secondary, non-authored involvement. This is a promises-vs-record grade specifically &mdash; it does not double as a policy judgment on any bill's merits, which are graded separately below.</p>
+</div>
+</details>
+
+<details class="grade-card">
+<summary>
+<span class="grade-chevron">&#9656;</span>
+<span class="grade-num">HB 493</span>
+<span class="grade-title">Consumer Products Amendments</span>
+<span class="grade-badge good">B+ &middot; Good</span>
+</summary>
+<div class="grade-body">
+<p style="margin-top:0;"><b>CORRECTED against the actual bill text</b> (comparing HB0493 to its substitute, HB0493S01): this is not a shelf-pricing law, as earlier described here. It does two distinct things &mdash; establishes an escalating civil-penalty schedule for violations of the Dept. of Agriculture and Food's weights-and-measures program (commercial scales, pumps, packaged goods), and creates a new requirement that menstrual product manufacturers disclose on packaging any intentionally-added ingredient, specifically naming five chemicals if present: lead, cadmium, arsenic, dioxin (TCDD), and PFAS. Senate Sponsor: Ann Millner &mdash; the same Sen. Millner already documented elsewhere in this project as NUPAC's co-founder and Koford's Senate predecessor. Cosponsors: Kristen Chevrier and Candice B. Pierucci.</p>
+<div class="grade-row"><b>Power</b><span>Neutral &mdash; doesn't shift decision-making authority toward or away from the public on either provision; both are enforcement/disclosure mechanisms, not governance structures.</span></div>
+<div class="grade-row"><b>Transparency</b><span>Positive &mdash; the menstrual-product labeling requirement is a genuine consumer right-to-know improvement, giving the public visibility into product chemical content it didn't have before. The weights-and-measures penalty schedule doesn't change what the public can see, only the cost of getting caught violating an existing rule.</span></div>
+<p><b>Design: B+.</b> A modest, genuine consumer-protection measure with no structural downside found &mdash; the grade itself is unchanged by this correction, only the description of what earns it.</p>
+<p><b>Did it change between introduction and passage?</b> No bait-and-switch here &mdash; the substance was consistent from the introduced bill through to the enrolled law. The only "correction" involved was this page's own earlier wrong description (shelf-pricing), not a change in the bill itself.</p>
+<p><b>Who benefits:</b> Diffuse public benefit &mdash; consumers of menstrual products gain a genuine right-to-know on chemical content; no single named company gains or loses from either provision.</p>
+<p style="margin-bottom:0;"><b>Outcome: B+ (signed).</b> Design and outcome match here &mdash; it became law as written, effective 5/6/26, with the labeling requirement itself taking effect 12/1/27.</p>
+</div>
+</details>
+
+<details class="grade-card">
+<summary>
+<span class="grade-chevron">&#9656;</span>
+<span class="grade-num">HB 395</span>
+<span class="grade-title">Real Estate Transaction Amendments</span>
+<span class="grade-badge mixed">C &middot; Mixed</span>
+</summary>
+<div class="grade-body">
+<div class="grade-row"><b>Power</b><span>Mixed &mdash; addresses a real wire-fraud/cybercrime problem, but does it by requiring every real estate closing to route through ONE state-sanctioned private company, selected and regulated by a new 5-member board. That's a market-choice question as much as a security one: license holders lose the ability to pick their own transaction-communication vendor, and one company becomes the mandatory gatekeeper for the entire industry.</span></div>
+<div class="grade-row"><b>Transparency</b><span>Not established from what's on file whether the new board's vendor-selection and fee-approval process would be conducted in public hearings or behind closed doors &mdash; a genuine open question, not assumed either way.</span></div>
+<p><b>Design: C.</b> A legitimate problem addressed through a single-winner structure worth watching, not a clean transparency or consumer-choice win.</p>
+<p><b>How it died, confirmed:</b> Introduced 1/28/26, referred to House Business, Labor, and Commerce Committee 2/3/26, that committee "recommends returned to Rules" 3/4/26, then <b>struck via enacting-clause removal at 11:59 PM on 3/6/26</b> &mdash; the same night and mechanism, and the identical committee-to-Rules pipeline, already documented elsewhere on this page killing H.B. 100, plus H.B. 267, H.B. 422, and H.J.R. 7 in this project's broader bait-and-switch tracker.</p>
+<p><b>Did it change between introduction and its death?</b> Not established &mdash; only the final (pre-death) text is on file here, not an earlier version to compare it against. Unlike HB 236 elsewhere on this page, no bait-and-switch pattern is confirmed for this bill; it may simply have read this way from the start.</p>
+<p><b>What would have made it good for the collective:</b> Keep the anti-wire-fraud goal, but let licensed title/escrow/real-estate professionals choose among multiple certified transaction-network vendors instead of one exclusive company, and require the new board's vendor-selection and fee-approval meetings to be open to the public.</p>
+<p><b>Who benefits:</b> Not established &mdash; the bill died before the new 5-member board ever selected the "one exclusive private company," so no specific vendor was ever named as the winner. If it had passed, that company would have been the clear concentrated beneficiary; for now this sits in industry-generally, no-company-named territory.</p>
+<p style="margin-bottom:0;"><b>Outcome: N/A &mdash; struck via enacting-clause removal, 3/6/26, never passed.</b> No real-world effect to grade; the design concerns above never had to be tested.</p>
+</div>
+</details>
+
+<details class="grade-card">
+<summary>
+<span class="grade-chevron">&#9656;</span>
+<span class="grade-num">HB 267</span>
+<span class="grade-title">Public Employee Compensation Amendments</span>
+<span class="grade-badge na">Not Graded</span>
+</summary>
+<div class="grade-body">
+<p><b>Why no grade:</b> Two separate reasons, not one. First, no substantive detail on this bill's actual text is on file beyond its title &mdash; grading Power/Transparency without reading the bill itself would be guessing. Second, even if the design were known, it never passed, so there'd be no real-world outcome to grade against that design anyway.</p>
+<p><b>How it died, confirmed:</b> Introduced 1/20/26 at 3:44 PM &mdash; and unlike most bills on this same-night kill list, it shows <b>no standing-committee referral at all</b>, going straight from introduction to Rules to being <b>struck via enacting-clause removal at 11:59 PM on 3/6/26</b>. That's the same night and mechanism already confirmed killing H.B. 100 elsewhere on this page, plus H.B. 422 and H.J.R. 7 documented in this project's broader bait-and-switch tracker. No committee ever touched this one before it was killed.</p>
+<p><b>Did it change between introduction and its death?</b> Unknown &mdash; without the bill text, there's no way to tell whether it followed the bait-and-switch pattern documented elsewhere on this page (HB 236) or stayed consistent throughout.</p>
+<p style="margin-bottom:0;"><b>What would make it good for the collective, and who benefits:</b> Not statable without reading the actual bill text &mdash; flagged here as a gap in this page's research, not a claim that the bill was fine.</p>
+</div>
+</details>
+
+<details class="grade-card">
+<summary>
+<span class="grade-chevron">&#9656;</span>
+<span class="grade-num">HB 100</span>
+<span class="grade-title">Electroconvulsive Therapy Prohibition Amendments</span>
+<span class="grade-badge na">Not Graded</span>
+</summary>
+<div class="grade-body">
+<p><b>Why no grade:</b> Same two reasons as HB 267 &mdash; no substantive bill text on file beyond the title, and it never passed, so there's no real-world outcome to test a design against even if one were known.</p>
+<p><b>How it died, confirmed:</b> Introduced 1/20/26, sent to House Health and Human Services Committee 1/26/26, that committee "recommends returned to Rules" 3/4/26, then <b>struck via enacting-clause removal at 11:59 PM on 3/6/26</b> &mdash; the exact same night and mechanism already documented elsewhere in this project killing H.B. 422, H.J.R. 7, and H.B. 332 in the same single session. The kill mechanism is confirmed even though the bill's own substance still isn't.</p>
+<p><b>Did it change between introduction and its death?</b> Unknown, for the same reason as HB 267.</p>
+<p style="margin-bottom:0;"><b>What would make it good for the collective, and who benefits:</b> Not statable without reading the actual bill text &mdash; flagged here as a gap in this page's research, not a claim that the bill was fine.</p>
+</div>
+</details>
+
+<details class="grade-card">
+<summary>
+<span class="grade-chevron">&#9656;</span>
+<span class="grade-num">&mdash;</span>
+<span class="grade-title">"Rental Dwelling Amendments" (abandoned)</span>
+<span class="grade-badge na">Not Graded</span>
+</summary>
+<div class="grade-body">
+<p style="margin-bottom:0;">Abandoned before ever being formally introduced &mdash; no bill number, no bill text exists. There's nothing to grade. This was one of five bills Sawyer abandoned pre-introduction that session, per the official list marking each "Bill Abandoned per Sponsor": Rental Dwelling Amendments, Emissions Inspection Modifications, a Concurrent Resolution Regarding Federal Currency, Discipline in School, and Metal Recycling and Shredding Facility Emission Amendments. None of the five were ever numbered, and no bill text exists for any of them &mdash; so this reflects a broader pattern of abandoned bills that session, not a decision specific to housing.</p>
+</div>
+</details>
+
+<div class="record-card">
+<div class="rc-title">Also cosponsored (not graded above &mdash; not his own bill)</div>
+<p>Sawyer is one of 27 cosponsors on <b>HB 236, "Truth in Taxation Amendments"</b> (chief sponsor Karen M. Peterson, Senate sponsor Daniel McCay, signed into law). It's not counted among his graded bills above since it isn't his own initiative &mdash; but it's worth flagging: comparing all four versions of the bill (original, S01, S02, and the enacted S03) shows a real necessity-test mechanism was removed between S01 and S02.</p>
+
+<div class="compare-box">
+<div class="compare-cols">
+<div class="compare-col">
+<div class="compare-head">Original bill (S01)</div>
+<div class="compare-node before">Must prove necessity<span class="sub">Budget without the tax hike</span></div>
+<div class="compare-arrow">&darr;</div>
+<div class="compare-node before">Harder to justify<span class="sub">No proof, no hike</span></div>
+</div>
+<div class="compare-col">
+<div class="compare-head">What passed (S02&ndash;S03)</div>
+<div class="compare-node after">Must announce plan<span class="sub">State amount and timing</span></div>
+<div class="compare-arrow">&darr;</div>
+<div class="compare-node after">Easier to pass<span class="sub">No proof required</span></div>
+</div>
+</div>
+<div class="compare-flag">Same summary language<span class="sub">Bill's own "Highlighted Provisions" reads nearly identical throughout</span></div>
+</div>
+
+<p style="margin-bottom:0;">The original design would have forced a taxing entity to first adopt a budget proving it could function <i>without</i> a proposed tax increase before being allowed to budget for it. That requirement was replaced with a much weaker one-way disclosure schedule &mdash; while the bill's own "Highlighted Provisions" summary reads almost identically across every version.</p>
+</div>
+
+<h2 class="sect">The absence pattern</h2>
+
+<p>Two fully-verified findings from Sawyer's committee record, cross-checked against primary-source minutes for every meeting cited. The first is a timeline worth seeing laid out, not just described:</p>
+
+<div class="tl-wrap">
+<div class="tl-item">
+<div class="tl-date">Through October 2025</div>
+<div class="tl-label">Consistent yes votes</div>
+<div class="tl-body">Sawyer voted yes on essentially everything on his committee's agenda.</div>
+</div>
+<div class="tl-item hot">
+<div class="tl-date">9/4/2025</div>
+<div class="tl-label">Same-day donation cluster</div>
+<div class="tl-body">Utah Apartment Association PAC, Utah Bankers Association, and Utah Property Rights Coalition all gave the same day.</div>
+</div>
+<div class="tl-item hot">
+<div class="tl-date">November 2025</div>
+<div class="tl-label">Absences begin</div>
+<div class="tl-body">Unrecorded/absent on a cluster of consumer-protection, insurance-code, and trust-business bills &mdash; starting immediately after the donation cluster above.</div>
+</div>
+<div class="tl-item hot">
+<div class="tl-date">11/19/2025 meeting</div>
+<div class="tl-label">Mid-meeting exit</div>
+<div class="tl-body">Voted through item 9 on the agenda, then was absent for every remaining roll call through adjournment.</div>
+</div>
+</div>
+
+<p><b>Judicial stack:</b> Sawyer voted yes on both S.B. 134 and H.B. 392, the two flagship 2026 judicial-control bills already documented in Kyle's HD8 file &mdash; the second Weber County Republican confirmed on the core stack.</p>
+
+<div class="record-card">
+<div class="rc-title">Sawyer & Co — a brand-new entity, timed with his own disclosure update</div>
+<p style="margin-bottom:0;">Sawyer's most recent COI filing lists his current employer as "Sawyer & Co," a "client acquisition company" he owns &mdash; but the same form's Item 2A (entities he owns/officers) is marked "n/a," directly contradicting Item 1B on the same document. Utah's corporate registry shows Sawyer & Co, LLC was formed <b>7/8/2026</b>, weeks before this COI update, registered at Sawyer's own home address, with a stated business purpose of <b>"Lead Generation for service businesses."</b> Its second listed member, <b>James Weldon Neff</b>, has no other apparent connection to Sawyer &mdash; his only other Utah corporate history is Key Concierge, LLC, a Draper company inactive since 2011. Neff isn't using an address of his own on the Sawyer & Co filing either; it lists Sawyer's home address.</p>
+</div>
+
+<h2 class="sect">Choberka's record</h2>
+<p>Choberka is currently Ogden City Council Chair for District 1 &mdash; a sitting local official running for the state seat &mdash; and also works as a Select Health "Program Manager, Equity Initiatives" and a Weber State adjunct English professor. Her COI disclosure is clean: no owned entities, no $5K+ stock holdings, no undisclosed outside income. Board seats: Lantern House (Secretary), the Weber-Morgan Health Department Board of Health, the Weber Local Homeless Trust, and the MLK Jr. Human Rights Commission (a Cox gubernatorial appointee).</p>
+
+<p><b>2024 &mdash; her first run, which she lost:</b> Choberka raised $88,966.94 (475 contribution transactions, full Convention-through-Year-End cycle, reconciled via raw export) but lost to Sawyer in the November general election, 58.3% to 36.8% (Libertarian Jacob Johnson took the remaining 4.9%). Top donors: Utah House Democratic Leadership Council $7,000, Utah Women in Politics PAC $5,000, IBEW PAC $4,000, George &amp; Mary Hall $3,000 (funding her again in 2026), Roxane Googin $1,270 (the same Park City donor tied to UINPAC's own founding). Her September 30th Report shows one confirmed, publicly-visible <code>[DELETED]</code> entry: originally a $500 line item to "The Monarch Venues" (9/25/24), wiped via amendment on 9/30/24 &mdash; date, name, purpose, and amount all removed.</p>
+
+<p><b>2025: zero contributions raised all year</b> &mdash; with only routine platform fees ($2,123.76 total across 24 transactions) and small community-goodwill gifts (Youth Impact, Boys &amp; Girls Club, Ogden Contemporary Art, the Innocence Project) on the ledger.</p>
+
+<p><b>2026 cycle-to-date: $33,949.59 raised.</b> Received the same $7,500 UINPAC gift as Kim James, same day, part of the documented multi-candidate Democratic slate. Heavy consultant spend &mdash; Elevate Strategies ($8,755.29) and Apollo Political ($6,939.00) together are over 70% of 2026 spending, a professionally-run operation distinct from a DIY campaign. Cross-Democratic-slate giving continues: David and Rosemary Lesser combined $2,500 across four separate gifts, and a mutual-support pattern with Bianca Mittendorf's HD7 campaign (each gave the other's campaign a small direct gift).</p>
+
+<div class="record-card">
+<div class="rc-title">Her most recent report, fully itemized (period ~6/15&ndash;9/12/26, uploaded 9/12/26)</div>
+<p style="margin-bottom:0;">This period reconciles exactly to <b>$13,637.25</b> across 79 named individual donors plus 3 institutional gifts &mdash; <b>90.8% individual ($12,387.25) / 9.2% institutional ($1,250: Fresh Air PAC $1,000, Women's Democratic Club of Utah $200, Friends of Elizabeth Weight $50).</b> This corrects an earlier secondhand claim that her fundraising was "100% individual" &mdash; it's overwhelmingly individual, but not entirely. Named repeat donors within this period: <b>John Thomas</b> gave three times ($350 total), <b>Rosemary Lesser</b> gave three times ($1,300 total) &mdash; on top of the separate $2,500/four-gift Lesser-family total already noted above for the broader 2026 cycle. Other named individual donors: David Lesser $500, Greg Matis $1,000, Katherine Matheson $750, and several sitting/former Utah Democratic officials giving small personal amounts (Jennifer Dailey-Provost, Patrice Arent, Ben McAdams, Ross Romero, Jacob Fitisemanu).</p>
+</div>
+
+<div class="record-card">
+<div class="rc-title">The attack ads run against her, and who paid for them</div>
+<p><b>Preserving Utah Values PAC</b> ran attack ads against Choberka in June 2026 &mdash; a Wisconsin-registered PAC (officers Thomas and Timothy Datwyler, Hudson, WI), created 10/8/2024. Its only documented contribution, <b>$120,000, came directly from Mike Schultz personally</b> (11/30/2024) &mdash; the same House Speaker whose own leadership PAC and party network fund a large share of Sawyer's own campaign, documented earlier on this page. The money was spent almost entirely on a single vendor, G2 Consulting ($110,535).</p>
+<p>The PAC filed a dissolution "Final Report" on 6/20/2025 &mdash; yet a separate report filed the <i>same day</i> shows $2,914.57 in expenditures, a contradiction in its own paperwork. The ads themselves ran under "Paid for by Preserving Utah Values Inc," and <b>zero 2026 disclosures have been filed anywhere in Utah's campaign finance system</b> for the period the ads actually ran &mdash; a documented compliance gap, not an assumption. The Salt Lake Tribune independently identified Schultz as the funder behind this network, using his own photo alongside the story.<sup>*</sup></p>
+<p style="margin-bottom:0;">Choberka is one of at least three candidates targeted by this same PAC &mdash; <b>Scott Stephenson</b> (HD-44) was targeted the same year, 2026, alongside her; <b>Rosemary Lesser</b> was targeted earlier, during her 2024 race, which she lost by roughly 300 votes. (Note: a similarly-named but entirely separate group, "Protect Utah Values PAC," is Utah-registered and funded by a different individual &mdash; not to be confused with this one.)</p>
+<p style="margin-top:14px;font-size:14px;color:var(--ink-faint);">*The Tribune's naming of Schultz was tied specifically to the 2024 Lesser race. As of this writing, no equivalent named press coverage has been found tying Schultz to the 2026 targeting of Choberka or Stephenson by the same PAC. Nor does the record show any enforcement action addressing the compliance gap noted above &mdash; the PAC has continued running ads under an active filing with no 2026 disclosures on record.</p>
+</div>
+
+<div class="flow-box">
+<div class="flow-tier">
+<div class="flow-node hub">Mike Schultz, personally<span class="sub">$120,000, 11/30/2024</span></div>
+</div>
+<div class="flow-arrow">&darr;</div>
+<div class="flow-tier">
+<div class="flow-node money">Preserving Utah Values PAC<span class="sub">Wisconsin-registered; sole documented contribution</span></div>
+</div>
+<div class="flow-arrow">&darr;</div>
+<div class="flow-tier">
+<div class="flow-node money">G2 Consulting<span class="sub">$110,535 &mdash; nearly the entire PAC</span></div>
+</div>
+<div class="flow-arrow">&darr;</div>
+<div class="flow-tier">
+<div class="flow-node flagged">Attack ads<span class="sub">Zero 2026 disclosures filed for this activity</span></div>
+</div>
+<div class="flow-arrow">&darr;</div>
+<div class="flow-tier">
+<div class="flow-node">Choberka (2026)</div>
+<div class="flow-node">Stephenson (2026)</div>
+<div class="flow-node">Lesser (2024)</div>
+</div>
+</div>
+<p class="flow-caption">Salt Lake Tribune independently named Schultz as the funder, using his own photo.</p>
+
+<section>
+<details>
+<summary>Full sourcing</summary>
+<div class="details-body">
+<ul class="sources">
+<li>Jake Sawyer and Angela Choberka campaign finance disclosures, disclosures.utah.gov — full raw DEX exports for both candidates, 2024 through the most recent 2026 filings, last pulled 9/12/26</li>
+<li>Choberka 2024 full-cycle and 2025 full-year raw exports, uploaded and reconciled 9/12/26; her itemized ~6/15&ndash;9/12/26 report, also reconciled 9/12/26</li>
+<li>Sawyer's 2026 Primary Report (period 3/31&ndash;6/11/26, uploaded 8/24/26) and his 8/21&ndash;8/31/26 report (uploaded 9/12/26)</li>
+<li>Utah corporate registry (bes.utah.gov) — Xalisco entity #13140947-0160, Sawyer & Co LLC entity #14713048-0160</li>
+<li>House Business/Labor/Commerce Committee minutes, 6/18/25, 10/15/25, 11/19/25 — house.utleg.gov</li>
+<li>NUPAC and UHREC disclosure filings and leadership records, disclosures.utah.gov</li>
+<li>The Weber County Hive's prior Nadolski investigation (Luis Lopez/Xalisco cross-reference)</li>
+<li>Utah Political Watch (utahpolitics.news) — Jase Reyneveld/Taxpayer PAC reporting</li>
+<li>Alliance for a Better Utah, 2026 Progress Report / legislative scorecard</li>
+<li>2024 general election results — Wikipedia/Ballotpedia, cross-checked against Utah's official canvass</li>
+</ul>
+</div>
+</details>
+</section>
+
+<footer>
+<div class="tagline">We report public records. You decide.</div>
+<nav>
+<a class="nav" href="index.html">&larr; 2026 Candidates index</a>
+<a class="nav" href="https://webercountyhive.substack.com" target="_blank" rel="noopener">The Weber County Hive</a>
+</nav>
+</footer>
+
+</div>
+
+<script>
+const MONEY_ITEMS = [
+{ num: "$21,000", title: "NUPAC (Northern Utah Legislative PAC)", type: "donor", cats: ["donor"],
+body: "Four separate dated gifts: $5,000 (5/15/24), $10,000 (8/12/24), $5,000 (10/15/24), $1,000 (6/11/26). NUPAC's own leadership &mdash; Sen. Ann Millner, Rep. Casey Snider, and treasurer Kyle Palmer &mdash; overlaps directly with Sawyer's own vendor payments below." },
+{ num: "$24,500", title: "UHREC (Utah House Republican Election Committee)", type: "donor", cats: ["donor"],
+body: "Five gifts totaling $19,500 (2024-2025) plus a new $5,000 gift confirmed 8/24/26. One UHREC contribution, $3,000 dated 9/16/24, was later deleted via amendment on 10/8/24 &mdash; the only deletion in Sawyer's own filings with a recoverable trail." },
+{ num: "$14,500", title: "House Speaker Leadership PAC", type: "donor", cats: ["donor"],
+body: "Speaker Mike Schultz's own leadership PAC. Grew from $4,500 to $14,500 total with a new $10,000 gift confirmed 8/24/26 &mdash; more than tripling in one recent period." },
+{ num: "$5,500", title: "Weber County Republican Party", type: "donor", cats: ["donor"], body: "Party-committee contribution, $2,500 plus a new $3,000 confirmed 8/25/26." },
+{ num: "$2,500", title: "Education First Utah", type: "donor", cats: ["donor"], body: "Institutional/advocacy-org contribution." },
+{ num: "$2,000", title: "Friends of Ann Millner", type: "donor", cats: ["donor"], body: "Sen. Millner's own campaign committee, also a NUPAC leader (above)." },
+{ num: "$1,000", title: "Governing Group PAC", type: "donor", cats: ["donor"],
+body: "Same PAC already documented in Rep. Ariel Defay's campaign finance file." },
+{ num: "$6,017.79", title: "Politix LLC", type: "vendor", cats: ["vendor"],
+body: "Utah entity #13903683-0160, formed 3/27/2024. Kerry Gibson and Katrina Gibson are both confirmed Members on the entity's own filing (Katrina is also the registered agent) &mdash; they directly co-own it, not merely 'connected to' it. Katrina Gibson founded Utah Forward PAC; Kerry Gibson is a registered lobbyist (2021-present, DBA 'Legislative Solutions') whose own political career includes the Utah House (2005-2011), two terms on the Weber County Commission (2011-2018, resigned mid-term), Deputy Director of Utah's Dept. of Natural Resources, Commissioner of the Utah Dept. of Agriculture and Food (2019-2020, appointed by Gov. Herbert), and a losing 2020 GOP primary bid for Utah's 1st Congressional District (won by Blake Moore). A 2017-18 Ogden PD investigation into his conduct as County Commissioner resulted in no charges." },
+{ num: "$5,068.18", title: "Xalisco", type: "vendor", cats: ["vendor"],
+body: "Utah entity #13140947-0160: members Kerry Gibson, Luis Octavio Lopez, David Lopez-Carrillo. Luis Octavio Lopez is the same person as Luis Lopez, the Ogden City Council member who later became Mayor Nadolski's Community Engagement Director without disclosing his Xalisco ownership, per the Hive's earlier Nadolski reporting." },
+{ num: "$980.38", title: "Kyle Palmer (personal payment)", type: "vendor", cats: ["vendor"],
+body: "Palmer is NUPAC's own treasurer, and separately received $100 from Jason Kyle's 2023 filings. NUPAC itself separately paid a vendor named James Humphreys $1,555 on dates and amounts identical to what Sawyer's own campaign paid Humphreys &mdash; a shared-vendor, matching-payment pattern worth noting between the PAC and the candidate it funds. Kevin Johnson Media, paid $2,500 by Sawyer, is a vendor shared across five other Weber County Republican candidates (Ebert, Bolos, Hyer, Katrina Gibson) totaling $6,808 combined." }
+];
+const moneyGrid = document.getElementById('money-grid');
+function renderMoney(filter){
+moneyGrid.innerHTML = '';
+MONEY_ITEMS.filter(m => filter === 'all' || m.cats.includes(filter))
+.forEach(m => {
+const card = document.createElement('details');
+card.className = 'bill-card';
+card.innerHTML = `
+<summary>
+<span class="bill-chevron">&#9656;</span>
+<span class="bill-num">${m.num}</span>
+<span class="bill-title">${m.title}</span>
+<span class="bill-status ${m.type}">${m.type === 'donor' ? 'Donor' : 'Vendor'}</span>
+</summary>
+<div class="bill-body"><p>${m.body}</p></div>
+`;
+moneyGrid.appendChild(card);
+});
+}
+renderMoney('all');
+document.querySelectorAll('.filter-btn').forEach(btn => {
+btn.addEventListener('click', () => {
+document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+btn.classList.add('active');
+renderMoney(btn.dataset.filter);
+});
+});
+
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+btn.addEventListener('click', () => {
+document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+btn.classList.add('active');
+document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
+document.getElementById('view-' + btn.dataset.view).classList.add('active');
+});
+});
+</script>
+</body>
+</html>
