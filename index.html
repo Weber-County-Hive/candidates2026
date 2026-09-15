@@ -70,6 +70,12 @@
     font-family:var(--mono);font-size:12px;color:var(--ink-faint);font-weight:400;letter-spacing:.02em;
   }
 
+  .pinned-section{margin-bottom:44px;}
+  .pinned-section .level-heading{color:var(--rust);}
+  .pinned-note{font-family:var(--serif);font-size:14px;color:var(--ink-faint);margin:-8px 0 16px;}
+  .pinned-section .case-card{border-left-color:var(--amber);background:#fbf5e6;}
+  .pinned-section .case-card:hover{border-left-color:var(--rust);}
+
   .county-section{margin-bottom:28px;}
   .county-section:last-child{margin-bottom:0;}
   .county-heading{
@@ -103,6 +109,12 @@
     display:inline-flex;align-items:center;gap:4px;
     border:1px solid #8fcf9e;
   }
+  .pinned-badge{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;
+    background:#fbead0;color:#8a5a17;padding:3px 10px;border-radius:10px;
+    display:inline-flex;align-items:center;gap:4px;
+    border:1px solid var(--amber);
+  }
   .case-dates{
     font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.02em;
     margin-top:8px;
@@ -135,6 +147,7 @@
 
   <div class="docket-filters">
     <button class="filter-btn active" data-scope="all">All Races</button>
+    <button class="filter-btn" data-scope="Resource">Resources</button>
     <button class="filter-btn" data-scope="Federal">Federal</button>
     <button class="filter-btn" data-scope="Statement">Candidate Statements</button>
     <span class="filter-divider"></span>
@@ -142,6 +155,7 @@
     <input id="search" class="search-box" type="text" placeholder="Search by name or race&hellip;">
   </div>
 
+  <div id="pinned-group"></div>
   <div id="level-groups"></div>
 
   <footer>
@@ -153,8 +167,9 @@
 
 </div>
 
-<script src="candidates-data.js?v=10"></script>
+<script src="candidates-data.js?v=11"></script>
 <script>
+  const pinnedGroupEl = document.getElementById('pinned-group');
   const groupsEl = document.getElementById('level-groups');
   const statStrip = document.getElementById('stat-strip');
   const search = document.getElementById('search');
@@ -174,7 +189,7 @@
   const federalCount = CANDIDATES.filter(c => c.level === "Federal").length;
   const stateCount = CANDIDATES.filter(c => c.level === "State" || c.level === "County").length;
   statStrip.innerHTML = `
-    <div class="stat"><div class="stat-num">${CANDIDATES.length}</div><div class="stat-label">Races on file</div></div>
+    <div class="stat"><div class="stat-num">${CANDIDATES.length}</div><div class="stat-label">Races &amp; resources on file</div></div>
     <div class="stat"><div class="stat-num">${CANDIDATES.length * 2}+</div><div class="stat-label">Candidates covered</div></div>
     <div class="stat"><div class="stat-num">${stateCount} / ${federalCount}</div><div class="stat-label">State / Federal</div></div>
     <div class="stat"><div class="stat-num">${daysToElection}</div><div class="stat-label">Days to election</div></div>
@@ -233,6 +248,7 @@
       }
 
       const updatedBadge = c.dateUpdated ? `<span class="updated-badge">&#10003; Updated</span>` : '';
+      const pinnedBadge = c.pinned ? `<span class="pinned-badge">&#9733; Pinned</span>` : '';
 
       a.innerHTML = `
         <div class="case-top">
@@ -241,12 +257,39 @@
         </div>
         <div class="case-names">${c.names}</div>
         <div class="case-verdict">${c.verdict}</div>
-        <div class="case-tags">${c.tags.map(t => `<span class="tag">${t}</span>`).join('')}${updatedBadge}</div>
+        <div class="case-tags">${c.tags.map(t => `<span class="tag">${t}</span>`).join('')}${pinnedBadge}${updatedBadge}</div>
         ${datesHtml}
       `;
       grid.appendChild(a);
     });
     return grid;
+  }
+
+  // Pinned resources render in their own section, above every filtered/grouped
+  // view, unaffected by county/level filter buttons — only the search box
+  // narrows this section, same as everything else.
+  function renderPinned(){
+    const q = search.value.toLowerCase();
+    const pinnedList = CANDIDATES.filter(c => c.level === "Resource" && c.pinned).filter(c =>
+      c.names.toLowerCase().includes(q) ||
+      c.race.toLowerCase().includes(q) ||
+      c.verdict.toLowerCase().includes(q) ||
+      c.tags.some(t => t.toLowerCase().includes(q))
+    );
+    pinnedGroupEl.innerHTML = '';
+    if(pinnedList.length === 0) return;
+    const section = document.createElement('div');
+    section.className = 'level-section pinned-section';
+    const heading = document.createElement('div');
+    heading.className = 'level-heading';
+    heading.innerHTML = `&#9733; Pinned Resources <span class="level-count">(${pinnedList.length})</span>`;
+    section.appendChild(heading);
+    const note = document.createElement('p');
+    note.className = 'pinned-note';
+    note.textContent = 'Reference material and questionnaires for readers and candidates — not case files.';
+    section.appendChild(note);
+    section.appendChild(renderCaseGrid(pinnedList));
+    pinnedGroupEl.appendChild(section);
   }
 
   function renderGroups(list){
@@ -257,9 +300,29 @@
       return;
     }
 
+    const resourceList = list.filter(c => c.level === "Resource");
     const federalList = list.filter(c => c.level === "Federal");
     const statementList = list.filter(c => c.level === "Statement");
     const stateList = list.filter(c => c.level === "State" || c.level === "County");
+
+    if(activeScope === 'Resource'){
+      const section = document.createElement('div');
+      section.className = 'level-section';
+      const heading = document.createElement('div');
+      heading.className = 'level-heading';
+      heading.innerHTML = `Resources <span class="level-count">(${resourceList.length})</span>`;
+      section.appendChild(heading);
+      if(resourceList.length === 0){
+        const empty = document.createElement('div');
+        empty.className = 'county-empty';
+        empty.textContent = 'No matching resources.';
+        section.appendChild(empty);
+      } else {
+        section.appendChild(renderCaseGrid(resourceList));
+      }
+      groupsEl.appendChild(section);
+      return;
+    }
 
     if(federalList.length > 0 || activeScope === 'Federal'){
       const section = document.createElement('div');
@@ -341,18 +404,26 @@
       c.verdict.toLowerCase().includes(q) ||
       c.tags.some(t => t.toLowerCase().includes(q))
     );
-    if(activeScope === 'Federal'){
+    if(activeScope === 'Resource'){
+      list = list.filter(c => c.level === 'Resource');
+    } else if(activeScope === 'Federal'){
       list = list.filter(c => c.level === 'Federal');
     } else if(activeScope === 'Statement'){
       list = list.filter(c => c.level === 'Statement');
     } else if(activeScope !== 'all'){
       list = list.filter(c => (c.level === 'State' || c.level === 'County') && (c.county || 'Other') === activeScope);
+    } else {
+      // Default "All Races" view excludes standalone resources from the
+      // main grouped list — they get their own pinned section instead.
+      list = list.filter(c => c.level !== 'Resource');
     }
+    renderPinned();
     renderGroups(list);
   }
 
   buildCountyButtons();
-  renderGroups(CANDIDATES);
+  renderPinned();
+  renderGroups(CANDIDATES.filter(c => c.level !== 'Resource'));
   search.addEventListener('input', applyFilters);
 </script>
 
