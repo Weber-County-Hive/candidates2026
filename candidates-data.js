@@ -1,5 +1,47 @@
 const CANDIDATES = [
   {
+    id: "questions-every-candidate",
+    race: "Statewide — All 2026 Candidates",
+    level: "Resource",
+    caseNumber: "RESOURCE 03",
+    names: "The Weber County Hive Questionnaire",
+    verdict: "Questions Every Utah Candidate Should Answer",
+    tags: ["Candidate Questionnaire", "13 Questions", "Statewide"],
+    stamp: "Pinned",
+    href: "six-questions-every-candidate.html",
+    pinned: true,
+    datePosted: "2026-09-15",
+    dateUpdated: "2026-09-15"
+  },
+  {
+    id: "questions-for-incumbents",
+    race: "Statewide — Legislative Voting Record Questions",
+    level: "Resource",
+    caseNumber: "RESOURCE 02",
+    names: "Dr. Ronald Mortensen, Citizens for Tax Fairness",
+    verdict: "Questions for Incumbents",
+    tags: ["Reader-Submitted", "Voting Record", "MIDA / PID"],
+    stamp: "Pinned",
+    href: "questions-for-incumbents.html",
+    pinned: true,
+    datePosted: "2026-09-15",
+    dateUpdated: "2026-09-15"
+  },
+  {
+    id: "fifth-fifth-sales-tax",
+    race: "Davis County — Proposed Countywide Sales Tax",
+    level: "Resource",
+    caseNumber: "RESOURCE 01",
+    names: "Dr. Ronald Mortensen, Citizens for Tax Fairness",
+    verdict: "The Fifth-Fifth Sales Tax",
+    tags: ["Reader-Submitted", "Talking Points", "Davis County"],
+    stamp: "Pinned",
+    href: "fifth-fifth-sales-tax.html",
+    pinned: true,
+    datePosted: "2026-09-15",
+    dateUpdated: "2026-09-15"
+  },
+  {
     id: "hd13-craythorne-anderson",
     race: "House District 13 — Clearfield / Clinton / West Point",
     level: "State",
