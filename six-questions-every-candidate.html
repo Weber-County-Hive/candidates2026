@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questions Every Utah Candidate Should Answer — Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f4f0e6;
+    --paper:#faf7f0;
+    --ink:#2a231d;
+    --ink-soft:#5a4f45;
+    --rust:#c0572e;
+    --amber:#d9a441;
+    --burgundy-light:#5c1a2b;
+    --burgundy-deep:#3d0f1c;
+    --line:#dcd2bf;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    line-height:1.6;
+  }
+  a{color:var(--rust);}
+  header.band{
+    background:linear-gradient(135deg, var(--burgundy-light), var(--burgundy-deep));
+    color:#f4e9dd;
+    padding:1.1rem 1.5rem;
+  }
+  .band-inner{
+    max-width:920px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:.5rem;
+  }
+  .brand{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:.08em;
+    font-size:.78rem;
+    color:#e7cfc0;
+  }
+  nav.top a{
+    color:#f4e9dd;
+    text-decoration:none;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.78rem;
+    letter-spacing:.05em;
+    margin-left:1.25rem;
+  }
+  nav.top a:hover{color:var(--amber);}
+  main{max-width:820px; margin:0 auto; padding:2.5rem 1.5rem 4rem;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.75rem;
+    letter-spacing:.1em;
+    color:var(--rust);
+    margin-bottom:.6rem;
+  }
+  h1{
+    font-family:'Playfair Display', serif;
+    font-size:2.4rem;
+    line-height:1.15;
+    margin:0 0 .9rem;
+  }
+  .intro{
+    font-size:1.08rem;
+    color:var(--ink-soft);
+    max-width:66ch;
+    margin-bottom:2rem;
+  }
+  .intro strong{color:var(--ink);}
+  .updated-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    color:var(--ink-soft);
+    margin:-.4rem 0 1.6rem;
+  }
+  .jumpnav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.4rem;
+    margin:0 0 2rem;
+  }
+  .jumpnav a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.7rem;
+    letter-spacing:.02em;
+    text-decoration:none;
+    color:var(--burgundy-deep);
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:.3rem .6rem;
+  }
+  .jumpnav a:hover{border-color:var(--rust); color:var(--rust);}
+  h2.section-head{
+    font-family:'Playfair Display', serif;
+    font-size:1.4rem;
+    margin:2.6rem 0 1.2rem;
+    padding-bottom:.5rem;
+    border-bottom:2px solid var(--amber);
+  }
+  .qcard{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:1.4rem 1.6rem;
+    margin-bottom:1.4rem;
+  }
+  .qnum{
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    color:var(--amber);
+    font-size:1.1rem;
+    margin-right:.4rem;
+  }
+  .qtheme{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.06em;
+    color:var(--rust);
+    text-transform:uppercase;
+    display:block;
+    margin-bottom:.3rem;
+  }
+  .qtitle{
+    font-family:'Playfair Display', serif;
+    font-size:1.25rem;
+    margin:0 0 .8rem;
+  }
+  .qprompt{
+    font-style:italic;
+    color:var(--ink);
+    margin:0 0 .8rem;
+    padding-left:.9rem;
+    border-left:3px solid var(--amber);
+  }
+  .qdetail{
+    font-size:.97rem;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .examples-drop{
+    margin-top:1rem;
+    border:1px solid var(--line);
+    background:#fff;
+  }
+  .examples-drop summary{
+    cursor:pointer;
+    padding:.7rem 1rem;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.78rem;
+    letter-spacing:.04em;
+    color:var(--rust);
+    background:var(--paper);
+  }
+  .examples-drop summary:hover{color:var(--burgundy-deep);}
+  .examples-list{
+    margin:0;
+    padding:1rem 1.4rem 1.1rem 2.1rem;
+    font-size:.93rem;
+    color:var(--ink);
+  }
+  .examples-list li{margin-bottom:.85rem;}
+  .examples-list li:last-child{margin-bottom:0;}
+  .examples-list strong{color:var(--burgundy-deep);}
+  .stat-strip{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+    gap:.8rem;
+    margin:.9rem 0;
+  }
+  .stat-box{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-top:3px solid var(--amber);
+    padding:.8rem .9rem;
+    text-align:center;
+  }
+  .stat-num{
+    display:block;
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    font-size:1.5rem;
+    color:var(--rust);
+    line-height:1.1;
+  }
+  .stat-label{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.68rem;
+    letter-spacing:.02em;
+    color:var(--ink-soft);
+    margin-top:.35rem;
+    line-height:1.3;
+  }
+  .pullquote{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-size:1.15rem;
+    color:var(--burgundy-deep);
+    border-left:3px solid var(--rust);
+    padding:.3rem 0 .3rem 1rem;
+    margin:.9rem 0;
+  }
+  .pullquote cite{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-style:normal;
+    font-size:.7rem;
+    letter-spacing:.04em;
+    color:var(--ink-soft);
+    margin-top:.4rem;
+  }
+  .ask-list{
+    margin:.9rem 0 0;
+    padding-left:1.2rem;
+    font-size:.95rem;
+  }
+  .ask-list li{margin-bottom:.4rem;}
+  .method-box{
+    background:var(--paper);
+    border-left:3px solid var(--rust);
+    padding:1.2rem 1.5rem;
+    margin-bottom:1.4rem;
+  }
+  .method-box h3{
+    font-family:'Playfair Display', serif;
+    font-size:1.1rem;
+    margin:0 0 .6rem;
+  }
+  .method-box ul{margin:0; padding-left:1.2rem;}
+  .method-box li{margin-bottom:.4rem;}
+  .method-box code{
+    background:#fff;
+    border:1px solid var(--line);
+    padding:.1rem .35rem;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.85rem;
+  }
+  .closing{
+    font-size:1.15rem;
+    font-style:italic;
+    color:var(--ink);
+    text-align:center;
+    margin:2.6rem 0 1rem;
+    padding:1.4rem;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  footer{
+    max-width:820px;
+    margin:0 auto;
+    padding:2rem 1.5rem 3rem;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.75rem;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+  }
+  footer a{color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<header class="band">
+  <div class="band-inner">
+    <span class="brand">WEBER COUNTY HIVE &middot; 2026 CANDIDATES</span>
+    <nav class="top">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">Pinned Resource &middot; The Weber County Hive Questionnaire</div>
+  <h1>Questions Every Utah Candidate Should Answer</h1>
+  <p class="intro">
+    The Weber County Hive is launching a statewide candidate-accountability questionnaire. Every candidate &mdash; from local and special-district races through school board, city, county, legislative, and statewide offices &mdash; will be asked the same questions. This is not about party. Every Utah candidate should be willing to tell voters who holds the power, who supplies the money, what government may keep hidden, where public revenue goes, and what technology may be used to track the public.
+  </p>
+  <p class="intro" style="font-size:.95rem;">The list started at six questions and has grown as the reporting has grown &mdash; new questions get added when a documented pattern warrants one, not on a fixed schedule. Use them however fits: email the full questionnaire to a candidate, or bring the yes-or-no prompts with you to a town hall, forum, or debate and ask candidates to answer them directly.</p>
+  <p class="updated-line">Last updated September 15, 2026 &middot; 13 questions &middot; new ones added as reporting warrants</p>
+  <nav class="jumpnav">
+    <a href="#q1">1 PIDs</a><a href="#q2">2 Local Control</a><a href="#q3">3 Campaign Money</a><a href="#q4">4 Transparency</a>
+    <a href="#q5">5 Diverted Taxes</a><a href="#q6">6 Surveillance</a><a href="#q7">7 Unelected Power</a><a href="#q8">8 Water</a>
+    <a href="#q9">9 Bait-and-Switch</a><a href="#q10">10 Pay</a><a href="#q11">11 Judicial</a><a href="#q12">12 Great Salt Lake</a><a href="#q13">13 Bears Ears</a>
+  </nav>
+
+  <h2 class="section-head">The Original Six</h2>
+
+  <div class="qcard" id="q1">
+    <span class="qtheme">1 &middot; PIDs</span>
+    <h3 class="qtitle">Who pays the debt?</h3>
+    <p class="qprompt">With statewide PID debt now past $5.267 billion and still growing, do you support pausing new PID formations and bond issuances until Truth in Taxation-style public notice and hearing requirements are in place, and the true, full cost to the public is disclosed &mdash; not just the assessment inside the district's own boundary?</p>
+    <p class="qdetail">PIDs are often defended on the claim that they only cost people living inside the district's boundary. But a PID diverts a property's future tax growth away from the county, school district, or city &mdash; a real budget hole usually filled by raising rates on <em>everyone else</em>, not just PID residents.</p>
+    <div class="stat-strip">
+      <div class="stat-box"><span class="stat-num">$5.267B</span><span class="stat-label">Statewide PID debt, State Auditor's office &mdash; a snapshot, not a ceiling</span></div>
+      <div class="stat-box"><span class="stat-num">$25.9M</span><span class="stat-label">New Weber County PID bond, approved March 2026</span></div>
+      <div class="stat-box"><span class="stat-num">Up to 4/wk</span><span class="stat-label">New PIDs formed statewide, per the Auditor's office</span></div>
+    </div>
+    <p class="pullquote">"The fox guarding the hen house."<cite>&mdash; A state Treasury official, describing the PID structure to the board that reviews these bond issuances</cite></p>
+    <p class="qdetail">One Utah city's own disclosure for a major project states its "Impact on City's General Fund" is <strong>"None"</strong> &mdash; covering only the current year, not the growth revenue given up for the life of the deal. This isn't unique to PIDs, either: Weber County's own 2026 sales tax increase was structured specifically to avoid triggering Truth in Taxation's notice-and-hearing requirement.</p>
+    <p class="qdetail" style="margin-bottom:.4rem;">Candidates will be asked whether they'd support:</p>
+    <ul class="ask-list">
+      <li>A pause on new PIDs until Truth-in-Taxation-style disclosure is required</li>
+      <li>Requiring PIDs to report the full multi-year foregone-revenue picture, not a current-year "None"</li>
+      <li>Closing the same Truth-in-Taxation bypass already used elsewhere in the state</li>
+    </ul>
+    <p class="qdetail" style="margin-top:.9rem;"><a href="https://weber-county-hive.github.io/PIDS-Utah/" target="_blank" rel="noopener">Read the full statewide PID debt investigation &rarr;</a></p>
+    <details class="examples-drop">
+      <summary>See PID bond amounts and tax increases already documented, by location</summary>
+      <p style="padding:1rem 1.4rem 0 2.1rem; margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Major PID bonds, by location</p>
+      <ul class="examples-list">
+        <li><strong>Wasatch County</strong> (MIDA Cormont PID, Deer Valley area) &mdash; $139.1 million in bonds issued.</li>
+        <li><strong>Wasatch County</strong> (MIDA Mountain Village PID, Deer Valley East Village) &mdash; bond authorization increased from $90 million to $150 million, with roughly $120 million expected to actually be issued.</li>
+        <li><strong>Washington County</strong> (Black Desert PID, St. George area) &mdash; special assessment bonds authorized up to $234.87 million.</li>
+        <li><strong>Salt Lake area</strong> (Utah Inland Port Authority's Crossroads PID) &mdash; $150 million in tax-differential bonds sold.</li>
+        <li><strong>Summit County</strong> (Wohali PID Nos. 1 and 2, near Coalville) &mdash; more than $30 million issued by the districts; the underlying resort's total debt grew past $100 million before its August 2025 bankruptcy filing.</li>
+        <li><strong>Weber County</strong> (Promontory Commerce Center PID) &mdash; $25.9 million bond approved by the County Commission, March 3, 2026.</li>
+        <li><strong>Weber County</strong> (Nordic Village PID, Ogden Valley) &mdash; $39.38 million bond issued.</li>
+      </ul>
+      <p style="padding:.5rem 1.4rem 0 2.1rem; margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Tax increases already proposed or approved</p>
+      <ul class="examples-list">
+        <li><strong>Weber County</strong> &mdash; a new 0.20% countywide sales tax ("the fifth-fifth"), approved, generating an estimated $13.1 million a year.</li>
+        <li><strong>Davis County</strong> &mdash; an additional 0.20% transportation sales tax, incentivized by 2026 state legislation (S.B. 242), projected to generate roughly $15.98 million a year, an estimated $41.62 per resident annually.</li>
+        <li><strong>Ogden Valley City</strong> &mdash; a 512.6% property tax increase, raising the bill on the area's average home from $104.85 to $640.51 a year.</li>
+        <li><strong>Heber City</strong> &mdash; a 2026 Truth in Taxation increase adding an estimated $16 a year to the average $850,000 home's tax bill.</li>
+        <li><strong>Weber Basin Water Conservancy District</strong> &mdash; a proposed 6.99% rate increase, moving through Truth in Taxation as of this cycle.</li>
+      </ul>
+      <p style="padding:.5rem 1.4rem 0 2.1rem; margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Reform that almost passed</p>
+      <ul class="examples-list">
+        <li><strong>H.B. 422 (2026),</strong> "Public Infrastructure Districts Amendments" &mdash; would have required real PID-trustee conflict-of-interest disclosure with mandatory public posting, and created Utah's first statutory PID dissolution procedure. An earlier version also required real estate agents to disclose PID status to buyers before a sale; that provision was dropped in the 3rd substitute. Passed the House 66-1-8 and a Senate committee 5-0-2 &mdash; then died without a Senate floor vote, struck at 11:59pm on the session's final night, the same mechanism documented elsewhere on this page.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="qcard" id="q2">
+    <span class="qtheme">2 &middot; Local Control</span>
+    <h3 class="qtitle">Who makes the decisions?</h3>
+    <p class="qprompt">Do you support the state's use of funding threats, zoning exemptions, or legal-bypass threats to override the land-use decisions of locally elected county and city officials?</p>
+    <p class="qdetail">In August 2026, the Governor's senior housing adviser told a Utah county its state funding was "at risk, meaning none" after the county rejected a developer's proposal and joined a neighboring county in asking the legislature to repeal a state law &mdash; even though a review of the governing statute and administrative rule found no provision allowing funding to be withheld for that reason. Separately, the state's own school-trust-land agency has publicly stated it can bypass a county's zoning authority entirely on state trust land ("We can go in and put what we want on it&hellip; We don't need to follow the local zoning ordinances"), and a state development authority has told a different county it could "continue without them" and pursue legal action if the county didn't cooperate. Candidates will be asked whether they support these tactics, whether they'd back legislation clarifying that funding formulas can't be used as political leverage, and whether unelected boards and development authorities should be able to approve projects independent of a local government's own vote.</p>
+    <p class="qdetail" style="margin-top:.9rem;">
+      <a href="https://weber-county-hive.github.io/Transparency/waldrip-funding-threat.html" target="_blank" rel="noopener">Read the full funding-threat investigation &rarr;</a><br>
+      <a href="https://weber-county-hive.github.io/Unelected-Power/steve-waldrip.html" target="_blank" rel="noopener">Steve Waldrip's full profile, Unelected Power &rarr;</a><br>
+      <a href="https://weber-county-hive.github.io/-weber-county-hive-ledger/ledger.html" target="_blank" rel="noopener">See who funded the sponsors &mdash; the PAC money-flow ledger &rarr;</a>
+    </p>
+    <details class="examples-drop">
+      <summary>See the bills that took power away from cities and counties</summary>
+      <ul class="examples-list">
+        <li><strong>S.B. 258 (2024)</strong> &mdash; lets as few as three landowners in a rural area form their own "preliminary municipality," bypassing the county's own planning and zoning authority over that land entirely.</li>
+        <li><strong>H.B. 37 (2025)</strong> &mdash; lowered the population threshold to incorporate as a town from 100 to 75 people, amending the same underlying statute S.B. 258 depends on (a separate, untouched bar in the same law means the change had little practical effect on its own, but it's part of the same statutory apparatus).</li>
+        <li><strong>S.B. 284 (2026)</strong> &mdash; absorbed a separate bill that had died on its own, then grew through several retitlings into "Local Land and Water Modifications," touching planning-commission authority, municipal-incorporation feasibility requests, and infrastructure-assurance accounts statewide.</li>
+        <li><strong>H.B. 492 (2026)</strong> &mdash; created a $100 million state housing infrastructure fund and board, positioning state government, not local officials, over a major new pool of housing-development money.</li>
+        <li><strong>S.B. 337 (2025)</strong> &mdash; would have created a single statewide "Beehive Development Agency" with broad authority over local development decisions; died without ever reaching a Senate floor vote.</li>
+        <li><strong>Utah Code &sect;17-79-306</strong> (not a new bill, a standing statute) &mdash; already defines state trust land as exempt from county and municipal zoning jurisdiction, the legal basis SITLA has cited to say it can bypass local zoning entirely.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="qcard" id="q3">
+    <span class="qtheme">3 &middot; Campaign Money</span>
+    <h3 class="qtitle">Who funds the race?</h3>
+    <p class="qprompt">Do you support Utah adopting binding contribution limits, an independent enforcement office with real penalty authority, and mandatory real-time electronic disclosure &mdash; the way Montana currently regulates its state elections?</p>
+    <p class="qdetail">Utah currently places no limit on how much an individual, PAC, or political party can give a candidate for governor or the state legislature &mdash; one of only a handful of states with no cap at all. Montana takes the opposite approach: state law sets specific dollar limits per election by office (for example, $1,190 per election for governor, $470 for most other public offices), and a 2015 disclosure law requires any group spending money on ads or mailers that mention a candidate within 60 days of an election to register and disclose its spending &mdash; a law upheld twice by the 9th U.S. Circuit Court of Appeals against First Amendment challenges. Montana also maintains a standing independent enforcement office, the Commissioner of Political Practices, that has fined sitting officials for real violations, including a sitting governor over a late disclosure. Candidates will be asked what specific changes they would support to Utah's rules &mdash; dollar-figure contribution limits like Montana's, an independent body that actually verifies compliance rather than a self-reporting system, stricter consequences for omitted disclosure data, real penalties for smear campaigns, and limits on PAC and corporate donations.</p>
+    <details class="examples-drop">
+      <summary>Utah's rules vs. Montana's rules, side by side</summary>
+      <div style="overflow-x:auto; padding:1rem 1.4rem 1.2rem 2.1rem;">
+      <table style="border-collapse:collapse; width:100%; font-size:.9rem;">
+        <thead>
+          <tr style="border-bottom:2px solid var(--amber);">
+            <th style="text-align:left; padding:.5rem .8rem .5rem 0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Rule</th>
+            <th style="text-align:left; padding:.5rem .8rem; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Utah</th>
+            <th style="text-align:left; padding:.5rem 0 .5rem .8rem; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Montana</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--line);">
+            <td style="padding:.7rem .8rem .7rem 0; font-weight:600;">Individual/PAC contribution limits to candidates</td>
+            <td style="padding:.7rem .8rem; vertical-align:top;">None &mdash; unlimited giving by individuals, PACs, and parties to gubernatorial and legislative candidates.</td>
+            <td style="padding:.7rem 0 .7rem .8rem; vertical-align:top;">Set by statute, tiered by office, adjusted for inflation &mdash; e.g. $1,190/election for governor, $830 for other statewide office, $470 for most other public office.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line);">
+            <td style="padding:.7rem .8rem .7rem 0; font-weight:600;">Direct corporate contributions</td>
+            <td style="padding:.7rem .8rem; vertical-align:top;">Allowed, with no dollar cap.</td>
+            <td style="padding:.7rem 0 .7rem .8rem; vertical-align:top;">Banned outright since 1912. A corporation must instead fund a separate PAC from voluntary individual donations &mdash; the ban on direct giving survived Citizens United and remains in effect.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line);">
+            <td style="padding:.7rem .8rem .7rem 0; font-weight:600;">Ad/mailer disclosure before an election</td>
+            <td style="padding:.7rem .8rem; vertical-align:top;">Governed by Utah's own electioneering-communication rules; no 60-day trigger tied specifically to spending that merely mentions a candidate.</td>
+            <td style="padding:.7rem 0 .7rem .8rem; vertical-align:top;">Any group spending on an ad or mailer that mentions a candidate within 60 days of an election must register and disclose its spending &mdash; upheld twice by the 9th Circuit against First Amendment challenges.</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--line);">
+            <td style="padding:.7rem .8rem .7rem 0; font-weight:600;">Independent enforcement office</td>
+            <td style="padding:.7rem .8rem; vertical-align:top;">Compliance is largely self-reported to the state; no standing office with independent penalty authority found in this reporting.</td>
+            <td style="padding:.7rem 0 .7rem .8rem; vertical-align:top;">A standing Commissioner of Political Practices actively investigates and fines violators &mdash; including a sitting governor, fined for a late disclosure.</td>
+          </tr>
+          <tr>
+            <td style="padding:.7rem .8rem .7rem 0; font-weight:600;">2026 reform in motion</td>
+            <td style="padding:.7rem .8rem; vertical-align:top;">None identified in this reporting.</td>
+            <td style="padding:.7rem 0 .7rem .8rem; vertical-align:top;">A proposed constitutional ballot measure, the "Montana Plan," would close the PAC-funded corporate workaround entirely and ban 501(c)(4) nonprofits from funneling anonymous "dark money" into state elections.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </details>
+    <details class="examples-drop">
+      <summary>See the ten largest documented money networks in Weber County Hive's own reporting</summary>
+      <ul class="examples-list">
+        <li><strong>Election Hive LLC</strong> &mdash; over $1.54 million processed through this single campaign-management firm in 2024 alone, on behalf of clients including Gov. Spencer Cox's campaign, Attorney General Derek Brown, and dozens of state legislators.</li>
+        <li><strong>Utah Bankers Association</strong> &mdash; $641,259.45 given out to candidates and committees, 2018&ndash;2026.</li>
+        <li><strong>Northern Wasatch Association of Realtors (NWAOR)</strong> &mdash; $562,278.02 given out to 184 recipients, 2018&ndash;2026, funded entirely by dues money passed down from its state and national parent associations.</li>
+        <li><strong>Gershon Barnett</strong>, an individual donor from Monsey, NY &mdash; $429,500 given directly to Utah candidates and committees, 2022&ndash;2026.</li>
+        <li><strong>Utahns for Balanced Government</strong> &mdash; $370,350 given out, 2023&ndash;2026, itself funded by $360,000 from other PACs and donors, including $100,000 from the Utah Bankers Association that was returned in full the same day it was reported.</li>
+        <li><strong>"Utah Legacy Endowed Fund"</strong> &mdash; over $280,000 given to Count My Vote's PAC in 2025&ndash;2026 alone; the fund is owned by an LLC whose members are Michael O. Leavitt and Gail Miller.</li>
+        <li><strong>Meta Platforms' "Forge the Future Project"</strong> &mdash; $270,000 in independent expenditures deployed to two Utah candidates in a single day in 2026.</li>
+        <li><strong>Zions Bancorporation PAC</strong> &mdash; $230,998 raised from 12,293 employee payroll-deduction contributions.</li>
+        <li><strong>Torus, Inc.</strong> &mdash; $151,041.98 given across four checks, 2022&ndash;2025, exclusively to one recipient, Gov. Spencer Cox.</li>
+        <li><strong>Gail Miller</strong>, personally &mdash; $140,500 given directly to Count My Vote's PAC across three separate years, 2022&ndash;2024, separate from her ownership stake in the fund above.</li>
+      </ul>
+      <p style="font-size:.85rem; color:var(--ink-soft); padding:0 1.4rem 1rem 2.1rem; margin:0;">These are the ten largest fully documented figures in our own reporting to date &mdash; not a claim that no larger, undocumented giving exists elsewhere in Utah politics. Figures mix outbound totals, single donors, and money processed by a consulting firm; each is labeled with what it represents and the years it covers.</p>
+    </details>
+    <p class="qdetail" style="margin-top:.9rem;">
+      <a href="https://weber-county-hive.github.io/-weber-county-hive-ledger/ledger.html" target="_blank" rel="noopener">See how the money actually moves &mdash; the PAC money-flow ledger &rarr;</a><br>
+      <a href="https://weber-county-hive.github.io/pac/" target="_blank" rel="noopener">Browse the full PAC-by-PAC docket &rarr;</a>
+    </p>
+  </div>
+
+  <div class="qcard" id="q4">
+    <span class="qtheme">4 &middot; Transparency</span>
+    <h3 class="qtitle">What stays hidden?</h3>
+    <p class="qprompt">Do you support extending conflict-of-interest disclosure to siblings, cousins, and other family relationships beyond the household, and defining "what counts as a conflict" by what the public would reasonably view as a conflict &mdash; rather than leaving that judgment to the official filling out the form?</p>
+    <p class="qdetail">This isn't a hypothetical. Weber County Hive reporting has documented a repeating pattern of real names and real omissions on real disclosure forms &mdash; not a single bad actor, but a pattern across officials, forms, and even one 2026 candidate's questionnaire response.</p>
+    <div class="stat-strip">
+      <div class="stat-box"><span class="stat-num">9</span><span class="stat-label">Named officials/candidates with a documented disclosure gap</span></div>
+      <div class="stat-box"><span class="stat-num">$10M</span><span class="stat-label">PID budget threshold under which board disclosure isn't required at all</span></div>
+    </div>
+    <details class="examples-drop">
+      <summary>See the named examples</summary>
+      <ul class="examples-list">
+        <li><strong>Sharon Bolos</strong>, Weber County Commissioner (Seat B) &mdash; her COI form did not list her brother Bryan Arrington's employment at Nilson Homes. She subsequently seconded or championed at least two Nilson Homes development votes (a 115-unit expansion in 2024, a later 275-unit expansion) with no disclosure entered in the minutes either time.</li>
+        <li><strong>Erik Rowland</strong>, Wasatch County Council (Seat C) and MIDA board &mdash; checked "I have no conflict of interest to report" on his county disclosure form, leaving all three detail lines blank, despite sitting on MIDA's main board plus three subsidiary PID boards and at least eight other confirmed entities and positions (including a CAMS board seat and three separate business entities) absent from that same form. He also never filed any disclosure at all for a separate county board he sits on, the Wasatch Open Lands Board.</li>
+        <li><strong>Gage Froerer</strong>, Weber County Commissioner &mdash; his 2025 and 2026 disclosure forms both omit his trusteeship on the Weber Housing Authority, even though that Authority paid his family's companies $19,623 over the period the forms cover, and even though the potential conflict was openly discussed at the public 2019 meeting that appointed him to the board.</li>
+        <li><strong>Erik Craythorne</strong>, 2026 candidate for House District 13 &mdash; his COI form's board-seat item lists one unpaid board seat, but not his role as President and Trustee of Bennett Legacy Farms Homeowners Association &mdash; the HOA for a subdivision his own company is actively building and selling homes in.</li>
+        <li><strong>Jon Beesley</strong>, 2026 candidate for Weber County Commission (Seat B) &mdash; left the employer field blank on his 2021 Plain City mayoral disclosure while employed by Lync Construction; his 2025 county candidate disclosure separately omitted his Lync income, his mayoral salary, a water-district board seat, and left the spousal-information section blank.</li>
+        <li><strong>Katrina Gibson</strong>, 2026 candidate for Weber County Commission (Seat A) &mdash; her disclosure form listed only one entity, a restaurant, with every other line marked N/A or left blank, despite being an active registered lobbyist the same day she signed the form (she canceled that registration six days later) and serving as CFO/Treasurer of a political action committee.</li>
+        <li><strong>Vance Smith</strong>, 2026 candidate for Box Elder County Commission (Seat A) &mdash; his disclosure form lists an entity as currently active that had lapsed four months before he signed the form, and lists another entity as his own that is registered to his wife.</li>
+        <li><strong>Mark Shepherd</strong>, MIDA board member and Clearfield Mayor &mdash; his city disclosure form's "Leadership Position or Board of Directors" field, which he used in January 2025 to list a national housing-industry lobbying chairmanship, simply read "N/A" in January 2026 &mdash; the same year he held a governor-appointed seat on the MIDA board, a seat that has never appeared on either year's form.</li>
+        <li><strong>Rachel Kahler</strong>, 2026 candidate for Wasatch County Council (Seat A) &mdash; checked "I have no conflict of interest to report" on her county disclosure form, leaving all three detail lines blank, despite being Executive Director of a nonprofit paid $39,900 a year under a Heber City contract, a director of a separate nonprofit festival organization, and manager of an LLC whose own state filing describes its purpose as acquiring and managing real estate investments. Her own campaign materials separately name two more board seats &mdash; a special service district and a public utility board &mdash; that also never appear on that same disclosure form.</li>
+      </ul>
+      <p style="padding:0 1.4rem 1rem 2.1rem; margin:0; font-size:.85rem;">
+        <a href="https://weber-county-hive.github.io/Transparency/weber-hive-blank-box.html" target="_blank" rel="noopener">Read the full disclosure-gap pattern, "The Blank Box" &rarr;</a><br>
+        <a href="https://weber-county-hive.github.io/Transparency/weber-housing-authority.html" target="_blank" rel="noopener">Read the full Weber Housing Authority payments piece &rarr;</a>
+      </p>
+    </details>
+  </div>
+
+  <div class="qcard" id="q5">
+    <span class="qtheme">5 &middot; Diverted Taxes</span>
+    <h3 class="qtitle">Where does the money go?</h3>
+    <p class="qprompt">Do you support requiring public, itemized disclosure every time a Tax Increment Financing (TIF) district, Community Reinvestment Area (CRA), or similar mechanism diverts property tax growth revenue away from school, county, or municipal budgets?</p>
+    <p class="qdetail">These mechanisms freeze a property's taxable value at a base year and route everything the property earns above that base to the district or agency, rather than to the school district, county, or city that would otherwise collect it &mdash; a documented Utah State Tax Commission mechanism that can put upward pressure on the certified tax rate for everyone else once that value is subtracted from the calculation. In Heber City, residents at a 2026 Truth in Taxation hearing argued their tax increase was driven by a Community Reinvestment Area diverting normal growth in property value, not by inflation, a claim the city disputed. In Ogden, one project's own city page states its "Impact on City's General Fund" is "None," addressing only the current year and not the growth revenue foregone for the life of the agreement. Candidates will be asked whether school districts should have a formal say when a TIF or CRA diverts revenue that would otherwise fund education, whether there should be a cap on the share or duration of tax increment a project area can capture, and whether "no impact" disclosures should be required to address foregone future revenue, not just the current year.</p>
+    <details class="examples-drop">
+      <summary>See a Weber County example, with the charts, and how these numbers get buried</summary>
+      <p style="padding:1rem 1.4rem 0 2.1rem; margin:0; font-size:.93rem; color:var(--ink);">Weber County's own 2026 "5th&#8209;5th" sales tax increase is the clearest documented case. Weber County Hive's own reporting on it &mdash; "A Public Vote, but No Vote by the Public" &mdash; includes a proportional bar chart comparing the State of Utah's own $1.2 billion in general obligation debt against the $5.267 billion statewide total in PID debt, and a line chart tracking Ogden Valley home prices against the statewide income-tax-rate index since 2018, showing the two moving in opposite directions.</p>
+      <ul class="examples-list">
+        <li><strong>Two different official figures for the same number, never reconciled.</strong> Weber County's own on-record statements give two different dollar figures for the county's own share of the new sales tax revenue &mdash; one around $9.8 million, another around $2&ndash;3 million &mdash; with no public document explaining the gap.</li>
+        <li><strong>The shortfall is scattered across separate funds, not stated as one total.</strong> Weber County's own Tentative Budget shows a Transportation Development Fund shortfall of $15.9 million, a Capital Projects Fund shortfall of $7.8 million, a RAMP Fund shortfall of $6.6 million, an already-negative Termination Pool, and a $1.26 million Impact Fees Fund shortfall &mdash; each in a different line of a different fund, in a budget document most residents will never open.</li>
+        <li><strong>A $267 million unfunded capital wish list</strong> sits behind the new tax, never presented to residents as a single number tied to the tax increase itself.</li>
+        <li><strong>The tax was structured specifically to avoid Truth in Taxation.</strong> Because it's a sales tax increase rather than a property tax rate increase, it never triggered Utah's notice-and-hearing requirement &mdash; the same disclosure and public-comment process a direct property tax increase would have required.</li>
+      </ul>
+      <p style="padding:0 1.4rem 1rem 2.1rem; margin:0;"><a href="https://weber-county-hive.github.io/Transparency/weber-hive-5th5th-sales-tax.html" target="_blank" rel="noopener">Read "A Public Vote, but No Vote by the Public," with the full charts &rarr;</a></p>
+    </details>
+  </div>
+
+  <div class="qcard" id="q6">
+    <span class="qtheme">6 &middot; Surveillance Technology</span>
+    <h3 class="qtitle">Who is watching?</h3>
+    <p class="qdetail">This question specifically addresses Flock Safety cameras, Motorola Solutions systems, automated license-plate readers, facial recognition, and connected government surveillance networks. Candidates will be asked about warrants, data retention, outside-agency searches, vendor access, independent audits, inaccurate hot lists, human verification, GRAMA access, and penalties for misuse.</p>
+    <div class="stat-strip">
+      <div class="stat-box"><span class="stat-num">$123K/yr</span><span class="stat-label">Ogden's own Flock spend &mdash; the largest municipal Flock budget documented in Utah</span></div>
+      <div class="stat-box"><span class="stat-num">$30K/yr</span><span class="stat-label">Weber County Sheriff's own separate 10-camera contract</span></div>
+      <div class="stat-box"><span class="stat-num">0</span><span class="stat-label">Known prosecutions under Utah's own misuse statute</span></div>
+    </div>
+    <details class="examples-drop">
+      <summary>See Weber County's own numbers, and documented misuse cases by state</summary>
+      <p style="padding:1rem 1.4rem 0 2.1rem; margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">What Weber County has spent and deployed</p>
+      <ul class="examples-list">
+        <li><strong>Ogden City</strong> pays roughly $123,000 a year to operate its Flock camera grid &mdash; the largest municipal Flock spend documented anywhere in Utah.</li>
+        <li><strong>Weber County Sheriff's Office</strong> holds its own separate, direct contract with Flock &mdash; 10 cameras, $30,000 a year, $60,000 over the first two-year term.</li>
+        <li><strong>Plain City</strong> approved up to six cameras in a September 2021 council vote with no documented public notice or comment period, after a single question from one council member.</li>
+        <li><strong>North Ogden</strong> converted its cameras from a trial to a permanent purchase in April 2023 &mdash; the same month the city received a $22,000 federal grant for 22 body-worn cameras.</li>
+        <li>Weber County's own Sheriff's Lieutenant told a city council in 2021 that an "association of communities" in the county was already linked to the same system &mdash; on the record evidence that these were coordinated rollouts, not independent city-by-city decisions.</li>
+        <li>Utah's own penalty statute for license-plate-data misuse is a Class B misdemeanor requiring a "knowing or intentional" violation &mdash; and no prosecution under that specific statute has been identified anywhere in the state, even as the cases below show what real misuse looks like elsewhere.</li>
+      </ul>
+      <p style="padding:.5rem 1.4rem 0 2.1rem; margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Documented misuse, by state</p>
+      <ul class="examples-list">
+        <li><strong>Wisconsin (Milwaukee)</strong> &mdash; Officer Josue Ayala ran 179 unauthorized searches over about two months, tracking a romantic partner 124 times and her ex-partner 55 times. The department's own audit system never caught it; the victim discovered it herself using a public lookup tool. He pleaded guilty to a misdemeanor, was sentenced to one year of probation and a $500 fine, and was required to resign. The internal-affairs detective assigned to investigate him, Tehrangi Chapman, was separately found to have used the same system to track someone himself and to have secretly placed a GPS tracker on that person's car; he was charged with felony misconduct in public office.</li>
+        <li><strong>California (Costa Mesa)</strong> &mdash; Officer Robert Jay Josett used Flock and a separate law enforcement database to locate his mistress, her new boyfriend, and his own wife. After the department placed him on leave and opened an investigation, he continued logging into Flock for six more months, using it to find his mistress's new boyfriend's home address. He pleaded guilty to misdemeanor counts and was sentenced to three years of probation, a 52-week domestic violence program, and nine months on a GPS ankle monitor.</li>
+        <li><strong>Georgia</strong> &mdash; officers in Albany were arrested by the Georgia Bureau of Investigation for license-plate-data misuse; separately, a Flock vice president was found to have accessed a camera positioned inside a children's gymnastics room in Dunwoody, a misuse case originating on the company's own side rather than a police department's.</li>
+        <li><strong>Utah (Weber County)</strong> &mdash; residents have reported to The Weber County Hive that a driver was ticketed for speeding they had not committed, because the citation went to the vehicle's registered owner rather than the actual driver, and that a separate resident was nearly jailed based solely on Flock camera data before their own dashcam footage cleared them. These accounts have not yet been independently confirmed against a named case file or court record.</li>
+      </ul>
+      <p style="padding:.5rem 1.4rem 0 2.1rem; margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">A bill that would have changed this &mdash; and how it died</p>
+      <ul class="examples-list">
+        <li><strong>H.B. 468 (2025)</strong> would have imposed a 150-day data retention cap, banned facial recognition use, required a warrant before accessing a private camera's data, and mandated independent audits. It passed the House 64-2 and a Senate committee 6-0-2 &mdash; overwhelming, near-unanimous support at every recorded stage &mdash; then died at 11:59pm on the session's final night via the same procedural enacting-clause strike already documented for other bills on this page, with no recorded floor vote on the kill itself.</li>
+        <li><strong>S.B. 250 (2026)</strong> was introduced as a bill to prohibit certain surveillance camera networks outright. Its substitute replaced that prohibition with a permitting framework instead &mdash; the version that passed allows continued deployment under an "active investigation" standard, a 9-month retention period, and agency-to-agency data sharing by agreement.</li>
+      </ul>
+    </details>
+  </div>
+
+  <h2 class="section-head">Added as the reporting grew</h2>
+
+  <div class="qcard" id="q7">
+    <span class="qtheme">7 &middot; Unelected Power</span>
+    <h3 class="qtitle">Who answers to voters?</h3>
+    <p class="qprompt">Do you support requiring that boards and authorities with real financing, land-use, or bonding power &mdash; such as MIDA, PIDs, and similar appointed bodies &mdash; include directly elected representation, rather than being staffed entirely through gubernatorial or agency appointment?</p>
+    <p class="qdetail">Utah law exempts board members of public infrastructure districts from conflict-of-interest disclosure entirely if the district's annual budget is under $10 million, and exempts development review committee members from disclosure regardless of budget size. On at least one major authority's board, two members holding the identical set of six board seats disclosed the role completely differently &mdash; one as unpaid oversight, the other as paid consulting work with staff access &mdash; because the disclosure standard leaves that characterization to the board member.</p>
+    <div class="stat-strip">
+      <div class="stat-box"><span class="stat-num">10+</span><span class="stat-label">New appointed boards/authorities created statewide, 2023&ndash;2026</span></div>
+      <div class="stat-box"><span class="stat-num">0</span><span class="stat-label">Of these are directly elected by voters</span></div>
+    </div>
+    <p class="qdetail" style="margin-bottom:.4rem;">Candidates will be asked whether they support closing the budget-based disclosure exemption, whether appointed authorities with bonding or land-use power should have any directly elected seats, and whether they'd support a uniform disclosure standard across every board a jurisdiction creates.</p>
+    <details class="examples-drop">
+      <summary>See the boards created since 2023 &mdash; none of them elected</summary>
+      <ul class="examples-list">
+        <li><strong>Joint Informal Executive &amp; Legislative Working Group</strong> (H.B. 373, 2026) &mdash; environmental policy, direct Senate President/Speaker appointees.</li>
+        <li><strong>Critical Minerals Council</strong> (S.B. 254, 2026) &mdash; sets state mining-extraction strategy and "streamlined" permitting.</li>
+        <li><strong>Utah Energy Infrastructure Service District Board</strong> (H.B. 514, 2026) &mdash; financing authority for energy infrastructure.</li>
+        <li><strong>Great Salt Lake Commissioner's Office &amp; Advisory Committee</strong> (H.B. 491, 2023) &mdash; water oversight coordination.</li>
+        <li><strong>Utah Privacy Commission &amp; Office of Data Privacy</strong> (S.B. 231/H.B. 444, 2023&ndash;2025) &mdash; statewide data-privacy policy.</li>
+        <li><strong>Economic Development Coordinating Council</strong> (H.B. 475, 2026) &mdash; state-level business recruitment and workforce policy.</li>
+        <li><strong>Medicaid Inspector General Advisory Board</strong> (S.B. 147, 2026).</li>
+        <li><strong>Prosecutor Conduct Commission</strong> (S.B. 318, 2025).</li>
+        <li><strong>Cybersecurity Commission</strong>, expanded mandate (S.B. 123, 2026).</li>
+        <li><strong>Utah Water Ways</strong> (H.B. 62, 2023&ndash;2024) &mdash; chaired by a Larry H. Miller Co. executive, seats water conservancy districts and Zions Bank.</li>
+      </ul>
+      <p style="font-size:.85rem; color:var(--ink-soft); padding:0 1.4rem 1rem 2.1rem; margin:0;">This is in addition to longer-standing appointed bodies already tracked in our reporting &mdash; MIDA, the Utah Inland Port Authority, the Point of the Mountain State Land Authority, the Federalism Commission, and the Great Salt Lake Trust Council among them.</p>
+    </details>
+    <p class="qdetail" style="margin-top:.9rem;">
+      <a href="https://weber-county-hive.github.io/Committees/" target="_blank" rel="noopener">Browse the full committee &amp; board docket &rarr;</a><br>
+      <a href="https://weber-county-hive.github.io/Unelected-Power/" target="_blank" rel="noopener">See the people who sit on these boards, Unelected Power &rarr;</a>
+    </p>
+  </div>
+
+  <div class="qcard" id="q8">
+    <span class="qtheme">8 &middot; Water Transparency</span>
+    <h3 class="qtitle">Who gets to use it, and who gets to object?</h3>
+    <p class="qprompt">Do you support requiring public, itemized water-use reporting for large water users &mdash; including data centers &mdash; and preserving the public's standing to formally protest a new water-rights application?</p>
+    <p class="pullquote">Every household's secondary irrigation connection gets a physical meter, by law, by 2030. A data center's own water-use transparency law carries a $100-a-day penalty for not reporting.<cite>Compare Utah's residential secondary-water metering mandate to its data-center water-transparency law</cite></p>
+    <div class="stat-strip">
+      <div class="stat-box"><span class="stat-num">100%</span><span class="stat-label">Of residential secondary connections must be individually metered by 1/1/2030</span></div>
+      <div class="stat-box"><span class="stat-num">$250M</span><span class="stat-label">State grant funding backing that residential metering mandate</span></div>
+      <div class="stat-box"><span class="stat-num">$100/day</span><span class="stat-label">Penalty for a data center not reporting its own water use</span></div>
+    </div>
+    <p class="qdetail">A separate 2026 water rights bill narrowed the grounds a State Engineer can use to deny a water application, from a broad public-welfare standard (recreation, stream environment, general public welfare) down to only water quantity, quality, and availability &mdash; eliminating the exact protest grounds used against a prior large agricultural water application the same session. And a bill requiring water-planning accountability language was merged into a larger, retitled land-and-water bill with an implementation date nearly two years after its own effective date.</p>
+    <p class="qdetail" style="margin-bottom:.4rem;">Candidates will be asked whether they support keeping a broad public-welfare standard for water-rights protests, requiring published, itemized water-use data for large users including data centers, and closing the gap between the metering standard an ordinary household faces and the one a data center faces.</p>
+  </div>
+
+  <div class="qcard" id="q9">
+    <span class="qtheme">9 &middot; Bait-and-Switch Bills</span>
+    <h3 class="qtitle">Does the final law do what the title says?</h3>
+    <p class="qprompt">Do you support requiring that a bill's official "Highlighted Provisions" summary be updated to disclose any substantive change made in a later substitute, before the final floor vote?</p>
+    <p class="qdetail">Multiple 2026 bills changed core mechanisms between substitutes while their public summary language stayed nearly identical. Candidates will be asked whether they support a rule requiring a bill's public summary to be updated whenever a substitute changes what the bill actually does, and whether they'd oppose using procedural, no-recorded-vote mechanisms to kill or pass legislation on a session's final night.</p>
+    <div class="stat-strip">
+      <div class="stat-box"><span class="stat-num">9</span><span class="stat-label">Bills documented with this pattern, 2019&ndash;2026</span></div>
+      <div class="stat-box"><span class="stat-num">11:59pm</span><span class="stat-label">The recurring hour bills die with no recorded floor vote</span></div>
+    </div>
+    <details class="examples-drop">
+      <summary>See the bills we've found so far, in brief</summary>
+      <ul class="examples-list">
+        <li><strong>H.B. 491 (2023),</strong> "Great Salt Lake Commissioner Act" &mdash; framed as lake protection; carved water rights out of the Commissioner's authority and added a records exemption. The sponsor's own company got water rights approved under that exemption 56 days later.</li>
+        <li><strong>S.B. 2001 (2019 Special Session),</strong> "Tax Restructuring Revisions" &mdash; raised the sales tax on groceries nearly threefold, paired with an income tax cut. The legislature repealed its own bill before a citizen referendum against it could reach the ballot.</li>
+        <li><strong>H.B. 60 (2026),</strong> "Water Rights Amendments" &mdash; narrowed the grounds for denying a water application right before a major, heavily-protested application was refiled under the new, narrower standard.</li>
+        <li><strong>H.B. 236 (2026),</strong> "Truth in Taxation Amendments" &mdash; the original version required a taxing entity to prove it could function without a proposed tax increase before requesting one. That requirement was quietly removed between substitutes.</li>
+        <li><strong>H.B. 125 / H.B. 157 (2026)</strong> &mdash; water-litigation funding was stripped from one bill, reinserted into an unrelated bill, then had its $5 million appropriation pulled again six hours later.</li>
+        <li><strong>H.B. 273 (2026)</strong> &mdash; the classroom-technology standard was weakened by floor amendment from "designed specifically for instructional use" to "demonstrated to have significant educational value," opening the door to general-purpose tools.</li>
+        <li><strong>H.B. 17 (2026),</strong> "Public Infrastructure District Meeting Amendments" &mdash; replaced a narrow meeting-location exception with a broader one allowing PID meetings anywhere within the much larger entity that created the district.</li>
+        <li><strong>S.B. 235 (2026)</strong> &mdash; introduced as an Attorney General pay raise; after a change of both sponsor and title, signed into law as a Governor salary increase instead, with the original AG provision dropped.</li>
+        <li><strong>H.C.R. 9 (2026)</strong> &mdash; introduced as a resolution about the national debt; its entire text was struck and replaced with an unrelated resolution about the Great Salt Lake, under the same bill number and sponsors.</li>
+      </ul>
+      <p style="padding:0 1.4rem 1rem 2.1rem; margin:0;"><a href="https://weber-county-hive.github.io/Transparency/weber-hive-bait-and-switch.html" target="_blank" rel="noopener">Read "Bills That Did the Opposite," with the full tracker &rarr;</a></p>
+    </details>
+  </div>
+
+  <div class="qcard" id="q10">
+    <span class="qtheme">10 &middot; Legislative &amp; Executive Pay</span>
+    <h3 class="qtitle">Who decides what public officials are paid, and how?</h3>
+    <p class="qprompt">Do you support requiring that any bill changing the Governor's, a legislator's, or legislative staff's compensation be filed, titled, and voted on as its own standalone bill, rather than attached to or absorbed into unrelated legislation?</p>
+    <p class="qdetail">A 2026 bill introduced as a compensation adjustment for the Attorney General's office was retitled and given a new sponsor partway through the session, and was signed into law instead as a formula tying the Governor's own salary to the state's top judicial salary &mdash; a 29% increase to $249,250 &mdash; with the original Attorney General provision dropped from the final version entirely.</p>
+    <p class="pullquote">Utah has a pension plan that exists specifically for governors and legislators &mdash; on top of salary and per diem &mdash; while most Utahns working the same part-time hours at a private job get no pension at all.<cite>Utah Governors' and Legislators' Retirement Act, Title 49</cite></p>
+    <p class="qdetail" style="margin-bottom:.4rem;">Candidates will be asked whether they support the Governor's 2026 pay increase, whether they support the separate legislator/governor pension system, whether they support current legislative staff pay, and whether they'd require any future compensation change for these offices to be titled and voted on as its own standalone bill.</p>
+    <details class="examples-drop">
+      <summary>Who else gets paid, on top of their public salary</summary>
+      <ul class="examples-list">
+        <li><strong>Speaker Mike Schultz</strong> &mdash; besides his legislative pay, his own COI disclosure lists roughly two dozen business entities: apartment complexes, two hotels, an aviation company, and multiple ranching operations.</li>
+        <li><strong>Weber County Commissioner Gage Froerer</strong> &mdash; earned $232,465 in county compensation in 2025 while his family's real estate and property-management companies separately received $19,623 from the county's own Housing Authority, a board he sits on.</li>
+        <li><strong>Heber City Manager Matt Brower</strong> &mdash; total compensation rose from $179,034 (2022) to $286,730 (2025), a 60% increase over three years, alongside a contract requiring a third-party investigation before he could be fired "with cause," and severance if let go without one.</li>
+        <li><strong>Sen. Kirk Cullimore</strong> &mdash; alongside his Senate pay, runs Titan Legal, described in this reporting as one of Utah's largest eviction law firms.</li>
+      </ul>
+      <p style="font-size:.85rem; color:var(--ink-soft); padding:0 1.4rem 1rem 2.1rem; margin:0;">None of this is alleged to be illegal &mdash; outside income and business ownership are broadly legal for Utah officeholders. The question is simply whether the collective benefits (pensions, severance protections, compensation growth) built into these public roles are proportionate, and who they actually serve.</p>
+    </details>
+  </div>
+
+  <div class="qcard" id="q11">
+    <span class="qtheme">11 &middot; Judicial Independence</span>
+    <h3 class="qtitle">Who controls the courts?</h3>
+    <p class="qprompt">Do you support the 2026 changes that shifted Utah Supreme Court chief justice selection from peer-elected to governor-appointed with Senate confirmation, and created a mechanism letting only the Attorney General, Governor, or Legislature move a pending constitutional challenge to a specially assembled panel or a backup court whose judges are chosen by a nominating commission appointed entirely by the governor?</p>
+    <p class="qdetail">A 2026 law expanded the Utah Supreme Court and changed how its chief justice is chosen &mdash; from peer-elected to governor-appointed with Senate confirmation.</p>
+    <div class="stat-strip">
+      <div class="stat-box"><span class="stat-num">5 of 7</span><span class="stat-label">Supreme Court seats the governor is positioned to have appointed by end of 2026</span></div>
+      <div class="stat-box"><span class="stat-num">3</span><span class="stat-label">Offices (AG, Governor, Legislature) that alone can move a case to a special panel</span></div>
+      <div class="stat-box"><span class="stat-num">7 of 7</span><span class="stat-label">Backup "Constitutional Court" nominating-commission seats, all governor-appointed</span></div>
+    </div>
+    <p class="qdetail" style="margin-bottom:.4rem;">A separate law lets only the Attorney General, the Governor, or the Legislature &mdash; not private parties on either side of a case &mdash; file notice to move a pending constitutional challenge to a specially selected three-judge panel, with a backup "Constitutional Court" ready to take over the same category of cases if a court ever struck the panel system down.</p>
+    <p class="qdetail" style="margin-bottom:.4rem;">Candidates will be asked whether they support this structure, whether they'd support returning chief justice selection to the judiciary's own peers, and whether a party suing the state should have the same case-reassignment power the state itself now has.</p>
+    <p class="qdetail" style="font-size:.85rem; color:var(--ink-soft);">The same session, one legislator introduced three further bills in the same direction that did not pass: a paired constitutional amendment and statute (H.J.R. 5 / H.B. 424) that would have let the governor appoint any judicial candidate even without nomination by the Judicial Nominating Commission &mdash; opposed by name by the Utah State Bar &mdash; and a bill (H.B. 262) that would have lowered the bar to remove a sitting judge in a retention election from a simple majority "no" to just over one-third "no."</p>
+  </div>
+
+  <div class="qcard" id="q12">
+    <span class="qtheme">12 &middot; The Great Salt Lake</span>
+    <h3 class="qtitle">Who oversees the money meant to save it?</h3>
+    <p class="qprompt">Do you support requiring the Great Salt Lake Trust Council &mdash; which holds and spends $40 million in state money plus more than $100 million in philanthropic pledges &mdash; to operate as a public body, with published minutes, open meetings, and disclosed votes, the same as the public Great Salt Lake Advisory Council it works alongside?</p>
+    <p class="qdetail">The state created two separate bodies to oversee Great Salt Lake restoration money &mdash; one public, one private.</p>
+    <div style="overflow-x:auto; margin:.9rem 0;">
+    <table style="border-collapse:collapse; width:100%; font-size:.9rem;">
+      <thead>
+        <tr style="border-bottom:2px solid var(--amber);">
+          <th style="text-align:left; padding:.5rem .8rem .5rem 0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;"></th>
+          <th style="text-align:left; padding:.5rem .8rem; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Advisory Council</th>
+          <th style="text-align:left; padding:.5rem 0 .5rem .8rem; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Trust Council</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--line);"><td style="padding:.6rem .8rem .6rem 0; font-weight:600;">Meetings listed on Utah's public meeting site</td><td style="padding:.6rem .8rem;">Yes</td><td style="padding:.6rem 0 .6rem .8rem;">Not found</td></tr>
+        <tr style="border-bottom:1px solid var(--line);"><td style="padding:.6rem .8rem .6rem 0; font-weight:600;">Minutes published by an independent observer</td><td style="padding:.6rem .8rem;">Yes</td><td style="padding:.6rem 0 .6rem .8rem;">Not found</td></tr>
+        <tr style="border-bottom:1px solid var(--line);"><td style="padding:.6rem .8rem .6rem 0; font-weight:600;">Own bylaws permit closed sessions "for any reason"</td><td style="padding:.6rem .8rem;">No</td><td style="padding:.6rem 0 .6rem .8rem;">Yes</td></tr>
+        <tr><td style="padding:.6rem .8rem .6rem 0; font-weight:600;">Votes can stay undisclosed</td><td style="padding:.6rem .8rem;">No</td><td style="padding:.6rem 0 .6rem .8rem;">Yes, unless the whole council agrees to disclose</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="stat-strip">
+      <div class="stat-box"><span class="stat-num">$52.5M</span><span class="stat-label">Combined state funds the Trust Council reviews ($12.5M + $40M)</span></div>
+      <div class="stat-box"><span class="stat-num">$100M+</span><span class="stat-label">Philanthropic pledges on top of that state money</span></div>
+    </div>
+    <p class="qdetail">The Great Salt Lake Commissioner's own office carries a built-in conflict of interest, stated in the Trust Council's own bylaws, whenever the Commissioner's funding requests come before it. A 2023 law also created a GRAMA exemption shielding the Commissioner's water-negotiation records &mdash; language borrowed almost word-for-word from a provision written for interstate river negotiations, even though a Great Salt Lake deal has no other state or federal counterparty.</p>
+    <p class="qdetail" style="margin-bottom:.4rem;">Candidates will be asked whether they'd require the Trust Council to meet the same public-meeting and disclosure standard as the Advisory Council, whether the Commissioner's conflict of interest should require recusal rather than disclosure alone, and whether they'd narrow or repeal the 2023 GRAMA exemption.</p>
+    <details class="examples-drop">
+      <summary>Who's actually trying to save the lake &mdash; and bills that say one thing, do another</summary>
+      <p style="padding:1rem 1.4rem 0 2.1rem; margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Who's actually putting water back</p>
+      <ul class="examples-list">
+        <li><strong>The LDS Church</strong> &mdash; made the largest permanent water-rights donation to the lake on record.</li>
+        <li><strong>Rio Tinto Kennecott, Central Utah Water Conservancy District, and Jordan Valley Water Conservancy District</strong> &mdash; each confirmed as real water-transaction or funding partners in the Trust's own year-end accounting.</li>
+        <li><strong>The Trust itself</strong> (a National Audubon Society/Nature Conservancy partnership) &mdash; has secured real acre-feet of water, but at a slow pace: only about $7.24 million of its $40 million allocation was actually spent in its first three years, roughly 18%.</li>
+      </ul>
+      <p style="padding:.5rem 1.4rem 0 2.1rem; margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Who should be, but whose own record complicates it</p>
+      <ul class="examples-list">
+        <li><strong>Great Salt Lake Commissioner Brian Steed</strong> &mdash; the state's own lake-protection office &mdash; personally testified in favor of a 2026 bill that narrowed the public's standing to protest new water-rights applications near the lake.</li>
+        <li><strong>Former Rep. Timothy D. Hawkes</strong> &mdash; created the original Great Salt Lake Account in 2022, then, after leaving office, testified for its expansion while serving as counsel to the Great Salt Lake Brine Shrimp Cooperative, and was appointed to the Trust Advisory Council the same year.</li>
+      </ul>
+      <p style="padding:.5rem 1.4rem 0 2.1rem; margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Bills that said "save the lake" and did something else</p>
+      <ul class="examples-list">
+        <li><strong>H.B. 491 (2023),</strong> "Great Salt Lake Commissioner Act" &mdash; framed as lake protection; carved water rights out of the Commissioner's own authority and, in the same bill, cut the GSL Account's appropriation from $40 million to $10 million.</li>
+        <li><strong>H.B. 60 (2026),</strong> "Water Rights Amendments" &mdash; narrowed the standard for denying a water-rights application, removing the exact grounds used to protest a major application the same session &mdash; supported on the record by the lake's own Commissioner.</li>
+        <li><strong>H.C.R. 9 (2026)</strong> &mdash; introduced as a resolution about the national debt; its entire text was struck and replaced with a resolution "addressing the Great Salt Lake" under the same bill number, a messaging vehicle rather than a funding or policy mechanism.</li>
+      </ul>
+    </details>
+    <p class="qdetail" style="margin-top:.9rem;"><a href="https://weber-county-hive.github.io/Great-Salt-Lake/" target="_blank" rel="noopener">Read the full Great Salt Lake docket &rarr;</a></p>
+  </div>
+
+  <div class="qcard" id="q13">
+    <span class="qtheme">13 &middot; Bears Ears &amp; Grand Staircase-Escalante</span>
+    <h3 class="qtitle">Whose voice counted?</h3>
+    <p class="qprompt">Do you support the July 2026 reduction of Bears Ears and Grand Staircase-Escalante National Monuments by roughly 90%, and the termination of the Bears Ears Inter-Tribal Commission &mdash; the first formal tribal co-stewardship framework of its kind on any U.S. national monument?</p>
+    <p class="qdetail">A December 2024 poll by a Republican polling firm found 74% of Utah voters wanted Grand Staircase-Escalante kept protected and 71% wanted Bears Ears kept protected &mdash; support that crossed party lines.</p>
+    <div class="stat-strip">
+      <div class="stat-box"><span class="stat-num">~90%</span><span class="stat-label">Combined acreage cut from both monuments, July 2026</span></div>
+      <div class="stat-box"><span class="stat-num">74% / 71%</span><span class="stat-label">Utah voters who wanted GSENM / Bears Ears kept protected (Dec. 2024)</span></div>
+      <div class="stat-box"><span class="stat-num">15</span><span class="stat-label">Minerals named directly in the proclamations as justification</span></div>
+    </div>
+    <p class="pullquote">"Our Tribes were not informed of or asked about this decision."<cite>&mdash; Autumn Gillard, Cedar Band of Paiutes, Bears Ears Inter-Tribal Commission coordinator</cite></p>
+    <p class="qdetail">Utah's governor, attorney general, House speaker, and Senate president all publicly praised the reduction &mdash; a position at odds with their own voters' recorded preference. Candidates will be asked whether they support the reduction as it happened, whether tribes should have a guaranteed seat in any future decision affecting ancestral land within Utah, and whether they'd support restoring a tribal co-stewardship commission.</p>
+    <details class="examples-drop">
+      <summary>The legal and legislative moves that made this possible</summary>
+      <ul class="examples-list">
+        <li><strong>Utah's state lawsuit</strong> (ongoing) &mdash; challenged Biden's 2021 restoration of the monument boundaries, keeping the question in active litigation rather than settled.</li>
+        <li><strong>10th Circuit Court ruling (June 2026)</strong> &mdash; reversed an earlier dismissal and held that monument designations can be challenged in court, opening the legal door the eventual reduction walked through.</li>
+        <li><strong>Congressional Review Act attempt</strong> (Sen. Mike Lee, Rep. Celeste Maloy, June 2026) &mdash; tried to undo the Grand Staircase-Escalante management plan directly; the effort lapsed after missing a Senate deadline, but signaled sustained federal pressure.</li>
+        <li><strong>"Ending Presidential Overreach on Public Lands Act"</strong> (S. 220 / H.R. 521, Lee/Maloy) &mdash; proposed federal bill that would repeal a president's Antiquities Act authority to create new monuments going forward; not yet passed.</li>
+        <li><strong>July 14, 2026 executive proclamations</strong> &mdash; the actual instrument that cut both monuments by roughly 90% and terminated the Bears Ears Inter-Tribal Commission, signed behind closed doors with no advance public notice.</li>
+      </ul>
+      <p style="font-size:.85rem; color:var(--ink-soft); padding:0 1.4rem 1rem 2.1rem; margin:0;">This is federal and legal-track action, not a Utah state bill &mdash; there's no dedicated Weber County Hive repo page for this topic yet to link to here, unlike the other questions on this page.</p>
+    </details>
+    <details class="examples-drop">
+      <summary>What the boundary change opens up &mdash; mining, water, and a nuclear question</summary>
+      <p style="padding:1rem 1.4rem 0 2.1rem; margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">Confirmed</p>
+      <ul class="examples-list">
+        <li><strong>Grand Staircase-Escalante</strong> contains an estimated 62 billion tons of coal, valued at more than $212 billion, on the Kaiparowits Plateau &mdash; named directly in the reduction proclamation as a reason for the boundary change.</li>
+        <li><strong>Bears Ears</strong> contains substantial uranium and vanadium deposits, also named directly in its own proclamation.</li>
+        <li><strong>The Velvet-Wood uranium-vanadium mine</strong> (San Juan County, the same region) was approved by Interior/BLM under an accelerated 14-day federal environmental review, tied to a national energy emergency declaration &mdash; a concrete, already-approved example of expedited mining permitting in this exact area.</li>
+        <li><strong>S.B. 254 (2026),</strong> Utah's own Critical Minerals Council, creates a parallel state fast-track permitting framework for mining that runs on the same timeline and the same "streamlined pathway" concept as a companion federal bill, H.R. 1501.</li>
+        <li><strong>H.B. 249 (2025)</strong> created Utah's official "Nuclear Consortium" &mdash; a state body of named legislators, regulators, and business leaders directing nuclear strategy and funding. First met October 2025; members include Sen. Scott Sandall, Rep. Colin Jack, the Office of Energy Development's director, the DEQ director, and Idaho National Lab's Dr. Laura Nelson.</li>
+        <li><strong>H.B. 78 (2026)</strong> created a new state Nuclear Energy Regulatory Office &mdash; and a Senate amendment removed the words "including safety measures" from what that office is required to report on.</li>
+      </ul>
+      <p style="padding:.5rem 1.4rem 0 2.1rem; margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.04em; color:var(--rust); text-transform:uppercase;">A connection under investigation, not yet confirmed</p>
+      <ul class="examples-list">
+        <li>Separate reporting is tracking whether Bears Ears-area uranium feeding the existing White Mesa Mill functions as the "front end" of a supply chain whose "back end" is a proposed nuclear-fuel reprocessing campus in Brigham City/Box Elder County, backed by a $40 million state appropriation and requiring an estimated 620 million gallons of water a year. <strong>This is a hypothesis under active reporting, not a confirmed fact</strong> &mdash; no contract, filing, or on-record statement has yet tied the two together directly, and it's presented here only as a pattern worth watching, not a claim.</li>
+        <li>The same state development authority framework (MIDA) already documented elsewhere on this page as able to override local zoning is the mechanism that would let a project like the Brigham City facility proceed regardless of municipal objection.</li>
+      </ul>
+    </details>
+  </div>
+
+  <h2 class="section-head">How Candidates Will Be Asked to Respond</h2>
+
+  <div class="method-box">
+    <h3>Format</h3>
+    <ul>
+      <li>Answer <strong>yes or no first</strong></li>
+      <li>Explain the answer in no more than <strong>300 words</strong></li>
+      <li>Identify the specific action they would take</li>
+      <li>Disclose any exceptions they support</li>
+    </ul>
+  </div>
+
+  <div class="method-box">
+    <h3>Timeline</h3>
+    <ul>
+      <li>Candidates are given <strong>10 business days</strong> to respond</li>
+      <li>If no answer is received, the entry may state: <em>"Questionnaire sent on [date]. No response received by [date]."</em></li>
+    </ul>
+  </div>
+
+  <div class="method-box">
+    <h3>Help Send This Statewide</h3>
+    <ul>
+      <li>Email the questionnaire to every candidate running to represent you</li>
+      <li>Copy <a href="mailto:webercountyhive@gmail.com">webercountyhive@gmail.com</a> on the email</li>
+      <li>Ask the candidate to <strong>Reply All</strong>, so both you and The Weber County Hive receive the same original response</li>
+    </ul>
+  </div>
+
+  <div class="method-box">
+    <h3>Ask Them in Person</h3>
+    <ul>
+      <li>These are also questions to bring to town halls, candidate forums, debates, and doorstep conversations &mdash; not only a written questionnaire</li>
+      <li>Ask the yes-or-no first, out loud, before letting a candidate move to the explanation</li>
+      <li>If a candidate won't answer yes or no at a public event, that is itself an answer worth noting and sharing</li>
+      <li>Bring a phone and record the response if the venue allows it, so the same original answer is on record &mdash; the same standard as the written questionnaire</li>
+    </ul>
+  </div>
+
+  <p class="closing">The questions are the same. The answers belong to the candidates. The judgment belongs to Utah voters.</p>
+
+</main>
+
+<footer>
+  The Weber County Hive &middot; <a href="index.html">2026 Candidates Docket</a> &middot; <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">webercountyhive.substack.com</a>
+</footer>
+
+</body>
+</html>
