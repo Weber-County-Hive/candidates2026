@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stevenson vs. Treasure — Case File | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--paper:#f4f0e6;
+--paper-card:#fbf9f3;
+--ink:#2a261e;
+--ink-soft:#5c5647;
+--ink-faint:#8b8470;
+--rust:#c0572e;
+--amber:#d9a441;
+--burgundy:#5c1a2b;
+--burgundy-deep:#3d0f1c;
+--line:#ddd6c4;
+--line-strong:#c7bda3;
+--red:#a5301e;
+--green:#3f6b3b;
+--serif:'Source Serif 4', Georgia, serif;
+--display:'Playfair Display', Georgia, serif;
+--mono:'IBM Plex Mono', 'Courier New', monospace;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.65;font-size:17px;}
+a{color:var(--rust);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.header-band{background:var(--burgundy-deep);background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);padding:34px 0 30px;}
+.header-inner{max-width:880px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:16px;}
+.hex{width:46px;height:46px;flex:0 0 auto;}
+.hd-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#d9b8bf;}
+.hd-title{font-family:var(--display);font-size:21px;font-weight:700;color:#f4e9dd;}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px;}
+.case-hero{padding:8px 0 28px;border-bottom:2px solid var(--line-strong);margin-bottom:32px;}
+.case-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:10px;}
+.case-title{font-family:var(--display);font-size:36px;font-weight:900;line-height:1.15;margin:0 0 14px;color:var(--burgundy-deep);}
+.case-dek{font-size:18px;color:var(--ink-soft);max-width:640px;}
+.verdict-box{background:var(--paper-card);border:1px solid var(--line-strong);border-left:4px solid var(--burgundy);padding:18px 22px;margin:24px 0;border-radius:2px;}
+.verdict-box b{color:var(--burgundy);}
+.flag-open{background:#fbf3e6;border:1px dashed var(--amber);border-radius:4px;padding:14px 18px;font-family:var(--mono);font-size:13.5px;color:var(--ink-soft);margin:16px 0;}
+.stat-row{display:flex;gap:28px;flex-wrap:wrap;margin:24px 0;}
+.stat{flex:1 1 160px;}
+.stat-num{font-family:var(--display);font-size:28px;font-weight:900;color:var(--amber);line-height:1.1;}
+.stat-label{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-faint);text-transform:uppercase;margin-top:4px;}
+h2.sect{font-family:var(--display);font-size:24px;font-weight:700;color:var(--burgundy-deep);margin:44px 0 6px;border-top:1px solid var(--line);padding-top:28px;}
+h3.sub-head{font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin:22px 0 10px;}
+p{margin:0 0 16px;}
+table.led{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:15px;}
+table.led th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;text-align:left;color:var(--ink-faint);border-bottom:2px solid var(--line-strong);padding:6px 10px 8px 0;}
+table.led td{padding:7px 10px 7px 0;border-bottom:1px solid var(--line);}
+table.led tr:last-child td{border-bottom:none;}
+.record-card{background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;padding:18px 22px;margin:18px 0;}
+.rc-title{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--burgundy);margin-bottom:10px;font-weight:600;}
+.docket-filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 22px;}
+details{margin:20px 0;border-top:1px solid var(--line);padding-top:14px;}
+summary{font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust);cursor:pointer;}
+.details-body{margin-top:12px;}
+ul.sources{margin:0;padding-left:20px;font-size:14.5px;color:var(--ink-soft);}
+ul.sources li{margin-bottom:6px;}
+footer{margin-top:60px;padding-top:24px;border-top:2px solid var(--line-strong);}
+.tagline{font-family:var(--display);font-style:italic;font-size:16px;color:var(--burgundy);margin-bottom:10px;}
+footer nav{display:flex;gap:18px;flex-wrap:wrap;}
+.nav{font-family:var(--mono);font-size:13px;letter-spacing:.04em;}
+.year-table{width:100%;border-collapse:collapse;margin:16px 0 22px;font-size:15px;background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;overflow:hidden;}
+.year-table th{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;text-align:left;color:var(--ink-faint);background:var(--paper);padding:9px 12px;border-bottom:2px solid var(--line-strong);}
+.year-table td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+.year-table tr:last-child td{border-bottom:none;}
+.year-table td.amt{font-family:var(--mono);white-space:nowrap;}
+.year-table .period-date{font-family:var(--mono);font-size:12px;color:var(--ink-faint);}
+.pie-row{display:flex;gap:32px;flex-wrap:wrap;justify-content:center;margin:20px 0 28px;text-align:center;}
+.pie-col{flex:1 1 220px;max-width:280px;}
+.pie-svg{width:170px;height:170px;margin:0 auto;}
+.pie-title{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);margin:10px 0 4px;}
+.pie-legend{font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin-top:6px;}
+.pie-legend .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;}
+.pie-caption{font-size:13.5px;color:var(--ink-faint);text-align:center;margin-top:-6px;}
+.donor-bar-wrap{margin:18px 0 24px;}
+.donor-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:9px;}
+.donor-bar-label{width:190px;flex-shrink:0;font-size:13px;color:var(--ink-soft);text-align:right;}
+.donor-bar-track{flex:1;background:var(--paper-card);height:22px;border:1px solid var(--line);position:relative;}
+.donor-bar-fill{height:100%;background:var(--rust);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;min-width:fit-content;}
+.donor-bar-fill span{color:#fff;font-family:var(--mono);font-size:11.5px;font-weight:700;white-space:nowrap;padding:0 4px;}
+.flow-box{background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;padding:24px 20px;margin:20px 0;}
+.flow-tier{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+.flow-node{background:#fff;border:1px solid var(--line-strong);padding:10px 16px;font-size:13.5px;text-align:center;min-width:130px;max-width:240px;border-radius:3px;}
+.flow-node.hub{background:var(--burgundy);color:#f4e9dd;border-color:var(--burgundy);font-weight:700;}
+.flow-node.money{background:var(--amber);color:#fff;border-color:var(--amber);font-weight:700;}
+.flow-node.flagged{background:var(--red);color:#fff;border-color:var(--red);font-weight:700;}
+.flow-node .sub{display:block;font-family:var(--mono);font-size:11px;opacity:0.9;margin-top:4px;}
+.flow-arrow{text-align:center;color:var(--ink-faint);font-size:1.2rem;margin:2px 0;font-family:var(--mono);}
+.flip-grid{display:flex;flex-wrap:wrap;gap:20px;margin:20px 0 28px;}
+.flip-card{width:100%;max-width:270px;height:250px;perspective:1200px;flex:1 1 250px;}
+.flip-card-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d;cursor:pointer;}
+.flip-card.flipped .flip-card-inner{transform:rotateY(180deg);}
+.flip-face{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:6px;border:1px solid var(--line-strong);padding:20px;display:flex;flex-direction:column;}
+.flip-front{background:var(--paper-card);justify-content:center;text-align:center;}
+.flip-front .fp-name{font-family:var(--display);font-weight:900;font-size:19px;color:var(--burgundy-deep);line-height:1.2;}
+.flip-front .fp-amt{font-family:var(--mono);font-size:22px;color:var(--amber);font-weight:700;margin-top:14px;}
+.flip-front .fp-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);margin-top:2px;}
+.flip-front .fp-hint{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust);margin-top:18px;}
+.flip-back{background:var(--burgundy-deep);color:#f4e9dd;transform:rotateY(180deg);overflow-y:auto;}
+.flip-back .fb-title{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);margin-bottom:8px;}
+.flip-back .fb-body{font-size:12.5px;line-height:1.55;}
+.flip-back .fb-body b{color:#fff;}
+.flip-open-note{background:#fbf3e6;border:1px dashed var(--amber);border-radius:4px;padding:12px 16px;font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);}
+</style>
+</head>
+<body>
+<div class="header-band">
+<div class="header-inner">
+<svg class="hex" viewBox="0 0 100 100"><polygon points="50,3 93,25 93,75 50,97 7,75 7,25" fill="none" stroke="#d9a441" stroke-width="4"/><text x="50" y="60" font-family="Playfair Display" font-size="34" font-weight="900" fill="#f4e9dd" text-anchor="middle">H</text></svg>
+<div>
+<div class="hd-kicker">The Weber County Hive</div>
+<div class="hd-title">2026 Candidates — Case File</div>
+</div>
+</div>
+</div>
+<div class="wrap">
+
+<div class="case-hero">
+<div class="case-kicker">Case 19 &middot; Utah House District 16 &middot; Layton / South Weber</div>
+<h1 class="case-title">Sixteen to One</h1>
+<p class="case-dek">Bob Stevenson (R, Davis County Commissioner) outraised Abigail Treasure (D) more than sixteen times over on his way out of a primary that unseated a sitting representative. District 16 covers Layton and South Weber.</p>
+</div>
+
+<div class="verdict-box">
+<b>The race:</b> Bob Stevenson (R, Davis County Commissioner, former Layton Mayor) defeated incumbent Rep. Trevor Lee 66.1% to 33.9% in the June 23, 2026 Republican primary — Lee conceded that night. Stevenson vacated his own Davis County Commission Seat A to make the run. He faces Abigail Treasure (D) in the November 3, 2026 general election.
+</div>
+
+<div class="stat-row">
+<div class="stat"><div class="stat-num">$208,663.53</div><div class="stat-label">Stevenson's total raised, Convention–General</div></div>
+<div class="stat"><div class="stat-num">$12,820.67</div><div class="stat-label">Treasure's total raised, Year End–General</div></div>
+<div class="stat"><div class="stat-num">16.3&times;</div><div class="stat-label">Stevenson's fundraising multiple over Treasure</div></div>
+<div class="stat"><div class="stat-num">$73,594.17</div><div class="stat-label">Stevenson's own money (contributions + loan)</div></div>
+</div>
+
+<div class="flag-open">Note on scope: Stevenson enters this race as a sitting Davis County Commissioner with an existing fundraising network built over multiple prior campaigns; Treasure is a first-time candidate. The volume difference documented below partly reflects that head start, not solely a difference in campaign effort.</div>
+
+<h3 class="sub-head">Terms used in this case file</h3>
+<p>Click a card if you hit an acronym you don't recognize.</p>
+<div class="flip-grid">
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:180px;">
+<div class="flip-card-inner">
+<div class="flip-face flip-front"><div class="fp-name">PAC</div><div class="fp-hint">&#8635; click to flip</div></div>
+<div class="flip-face flip-back"><div class="fb-title">Political Action Committee</div><div class="fb-body">A registered entity that raises money from donors and gives it to candidates. Utah requires PACs to publicly file who gave them money and who they gave it to.</div></div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:180px;">
+<div class="flip-card-inner">
+<div class="flip-face flip-front"><div class="fp-name">DEX</div><div class="fp-hint">&#8635; click to flip</div></div>
+<div class="flip-face flip-back"><div class="fb-title">Utah's campaign finance data export</div><div class="fb-body">The raw transaction-level file format Utah's disclosures.utah.gov system produces for any candidate or PAC — every contribution and expenditure, dated and itemized. The primary source for this case file.</div></div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:180px;">
+<div class="flip-card-inner">
+<div class="flip-face flip-front"><div class="fp-name">SD</div><div class="fp-hint">&#8635; click to flip</div></div>
+<div class="flip-face flip-back"><div class="fb-title">Senate District</div><div class="fb-body">Used here for Sen. Jerry Stevenson's district (SD-6). "HD" (House District) is the equivalent for the state House — this race is HD-16.</div></div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:180px;">
+<div class="flip-card-inner">
+<div class="flip-face flip-front"><div class="fp-name">MIDA</div><div class="fp-hint">&#8635; click to flip</div></div>
+<div class="flip-face flip-back"><div class="fb-title">Military Installation Development Authority</div><div class="fb-body">A state authority with land-use and tax-diversion powers near Utah military bases. Relevant here because Sen. Jerry Stevenson, whose possible family tie to Bob Stevenson is unconfirmed, is MIDA's Vice Chair.</div></div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:180px;">
+<div class="flip-card-inner">
+<div class="flip-face flip-front"><div class="fp-name">EFU</div><div class="fp-hint">&#8635; click to flip</div></div>
+<div class="flip-face flip-back"><div class="fb-title">Education First Utah</div><div class="fb-body">One of the six PACs profiled below — a business-backed education PAC that gave Stevenson $7,500 despite not endorsing him.</div></div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:180px;">
+<div class="flip-card-inner">
+<div class="flip-face flip-front"><div class="fp-name">UTA</div><div class="fp-hint">&#8635; click to flip</div></div>
+<div class="flip-face flip-back"><div class="fb-title">Utah Transit Authority</div><div class="fb-body">The state's public transit agency. Stevenson lists an "UTA Advisory Board (Chair)" role on his own campaign site's board résumé.</div></div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:180px;">
+<div class="flip-card-inner">
+<div class="flip-face flip-front"><div class="fp-name">GOP</div><div class="fp-hint">&#8635; click to flip</div></div>
+<div class="flip-face flip-back"><div class="fb-title">Grand Old Party</div><div class="fb-body">Common shorthand for the Republican Party. Both Stevenson's primary opponent and several PACs/committees in this file are described as Republican- or GOP-aligned.</div></div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')" style="height:180px;">
+<div class="flip-card-inner">
+<div class="flip-face flip-front"><div class="fp-name">DBA</div><div class="fp-hint">&#8635; click to flip</div></div>
+<div class="flip-face flip-back"><div class="fb-title">Doing Business As</div><div class="fb-body">A registered alternate name for a business or fund. CMV PAC's dominant funder, the "Utah Legacy Endowed Fund," is filed as a DBA of a Leavitt/Miller-owned LLC.</div></div>
+</div>
+</div>
+
+</div>
+
+<h2 class="sect">Where the money comes from</h2>
+<p>Both candidates' full itemized giving, by category — Stevenson's own money (contributions plus a $14,938.46 loan), PAC and institutional money, and individual named donors.</p>
+
+<div class="pie-row">
+<div class="pie-col">
+<svg viewBox="0 0 42 42" class="pie-svg">
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--line)" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--rust)" stroke-width="6" stroke-dasharray="35.3 64.7" stroke-dashoffset="25"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--burgundy)" stroke-width="6" stroke-dasharray="43.8 56.2" stroke-dashoffset="-10.3"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--amber)" stroke-width="6" stroke-dasharray="20.9 79.1" stroke-dashoffset="-54.1"/>
+</svg>
+<div class="pie-title">Stevenson — Composition</div>
+<div class="pie-legend"><span class="dot" style="background:var(--rust);"></span>Self/Loan 35.3% ($73,594)<br><span class="dot" style="background:var(--burgundy);"></span>PAC/Institutional 43.8% ($91,415)<br><span class="dot" style="background:var(--amber);"></span>Individual 20.9% ($43,654)</div>
+</div>
+<div class="pie-col">
+<svg viewBox="0 0 42 42" class="pie-svg">
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--line)" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--rust)" stroke-width="6" stroke-dasharray="1.2 98.8" stroke-dashoffset="25"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--burgundy)" stroke-width="6" stroke-dasharray="2.9 97.1" stroke-dashoffset="23.8"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--amber)" stroke-width="6" stroke-dasharray="95.9 4.1" stroke-dashoffset="20.9"/>
+</svg>
+<div class="pie-title">Treasure — Composition</div>
+<div class="pie-legend"><span class="dot" style="background:var(--rust);"></span>Self 1.2% ($150)<br><span class="dot" style="background:var(--burgundy);"></span>PAC/Institutional 2.9% ($378)<br><span class="dot" style="background:var(--amber);"></span>Individual 95.9% ($12,293)</div>
+</div>
+</div>
+
+<div class="verdict-box">
+<b>Worth sitting with:</b> Stevenson's institutional/PAC money alone ($91,415) exceeds Treasure's entire campaign more than seven times over. Treasure's fundraising is almost entirely individual small-dollar giving (95.9%) — a handful of $10–$50 gifts and a few family members giving repeatedly. Stevenson's is a mix of a large personal stake, established Republican-aligned PAC money, and business/institutional donors.
+</div>
+
+<h3 class="sub-head">Stevenson — top institutional donors</h3>
+<div class="donor-bar-wrap">
+<div class="donor-bar-row"><div class="donor-bar-label">CMV PAC</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:100%;"><span>$42,750.00</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">Defending Utah Values PAC</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:35.5%;"><span>$15,164.36</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">Education First Utah</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:17.5%;"><span>$7,500.00</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">Goldenwest Credit Union</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:11.7%;"><span>$5,000.00</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">Utah Chamber PAC</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:11.7%;"><span>$5,000.00</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">Fresh Air PAC</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:7.0%;"><span>$3,000.00</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">Clyde Companies Inc</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:4.7%;"><span>$2,000.00</span></div></div></div>
+<div class="donor-bar-row"><div class="donor-bar-label">Five T Corporation</div><div class="donor-bar-track"><div class="donor-bar-fill" style="width:3.5%;"><span>$1,500.00</span></div></div></div>
+</div>
+<p class="bill-footnote" style="font-size:14.5px;color:var(--ink-soft);">Also $1,000 each from: Utah House Republican Election Committee, Davis County Republican Party, Staker Parson Companies (Clyde Companies subsidiary), Utah Farm Bureau Federation, and Utah Health Care Association. U-Car PAC gave $751 and Strata Networks gave $250, both in the General period.</p>
+
+<h3 class="sub-head">Who runs Stevenson's PACs, and what they've spent</h3>
+<p>Click a card to flip it. Ranked by size of gift to Stevenson, largest first.</p>
+
+<div class="flip-grid">
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-face flip-front">
+<div class="fp-name">CMV PAC<br>(Count My Vote)</div>
+<div class="fp-amt">$42,750</div>
+<div class="fp-label">to Stevenson</div>
+<div class="fp-hint">&#8635; click to flip</div>
+</div>
+<div class="flip-face flip-back">
+<div class="fb-title">Who runs it</div>
+<div class="fb-body"><b>Rich McKeown</b> (Director/Chair, Leavitt Partners co-founder) &middot; <b>Val Oveson</b> (Treasurer) &middot; <b>Taylor Morgan</b> (Director). Dominant funder is the "Utah Legacy Endowed Fund," a DBA owned by an LLC co-owned by <b>Michael Leavitt and Gail Miller</b> directly &mdash; $280,000+ into the PAC in 2025-2026 alone.<br><br><b>Spending pattern:</b> standardized signature-gathering packages, usually $5,625/candidate, to a dozen+ 2026 candidates. Stevenson's $42,750 is roughly <b>7-8&times; the standard rate</b> &mdash; an amount this outlet's own research already flags as an open, unexplained outlier.</div>
+</div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-face flip-front">
+<div class="fp-name">Defending Utah Values PAC</div>
+<div class="fp-amt">$15,164.36</div>
+<div class="fp-label">to Stevenson</div>
+<div class="fp-hint">&#8635; click to flip</div>
+</div>
+<div class="flip-face flip-back">
+<div class="fb-title">Who runs it</div>
+<div class="fb-body"><b>Owen Fuller</b> (President &mdash; also directs Gov. Cox's own initiative nonprofit "Disagree Better" and First Lady Abby Cox's personal foundation, from the same home address as the PAC) &middot; <b>Steve Waldrip</b> (Director &mdash; Cox's own state housing coordinator) &middot; <b>Luke Johnson</b> (Secretary/Treasurer). Formed 2023, same address cluster as sister entity "All In For Utah."<br><br><b>Spending pattern:</b> its federal Super PAC arm spent $30,000 on ads for Celeste Maloy and $20,000 attacking Phil Lyman in the 2026 CD3 primary. This is the Governor's own close personal/philanthropic circle running a PAC.</div>
+</div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-face flip-front">
+<div class="fp-name">Education First Utah</div>
+<div class="fp-amt">$7,500</div>
+<div class="fp-label">to Stevenson</div>
+<div class="fp-hint">&#8635; click to flip</div>
+</div>
+<div class="flip-face flip-back">
+<div class="fb-title">Who runs it</div>
+<div class="fb-body">Co-Chairs: <b>Gail Miller</b> (Larry H. Miller Group), <b>Ron Jibson</b> (retired Questar CEO), <b>Scott Anderson</b> (Zions Bank). Executive Director <b>Dr. Jeff Stephens</b>. Steering Committee includes Wilford Clyde (Clyde Companies) and Rich McKeown (also CMV PAC's chair).<br><br><b>Spending pattern:</b> $27,436 total, 2021-2026 ($77,175.90 combined with its sister PAC, Utah Behavior Services). Stevenson is tied with outgoing Sen. Jerry Stevenson for the single largest recipient &mdash; despite not appearing on EFU's own 42-name public endorsement list.</div>
+</div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-face flip-front">
+<div class="fp-name">Utah Chamber PAC</div>
+<div class="fp-amt">$5,000</div>
+<div class="fp-label">to Stevenson</div>
+<div class="fp-hint">&#8635; click to flip</div>
+</div>
+<div class="flip-face flip-back">
+<div class="fb-title">Who runs it</div>
+<div class="fb-body">The Salt Lake Chamber's own PAC. <b>Derek Miller</b> (Salt Lake Chamber President/CEO) &middot; <b>Heidi Walker</b> (COO) &middot; <b>Jill Kirsling</b> (Treasurer).<br><br><b>Spending pattern:</b> dormant for years (one $2,500 gift in 2019, near-zero in 2025), then reactivated with a $101,020 burst in 2026 &mdash; the Salt Lake Chamber gave its own PAC $50,000. On 5/28/26 alone, it spread $60,000 across 11 candidates in a single day, including Stevenson's $5,000 &mdash; a bipartisan slate that also funded Democrat Andrew Stoddard.</div>
+</div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-face flip-front">
+<div class="fp-name">Fresh Air PAC</div>
+<div class="fp-amt">$3,000</div>
+<div class="fp-label">to Stevenson</div>
+<div class="fp-hint">&#8635; click to flip</div>
+</div>
+<div class="flip-face flip-back">
+<div class="fb-title">Who runs it</div>
+<div class="fb-body">Registered PAC of <b>Stewardship Utah</b>, formed 6/3/2021, South Salt Lake. <b>David Garbett</b> (Chair; also Stewardship Utah's Executive Director) &middot; <b>Travis Suite</b> (Manager/Political Director) &middot; <b>TJ Ellerbeck</b> (Treasurer/Codirector). All three share the org's 68 E 2700 S address; two use @stewardshiputah.org emails.<br><br><b>Full 2021-2026 history now in hand: roughly $959,000 raised</b>, 94% of it ($902K combined) from just two related funders &mdash; "O2 Utah" ($125,272) and "Stewardship Utah" itself ($777,100, including a single $400,000 gift 12/31/24 and $330,000 more across two gifts in Dec. 2025). Other funders: League of Conservation Voters ($20,000, DC), Better Boundaries Accountability Fund ($5,000), Rural Utah Project ($11,500). One donor worth a second look: <b>Bryson and Jan Garbett</b> gave $10,000 (12/12/24) &mdash; same surname as Chair David Garbett, relationship unconfirmed.<br><br>Spending is overwhelmingly Democratic-leaning by volume (Rosemary Lesser, Andrew Stoddard, Jen Dailey-Provost, Karen Kwan, Angela Romero, dozens of SLC-area city council/mayoral races) but genuinely bipartisan in practice &mdash; repeat Republican recipients include Kirk Cullimore, Mike McKell, Jim Dunnigan, Clint Okerlund, Casey Snider, Tracy Miller, and Jake Hunsaker ($10,000 combined), plus Stevenson's $3,000 (6/11/26, Primary period &mdash; confirms the figure in Stevenson's own DEX export).</div>
+</div>
+</div>
+</div>
+
+<div class="flip-card" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-face flip-front">
+<div class="fp-name">U-Car PAC</div>
+<div class="fp-amt">$751</div>
+<div class="fp-label">to Stevenson</div>
+<div class="fp-hint">&#8635; click to flip</div>
+</div>
+<div class="flip-face flip-back">
+<div class="fb-title">Who runs it</div>
+<div class="fb-body">Full name <b>Utah Auto Dealers Assn UCAR PAC</b> &mdash; confirmed trade PAC of the <b>Utah Automobile Dealers Association</b>, formed 12/22/2008, Murray. <b>Craig A. Bickmore</b> (Executive Director, Treasurer/CFO) and <b>Jason Bickmore</b> (Government Relations, same office, same phone number and email on file &mdash; likely family) run it together.<br><br><b>Full 2018-2026 history now in hand: $361,754.83 raised</b> from 1,143 individual dealership contributions (twice-yearly, statewide &mdash; Karl Malone Toyota, Mark Miller Toyota/Subaru, Ken Garff dealerships, Tim Dahle Nissan, and dozens more, mostly $150&ndash;$450 each per cycle) against <b>$390,615.32 spent</b> across 404 payments to candidates and party committees, drawing the fund down over the period.<br><br>Biggest recipients: <b>"Friends of Chris Wilson" $45,000</b> (recurring, largest single relationship in the ledger), Utah House Republican Election Committee $19,252, Utah Republican Senate Campaign Committee $18,751, <b>Spencer Cox $27,000 combined</b> (Friends of Spencer Cox $14,500 + Spencer J. Cox $12,500), Utah Republican Party $12,500, Derek Brown $5,000. Giving is nearly all to Republican leadership and legislators, in standardized package sizes ($751 / $1,000&ndash;$2,003 / $2,253 / $2,503 / $3,001&ndash;$3,005) that repeat across candidates and cycles &mdash; but a real, if smaller, Democratic thread runs through it too: Utah House Democratic Leadership Council $4,505, Utah Senate Democratic PAC $2,752, Joel Briscoe for House $2,753.<br><br><b>Worth flagging for the Stevenson file:</b> before 2026, U-Car PAC's only "Stevenson" gifts on record went to <b>Jerry Stevenson</b> &mdash; $751 to "Jerry Stevenson for Utah Senate" (9/7/2018) and $1,000 to "Jerry W. Stevenson for Senate" (5/9/2022). Bob Stevenson received nothing from this PAC before his 2026 House run. The matching $751 figure across both the 2018 Jerry Stevenson gift and Bob Stevenson's 2026 gift lines up with the standardized-package theory above, but the PAC's only prior relationship with the Stevenson name was with Jerry, not Bob &mdash; a data point for [[jerry-stevenson-mida-network]], not a conclusion on its own.</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="flip-open-note">Also gave $1,000 each, no PAC-leadership research on file yet: Utah House Republican Election Committee (leadership documented separately &mdash; see [[uhrec-pac]]: Mike Schultz, Casey Snider, Candice Pierucci, Kyle Palmer) and the Davis County Republican Party.</div>
+
+<h3 class="sub-head">How the two biggest gifts reached Stevenson</h3>
+<p>Stevenson's top two PAC gifts trace back to the same two small, well-connected circles rather than broad donor bases. Read top to bottom.</p>
+<div class="flow-box">
+<div class="flow-tier">
+<div class="flow-node money">Utah Legacy Endowed Fund<span class="sub">Leavitt/Miller-owned LLC &middot; $280K+ into CMV PAC, 2025&ndash;26</span></div>
+<div class="flow-node money">Gov. Cox's personal/philanthropic circle<span class="sub">Owen Fuller &middot; Steve Waldrip &middot; Luke Johnson</span></div>
+</div>
+<div class="flow-arrow">&darr;</div>
+<div class="flow-tier">
+<div class="flow-node hub">CMV PAC<span class="sub">Rich McKeown, Chair</span></div>
+<div class="flow-node hub">Defending Utah Values PAC<span class="sub">Owen Fuller, President</span></div>
+</div>
+<div class="flow-arrow">&darr;</div>
+<div class="flow-tier">
+<div class="flow-node flagged">$42,750 to Stevenson<span class="sub">~7&ndash;8&times; the PAC's standard $5,625 package</span></div>
+<div class="flow-node flagged">$15,164.36 to Stevenson<span class="sub">largest single PAC gift after CMV</span></div>
+</div>
+</div>
+<p style="font-size:13.5px;color:var(--ink-faint);margin-top:-4px;">This is a description of the recorded money path, not a claim that either gift was improper &mdash; both PACs report their giving publicly. It's included because $57,914.36 of Stevenson's $91,415 in institutional money (63%) came from these two organizations alone.</p>
+
+<h2 class="sect">Connections worth naming</h2>
+
+<div class="record-card">
+<div class="rc-title">The Jerry Stevenson question</div>
+<p style="margin-bottom:0;">Sen. Jerry W. Stevenson (SD-6, outgoing) gave Bob Stevenson $1,000 on 6/11/26 — filed under the exact mailing address (466 S 1700 W, Layton) already on file for the senator in this outlet's own research. Jerry Stevenson is MIDA Vice Chair and sits simultaneously on the MIDA, UIPA, and Point of the Mountain State Land Authority boards. Whether the two Stevensons are related has come up before in this outlet's research (also unresolved regarding a "Jed D. Stevenson" who gave $4,000 to Tami Tran, Jerry Stevenson's own SD-6 successor) and remains <b>unconfirmed</b> — a shared surname and Davis County/Layton-area address, not a documented family record.</p>
+</div>
+
+<div class="record-card">
+<div class="rc-title">Funded, not endorsed</div>
+<p style="margin-bottom:0;">Education First Utah gave Stevenson $7,500 ($2,500 on 2/17/26 + $5,000 on 5/15/26) — tied with Jerry Stevenson for the largest individual/combined total in that PAC's entire 2021–2026 donor history. Yet Stevenson does not appear on EFU's own 42-name public endorsement slate. That slate skews toward incumbents with an education-committee or voting record; Stevenson, entering from the county commission, has neither yet.</p>
+</div>
+
+<div class="record-card">
+<div class="rc-title">The Clyde/Staker Parson network</div>
+<p style="margin-bottom:0;">Clyde Companies Inc ($2,000), Staker Parson Companies — a confirmed Clyde subsidiary — ($1,000), and Scott Parson personally ($1,000) combine to $4,000 from one corporate family. The same network is already documented giving to Jill Koford's SD5 campaign and $11,500 combined to the Utah House Republican Election Committee.</p>
+</div>
+
+<div class="record-card">
+<div class="rc-title">Family funding, both sides</div>
+<p style="margin-bottom:0;"><b>Treasure:</b> Brian Treasure and Jack Treasure gave repeatedly across every reporting period — Brian at least $600 combined across five separate gifts (some marked "Re-occurring"), Jack at least $300 across five gifts — sustained family support rather than one-time contributions. <b>Stevenson:</b> beyond the unresolved Jerry Stevenson question above, no other family-name donors were found in his record.</p>
+</div>
+
+<div class="record-card">
+<div class="rc-title">The Lee family, same cycle</div>
+<p style="margin-bottom:0;">Not a donor connection, but relevant context: Trevor Lee, the incumbent Stevenson unseated, is the son of Susan Lee — who won her own Republican primary for Davis County Commission Seat B the same night her son lost his. She and Trevor Lee are not sharing a November ballot (he lost his primary), and her campaign platform doesn't reference his record.</p>
+</div>
+
+<div class="record-card">
+<div class="rc-title">Donors to both candidates</div>
+<p style="margin-bottom:0;">Three names gave to both Stevenson and Treasure: <b>Eric Last</b> ($100 to each), <b>Skyler Johnson</b> ($50 to Stevenson / $100 to Treasure), and <b>Emily Bingham</b> ($25 to Stevenson / $50 to Treasure). Not independently confirmed as the same individuals in each case, but the name-and-amount pattern is worth a second look before publication.</p>
+</div>
+
+<div class="record-card">
+<div class="rc-title">Individual donors worth a second look</div>
+<p><b>Kevin Garn gave Stevenson $10,000 (2/26/26)</b> &mdash; his single largest individual donation, ahead of Kent Murdock's $9,000. Garn is the former Utah House Majority Leader who resigned his seat in 2010 and withdrew from a 2002 congressional bid, both times over disclosures of past personal conduct that were extensively covered by Utah media at the time (Deseret News, KSL, Salt Lake Tribune). Worth naming because of the dollar amount and his continued presence as a major GOP donor, not because of any connection between that history and this race.</p>
+<p style="margin-bottom:0;"><b>Theresa Foxley</b> ($100) &mdash; EDCUtah's former President/CEO (predecessor to Ryan Starks, see [[ryan-starks-edcutah]]), a direct-line connection to Stevenson's own "Past Public Vice Chair" role at EDCUtah. Also notable but smaller: <b>Jeremy Andrus</b> (Traeger CEO, $2,500), <b>Ally Isom</b> (GOP communications strategist, $500), <b>Sen. Evan Vickers</b> (Senate Majority Leader, $500 personally), <b>Stephen Handy</b> (former legislator, $1,000), and law firms <b>Holland &amp; Hart</b> ($250) and <b>Parsons Behle &amp; Latimer</b> ($400). On Treasure's side, <b>Rosemary T. Lesser</b> ($500, 6/4/26) and <b>David Lesser</b> ($200, 1/6/26) &mdash; the former HD10 Democratic representative and her husband, an established Democratic-network gift rather than a new connection.</p>
+</div>
+
+<h2 class="sect">Self-funding detail</h2>
+<p>Stevenson's own money is the largest single line in his campaign: $58,655.71 in direct contributions across two gifts on 2/26/26 ($5,000 + $5,000) and 4/3/26 ($14,779.78), plus a $14,938.46 loan reported 6/29/26 — $73,594.17 total, 35.3% of everything he's raised. Treasure's self-funding is comparatively negligible: a single $150 contribution recorded at Convention.</p>
+
+<details class="record-card" style="border-top:1px solid var(--line-strong);">
+<summary>
+<span style="font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust);">Full period-by-period ledger</span>
+</summary>
+<div class="details-body">
+<table class="year-table">
+<thead><tr><th>Candidate</th><th>Period</th><th>Raised</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td rowspan="3">Stevenson</td><td class="period-date">Convention + Primary</td><td class="amt">$190,239.07</td><td>121 contribution transactions; 58 expenditures totaling &minus;$51,683.37</td></tr>
+<tr><td class="period-date">General (report to date)</td><td class="amt">$18,424.46</td><td>Includes the $14,938.46 loan; excludes a $2,815 Reagan Outdoor Advertising in-kind gift, which doesn't count toward the total per the filing's own note</td></tr>
+<tr><td><b>All-periods total</b></td><td class="amt"><b>$208,663.53</b></td><td>Cash + loan combined</td></tr>
+<tr><td rowspan="3">Treasure</td><td class="period-date">Year End</td><td class="amt">$440.00</td><td>December 2025</td></tr>
+<tr><td class="period-date">Convention + Primary</td><td class="amt">$7,926.83</td><td>124 contribution transactions combined across both files; &minus;$2,011.51 in expenditures</td></tr>
+<tr><td class="period-date">General (report to date)</td><td class="amt">$4,453.84</td><td>46 contribution transactions, itemized report</td></tr>
+<tr><td><b>All-periods total</b></td><td class="amt"><b>$12,820.67</b></td><td>&nbsp;</td></tr>
+</tbody>
+</table>
+</div>
+</details>
+
+<h2 class="sect">Where they stand</h2>
+<p>Each campaign's own stated priorities, from their respective campaign websites.</p>
+
+<div class="record-card">
+<div class="rc-title">Bob Stevenson (electbobstevenson.com)</div>
+<p>Social Security tax repeal, property tax reform, housing, and water policy. Bio: lifelong Layton resident, Layton High graduate, volunteer Layton firefighter, B.A. Education/Weber State, former teacher, small businessman, Layton City Council, Layton Mayor, current Davis County Commissioner. Education is not listed among his stated legislative priorities despite his teaching background and Education First Utah's $7,500 in funding.</p>
+<p>Extensive board/civic service listed on his own site: Northern Utah Economic Alliance (Chair), UTA Advisory Board (Chair), <b>Wasatch Front Regional Council (Past Chair)</b>, <b>Economic Development Corporation of Utah (Past Public Vice Chair)</b>, Wasatch Integrated Waste (Past Chair), Weber Basin Water District Board, Utah Association of Counties Board, Utah League of Cities and Towns Board, among others. The two bolded roles are entities this outlet already tracks — see [[wfrc-wfedd-board-network]] and [[ryan-starks-edcutah]] — worth cross-referencing his board tenure against that existing research.</p>
+<p style="margin-bottom:0;">Self-described mayoral record includes a moratorium on apartments and lowered property taxes; commission record includes ending a $100,000+/year county fair subsidy, consolidating 911 dispatch, and paying off the conference center bond.</p>
+</div>
+
+<div class="record-card">
+<div class="rc-title">Donor as endorser: K.O. Murdock</div>
+<p style="margin-bottom:0;">Stevenson's campaign site features a personal endorsement quote from "K.O. Murdock, Layton" ("I've known Bob most of my life... we needed him as our Layton Mayor and as a Davis County Commissioner, and now we need him in the Legislature"). This is very likely <b>Kent Murdock</b>, who gave Stevenson $9,000 (4/20/26) — one of his largest individual donors. Not independently confirmed as the same person beyond the shared name and Layton connection, but worth a direct check before publication.</p>
+</div>
+
+<div class="record-card">
+<div class="rc-title">Abigail Treasure (atreasure4ut.com)</div>
+<p style="margin-bottom:0;">Five stated legislative priorities: strengthening public education, restoring the Great Salt Lake, protecting public lands for future generations, "real solutions for affordability for working families," and "ensuring dignity and equal rights for all." Site frames her as bringing "career experience solving problems in both the private and public sector." Campaign email atreasure4ut@gmail.com; paid for by the Committee to Elect Abigail Treasure.</p>
+</div>
+
+<div class="record-card">
+<div class="rc-title">Treasure's Stratos statement</div>
+<p>Treasure's campaign site carries a standalone statement on the Stratos data center project (Box Elder County) — 40,000 acres, 9 GW projected power draw, described on her site as set to nearly double the entire state's current power usage. Her stated concerns: no environmental impact study conducted yet, water supply and drought-timing risk, projected ~50% increase in Utah's carbon emissions from natural-gas generation at that scale, local warming, and ecological disruption to migratory wildlife.</p>
+<p style="margin-bottom:0;">Most notable for this outlet's purposes: she states the project "was proposed, planned, and approved in record time without meaningful public input," and specifically cites "growing concerns about how individuals involved in the approval process may personally benefit from the project" — language that tracks directly with this outlet's own documented Stratos research (see [[stratos-primary-documents-verified]], [[stratos-ruby-pipeline-mida]], [[stratos-water-bills]]). Her statement doesn't name individuals; this outlet's own reporting does. Worth cross-referencing if writing further on either thread.</p>
+</div>
+
+<h2 class="sect">Questions worth asking both candidates</h2>
+<p>Drawn directly from what's documented above — for voters, forums, or reporters covering this race.</p>
+
+<div class="record-card">
+<div class="rc-title">For Bob Stevenson</div>
+<ul class="sources" style="font-size:15px;color:var(--ink);">
+<li>CMV PAC's standard signature-gathering package is about $5,625. Your gift from them was $42,750 — roughly seven to eight times that. What was the $42,750 for?</li>
+<li>You received $27,436 from Education First Utah since 2021, tied for the most of any candidate, but you're not on the PAC's own 42-name endorsement list. Why do you think that is, and do you agree with their funding priorities?</li>
+<li>Wasatch Front Regional Council and the Economic Development Corporation of Utah both appear on your board résumé. What did those roles involve, and do any of your PAC or corporate donors also have ties to those boards?</li>
+<li>Education isn't listed among your stated legislative priorities despite your background as a teacher. Is education policy part of your legislative agenda?</li>
+<li>Is Sen. Jerry Stevenson a relative? If so, how would that affect how you work with him or his successor in the legislature?</li>
+</ul>
+</div>
+
+<div class="record-card">
+<div class="rc-title">For Abigail Treasure</div>
+<ul class="sources" style="font-size:15px;color:var(--ink);">
+<li>Your statement on the Stratos data center raises concerns about who may personally benefit from the approval process. Can you name who you mean, or what you've seen that raises that concern?</li>
+<li>With a fundraising gap this large, what's your plan to get your platform in front of District 16 voters between now and November?</li>
+<li>Your priorities include "equal rights for all" and Great Salt Lake restoration — what specific legislation would you introduce or support in your first session?</li>
+</ul>
+</div>
+
+<div class="record-card">
+<div class="rc-title">For both candidates</div>
+<ul class="sources" style="font-size:15px;color:var(--ink);">
+<li>Would you support requiring PACs to disclose the specific purpose of large gifts to campaigns, the way in-kind contributions already must be itemized?</li>
+<li>What's your position on the Stratos data center project and Box Elder County's water supply?</li>
+<li>What would you do, specifically, on property tax relief for Davis County homeowners?</li>
+</ul>
+</div>
+
+<h2 class="sect">Sources</h2>
+<details class="record-card" style="border-top:1px solid var(--line-strong);">
+<summary>
+<span style="font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust);">View all sources (12)</span>
+</summary>
+<div class="details-body">
+<ul class="sources">
+<li>Bob Stevenson — Utah Statewide Financial Disclosures raw DEX export, Convention + Primary periods (uploaded 9/21/26)</li>
+<li>Bob Stevenson — itemized General-period contribution report (uploaded 9/21/26)</li>
+<li>Bob Stevenson — official candidate filing, Davis County, Republican, filed 1/16/26</li>
+<li>Abigail Treasure — Utah Statewide Financial Disclosures raw DEX export, Year End + Convention + Primary periods (uploaded 9/21/26)</li>
+<li>Abigail Treasure — itemized General-period contribution report (uploaded 9/21/26)</li>
+<li>ABC4, "Bob Stevenson leads in Republican primary for House District 16 seat," 6/23-24/26</li>
+<li>Standard-Examiner, "Election results: Multiple incumbents concede," 6/24/26</li>
+<li>KSL.com, "Stuart Adams, Trevor Lee, Dan McCay lose reelection bids," 6/23/26</li>
+<li>atreasure4ut.com — Abigail Treasure campaign site, "About the Campaign" and "Abigail's Statement on the Box Elder Data Center" (pulled 9/21/26)</li>
+<li>electbobstevenson.com — Bob Stevenson campaign site, "Meet Bob Stevenson" (pulled 9/21/26)</li>
+<li>CMV PAC, Defending Utah Values PAC, Education First Utah, Utah Chamber PAC, Fresh Air PAC, and U-Car PAC — Statements of Organization and full DEX financial exports, various filing years (uploaded 9/21/26)</li>
+<li>This outlet's prior research: [[jerry-stevenson-mida-network]], [[education-first-utah-ubs-donor-network]], [[clyde-companies-network]], [[davis-county-commissioner-2026]], [[cmv-pac]], [[defending-utah-values-cox-circle]], [[utah-chamber-pac]], [[uhrec-pac]], [[stratos-primary-documents-verified]]</li>
+</ul>
+</div>
+</details>
+
+<footer>
+<div class="tagline">Public records. Plain language. No agenda but the truth.</div>
+<nav>
+<span class="nav"><a href="index.html">&larr; All Candidates</a></span>
+</nav>
+</footer>
+
+</div>
+</body>
+</html>
