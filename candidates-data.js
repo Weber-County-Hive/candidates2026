@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "hd16-stevenson-treasure",
+    race: "House District 16 — Layton / South Weber",
+    level: "State",
+    county: "Davis",
+    caseNumber: "CASE 19",
+    names: "Stevenson vs. Treasure",
+    verdict: "Sixteen to One",
+    tags: ["Fundraising Gap", "PAC Network", "Family Funding"],
+    stamp: "Active",
+    href: "hd16-stevenson-treasure.html",
+    datePosted: "2026-09-21",
+    dateUpdated: "2026-09-21"
+  },
+  {
     id: "hd13-craythorne-anderson",
     race: "House District 13 — Clearfield / Clinton / West Point",
     level: "State",
