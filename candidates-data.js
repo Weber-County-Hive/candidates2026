@@ -49,11 +49,11 @@ const CANDIDATES = [
     caseNumber: "CASE 19",
     names: "Stevenson vs. Treasure",
     verdict: "Sixteen to One",
-    tags: ["Fundraising Gap", "PAC Network", "Family Funding"],
+    tags: ["Fundraising Gap", "PAC Network", "Family Funding", "Northern Utah Economic Alliance", "Board Overlap"],
     stamp: "Active",
     href: "hd16-stevenson-treasure.html",
     datePosted: "2026-09-21",
-    dateUpdated: "2026-09-21"
+    dateUpdated: "2026-09-22"
   },
   {
     id: "hd13-craythorne-anderson",
@@ -316,7 +316,7 @@ const CANDIDATES = [
     caseNumber: "CASE 20",
     names: "The Layton Shuffle",
     verdict: "Six Seats, One Cycle, One Family Name",
-    tags: ["Seat Turnover", "Cross-Race Diagram", "Stevenson Network"],
+    tags: ["Seat Turnover", "Cross-Race Diagram", "Stevenson Network", "Doers Network", "Northern Utah Economic Alliance"],
     stamp: "Active",
     href: "layton-shuffle.html",
     datePosted: "2026-09-22",
