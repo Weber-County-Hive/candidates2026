@@ -1,0 +1,285 @@
+<title>The Layton Shuffle</title>
+<style>
+:root{
+  --paper:#f4f0e6;
+  --paper-card:#fbf9f3;
+  --ink:#2a261e;
+  --ink-soft:#5c5647;
+  --ink-faint:#8b8470;
+  --rust:#c0572e;
+  --amber:#d9a441;
+  --burgundy:#5c1a2b;
+  --burgundy-deep:#3d0f1c;
+  --line:#ddd6c4;
+  --line-strong:#c7bda3;
+  --red:#a5301e;
+  --green:#3f6b3b;
+  --serif:'Source Serif 4', Georgia, serif;
+  --display:'Playfair Display', Georgia, serif;
+  --mono:'IBM Plex Mono', 'Courier New', monospace;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.6;}
+.wrap{max-width:1020px;margin:0 auto;padding:36px 20px 60px;}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:8px;}
+h1{font-family:var(--display);font-size:34px;font-weight:900;color:var(--burgundy-deep);margin:0 0 12px;line-height:1.15;text-wrap:balance;}
+.dek{font-size:16.5px;color:var(--ink-soft);max-width:680px;margin:0 0 28px;}
+.diagram-shell{background:var(--paper-card);border:1px solid var(--line-strong);border-radius:6px;padding:18px 14px 10px;overflow-x:auto;}
+.diagram-shell svg{display:block;min-width:1100px;width:100%;height:auto;}
+.hint{font-family:var(--mono);font-size:12px;color:var(--ink-faint);text-align:center;margin-top:8px;letter-spacing:.04em;}
+.legend{display:flex;flex-wrap:wrap;gap:22px;margin:22px 0 30px;padding:14px 18px;background:var(--paper-card);border:1px solid var(--line);border-radius:6px;}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--ink-soft);}
+.legend-swatch{width:26px;height:0;border-top-width:3px;border-top-style:solid;flex:0 0 auto;}
+h2{font-family:var(--display);font-size:21px;font-weight:700;color:var(--burgundy-deep);margin:30px 0 10px;border-top:1px solid var(--line);padding-top:22px;}
+.notes{display:grid;gap:10px;}
+.note{background:var(--paper-card);border:1px solid var(--line-strong);border-left:4px solid var(--line-strong);border-radius:3px;padding:12px 16px;font-size:15.5px;color:var(--ink-soft);}
+.note b{color:var(--ink);}
+.note.confirmed{border-left-color:var(--green);}
+.note.unconfirmed{border-left-color:var(--amber);}
+footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);}
+a{color:var(--rust);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.related{background:var(--paper-card);border:1px solid var(--line-strong);border-radius:6px;padding:14px 18px;margin:0 0 26px;font-size:14.5px;color:var(--ink-soft);}
+.related b{color:var(--burgundy-deep);}
+details.sources{margin:20px 0 0;border-top:1px solid var(--line);padding-top:14px;}
+details.sources summary{cursor:pointer;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--burgundy);font-weight:600;}
+details.sources ul{margin:14px 0 0;padding-left:20px;font-size:14px;color:var(--ink-soft);}
+details.sources li{margin-bottom:8px;}
+</style>
+
+<div class="wrap">
+  <div class="kicker">Weber County Hive &middot; Candidates 2026 &middot; Working diagram</div>
+  <h1>The Layton Shuffle</h1>
+  <p class="dek">Six seats across Layton, South Weber, and Davis County are all changing hands (or not) in the same 2026 cycle — and one person, two names, and one still-unconfirmed question tie several of them together.</p>
+
+  <div class="related">Bob Stevenson and Abigail Treasure's full HD16 campaign-finance case file — every PAC, every donor, the full money picture behind this diagram's HD16 column — is <a href="https://weber-county-hive.github.io/candidates2026/hd16-stevenson-treasure.html">Case 19, Candidates 2026</a>.</div>
+
+  <div class="diagram-shell">
+    <svg viewBox="0 0 1650 520" role="img" aria-label="Diagram of six local and state seats in the HD16 area showing who is leaving, who is arriving, and three relationships connecting Bob Stevenson's own seat change, Jerry Stevenson's gift to Bob Stevenson, and Susan Lee's family tie to Trevor Lee.">
+      <defs>
+        <marker id="arrowInk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#8b8470"/>
+        </marker>
+        <marker id="arrowGold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#c0572e"/>
+        </marker>
+        <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#d9a441"/>
+        </marker>
+        <marker id="arrowBurg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#5c1a2b"/>
+        </marker>
+      </defs>
+
+      <!-- column headers -->
+      <g font-family="'IBM Plex Mono', monospace" font-size="13" fill="#8b8470" letter-spacing="0.5">
+        <text x="150" y="22" text-anchor="middle">MUNICIPAL</text>
+        <text x="410" y="22" text-anchor="middle">MUNICIPAL</text>
+        <text x="670" y="22" text-anchor="middle">COUNTY</text>
+        <text x="930" y="22" text-anchor="middle">COUNTY</text>
+        <text x="1190" y="22" text-anchor="middle">STATE HOUSE</text>
+        <text x="1450" y="22" text-anchor="middle">STATE SENATE</text>
+      </g>
+      <g font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="19" fill="#2a261e">
+        <text x="150" y="48" text-anchor="middle">Layton Council</text>
+        <text x="410" y="48" text-anchor="middle">Layton Mayor</text>
+        <text x="670" y="48" text-anchor="middle">Commission A</text>
+        <text x="930" y="48" text-anchor="middle">Commission B</text>
+        <text x="1190" y="48" text-anchor="middle">House Dist. 16</text>
+        <text x="1450" y="48" text-anchor="middle">Senate Dist. 6</text>
+      </g>
+
+      <!-- col1: Layton Council -->
+      <rect x="40" y="70" width="220" height="96" rx="5" fill="#fbf9f3" stroke="#c7bda3"/>
+      <text x="150" y="96" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#a5301e" letter-spacing="0.5">OUTGOING</text>
+      <text x="150" y="122" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="18" font-weight="700" fill="#2a261e">Tyson Roberts</text>
+      <text x="150" y="145" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14.5" fill="#5c5647">term ended, Nov 2025</text>
+
+      <line x1="150" y1="166" x2="150" y2="206" stroke="#8b8470" stroke-width="2" marker-end="url(#arrowInk)"/>
+
+      <rect x="40" y="206" width="220" height="96" rx="5" fill="#fbf9f3" stroke="#c7bda3"/>
+      <text x="150" y="232" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#3f6b3b" letter-spacing="0.5">INCOMING</text>
+      <text x="150" y="258" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="18" font-weight="700" fill="#2a261e">Mike Kolendrianos</text>
+      <text x="150" y="281" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14.5" fill="#5c5647">elected Nov 2025</text>
+
+      <!-- col2: Layton Mayor (static) -->
+      <rect x="300" y="138" width="220" height="96" rx="5" fill="#fbf9f3" stroke="#c7bda3" stroke-dasharray="4,4"/>
+      <text x="410" y="164" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#8b8470" letter-spacing="0.5">NO TURNOVER</text>
+      <text x="410" y="190" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="18" font-weight="700" fill="#2a261e">Joy Petro</text>
+      <text x="410" y="213" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14.5" fill="#5c5647">re-elected Nov 2025</text>
+
+      <!-- col3: Commission Seat A -->
+      <rect x="560" y="70" width="220" height="96" rx="5" fill="#fbf9f3" stroke="#c0572e" stroke-width="2"/>
+      <text x="670" y="96" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#a5301e" letter-spacing="0.5">OUTGOING</text>
+      <text x="670" y="122" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="18" font-weight="700" fill="#2a261e">Bob Stevenson</text>
+      <text x="670" y="145" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14.5" fill="#5c5647">vacated to run for HD16</text>
+
+      <line x1="670" y1="166" x2="670" y2="206" stroke="#8b8470" stroke-width="2" marker-end="url(#arrowInk)"/>
+
+      <rect x="560" y="206" width="220" height="96" rx="5" fill="#fbf9f3" stroke="#c7bda3"/>
+      <text x="670" y="230" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="11.5" font-weight="600" fill="#3f6b3b" letter-spacing="0.5">INCOMING (UNOPPOSED)</text>
+      <text x="670" y="258" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="18" font-weight="700" fill="#2a261e">Kendalyn Harris</text>
+      <text x="670" y="281" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14.5" fill="#5c5647">no opponent, Nov 2026</text>
+
+      <!-- col4: Commission Seat B (static-ish, contested but same incumbent track) -->
+      <rect x="820" y="138" width="220" height="96" rx="5" fill="#fbf9f3" stroke="#c7bda3" stroke-dasharray="4,4"/>
+      <text x="930" y="164" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#8b8470" letter-spacing="0.5">ON THE NOV. BALLOT</text>
+      <text x="930" y="190" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="18" font-weight="700" fill="#2a261e">Susan Lee</text>
+      <text x="930" y="213" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14.5" fill="#5c5647">won June primary</text>
+
+      <!-- col5: HD16 -->
+      <rect x="1080" y="70" width="220" height="96" rx="5" fill="#fbf9f3" stroke="#c7bda3"/>
+      <text x="1190" y="96" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#a5301e" letter-spacing="0.5">OUTGOING</text>
+      <text x="1190" y="122" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="18" font-weight="700" fill="#2a261e">Trevor Lee</text>
+      <text x="1190" y="145" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14.5" fill="#5c5647">lost primary 33.9%</text>
+
+      <line x1="1190" y1="166" x2="1190" y2="206" stroke="#8b8470" stroke-width="2" marker-end="url(#arrowInk)"/>
+
+      <rect x="1080" y="206" width="220" height="96" rx="5" fill="#fbf9f3" stroke="#c0572e" stroke-width="2"/>
+      <text x="1190" y="230" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#3f6b3b" letter-spacing="0.5">INCOMING</text>
+      <text x="1190" y="258" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="18" font-weight="700" fill="#2a261e">Bob Stevenson</text>
+      <text x="1190" y="281" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14.5" fill="#5c5647">faces Treasure, Nov 2026</text>
+
+      <!-- col6: SD-6 -->
+      <rect x="1340" y="70" width="220" height="96" rx="5" fill="#fbf9f3" stroke="#c7bda3"/>
+      <text x="1450" y="96" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#a5301e" letter-spacing="0.5">OUTGOING</text>
+      <text x="1450" y="122" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="18" font-weight="700" fill="#2a261e">Jerry Stevenson</text>
+      <text x="1450" y="145" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14.5" fill="#5c5647">not seeking re-election</text>
+
+      <line x1="1450" y1="166" x2="1450" y2="206" stroke="#8b8470" stroke-width="2" marker-end="url(#arrowInk)"/>
+      <text x="1470" y="184" text-anchor="start" font-family="'IBM Plex Mono'" font-size="12.5" font-weight="600" fill="#8a6a1a">+$500 gift</text>
+      <text x="1470" y="200" text-anchor="start" font-family="'IBM Plex Mono'" font-size="12.5" font-weight="600" fill="#8a6a1a">6/22/26</text>
+
+      <rect x="1340" y="206" width="220" height="96" rx="5" fill="#fbf9f3" stroke="#c7bda3"/>
+      <text x="1450" y="230" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#3f6b3b" letter-spacing="0.5">INCOMING</text>
+      <text x="1450" y="258" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="18" font-weight="700" fill="#2a261e">Tamara Tran</text>
+      <text x="1450" y="281" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14.5" fill="#5c5647">sitting Kaysville Mayor</text>
+
+      <!-- relationship connectors -->
+      <path d="M 670,166 C 670,330 1114,330 1114,306" fill="none" stroke="#c0572e" stroke-width="3" marker-end="url(#arrowGold)"/>
+      <rect x="785" y="296" width="290" height="56" rx="5" fill="#fbf3e6" stroke="#c0572e" stroke-width="1.5"/>
+      <text x="930" y="318" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="13" font-weight="700" fill="#a5301e">SAME PERSON</text>
+      <text x="930" y="338" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14" fill="#5c5647">commission seat &#8594; House seat</text>
+
+      <path d="M 1450,166 C 1450,410 1178,410 1178,306" fill="none" stroke="#d9a441" stroke-width="3" stroke-dasharray="7,5" marker-end="url(#arrowAmber)"/>
+      <rect x="1030" y="366" width="300" height="72" rx="5" fill="#fbf3e6" stroke="#d9a441" stroke-width="1.5"/>
+      <text x="1180" y="388" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="13" font-weight="700" fill="#8a6a1a">$1,000 GIFT, 6/11/26</text>
+      <text x="1180" y="406" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="13.5" fill="#5c5647">+ possible family tie</text>
+      <text x="1180" y="424" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="13.5" fill="#5c5647" font-style="italic">(unconfirmed)</text>
+
+      <path d="M 930,234 C 930,470 1125,470 1125,306" fill="none" stroke="#5c1a2b" stroke-width="2.5" stroke-dasharray="2,4" marker-end="url(#arrowBurg)"/>
+      <rect x="780" y="450" width="300" height="56" rx="5" fill="#f4e9ec" stroke="#5c1a2b" stroke-width="1.5"/>
+      <text x="930" y="472" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="13" font-weight="700" fill="#5c1a2b">MOTHER / SON</text>
+      <text x="930" y="492" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14" fill="#5c5647">Susan Lee &amp; outgoing Trevor Lee</text>
+    </svg>
+  </div>
+  <div class="hint">scroll to see all six seats &rarr;</div>
+
+  <div class="legend">
+    <div class="legend-item"><span class="legend-swatch" style="border-color:#8b8470;"></span> seat turnover (outgoing &#8594; incoming)</div>
+    <div class="legend-item"><span class="legend-swatch" style="border-color:#c0572e;"></span> same person, different seat</div>
+    <div class="legend-item"><span class="legend-swatch" style="border-color:#d9a441;border-top-style:dashed;"></span> financial gift + unconfirmed family tie</div>
+    <div class="legend-item"><span class="legend-swatch" style="border-color:#5c1a2b;border-top-style:dotted;"></span> confirmed family relationship</div>
+  </div>
+
+  <h2>The Kaysville office behind Jerry Stevenson's Senate seat</h2>
+  <p style="font-size:15.5px;color:var(--ink-soft);max-width:680px;">One address ties together Jerry Stevenson's son, the senator he replaced in 2010, a national charter-school company, and a sitting Layton councilman's possible second role — all confirmed by public filings and a named, on-the-record 2016 Salt Lake Tribune investigation, not by this outlet.</p>
+
+  <div class="diagram-shell">
+    <svg viewBox="0 0 1150 540" role="img" aria-label="Diagram showing 290 North Flint Street, Kaysville as a shared address for One West Construction (Jed Stevenson) and Academica West (co-owned with Sheldon Killpack, the senator Jerry Stevenson replaced). Career Path High's board met at that same address and included Jerry Stevenson as of 2021-2023 minutes, though its current board and address have since changed.">
+      <defs>
+        <marker id="arrowInk2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#8b8470"/>
+        </marker>
+        <marker id="arrowBurg2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#5c1a2b"/>
+        </marker>
+      </defs>
+
+      <!-- father/son connector, routed above everything to avoid crossing the spokes -->
+      <rect x="345" y="4" width="330" height="24" rx="4" fill="#f4e9ec" stroke="#5c1a2b"/>
+      <text x="510" y="20" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="700" fill="#5c1a2b">FATHER / SON &mdash; confirmed, SL Tribune 2016</text>
+      <path d="M320,120 L400,120 L400,32 L620,32 L620,208" fill="none" stroke="#5c1a2b" stroke-width="2.5" stroke-dasharray="2,4" marker-end="url(#arrowBurg2)"/>
+
+      <!-- hub -->
+      <rect x="390" y="208" width="300" height="104" rx="5" fill="#3d0f1c"/>
+      <text x="540" y="236" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12.5" fill="#d9a441" letter-spacing="0.5">SHARED ADDRESS</text>
+      <text x="540" y="264" text-anchor="middle" font-family="'Playfair Display', Georgia" font-weight="700" font-size="19" fill="#f4e9dd">290 N Flint St</text>
+      <text x="540" y="288" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14.5" fill="#e8d9c8">Kaysville, UT</text>
+
+      <!-- spokes -->
+      <line x1="390" y1="240" x2="320" y2="100" stroke="#8b8470" stroke-width="2"/>
+      <line x1="390" y1="260" x2="320" y2="260" stroke="#8b8470" stroke-width="2"/>
+      <line x1="390" y1="290" x2="320" y2="440" stroke="#8b8470" stroke-width="2"/>
+
+      <rect x="20" y="50" width="300" height="100" rx="5" fill="#fbf9f3" stroke="#c7bda3"/>
+      <text x="170" y="76" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#a5301e" letter-spacing="0.4">CONSTRUCTION</text>
+      <text x="170" y="102" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-weight="700" font-size="17" fill="#2a261e">One West Construction</text>
+      <text x="170" y="124" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14" fill="#5c5647">Founder: Jed Stevenson</text>
+      <text x="170" y="142" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14" fill="#5c5647">founded 2005</text>
+
+      <rect x="20" y="210" width="300" height="100" rx="5" fill="#fbf9f3" stroke="#c7bda3"/>
+      <text x="170" y="234" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="11.5" font-weight="600" fill="#a5301e" letter-spacing="0.4">MANAGES 17 UT CHARTERS</text>
+      <text x="170" y="260" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-weight="700" font-size="17" fill="#2a261e">Academica West</text>
+      <text x="170" y="282" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14" fill="#5c5647">Co-owned: Jed Stevenson &amp;</text>
+      <text x="170" y="300" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14" fill="#5c5647">Sheldon Killpack (VP)</text>
+
+      <rect x="20" y="390" width="300" height="108" rx="5" fill="#fbf9f3" stroke="#c7bda3"/>
+      <text x="170" y="414" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="11.5" font-weight="600" fill="#a5301e" letter-spacing="0.4">BOARD MET HERE, 2014-2023</text>
+      <text x="170" y="440" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-weight="700" font-size="17" fill="#2a261e">Career Path High</text>
+      <text x="170" y="462" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14" fill="#5c5647">charter school, Kaysville</text>
+      <text x="170" y="482" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="12.5" fill="#5c5647" font-style="italic">(now at a different address)</text>
+
+      <!-- right side: Killpack replaced-by Jerry, and CPH board members -->
+      <line x1="690" y1="260" x2="800" y2="260" stroke="#8b8470" stroke-width="2"/>
+      <rect x="800" y="208" width="330" height="104" rx="5" fill="#fbf9f3" stroke="#c0572e" stroke-width="2"/>
+      <text x="965" y="234" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#a5301e" letter-spacing="0.3">SD-6, 2010</text>
+      <text x="965" y="262" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-weight="700" font-size="17" fill="#2a261e">Killpack &#8594; Jerry Stevenson</text>
+      <text x="965" y="288" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="14" fill="#5c5647">resigned after DUI</text>
+
+      <line x1="690" y1="300" x2="800" y2="440" stroke="#5c1a2b" stroke-width="2.5" stroke-dasharray="2,4" marker-end="url(#arrowBurg2)"/>
+      <rect x="800" y="390" width="330" height="118" rx="5" fill="#fbf9f3" stroke="#c7bda3"/>
+      <text x="965" y="414" text-anchor="middle" font-family="'IBM Plex Mono'" font-size="12" font-weight="600" fill="#a5301e" letter-spacing="0.3">2014-2023 BOARD OFFICERS (PAST)</text>
+      <text x="965" y="440" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-weight="700" font-size="16.5" fill="#2a261e">Jerry Stevenson &mdash; President</text>
+      <text x="965" y="462" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="15" fill="#5c5647">Clint Morris &mdash; Financial Coord.</text>
+      <text x="965" y="482" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="13" fill="#5c5647" font-style="italic">left their posts in 2023;</text>
+      <text x="965" y="500" text-anchor="middle" font-family="'Source Serif 4', Georgia" font-size="13" fill="#5c5647" font-style="italic">neither on the current board</text>
+    </svg>
+  </div>
+  <div class="hint">scroll to see the full network &rarr;</div>
+
+  <div class="notes" style="margin-bottom:26px;">
+    <div class="note confirmed"><b>Confirmed (Salt Lake Tribune, 5/27/2016, on the record):</b> "The company's president, Jed Stevenson, is the son of Layton Republican Sen. Jerry Stevenson. The company's vice president is Sheldon Killpack, who resigned as majority leader of the Utah Senate in 2010." Named, dated, on-the-record reporting — not a rumor.</div>
+    <div class="note unconfirmed"><b>Historical, not current:</b> Career Path High's own 2022 board roster shows Jerry Stevenson served as <b>Board President</b> (9/12/14 – 6/30/23) and Clint Morris as <b>Financial Coordinator</b> (through 10/31/23), both at 290 N. Flint St., Kaysville — One West Construction's address. Career Path High's <i>current</i> board page (checked 9/22) lists neither of them, and gives the school's address as 550 E 300 S, Kaysville. The ties were real and officer-level, but ended in 2023.</div>
+    <div class="note unconfirmed"><b>New, unresolved:</b> Career Path High's current staff directory lists a "Kate Stevenson," Secretary. Shared surname only — no evidence yet of any relation to Jerry, Bob, or Jed Stevenson. Flagged, not asserted.</div>
+  </div>
+  <p style="font-size:14.5px;color:var(--ink-soft);margin:-8px 0 26px;">The full network — Academica West's revenue scale, the One West Construction entity filing, the charter-school client list across this district, and the Bridge Elementary bank-signer question — is written up in depth in <a href="https://weber-county-hive.github.io/Unelected-Power/jed-stevenson.html" style="color:var(--rust);">Jed Stevenson, Unelected Power</a>, rather than repeated here.</p>
+
+  <h2>What this diagram is actually saying</h2>
+  <div class="notes">
+    <div class="note confirmed"><b>Confirmed:</b> Bob Stevenson vacated his own Davis County Commission Seat A specifically to run for HD16 — one person, one deliberate move up, not two unrelated vacancies.</div>
+    <div class="note confirmed"><b>Confirmed:</b> Susan Lee, who just won her own primary for Commission Seat B, is Trevor Lee's mother — the incumbent Bob Stevenson beat. Not a donor or financial connection, just worth knowing when her name and her son's name both come up in the same cycle.</div>
+    <div class="note unconfirmed"><b>Unconfirmed:</b> Whether Jerry Stevenson (retiring SD-6) is related to Bob Stevenson (incoming HD16) remains an open question — the only hard data point is the $1,000 gift filed under a shared mailing address. No obituary, property record, or public bio found on either side confirms or rules it out.</div>
+    <div class="note confirmed"><b>Confirmed:</b> Jerry Stevenson personally funded both handoffs in this cycle — $1,000 to Bob Stevenson (HD16) on 6/11/26, and $500 to his own successor Tamara Tran (SD-6) on 6/22/26.</div>
+    <div class="note unconfirmed"><b>A third Stevenson, unresolved:</b> Jed D. Stevenson gave $4,000 to Tamara Tran the same day as Jerry Stevenson's $500 gift (6/22/26). His mailing address — 706 E 1000 S, Kaysville — doesn't match Jerry's Layton address, so this is a separate open lead, not confirmation of anything already flagged. Worth checking whether Jed is related to either Jerry or Bob before this cycle closes out.</div>
+  </div>
+
+  <details class="sources">
+    <summary>View all sources (11)</summary>
+    <ul>
+      <li>Benjamin Wood, "Analysis: Utah charter schools move millions of public dollars to the coffers of a few private companies," The Salt Lake Tribune, May 27, 2016</li>
+      <li>Utah Division of Corporations, entity #6035468-0160 (One West Construction LLC) and #5854029-0160 (Bluffdale School Development LLC)</li>
+      <li>One West Construction, "Our Clients" and "Our Process" pages (1westconstruction.com)</li>
+      <li>Career Path High board of directors PMN meeting minutes, 6/21/2021, 6/27/2022, and 8/15/2022 (utah.gov/pmn)</li>
+      <li>Career Path High current "Our Team" and "Board of Directors" pages (careerpathhigh.org / utahcph.org), checked 9/22/26</li>
+      <li>Bridge Elementary board of directors meeting minutes, 9/19/2023</li>
+      <li>Utah Statewide Financial Disclosures (disclosures.utah.gov) — Jerry Stevenson, Bob Stevenson, Tamara Tran, and Jed D. Stevenson campaign finance filings</li>
+      <li>Layton City and Davis County election results, 2025-2026</li>
+      <li>Davis County Commission filing records (Bob Stevenson, Susan Lee, Kendalyn Harris)</li>
+      <li>LinkedIn: Jed Stevenson (One West Construction); One West Construction company page</li>
+      <li>This outlet's own case file: Case 19, Candidates 2026 (Stevenson vs. Treasure, HD16)</li>
+    </ul>
+  </details>
+
+  <footer>Built from public filings, election results, and this outlet's own case files (candidates2026 repo) &middot; Working diagram, not for publication as-is</footer>
+</div>
