@@ -307,5 +307,19 @@ const CANDIDATES = [
     href: "mike-kennedy-jonny-larsen-ut4.html",
     datePosted: "2026-09-13",
     dateUpdated: "2026-09-13"
+  },
+  {
+    id: "layton-shuffle",
+    race: "Layton / South Weber — Six-Seat Turnover Network",
+    level: "State",
+    county: "Davis",
+    caseNumber: "CASE 20",
+    names: "The Layton Shuffle",
+    verdict: "Six Seats, One Cycle, One Family Name",
+    tags: ["Seat Turnover", "Cross-Race Diagram", "Stevenson Network"],
+    stamp: "Active",
+    href: "layton-shuffle.html",
+    datePosted: "2026-09-22",
+    dateUpdated: "2026-09-22"
   }
 ];
