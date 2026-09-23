@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "hd17-bitner-last",
+    race: "House District 17 — Davis County (Fruit Heights area)",
+    level: "State",
+    county: "Davis",
+    caseNumber: "CASE 22",
+    names: "Bitner vs. Last",
+    verdict: "Two Filings, Two Numbers",
+    tags: ["CMV PAC", "Doers Network", "Speaker's Committees", "Spouse Loan", "Open Seat"],
+    stamp: "Active",
+    href: "hd17-bitner-last.html",
+    datePosted: "2026-09-23",
+    dateUpdated: "2026-09-23"
+  },
+  {
     id: "sd6-tran-neal",
     race: "Senate District 6 — Davis County (Kaysville area)",
     level: "State",
