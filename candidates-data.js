@@ -250,7 +250,7 @@ const CANDIDATES = [
     county: "Statewide",
     caseNumber: "CASE 14",
     names: "Doers Network",
-    verdict: "34 Endorsed. More Than That Funded.",
+    verdict: "36 Endorsed. 13 Paid Who Weren't.",
     tags: ["PAC Network", "Board Overlap", "22-Member Board"],
     stamp: "Active",
     href: "doers-network.html"
