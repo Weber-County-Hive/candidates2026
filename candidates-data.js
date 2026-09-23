@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "sd6-tran-neal",
+    race: "Senate District 6 — Davis County (Kaysville area)",
+    level: "State",
+    county: "Davis",
+    caseNumber: "CASE 21",
+    names: "Tran vs. Neal",
+    verdict: "The Deciding Vote",
+    tags: ["Tie-Breaking Tax Vote", "Disclosure Gap", "Meta PAC", "Doers Network", "Platform vs. Record"],
+    stamp: "Active",
+    href: "sd6-tran-neal.html",
+    datePosted: "2026-09-23",
+    dateUpdated: "2026-09-23"
+  },
+  {
     id: "hd16-stevenson-treasure",
     race: "House District 16 — Layton / South Weber",
     level: "State",
