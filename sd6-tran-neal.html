@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD-6: Tran vs. Neal | The Weber County Hive</title>
+<meta name="description" content="Senate District 6, 2026. Kaysville Mayor Tami Tran's campaign money, the tie-breaking tax vote, her disclosure form checked against state records, and how her donors connect to other 2026 candidates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-paper:#f4f0e6;
+    --color-paper-deep:#ece5d4;
+    --color-ink:#241a16;
+    --color-ink-soft:#5c534c;
+    --color-link:#c0572e;
+    --color-stat:#d9a441;
+    --color-burgundy-light:#5c1a2b;
+    --color-burgundy-deep:#3d0f1c;
+    --color-line:#d8cfbc;
+    --color-card:#fbf8f1;
+    --color-good:#4d7c5f;
+    --color-flag:#a5372a;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.6;}
+  h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif;font-weight:700;margin:0 0 .4em;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:.72rem;letter-spacing:.06em;color:var(--color-ink-soft);}
+  a{color:var(--color-link);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header.band{background:linear-gradient(135deg, var(--color-burgundy-light), var(--color-burgundy-deep));color:#f4ece6;padding:22px 0;}
+  header.band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .brandmark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#f4ece6;text-decoration:none;}
+  nav.topnav a{color:#f4ece6cc;text-decoration:none;margin-left:22px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.03em;border-bottom:1px solid transparent;}
+  nav.topnav a:hover{border-bottom-color:#f4ece6cc;}
+
+  .hero{padding:56px 0 40px;border-bottom:1px solid var(--color-line);}
+  .hero .eyebrow{margin-bottom:14px;}
+  .hero h1{font-size:2.5rem;line-height:1.15;max-width:760px;}
+  .hero .dek{font-size:1.12rem;color:var(--color-ink-soft);max-width:660px;margin-top:14px;}
+  .hero-meta{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+  .hero-meta .stat-num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-stat);}
+  .hero-meta .stat-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);letter-spacing:.02em;max-width:170px;}
+
+  section{padding:44px 0;border-bottom:1px solid var(--color-line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:1.6rem;margin-bottom:6px;}
+  section .section-dek{color:var(--color-ink-soft);max-width:660px;margin-bottom:26px;font-size:1rem;}
+
+  .start-here{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-stat);padding:20px 24px;}
+  .start-here ol{margin:8px 0 0;padding-left:20px;}
+  .start-here li{margin-bottom:8px;}
+
+  .record-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:2px;padding:24px 26px;margin-bottom:18px;}
+  .record-card h3{font-size:1.15rem;margin-bottom:8px;}
+  .record-card p{margin:.6em 0;}
+  .record-card p:first-of-type{margin-top:0;}
+  .rc-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-link);border:1px solid var(--color-link);padding:3px 9px;border-radius:20px;margin:2px 6px 2px 0;text-decoration:none;}
+  a.rc-tag:hover{background:var(--color-link);color:#fff;}
+  .rc-flag{border-color:var(--color-flag);color:var(--color-flag);}
+  .rc-good{border-color:var(--color-good);color:var(--color-good);}
+
+  .quote-block{border-left:3px solid var(--color-stat);padding:4px 0 4px 18px;font-style:italic;color:var(--color-ink-soft);margin:14px 0;}
+
+  .fund-row{display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;margin-bottom:20px;}
+  .fund-donut{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fund-donut-center{width:96px;height:96px;background:var(--color-paper);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+  .fund-donut-center .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--color-ink);}
+  .fund-donut-center .lbl{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--color-ink-soft);}
+  .fund-donut-legend{list-style:none;padding:0;margin:8px 0 0;font-size:.92rem;}
+  .fund-donut-legend li{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0;}
+  .fund-bar-row{margin-bottom:10px;}
+  .fund-bar-row .bar-label{display:flex;justify-content:space-between;gap:12px;font-size:.86rem;margin-bottom:4px;}
+  .fund-bar-track{background:var(--color-paper-deep);border-radius:3px;height:8px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);}
+  .fund-bar-fill.alt{background:var(--color-stat);}
+
+  .table-scroll{overflow-x:auto;}
+  .entity-table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px;}
+  .entity-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:8px 10px;}
+  .entity-table td{padding:10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .entity-table td.num{font-family:'IBM Plex Mono',monospace;font-size:.85rem;white-space:nowrap;}
+  .status-pill{font-family:'IBM Plex Mono',monospace;font-size:.65rem;padding:3px 8px;border-radius:12px;white-space:nowrap;display:inline-block;}
+  .status-confirmed{background:#e2ede4;color:var(--color-good);}
+  .status-flag{background:#f3dedb;color:var(--color-flag);}
+  .status-unresolved{background:#f4ecd9;color:#8a6d1f;}
+
+  .timeline{border-left:2px solid var(--color-line);padding-left:22px;margin-left:6px;}
+  .timeline-item{position:relative;margin-bottom:22px;}
+  .timeline-item::before{content:"";position:absolute;left:-28px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--color-stat);}
+  .timeline-item.key::before{background:var(--color-flag);}
+  .timeline-item .t-date{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);}
+  .timeline-item h4{font-size:1rem;margin:.2em 0;}
+  .timeline-item p{margin:.2em 0;font-size:.95rem;color:var(--color-ink-soft);}
+
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--color-line);background:var(--color-card);}
+  .vs-grid > div{padding:16px 20px;border-bottom:1px solid var(--color-line);}
+  .vs-grid > div:nth-child(odd){border-right:1px solid var(--color-line);}
+  .vs-grid .vs-head{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  .vs-grid .said{font-style:italic;}
+
+  /* connections */
+  .hub{background:var(--color-burgundy-deep);color:#f4ece6;padding:22px 26px;border-radius:2px;margin-bottom:22px;}
+  .hub .eyebrow{color:#d9a441;}
+  .hub h3{color:#f4ece6;font-size:1.3rem;margin:6px 0 4px;}
+  .hub p{margin:0;color:#e8d9c8;font-size:.95rem;}
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .conn-card{background:var(--color-card);border:1px solid var(--color-line);border-top:4px solid var(--color-link);padding:18px 20px;}
+  .conn-card.doers{border-top-color:var(--color-burgundy-light);}
+  .conn-card.gold{border-top-color:var(--color-stat);}
+  .conn-card.unres{border-top-color:#b8952e;border-top-style:dashed;}
+  .conn-card .case{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .conn-card h4{font-size:1.05rem;margin:4px 0 8px;}
+  .conn-card p{margin:.4em 0;font-size:.94rem;}
+  .conn-card ul{margin:.4em 0;padding-left:18px;font-size:.93rem;}
+  .conn-card li{margin-bottom:4px;}
+
+  details.sources{margin-top:6px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.05em;color:var(--color-burgundy-light);font-weight:600;}
+  details.sources ol{font-size:.9rem;color:var(--color-ink-soft);padding-left:22px;}
+  details.sources li{margin-bottom:7px;}
+
+  @media (max-width:680px){
+    .hero h1{font-size:1.9rem;}
+    .fund-row{flex-direction:column;}
+    .conn-grid{grid-template-columns:1fr;}
+    .vs-grid{grid-template-columns:1fr;}
+    .vs-grid > div:nth-child(odd){border-right:none;}
+    .vs-grid .vs-head:nth-child(2){display:none;}
+  }
+  footer{padding:40px 0 60px;text-align:center;color:var(--color-ink-soft);font-size:.85rem;}
+  footer a{color:var(--color-link);}
+  .jumpnav{background:var(--color-paper-deep);border-bottom:1px solid var(--color-line);padding:12px 0;position:sticky;top:0;z-index:5;}
+  .jumpnav .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .jumpnav a{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.03em;color:var(--color-ink);text-decoration:none;border-bottom:1px solid transparent;}
+  .jumpnav a:hover{border-bottom-color:var(--color-link);color:var(--color-link);}
+  section[id]{scroll-margin-top:60px;}
+  .race-strip{display:grid;grid-template-columns:repeat(8,1fr);margin-top:26px;border-top:1px solid var(--color-line);border-left:1px solid var(--color-line);background:var(--color-card);}
+  .race-strip > div{padding:12px 12px 14px;border-right:1px solid var(--color-line);border-bottom:1px solid var(--color-line);min-width:0;}
+  .race-strip .d{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-link);font-weight:600;white-space:nowrap;}
+  .race-strip .e{font-size:.84rem;line-height:1.35;margin-top:6px;hyphens:none;overflow-wrap:normal;}
+  .race-strip .future .d{color:var(--color-ink-soft);}
+  @media (max-width:1000px){.race-strip{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:560px){.race-strip{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:680px){.jumpnav{position:static;} .rubric-table td:first-child{width:auto;}}
+  .chart-card{background:var(--color-card);border:1px solid var(--color-line);padding:18px 20px;margin:22px 0;}
+  .chart-card h3{font-size:1.05rem;margin-bottom:4px;}
+  .chart-card .cap{font-size:.86rem;color:var(--color-ink-soft);margin:0 0 12px;}
+  .chart-box{position:relative;height:260px;}
+  .mermaid-wrap{background:var(--color-card);border:1px solid var(--color-line);padding:18px;margin:22px 0;overflow-x:auto;}
+  .mermaid-wrap .cap{font-size:.86rem;color:var(--color-ink-soft);margin:10px 0 0;}
+  .mermaid{text-align:center;}
+  details.ledger{background:var(--color-card);border:1px solid var(--color-line);padding:12px 18px;margin:12px 0;}
+  details.ledger summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.04em;color:var(--color-burgundy-light);font-weight:600;}
+  details.ledger .table-scroll{max-height:460px;overflow:auto;margin-top:10px;}
+  .rubric-table{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--color-card);border:1px solid var(--color-line);}
+  .rubric-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:10px;background:var(--color-paper-deep);}
+  .rubric-table td{padding:12px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .rubric-table td:first-child{font-weight:600;width:170px;}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:#fff;border-radius:3px;padding:1px 6px;margin-right:6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--color-stat);} .g-d{background:#b5652f;} .g-f{background:var(--color-burgundy-light);} .g-na{background:#9a9186;font-size:.8rem;}
+  .topic-head{font-family:'Playfair Display',serif;font-size:1.15rem;margin:26px 0 8px;}
+  .compare-table td.num{text-align:right;}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+<body>
+
+<header class="band">
+  <div class="wrap">
+    <a class="brandmark" href="index.html">Weber County Hive — Candidates 2026</a>
+    <nav class="topnav">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">CASE 21 · SENATE DISTRICT 6 — OPEN SEAT — GENERAL ELECTION NOV. 3, 2026</div>
+    <h1>The Deciding Vote</h1>
+    <p class="dek">Sen. Jerry Stevenson is leaving the Senate. Kaysville Mayor Tami Tran (R), the Doers Network's largest 2026 recipient, faces Jared Neal (D) for his seat. Her campaign says "keep taxes low for families." Kaysville's own minutes show she cast the tie-breaking vote for a 31.72% increase in the city's property tax rate. Her disclosure form, checked against state business records, is missing two of the six companies the state lists her in.</p>
+    <div class="hero-meta">
+      <div><div class="stat-num">$81,735</div><div class="stat-label">CASH RAISED THROUGH 7/28/26</div></div>
+      <div><div class="stat-num">$152,503</div><div class="stat-label">META PAC SPENT FOR HER (NOT IN HER FILINGS)</div></div>
+      <div><div class="stat-num">31.72%</div><div class="stat-label">CITY TAX-RATE INCREASE SHE BROKE THE TIE FOR</div></div>
+      <div><div class="stat-num">$1,688</div><div class="stat-label">OPPONENT JARED NEAL, CASH RAISED</div></div>
+      <div><div class="stat-num">4 of 6</div><div class="stat-label">STATE-LISTED BUSINESSES ON HER DISCLOSURE FORM</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="jumpnav" aria-label="Sections"><div class="wrap">
+  <a href="#start">Start here</a><a href="#money">Money</a><a href="#outside">Meta</a><a href="#vote">The vote</a><a href="#platform">Platform vs. record</a><a href="#disclosure">Disclosure</a><a href="#seats">Other seats</a><a href="#connections">Connections</a><a href="#opponent">Opponent</a><a href="#rubric">Rubric</a><a href="#limits">Limits</a>
+</div></nav>
+
+<section id="start">
+  <div class="wrap">
+    <div class="eyebrow">START HERE</div>
+    <h2>Five Things the Records Show</h2>
+    <div class="start-here">
+      <ol>
+        <li><strong>She broke a tie to advance a large tax increase.</strong> On June 19, 2025, the Kaysville council split 2–2 on a budget with a 31.72% increase in the city's property tax rate. Tran cast the deciding vote in favor.</li>
+        <li><strong>Two businesses aren't on her disclosure form.</strong> State records list her as President and Director of Savage River Associates Inc., a cybersecurity firm, and sole member of LT Topeka LLC. Neither appears on her Senate conflict-of-interest form. The four businesses she did list all match state records.</li>
+        <li><strong>Meta spent more on her race than her campaign raised.</strong> Meta's Utah PAC spent $152,503.46 supporting her on June 11, twelve days before her primary.</li>
+        <li><strong>The Doers Network gave her more than anyone else it funded.</strong> $10,600. A second PAC listing the same suite address supplied $12,037.22 in advertising. One of the Doers Network's Davis County board members is the Kaysville mayor she succeeded, who endorsed her.</li>
+        <li><strong>Her donors run through this docket.</strong> Seven other case files in this docket share donors, vendors or people with her campaign.</li>
+      </ol>
+    </div>
+    <div class="race-strip" aria-label="Race timeline">
+      <div><div class="d">NOV 4, 2025</div><div class="e">Re-elected Kaysville mayor, 75.2%</div></div>
+      <div><div class="d">JAN 13, 2026</div><div class="e">First Senate contributions</div></div>
+      <div><div class="d">APR 11</div><div class="e">Neal nominated at Dem convention</div></div>
+      <div><div class="d">JUN 11</div><div class="e">Meta PAC spends $152,503 for Tran</div></div>
+      <div><div class="d">JUN 23</div><div class="e">Tran wins primary over Wanlass</div></div>
+      <div class="future"><div class="d">SEP 30</div><div class="e">Next spending report due</div></div>
+      <div class="future"><div class="d">NOV 3</div><div class="e">General election</div></div>
+      <div class="future"><div class="d">NOV 5</div><div class="e">Kaysville $6.5M bond hearing</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="money">
+  <div class="wrap">
+    <div class="eyebrow">THE MONEY</div>
+    <h2>Where Her Campaign's Dollars Came From</h2>
+    <p class="section-dek">Cash contributions from her Convention and Primary reports (1/13/26–6/11/26) plus the 6/16/26–7/28/26 period. In-kind contributions are shown separately because the state's own forms say they don't count toward cash totals.</p>
+
+    <div class="fund-row">
+      <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 49.7%, var(--color-ink-soft) 49.7% 74.2%, var(--color-stat) 74.2% 87.1%, var(--color-burgundy-light) 87.1% 100%);">
+        <div class="fund-donut-center"><div class="num">$81,735</div><div class="lbl">CASH RAISED</div></div>
+      </div>
+      <ul class="fund-donut-legend">
+        <li><span class="swatch" style="background:var(--color-link)"></span> PACs, businesses, associations — $40,650 (49.7%)</li>
+        <li><span class="swatch" style="background:var(--color-ink-soft)"></span> Her own loans to the campaign — $20,060.29 (24.5%)</li>
+        <li><span class="swatch" style="background:var(--color-stat)"></span> Individuals — $10,525 (12.9%)</li>
+        <li><span class="swatch" style="background:var(--color-burgundy-light)"></span> Sitting officeholders and their committees — $10,500 (12.8%)</li>
+      </ul>
+    </div>
+
+    <div class="fund-bar-row"><div class="bar-label"><span>Tami Tran — two loans (1/20/26, 3/1/26)</span><span>$20,060.29</span></div><div class="fund-bar-track"><div class="fund-bar-fill alt" style="width:100%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>All In For Utah PAC — <em>in-kind advertising, not cash</em></span><span>$12,037.22</span></div><div class="fund-bar-track"><div class="fund-bar-fill alt" style="width:60%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Doers Network (two payments)</span><span>$10,600</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:52.8%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Utah Chamber</span><span>$7,500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:37.4%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Education First Utah</span><span>$5,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:24.9%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Utah Association of Realtors</span><span>$4,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:19.9%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Jed D. Stevenson</span><span>$4,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:19.9%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Personal-injury law firms and their association (six donors)</span><span>$4,500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:22.4%"></div></div></div>
+
+
+    <div class="chart-card">
+      <h3>Money in the SD-6 race</h3>
+      <p class="cap">Tran's cash, the in-kind advertising she received, Meta's outside spending for her, and Neal's cash, on one scale.</p>
+      <div class="chart-box"><canvas id="raceChart" aria-label="Bar chart comparing money in the Senate District 6 race"></canvas></div>
+    </div>
+
+    <details class="ledger">
+      <summary>Every contribution, 1/13/26–7/28/26 (49 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Contributor</th><th>City</th><th>Type</th><th>Amount</th></tr>
+<tr><td>1/13/2026</td><td>Gil Miller</td><td>Kaysville, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>1/13/2026</td><td>Evan Vickers</td><td>Cedar City, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>1/13/2026</td><td>Holland and Hart</td><td>Salt Lake City, UT</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>1/13/2026</td><td>Jerry Stevenson</td><td>Layton, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>1/20/2026</td><td>Tami Tran (candidate)</td><td></td><td><span class="status-pill status-unresolved">Loan</span></td><td class="num">$8,060.29</td></tr>
+<tr><td>1/24/2026</td><td>Aaron Starks</td><td>South Jordan, UT</td><td>Cash</td><td class="num">$250.00</td></tr>
+<tr><td>1/31/2026</td><td>James Ostergar</td><td>Holladay, UT</td><td>Cash</td><td class="num">$25.00</td></tr>
+<tr><td>2/1/2026</td><td>Stuart Adams</td><td>Layton, UT</td><td>Cash</td><td class="num">$2,000.00</td></tr>
+<tr><td>3/1/2026</td><td>Doers Network</td><td>Midvale, UT</td><td>Cash</td><td class="num">$5,600.00</td></tr>
+<tr><td>3/1/2026</td><td>Tami Tran (candidate)</td><td></td><td><span class="status-pill status-unresolved">Loan</span></td><td class="num">$12,000.00</td></tr>
+<tr><td>3/21/2026</td><td>Don Willie</td><td>Sandy, UT</td><td>Cash</td><td class="num">$50.00</td></tr>
+<tr><td>3/21/2026</td><td>Andre Loretz</td><td>Kaysville, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>3/21/2026</td><td>Ally Isom</td><td>Midway, UT</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>3/23/2026</td><td>Utah Property Rights Coalition</td><td>Salt Lake City, UT</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>3/23/2026</td><td>Utah Association for Justice</td><td>Salt Lake City, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>5/15/2026</td><td>Friends of Ann Millner</td><td>Roy, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>5/15/2026</td><td>Paul Toller</td><td>Kaysville, UT</td><td>Cash</td><td class="num">$100.00</td></tr>
+<tr><td>5/15/2026</td><td>Whitney Holland</td><td>Kaysville, UT</td><td>Cash</td><td class="num">$2,000.00</td></tr>
+<tr><td>5/15/2026</td><td>AFCU Development</td><td>Ogden, UT</td><td>Cash</td><td class="num">$1,500.00</td></tr>
+<tr><td>5/15/2026</td><td>Devin Wiser</td><td>North Salt Lake, UT</td><td>Cash</td><td class="num">$100.00</td></tr>
+<tr><td>5/15/2026</td><td>Lincoln Hill Partners</td><td>Salt Lake City, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>5/15/2026</td><td>Mike McKell</td><td>Spanish Fork, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>5/15/2026</td><td>Injury Care Solutions</td><td>Murry, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>5/15/2026</td><td>UCU Political Action Committee</td><td>Salt Lake City, UT</td><td>Cash</td><td class="num">$2,000.00</td></tr>
+<tr><td>5/15/2026</td><td>AGPAC</td><td>Sandy, UT</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>5/22/2026</td><td>All in For Utah PAC</td><td>Cottonwood Heights, UT</td><td><span class="status-pill status-unresolved">In-kind</span></td><td class="num">$4,500.00</td></tr>
+<tr><td>5/28/2026</td><td>All in For Utah PAC</td><td>Cottonwood Heights, UT</td><td><span class="status-pill status-unresolved">In-kind</span></td><td class="num">$3,750.00</td></tr>
+<tr><td>6/11/2026</td><td>Parsons Behle &amp; Latimer</td><td>Salt Lake City, UT</td><td>Cash</td><td class="num">$300.00</td></tr>
+<tr><td>6/11/2026</td><td>Holland &amp; Hart LLP</td><td>Denver, CO</td><td>Cash</td><td class="num">$250.00</td></tr>
+<tr><td>6/11/2026</td><td>Siegfried &amp; Jensen</td><td>Murray, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>6/11/2026</td><td>Mountainstar Healthcare Good Government</td><td>Cottonwood Heights, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>6/11/2026</td><td>Craig Swapp &amp; Associates</td><td>Sandy, UT</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>6/11/2026</td><td>Utah Public Power PAC</td><td>Salt Lake City, UT</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>6/11/2026</td><td>Karen Gail Miller</td><td>Sandy, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>6/11/2026</td><td>Republican Women Lead</td><td>Riverton, UT</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>6/11/2026</td><td>Doers Network Inc.</td><td>Wilmington, DE</td><td>Cash</td><td class="num">$5,000.00</td></tr>
+<tr><td>6/11/2026</td><td>Clyde Companies Inc.</td><td>Orem, UT</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>6/16/2026</td><td>All in For Utah PAC</td><td>Cottonwood Heights, UT</td><td><span class="status-pill status-unresolved">In-kind</span></td><td class="num">$3,787.22</td></tr>
+<tr><td>6/22/2026</td><td>Robert Debry</td><td>Salt Lake City, UT</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>6/22/2026</td><td>Driggs, Bills &amp; Day</td><td>Salt Lake City, UT</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>6/22/2026</td><td>Friends of Spencer Cox</td><td>Salt Lake City, UT</td><td>Cash</td><td class="num">$2,000.00</td></tr>
+<tr><td>6/22/2026</td><td>Jerry Stevenson</td><td>Layton, UT</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>6/22/2026</td><td>Utah Association of REALTORS</td><td>Sandy, UT</td><td>Cash</td><td class="num">$4,000.00</td></tr>
+<tr><td>6/22/2026</td><td>Education First Utah</td><td>Centerville, UT</td><td>Cash</td><td class="num">$5,000.00</td></tr>
+<tr><td>6/22/2026</td><td>Utah Chamber</td><td>Salt Lake City, UT</td><td>Cash</td><td class="num">$7,500.00</td></tr>
+<tr><td>6/22/2026</td><td>Jed D. Stevenson</td><td>Kaysville, UT</td><td>Cash</td><td class="num">$4,000.00</td></tr>
+<tr><td>7/28/2026</td><td>Evan Vickers</td><td>Cedar City, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+<tr><td>7/28/2026</td><td>Comcast</td><td>Philadelphia, PA</td><td>Cash</td><td class="num">$500.00</td></tr>
+<tr><td>7/28/2026</td><td>Scott Sandall</td><td>Tremonton, UT</td><td>Cash</td><td class="num">$1,000.00</td></tr>
+        <tr><td></td><td><strong>Cash total</strong></td><td></td><td></td><td class="num"><strong>$81,735.29</strong></td></tr>
+        <tr><td></td><td><strong>In-kind total</strong></td><td></td><td></td><td class="num"><strong>$12,037.22</strong></td></tr>
+      </table>
+      </div>
+    </details>
+
+    <details class="ledger">
+      <summary>Every expenditure through 6/11/26 (25 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Payee</th><th>Purpose (as filed)</th><th>Amount</th></tr>
+<tr><td>1/21/2026</td><td>Davis County Republican Party</td><td>Campaign Expense</td><td class="num">$640.00</td></tr>
+<tr><td>1/31/2026</td><td>Nielsen&#x27;s Frozen Custard</td><td>Campaign Expense</td><td class="num">$252.06</td></tr>
+<tr><td>2/1/2026</td><td>Costco Checks</td><td>Campaign Expense</td><td class="num">$22.23</td></tr>
+<tr><td>2/4/2026</td><td>Anedot</td><td>Campaign Expense</td><td class="num">$172.50</td></tr>
+<tr><td>2/7/2026</td><td>Little Ceaser&#x27;s</td><td>Campaign Expense</td><td class="num">$14.04</td></tr>
+<tr><td>2/9/2026</td><td>Gathering</td><td>Signature Gathering</td><td class="num">$12,000.00</td></tr>
+<tr><td>2/19/2026</td><td>RPS</td><td>Advertising</td><td class="num">$264.39</td></tr>
+<tr><td>2/19/2026</td><td>Drip Swag</td><td>Advertising</td><td class="num">$1,468.82</td></tr>
+<tr><td>3/12/2026</td><td>Davis County Republican Party</td><td>Campaign Expense</td><td class="num">$800.00</td></tr>
+<tr><td>3/17/2026</td><td>RPS</td><td>Advertising</td><td class="num">$228.39</td></tr>
+<tr><td>3/19/2026</td><td>Right Insight</td><td>Advertising</td><td class="num">$429.79</td></tr>
+<tr><td>3/24/2026</td><td>Tactical Campaigns</td><td>Campaign Expense</td><td class="num">$3,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Right Insight</td><td>Advertising</td><td class="num">$19.33</td></tr>
+<tr><td>4/24/2026</td><td>J&#x27;Dawgs</td><td>Campaign Expense</td><td class="num">$1,103.16</td></tr>
+<tr><td>4/24/2026</td><td>Sams Club</td><td>Campaign Expense</td><td class="num">$161.07</td></tr>
+<tr><td>4/27/2026</td><td>Right Insight</td><td>Advertising</td><td class="num">$20.10</td></tr>
+<tr><td>5/6/2026</td><td>Syracuse City</td><td>Campaign Expense</td><td class="num">$20.00</td></tr>
+<tr><td>5/6/2026</td><td>Moena Cafe</td><td>Campaign Expense</td><td class="num">$74.83</td></tr>
+<tr><td>5/8/2026</td><td>Harbor Freight</td><td>Campaign Expense</td><td class="num">$164.61</td></tr>
+<tr><td>5/12/2026</td><td>Promo Apparel</td><td>Campaign Expense</td><td class="num">$755.00</td></tr>
+<tr><td>5/20/2026</td><td>Deseret News</td><td>Advertising</td><td class="num">$3,677.10</td></tr>
+<tr><td>6/1/2026</td><td>Right Insight</td><td>Advertising</td><td class="num">$0.52</td></tr>
+<tr><td>6/1/2026</td><td>Majority 51</td><td>Campaign Expense</td><td class="num">$5,000.00</td></tr>
+<tr><td>6/4/2026</td><td>Tactical Campaigns</td><td>Campaign Expense</td><td class="num">$11,000.00</td></tr>
+<tr><td>6/10/2026</td><td>Sweet&#x27;s Candy</td><td>Campaign Expense</td><td class="num">$603.48</td></tr>
+        <tr><td></td><td><strong>Total</strong></td><td></td><td class="num"><strong>$41,891.42</strong></td></tr>
+      </table>
+      </div>
+    </details>
+
+    <div class="record-card" style="margin-top:24px;">
+      <h3>Officeholders who gave</h3>
+      <p>Senate President Stuart Adams $2,000 · Sen. Evan Vickers $2,000 · Friends of Spencer Cox $2,000 · Sen. Jerry Stevenson $1,500 · Sen. Mike McKell $1,000 · Friends of Ann Millner $1,000 · Sen. Scott Sandall $1,000.</p>
+      <p>McKell was the primary sponsor of S.B. 287 (2026), the targeted-advertising tax that falls heavily on Meta. See "The Outside Money" below.</p>
+    </div>
+
+    <div class="record-card">
+      <h3>Where the money went (through 6/11/26)</h3>
+      <p>$41,891.42 spent. Largest vendors: Tactical Campaigns $14,000 · "Gathering" $12,000 (purpose filed as "Signature Gathering") · Majority 51 $5,000 · Deseret News $3,677.10. The rest went to local swag and food vendors. Spending after June 11 is due on the September 30 report.</p>
+      <span class="rc-tag rc-flag">Open: whether "Gathering" is Gathering Inc. is not confirmed</span>
+    </div>
+  </div>
+</section>
+
+<section id="outside">
+  <div class="wrap">
+    <div class="eyebrow">THE OUTSIDE MONEY</div>
+    <h2>Meta Spent $152,503 for Her, in One Day</h2>
+    <p class="section-dek">This money never touched her campaign account. Meta's PAC paid vendors directly as independent expenditures, which is why it appears only in the PAC's own report.</p>
+
+
+    <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    A["Forge the Future Project<br/>Fremont, CA<br/>(Meta's national PAC)"] -->|"$270,000<br/>6/11/26"| B["Forge the Future Project<br/>Utah PAC<br/>represents: Meta Platforms, Inc."]
+    B -->|"$135,003.46"| C["FP1 Strategies<br/>digital, texting,<br/>calls, mailers"]
+    B -->|"$17,500"| D["Tunnl, LLC<br/>data"]
+    C --> T["Supporting<br/>TAMI TRAN, SD-6<br/>$152,503.46"]
+    D --> T
+    B -->|"$98,942.90"| M["Supporting<br/>Logan Monson, HD-69"]
+    B -.->|"$18,553.64"| R["Ending balance"]
+    style A fill:#f4ecd9,stroke:#d9a441
+    style B fill:#fbf3e6,stroke:#c0572e
+    style T fill:#fdeeea,stroke:#a5372a,stroke-width:2px
+    style M fill:#f2f4ea,stroke:#7a8f5c
+</div>
+      <p class="cap">All of it moved on June 11, 2026, twelve days before the June 23 primary. None of it passed through Tran's own campaign account.</p>
+    </div>
+
+    <div class="table-scroll">
+    <table class="entity-table">
+      <tr><th>Date</th><th>Vendor</th><th>Purpose (as filed)</th><th>Amount</th></tr>
+      <tr><td>6/11/26</td><td>FP1 Strategies, LLC</td><td>Digital ads &amp; texting supporting Tami Tran (SD-06)</td><td class="num">$114,722.00</td></tr>
+      <tr><td>6/11/26</td><td>FP1 Strategies, LLC</td><td>Phone calls</td><td class="num">$10,759.50</td></tr>
+      <tr><td>6/11/26</td><td>FP1 Strategies, LLC</td><td>Mailer</td><td class="num">$4,760.98</td></tr>
+      <tr><td>6/11/26</td><td>FP1 Strategies, LLC</td><td>Mailer</td><td class="num">$4,760.98</td></tr>
+      <tr><td>6/11/26</td><td>Tunnl, LLC</td><td>Data</td><td class="num">$17,500.00</td></tr>
+      <tr><td></td><td><strong>Total</strong></td><td></td><td class="num"><strong>$152,503.46</strong></td></tr>
+    </table>
+    </div>
+
+    <div class="record-card" style="margin-top:22px;">
+      <h3>Who the PAC says it is</h3>
+      <p>Forge the Future Project's Utah Statement of Organization lists the organization it represents as <strong>Meta Platforms, Inc.</strong> Committee Chair Josh Althouse ("Public Policy Director") and officer Brian Baker both list 1 Meta Way, Menlo Park. The treasurer is an attorney. The PAC received $270,000 from its California parent on June 11, spent $251,446.36 the same day on Tran and Rep. Logan Monson (HD-69), and reported an ending balance of $18,553.64. It registered in Utah on June 15, inside the state's seven-day window.</p>
+      <p>Meta has said its state PACs back candidates who support "AI progress" and U.S. tech companies. Tran's campaign platform says nothing about technology, AI, data centers or social media.</p>
+      <p>The other candidate Meta backed that day, Monson, voted no on S.B. 287, the 2026 targeted-advertising tax that KSL reported would fall heavily on Meta. Tran was not in the Legislature and cast no vote on it.</p>
+      <span class="rc-tag">Meta's other Utah recipient: Logan Monson, HD-69 (no case file yet)</span>
+    </div>
+  </div>
+</section>
+
+<section id="vote">
+  <div class="wrap">
+    <div class="eyebrow">THE VOTE</div>
+    <h2>Three Budgets, One Tie-Breaker</h2>
+    <p class="section-dek">In Kaysville the five council members vote and the mayor presides. The mayor votes only to break a tie. On taxes, the record shows that happened once.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="t-date">AUGUST 2023 · FY2024 BUDGET</div>
+        <h4>Council raises property tax revenue 19.51%</h4>
+        <p>Unanimous council vote. About $99 a year on a $640,000 home, per the Davis Journal.</p>
+      </div>
+      <div class="timeline-item key">
+        <div class="t-date">JUNE 19, 2025 · FY2026 TENTATIVE BUDGET</div>
+        <h4>2–2 tie. Tran casts the deciding vote.</h4>
+        <p>The budget proposed "a 31.72% increase in Kaysville's portion of the property tax rate," about $14.61 a month on a $690,000 home. Adams and Hunt voted yea; Jackson and Blackham voted nay.</p>
+        <div class="quote-block">"With a two–two tie, Mayor Tran cast the deciding vote in favor of the motion. The motion passed with a final vote of three to two." — Kaysville City Council minutes</div>
+        <p>The minutes record that she called the increase "substantial" and argued for "more consistent use of the Truth in Taxation process to apply modest, inflation-aligned increases annually, potentially avoiding larger spikes in future years."</p>
+      </div>
+      <div class="timeline-item">
+        <div class="t-date">2025</div>
+        <h4>State Tax Commission denies the increase</h4>
+        <p>Kaysville was one of 35 entities denied. KSL reported the city sought about $1.8 million, and that denials that year turned on compliance with new procedural rules.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="t-date">AUGUST 2026 · FY2027 BUDGET</div>
+        <h4>A smaller increase, cut before adoption</h4>
+        <p>Tentative budget: $1,226,151 in new property tax. Final: $802,910, about $6.39 a month on the average home. The budget message states: "Any increase in the General Fund budget due to the rise in inflation is proposed to be covered by property tax."</p>
+      </div>
+    </div>
+
+
+    <div class="chart-card">
+      <h3>Kaysville property tax revenue, by budget year</h3>
+      <p class="cap">General Fund current-year property tax, from the city's FY2027 budget document. FY24–25 are actuals; FY26 is what the city budgeted before the state denied the increase; FY27 is the adopted budget including the $802,910 Truth in Taxation increase.</p>
+      <div class="chart-box"><canvas id="taxChart" aria-label="Bar chart of Kaysville property tax revenue FY24 to FY27"></canvas></div>
+    </div>
+
+    <div class="record-card">
+      <h3>What she said about it</h3>
+      <div class="quote-block">"I'm very proud of our council and our staff and our departments because we all worked together to get it as close as we could... We don't have a larger commercial base." — Tran to the Standard-Examiner, Aug. 2026</div>
+      <p>The FY2027 cut of roughly a third between tentative and final budgets is part of the record, as is the city's small commercial tax base she points to.</p>
+      <span class="rc-tag rc-good">Fair to note: FY27 increase cut ~35% before adoption</span>
+    </div>
+  </div>
+</section>
+
+<section id="platform">
+  <div class="wrap">
+    <div class="eyebrow">PLATFORM VS. RECORD</div>
+    <h2>Her Words, Next to the City's Records</h2>
+    <p class="section-dek">Left column: her campaign's own "Guiding Principles" page. Right column: Kaysville's minutes and budgets during her time as mayor.</p>
+
+    <div class="vs-grid">
+      <div class="vs-head">WHAT HER CAMPAIGN SAYS</div>
+      <div class="vs-head">WHAT THE RECORD SHOWS</div>
+      <div class="said">"Keep taxes low for families and small businesses." "Live within our means."</div>
+      <div>Tie-breaking vote for a 31.72% city tax-rate increase (2025). Property tax increases or attempts in FY24, FY26 and FY27. FY27 budget: inflation "covered by property tax."</div>
+      <div class="said">"Balanced budgets and opposition to unnecessary spending."</div>
+      <div>Budgets balance, as state law requires. The same FY27 budget says "avoiding debt if possible" and adds a $6.5M bond, a new $368,000-a-year gym payment, and a planned $16M fire station.</div>
+      <div class="said">"Transparency in process and spending."</div>
+      <div>The council heard Davis Tech's master plan while she chairs Davis Tech's board; the minutes record no mention of the role. The FY27 budget carries a $281,000 donation with no source stated. The bond hearing is set for Nov. 5, two days after the election.</div>
+      <div class="said">"Oppose cronyism and government favoritism."</div>
+      <div>$152,503 in Meta independent expenditures supported her campaign. That is not favoritism by her; it is context readers can weigh.</div>
+      <div class="said">Housing: "The proper role is to get out of the way as much as possible." (Standard-Examiner)</div>
+      <div>On detached backyard units, she backed the strictest local limits state law allows: 11,000 sq ft lots, owner occupancy, strong enforcement. Residents at the meeting asked for the same limits.</div>
+      <div class="said">School choice; "Growth planning that respects families."</div>
+      <div>Consistent: she pressed lawmakers to fix the state's microschool rules, backed keeping an equestrian development agreement residents bought under, and supported lengthening residents' appeal window from 10 to 20 days.</div>
+    </div>
+  </div>
+</section>
+
+<section id="disclosure">
+  <div class="wrap">
+    <div class="eyebrow">THE DISCLOSURE FORM</div>
+    <h2>Six Businesses on File With the State. Four on Her Form.</h2>
+    <p class="section-dek">Her Senate conflict-of-interest form (Item 2A) asks for "each entity in which the regulated officeholder is an owner or officer, or was an owner or officer during the preceding year." Each row below was checked against the Utah Division of Corporations record for that entity.</p>
+
+    <div class="table-scroll">
+    <table class="entity-table">
+      <tr><th>Entity</th><th>State record: her role</th><th>On her Senate form?</th><th>Note</th></tr>
+      <tr><td>Rylex Consulting LLC</td><td>Manager; registered agent</td><td><span class="status-pill status-confirmed">Yes</span></td><td>Form says "partner." Government IT; Hill AFB among listed clients.</td></tr>
+      <tr><td>Rylex Holdings LLC</td><td>Member (sole principal)</td><td><span class="status-pill status-confirmed">Yes</span></td><td>Active since 2014.</td></tr>
+      <tr><td>Allante Holdings LLC</td><td>Manager; registered agent</td><td><span class="status-pill status-confirmed">Yes</span></td><td>Form says "member."</td></tr>
+      <tr><td>Woodbury Technologies, Inc.</td><td>President; registered agent</td><td><span class="status-pill status-confirmed">Yes</span></td><td>Listed in the board section as a Rylex subsidiary.</td></tr>
+      <tr><td><strong>Savage River Associates Inc.</strong></td><td>President and Director; registered agent</td><td><span class="status-pill status-flag">Not listed</span></td><td>Maryland cybersecurity firm; Utah registration since 2019; renewed 9/21/26. Federal contractor data lists it as a Rylex subsidiary.</td></tr>
+      <tr><td><strong>LT Topeka LLC</strong> (registered twice, #14528136 and #14530930)</td><td>Sole member; registered agent</td><td><span class="status-pill status-flag">Not listed</span></td><td>Formed Dec. 2024; purpose not stated. Two identical registrations the same day, counted here as one business.</td></tr>
+    </table>
+    </div>
+
+
+    <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart TD
+    TT(["Tamara Tran"])
+    TT --> R1["Rylex Consulting LLC<br/>Manager"]
+    TT --> R2["Rylex Holdings LLC<br/>Member"]
+    TT --> AL["Allante Holdings LLC<br/>Manager"]
+    TT --> LT["LT Topeka LLC<br/>Sole member<br/>(registered twice)"]
+    R1 -->|"subsidiary, per her form"| WT["Woodbury Technologies, Inc.<br/>President"]
+    R1 -->|"subsidiary, per SAM.gov"| SR["Savage River Associates Inc.<br/>President &amp; Director<br/>cybersecurity"]
+    TT --> CC["State of Utah<br/>Cyber Security Commission<br/>member"]
+    SR -.->|"markets to 'State, Local'<br/>no Utah client found"| CC
+    style TT fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style R1 fill:#e2ede4,stroke:#4d7c5f
+    style R2 fill:#e2ede4,stroke:#4d7c5f
+    style AL fill:#e2ede4,stroke:#4d7c5f
+    style WT fill:#e2ede4,stroke:#4d7c5f
+    style SR fill:#f3dedb,stroke:#a5372a,stroke-width:2px
+    style LT fill:#f3dedb,stroke:#a5372a,stroke-width:2px
+    style CC fill:#f4ecd9,stroke:#d9a441
+</div>
+      <p class="cap">Green: on her Senate disclosure form and confirmed in state records. Red: in state records with her as an officer or owner, not on her form. All six share the same Layton office suite except LT Topeka, which also lists her campaign-filing address.</p>
+    </div>
+
+    <div class="record-card" style="margin-top:22px;">
+      <h3>Savage River Associates, in its own words</h3>
+      <p>The company's website describes "cybersecurity consulting delivered to Department of Defense (DoD), Federal, State, Local and commercial entities" and gives its office as 334 North Marshall Way, Suite J, Layton, the same suite as Rylex and Woodbury Technologies. Its 2019 Utah filing lists a different founder, John Matthew Knieriem, as its only officer; by the state's September 2024 update, Tran is President and Director.</p>
+      <p>Tran sits on the <strong>State of Utah Cyber Security Commission</strong> (her own form). Savage River's named past clients are all federal: DISA, the Defense Health Agency, USAID and the Office of the Comptroller of the Currency. No Utah government client appears anywhere in its materials.</p>
+      <span class="rc-tag rc-flag">Not on her form</span>
+      <span class="rc-tag rc-good">No Utah client found</span>
+      <span class="rc-tag rc-good">Her four listed businesses all match state records</span>
+    </div>
+  </div>
+</section>
+
+<section id="seats">
+  <div class="wrap">
+    <div class="eyebrow">HER OTHER SEATS</div>
+    <h2>Mayor, Board Chair, Presiding Officer</h2>
+    <p class="section-dek">Her form lists 19 board and leadership seats. Several put her on both sides of the same table.</p>
+
+    <div class="record-card">
+      <h3>Davis Technical College <span class="status-pill status-unresolved">Worth knowing</span></h3>
+      <p>Tran chairs Davis Tech's Board of Trustees. On Sept. 3, 2026, Davis Tech's vice president presented the college's ~30-year campus master plan to the Kaysville council she presides over, including a proposed Laurelwood Drive connection neighbors have raised traffic concerns about. The plan was set to go to the Davis Tech Board for approval on Sept. 24. The council's conflict-of-interest call followed the presentation; "no conflicts were identified." The minutes record no mention of her Davis Tech role. It was a presentation, not a vote, and her board seat is on her public form.</p>
+    </div>
+
+    <div class="record-card">
+      <h3>Lakeview Hospital</h3>
+      <p>Her form lists the Lake View Hospital Board of Trustees. Lakeview is a MountainStar/HCA hospital. Its CEO, Troy Wood, endorsed her; MountainStar Healthcare Good Government PAC gave her $1,000.</p>
+    </div>
+
+    <div class="record-card">
+      <h3>The $6.5 million bond</h3>
+      <p>On Sept. 17, 2026, the council authorized up to $6.5M in sales tax revenue bonds for the Operations Center (estimated total repayment $9,166,725). The resolution makes the mayor one of three officials who can choose the underwriter and set final terms, and she signs the documents. Zions Public Finance is the city's advisor and Zions Bancorporation the trustee. The city manager said repayment comes from previously approved utility rate increases; the FY27 budget sets aside about $474,000 a year across utility funds and the Road Fund. Public hearing: Nov. 5, 2026. The process meets the Local Government Bonding Act's notice requirements.</p>
+    </div>
+  </div>
+</section>
+
+<section id="connections">
+  <div class="wrap">
+    <div class="eyebrow">THE CONNECTIONS</div>
+    <h2>Where Her Campaign Meets the Rest of This Docket</h2>
+    <p class="section-dek">Every link below is a shared donor, vendor, board member or address found in both her filings and another 2026 case file. A shared name is a connection, not an accusation.</p>
+
+    <div class="hub">
+      <div class="eyebrow">CASE 21 · SD-6</div>
+      <h3>Tamara "Tami" Tran</h3>
+      <p>Kaysville Mayor · Doers Network endorsee and largest recipient · Jerry Stevenson's successor candidate</p>
+    </div>
+
+
+    <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    BR["Brammer SD-21"] ---|"got $7,000"| DN
+    CR["Craythorne HD-13<br/>CASE 13"] ---|"got $3,750"| DN
+    KO["Koford SD-5<br/>CASE 16"] ---|"got $500"| DN
+    SE["Searle HD-59<br/>CASE 11"] ---|"got $6,246"| AI
+    BS["Bob Stevenson HD-16<br/>CASE 19 / 20"] ---|"got $1,000"| JS
+    MO["Monson HD-69"] ---|"got $98,943 IE"| META
+    subgraph SUITE["Same suite: 6905 S 1300 E #224 · same incorporator"]
+      DN["Doers Network<br/>CASE 14"]
+      AI["All In For Utah PAC<br/>CASE 11"]
+    end
+    HI["Steve Hiatt<br/>Doers Davis County board<br/>former Kaysville mayor"]
+    JS["Sen. Jerry Stevenson<br/>outgoing SD-6"]
+    META["Meta PAC<br/>Forge the Future Project"]
+    DN -->|"$10,600"| TT(["TAMI TRAN<br/>SD-6"])
+    AI -->|"$12,037 in-kind"| TT
+    HI -.->|"endorsed"| TT
+    JS -->|"$1,500"| TT
+    META -->|"$152,503 IE"| TT
+    style TT fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style SUITE fill:#fbf3e6,stroke:#d9a441
+    style DN fill:#fbf8f1,stroke:#5c1a2b
+    style AI fill:#fbf8f1,stroke:#5c1a2b
+    style META fill:#fdeeea,stroke:#a5372a
+</div>
+      <p class="cap">Arrows into Tran are money to her campaign or spent for her. Left column: other 2026 candidates who received money from the same source, with the amount each got. No money moved between candidates. Dashed line: endorsement. Hiatt sits on the Doers Network's Davis County board. "IE" is an independent expenditure made on her behalf, not a contribution to her campaign.</p>
+    </div>
+
+    <div class="conn-grid">
+
+      <div class="conn-card doers">
+        <div class="case">CASE 14 · <a href="doers-network.html">DOERS NETWORK</a></div>
+        <h4>Top of the Doers Network's list</h4>
+        <ul>
+          <li>$10,600 in two payments: $5,600 (3/1/26, Midvale suite address) and $5,000 (6/11/26, Wilmington, DE). The largest documented Doers Network recipient of 2026.</li>
+          <li><strong>Steve Hiatt</strong> sits on the Doers Network's Davis County board. He was Kaysville mayor before her, and he endorsed her on her campaign site.</li>
+          <li>Doers-endorsed Kaysville candidates this cycle: Tran (SD-6), Ariel Defay (HD-15), Susan Lee (Davis Commission), Brian McKenzie (Davis Clerk).</li>
+          <li>Other Doers-backed Senate candidates: <a href="sd21-brammer-smith-myers-woodfield.html">Brady Brammer</a> (SD-21), <a href="sd5-koford-hernandez.html">Jill Koford</a> (SD-5), Kirk Cullimore (SD-19).</li>
+        </ul>
+      </div>
+
+      <div class="conn-card doers">
+        <div class="case">CASE 11 · <a href="luke-searle-hd59.html">SEARLE, HD-59</a> · CASE 14</div>
+        <h4>All In For Utah PAC: one suite, two PACs</h4>
+        <p>All In For Utah PAC supplied $12,037.22 in advertising to her campaign, all in-kind. Its filings list 6905 S 1300 E #224, the same suite as the Doers Network's 3/1/26 contribution. Matthew T. Sanderson incorporated both. Case 11 documents the PAC's chair as Owen Fuller and its treasurer as Dan Hemmert, MIDA's Executive Director; Searle received $6,246 from it.</p>
+      </div>
+
+      <div class="conn-card gold">
+        <div class="case">CASE 20 · <a href="layton-shuffle.html">THE LAYTON SHUFFLE</a> · CASE 19 · <a href="hd16-stevenson-treasure.html">HD-16</a></div>
+        <h4>The Stevenson handoff</h4>
+        <ul>
+          <li>Outgoing Sen. Jerry Stevenson gave her $1,500 ($1,000 on 1/13, $500 on 6/22) and gave Bob Stevenson (HD-16) $1,000.</li>
+          <li>Donors she shares with Bob Stevenson: Education First Utah, Utah Chamber, Clyde Companies, Sen. Evan Vickers, Parsons Behle &amp; Latimer, Holland &amp; Hart.</li>
+          <li>She received $7,500 from the Utah Chamber, more than Bob Stevenson ($5,000) or Searle ($5,000).</li>
+        </ul>
+      </div>
+
+      <div class="conn-card unres">
+        <div class="case">CASE 20 · <a href="layton-shuffle.html">THE LAYTON SHUFFLE</a> · UNRESOLVED</div>
+        <h4>Jed D. Stevenson and 290 N. Flint St.</h4>
+        <p>A Jed D. Stevenson of Kaysville gave her $4,000 on 6/22/26, the same day as Jerry Stevenson's $500. Case 20 documents that Jerry Stevenson's son, Jed Stevenson, co-owns Academica West at 290 N. Flint St. On Aug. 20, 2026, the Kaysville Business Park Architectural Review Committee, which Tran chairs, approved a 24.86 sq ft sign for Academica West at that address, 5–0. Staff found it met code, and she did not vote. <strong>Whether the donor is the same Jed Stevenson is not confirmed.</strong></p>
+      </div>
+
+      <div class="conn-card">
+        <div class="case">CASE 16 · <a href="sd5-koford-hernandez.html">KOFORD, SD-5</a></div>
+        <h4>Millner's network, both Senate seats</h4>
+        <p>Friends of Ann Millner gave her $1,000. Case 16 documents Millner as a co-founder of NUPAC, the PAC that first funded Koford for Millner's own seat. Clyde Companies gave both Tran and Koford $500.</p>
+      </div>
+
+      <div class="conn-card">
+        <div class="case">CASE 13 · <a href="hd13-craythorne-anderson.html">CRAYTHORNE, HD-13</a> · CASE 14</div>
+        <h4>Shared vendor, shared sponsor</h4>
+        <p>Both her campaign and Craythorne's paid the consulting firm Majority 51. Sen. Evan Vickers gave her $2,000. Case 13 documents Vickers paying Election Hive the same day Doers Network paid Craythorne and Rep. Jordan Teuscher, while Vickers carried H.B. 33 in the Senate.</p>
+      </div>
+
+      <div class="conn-card">
+        <div class="case"><a href="sd21-brammer-smith-myers-woodfield.html">BRAMMER, SD-21</a></div>
+        <h4>Sen. Mike McKell's checks</h4>
+        <p>McKell gave her $1,000. The SD-21 file documents McKell giving Brammer $5,000. McKell was the primary sponsor of S.B. 287, the targeted-advertising tax. Sen. Evan Vickers and the Farm Bureau's AGPAC also gave to both campaigns.</p>
+      </div>
+
+      <div class="conn-card">
+        <div class="case">NO CASE FILE YET</div>
+        <h4>Outside the docket</h4>
+        <ul>
+          <li><strong>Logan Monson (HD-69):</strong> Meta's other recipient on 6/11/26 ($98,942.90). His own filings share nine donors with Tran's, including All In For Utah PAC, Education First Utah, Utah Public Power PAC and MountainStar's PAC. His disclosure form lists a paid seat on the UAMPS board, the municipal power consortium, as a $5,000+ income source.</li>
+          <li><strong>Stephanie Gricius (HD-50):</strong> also paid Tactical Campaigns, Tran's largest vendor ($14,000).</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="opponent">
+  <div class="wrap">
+    <div class="eyebrow">THE OPPONENT</div>
+    <h2>Jared Neal (D): $1,688 in Cash</h2>
+    <p class="section-dek">Nominated at the Democratic convention April 11, 2026. Tran won the June 23 Republican primary over Robert "Denny" Wanlass, who had publicly criticized the MIDA process behind the Brigham City-area data center and developer-driven PIDs.</p>
+
+
+    <div class="table-scroll">
+    <table class="entity-table compare-table" style="margin:6px 0 20px;">
+      <tr><th></th><th>Tami Tran (R)</th><th>Jared Neal (D)</th></tr>
+      <tr><td>Home city</td><td>Kaysville</td><td>Syracuse</td></tr>
+      <tr><td>Government record</td><td>Planning Commission, City Council, Mayor since 2022</td><td>None</td></tr>
+      <tr><td>Work</td><td>Owner/officer, Rylex government IT companies</td><td>Head of Portfolio Management, Founderpath Inc. (Austin, TX): underwrites loans to software startups</td></tr>
+      <tr><td>Disclosure form</td><td>19 boards; 4 businesses listed, 2 more in state records not listed</td><td>Employer only; no businesses, stocks or board seats listed</td></tr>
+      <tr><td>Cash raised</td><td class="num">$81,735.29</td><td class="num">$1,687.89</td></tr>
+      <tr><td>Of that, own loans</td><td class="num">$20,060.29</td><td class="num">$100.00</td></tr>
+      <tr><td>In-kind received</td><td class="num">$12,037.22</td><td class="num">$1,200.00</td></tr>
+      <tr><td>Outside spending for them</td><td class="num">$152,503.46 (Meta PAC)</td><td class="num">None found</td></tr>
+      <tr><td>Largest cash donor</td><td>Doers Network, $10,600</td><td>Patrick de Freitas, $500</td></tr>
+      <tr><td>Stated priorities</td><td>Family, fiscal restraint, low taxes, school choice, public safety</td><td>Affordability, public schools, Great Salt Lake</td></tr>
+      <tr><td>Great Salt Lake / water</td><td>Not mentioned in her platform</td><td>Backs the 4,200 Project; cites Grow the Flow</td></tr>
+    </table>
+    </div>
+
+    <div class="fund-row">
+      <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 76.3%, var(--color-stat) 76.3% 94.1%, var(--color-ink-soft) 94.1% 100%);">
+        <div class="fund-donut-center"><div class="num">$1,688</div><div class="lbl">CASH RAISED</div></div>
+      </div>
+      <ul class="fund-donut-legend">
+        <li><span class="swatch" style="background:var(--color-link)"></span> Individuals, mostly $100 or less — $1,287.89 (76.3%)</li>
+        <li><span class="swatch" style="background:var(--color-stat)"></span> Party and club (Davis County Democrats $200, Women's Democratic Club $100) — $300 (17.8%)</li>
+        <li><span class="swatch" style="background:var(--color-ink-soft)"></span> His own loan — $100 (5.9%)</li>
+      </ul>
+    </div>
+    
+
+    <div class="record-card">
+      <h3>His filings</h3>
+      <p>Convention and Primary reports (1/14/26–5/21/26): 20 contributions totaling $1,177.89, including a $100 loan from himself, and $242.28 spent (photography $188.12, printing $54.16). Later period (6/15–6/22/26): $510 in cash from two donors, plus $1,200 in-kind from Baywin Communications of Boise, with no in-kind description entered. His campaign website (nealforutah.com) carries a "© 2026 by Baywin Communications" credit, which matches a website build. Baywin's filed address is the same Boise address as an early $20 donor, Weston Yates.</p>
+      <p>$455.64 of his early money came from outside Utah (Idaho, California, Virginia). Several of his entries are marked as amendments.</p>
+    </div>
+
+    <div class="record-card">
+      <h3>His platform</h3>
+      <p>Per his campaign site: he moved to Utah in 2019 and has lived in Syracuse for three years. He spent a decade in retail, describes himself as "the son of two union members," and now works as "Head of Portfolio Management at a financial tech company." His disclosure form names the employer as Founderpath Inc. of Austin, Texas, where he underwrites business loans "primarily serving software as a service start up companies" and manages the loan book. The form lists no businesses he owns, no stocks or bonds over $5,000, and no board seats. He lists three priorities:</p>
+      <div class="quote-block">Affordability: "Lower the real costs that hit your paycheck so families can stop getting by and start getting ahead." · Education: "Stop asking our schools to do more with less." · The Great Salt Lake: "Save the lake. A healthy lake means clean air, strong property values, and a stable Utah economy."</div>
+      <p>His priorities page gets specific on the lake: he backs the Utah Rivers Council's "4,200 Project" to return the lake to 4,200 feet, says he "will fight against any legislation that silences the public or removes health checks from water rights decisions," and names Grow the Flow as a group whose lead he would follow on getting "wet water" to the lake. On affordability he lists housing supply, prescription price gouging and childcare costs.</p>
+      <p>Like Tran, he runs on affordability. Unlike Tran, he has no government voting record to compare it with. He addresses water and the Great Salt Lake directly; Tran's platform doesn't mention either.</p>
+    </div>
+
+    <div class="record-card">
+      <h3>The gap</h3>
+      <p>Tran's campaign reported about <strong>48 times</strong> Neal's cash ($81,735 vs. $1,688). Counting Meta's $152,503 in outside spending on her behalf, money spent to elect her runs about <strong>139 times</strong> his cash.</p>
+      <span class="rc-tag">Neal's disclosure form: employer only</span>
+    </div>
+  </div>
+</section>
+
+<section id="rubric">
+  <div class="wrap">
+    <div class="eyebrow">THE RUBRIC</div>
+    <h2>Graded Topic by Topic</h2>
+    <p class="section-dek">This outlet grades each topic on five standing questions: does it check power, can the public see the process, who pays and is that plain, what does it do to water and land, and who bears the cost with real standing to be heard. Each topic is graded separately. These grades judge the process and the record, not the person.</p>
+
+    <div class="topic-head">1. The FY2026 tax increase and her tie-breaking vote</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-b">B</span>The check worked: the increase went through Truth in Taxation and the State Tax Commission denied it. The mayor's vote only mattered because the council split.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>Public meeting, recorded roll call, and her reasoning in the minutes. The denial turned on procedural non-compliance.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>The cost to households was stated plainly ($14.61/month). The FY26 budget still carried revenue the city never received.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-c">C</span>Residents could be heard at the hearings. The increase was 31.72% in a single year, which is the kind of spike her own stated approach says to avoid.</td></tr>
+    </table></div>
+
+    <div class="topic-head">2. Her Senate disclosure form</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-d">D</span>Four of six state-listed businesses disclosed and accurate. The two missing include a cybersecurity firm in the same field as her state Cyber Security Commission seat, which is the kind of overlap the form exists to show.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>Income sources are listed. The missing entities' revenue is unknown; no Utah government client has been found.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-c">C</span>Voters can find the gap only by cross-checking state records themselves.</td></tr>
+    </table></div>
+
+    <div class="topic-head">3. Kaysville's $6.5 million Operations Center bond</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-c">C</span>Revenue bonds don't go to voters under state law. Final terms are delegated to any one of three officials, including the mayor.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>Notice, a 30-day contest period, and the estimated total cost ($9,166,725) are all published. The hearing falls two days after the election.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>The legal pledge is sales, energy and telecom taxes, while the city manager describes repayment from utility rate increases. Both can be true, but residents are told two different things. The advisor and the trustee are both Zions entities.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>No environmental effect identified; the project includes fuel-island compliance work.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-c">C</span>A public hearing is scheduled; utility ratepayers are already paying through approved increases.</td></tr>
+    </table></div>
+
+    <div class="topic-head">4. The outside money in her race</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-d">D</span>One corporation's PAC spent nearly twice what her campaign raised, and about 90 times her opponent's cash, in a single day before the primary.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>The PAC itemized every payment, named Meta Platforms as the organization it represents, and registered on time. What the spending was meant to achieve is not stated anywhere.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>All of it is visible, but only in the PAC's own report, not in hers.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-d">D</span>Ads, texts and mailers funded by a single company reached voters in the final stretch before the primary. Tracing the money to Meta takes the PAC's own filings, not the candidate's.</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="limits">
+  <div class="wrap">
+    <div class="eyebrow">WHAT THIS DOESN'T SHOW</div>
+    <h2>Limits of the Record</h2>
+    <div class="record-card">
+      <ul style="margin:0;padding-left:18px;">
+        <li>No record shows why Meta backed her, and she has taken no public position on tech, AI or data centers.</li>
+        <li>The two businesses missing from her form are a factual gap. Nothing here shows why they were left off. Savage River came in through a Rylex acquisition.</li>
+        <li>No Utah state or local contract with Savage River or Rylex has been found. That has not been checked against state payment records.</li>
+        <li>Her tie-breaking vote was on the <em>tentative</em> FY26 budget. Who voted on final adoption has not been checked.</li>
+        <li>Most tax, budget and bond votes in this file were cast by the council, not the mayor.</li>
+        <li>"Gathering" (her $12,000 vendor) is not confirmed to be Gathering Inc.</li>
+        <li>Spending after June 11, 2026 is not yet public; it is due Sept. 30.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <details class="sources">
+      <summary>View all sources (25)</summary>
+      <ol>
+        <li>Jared Owen Neal, Senate conflict-of-interest disclosure (disclosures.utah.gov)</li>
+        <li>Jared Neal campaign website (nealforutah.com), home, about and priorities pages</li>
+        <li>Jared Neal campaign finance, Convention and Primary reports, DEX export, and itemized contributions 6/15–6/22/26 (disclosures.utah.gov)</li>
+        <li>Tamara Tran campaign finance, Convention and Primary reports, DEX export (disclosures.utah.gov), 1/13/26–6/11/26</li>
+        <li>Tamara Tran campaign finance, itemized contributions 6/16/26–7/28/26 (disclosures.utah.gov)</li>
+        <li>Forge the Future Project, 2026 Primary Report and Statement of Organization (disclosures.utah.gov)</li>
+        <li>Tamara Lee Tran, Senate conflict-of-interest disclosure (disclosures.utah.gov)</li>
+        <li>Utah Division of Corporations: Rylex Consulting LLC #5735811-0160; Rylex Holdings LLC #9026164-0160; Allante Holdings LLC #11633463-0160; Woodbury Technologies, Inc. #5313926-0142; Savage River Associates Inc. #11515010-0143 (record and 2019 Application for Authority); LT Topeka LLC #14528136-0160 and #14530930-0160</li>
+        <li>Savage River Associates website (savage-river.com): About, Past Performance, Contact; SAM.gov entity data via Sweetspot (UEI HHMYKZY5LAV3)</li>
+        <li>Rylex Consulting website (rylex.com), About</li>
+        <li>Kaysville City Council minutes, June 19, 2025 (utah.gov/pmn file 1306717)</li>
+        <li>Kaysville City Council minutes (draft), Aug. 20 and Sept. 3, 2026; Kaysville Business Park Architectural Review Committee minutes (draft), Aug. 20, 2026</li>
+        <li>Kaysville FY2027 Final Budget (budget message dated Aug. 6, 2026)</li>
+        <li>Kaysville Resolution and Notice of Public Hearing and Bonds to Be Issued, Sales Tax Revenue Bonds Series 2026 (Sept. 17, 2026); draft Bond Purchase Contract</li>
+        <li>Standard-Examiner, "Kaysville Mayor Tami Tran assesses City Council's effort to get property tax rate proposal as close to 0% as possible," Aug. 7, 2026</li>
+        <li>Standard-Examiner, "Tami Tran highlights experience in bid for Senate District 6 seat," May 25, 2026</li>
+        <li>Davis Journal, "Those costs of providing government services – nobody likes a Tax Increase," Aug. 31, 2023</li>
+        <li>KSL, "Utah tax officials deny tax hikes from 35 cities, school districts and other entities"</li>
+        <li>Tami Tran campaign site: Guiding Principles and Endorsements pages (vote4tami.com)</li>
+        <li>S.B. 287 (2026) Targeted Advertising Tax, enrolled text (le.utah.gov); House roll call, March 6, 2026 (via FastDemocracy)</li>
+        <li>KSL, "Utah targets social media companies with new tax"</li>
+        <li>GV Wire, "Meta Begins $65 Million Election Push to Advance AI Agenda," Feb. 18, 2026</li>
+        <li>MountainStar Healthcare, Lakeview Hospital location page</li>
+        <li>Ballotpedia, Utah State Senate District 6</li>
+        <li>This outlet's own case files: Cases 11, 13, 14, 16, 19 and 20, and the SD-21 file (candidates2026 repo)</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Compiled from Utah campaign-finance disclosures (disclosures.utah.gov), the candidate's own conflict-of-interest form, Utah Division of Corporations records, and Kaysville City's own minutes, budgets and bond documents. Public records only · No comment requested.<br>
+    <a href="index.html">&larr; Back to the Candidates 2026 docket</a>
+  </div>
+</footer>
+
+<script>
+if (window.mermaid) { mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'IBM Plex Mono, monospace', flowchart:{htmlLabels:true, curve:'basis'} }); }
+if (window.Chart) {
+  Chart.defaults.font.family = "'Source Serif 4', Georgia, serif";
+  Chart.defaults.color = '#5c534c';
+  const money = v => '$' + Number(v).toLocaleString();
+  new Chart(document.getElementById('raceChart'), {
+    type: 'bar',
+    data: { labels: ['Meta PAC spending for Tran', 'Tran campaign cash', 'All In For Utah in-kind (Tran)', 'Neal campaign cash'],
+      datasets: [{ data: [152503.46, 81735.29, 12037.22, 1687.89], backgroundColor: ['#a5372a','#c0572e','#d9a441','#5c534c'], borderRadius: 3 }] },
+    options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => money(c.parsed.x) } } },
+      scales: { x: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, y: { grid: { display: false } } } }
+  });
+  new Chart(document.getElementById('taxChart'), {
+    type: 'bar',
+    data: { labels: ['FY24 actual', 'FY25 actual', 'FY26 budgeted (increase denied)', 'FY27 adopted'],
+      datasets: [
+        { label: 'Base property tax', data: [5577517, 5675321, 7451200, 5682081], backgroundColor: ['#c0572e','#c0572e','#b8a58a','#c0572e'], borderRadius: 2, stack: 't' },
+        { label: 'FY27 Truth in Taxation increase', data: [0, 0, 0, 802910], backgroundColor: '#d9a441', borderRadius: 2, stack: 't' } ] },
+    options: { maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + money(c.parsed.y) } } },
+      scales: { y: { stacked: true, ticks: { callback: money }, grid: { color: '#e6dfcf' } }, x: { stacked: true, grid: { display: false } } } }
+  });
+}
+</script>
+</body>
+</html>
