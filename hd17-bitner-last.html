@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HD-17: Bitner vs. Last | The Weber County Hive</title>
+<meta name="description" content="House District 17, 2026. Lili Bitner's campaign money through 8/10/26, the CMV PAC entry her report and the PAC's report list at different amounts, her disclosure form, and how her donors connect to other 2026 candidates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-paper:#f4f0e6;
+    --color-paper-deep:#ece5d4;
+    --color-ink:#241a16;
+    --color-ink-soft:#5c534c;
+    --color-link:#c0572e;
+    --color-stat:#d9a441;
+    --color-burgundy-light:#5c1a2b;
+    --color-burgundy-deep:#3d0f1c;
+    --color-line:#d8cfbc;
+    --color-card:#fbf8f1;
+    --color-good:#4d7c5f;
+    --color-flag:#a5372a;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.6;}
+  h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif;font-weight:700;margin:0 0 .4em;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:.72rem;letter-spacing:.06em;color:var(--color-ink-soft);}
+  a{color:var(--color-link);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header.band{background:linear-gradient(135deg, var(--color-burgundy-light), var(--color-burgundy-deep));color:#f4ece6;padding:22px 0;}
+  header.band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .brandmark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#f4ece6;text-decoration:none;}
+  nav.topnav a{color:#f4ece6cc;text-decoration:none;margin-left:22px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.03em;border-bottom:1px solid transparent;}
+  nav.topnav a:hover{border-bottom-color:#f4ece6cc;}
+
+  .hero{padding:56px 0 40px;border-bottom:1px solid var(--color-line);}
+  .hero .eyebrow{margin-bottom:14px;}
+  .hero h1{font-size:2.5rem;line-height:1.15;max-width:760px;}
+  .hero .dek{font-size:1.12rem;color:var(--color-ink-soft);max-width:660px;margin-top:14px;}
+  .hero-meta{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+  .hero-meta .stat-num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-stat);}
+  .hero-meta .stat-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);letter-spacing:.02em;max-width:170px;}
+
+  section{padding:44px 0;border-bottom:1px solid var(--color-line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:1.6rem;margin-bottom:6px;}
+  section .section-dek{color:var(--color-ink-soft);max-width:660px;margin-bottom:26px;font-size:1rem;}
+
+  .start-here{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-stat);padding:20px 24px;}
+  .start-here ol{margin:8px 0 0;padding-left:20px;}
+  .start-here li{margin-bottom:8px;}
+
+  .record-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:2px;padding:24px 26px;margin-bottom:18px;}
+  .record-card h3{font-size:1.15rem;margin-bottom:8px;}
+  .record-card p{margin:.6em 0;}
+  .record-card p:first-of-type{margin-top:0;}
+  .rc-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-link);border:1px solid var(--color-link);padding:3px 9px;border-radius:20px;margin:2px 6px 2px 0;text-decoration:none;}
+  a.rc-tag:hover{background:var(--color-link);color:#fff;}
+  .rc-flag{border-color:var(--color-flag);color:var(--color-flag);}
+  .rc-good{border-color:var(--color-good);color:var(--color-good);}
+
+  .quote-block{border-left:3px solid var(--color-stat);padding:4px 0 4px 18px;font-style:italic;color:var(--color-ink-soft);margin:14px 0;}
+
+  .fund-row{display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;margin-bottom:20px;}
+  .fund-donut{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fund-donut-center{width:96px;height:96px;background:var(--color-paper);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+  .fund-donut-center .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--color-ink);}
+  .fund-donut-center .lbl{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--color-ink-soft);}
+  .fund-donut-legend{list-style:none;padding:0;margin:8px 0 0;font-size:.92rem;}
+  .fund-donut-legend li{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0;}
+  .fund-bar-row{margin-bottom:10px;}
+  .fund-bar-row .bar-label{display:flex;justify-content:space-between;gap:12px;font-size:.86rem;margin-bottom:4px;}
+  .fund-bar-track{background:var(--color-paper-deep);border-radius:3px;height:8px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);}
+  .fund-bar-fill.alt{background:var(--color-stat);}
+
+  .table-scroll{overflow-x:auto;}
+  .entity-table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px;}
+  .entity-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:8px 10px;}
+  .entity-table td{padding:10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .entity-table td.num{font-family:'IBM Plex Mono',monospace;font-size:.85rem;white-space:nowrap;}
+  .status-pill{font-family:'IBM Plex Mono',monospace;font-size:.65rem;padding:3px 8px;border-radius:12px;white-space:nowrap;display:inline-block;}
+  .status-confirmed{background:#e2ede4;color:var(--color-good);}
+  .status-flag{background:#f3dedb;color:var(--color-flag);}
+  .status-unresolved{background:#f4ecd9;color:#8a6d1f;}
+
+  .timeline{border-left:2px solid var(--color-line);padding-left:22px;margin-left:6px;}
+  .timeline-item{position:relative;margin-bottom:22px;}
+  .timeline-item::before{content:"";position:absolute;left:-28px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--color-stat);}
+  .timeline-item.key::before{background:var(--color-flag);}
+  .timeline-item .t-date{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);}
+  .timeline-item h4{font-size:1rem;margin:.2em 0;}
+  .timeline-item p{margin:.2em 0;font-size:.95rem;color:var(--color-ink-soft);}
+
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--color-line);background:var(--color-card);}
+  .vs-grid > div{padding:16px 20px;border-bottom:1px solid var(--color-line);}
+  .vs-grid > div:nth-child(odd){border-right:1px solid var(--color-line);}
+  .vs-grid .vs-head{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  .vs-grid .said{font-style:italic;}
+
+  /* connections */
+  .hub{background:var(--color-burgundy-deep);color:#f4ece6;padding:22px 26px;border-radius:2px;margin-bottom:22px;}
+  .hub .eyebrow{color:#d9a441;}
+  .hub h3{color:#f4ece6;font-size:1.3rem;margin:6px 0 4px;}
+  .hub p{margin:0;color:#e8d9c8;font-size:.95rem;}
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .conn-card{background:var(--color-card);border:1px solid var(--color-line);border-top:4px solid var(--color-link);padding:18px 20px;}
+  .conn-card.doers{border-top-color:var(--color-burgundy-light);}
+  .conn-card.gold{border-top-color:var(--color-stat);}
+  .conn-card.unres{border-top-color:#b8952e;border-top-style:dashed;}
+  .conn-card .case{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .conn-card h4{font-size:1.05rem;margin:4px 0 8px;}
+  .conn-card p{margin:.4em 0;font-size:.94rem;}
+  .conn-card ul{margin:.4em 0;padding-left:18px;font-size:.93rem;}
+  .conn-card li{margin-bottom:4px;}
+
+  details.sources{margin-top:6px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.05em;color:var(--color-burgundy-light);font-weight:600;}
+  details.sources ol{font-size:.9rem;color:var(--color-ink-soft);padding-left:22px;}
+  details.sources li{margin-bottom:7px;}
+
+  @media (max-width:680px){
+    .hero h1{font-size:1.9rem;}
+    .fund-row{flex-direction:column;}
+    .conn-grid{grid-template-columns:1fr;}
+    .vs-grid{grid-template-columns:1fr;}
+    .vs-grid > div:nth-child(odd){border-right:none;}
+    .vs-grid .vs-head:nth-child(2){display:none;}
+  }
+  footer{padding:40px 0 60px;text-align:center;color:var(--color-ink-soft);font-size:.85rem;}
+  footer a{color:var(--color-link);}
+  .jumpnav{background:var(--color-paper-deep);border-bottom:1px solid var(--color-line);padding:12px 0;position:sticky;top:0;z-index:5;}
+  .jumpnav .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .jumpnav a{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.03em;color:var(--color-ink);text-decoration:none;border-bottom:1px solid transparent;}
+  .jumpnav a:hover{border-bottom-color:var(--color-link);color:var(--color-link);}
+  section[id]{scroll-margin-top:60px;}
+  .race-strip{display:grid;grid-template-columns:repeat(8,1fr);margin-top:26px;border-top:1px solid var(--color-line);border-left:1px solid var(--color-line);background:var(--color-card);}
+  .race-strip > div{padding:12px 12px 14px;border-right:1px solid var(--color-line);border-bottom:1px solid var(--color-line);min-width:0;}
+  .race-strip .d{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-link);font-weight:600;white-space:nowrap;}
+  .race-strip .e{font-size:.84rem;line-height:1.35;margin-top:6px;hyphens:none;overflow-wrap:normal;}
+  .race-strip .future .d{color:var(--color-ink-soft);}
+  @media (max-width:1000px){.race-strip{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:560px){.race-strip{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:680px){.jumpnav{position:static;} .rubric-table td:first-child{width:auto;}}
+  .chart-card{background:var(--color-card);border:1px solid var(--color-line);padding:18px 20px;margin:22px 0;}
+  .chart-card h3{font-size:1.05rem;margin-bottom:4px;}
+  .chart-card .cap{font-size:.86rem;color:var(--color-ink-soft);margin:0 0 12px;}
+  .chart-box{position:relative;height:260px;}
+  .mermaid-wrap{background:var(--color-card);border:1px solid var(--color-line);padding:18px;margin:22px 0;overflow-x:auto;}
+  .mermaid-wrap .cap{font-size:.86rem;color:var(--color-ink-soft);margin:10px 0 0;}
+  .mermaid{text-align:center;}
+  details.ledger{background:var(--color-card);border:1px solid var(--color-line);padding:12px 18px;margin:12px 0;}
+  details.ledger summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.04em;color:var(--color-burgundy-light);font-weight:600;}
+  details.ledger .table-scroll{max-height:460px;overflow:auto;margin-top:10px;}
+  .rubric-table{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--color-card);border:1px solid var(--color-line);}
+  .rubric-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:10px;background:var(--color-paper-deep);}
+  .rubric-table td{padding:12px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .rubric-table td:first-child{font-weight:600;width:170px;}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:#fff;border-radius:3px;padding:1px 6px;margin-right:6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--color-stat);} .g-d{background:#b5652f;} .g-f{background:var(--color-burgundy-light);} .g-na{background:#9a9186;font-size:.8rem;}
+  .topic-head{font-family:'Playfair Display',serif;font-size:1.15rem;margin:26px 0 8px;}
+  .compare-table td.num{text-align:right;}
+
+  .flip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:22px 0;}
+  .flip{perspective:900px;background:none;border:0;padding:0;cursor:pointer;text-align:left;font:inherit;color:inherit;min-height:170px;}
+  .flip-inner{position:relative;width:100%;height:100%;min-height:170px;transition:transform .5s;transform-style:preserve-3d;}
+  .flip.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:14px 16px;display:flex;flex-direction:column;justify-content:center;}
+  .flip-front{text-align:center;}
+  .flip-front .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.5rem;color:var(--color-link);}
+  .flip-front .label{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-ink-soft);letter-spacing:.03em;margin-top:4px;}
+  .flip-front .hint{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--color-ink-soft);margin-top:8px;opacity:.75;}
+  .flip-back{transform:rotateY(180deg);background:var(--color-burgundy-deep);color:#f4ece6;border-color:var(--color-burgundy-deep);font-size:.84rem;line-height:1.45;overflow:auto;}
+  .flip-back strong{color:var(--color-stat);}
+  .flip:focus-visible .flip-face{outline:2px solid var(--color-link);outline-offset:2px;}
+  .mismatch{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--color-line);background:var(--color-card);margin:18px 0;}
+  .mismatch > div{padding:18px 20px;}
+  .mismatch > div:first-child{border-right:1px solid var(--color-line);}
+  .mismatch .amt{font-family:'Playfair Display',serif;font-weight:800;font-size:1.9rem;color:var(--color-flag);}
+  .mismatch .who{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  @media (max-width:680px){.mismatch{grid-template-columns:1fr;} .mismatch > div:first-child{border-right:none;border-bottom:1px solid var(--color-line);}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+
+<body>
+
+<header class="band">
+  <div class="wrap">
+    <a class="brandmark" href="index.html">Weber County Hive — Candidates 2026</a>
+    <nav class="topnav">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">CASE 22 · HOUSE DISTRICT 17 — OPEN SEAT — GENERAL ELECTION NOV. 3, 2026</div>
+    <h1>Two Filings, Two Numbers</h1>
+    <p class="dek">Rep. Stewart Barlow is leaving House District 17 (Fruit Heights, Kaysville, Layton area). Lili Bitner (R) beat his son, Sam Barlow, in the June primary and faces Eric Last (D) in November. CMV PAC's report says it spent $5,625 on signature gathering for her. Her own report lists that help at $1,687.50. The Doers Network paid her $3,750, and it lists her in a district she isn't running in.</p>
+    <div class="hero-meta">
+      <div><div class="stat-num">$75,472</div><div class="stat-label">CASH RAISED THROUGH 8/10/26 (INCL. $10,000 LOAN)</div></div>
+      <div><div class="stat-num">$3,937.50</div><div class="stat-label">GAP BETWEEN CMV PAC'S REPORT AND HERS</div></div>
+      <div><div class="stat-num">70.9%</div><div class="stat-label">PRIMARY WIN OVER SAM BARLOW</div></div>
+      <div><div class="stat-num">$2,291</div><div class="stat-label">OPPONENT ERIC LAST, CASH RAISED</div></div>
+      <div><div class="stat-num">"NA"</div><div class="stat-label">HER ANSWER ON EVERY REQUIRED DISCLOSURE-FORM LINE</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="jumpnav" aria-label="Sections"><div class="wrap">
+  <a href="#start">Start here</a><a href="#money">Money</a><a href="#cmv">CMV PAC</a><a href="#spending">Spending</a><a href="#platform">Platform</a><a href="#disclosure">Disclosure</a><a href="#connections">Connections</a><a href="#opponent">Opponent</a><a href="#rubric">Rubric</a><a href="#limits">Limits</a>
+</div></nav>
+
+<section id="start">
+  <div class="wrap">
+    <div class="eyebrow">START HERE</div>
+    <h2>Five Things the Records Show</h2>
+    <div class="start-here">
+      <ol>
+        <li><strong>Two reports list the same help at different amounts.</strong> CMV PAC reported spending $5,625 on "Signature Gathering" for her on Jan. 19. Her report first listed $5,625 in-kind from CMV PAC. On April 12 her campaign deleted that entry and reported $1,687.50 instead. Neither report says why.</li>
+        <li><strong>CMV PAC paid for both candidates in the primary.</strong> Its report lists the same $5,625 for Sam Barlow on the same day.</li>
+        <li><strong>The Doers Network paid her $3,750.</strong> Her report lists it as "Utah Doers," Feb. 18. The Doers Network's own roster lists her as the House District 27 candidate. Her filings, and the state, say District 17.</li>
+        <li><strong>The Speaker's two committees gave $1,700.</strong> House Speaker Leadership PAC gave $700 and the Utah House Republican Election Committee gave $1,000.</li>
+        <li><strong>Her disclosure form answers "NA" on every required line.</strong> It names her husband and describes him as "a doctor in Plastic Surgery." His practice is Bitner Facial Plastic Surgery of Utah in Layton. The form asks for a spouse's employer only if the candidate believes it may be a conflict.</li>
+      </ol>
+    </div>
+    <div class="race-strip" aria-label="Race timeline">
+      <div><div class="d">JAN 2, 2026</div><div class="e">First contribution</div></div>
+      <div><div class="d">JAN 19</div><div class="e">CMV PAC pays signature gathering for her and Barlow</div></div>
+      <div><div class="d">FEB 13</div><div class="e">$10,000 loan from her husband</div></div>
+      <div><div class="d">FEB 18</div><div class="e">"Utah Doers" $3,750</div></div>
+      <div><div class="d">APR 18</div><div class="e">Convention: 84.5% to Barlow's 15.5%</div></div>
+      <div><div class="d">JUN 23</div><div class="e">Wins primary, 70.87%</div></div>
+      <div class="future"><div class="d">SEP 30</div><div class="e">Next spending report due</div></div>
+      <div class="future"><div class="d">NOV 3</div><div class="e">General election vs. Eric Last (D)</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="money">
+  <div class="wrap">
+    <div class="eyebrow">THE MONEY</div>
+    <h2>Where Her Campaign's Dollars Came From</h2>
+    <p class="section-dek">Cash contributions from her Convention Report (1/1&ndash;4/6/26), Primary Report (4/7&ndash;6/11/26) and the itemized list for 6/23&ndash;8/10/26. In-kind help is listed separately because the state's forms say it doesn't count toward cash totals.</p>
+
+    <div class="fund-row">
+      <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 38.8%, var(--color-stat) 38.8% 68.1%, var(--color-ink-soft) 68.1% 81.4%, var(--color-burgundy-light) 81.4% 93.5%, #8a6d1f 93.5% 100%);">
+        <div class="fund-donut-center"><div class="num">$75,472</div><div class="lbl">CASH RAISED</div></div>
+      </div>
+      <ul class="fund-donut-legend">
+        <li><span class="swatch" style="background:var(--color-link)"></span> Businesses, a trust and a foundation — $29,250 (38.8%)</li>
+        <li><span class="swatch" style="background:var(--color-stat)"></span> Individuals (44 entries) — $22,116.80 (29.3%)</li>
+        <li><span class="swatch" style="background:var(--color-ink-soft)"></span> Loan from her husband — $10,000 (13.2%)</li>
+        <li><span class="swatch" style="background:var(--color-burgundy-light)"></span> PACs and associations — $9,185.20 (12.2%)</li>
+        <li><span class="swatch" style="background:#8a6d1f"></span> Officeholders, party and leadership committees — $4,920 (6.5%)</li>
+      </ul>
+    </div>
+
+    <div class="fund-bar-row"><div class="bar-label"><span>John Bitner (spouse) — filed as "Personal Loan"</span><span>$10,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill alt" style="width:100%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>RGP LLC (Centerville)</span><span>$5,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:50%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Tanner Clinic (Layton)</span><span>$5,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:50%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>G42, LLC (Layton)</span><span>$5,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:50%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Harvest Right (Salt Lake City)</span><span>$5,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:50%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Matt &amp; Carrie Brinton</span><span>$5,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:50%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Todd Morgan Trust (Kaysville)</span><span>$4,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:40%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>"Utah Doers" (Doers Network)</span><span>$3,750</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:37.5%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Andrus Family Foundation (Holladay)</span><span>$2,500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:25%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>CMV PAC — <em>in-kind as she reports it; CMV reports $5,625</em></span><span>$1,687.50</span></div><div class="fund-bar-track"><div class="fund-bar-fill alt" style="width:16.9%"></div></div></div>
+
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$5,000 &times; 5</div><div class="label">FIVE $5,000 CHECKS</div><div class="hint">tap for the names</div></div>
+        <div class="flip-face flip-back">RGP LLC (2/16), Tanner Clinic (5/6), G42 LLC (5/22), Harvest Right (5/27), and Matt &amp; Carrie Brinton (6/23). Together <strong>$25,000</strong>, one-third of her cash.</div></div></button>
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$1,700</div><div class="label">THE SPEAKER'S COMMITTEES</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back">House Speaker Leadership PAC <strong>$700</strong> (3/27) and the Utah House Republican Election Committee <strong>$1,000</strong> (8/10), both tied to Speaker Mike Schultz in this site's PAC files.</div></div></button>
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$5,485</div><div class="label">HEALTH-CARE DONORS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back">Tanner Clinic <strong>$5,000</strong> and UMA <strong>$485.20</strong>. Rep. Ray Ward, a physician, gave $500. Nothing in these records connects these gifts to her husband's practice.</div></div></button>
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$3,700</div><div class="label">CREDIT UNIONS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back">UCU PAC <strong>$2,000</strong> and AFCU Development Fund <strong>$1,700</strong> in two checks. Tami Tran (Case 21) got the same $2,000 from UCU and $1,500 from AFCU.</div></div></button>
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">27 of 44</div><div class="label">INDIVIDUAL GIFTS OF $250 OR LESS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back">Most individual donors are local: <strong>$15,416.80</strong> of the $22,116.80 from individuals came from Davis County addresses, mostly Fruit Heights, Kaysville, Layton and Farmington.</div></div></button>
+    </div>
+
+    <div class="chart-card">
+      <h3>Raised and spent, by report</h3>
+      <p class="cap">Cash in, cash out, and the ending balance each report shows. Spending after June 11 is not in hand yet.</p>
+      <div class="chart-box"><canvas id="periodChart" aria-label="Bar chart of contributions and expenditures by reporting period"></canvas></div>
+    </div>
+
+    <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    BIZ["Businesses, trust, foundation<br/>$29,250"] --> CAMP
+    IND["44 individual entries<br/>$22,116.80"] --> CAMP
+    LOAN["Husband's loan<br/>$10,000"] --> CAMP
+    PAC["PACs and associations<br/>$9,185.20"] --> CAMP
+    OFF["Officeholders, party,<br/>leadership committees<br/>$4,920"] --> CAMP
+    CAMP(["BITNER CAMPAIGN<br/>$75,472 cash"])
+    CAMP --> PR["Printing and mail<br/>$12,259.20"]
+    CAMP --> RO["Roost<br/>$11,153.46"]
+    CAMP --> SW["Shirts and swag<br/>$5,559.97"]
+    CAMP --> PA["Davis County GOP<br/>$1,200"]
+    CAMP --> FO["Food and events<br/>$1,046.03"]
+    CAMP --> OT["Texts and supplies<br/>$721.75"]
+    CAMP -.-> BAL["Balance 6/11/26<br/>$36,531.59"]
+    style CAMP fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style LOAN fill:#fbf3e6,stroke:#d9a441
+    style BAL fill:#fbf8f1,stroke:#5c534c,stroke-dasharray:4 3
+</div>
+      <p class="cap">Money in is through 8/10/26. Money out is through 6/11/26, the end of the last report with spending.</p>
+    </div>
+
+    <details class="ledger">
+      <summary>Every contribution, 1/2/26&ndash;8/10/26 (77 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Contributor (as filed)</th><th>City</th><th>Type</th><th>Report</th><th>Amount</th></tr>
+<tr><td>1/2/2026</td><td>Spencer Stokes</td><td>Salt Lake City</td><td>Cash</td><td>Convention</td><td class="num">$500.00</td></tr>
+<tr><td>1/19/2026</td><td>CMV PAC</td><td>Draper</td><td><span class="status-pill status-unresolved">In-kind</span></td><td>Convention</td><td class="num">$1,687.50</td></tr>
+<tr><td>2/3/2026</td><td>Perry</td><td>Layton</td><td>Cash</td><td>Convention</td><td class="num">$20.00</td></tr>
+<tr><td>2/3/2026</td><td>Janet Hintze</td><td>Kaysville</td><td>Cash</td><td>Convention</td><td class="num">$200.00</td></tr>
+<tr><td>2/10/2026</td><td>UMA</td><td>Midvale</td><td>Cash</td><td>Convention</td><td class="num">$485.20</td></tr>
+<tr><td>2/10/2026</td><td>Allison Parson</td><td>Layton</td><td>Cash</td><td>Convention</td><td class="num">$1,000.00</td></tr>
+<tr><td>2/12/2026</td><td>Lees</td><td>Hillsborough, OR</td><td>Cash</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>2/13/2026</td><td>Ivie</td><td>Fruit Heights</td><td>Cash</td><td>Convention</td><td class="num">$1,000.00</td></tr>
+<tr><td>2/13/2026</td><td>John Bitner (spouse), "Personal Loan"</td><td>Fruit Heights</td><td><span class="status-pill status-unresolved">Loan</span></td><td>Convention</td><td class="num">$10,000.00</td></tr>
+<tr><td>2/16/2026</td><td>RGP LLC</td><td>Centerville</td><td>Cash</td><td>Convention</td><td class="num">$5,000.00</td></tr>
+<tr><td>2/18/2026</td><td>Utah Doers</td><td>Midvale</td><td>Cash</td><td>Convention</td><td class="num">$3,750.00</td></tr>
+<tr><td>2/19/2026</td><td>John Wilcox</td><td>Layton</td><td>Cash</td><td>Convention</td><td class="num">$500.00</td></tr>
+<tr><td>2/20/2026</td><td>Rhonda Perkes</td><td>Bountiful</td><td>Cash</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>2/20/2026</td><td>Heilsons</td><td>Layton</td><td>Cash</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>2/20/2026</td><td>Mat Shaw</td><td>Kaysville</td><td>Cash</td><td>Convention</td><td class="num">$200.00</td></tr>
+<tr><td>2/24/2026</td><td>Robert Prince</td><td>Centerville</td><td>Cash</td><td>Convention</td><td class="num">$50.00</td></tr>
+<tr><td>3/3/2026</td><td>Walter Recksiek</td><td>Layton</td><td>Cash</td><td>Convention</td><td class="num">$300.00</td></tr>
+<tr><td>3/6/2026</td><td>Jordan Harbertson</td><td>Farmington</td><td>Cash</td><td>Convention</td><td class="num">$1,000.00</td></tr>
+<tr><td>3/16/2026</td><td>Travis Child</td><td>Orem</td><td>Cash</td><td>Convention</td><td class="num">$500.00</td></tr>
+<tr><td>3/18/2026</td><td>Staker Parson</td><td>Ogden</td><td>Cash</td><td>Convention</td><td class="num">$1,000.00</td></tr>
+<tr><td>3/18/2026</td><td>Laurie Gardner</td><td>Fruit Heights</td><td>Cash</td><td>Convention</td><td class="num">$2,000.00</td></tr>
+<tr><td>3/27/2026</td><td>UCU PAC</td><td>Salt Lake City</td><td>Cash</td><td>Convention</td><td class="num">$2,000.00</td></tr>
+<tr><td>3/27/2026</td><td>House Speaker Leadership PAC</td><td>Salt Lake City</td><td>Cash</td><td>Convention</td><td class="num">$700.00</td></tr>
+<tr><td>3/27/2026</td><td>Scott Neville</td><td>Kaysville</td><td>Cash</td><td>Convention</td><td class="num">$1,000.00</td></tr>
+<tr><td>4/2/2026</td><td>Todd Morgan Trust</td><td>Kaysville</td><td>Cash</td><td>Convention</td><td class="num">$4,000.00</td></tr>
+<tr><td>4/3/2026</td><td>E. Lynn Hansen</td><td>Farmington</td><td>Cash</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>4/9/2026</td><td>Lois Bitner</td><td>Layton</td><td>Cash</td><td>Primary</td><td class="num">$1,000.00</td></tr>
+<tr><td>4/9/2026</td><td>Pulhams</td><td>Layton</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>4/9/2026</td><td>Justin Brown</td><td>Farmington</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>4/9/2026</td><td>Michael Martineau</td><td>Fruit Heights</td><td>Cash</td><td>Primary</td><td class="num">$500.00</td></tr>
+<tr><td>4/9/2026</td><td>Paul Cutler</td><td>Centerville</td><td>Cash</td><td>Primary</td><td class="num">$250.00</td></tr>
+<tr><td>4/9/2026</td><td>Brian Slagle</td><td>Syracuse</td><td>Cash</td><td>Primary</td><td class="num">$1,000.00</td></tr>
+<tr><td>4/10/2026</td><td>Ray Ward</td><td>Bountiful</td><td>Cash</td><td>Primary</td><td class="num">$500.00</td></tr>
+<tr><td>4/10/2026</td><td>Karen Peterson</td><td>Clinton</td><td>Cash</td><td>Primary</td><td class="num">$250.00</td></tr>
+<tr><td>4/14/2026</td><td>Jay Welk</td><td>Kaysville</td><td>Cash</td><td>Primary</td><td class="num">$96.80</td></tr>
+<tr><td>4/15/2026</td><td>Rachel Terry</td><td>Bountiful</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>4/16/2026</td><td>Scott Condor</td><td>Layton</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>4/16/2026</td><td>Kim Smith</td><td>Fruit Heights</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>4/16/2026</td><td>Neka Roundy</td><td>Kaysville</td><td>Cash</td><td>Primary</td><td class="num">$200.00</td></tr>
+<tr><td>4/16/2026</td><td>Jason Hoagland</td><td>Fruit Heights</td><td>Cash</td><td>Primary</td><td class="num">$500.00</td></tr>
+<tr><td>4/18/2026</td><td>Lilian Bitner (candidate), food</td><td>Fruit Heights</td><td><span class="status-pill status-unresolved">In-kind</span></td><td>Primary</td><td class="num">$201.36</td></tr>
+<tr><td>4/20/2026</td><td>Jared Larsen</td><td>Kaysville</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>4/20/2026</td><td>Steve Coleman</td><td>Layton</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>4/20/2026</td><td>Kellie Greenhalgh</td><td>Layton</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>4/20/2026</td><td>Josh Durbano</td><td>Morgan</td><td>Cash</td><td>Primary</td><td class="num">$200.00</td></tr>
+<tr><td>4/20/2026</td><td>Kim Humpherys</td><td>Kaysville</td><td>Cash</td><td>Primary</td><td class="num">$250.00</td></tr>
+<tr><td>4/20/2026</td><td>Caden Wallace, balloons/arch kit/labor</td><td>Provo</td><td><span class="status-pill status-unresolved">In-kind</span></td><td>Primary</td><td class="num">$800.00</td></tr>
+<tr><td>4/20/2026</td><td>David Recksiek, board clips</td><td>Layton</td><td><span class="status-pill status-unresolved">In-kind</span></td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>4/27/2026</td><td>AFCU Development Fund</td><td>Ogden</td><td>Cash</td><td>Primary</td><td class="num">$1,500.00</td></tr>
+<tr><td>4/30/2026</td><td>Devin Wiser</td><td>North Salt Lake</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>5/2/2026</td><td>Carolyn Rasmussen</td><td>Ogden</td><td>Cash</td><td>Primary</td><td class="num">$300.00</td></tr>
+<tr><td>5/2/2026</td><td>Dan Ouzounian</td><td>Layton</td><td>Cash</td><td>Primary</td><td class="num">$200.00</td></tr>
+<tr><td>5/6/2026</td><td>Davis County Republican Party</td><td>Ogden</td><td>Cash</td><td>Primary</td><td class="num">$1,420.00</td></tr>
+<tr><td>5/6/2026</td><td>Tanner Clinic</td><td>Layton</td><td>Cash</td><td>Primary</td><td class="num">$5,000.00</td></tr>
+<tr><td>5/15/2026</td><td>Rebecca Neville</td><td>Fruit Heights</td><td>Cash</td><td>Primary</td><td class="num">$1,500.00</td></tr>
+<tr><td>5/15/2026</td><td>Chaleh Trujillo</td><td>Kaysville</td><td>Cash</td><td>Primary</td><td class="num">$200.00</td></tr>
+<tr><td>5/20/2026</td><td>Holland &amp; Hart LLP</td><td>Salt Lake City</td><td>Cash</td><td>Primary</td><td class="num">$250.00</td></tr>
+<tr><td>5/20/2026</td><td>Utah Victory PAC</td><td>Bethesda, MD</td><td>Cash</td><td>Primary</td><td class="num">$250.00</td></tr>
+<tr><td>5/20/2026</td><td>Kent Murdock</td><td>Layton</td><td>Cash</td><td>Primary</td><td class="num">$1,000.00</td></tr>
+<tr><td>5/20/2026</td><td>Old Republic Title &ndash; Hendry</td><td>South Ogden</td><td>Cash</td><td>Primary</td><td class="num">$1,500.00</td></tr>
+<tr><td>5/22/2026</td><td>James Wendler</td><td>Farmington</td><td>Cash</td><td>Primary</td><td class="num">$200.00</td></tr>
+<tr><td>5/22/2026</td><td>G42, LLC</td><td>Layton</td><td>Cash</td><td>Primary</td><td class="num">$5,000.00</td></tr>
+<tr><td>5/27/2026</td><td>Harvest Right</td><td>Salt Lake City</td><td>Cash</td><td>Primary</td><td class="num">$5,000.00</td></tr>
+<tr><td>5/27/2026</td><td>Todd Weiler</td><td>Woods Cross</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>5/27/2026</td><td>John Rowberry</td><td>Fruit Heights</td><td>Cash</td><td>Primary</td><td class="num">$200.00</td></tr>
+<tr><td>5/31/2026</td><td>Derek Brown</td><td>Salt Lake City</td><td>Cash</td><td>Primary</td><td class="num">$200.00</td></tr>
+<tr><td>5/31/2026</td><td>Kathy Oviatt</td><td>Farmington</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>6/1/2026</td><td>All In For Utah PAC, text-message ad</td><td>Cottonwood Heights</td><td><span class="status-pill status-unresolved">In-kind</span></td><td>Primary</td><td class="num">$319.13</td></tr>
+<tr><td>6/6/2026</td><td>Tamara Tran</td><td>Kaysville</td><td>Cash</td><td>Primary</td><td class="num">$500.00</td></tr>
+<tr><td>6/6/2026</td><td>Valerie Nye</td><td>Fruit Heights</td><td>Cash</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>6/9/2026</td><td>Andrus Family Foundation</td><td>Holladay</td><td>Cash</td><td>Primary</td><td class="num">$2,500.00</td></tr>
+<tr><td>6/10/2026</td><td>AFCU Development Fund</td><td>Ogden</td><td>Cash</td><td>Primary</td><td class="num">$200.00</td></tr>
+<tr><td>6/17/2026</td><td>John Bitner (spouse), sign lumber and labor</td><td>Fruit Heights</td><td><span class="status-pill status-unresolved">In-kind</span></td><td>Primary</td><td class="num">$530.00</td></tr>
+<tr><td>6/23/2026</td><td>Matt &amp; Carrie Brinton</td><td>Salt Lake City</td><td>Cash</td><td>6/23&ndash;8/10</td><td class="num">$5,000.00</td></tr>
+<tr><td>6/29/2026</td><td>Utah Bankers Association</td><td>Salt Lake City</td><td>Cash</td><td>6/23&ndash;8/10</td><td class="num">$500.00</td></tr>
+<tr><td>7/16/2026</td><td>Utah Farm Bureau Federation AGPAC</td><td>Sandy</td><td>Cash</td><td>6/23&ndash;8/10</td><td class="num">$500.00</td></tr>
+<tr><td>8/10/2026</td><td>Utah House Republican Election Committee</td><td>Layton</td><td>Cash</td><td>6/23&ndash;8/10</td><td class="num">$1,000.00</td></tr>
+        <tr><td></td><td><strong>Cash total (incl. $10,000 loan)</strong></td><td></td><td></td><td></td><td class="num"><strong>$75,472.00</strong></td></tr>
+        <tr><td></td><td><strong>In-kind total</strong></td><td></td><td></td><td></td><td class="num"><strong>$3,637.99</strong></td></tr>
+      </table>
+      </div>
+    </details>
+
+    <details class="ledger">
+      <summary>The amendment trail on her Convention Report</summary>
+      <div class="table-scroll" style="max-height:none;">
+      <table class="entity-table">
+        <tr><th>Deleted 4/9 or 4/12/26</th><th>What was there</th><th>What the report shows now</th></tr>
+        <tr><td>Perry, Janet Hintze, Lees</td><td>$20, $200 and $100 contributions</td><td>The same three names and amounts, entered again. This reads as duplicate cleanup.</td></tr>
+        <tr><td>CMV PAC</td><td>$5,625, in-kind, comment "Taylor Morgan"</td><td>$1,687.50, in-kind. See the next section.</td></tr>
+        <tr><td>Roost company &ndash; Printing (two entries)</td><td>$259.31 each, dated 3/12 and 3/25</td><td>One $259.31 Roost printing expense, dated 4/7, on the Primary Report.</td></tr>
+      </table>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section id="cmv">
+  <div class="wrap">
+    <div class="eyebrow">CMV PAC</div>
+    <h2>One Payment, Two Amounts</h2>
+    <p class="section-dek">CMV PAC is Count My Vote's PAC. This site's <a href="https://weber-county-hive.github.io/pac/cmv-pac.html">CMV PAC file</a> documents it paying for signature gathering for a slate of 2026 legislative candidates.</p>
+
+    <div class="mismatch">
+      <div><div class="who">CMV PAC'S OWN REPORT</div><div class="amt">$5,625</div><p>Jan. 19, 2026. "Signature Gathering." The same amount, on the same day, is listed for Sam Barlow, her primary opponent.</p></div>
+      <div><div class="who">BITNER'S CONVENTION REPORT, AS AMENDED</div><div class="amt">$1,687.50</div><p>Jan. 19, 2026. In-kind. Entered on 4/12/26, replacing a $5,625 in-kind entry the campaign deleted the same day.</p></div>
+    </div>
+
+    <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart TB
+    CMV["CMV PAC report<br/>1/19/26: $5,625 Signature Gathering"] --> B1
+    CMV --> SB["Sam Barlow<br/>$5,625, same day"]
+    B1["Bitner report, first entry<br/>$5,625 in-kind<br/>comment: Taylor Morgan"] -->|"deleted 4/12/26"| B2
+    B2["Bitner report, current entry<br/>$1,687.50 in-kind"]
+    B2 -.-> GAP(["$3,937.50 not on her report"])
+    style CMV fill:#fbf8f1,stroke:#5c1a2b
+    style B1 fill:#fbf8f1,stroke:#5c534c,stroke-dasharray:4 3
+    style B2 fill:#fbf8f1,stroke:#c0572e
+    style GAP fill:#fdeeea,stroke:#a5372a
+</div>
+      <p class="cap">$1,687.50 is 30% of $5,625. Neither report explains the change. This site's CMV PAC file lists Taylor Morgan as a CMV PAC director.</p>
+    </div>
+
+    <div class="record-card">
+      <h3>What can be said, and what can't</h3>
+      <p>Both reports are public, and they list different amounts for the same Jan. 19 entry. That is the finding. The records don't show which amount is right, or whether part of the $5,625 covered something other than her campaign.</p>
+      <span class="rc-tag rc-flag">Documented: the two amounts differ</span>
+      <span class="rc-tag">Not shown: the reason</span>
+    </div>
+  </div>
+</section>
+
+<section id="spending">
+  <div class="wrap">
+    <div class="eyebrow">THE SPENDING</div>
+    <h2>Print Shops, Roost, and Shirts</h2>
+    <p class="section-dek">$31,940.41 spent through 6/11/26. Roost, a campaign-services and printing vendor, is the single largest payee.</p>
+
+    <div class="chart-card">
+      <h3>Where the money went</h3>
+      <p class="cap">Every expenditure on her Convention and Primary reports, grouped by vendor type.</p>
+      <div class="chart-box"><canvas id="spendChart" aria-label="Bar chart of campaign spending by category"></canvas></div>
+    </div>
+
+    <details class="ledger">
+      <summary>Every expenditure through 6/11/26 (39 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Amount</th></tr>
+<tr><td>2/10/2026</td><td>Davis County Republican Party</td><td>Campaign Expense</td><td class="num">$500.00</td></tr>
+<tr><td>2/17/2026</td><td>Roost</td><td>Advertising</td><td class="num">$69.85</td></tr>
+<tr><td>2/17/2026</td><td>Roost</td><td>Campaign Expense</td><td class="num">$1,500.00</td></tr>
+<tr><td>2/17/2026</td><td>Stationary Express</td><td>Supplies</td><td class="num">$245.56</td></tr>
+<tr><td>2/18/2026</td><td>Utah Shirt Shop</td><td>Advertising</td><td class="num">$647.77</td></tr>
+<tr><td>2/27/2026</td><td>Roost</td><td>Campaign Expense</td><td class="num">$1,500.00</td></tr>
+<tr><td>2/27/2026</td><td>Cards</td><td>Advertising</td><td class="num">$45.00</td></tr>
+<tr><td>3/25/2026</td><td>Davis County Republican Party</td><td>Campaign Expense</td><td class="num">$700.00</td></tr>
+<tr><td>4/7/2026</td><td>Roost company &ndash; Printing</td><td>Advertising</td><td class="num">$259.31</td></tr>
+<tr><td>4/12/2026</td><td>Roost printing &amp; stamps</td><td>Advertising</td><td class="num">$436.74</td></tr>
+<tr><td>4/17/2026</td><td>Alphagraphics</td><td>Advertising</td><td class="num">$2,257.61</td></tr>
+<tr><td>4/20/2026</td><td>Costco</td><td>Campaign Expense</td><td class="num">$280.79</td></tr>
+<tr><td>4/29/2026</td><td>Alphagraphics</td><td>Advertising</td><td class="num">$953.45</td></tr>
+<tr><td>4/30/2026</td><td>Crumbl Cookie</td><td>Campaign Expense</td><td class="num">$160.64</td></tr>
+<tr><td>5/6/2026</td><td>Roost company &ndash; Printing</td><td>Advertising</td><td class="num">$124.63</td></tr>
+<tr><td>5/6/2026</td><td>Roost Campaign Services</td><td>Campaign Expense</td><td class="num">$1,500.00</td></tr>
+<tr><td>5/6/2026</td><td>Drip-Swag</td><td>Campaign Expense</td><td class="num">$1,136.86</td></tr>
+<tr><td>5/13/2026</td><td>Roost &ndash; Vottiv</td><td>Advertising</td><td class="num">$100.00</td></tr>
+<tr><td>5/15/2026</td><td>Utah Shirt Shop</td><td>Advertising</td><td class="num">$1,695.34</td></tr>
+<tr><td>5/22/2026</td><td>Roost company &ndash; Printing</td><td>Advertising</td><td class="num">$301.76</td></tr>
+<tr><td>5/23/2026</td><td>Zupas</td><td>Campaign Expense</td><td class="num">$115.83</td></tr>
+<tr><td>5/27/2026</td><td>Roost Campaign Services</td><td>Campaign Expense</td><td class="num">$1,500.00</td></tr>
+<tr><td>5/27/2026</td><td>Chick-fil-A</td><td>Campaign Expense</td><td class="num">$41.94</td></tr>
+<tr><td>5/27/2026</td><td>Utah Shirt Shop</td><td>Advertising</td><td class="num">$2,080.00</td></tr>
+<tr><td>5/28/2026</td><td>Sun Print Solutions</td><td>Advertising</td><td class="num">$3,154.56</td></tr>
+<tr><td>5/28/2026</td><td>Alphagraphics</td><td>Advertising</td><td class="num">$1,235.52</td></tr>
+<tr><td>5/28/2026</td><td>Roost Campaign Services</td><td>Advertising</td><td class="num">$2,020.00</td></tr>
+<tr><td>5/30/2026</td><td>Zupas</td><td>Campaign Expense</td><td class="num">$107.90</td></tr>
+<tr><td>5/31/2026</td><td>Roost Campaign Services</td><td>Campaign Expense</td><td class="num">$1,500.00</td></tr>
+<tr><td>5/31/2026</td><td>Roost company &ndash; Printing</td><td>Advertising</td><td class="num">$341.17</td></tr>
+<tr><td>5/31/2026</td><td>Chick-fil-A</td><td>Campaign Expense</td><td class="num">$73.00</td></tr>
+<tr><td>6/1/2026</td><td>Alphagraphics</td><td>Advertising</td><td class="num">$755.04</td></tr>
+<tr><td>6/2/2026</td><td>Sun Lithographics (mailer)</td><td>Advertising</td><td class="num">$3,695.39</td></tr>
+<tr><td>6/4/2026</td><td>FedEx Office</td><td>Advertising</td><td class="num">$162.63</td></tr>
+<tr><td>6/4/2026</td><td>Votivv (campaign texts)</td><td>Campaign Expense</td><td class="num">$460.00</td></tr>
+<tr><td>6/5/2026</td><td>Panda Express</td><td>Campaign Expense</td><td class="num">$46.11</td></tr>
+<tr><td>6/6/2026</td><td>Zupas</td><td>Campaign Expense</td><td class="num">$177.19</td></tr>
+<tr><td>6/9/2026</td><td>Cafe Zupas</td><td>Campaign Expense</td><td class="num">$42.63</td></tr>
+<tr><td>6/11/2026</td><td>West University Pack &amp; Ship</td><td>Supplies</td><td class="num">$16.19</td></tr>
+        <tr><td></td><td><strong>Total</strong></td><td></td><td class="num"><strong>$31,940.41</strong></td></tr>
+      </table>
+      </div>
+    </details>
+
+    <div class="chart-card">
+      <h3>The HD-17 Republican race</h3>
+      <p class="cap">Davis County convention (second round) and the June 23 primary, as reported by the Standard-Examiner.</p>
+      <div class="chart-box" style="height:200px;"><canvas id="voteChart" aria-label="Bar chart of convention and primary results"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<section id="platform">
+  <div class="wrap">
+    <div class="eyebrow">PLATFORM VS. RECORD</div>
+    <h2>Her Words, Next to the Filings</h2>
+    <p class="section-dek">She has never held elected office, so there is no voting record to check her priorities against. What's on the record is her campaign's own filings and disclosure form. Quotes are from her "Priorities" page.</p>
+    <div class="vs-grid">
+      <div class="vs-head">WHAT SHE SAYS</div><div class="vs-head">WHAT THE RECORDS SHOW</div>
+      <div class="said">"I will insist that tax dollars are spent wisely and efficiently, and I will oppose unnecessary or irresponsible tax increases."</div><div>No tax votes to compare. Her campaign's own totals reconcile to its line items on both reports.</div>
+      <div class="said">"I will work to keep government accountable and transparent."</div><div>Her report lists CMV PAC's help at $1,687.50; CMV's report lists $5,625. The change was made by amendment on 4/12/26 with no explanation. Her disclosure form answers "NA" on every required line.</div>
+      <div class="said">"...conserve water, protect the Great Salt Lake... while respecting private property rights."</div><div>Donors include Staker Parson ($1,000), which this site's other files identify as a Clyde Companies subsidiary, and the Utah Farm Bureau's AGPAC ($500). Nothing here ties a gift to a position.</div>
+      <div class="said">"...local control in education... without imposing a one-size-fits-all approach from the state or federal government."</div><div>No record to compare yet.</div>
+    </div>
+  </div>
+</section>
+
+<section id="disclosure">
+  <div class="wrap">
+    <div class="eyebrow">THE DISCLOSURE FORM</div>
+    <h2>Every Required Line: "NA"</h2>
+    <p class="section-dek">Her House conflict-of-interest form, read from the filed text. The "NA" answers are typed into the form; this is not a blank template.</p>
+
+    <div class="record-card">
+      <h3>How her campaign describes her</h3>
+      <p class="quote-block">"Lili has served for nearly 20 years as a county and state delegate and as Legislative Chair for House Districts 16 and 17."</p>
+      <p>Her site lists five priorities: fiscal responsibility and affordability, conservative values, limited government, strengthening education, and "Defending Our Water &amp; Quality of Life."</p>
+      <p>Her "Meet Lili" page adds:</p>
+      <ul>
+        <li>"Lili works as a professional event planner for private and corporate events." It says she has managed more than 100 weddings and large events, most recently the Media and VIP Open House for the Layton Temple.</li>
+        <li>"She currently serves as Secretary of the Davis County Republican Women" and is active in the Utah Federation of Republican Women.</li>
+        <li>She is a member of the Davis County Medical Alliance, "advocating for improved healthcare policy," and "has served on the Davis County Interfaith Council since 2013."</li>
+      </ul>
+      <span class="rc-tag rc-flag">Caution: see the table below before writing anything</span>
+    </div>
+    <div class="table-scroll">
+    <table class="entity-table">
+      <tr><th>Item</th><th>What it asks</th><th>Her answer</th><th>What else is on the record</th></tr>
+      <tr><td>1A/1B</td><td>Current and prior employers, occupation</td><td>NA</td><td>Her own site says she "works as a professional event planner for private and corporate events." The records don't show whether that work runs through an employer or a business, or how much it pays.</td></tr>
+      <tr><td>2A&ndash;2C</td><td>Entities she owns or is an officer of</td><td>NA</td><td>Her site says she is Secretary of the Davis County Republican Women. Whether that group is an "entity" this item covers has not been checked. Not yet checked against Utah Division of Corporations records.</td></tr>
+      <tr><td>3A</td><td>Anyone who paid her $5,000+ in income</td><td>NA</td><td>Consistent with the form only if no single event-planning client paid her $5,000 or more in the prior year. The records don't show either way.</td></tr>
+      <tr><td>4A</td><td>Stocks or bonds of $5,000+</td><td>NA</td><td>&mdash;</td></tr>
+      <tr><td>5A</td><td>Boards (paid or unpaid) and paid leadership roles</td><td>NA</td><td>Her site says she has "served on" the Davis County Interfaith Council since 2013. Whether that is a board seat the item covers is not shown.</td></tr>
+      <tr><td>7A</td><td>Spouse, and spouse's employer <em>if she believes it may be a conflict</em></td><td>John Bitner. "My husband is a doctor in Plastic Surgery."</td><td>His website names the practice Bitner Facial Plastic Surgery of Utah, 425 S 100 W, Layton. The form makes the employer optional, so leaving it off is not an omission.</td></tr>
+      <tr><td>8A</td><td>Anything else she thinks may be a conflict (optional)</td><td>NA</td><td>&mdash;</td></tr>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="connections">
+  <div class="wrap">
+    <div class="eyebrow">THE CONNECTIONS</div>
+    <h2>Where Her Campaign Meets the Rest of This Docket</h2>
+    <p class="section-dek">Every link below is a shared donor, address or funder found both in her filings and in another case file on this site. A shared name is a connection, not an accusation.</p>
+
+    <div class="hub">
+      <div class="eyebrow">CASE 22 · HD-17</div>
+      <h3>Lilian "Lili" Bitner</h3>
+      <p>Fruit Heights · Doers Network endorsee · won the primary for Rep. Stewart Barlow's open seat</p>
+    </div>
+
+    <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    SB["Sam Barlow<br/>her primary opponent"] ---|"got $5,625"| CMV
+    TT["Tami Tran SD-6<br/>CASE 21"] ---|"got $10,600"| DN
+    CR["Craythorne HD-13<br/>CASE 13"] ---|"got $3,750"| DN
+    TE["Teuscher, Monson, Saxton<br/>HD-12 file"] ---|"got $61,000"| SPK
+    CMV["CMV PAC<br/>Count My Vote"]
+    DN["Doers Network<br/>CASE 14"]
+    AI["All In For Utah PAC<br/>CASE 11"]
+    SPK["Speaker Schultz's<br/>HSLPAC + UHREC"]
+    CMV -->|"$1,687.50 in-kind<br/>(CMV reports $5,625)"| LB(["LILI BITNER<br/>HD-17"])
+    DN -->|"$3,750"| LB
+    AI -->|"$319.13 in-kind"| LB
+    SPK -->|"$1,700"| LB
+    TT -->|"$500 personal"| LB
+    style LB fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style CMV fill:#fdeeea,stroke:#a5372a
+    style DN fill:#fbf8f1,stroke:#5c1a2b
+    style AI fill:#fbf8f1,stroke:#5c1a2b
+    style SPK fill:#fbf3e6,stroke:#d9a441
+</div>
+      <p class="cap">Arrows into Bitner are money or in-kind help to her campaign. Left column: other 2026 candidates who received money from the same source. No money moved between those candidates. The $61,000 is the combined total this site's HD-12 file lists for Teuscher, Monson and Saxton from Schultz's two PACs.</p>
+    </div>
+
+    <div class="conn-grid">
+      <div class="conn-card doers">
+        <div class="case">CASE 14 · <a href="doers-network.html">DOERS NETWORK</a></div>
+        <h4>$3,750 as "Utah Doers"</h4>
+        <ul>
+          <li>Filed 2/18/26 from 6905 South 1300 East, Midvale, the same building as the Doers Network's 3/1/26 payment to Tran.</li>
+          <li>Second-earliest dated Doers payment on this site, six days after Craythorne's $3,750.</li>
+          <li>Filed under the name "Utah Doers" in February. The two Utah entities with that name found so far were registered in July (Utah Doers Network, 7/16/26; Utah Doers PAC, 7/20/26). Mike Bird's county report uses the same name.</li>
+          <li>The Doers roster lists her as the HD-27 candidate. Her filings say HD-17.</li>
+        </ul>
+      </div>
+
+      <div class="conn-card doers">
+        <div class="case">CASE 21 · <a href="sd6-tran-neal.html">TRAN, SD-6</a> · CASE 11</div>
+        <h4>Kaysville's mayor, and the same two PACs</h4>
+        <ul>
+          <li>Tamara Tran gave her $500 on 6/6/26. The address on the entry is 23 East Center Street, Kaysville City Hall's address. Her campaign entered the address.</li>
+          <li>All In For Utah PAC gave both women in-kind help: $319.13 in text-message ads to Bitner, $12,037.22 to Tran. Bitner's entry lists suite #251; Tran's list #224.</li>
+          <li>Donors they share: UCU PAC ($2,000 each), AFCU Development Fund, Holland &amp; Hart, AGPAC ($500 each), Devin Wiser, and the Doers Network.</li>
+        </ul>
+      </div>
+
+      <div class="conn-card gold">
+        <div class="case"><a href="hd12-graff-schultz.html">HD-12, SCHULTZ</a> · <a href="https://weber-county-hive.github.io/pac/house-speaker-leadership-pac.html">HSLPAC</a> · <a href="https://weber-county-hive.github.io/pac/uhrec-pac.html">UHREC</a></div>
+        <h4>The Speaker's committees</h4>
+        <p>House Speaker Leadership PAC gave $700 (3/27/26), matching the "Lili Bitner ($700)" line in this site's HD-12 file. The Utah House Republican Election Committee added $1,000 on 8/10/26, after she won the primary.</p>
+      </div>
+
+      <div class="conn-card gold">
+        <div class="case"><a href="https://weber-county-hive.github.io/pac/cmv-pac.html">CMV PAC</a></div>
+        <h4>Both sides of the primary</h4>
+        <p>CMV PAC's report lists $5,625 for signature gathering for Bitner and for Sam Barlow on 1/19/26. She then won the convention with 84.5% and the primary with 70.87%.</p>
+      </div>
+
+      <div class="conn-card">
+        <div class="case">CASE 16 · <a href="sd5-koford-hernandez.html">KOFORD, SD-5</a> · CASE 19 · <a href="hd16-stevenson-treasure.html">HD-16</a></div>
+        <h4>Davis County business donors</h4>
+        <ul>
+          <li>Staker Parson, $1,000. This site's Koford and HD-16 files identify it as a Clyde Companies subsidiary.</li>
+          <li>"Old Republic Title &ndash; Hendry," $1,500. The Koford file lists Michael Hendry, Old Republic Title &amp; Escrow vice president, as a Koford endorser.</li>
+          <li>Kent Murdock of Layton, $1,000. The HD-16 file lists a Kent Murdock who gave Bob Stevenson $9,000.</li>
+        </ul>
+      </div>
+
+      <div class="conn-card">
+        <div class="case">CASE 11 · <a href="luke-searle-hd59.html">SEARLE, HD-59</a> · <a href="https://weber-county-hive.github.io/pac/chris-mcconnehey-hd38.html">McCONNEHEY, HD-38</a></div>
+        <h4>Names that recur across the docket</h4>
+        <ul>
+          <li>Rep. Karen Peterson, $250, and listed on Bitner's endorsement page. She appears as a donor in the Searle, Craythorne, Calder/Hall, Jason Kyle and McConnehey files.</li>
+          <li>Spencer Stokes, $500. The McConnehey file identifies him as president of Stokes Strategies, a lobbying firm.</li>
+          <li>Votivv, her $460 texting vendor, also appears in the McConnehey file.</li>
+        </ul>
+      </div>
+
+      <div class="conn-card gold">
+        <div class="case">HER ENDORSEMENT PAGE</div>
+        <h4>Officials who endorse her</h4>
+        <ul>
+          <li>Davis County Sheriff Kelly Sparks; retired Davis County Sheriff's Capt. Jennifer Daley.</li>
+          <li>Kaysville Mayor Tami Tran (<a href="sd6-tran-neal.html">Case 21</a>), who also gave $500.</li>
+          <li>Farmington Mayor Brett Anderson and Farmington City Council member Melissa Layton.</li>
+          <li>Reps. Karen Peterson and Paul Cutler, who gave $250 each.</li>
+          <li>Two former Davis County Republican Party leaders: former chair Yemi Arunsi and former vice chair Devin Wiser ($100 donor).</li>
+          <li>Mike &amp; Sandi Hendry of Layton, matching the "Old Republic Title &ndash; Hendry" $1,500 entry.</li>
+        </ul>
+        <p>Most of the page is local families. At least 30 of the names on it also appear on her contribution reports.</p>
+      </div>
+
+      <div class="conn-card unres">
+        <div class="case">UNRESOLVED</div>
+        <h4>Names that match, not yet confirmed</h4>
+        <ul>
+          <li><strong>Rachel Terry</strong> of Bountiful, $100. Rachel George Terry sits on the Doers Network's Davis County board. Same name, not confirmed the same person.</li>
+          <li><strong>Andrus Family Foundation</strong>, Holladay, $2,500. The HD-16 file lists Jeremy Andrus (Traeger CEO) as a Stevenson donor. No link confirmed, and what kind of entity the foundation is has not been checked.</li>
+          <li><strong>Ray Ward, Todd Weiler, Derek Brown.</strong> The names and cities match sitting officeholders; the filings don't list titles. (Paul Cutler and Karen Peterson are confirmed by her endorsement page, which lists them as state representatives.)</li>
+          <li><strong>"Jim &amp; Sue Alvey, Layton"</strong> are on her endorsement page. Jim Alvey (R) is the HD-10 candidate in <a href="hd10-lesser-alvey.html">Case 04</a>. Same name, not confirmed the same person.</li>
+          <li><strong>"KO &amp; Melanie Murdock, Layton"</strong> are endorsers; Kent Murdock of Layton gave $1,000. Not confirmed the same person.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="opponent">
+  <div class="wrap">
+    <div class="eyebrow">THE OPPONENT</div>
+    <h2>Eric Last (D): $2,291 in Cash</h2>
+    <p class="section-dek">The Democratic candidate for House District 17, a mechanical engineer at BioM&eacute;rieux. From his DEX export (Convention and Primary reports) and itemized contributions for 7/2&ndash;9/14/26.</p>
+
+    <div class="chart-card">
+      <h3>Money in the HD-17 race</h3>
+      <p class="cap">Cash raised by each campaign, on one scale. Bitner's figure runs through 8/10/26; Last's through 9/14/26.</p>
+      <div class="chart-box" style="height:200px;"><canvas id="raceChart" aria-label="Bar chart comparing cash raised by Bitner and Last"></canvas></div>
+    </div>
+
+    <div class="record-card">
+      <h3>His money</h3>
+      <p><strong>$2,291.10 in cash</strong> through 9/14/26, plus $200 in-kind (parade candy from Gregg and Karen Richardson). $1,380.60 of it came through ActBlue Utah, a processor that passes along small online gifts; his reports list ActBlue, not the people who gave through it. The rest came from seven Kaysville donors plus $50 of his own.</p>
+      <p><strong>$1,007.96 spent</strong> through 6/11/26: printing (Print and Main), online ads (UZMarketing.com), and small supply purchases. Later spending is not in hand.</p>
+      <p>Bitner's campaign reported about <strong>33 times</strong> his cash. No PAC, business or officeholder money appears on his reports.</p>
+    </div>
+
+    <details class="ledger">
+      <summary>Every Last contribution, 2/8/26&ndash;9/14/26 (26 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Contributor (as filed)</th><th>City</th><th>Type</th><th>Report</th><th>Amount</th></tr>
+<tr><td>2/8/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>Convention</td><td class="num">$432.22</td></tr>
+<tr><td>2/15/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>Convention</td><td class="num">$72.03</td></tr>
+<tr><td>2/22/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>Convention</td><td class="num">$38.42</td></tr>
+<tr><td>4/30/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>Primary</td><td class="num">$9.60</td></tr>
+<tr><td>4/30/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>Primary</td><td class="num">$192.10</td></tr>
+<tr><td>5/9/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>Primary</td><td class="num">$105.65</td></tr>
+<tr><td>5/10/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>Primary</td><td class="num">$120.06</td></tr>
+<tr><td>5/10/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>Primary</td><td class="num">$24.01</td></tr>
+<tr><td>6/6/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>Primary</td><td class="num">$24.01</td></tr>
+<tr><td>6/6/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>Primary</td><td class="num">$6.00</td></tr>
+<tr><td>6/6/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>Primary</td><td class="num">$19.21</td></tr>
+<tr><td>6/6/2026</td><td>Eric Last (candidate)</td><td>Kaysville</td><td>Cash</td><td>Primary</td><td class="num">$50.00</td></tr>
+<tr><td>7/2/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$9.60</td></tr>
+<tr><td>7/2/2026</td><td>Lindsay Caldwell</td><td>Kaysville</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$103.00</td></tr>
+<tr><td>7/5/2026</td><td>Gregg and Karen Richardson</td><td>Kaysville</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$200.00</td></tr>
+<tr><td>7/6/2026</td><td>Alan Last</td><td>Kaysville</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$103.00</td></tr>
+<tr><td>7/13/2026</td><td>Gregg and Karen Richardson, parade candy</td><td>Kaysville</td><td><span class="status-pill status-unresolved">In-kind</span></td><td>7/2&ndash;9/14</td><td class="num">$200.00</td></tr>
+<tr><td>7/13/2026</td><td>Paul Sonntag</td><td>Kaysville</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$300.00</td></tr>
+<tr><td>7/13/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$67.22</td></tr>
+<tr><td>8/6/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$48.02</td></tr>
+<tr><td>8/6/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$9.60</td></tr>
+<tr><td>8/24/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$10.75</td></tr>
+<tr><td>8/24/2026</td><td>ActBlue Utah (conduit)</td><td>Boston, MA</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$192.10</td></tr>
+<tr><td>9/14/2026</td><td>Amy Leishman</td><td>Kaysville</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$20.60</td></tr>
+<tr><td>9/14/2026</td><td>Tessa Hendrickson</td><td>Kaysville</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$30.90</td></tr>
+<tr><td>9/14/2026</td><td>Jennifer Webb</td><td>Kaysville</td><td>Cash</td><td>7/2&ndash;9/14</td><td class="num">$103.00</td></tr>
+        <tr><td></td><td><strong>Cash total</strong></td><td></td><td></td><td></td><td class="num"><strong>$2,291.10</strong></td></tr>
+      </table>
+      </div>
+    </details>
+
+    <details class="ledger">
+      <summary>Every Last expenditure through 6/11/26 (12 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Amount</th></tr>
+<tr><td>4/3/2026</td><td>Print and Main</td><td>Advertising</td><td class="num">$95.56</td></tr>
+<tr><td>4/10/2026</td><td>Print and Main</td><td>Advertising</td><td class="num">$272.47</td></tr>
+<tr><td>4/30/2026</td><td>Walgreens</td><td>Advertising</td><td class="num">$17.15</td></tr>
+<tr><td>4/30/2026</td><td>Amazon.com</td><td>Advertising</td><td class="num">$69.40</td></tr>
+<tr><td>4/30/2026</td><td>Amazon.com</td><td>Advertising</td><td class="num">$68.04</td></tr>
+<tr><td>5/3/2026</td><td>UZMarketing.com</td><td>Advertising</td><td class="num">$200.00</td></tr>
+<tr><td>6/6/2026</td><td>Amazon.com</td><td>Advertising</td><td class="num">$55.49</td></tr>
+<tr><td>6/6/2026</td><td>Walgreens</td><td>Advertising</td><td class="num">$28.95</td></tr>
+<tr><td>6/6/2026</td><td>Dollar Tree</td><td>Advertising</td><td class="num">$8.85</td></tr>
+<tr><td>6/6/2026</td><td>UZMarketing.com</td><td>Advertising</td><td class="num">$22.05</td></tr>
+<tr><td>6/6/2026</td><td>UZMarketing.com</td><td>Advertising</td><td class="num">$120.00</td></tr>
+<tr><td>6/6/2026</td><td>Michele Smith</td><td>Advertising</td><td class="num">$50.00</td></tr>
+        <tr><td></td><td><strong>Total</strong></td><td></td><td class="num"><strong>$1,007.96</strong></td></tr>
+      </table>
+      </div>
+    </details>
+
+    <div class="record-card">
+      <h3>How his campaign describes him</h3>
+      <p>Raised in Centerville, a Viewmont High graduate, with degrees from Weber State in Spanish and in mechanical engineering technology. His site says his family has lived in Layton/Kaysville for 24 years and his children attended Davis High.</p>
+      <p class="quote-block">"Eric isn't a career politician &mdash; he's a husband, father, and neighbor who decided it was time to step up."</p>
+    </div>
+
+    <div class="record-card">
+      <h3>His disclosure form</h3>
+      <p><strong>Employer:</strong> BioM&eacute;rieux, 515 Colorow Rd, Salt Lake City. "Mechanical Engineer. My work is to automate manual manufacturing processes." He lists BioM&eacute;rieux as his only $5,000+ income source and describes it as a company that "produces clinical diagnostic equipment."</p>
+      <p><strong>Businesses, stocks, boards:</strong> none listed.</p>
+      <p><strong>Spouse:</strong> Annette Last. He lists her employer as Oak Coins, 348 North Main Street, Kaysville, an item the form makes optional.</p>
+      <span class="rc-tag">Read from filed text</span>
+    </div>
+
+    <h3 style="margin-top:28px;">Where they say they stand</h3>
+    <p style="color:var(--color-ink-soft);font-size:.95rem;">From each campaign's "Priorities" page, in their own words.</p>
+    <div class="vs-grid" style="margin-bottom:22px;">
+      <div class="vs-head">BITNER (R)</div><div class="vs-head">LAST (D)</div>
+      <div class="said"><strong>Great Salt Lake:</strong> "support locally driven solutions that conserve water, protect the Great Salt Lake... while respecting private property rights."</div><div class="said"><strong>Great Salt Lake:</strong> "We need to send nearly a million acre-feet of additional water every year to the lake," with "strong incentives from the state to promote a reduction of water use from everyone."</div>
+      <div class="said"><strong>Education:</strong> "high standards, parental involvement, and local control... without imposing a one-size-fits-all approach."</div><div class="said"><strong>Education:</strong> "Utah consistently ranks near the bottom in per pupil spending... make sure they have adequate funding while ensuring efficient use of taxpayer money."</div>
+      <div class="said"><strong>Taxes:</strong> "keeping taxes low... I will oppose unnecessary or irresponsible tax increases."</div><div class="said"><strong>Health care:</strong> "I will work to bring affordable health care, not just insurance, to all Utahns."</div>
+      <div class="said"><strong>Government:</strong> "keep government accountable and transparent, with decisions made as close to families and local communities as possible."</div><div class="said"><strong>Ballot initiatives:</strong> the Legislature has made "efforts to make it harder for citizens to put an initiative on the ballot. ... We need to eliminate the Republican supermajority."</div>
+      <div class="said"><strong>Values:</strong> "faith, strong families, personal responsibility, and service to others."</div><div class="said"><strong>Equality and air:</strong> "eliminate systemic oppression anywhere we find it"; "reduce emissions to improve our air quality as well as stop climate change."</div>
+    </div>
+
+    <div class="vs-grid">
+      <div class="vs-head">LILI BITNER (R)</div><div class="vs-head">ERIC LAST (D)</div>
+      <div>$75,472 cash through 8/10/26 (incl. $10,000 loan)</div><div>$2,291.10 cash through 9/14/26</div>
+      <div>$3,637.99 in-kind</div><div>$200 in-kind</div>
+      <div>Employer on her form: "NA"</div><div>BioM&eacute;rieux, mechanical engineer</div>
+      <div>Businesses, stocks, boards: "NA"</div><div>None listed</div>
+      <div>Spouse's employer: "a doctor in Plastic Surgery," practice not named</div><div>Spouse's employer named: Oak Coins, Kaysville</div>
+      <div>Doers Network, CMV PAC, Speaker's committees</div><div>No PAC or business money; $1,380.60 via ActBlue</div>
+    </div>
+  </div>
+</section>
+
+<section id="rubric">
+  <div class="wrap">
+    <div class="eyebrow">THE RUBRIC</div>
+    <h2>Graded Topic by Topic</h2>
+    <p class="section-dek">This outlet grades each topic on five standing questions: does it check power, can the public see the process, who pays and is that plain, what does it do to water and land, and who bears the cost with real standing to be heard. Each topic is graded separately. These grades judge the process and the record, not the person.</p>
+
+    <div class="topic-head">1. The CMV PAC entry</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-c">C</span>One PAC paid for ballot access for both candidates in an open-seat primary.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-c">C</span>Both reports are public and the amendment trail shows the change. Neither says why the amounts differ.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-d">D</span>$3,937.50 of help the PAC says it paid for is not on the candidate's report.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-c">C</span>Voters can find the gap only by comparing two separate filings.</td></tr>
+    </table></div>
+
+    <div class="topic-head">2. Her disclosure form</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-c">C</span>Every line is answered, and nothing on it has been shown to be wrong. Her own site lists paid work and several organization roles the form doesn't mention; whether the form required any of them isn't settled here.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>Her husband's practice isn't named. The form makes that optional.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-c">C</span>Health-care donors gave $5,485. Whether that matters to her votes can't be judged from a form that names no interests.</td></tr>
+    </table></div>
+
+    <div class="topic-head">3. Who paid for the race</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-c">C</span>The Speaker's committees, the Doers Network and CMV PAC all put money into an open-seat primary.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>Every contribution is itemized with an address. "Utah Doers" is filed under a name this site hasn't matched to an entity registered at the time.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-b">B</span>Totals reconcile to the line items on both reports. The $10,000 is plainly marked as a loan from her husband.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-b">B</span>Most individual dollars came from Davis County addresses. Five $5,000 checks still make up a third of her cash.</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="limits">
+  <div class="wrap">
+    <div class="eyebrow">WHAT THIS DOESN'T SHOW</div>
+    <h2>Limits of the Record</h2>
+    <div class="record-card">
+      <ul style="margin:0;padding-left:18px;">
+        <li>Nothing here shows why her report lists $1,687.50 for the CMV PAC entry when the PAC's report lists $5,625.</li>
+        <li>Her disclosure form was read from its filed text. Item 2A (entities) has not been checked against state business records, and whether her Republican Women and Interfaith Council roles or her event-planning income fall under the form's items is not settled.</li>
+        <li>Who is behind RGP LLC and G42, LLC is not identified.</li>
+        <li>Whether the $10,000 loan has been repaid will show on later reports.</li>
+        <li>Name matches in the "unresolved" card are not confirmed.</li>
+        <li>Spending after June 11, 2026, and anything after the 8/10/26 contribution, is not in hand yet.</li>
+        <li>Eric Last's spending after 6/11/26 is not in hand. Who gave through ActBlue is not listed on his reports.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <details class="sources">
+      <summary>View all sources (17)</summary>
+      <ol>
+        <li>Lilian Bitner, 2026 Convention Report, 1/1&ndash;4/6/26, with amendment details (disclosures.utah.gov)</li>
+        <li>Lilian Bitner, 2026 Primary Report, 4/7&ndash;6/11/26 (disclosures.utah.gov)</li>
+        <li>Lilian Bitner, itemized contributions 6/23&ndash;8/10/26 (disclosures.utah.gov)</li>
+        <li>Lilian R. Bitner, House conflict-of-interest disclosure, House District 17 (disclosures.utah.gov), read from filed text</li>
+        <li>Lili Bitner declaration of candidacy, HD-17 (vote.utah.gov)</li>
+        <li>CMV PAC 2026 report, as documented in this site's CMV PAC file (pac repo)</li>
+        <li>Standard-Examiner, "Lili Bitner wins big at Davis County Republican Convention; Bob Stevenson tops Trevor Lee," April 18, 2026</li>
+        <li>Standard-Examiner, "Election results: Multiple incumbents concede; two Davis County races within a percent," June 23, 2026</li>
+        <li>Ballotpedia, Utah House of Representatives District 17; iVoterGuide, UT State Representative District 17, 2026 general; BallotReady, Lili Bitner</li>
+        <li>Bitner Facial Plastic Surgery of Utah website (drjohnbitner.com)</li>
+        <li>Kaysville City Council meeting notice listing City Hall at 23 East Center Street (utah.gov/pmn)</li>
+        <li>Eric David Last, House District 17 conflict-of-interest disclosure (disclosures.utah.gov), read from filed text</li>
+        <li>Eric Last campaign finance, Convention and Primary reports, DEX export (disclosures.utah.gov)</li>
+        <li>Eric Last, itemized contributions 7/2&ndash;9/14/26 (disclosures.utah.gov)</li>
+        <li>Eric Last campaign site, "Meet Eric" and "Priorities" pages (ericlast.com)</li>
+        <li>Lili Bitner campaign site, home, "Meet Lili," "Priorities" and "Endorsements" pages (votebitner.com)</li>
+        <li>This outlet's own case files: Cases 11, 13, 14, 16, 19 and 21, the HD-12 file, and the CMV PAC, HSLPAC, UHREC and McConnehey files (pac repo)</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Compiled from Utah campaign-finance disclosures (disclosures.utah.gov), the candidate's own conflict-of-interest form, and published election results. Public records only · No comment requested.<br>
+    <a href="index.html">&larr; Back to the Candidates 2026 docket</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('flipped');b.setAttribute('aria-pressed',b.classList.contains('flipped'));}));
+if (window.mermaid) { mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'IBM Plex Mono, monospace', flowchart:{htmlLabels:true, curve:'basis'} }); }
+if (window.Chart) {
+  Chart.defaults.font.family = "'Source Serif 4', Georgia, serif";
+  Chart.defaults.color = '#5c534c';
+  const money = v => '$' + Number(v).toLocaleString();
+  new Chart(document.getElementById('periodChart'), {
+    type: 'bar',
+    data: { labels: ['Convention (1/1–4/6)', 'Primary (4/7–6/11)', '6/23–8/10'],
+      datasets: [
+        { label: 'Raised (cash)', data: [35605.20, 32866.80, 7000], backgroundColor: '#c0572e', borderRadius: 2 },
+        { label: 'Spent', data: [5208.18, 26732.23, null], backgroundColor: '#5c534c', borderRadius: 2 },
+        { label: 'Ending balance', data: [30397.02, 36531.59, null], backgroundColor: '#d9a441', borderRadius: 2 } ] },
+    options: { maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + money(c.parsed.y) } } },
+      scales: { y: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, x: { grid: { display: false } } } }
+  });
+  new Chart(document.getElementById('raceChart'), {
+    type: 'bar',
+    data: { labels: ['Bitner cash (through 8/10)', 'Last cash (through 9/14)'],
+      datasets: [{ data: [75472, 2291.10], backgroundColor: ['#c0572e','#5c534c'], borderRadius: 3 }] },
+    options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => money(c.parsed.x) } } },
+      scales: { x: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, y: { grid: { display: false } } } }
+  });
+  new Chart(document.getElementById('spendChart'), {
+    type: 'bar',
+    data: { labels: ['Printing and mail', 'Roost', 'Shirts and swag', 'Davis County GOP', 'Food and events', 'Texts (Votivv)', 'Supplies'],
+      datasets: [{ data: [12259.20, 11153.46, 5559.97, 1200, 1046.03, 460, 261.75], backgroundColor: ['#c0572e','#5c1a2b','#d9a441','#8a6d1f','#5c534c','#5c534c','#5c534c'], borderRadius: 3 }] },
+    options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => money(c.parsed.x) } } },
+      scales: { x: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, y: { grid: { display: false } } } }
+  });
+  new Chart(document.getElementById('voteChart'), {
+    type: 'bar',
+    data: { labels: ['Convention, 2nd round', 'June 23 primary'],
+      datasets: [
+        { label: 'Bitner', data: [84.5, 70.87], backgroundColor: '#c0572e', borderRadius: 2, stack: 'v' },
+        { label: 'Sam Barlow', data: [15.5, 29.13], backgroundColor: '#b8a58a', borderRadius: 2, stack: 'v' } ] },
+    options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + c.parsed.x + '%' } } },
+      scales: { x: { stacked: true, max: 100, ticks: { callback: v => v + '%' }, grid: { color: '#e6dfcf' } }, y: { stacked: true, grid: { display: false } } } }
+  });
+}
+</script>
+</body>
+</html>
