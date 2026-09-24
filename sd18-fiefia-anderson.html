@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD-18: Fiefia vs. Anderson | The Weber County Hive</title>
+<meta name="description" content="Senate District 18, 2026. Rep. Doug Fiefia (R), who beat Sen. Dan McCay in the primary and sponsored Utah's AI Transparency Act, vs. Dane Anderson (D). Money, disclosure forms, Fiefia's 2026 bills graded, and questions voters can ask.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-paper:#f4f0e6;
+    --color-paper-deep:#ece5d4;
+    --color-ink:#241a16;
+    --color-ink-soft:#5c534c;
+    --color-link:#c0572e;
+    --color-stat:#d9a441;
+    --color-burgundy-light:#5c1a2b;
+    --color-burgundy-deep:#3d0f1c;
+    --color-line:#d8cfbc;
+    --color-card:#fbf8f1;
+    --color-good:#4d7c5f;
+    --color-flag:#a5372a;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.6;}
+  h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif;font-weight:700;margin:0 0 .4em;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:.72rem;letter-spacing:.06em;color:var(--color-ink-soft);}
+  a{color:var(--color-link);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header.band{background:linear-gradient(135deg, var(--color-burgundy-light), var(--color-burgundy-deep));color:#f4ece6;padding:22px 0;}
+  header.band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .brandmark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#f4ece6;text-decoration:none;}
+  nav.topnav a{color:#f4ece6cc;text-decoration:none;margin-left:22px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.03em;border-bottom:1px solid transparent;}
+  nav.topnav a:hover{border-bottom-color:#f4ece6cc;}
+
+  .hero{padding:56px 0 40px;border-bottom:1px solid var(--color-line);}
+  .hero .eyebrow{margin-bottom:14px;}
+  .hero h1{font-size:2.5rem;line-height:1.15;max-width:760px;}
+  .hero .dek{font-size:1.12rem;color:var(--color-ink-soft);max-width:660px;margin-top:14px;}
+  .hero-meta{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+  .hero-meta .stat-num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-stat);}
+  .hero-meta .stat-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);letter-spacing:.02em;max-width:170px;}
+
+  section{padding:44px 0;border-bottom:1px solid var(--color-line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:1.6rem;margin-bottom:6px;}
+  section .section-dek{color:var(--color-ink-soft);max-width:660px;margin-bottom:26px;font-size:1rem;}
+
+  .start-here{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-stat);padding:20px 24px;}
+  .start-here ol{margin:8px 0 0;padding-left:20px;}
+  .start-here li{margin-bottom:8px;}
+
+  .record-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:2px;padding:24px 26px;margin-bottom:18px;}
+  .record-card h3{font-size:1.15rem;margin-bottom:8px;}
+  .record-card p{margin:.6em 0;}
+  .record-card p:first-of-type{margin-top:0;}
+  .rc-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-link);border:1px solid var(--color-link);padding:3px 9px;border-radius:20px;margin:2px 6px 2px 0;text-decoration:none;}
+  a.rc-tag:hover{background:var(--color-link);color:#fff;}
+  .rc-flag{border-color:var(--color-flag);color:var(--color-flag);}
+  .rc-good{border-color:var(--color-good);color:var(--color-good);}
+
+  .quote-block{border-left:3px solid var(--color-stat);padding:4px 0 4px 18px;font-style:italic;color:var(--color-ink-soft);margin:14px 0;}
+
+  .fund-row{display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;margin-bottom:20px;}
+  .fund-donut{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fund-donut-center{width:96px;height:96px;background:var(--color-paper);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+  .fund-donut-center .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--color-ink);}
+  .fund-donut-center .lbl{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--color-ink-soft);}
+  .fund-donut-legend{list-style:none;padding:0;margin:8px 0 0;font-size:.92rem;}
+  .fund-donut-legend li{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0;}
+  .fund-bar-row{margin-bottom:10px;}
+  .fund-bar-row .bar-label{display:flex;justify-content:space-between;gap:12px;font-size:.86rem;margin-bottom:4px;}
+  .fund-bar-track{background:var(--color-paper-deep);border-radius:3px;height:8px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);}
+  .fund-bar-fill.alt{background:var(--color-stat);}
+
+  .table-scroll{overflow-x:auto;}
+  .entity-table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px;}
+  .entity-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:8px 10px;}
+  .entity-table td{padding:10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .entity-table td.num{font-family:'IBM Plex Mono',monospace;font-size:.85rem;white-space:nowrap;}
+  .status-pill{font-family:'IBM Plex Mono',monospace;font-size:.65rem;padding:3px 8px;border-radius:12px;white-space:nowrap;display:inline-block;}
+  .status-confirmed{background:#e2ede4;color:var(--color-good);}
+  .status-flag{background:#f3dedb;color:var(--color-flag);}
+  .status-unresolved{background:#f4ecd9;color:#8a6d1f;}
+
+  .timeline{border-left:2px solid var(--color-line);padding-left:22px;margin-left:6px;}
+  .timeline-item{position:relative;margin-bottom:22px;}
+  .timeline-item::before{content:"";position:absolute;left:-28px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--color-stat);}
+  .timeline-item.key::before{background:var(--color-flag);}
+  .timeline-item .t-date{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);}
+  .timeline-item h4{font-size:1rem;margin:.2em 0;}
+  .timeline-item p{margin:.2em 0;font-size:.95rem;color:var(--color-ink-soft);}
+
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--color-line);background:var(--color-card);}
+  .vs-grid > div{padding:16px 20px;border-bottom:1px solid var(--color-line);}
+  .vs-grid > div:nth-child(odd){border-right:1px solid var(--color-line);}
+  .vs-grid .vs-head{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  .vs-grid .said{font-style:italic;}
+
+  /* connections */
+  .hub{background:var(--color-burgundy-deep);color:#f4ece6;padding:22px 26px;border-radius:2px;margin-bottom:22px;}
+  .hub .eyebrow{color:#d9a441;}
+  .hub h3{color:#f4ece6;font-size:1.3rem;margin:6px 0 4px;}
+  .hub p{margin:0;color:#e8d9c8;font-size:.95rem;}
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .conn-card{background:var(--color-card);border:1px solid var(--color-line);border-top:4px solid var(--color-link);padding:18px 20px;}
+  .conn-card.doers{border-top-color:var(--color-burgundy-light);}
+  .conn-card.gold{border-top-color:var(--color-stat);}
+  .conn-card.unres{border-top-color:#b8952e;border-top-style:dashed;}
+  .conn-card .case{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .conn-card h4{font-size:1.05rem;margin:4px 0 8px;}
+  .conn-card p{margin:.4em 0;font-size:.94rem;}
+  .conn-card ul{margin:.4em 0;padding-left:18px;font-size:.93rem;}
+  .conn-card li{margin-bottom:4px;}
+
+  details.sources{margin-top:6px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.05em;color:var(--color-burgundy-light);font-weight:600;}
+  details.sources ol{font-size:.9rem;color:var(--color-ink-soft);padding-left:22px;}
+  details.sources li{margin-bottom:7px;}
+
+  @media (max-width:680px){
+    .hero h1{font-size:1.9rem;}
+    .fund-row{flex-direction:column;}
+    .conn-grid{grid-template-columns:1fr;}
+    .vs-grid{grid-template-columns:1fr;}
+    .vs-grid > div:nth-child(odd){border-right:none;}
+    .vs-grid .vs-head:nth-child(2){display:none;}
+  }
+  footer{padding:40px 0 60px;text-align:center;color:var(--color-ink-soft);font-size:.85rem;}
+  footer a{color:var(--color-link);}
+  .jumpnav{background:var(--color-paper-deep);border-bottom:1px solid var(--color-line);padding:12px 0;position:sticky;top:0;z-index:5;}
+  .jumpnav .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .jumpnav a{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.03em;color:var(--color-ink);text-decoration:none;border-bottom:1px solid transparent;}
+  .jumpnav a:hover{border-bottom-color:var(--color-link);color:var(--color-link);}
+  section[id]{scroll-margin-top:60px;}
+  .race-strip{display:grid;grid-template-columns:repeat(8,1fr);margin-top:26px;border-top:1px solid var(--color-line);border-left:1px solid var(--color-line);background:var(--color-card);}
+  .race-strip > div{padding:12px 12px 14px;border-right:1px solid var(--color-line);border-bottom:1px solid var(--color-line);min-width:0;}
+  .race-strip .d{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-link);font-weight:600;white-space:nowrap;}
+  .race-strip .e{font-size:.84rem;line-height:1.35;margin-top:6px;hyphens:none;overflow-wrap:normal;}
+  .race-strip .future .d{color:var(--color-ink-soft);}
+  @media (max-width:1000px){.race-strip{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:560px){.race-strip{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:680px){.jumpnav{position:static;} .rubric-table td:first-child{width:auto;}}
+  .chart-card{background:var(--color-card);border:1px solid var(--color-line);padding:18px 20px;margin:22px 0;}
+  .chart-card h3{font-size:1.05rem;margin-bottom:4px;}
+  .chart-card .cap{font-size:.86rem;color:var(--color-ink-soft);margin:0 0 12px;}
+  .chart-box{position:relative;height:260px;}
+  .mermaid-wrap{background:var(--color-card);border:1px solid var(--color-line);padding:18px;margin:22px 0;overflow-x:auto;}
+  .mermaid-wrap .cap{font-size:.86rem;color:var(--color-ink-soft);margin:10px 0 0;}
+  .mermaid{text-align:center;}
+  details.ledger{background:var(--color-card);border:1px solid var(--color-line);padding:12px 18px;margin:12px 0;}
+  details.ledger summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.04em;color:var(--color-burgundy-light);font-weight:600;}
+  details.ledger .table-scroll{max-height:460px;overflow:auto;margin-top:10px;}
+  .rubric-table{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--color-card);border:1px solid var(--color-line);}
+  .rubric-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:10px;background:var(--color-paper-deep);}
+  .rubric-table td{padding:12px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .rubric-table td:first-child{font-weight:600;width:170px;}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:#fff;border-radius:3px;padding:1px 6px;margin-right:6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--color-stat);} .g-d{background:#b5652f;} .g-f{background:var(--color-burgundy-light);} .g-na{background:#9a9186;font-size:.8rem;}
+  .topic-head{font-family:'Playfair Display',serif;font-size:1.15rem;margin:26px 0 8px;}
+  .compare-table td.num{text-align:right;}
+
+  .flip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0;}
+  @media (max-width:900px){.flip-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.flip-grid{grid-template-columns:1fr;}}
+  .flip{perspective:900px;background:none;border:0;padding:0;cursor:pointer;text-align:left;font:inherit;color:inherit;min-height:250px;}
+  .flip-inner{position:relative;width:100%;height:100%;min-height:250px;transition:transform .5s;transform-style:preserve-3d;}
+  .flip.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:18px 20px;display:flex;flex-direction:column;justify-content:center;}
+  .flip-front{text-align:center;}
+  .flip-front .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  .flip-front .label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);letter-spacing:.03em;margin-top:6px;}
+  .flip-front .hint{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--color-ink-soft);margin-top:10px;opacity:.75;}
+  .flip-back{transform:rotateY(180deg);background:var(--color-burgundy-deep);color:#f4ece6;border-color:var(--color-burgundy-deep);font-size:.9rem;line-height:1.5;overflow:auto;}
+  .flip-back strong{color:var(--color-stat);}
+  .plain{background:#fff8e6;border-left:4px solid var(--color-stat);padding:12px 16px;margin:0 0 16px;font-size:.98rem;}
+  .plain b{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.06em;color:#8a6d1f;margin-right:8px;}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--color-line);background:var(--color-card);margin:18px 0;}
+  .three > div{padding:16px 18px;border-right:1px solid var(--color-line);}
+  .three > div:last-child{border-right:none;}
+  .three .who{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .three .amt{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  @media (max-width:760px){.three{grid-template-columns:1fr;} .three > div{border-right:none;border-bottom:1px solid var(--color-line);}}
+  details.ledger{max-width:100%;min-width:0;}
+  details.ledger .table-scroll{max-width:100%;}
+  @media (max-width:760px){.vs-grid{grid-template-columns:1fr !important;}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+
+<body>
+<header class="band"><div class="wrap">
+  <a class="brandmark" href="index.html">Weber County Hive — Candidates 2026</a>
+  <nav class="topnav"><a href="index.html">Docket</a><a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">CASE 27 · SENATE DISTRICT 18 (SALT LAKE AND UTAH COUNTIES) — GENERAL ELECTION NOV. 3, 2026</div>
+  <h1>$161,780 vs. $0</h1>
+  <p class="dek">Rep. Doug Fiefia (R) of Herriman beat Sen. Dan McCay in the June primary, 69% to 31%. He is best known for Utah&rsquo;s AI Transparency Act, which died after the White House called it &ldquo;unfixable.&rdquo; His reports list $161,780 in new money. Democrat Dane Anderson, a Utah Housing Corporation loan analyst, has no money reported.</p>
+  <div class="hero-meta">
+    <div><div class="stat-num">$161,780</div><div class="stat-label">FIEFIA, NEW MONEY RAISED (TO 6/25)</div></div>
+    <div><div class="stat-num">$134,533</div><div class="stat-label">FIEFIA, SPENT THROUGH THE PRIMARY</div></div>
+    <div><div class="stat-num">$0</div><div class="stat-label">ANDERSON, REPORTED</div></div>
+    <div><div class="stat-num">3 of 6</div><div class="stat-label">FIEFIA BILLS SIGNED, 2026</div></div>
+  </div>
+</div></div>
+
+<nav class="jumpnav" aria-label="Sections"><div class="wrap">
+  <a href="#start">Start here</a><a href="#words">Words</a><a href="#money">Fiefia&rsquo;s money</a><a href="#spending">Spending</a><a href="#record">Fiefia&rsquo;s 2026 bills</a><a href="#ai">The AI bill</a><a href="#anderson">Anderson</a><a href="#stands">Where they stand</a><a href="#disclosure">Disclosure forms</a><a href="#connections">Connections</a><a href="#rubric">Rubric</a><a href="#ask">Questions</a><a href="#limits">Limits</a>
+</div></nav>
+
+<section id="start"><div class="wrap">
+  <div class="eyebrow">START HERE</div>
+  <h2>Five Things the Records Show</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>A House member who won a hard primary faces a first-time candidate with no reported money. The House member&rsquo;s record is mostly about technology and privacy.</p>
+  <div class="start-here"><ol>
+    <li><strong>Fiefia raised $161,780 in new money through June 25</strong>, plus a $31,504.12 transfer from his own House campaign. About 58% came from individuals. His largest checks: ProDough $20,000, and $10,000 each from Encode AI Corporation (Washington, D.C.), Elk Ridge Management and Jeremy Andrus (Las Vegas).</li>
+    <li><strong>He spent $134,532.83 through the primary,</strong> including $24,000 to the Sandy Expo Center and $12,444 in Utah Republican Party postage.</li>
+    <li><strong>Three of his six 2026 bills became law.</strong> His AI Transparency Act (H.B. 286) died on the last night of the session, after a White House letter called it &ldquo;unfixable.&rdquo;</li>
+    <li><strong>Two tech-privacy laws he worked on ended up narrower.</strong> H.B. 408, as signed, delays Utah&rsquo;s 2025 data-portability law by a year (a change made in the Senate) and trims it. S.B. 267, which he carried in the House, went from binding student-privacy rules to a study.</li>
+    <li><strong>Anderson has no contributions or spending on file,</strong> per a search of the state&rsquo;s disclosure site on Sept. 24. His form lists one job: special loans analyst at the Utah Housing Corporation.</li>
+  </ol></div>
+  <div class="race-strip" aria-label="Race timeline">
+    <div><div class="d">JAN 14, 2026</div><div class="e">Encode AI gives $10,000</div></div>
+    <div><div class="d">FEB 12</div><div class="e">White House letter on H.B. 286</div></div>
+    <div><div class="d">MAR 6</div><div class="e">H.B. 286 dies at 11:59 p.m.</div></div>
+    <div><div class="d">MAR 11</div><div class="e">$31,504 moved from House account</div></div>
+    <div><div class="d">APRIL</div><div class="e">Convention: Fiefia ~59%</div></div>
+    <div><div class="d">JUN 23</div><div class="e">Fiefia beats McCay, 69&ndash;31</div></div>
+    <div class="future"><div class="d">OCT 20–30</div><div class="e">Early voting</div></div>
+    <div class="future"><div class="d">NOV 3</div><div class="e">General election</div></div>
+  </div>
+</div></section>
+
+<section id="words"><div class="wrap">
+  <div class="eyebrow">QUICK RECAP</div>
+  <h2>Words Used on This Page</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Tap any card to see what the word means.</p>
+  <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Frontier model</div><div class="label">THE LARGEST AI SYSTEMS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>H.B. 286 defined it by training size (10<sup>26</sup> operations) and applied to developers with $500 million or more in yearly revenue.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Struck enacting clause</div><div class="label">HOW A BILL DIES QUIETLY</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Removing the line that makes a bill law. H.B. 286 died this way at 11:59 p.m. on the last night, with no recorded floor vote.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Substitute</div><div class="label">A NEW VERSION OF A BILL</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Bills are rewritten as they move. H.B. 408&rsquo;s third substitute came from the Senate; S.B. 267 passed as its fifth.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Concurrence</div><div class="label">AGREEING TO THE OTHER CHAMBER&rsquo;S CHANGES</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>When the Senate changes a House bill, the House votes again. It accepted H.B. 408&rsquo;s Senate version 70&ndash;1.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Transfer</div><div class="label">MOVING MONEY BETWEEN HIS OWN CAMPAIGNS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Fiefia moved $31,504.12 from his House campaign to his Senate campaign. It isn&rsquo;t new money, so this page counts it separately.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">COI form</div><div class="label">CONFLICT-OF-INTEREST DISCLOSURE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A state form listing jobs, businesses, big income sources, stocks and board seats. The optional part lets a candidate name anything else.</div></div></div></button>
+
+  </div>
+</div></section>
+
+<section id="money"><div class="wrap">
+  <div class="eyebrow">FIEFIA&rsquo;S MONEY</div>
+  <h2>Mostly Individuals, With Several Large Checks</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Most of Fiefia&rsquo;s money came from people. A handful of $10,000-plus checks came from companies and a few individuals.</p>
+  <p class="section-dek">His DEX export (Convention and Primary reports, through 6/11/26) plus contributions listed for 6/25/26. The $31,504.12 transfer from his House campaign and $3,696 of in-kind advertising are not counted as new money.</p>
+  <div class="fund-row">
+    <div class="fund-donut" style="background:conic-gradient(var(--color-stat) 0% 57.9%, var(--color-link) 57.9% 100%);">
+      <div class="fund-donut-center"><div class="num">$161,780</div><div class="lbl">NEW MONEY</div></div>
+    </div>
+    <ul class="fund-donut-legend">
+      <li><span class="swatch" style="background:var(--color-stat)"></span> Individuals (164 entries) &mdash; $93,679.28 (57.9%)</li>
+      <li><span class="swatch" style="background:var(--color-link)"></span> Companies, PACs and campaign committees (13 checks) &mdash; $68,101 (42.1%)</li>
+    </ul>
+  </div>
+  <div class="fund-bar-row"><div class="bar-label"><span>ProDough (Highland)</span><span>$20,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:100%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Encode AI Corporation (D.C.) &middot; Elk Ridge Management &middot; Jeremy Andrus (Las Vegas)</span><span>$10,000 each</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:50%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>SOJO Management &middot; Rep Labs &middot; Education First Utah &middot; Citizens to Elect Jeff Burton &middot; Taylor Kinikini</span><span>$5,000 each</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:25%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Fiefia Granite Countertops</span><span>$4,500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:22.5%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>After the primary (6/25): Lincoln Fillmore&rsquo;s committee $1,500 &middot; U-Car PAC $1,001 &middot; Utah Bankers $500</span><span>$3,001</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:15%"></div></div></div>
+  <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$10,000</div><div class="label">FROM ENCODE AI CORPORATION</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Dated Jan. 14, 2026, from a Washington, D.C. address, two weeks before his AI Transparency Act&rsquo;s committee hearing. Confirmed from his own DEX export. The filing describes the donor only by name.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$9,500</div><div class="label">FROM NAMES MATCHING HIS OWN BUSINESSES</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>&ldquo;SOJO Management&rdquo; gave $5,000; his form says he founded and owns a company by that name, though the two filings list different Herriman addresses. &ldquo;Fiefia Granite Countertops&rdquo; gave $4,500; the filing doesn&rsquo;t say how it&rsquo;s connected.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">13%</div><div class="label">FROM OUTSIDE UTAH</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>$20,750 by ZIP code, mostly two checks: Encode AI ($10,000) and Jeremy Andrus of Las Vegas ($10,000).</div></div></div></button>
+
+  </div>
+  <details class="ledger">
+    <summary>Every Fiefia contribution, 1/1&ndash;6/25/26 (179 entries)</summary>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Date</th><th>Contributor (as filed)</th><th>City, state</th><th>Report</th><th>Note</th><th>Amount</th></tr>
+<tr><td>1/1/2026</td><td>Tema Laussen</td><td>Provo, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>1/1/2026</td><td>Mele Viola</td><td>Taylorsville, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/1/2026</td><td>Fredrick Jenny</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>1/2/2026</td><td>Andy Pierucci</td><td>Riverton, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>1/14/2026</td><td>Encode AI Corporation</td><td>Washington Dc, DC</td><td>Convention</td><td></td><td class="num">$10,000.00</td></tr>
+<tr><td>1/14/2026</td><td>Taylor Kinikini</td><td>Vinyard, UT</td><td>Convention</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>1/15/2026</td><td>ProDough</td><td>Highland, UT</td><td>Convention</td><td></td><td class="num">$20,000.00</td></tr>
+<tr><td>1/15/2026</td><td>Ryan Frost</td><td>Draper, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>1/15/2026</td><td>Luke Searle</td><td>Heber City, UT</td><td>Convention</td><td></td><td class="num">$26.35</td></tr>
+<tr><td>1/16/2026</td><td>Wendy Kichiro</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/16/2026</td><td>Tu'u Afu</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>1/16/2026</td><td>Hola Ponitini</td><td>West Valley City, UT</td><td>Convention</td><td></td><td class="num">$60.00</td></tr>
+<tr><td>1/16/2026</td><td>Sulin Schaumkel</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$400.00</td></tr>
+<tr><td>1/16/2026</td><td>Rep Labs</td><td>Springville, UT</td><td>Convention</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>1/16/2026</td><td>Amelia Langi</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$40.00</td></tr>
+<tr><td>1/16/2026</td><td>Malinga Mahe</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$60.00</td></tr>
+<tr><td>1/16/2026</td><td>Marky Filipe</td><td>Riverton, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/16/2026</td><td>Asipeli Tuitupou</td><td>Riverton, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/16/2026</td><td>Tevita Fiefia</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>1/16/2026</td><td>Kaliopasi Vaitai</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/16/2026</td><td>Apo Ahohako</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$80.00</td></tr>
+<tr><td>1/16/2026</td><td>Gus Lavaka</td><td>West Jordan, UT</td><td>Convention</td><td></td><td class="num">$80.00</td></tr>
+<tr><td>1/16/2026</td><td>Siope Siulua</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/16/2026</td><td>Sione Havili</td><td>84092, UT</td><td>Convention</td><td></td><td class="num">$60.00</td></tr>
+<tr><td>1/16/2026</td><td>Starlite Lotulelei</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/16/2026</td><td>Mele Tonata</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$40.00</td></tr>
+<tr><td>1/16/2026</td><td>Taniela Fa'ulao</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/16/2026</td><td>Silia Fifita</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$40.00</td></tr>
+<tr><td>1/16/2026</td><td>Noah Afu</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$60.00</td></tr>
+<tr><td>1/16/2026</td><td>Tave Heitonga</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/16/2026</td><td>Saia Uhila</td><td>West Valley Utah, UT</td><td>Convention</td><td></td><td class="num">$40.00</td></tr>
+<tr><td>1/16/2026</td><td>Mele Lapuaho</td><td>West Valley, UT</td><td>Convention</td><td></td><td class="num">$80.00</td></tr>
+<tr><td>1/17/2026</td><td>Kassie Feinga</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>1/17/2026</td><td>Leka Tuiaki</td><td>Draper, UT</td><td>Convention</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>1/17/2026</td><td>Unga Haunga</td><td>West Jordan, UT</td><td>Convention</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>1/17/2026</td><td>Lyla Nock</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Saane Mokofisi</td><td>Kearns, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>1/17/2026</td><td>Pepe Talakai</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>1/17/2026</td><td>Kina Brown</td><td>Magna, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>1/17/2026</td><td>Ila Vaenuku</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Tevita Anitoni</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Kate Britton</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$1,500.00</td></tr>
+<tr><td>1/17/2026</td><td>Elk Ridge Management</td><td>American Fork, UT</td><td>Convention</td><td></td><td class="num">$10,000.00</td></tr>
+<tr><td>1/17/2026</td><td>Solo Tuiaki</td><td>West Jordan, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>1/17/2026</td><td>Derek Tuimauga</td><td>West Jordan, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/17/2026</td><td>Will Kinikini</td><td>Saratoga Springs, UT</td><td>Convention</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>1/17/2026</td><td>Westlee Tonga</td><td>Lindon, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/17/2026</td><td>Latai Fonua</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Bryan Straight</td><td>Kaneoha, HI</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>1/17/2026</td><td>Darek Tuckett</td><td>Hooper, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>1/17/2026</td><td>Tyler McRae</td><td>Bluffdale, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>1/17/2026</td><td>Kolo Filipe</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Fui Kinikini</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>1/17/2026</td><td>Ram Vamanrav</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Ruben Matangi</td><td>Las Vegas, NV</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>1/17/2026</td><td>Kurt Soffe</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>1/17/2026</td><td>Justin Spangler</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Leila Faletau</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>1/17/2026</td><td>Dusty Heap</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Hailame Kinikini</td><td>Vinyard, UT</td><td>Convention</td><td></td><td class="num">$3,000.00</td></tr>
+<tr><td>1/17/2026</td><td>Charles Falatea</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>1/17/2026</td><td>David Niumeitolu</td><td>Midvale, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Tony Brown</td><td>Saratoga Springs, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Tevita Fiefia</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>1/17/2026</td><td>Treena Tuione</td><td>Riverton, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>1/17/2026</td><td>Josh Soffe</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/17/2026</td><td>Melolini Fiefia</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$1,100.00</td></tr>
+<tr><td>1/17/2026</td><td>Tevita T Fiefia</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/17/2026</td><td>Kava Afu</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Susette Afu</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Tiena Afu</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Teresa Mokofisi</td><td>West Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Lona Palu</td><td>84081, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Ana Mokofisi</td><td>West Jordan, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>1/17/2026</td><td>Ben Afuvai</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>1/17/2026</td><td>Hehea Heitonga</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$226.00</td></tr>
+<tr><td>1/17/2026</td><td>Fane Heitonga</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/17/2026</td><td>Celestia Fiefia</td><td>Farmington, UT</td><td>Convention</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>1/17/2026</td><td>Truman Ballard</td><td>North Salt Lake, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>1/17/2026</td><td>Spencer Jones</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>1/17/2026</td><td>Annie Pikula</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Wayne Pikula</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Robert Melkonian</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>1/17/2026</td><td>Keenan Nuehring</td><td>Highland, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/17/2026</td><td>Kimberly Navratil</td><td>Riverton, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>1/17/2026</td><td>Martin Navratil</td><td>Riverton, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>1/17/2026</td><td>Brett Hilton</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$50.01</td></tr>
+<tr><td>1/17/2026</td><td>Greg Saylin</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>1/18/2026</td><td>Scott Cuthbertson</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>1/18/2026</td><td>Fiefia Granite Countertops</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$4,500.00</td></tr>
+<tr><td>1/19/2026</td><td>SOJO Management</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>1/19/2026</td><td>Troy Keller</td><td>Farmington, UT</td><td>Convention</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>1/19/2026</td><td>North Eastern Services Inc</td><td>Orem, UT</td><td>Convention</td><td></td><td class="num">$350.00</td></tr>
+<tr><td>1/19/2026</td><td>Mele Fifita</td><td>Herriman, UT</td><td>Convention</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>3/9/2026</td><td>Jeremy Andrus</td><td>Las Vegas, NV</td><td>Convention</td><td></td><td class="num">$10,000.00</td></tr>
+<tr><td>3/10/2026</td><td>Linda Kinikini</td><td>West Valley, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>3/11/2026</td><td>Doug Fiefia for State House D48</td><td>Herriman, UT</td><td>Convention</td><td>Transfer from his House campaign (not new money)</td><td class="num">$31,504.12</td></tr>
+<tr><td>3/11/2026</td><td>Bridgeway Integrated Healthcare</td><td>Taylorsville, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>3/11/2026</td><td>Keisini Kinikini</td><td>West Valley, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>3/25/2026</td><td>Carl Albrecht</td><td>Richfield, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>3/26/2026</td><td>Nathaniel Johnson</td><td>Bluffdale, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>3/27/2026</td><td>Derek Tuimauga</td><td>West Jordan, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>3/27/2026</td><td>David Haunga</td><td>West Jordan, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>4/13/2026</td><td>Ma'afu Pua</td><td>Taylorsville, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/13/2026</td><td>Sione Havili</td><td>84092, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/16/2026</td><td>Maloni Tuikolovatu</td><td>South Jordan, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/16/2026</td><td>Sitenli Feinga</td><td>Bountiful, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/16/2026</td><td>Trent Staggs</td><td>Riverton, UT</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>4/16/2026</td><td>Sini Vamanrav</td><td>Herriman, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/16/2026</td><td>Fusi Taukeiaho</td><td>Midvale, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/16/2026</td><td>Via Kefu</td><td>Bluffdale, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/16/2026</td><td>Asipeli Tuitupou</td><td>Riverton, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/16/2026</td><td>Anela Ongoongotau</td><td>Herriman, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/16/2026</td><td>Laite Filipe</td><td>Herriman, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/16/2026</td><td>Ofa Kefu</td><td>Herriman, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Silipa Mahe</td><td>South Jordan, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Taniela Fiefia</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Lachelle Fiefia</td><td>West Jordan, UT</td><td>Primary</td><td></td><td class="num">$375.00</td></tr>
+<tr><td>4/17/2026</td><td>Peni Lausi</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Saia Uhila</td><td>West Valley Utah, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Feao Vaitaki</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Liliani Talakai</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Tupou Fakatoufifita</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Solo Tuiaki</td><td>West Jordan, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Tiena Latai</td><td>South Jordan, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Emili Brown</td><td>Magna, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Damian Andre</td><td>Herriman, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/17/2026</td><td>Olisi Lui</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Teresa Hamilton</td><td>Bountiful, UT</td><td>Primary</td><td></td><td class="num">$150.00</td></tr>
+<tr><td>4/17/2026</td><td>Truman Ballard</td><td>North Salt Lake, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Matila Tukuafu</td><td>North Salt Lake, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/17/2026</td><td>Latu Motulalo</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>4/17/2026</td><td>Emma Wilson</td><td>Saratoga Springs, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>4/17/2026</td><td>Latu Tavo</td><td>West Valley City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Sione Tuipulotu</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Tofua Pututau</td><td>North Salt Lake, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Meleane Taufa</td><td>Highland, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Fane Heitonga</td><td>South Jordan, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Haine Fifita</td><td>Herriman, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Peta Leakehe</td><td>West Valley City, UT</td><td>Primary</td><td></td><td class="num">$125.00</td></tr>
+<tr><td>4/17/2026</td><td>Makelesi Taua'alo</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Polo Fifita</td><td>Herriman, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Nolisi Lavulo</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Ma'ake Tuatonga</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Heamoni Filimoeatu</td><td>Magna, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Paea Sotele</td><td>West Valley City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Ilaisaane Mokofisi</td><td>Kearns, UT</td><td>Primary</td><td></td><td class="num">$750.00</td></tr>
+<tr><td>4/17/2026</td><td>Clint Chamberlain</td><td>Farmington, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Waqa Damuni</td><td>Logan, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/17/2026</td><td>Hailame Kinikini</td><td>Vinyard, UT</td><td>Primary</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Skyla Liava'a</td><td>South Jordan, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Susette Afu</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Silia Fifita</td><td>Herriman, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Alisi Sekona</td><td>Riverton, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Anthony Hansen</td><td>Saratoga Springs, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Tiare Olevao</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Mili Vunipola</td><td>Bountiful, UT</td><td>Primary</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Wendy Kichiro</td><td>South Jordan, UT</td><td>Primary</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>4/17/2026</td><td>Linda Kinikini</td><td>West Valley, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/19/2026</td><td>Ofeira Kinikini</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>5/1/2026</td><td>Sydnee Stowe</td><td>Stockton, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>5/1/2026</td><td>Utah Assisted Living Association</td><td>Draper, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>5/15/2026</td><td>Katrina Kennedy</td><td>Bluffdale, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>5/15/2026</td><td>James Jenkins</td><td>Holladay, UT</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>5/19/2026</td><td>Troy Anderson</td><td>Riverton, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>5/19/2026</td><td>ROA</td><td>Salt Lake City, UT</td><td>Primary</td><td>In-kind: Advertising</td><td class="num">$3,696.00</td></tr>
+<tr><td>5/20/2026</td><td>Edward Jordan</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1,999.00</td></tr>
+<tr><td>5/24/2026</td><td>Citizens to Elect Jeff Burton</td><td>Salem, UT</td><td>Primary</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>6/9/2026</td><td>Claude III</td><td>Riverton, UT</td><td>Primary</td><td></td><td class="num">$521.15</td></tr>
+<tr><td>6/9/2026</td><td>Bonnie Beesley</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>6/9/2026</td><td>Jacey Skinner</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$312.81</td></tr>
+<tr><td>6/9/2026</td><td>Alan Lord</td><td>Bluffdale, UT</td><td>Primary</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>6/10/2026</td><td>Rob Taylor</td><td>Saratoga Springs, UT</td><td>Primary</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>6/10/2026</td><td>Ray Ward</td><td>Bountiful, UT</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>6/10/2026</td><td>Leila Faletau</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>6/10/2026</td><td>Education First Utah</td><td>Centerville, UT</td><td>Primary</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>6/25/2026</td><td>Utah Bankers Association</td><td>Salt Lake City, UT</td><td>6/25</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>6/25/2026</td><td>U Car PAC</td><td>Murray, UT</td><td>6/25</td><td></td><td class="num">$1,001.00</td></tr>
+<tr><td>6/25/2026</td><td>Committee to Elect Lincoln Fillmore</td><td>South Jordan, UT</td><td>6/25</td><td></td><td class="num">$1,500.00</td></tr>
+      <tr><td></td><td><strong>New money</strong></td><td></td><td></td><td></td><td class="num"><strong>$161,780.28</strong></td></tr>
+      <tr><td></td><td><strong>Transfer + in-kind</strong></td><td></td><td></td><td></td><td class="num"><strong>$35,200.12</strong></td></tr>
+    </table></div>
+  </details>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;">Many individual gifts come from recurring family surnames; this page doesn&rsquo;t assign identities or relationships from surnames. Five contribution rows are marked &ldquo;[DELETED]&rdquo; with no details. His later list covers only June 25; any gifts after that were not in hand.</p>
+</div></section>
+
+<section id="spending"><div class="wrap">
+  <div class="eyebrow">FIEFIA&rsquo;S SPENDING</div>
+  <h2>$134,532.83 Through the Primary</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>He spent heavily before the June primary, much of it on events, mail and signs.</p>
+  <div class="chart-card">
+    <h3>Where the money went</h3>
+    <p class="cap">His 12 largest payees, as filed.</p>
+    <div class="chart-box" style="height:360px;"><canvas id="spendChart" aria-label="Bar chart of Fiefia spending by payee"></canvas></div>
+  </div>
+  <details class="ledger">
+    <summary>Every Fiefia expenditure through 6/11/26 (314 entries)</summary>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Report</th><th>Amount</th></tr>
+<tr><td>1/2/2026</td><td>Friends of Casey Saxton</td><td>Donations</td><td>Convention</td><td class="num">$1,000.00</td></tr>
+<tr><td>1/2/2026</td><td>Jordan Teuscher</td><td>Campaign Expense</td><td>Convention</td><td class="num">$388.10</td></tr>
+<tr><td>1/2/2026</td><td>Kamie Afo-Aiono</td><td>Campaign Expense</td><td>Convention</td><td class="num">$350.00</td></tr>
+<tr><td>1/10/2026</td><td>Kassie Feinga</td><td>Campaign Expense</td><td>Convention</td><td class="num">$175.00</td></tr>
+<tr><td>1/17/2026</td><td>Cindy Westenskow</td><td>Campaign Expense</td><td>Convention</td><td class="num">$700.00</td></tr>
+<tr><td>1/17/2026</td><td>Leka Tuiaki</td><td>Campaign Expense</td><td>Convention</td><td class="num">$300.00</td></tr>
+<tr><td>1/17/2026</td><td>Muka Atiga</td><td>Advertising</td><td>Convention</td><td class="num">$2,000.00</td></tr>
+<tr><td>1/17/2026</td><td>Tevita Heitonga</td><td>Campaign Expense</td><td>Convention</td><td class="num">$300.00</td></tr>
+<tr><td>1/17/2026</td><td>3PSC</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1,621.47</td></tr>
+<tr><td>1/17/2026</td><td>Chubbys Cafe</td><td>Campaign Expense</td><td>Convention</td><td class="num">$27.51</td></tr>
+<tr><td>1/17/2026</td><td>Facebook</td><td>Advertising</td><td>Convention</td><td class="num">$24.00</td></tr>
+<tr><td>1/18/2026</td><td>McDonalds</td><td>Campaign Expense</td><td>Convention</td><td class="num">$9.20</td></tr>
+<tr><td>1/18/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$59.61</td></tr>
+<tr><td>1/19/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$399.98</td></tr>
+<tr><td>1/19/2026</td><td>Zurchers</td><td>Campaign Expense</td><td>Convention</td><td class="num">$107.63</td></tr>
+<tr><td>1/19/2026</td><td>Fiverr</td><td>Advertising</td><td>Convention</td><td class="num">$130.10</td></tr>
+<tr><td>2/4/2026</td><td>Melolini Fiefia</td><td>Campaign Expense</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>2/12/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$67.68</td></tr>
+<tr><td>2/13/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$120.31</td></tr>
+<tr><td>2/14/2026</td><td>Symbols of Valor</td><td>Campaign Expense</td><td>Convention</td><td class="num">$295.53</td></tr>
+<tr><td>2/15/2026</td><td>Big Mango</td><td>Campaign Expense</td><td>Convention</td><td class="num">$133.32</td></tr>
+<tr><td>2/15/2026</td><td>7/11</td><td>Campaign Expense</td><td>Convention</td><td class="num">$11.01</td></tr>
+<tr><td>2/16/2026</td><td>Thirst Drinks</td><td>Campaign Expense</td><td>Convention</td><td class="num">$31.70</td></tr>
+<tr><td>2/17/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Convention</td><td class="num">$933.74</td></tr>
+<tr><td>2/17/2026</td><td>Taylor Mountain West</td><td>Campaign Expense</td><td>Convention</td><td class="num">$4,900.00</td></tr>
+<tr><td>2/20/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$13.72</td></tr>
+<tr><td>2/20/2026</td><td>Salt Lake Parking</td><td>Campaign Expense</td><td>Convention</td><td class="num">$3.00</td></tr>
+<tr><td>3/11/2026</td><td>Google</td><td>Campaign Expense</td><td>Convention</td><td class="num">$21.49</td></tr>
+<tr><td>3/12/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Convention</td><td class="num">$30.90</td></tr>
+<tr><td>3/12/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Convention</td><td class="num">$101.97</td></tr>
+<tr><td>3/12/2026</td><td>RIght Insight</td><td>Advertising</td><td>Convention</td><td class="num">$515.00</td></tr>
+<tr><td>3/12/2026</td><td>Facebook</td><td>Advertising</td><td>Convention</td><td class="num">$24.00</td></tr>
+<tr><td>3/12/2026</td><td>Deseret First Credit Union</td><td>Campaign Expense</td><td>Convention</td><td class="num">$15.00</td></tr>
+<tr><td>3/13/2026</td><td>Nik4Utah</td><td>Donations</td><td>Convention</td><td class="num">$500.00</td></tr>
+<tr><td>3/14/2026</td><td>Facebook</td><td>Advertising</td><td>Convention</td><td class="num">$24.00</td></tr>
+<tr><td>3/14/2026</td><td>Salt Lake County Republican Party</td><td>Donations</td><td>Convention</td><td class="num">$375.00</td></tr>
+<tr><td>3/14/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$28.57</td></tr>
+<tr><td>3/14/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$9.66</td></tr>
+<tr><td>3/14/2026</td><td>McDonalds</td><td>Campaign Expense</td><td>Convention</td><td class="num">$52.00</td></tr>
+<tr><td>3/14/2026</td><td>Costco</td><td>Campaign Expense</td><td>Convention</td><td class="num">$19.76</td></tr>
+<tr><td>3/14/2026</td><td>Express Digital Direct</td><td>Campaign Expense</td><td>Convention</td><td class="num">$285.75</td></tr>
+<tr><td>3/14/2026</td><td>Papa Johns</td><td>Campaign Expense</td><td>Convention</td><td class="num">$95.81</td></tr>
+<tr><td>3/14/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$618.91</td></tr>
+<tr><td>3/15/2026</td><td>Facebook</td><td>Advertising</td><td>Convention</td><td class="num">$20.00</td></tr>
+<tr><td>3/15/2026</td><td>Original Pancake House</td><td>Campaign Expense</td><td>Convention</td><td class="num">$33.80</td></tr>
+<tr><td>3/15/2026</td><td>Office Depot</td><td>Office</td><td>Convention</td><td class="num">$15.60</td></tr>
+<tr><td>3/16/2026</td><td>Facebook</td><td>Advertising</td><td>Convention</td><td class="num">$21.21</td></tr>
+<tr><td>3/16/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$88.11</td></tr>
+<tr><td>3/17/2026</td><td>Tuk Tuks</td><td>Campaign Expense</td><td>Convention</td><td class="num">$63.58</td></tr>
+<tr><td>3/17/2026</td><td>Facebook</td><td>Advertising</td><td>Convention</td><td class="num">$43.00</td></tr>
+<tr><td>3/17/2026</td><td>Payless Car Rental</td><td>Travel Expenses</td><td>Convention</td><td class="num">$61.17</td></tr>
+<tr><td>3/17/2026</td><td>Salt Lake City Airport Parking</td><td>Travel Expense</td><td>Convention</td><td class="num">$18.00</td></tr>
+<tr><td>3/18/2026</td><td>Itto Sushi</td><td>Campaign Expense</td><td>Convention</td><td class="num">$140.70</td></tr>
+<tr><td>3/18/2026</td><td>Starbucks</td><td>Campaign Expense</td><td>Convention</td><td class="num">$22.20</td></tr>
+<tr><td>3/19/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Convention</td><td class="num">$0.84</td></tr>
+<tr><td>3/19/2026</td><td>Facebook</td><td>Advertising</td><td>Convention</td><td class="num">$43.00</td></tr>
+<tr><td>3/19/2026</td><td>Wendy's</td><td>Campaign Expense</td><td>Convention</td><td class="num">$45.38</td></tr>
+<tr><td>3/20/2026</td><td>Chilis</td><td>Campaign Expense</td><td>Convention</td><td class="num">$128.43</td></tr>
+<tr><td>3/20/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Convention</td><td class="num">$28.77</td></tr>
+<tr><td>3/23/2026</td><td>Facebook</td><td>Advertising</td><td>Convention</td><td class="num">$43.00</td></tr>
+<tr><td>3/23/2026</td><td>Mailchimp</td><td>Campaign Expense</td><td>Convention</td><td class="num">$21.49</td></tr>
+<tr><td>3/24/2026</td><td>Chevron</td><td>Campaign Expense</td><td>Convention</td><td class="num">$8.67</td></tr>
+<tr><td>3/24/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Convention</td><td class="num">$12.98</td></tr>
+<tr><td>3/25/2026</td><td>Big Mango</td><td>Campaign Expense</td><td>Convention</td><td class="num">$123.87</td></tr>
+<tr><td>3/25/2026</td><td>Starbucks</td><td>Campaign Expense</td><td>Convention</td><td class="num">$6.73</td></tr>
+<tr><td>3/26/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$56.60</td></tr>
+<tr><td>3/26/2026</td><td>Etsy</td><td>Campaign Expense</td><td>Convention</td><td class="num">$5.16</td></tr>
+<tr><td>3/27/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Convention</td><td class="num">$13.83</td></tr>
+<tr><td>3/27/2026</td><td>Grand America Parking</td><td>Campaign Expense</td><td>Convention</td><td class="num">$16.00</td></tr>
+<tr><td>3/28/2026</td><td>Harbor Freight Tools</td><td>Campaign Expense</td><td>Convention</td><td class="num">$291.16</td></tr>
+<tr><td>3/28/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$62.33</td></tr>
+<tr><td>3/29/2026</td><td>Canva</td><td>Campaign Expense</td><td>Convention</td><td class="num">$31.49</td></tr>
+<tr><td>3/29/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Convention</td><td class="num">$64.25</td></tr>
+<tr><td>3/30/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$128.90</td></tr>
+<tr><td>3/31/2026</td><td>Salt Lake County Republican Party</td><td>Donations</td><td>Convention</td><td class="num">$300.00</td></tr>
+<tr><td>3/31/2026</td><td>Costco</td><td>Campaign Expense</td><td>Convention</td><td class="num">$315.00</td></tr>
+<tr><td>4/1/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Convention</td><td class="num">$193.25</td></tr>
+<tr><td>4/2/2026</td><td>Express Digital Direct</td><td>Campaign Expense</td><td>Convention</td><td class="num">$374.78</td></tr>
+<tr><td>4/2/2026</td><td>Dollar Tree</td><td>Campaign Expense</td><td>Convention</td><td class="num">$168.80</td></tr>
+<tr><td>4/2/2026</td><td>McDonalds</td><td>Campaign Expense</td><td>Convention</td><td class="num">$95.72</td></tr>
+<tr><td>4/3/2026</td><td>Fiverr</td><td>Campaign Expense</td><td>Convention</td><td class="num">$97.55</td></tr>
+<tr><td>4/3/2026</td><td>Tui6 Parties</td><td>Campaign Expense</td><td>Convention</td><td class="num">$625.00</td></tr>
+<tr><td>4/4/2026</td><td>Airborne</td><td>Campaign Expense</td><td>Convention</td><td class="num">$107.45</td></tr>
+<tr><td>4/4/2026</td><td>Vision Digital</td><td>Campaign Expense</td><td>Convention</td><td class="num">$580.00</td></tr>
+<tr><td>4/6/2026</td><td>(no payee listed)</td><td>Campaign Expense</td><td>Convention</td><td class="num">$13.91</td></tr>
+<tr><td>4/7/2026</td><td>Wholesale Flowers</td><td>Campaign Expense</td><td>Convention</td><td class="num">$800.00</td></tr>
+<tr><td>4/8/2026</td><td>Utah Republican Party</td><td>Donations</td><td>Convention</td><td class="num">$1,800.00</td></tr>
+<tr><td>4/8/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$128.93</td></tr>
+<tr><td>4/8/2026</td><td>Harmons</td><td>Campaign Expense</td><td>Convention</td><td class="num">$43.40</td></tr>
+<tr><td>4/9/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$108.50</td></tr>
+<tr><td>4/9/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$175.82</td></tr>
+<tr><td>4/10/2026</td><td>Modern Display</td><td>Campaign Expense</td><td>Convention</td><td class="num">$865.63</td></tr>
+<tr><td>4/10/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$32.20</td></tr>
+<tr><td>4/10/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Convention</td><td class="num">$500.00</td></tr>
+<tr><td>4/10/2026</td><td>Costco</td><td>Campaign Expense</td><td>Convention</td><td class="num">$37.05</td></tr>
+<tr><td>4/10/2026</td><td>Lahjit</td><td>Campaign Expense</td><td>Convention</td><td class="num">$2,400.00</td></tr>
+<tr><td>4/11/2026</td><td>Aunty's Hawaiian Kitchen</td><td>Campaign Expense</td><td>Convention</td><td class="num">$39.28</td></tr>
+<tr><td>4/11/2026</td><td>Google</td><td>Campaign Expense</td><td>Convention</td><td class="num">$21.49</td></tr>
+<tr><td>4/11/2026</td><td>Chick-Fil-A</td><td>Campaign Expense</td><td>Convention</td><td class="num">$115.45</td></tr>
+<tr><td>4/12/2026</td><td>Smiths</td><td>Campaign Expense</td><td>Convention</td><td class="num">$171.39</td></tr>
+<tr><td>4/12/2026</td><td>Trader Joe's</td><td>Campaign Expense</td><td>Convention</td><td class="num">$19.01</td></tr>
+<tr><td>4/13/2026</td><td>Little Caesars</td><td>Campaign Expense</td><td>Convention</td><td class="num">$75.81</td></tr>
+<tr><td>4/13/2026</td><td>Betos</td><td>Campaign Expense</td><td>Convention</td><td class="num">$30.78</td></tr>
+<tr><td>4/13/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Convention</td><td class="num">$75.20</td></tr>
+<tr><td>4/13/2026</td><td>Zurchers</td><td>Campaign Expense</td><td>Convention</td><td class="num">$149.80</td></tr>
+<tr><td>4/15/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$21.86</td></tr>
+<tr><td>4/16/2026</td><td>Custom Prints</td><td>Campaign Expense</td><td>Primary</td><td class="num">$510.60</td></tr>
+<tr><td>4/17/2026</td><td>Custom Prints</td><td>Campaign Expense</td><td>Primary</td><td class="num">$272.60</td></tr>
+<tr><td>4/17/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$401.40</td></tr>
+<tr><td>4/17/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$14.62</td></tr>
+<tr><td>4/17/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$267.60</td></tr>
+<tr><td>4/17/2026</td><td>Sandy Expo Center</td><td>Campaign Expense</td><td>Primary</td><td class="num">$24,000.00</td></tr>
+<tr><td>4/18/2026</td><td>Costco</td><td>Campaign Expense</td><td>Primary</td><td class="num">$321.37</td></tr>
+<tr><td>4/18/2026</td><td>Airborne</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1,119.50</td></tr>
+<tr><td>4/18/2026</td><td>Big Mango</td><td>Campaign Expense</td><td>Primary</td><td class="num">$55.29</td></tr>
+<tr><td>4/18/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$41.68</td></tr>
+<tr><td>4/18/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$91.28</td></tr>
+<tr><td>4/20/2026</td><td>Little Caesars</td><td>Campaign Expense</td><td>Primary</td><td class="num">$96.67</td></tr>
+<tr><td>4/20/2026</td><td>Sticker Mule</td><td>Campaign Expense</td><td>Primary</td><td class="num">$297.70</td></tr>
+<tr><td>4/20/2026</td><td>McDonalds</td><td>Campaign Expense</td><td>Primary</td><td class="num">$42.60</td></tr>
+<tr><td>4/20/2026</td><td>Panda Express</td><td>Campaign Expense</td><td>Primary</td><td class="num">$24.25</td></tr>
+<tr><td>4/21/2026</td><td>Crumbl</td><td>Campaign Expense</td><td>Primary</td><td class="num">$221.77</td></tr>
+<tr><td>4/22/2026</td><td>CVS</td><td>Campaign Expense</td><td>Primary</td><td class="num">$47.12</td></tr>
+<tr><td>4/22/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$58.92</td></tr>
+<tr><td>4/23/2026</td><td>Wingstop</td><td>Campaign Expense</td><td>Primary</td><td class="num">$223.77</td></tr>
+<tr><td>4/23/2026</td><td>Mailchimp</td><td>Campaign Expense</td><td>Primary</td><td class="num">$28.47</td></tr>
+<tr><td>4/23/2026</td><td>Zeppes</td><td>Campaign Expense</td><td>Primary</td><td class="num">$30.85</td></tr>
+<tr><td>4/25/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$29.10</td></tr>
+<tr><td>4/25/2026</td><td>Mountain A</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1,382.60</td></tr>
+<tr><td>4/26/2026</td><td>Airborne</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1,183.49</td></tr>
+<tr><td>4/26/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$69.28</td></tr>
+<tr><td>4/26/2026</td><td>Sign Clip Displays</td><td>Campaign Expense</td><td>Primary</td><td class="num">$180.20</td></tr>
+<tr><td>4/26/2026</td><td>Papa Johns Pizza</td><td>Campaign Expense</td><td>Primary</td><td class="num">$101.86</td></tr>
+<tr><td>4/27/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$65.15</td></tr>
+<tr><td>4/27/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$12.29</td></tr>
+<tr><td>4/27/2026</td><td>Yard Sign Plus</td><td>Advertising</td><td>Primary</td><td class="num">$473.60</td></tr>
+<tr><td>4/27/2026</td><td>Yard Sign Plus</td><td>Advertising</td><td>Primary</td><td class="num">$2,965.59</td></tr>
+<tr><td>4/27/2026</td><td>Zurchers</td><td>Campaign Expense</td><td>Primary</td><td class="num">$85.05</td></tr>
+<tr><td>4/28/2026</td><td>Banner Buzz</td><td>Advertising</td><td>Primary</td><td class="num">$960.36</td></tr>
+<tr><td>4/28/2026</td><td>Yard Sign Plus</td><td>Campaign Expense</td><td>Primary</td><td class="num">$500.00</td></tr>
+<tr><td>4/29/2026</td><td>Canva</td><td>Advertising</td><td>Primary</td><td class="num">$14.99</td></tr>
+<tr><td>4/29/2026</td><td>Riverton City</td><td>Campaign Expense</td><td>Primary</td><td class="num">$15.00</td></tr>
+<tr><td>4/29/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$64.44</td></tr>
+<tr><td>4/29/2026</td><td>Wingers</td><td>Campaign Expense</td><td>Primary</td><td class="num">$49.60</td></tr>
+<tr><td>4/30/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$31.31</td></tr>
+<tr><td>4/30/2026</td><td>North Italia</td><td>Campaign Expense</td><td>Primary</td><td class="num">$116.52</td></tr>
+<tr><td>4/30/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$128.88</td></tr>
+<tr><td>5/1/2026</td><td>Starbucks</td><td>Campaign Expense</td><td>Primary</td><td class="num">$10.11</td></tr>
+<tr><td>5/1/2026</td><td>R&amp;R BBQ</td><td>Campaign Expense</td><td>Primary</td><td class="num">$45.49</td></tr>
+<tr><td>5/1/2026</td><td>Gloria Vindas</td><td>Donations</td><td>Primary</td><td class="num">$250.00</td></tr>
+<tr><td>5/2/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$153.35</td></tr>
+<tr><td>5/2/2026</td><td>Chevron</td><td>Campaign Expense</td><td>Primary</td><td class="num">$18.17</td></tr>
+<tr><td>5/3/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$42.10</td></tr>
+<tr><td>5/3/2026</td><td>Lowes</td><td>Campaign Expense</td><td>Primary</td><td class="num">$27.25</td></tr>
+<tr><td>5/3/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$61.76</td></tr>
+<tr><td>5/3/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$25.74</td></tr>
+<tr><td>5/3/2026</td><td>Mailchimp</td><td>Campaign Expense</td><td>Primary</td><td class="num">$277.58</td></tr>
+<tr><td>5/3/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$36.90</td></tr>
+<tr><td>5/4/2026</td><td>Mailchimp</td><td>Campaign Expense</td><td>Primary</td><td class="num">$359.96</td></tr>
+<tr><td>5/4/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$24.99</td></tr>
+<tr><td>5/4/2026</td><td>Searchbug</td><td>Campaign Expense</td><td>Primary</td><td class="num">$100.99</td></tr>
+<tr><td>5/4/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1,090.26</td></tr>
+<tr><td>5/5/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$11.34</td></tr>
+<tr><td>5/5/2026</td><td>Mountain A</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1,045.00</td></tr>
+<tr><td>5/6/2026</td><td>Herriman City</td><td>Campaign Expense</td><td>Primary</td><td class="num">$322.38</td></tr>
+<tr><td>5/6/2026</td><td>Aubergine Kitchen</td><td>Campaign Expense</td><td>Primary</td><td class="num">$46.58</td></tr>
+<tr><td>5/6/2026</td><td>Fiverr</td><td>Advertising</td><td>Primary</td><td class="num">$35.15</td></tr>
+<tr><td>5/6/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$11.20</td></tr>
+<tr><td>5/6/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$0.66</td></tr>
+<tr><td>5/6/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$3.69</td></tr>
+<tr><td>5/6/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$6.49</td></tr>
+<tr><td>5/6/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$8.86</td></tr>
+<tr><td>5/6/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$11.41</td></tr>
+<tr><td>5/6/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$9.02</td></tr>
+<tr><td>5/7/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$413.34</td></tr>
+<tr><td>5/7/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$78.44</td></tr>
+<tr><td>5/8/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$52.58</td></tr>
+<tr><td>5/8/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$43.00</td></tr>
+<tr><td>5/9/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$54.67</td></tr>
+<tr><td>5/9/2026</td><td>Fane Heitonga</td><td>Campaign Expense</td><td>Primary</td><td class="num">$315.00</td></tr>
+<tr><td>5/10/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$43.00</td></tr>
+<tr><td>5/10/2026</td><td>Whidbey's Eatery</td><td>Campaign Expense</td><td>Primary</td><td class="num">$46.10</td></tr>
+<tr><td>5/10/2026</td><td>Fedex</td><td>Campaign Expense</td><td>Primary</td><td class="num">$125.16</td></tr>
+<tr><td>5/10/2026</td><td>Marcelimage</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1,918.00</td></tr>
+<tr><td>5/10/2026</td><td>CVS</td><td>Campaign Expense</td><td>Primary</td><td class="num">$27.65</td></tr>
+<tr><td>5/10/2026</td><td>Papa Johns Pizza</td><td>Campaign Expense</td><td>Primary</td><td class="num">$60.20</td></tr>
+<tr><td>5/11/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$43.00</td></tr>
+<tr><td>5/11/2026</td><td>Openai</td><td>Campaign Expense</td><td>Primary</td><td class="num">$21.49</td></tr>
+<tr><td>5/11/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$31.05</td></tr>
+<tr><td>5/11/2026</td><td>Costco</td><td>Campaign Expense</td><td>Primary</td><td class="num">$113.04</td></tr>
+<tr><td>5/11/2026</td><td>CVS</td><td>Campaign Expense</td><td>Primary</td><td class="num">$300.00</td></tr>
+<tr><td>5/11/2026</td><td>Harmon's</td><td>Campaign Expense</td><td>Primary</td><td class="num">$66.61</td></tr>
+<tr><td>5/11/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$209.00</td></tr>
+<tr><td>5/12/2026</td><td>Broadway Media</td><td>Advertising</td><td>Primary</td><td class="num">$3,575.00</td></tr>
+<tr><td>5/12/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$43.00</td></tr>
+<tr><td>5/12/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$26.85</td></tr>
+<tr><td>5/13/2026</td><td>Express Digital</td><td>Advertising</td><td>Primary</td><td class="num">$4,595.21</td></tr>
+<tr><td>5/13/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$36.00</td></tr>
+<tr><td>5/14/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$36.00</td></tr>
+<tr><td>5/14/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$1.28</td></tr>
+<tr><td>5/14/2026</td><td>McDonald's</td><td>Campaign Expense</td><td>Primary</td><td class="num">$45.80</td></tr>
+<tr><td>5/14/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$75.20</td></tr>
+<tr><td>5/14/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$38.00</td></tr>
+<tr><td>5/15/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$40.00</td></tr>
+<tr><td>5/15/2026</td><td>Aunty's Hawaiian Kitchen</td><td>Campaign Expense</td><td>Primary</td><td class="num">$16.40</td></tr>
+<tr><td>5/15/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$43.00</td></tr>
+<tr><td>5/15/2026</td><td>Maverick</td><td>Campaign Expense</td><td>Primary</td><td class="num">$115.64</td></tr>
+<tr><td>5/15/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$5.28</td></tr>
+<tr><td>5/15/2026</td><td>Broadway Media</td><td>Advertising</td><td>Primary</td><td class="num">$2,500.00</td></tr>
+<tr><td>5/15/2026</td><td>Broadway Media</td><td>Advertising</td><td>Primary</td><td class="num">$2,500.00</td></tr>
+<tr><td>5/15/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$20.30</td></tr>
+<tr><td>5/15/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$10.30</td></tr>
+<tr><td>5/16/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$43.00</td></tr>
+<tr><td>5/16/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$42.00</td></tr>
+<tr><td>5/17/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$111.91</td></tr>
+<tr><td>5/17/2026</td><td>La-Cai</td><td>Campaign Expense</td><td>Primary</td><td class="num">$60.90</td></tr>
+<tr><td>5/17/2026</td><td>ChargePoint</td><td>Campaign Expense</td><td>Primary</td><td class="num">$20.00</td></tr>
+<tr><td>5/18/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>5/18/2026</td><td>Costco</td><td>Campaign Expense</td><td>Primary</td><td class="num">$53.96</td></tr>
+<tr><td>5/18/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$29.27</td></tr>
+<tr><td>5/18/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$301.23</td></tr>
+<tr><td>5/18/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$17.27</td></tr>
+<tr><td>5/18/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$198.17</td></tr>
+<tr><td>5/19/2026</td><td>Utah Republican Party State Indicia</td><td>Campaign Expense</td><td>Primary</td><td class="num">$4,865.00</td></tr>
+<tr><td>5/19/2026</td><td>DFCU Wire Fee</td><td>Campaign Expense</td><td>Primary</td><td class="num">$20.00</td></tr>
+<tr><td>5/19/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$4.30</td></tr>
+<tr><td>5/19/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>5/19/2026</td><td>Quench It</td><td>Campaign Expense</td><td>Primary</td><td class="num">$9.22</td></tr>
+<tr><td>5/20/2026</td><td>Costco</td><td>Campaign Expense</td><td>Primary</td><td class="num">$108.99</td></tr>
+<tr><td>5/20/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$80.26</td></tr>
+<tr><td>5/20/2026</td><td>Utah Republican Party State Indicia</td><td>Campaign Expense</td><td>Primary</td><td class="num">$3,329.00</td></tr>
+<tr><td>5/20/2026</td><td>DFCU Wire Fee</td><td>Campaign Expense</td><td>Primary</td><td class="num">$20.00</td></tr>
+<tr><td>5/21/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$275.61</td></tr>
+<tr><td>5/21/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>5/21/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$202.05</td></tr>
+<tr><td>5/22/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$65.82</td></tr>
+<tr><td>5/22/2026</td><td>Utah Republican Party</td><td>Campaign Expense</td><td>Primary</td><td class="num">$71.00</td></tr>
+<tr><td>5/22/2026</td><td>Fiverr</td><td>Campaign Expense</td><td>Primary</td><td class="num">$109.00</td></tr>
+<tr><td>5/23/2026</td><td>GoDaddy</td><td>Campaign Expense</td><td>Primary</td><td class="num">$13.19</td></tr>
+<tr><td>5/23/2026</td><td>Little Caesars</td><td>Campaign Expense</td><td>Primary</td><td class="num">$32.24</td></tr>
+<tr><td>5/23/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>5/23/2026</td><td>Mailchimp</td><td>Advertising</td><td>Primary</td><td class="num">$736.03</td></tr>
+<tr><td>5/23/2026</td><td>Fane Heitonga</td><td>Campaign Expense</td><td>Primary</td><td class="num">$180.00</td></tr>
+<tr><td>5/24/2026</td><td>Whidbey's Eatery</td><td>Campaign Expense</td><td>Primary</td><td class="num">$58.25</td></tr>
+<tr><td>5/24/2026</td><td>Fat Cats</td><td>Campaign Expense</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>5/24/2026</td><td>Leatherby's</td><td>Campaign Expense</td><td>Primary</td><td class="num">$228.34</td></tr>
+<tr><td>5/25/2026</td><td>Aunty's Hawaiian Kitchen</td><td>Campaign Expense</td><td>Primary</td><td class="num">$321.09</td></tr>
+<tr><td>5/25/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>5/25/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$13.44</td></tr>
+<tr><td>5/25/2026</td><td>Five Guys</td><td>Campaign Expense</td><td>Primary</td><td class="num">$85.87</td></tr>
+<tr><td>5/25/2026</td><td>Harmon's</td><td>Campaign Expense</td><td>Primary</td><td class="num">$445.60</td></tr>
+<tr><td>5/25/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$205.23</td></tr>
+<tr><td>5/26/2026</td><td>Reagan Outdoor Advertising</td><td>Advertising</td><td>Primary</td><td class="num">$4,500.00</td></tr>
+<tr><td>5/26/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>5/26/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$43.18</td></tr>
+<tr><td>5/27/2026</td><td>Freeway Marketing</td><td>Advertising</td><td>Primary</td><td class="num">$3,500.00</td></tr>
+<tr><td>5/27/2026</td><td>DFCU Wire Fee</td><td>Campaign Expense</td><td>Primary</td><td class="num">$20.00</td></tr>
+<tr><td>5/27/2026</td><td>Freeway Marketing</td><td>Advertising</td><td>Primary</td><td class="num">$2,500.00</td></tr>
+<tr><td>5/27/2026</td><td>Good2go</td><td>Campaign Expense</td><td>Primary</td><td class="num">$26.96</td></tr>
+<tr><td>5/27/2026</td><td>Herriman City</td><td>Campaign Expense</td><td>Primary</td><td class="num">$85.00</td></tr>
+<tr><td>5/27/2026</td><td>McDonald's</td><td>Campaign Expense</td><td>Primary</td><td class="num">$30.56</td></tr>
+<tr><td>5/27/2026</td><td>McDonald's</td><td>Campaign Expense</td><td>Primary</td><td class="num">$19.16</td></tr>
+<tr><td>5/27/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$21.50</td></tr>
+<tr><td>5/28/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$10.70</td></tr>
+<tr><td>5/28/2026</td><td>Kassie Feinga</td><td>Advertising</td><td>Primary</td><td class="num">$400.00</td></tr>
+<tr><td>5/29/2026</td><td>Canva</td><td>Campaign Expense</td><td>Primary</td><td class="num">$14.99</td></tr>
+<tr><td>5/29/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>5/30/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$199.44</td></tr>
+<tr><td>5/30/2026</td><td>Olive Garden</td><td>Campaign Expense</td><td>Primary</td><td class="num">$99.83</td></tr>
+<tr><td>5/30/2026</td><td>McDonald's</td><td>Campaign Expense</td><td>Primary</td><td class="num">$46.00</td></tr>
+<tr><td>5/30/2026</td><td>Melolini Fiefia</td><td>Campaign Expense</td><td>Primary</td><td class="num">$432.00</td></tr>
+<tr><td>5/31/2026</td><td>IFA</td><td>Campaign Expense</td><td>Primary</td><td class="num">$200.99</td></tr>
+<tr><td>5/31/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>6/1/2026</td><td>Fat Cats</td><td>Campaign Expense</td><td>Primary</td><td class="num">$3,814.82</td></tr>
+<tr><td>6/1/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>6/1/2026</td><td>Melolini Fiefia</td><td>Campaign Expense</td><td>Primary</td><td class="num">$300.00</td></tr>
+<tr><td>6/1/2026</td><td>Brittany Afu</td><td>Campaign Expense</td><td>Primary</td><td class="num">$500.00</td></tr>
+<tr><td>6/1/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$716.87</td></tr>
+<tr><td>6/2/2026</td><td>Right Insight</td><td>Campaign Expense</td><td>Primary</td><td class="num">$808.53</td></tr>
+<tr><td>6/2/2026</td><td>Talen Tafili</td><td>Campaign Expense</td><td>Primary</td><td class="num">$250.00</td></tr>
+<tr><td>6/2/2026</td><td>Google</td><td>Advertising</td><td>Primary</td><td class="num">$5.24</td></tr>
+<tr><td>6/3/2026</td><td>Panda Express</td><td>Campaign Expense</td><td>Primary</td><td class="num">$15.18</td></tr>
+<tr><td>6/3/2026</td><td>Reagan Outdoor Advertising</td><td>Advertising</td><td>Primary</td><td class="num">$3,696.00</td></tr>
+<tr><td>6/3/2026</td><td>Good2go</td><td>Campaign Expense</td><td>Primary</td><td class="num">$112.84</td></tr>
+<tr><td>6/3/2026</td><td>Melolini Fiefia</td><td>Campaign Expense</td><td>Primary</td><td class="num">$544.00</td></tr>
+<tr><td>6/3/2026</td><td>Utah Republican Party State Indicia</td><td>Campaign Expense</td><td>Primary</td><td class="num">$4,250.00</td></tr>
+<tr><td>6/3/2026</td><td>DFCU Wire Fee</td><td>Campaign Expense</td><td>Primary</td><td class="num">$20.00</td></tr>
+<tr><td>6/4/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>6/4/2026</td><td>Crumbl</td><td>Campaign Expense</td><td>Primary</td><td class="num">$28.97</td></tr>
+<tr><td>6/4/2026</td><td>Marcelimage</td><td>Campaign Expense</td><td>Primary</td><td class="num">$2,197.53</td></tr>
+<tr><td>6/5/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>6/5/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$22.34</td></tr>
+<tr><td>6/5/2026</td><td>Costco</td><td>Campaign Expense</td><td>Primary</td><td class="num">$297.55</td></tr>
+<tr><td>6/6/2026</td><td>NCSL</td><td>Campaign Expense</td><td>Primary</td><td class="num">$755.00</td></tr>
+<tr><td>6/6/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$162.53</td></tr>
+<tr><td>6/6/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>6/6/2026</td><td>Ana Tuiaki</td><td>Campaign Expense</td><td>Primary</td><td class="num">$201.00</td></tr>
+<tr><td>6/7/2026</td><td>Melolini Fiefia</td><td>Campaign Expense</td><td>Primary</td><td class="num">$896.00</td></tr>
+<tr><td>6/7/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>6/8/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$18.64</td></tr>
+<tr><td>6/8/2026</td><td>Side of Aloha</td><td>Campaign Expense</td><td>Primary</td><td class="num">$91.03</td></tr>
+<tr><td>6/8/2026</td><td>Anchalee Ngata</td><td>Campaign Expense</td><td>Primary</td><td class="num">$115.00</td></tr>
+<tr><td>6/9/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$12.18</td></tr>
+<tr><td>6/9/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$40.30</td></tr>
+<tr><td>6/9/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$21.15</td></tr>
+<tr><td>6/9/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$125.31</td></tr>
+<tr><td>6/9/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>6/10/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$53.70</td></tr>
+<tr><td>6/10/2026</td><td>Home Depot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$171.81</td></tr>
+<tr><td>6/10/2026</td><td>Fat Cats</td><td>Campaign Expense</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>Harmon's</td><td>Campaign Expense</td><td>Primary</td><td class="num">$60.95</td></tr>
+<tr><td>6/11/2026</td><td>Openai</td><td>Campaign Expense</td><td>Primary</td><td class="num">$21.49</td></tr>
+<tr><td>6/11/2026</td><td>Facebook</td><td>Advertising</td><td>Primary</td><td class="num">$135.00</td></tr>
+<tr><td>6/11/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$92.19</td></tr>
+      <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>$134,532.83</strong></td></tr>
+    </table></div>
+  </details>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;">$4,225 went out as donations, including $1,800 to the Utah Republican Party and $1,000 to Friends of Casey Saxton. Spending after June 11 is not in hand.</p>
+</div></section>
+
+<section id="record"><div class="wrap">
+  <div class="eyebrow">FIEFIA&rsquo;S 2026 BILLS</div>
+  <h2>Three Signed, Two AI Bills Died</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Fiefia&rsquo;s bills focus on technology, privacy and children. Three of his own became law. His two AI bills died on the last night. Two bills he carried were narrowed before passing.</p>
+  <p class="section-dek">From the Legislature&rsquo;s bill list for Doug Fiefia, 2026 General Session, and bill texts, compare documents, committee minutes and roll calls on le.utah.gov.</p>
+  <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">3 of 6</div><div class="label">HIS OWN BILLS SIGNED</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>H.B. 108 (foster youth benefits), H.B. 321 (inmate medical rates) and H.B. 408 (social media data). Left filed: H.B. 286 (AI transparency), H.B. 438 (AI companion chatbots) and H.B. 206 (nicotine ads on billboards and transit). Four more drafts were abandoned, including &ldquo;Artificial Intelligence Requirements.&rdquo;</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">2 of 2</div><div class="label">SENATE BILLS HE CARRIED, SIGNED</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>S.B. 267 (school software study, Cullimore) and S.B. 108 (online marketplaces, Fillmore).</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">7 of 8</div><div class="label">CO-SPONSORED BILLS SIGNED</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Including the child tax credit (H.B. 290), child care business tax credit (H.B. 190), voting changes (H.B. 209), capital felony cases (H.B. 495) and foreign land ownership limits (H.B. 291, one of 38 co-sponsors). State Sovereignty Amendments (H.B. 85) was left filed.</div></div></div></button>
+
+  </div>
+  <p style="margin:14px 0;font-size:.92em;color:var(--color-ink-soft);">About H.B. 291 (primary sponsor Rep. Candice Pierucci): as signed, it lowers the ownership share that makes a company a &ldquo;restricted foreign entity&rdquo; from 51% to 25%, has the Department of Public Safety send a letter to parties it suspects, gives them 30 days to answer, and allows a $500-a-day fine for not answering. Effective May 6, 2026. Source: H.B. 291 enrolled text, le.utah.gov.</p>
+  <div class="record-card">
+    <h3>How H.B. 408 changed, step by step</h3>
+    <ul style="margin:0;padding-left:18px;">
+      <li><strong>Feb. 24:</strong> House committee passes Substitute 1, 7&ndash;2. Fiefia, a committee member, votes yes; Reps. Hansen and Hawkins vote no.</li>
+      <li><strong>March 2:</strong> House passes it 66&ndash;1 (Hansen no).</li>
+      <li><strong>March 3:</strong> In the Senate committee, Fiefia presents it with Zach Boyd, director of the state Office of Artificial Intelligence. A motion to skip it fails 1&ndash;3; Sen. Karen Kwan moves to pass it, and it passes 3&ndash;1 (draft minutes).</li>
+      <li><strong>Then:</strong> The Senate adopts Substitute 3, which among other changes moves the bill&rsquo;s effective date from 2026 to 2027. As signed, the law pushes the 2025 data-portability law&rsquo;s start to July 1, 2027, drops the requirement to offer competitors &ldquo;a functionally equivalent version&rdquo; of internal interfaces, and narrows the data users can take, while adding consent and disclosure rules. Which of those changes came from the Senate beyond the date wasn&rsquo;t determined.</li>
+      <li><strong>March 5:</strong> The House accepts the Senate version 70&ndash;1, with Fiefia voting yes.</li>
+    </ul>
+    <span class="rc-tag rc-good">Changes made and voted on in the open</span>
+  </div>
+  <div class="record-card">
+    <h3>S.B. 267: from rules to a study</h3>
+    <p>As introduced by Sen. Kirk Cullimore, S.B. 267 would have required every school software vendor to sign a statewide student-privacy contract, prove its software helps students learn, and give up addictive design features, most biometric tracking, and using student data to train commercial AI. It included audits of every school district and a parent complaint process backed by the Attorney General. The version Fiefia carried in the House, and that became law, asks the State Board of Education to study those same topics and post guidance by July 1, 2027. It sets no requirements and no enforcement.</p>
+  </div>
+</div></section>
+
+<section id="ai"><div class="wrap">
+  <div class="eyebrow">THE AI BILL</div>
+  <h2>H.B. 286: Passed Committee 8&ndash;0, Never Got a Floor Vote</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Fiefia&rsquo;s biggest bill would have required the largest AI companies to publish safety plans and protected whistleblowers. After the White House opposed it, it died without a final vote.</p>
+  <div class="record-card">
+    <ul style="margin:0;padding-left:18px;">
+      <li>Passed the House Economic Development committee <strong>8&ndash;0</strong> on Jan. 27 (two members absent).</li>
+      <li>On Feb. 12, the White House Office of Intergovernmental Affairs wrote to Senate Majority Leader Kirk Cullimore: &ldquo;We are categorically opposed to Utah HB 286 and view it as an unfixable bill that goes against the Administration&rsquo;s AI Agenda.&rdquo;</li>
+      <li>After being circled on the floor, it was sent back to the Rules Committee on March 3. Its enacting clause was struck at 11:59 p.m. on March 6, the last night, and it was filed with no recorded floor vote.</li>
+      <li>Fiefia to the Associated Press (April 19): &ldquo;The Trump administration is, &lsquo;We want zero regulations on AI.&rsquo; I think that&rsquo;s wrong.&rdquo; Sen. Dan McCay, his primary opponent, said the bill would have &ldquo;driven Utah out of the AI innovation business.&rdquo;</li>
+    </ul>
+    <p style="margin-top:10px;">Full case file: <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb286.html">H.B. 286, AI Transparency Act (Bill-Tracker)</a>.</p>
+    <span class="rc-tag">Died by struck enacting clause, no floor vote</span>
+  </div>
+</div></section>
+
+<section id="anderson"><div class="wrap">
+  <div class="eyebrow">THE CHALLENGER</div>
+  <h2>Dane Anderson: No Money Reported</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Anderson is a first-time candidate with no campaign money on file and no campaign website found.</p>
+  <div class="three" style="grid-template-columns:1fr 1fr;">
+    <div><div class="who">DOUG FIEFIA (R)</div><div class="amt">$161,780</div><p>New money through 6/25/26; $134,532.83 spent through the primary.</p></div>
+    <div><div class="who">A. DANE ANDERSON (D)</div><div class="amt">$0</div><p>No contributions or spending found.</p></div>
+  </div>
+  <div class="record-card">
+    <p><strong>How this was read:</strong> a search of disclosures.utah.gov on Sept. 24, 2026 found no contributions or expenditures reported by Anderson. This page does not distinguish between reports filed showing $0 and no reports filed.</p>
+    <p><strong>Who he is:</strong> the Salt Lake County Democratic Party describes him as &ldquo;A. Dane Anderson, 31, is a lifelong Utah resident. He has lived with his family in Herriman for the last 7 years,&rdquo; and says his priorities include affordable housing, fair government and the Great Salt Lake. His disclosure form lists one job: special loans analyst at the Utah Housing Corporation, the state&rsquo;s housing finance agency.</p>
+    <p>No campaign website was found. A state elections PDF for him is a scanned image this site&rsquo;s tool couldn&rsquo;t read, so it is treated as unread.</p>
+    <span class="rc-tag">Absence finding: state site search, Sept. 24, 2026</span>
+  </div>
+</div></section>
+
+<section id="stands"><div class="wrap">
+  <div class="eyebrow">WHERE THEY STAND</div>
+  <h2>In Their Own Words</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>What each candidate says they&rsquo;ll work on. These are their claims, not checked facts.</p>
+  <div class="vs-grid" style="grid-template-columns:1fr 1fr;">
+    <div class="vs-head">FIEFIA (R)</div><div class="vs-head">ANDERSON (D)</div>
+    <div class="said"><strong>AI:</strong> &ldquo;Technology should serve people, not replace them.&rdquo; To the AP: &ldquo;Big Tech cares about their bottom line, and they were worried about making money, not doing right for the human race.&rdquo;</div><div class="said"><strong>Housing:</strong> affordable housing is a main issue, per the county Democratic Party&rsquo;s summary.</div>
+    <div class="said"><strong>Housing:</strong> &ldquo;Housing affordability is a real crisis in Utah. Our kids are being priced out of the communities they grew up in.&rdquo; He favors local zoning control over state mandates.</div><div class="said"><strong>Great Salt Lake:</strong> listed as a priority in the same summary.</div>
+    <div class="said"><strong>Growth:</strong> &ldquo;local control, fiscal responsibility, and making sure growth pays for growth.&rdquo;</div><div class="said">&nbsp;</div>
+    <div class="said"><strong>Data centers (KSL, June 5):</strong> supports the Box Elder County project &ldquo;if it is a true net benefit for people,&rdquo; and wants more transparency and public accountability.</div><div class="said">&nbsp;</div>
+    <div class="said"><strong>Families:</strong> &ldquo;Parents, not the government, are best positioned to guide, teach, and protect their children.&rdquo;</div><div class="said">&nbsp;</div>
+  </div>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;margin-top:14px;"><strong>Worth noting:</strong> Fiefia&rsquo;s site favors local control, and he carried S.B. 108, which limits what cities and counties can require of online marketplaces. <strong>How this was read:</strong> Fiefia&rsquo;s quotes are from dougfiefia.com (Key Issues and About pages), the Associated Press (April 19, 2026) and KSL (June 5, 2026). Anderson&rsquo;s are from the Salt Lake County Democratic Party&rsquo;s 2026 candidate page.</p>
+</div></section>
+
+<section id="disclosure"><div class="wrap">
+  <div class="eyebrow">THE DISCLOSURE FORMS</div>
+  <h2>What Each Candidate Listed</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Each candidate filled out the state&rsquo;s conflict-of-interest form. Fiefia&rsquo;s lists tech jobs, tech stock and rental property. Anderson&rsquo;s lists one job.</p>
+  <div class="table-scroll"><table class="entity-table">
+    <tr><th>Item</th><th>Fiefia (R), signed &ldquo;Douglas Kaleikini Fiefia&rdquo;</th><th>Anderson (D), signed &ldquo;Anthony Dane Anderson&rdquo;</th></tr>
+    <tr><td>Employers</td><td>Domo, Inc. (head of partnerships); SOJO Construction (founder; basements and remodels); SOJO Management (founder; real estate investing and property management). Previous: Google (Google Ads manager; sales territory lead helping companies with &ldquo;cloud infrastructure and AI strategy&rdquo;); Workday (sales manager)</td><td>Utah Housing Corporation (special loans analyst)</td></tr>
+    <tr><td>Owner</td><td>SOJO Construction; SOJO Management</td><td>None</td></tr>
+    <tr><td>$5,000+ income</td><td>Domo; SOJO Construction; SOJO Management</td><td>None</td></tr>
+    <tr><td>Stocks of $5,000+</td><td>Google; Domo; Workday; a Vanguard ETF</td><td>None</td></tr>
+    <tr><td>Boards</td><td>Raise The Tide (founder and president, unpaid); Utah State University Foundation board (unpaid)</td><td>None</td></tr>
+    <tr><td>Spouse</td><td>Listed; employer NA</td><td>Listed, with two small-business employers</td></tr>
+    <tr><td>Optional: property</td><td>Rental properties in Herriman, South Jordan, Ogden and West Jordan: &ldquo;I own all 7 properties.&rdquo;</td><td>Blank</td></tr>
+  </table></div>
+  <div class="record-card" style="margin-top:18px;">
+    <h3>Worth seeing side by side</h3>
+    <p><strong>Fiefia and tech.</strong> He carried AI and social media bills while working at Domo and holding Google, Domo and Workday stock. H.B. 286 would have applied to the largest AI developers. He disclosed each tie himself.</p>
+    <p><strong>Both and housing.</strong> Fiefia owns seven rental properties and a property management company, and disclosed the rentals in the optional section. Anderson works for the state&rsquo;s housing finance agency. Both would vote on housing if elected.</p>
+    <span class="rc-tag rc-good">Fiefia used the optional section</span>
+    <span class="rc-tag rc-good">Both forms filled in</span>
+  </div>
+</div></section>
+
+<section id="connections"><div class="wrap">
+  <div class="eyebrow">THE CONNECTIONS</div>
+  <h2>Where This Race Meets the Rest of the Docket</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Several people and groups tied to Fiefia&rsquo;s bills and money show up elsewhere on this site. A connection is not an accusation.</p>
+  <div class="conn-grid">
+    <div class="conn-card gold">
+      <div class="case"><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb286.html">BILL-TRACKER · H.B. 286</a></div>
+      <h4>Sen. Kirk Cullimore</h4>
+      <p>Received the White House letter on H.B. 286, sponsored S.B. 267 (the bill narrowed to a study that Fiefia carried) and was floor sponsor of Fiefia&rsquo;s H.B. 438. Cullimore&rsquo;s campaign gave $5,000 to Brooks Benson in <a href="sd11-buss-benson.html">SD-11</a>.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case"><a href="sd12-kwan-tyler.html">CASE 25</a></div>
+      <h4>Sen. Karen Kwan</h4>
+      <p>Moved to pass Fiefia&rsquo;s H.B. 408 out of the Senate committee on March 3.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case">SEN. LINCOLN FILLMORE</div>
+      <h4>A sponsor, then a donor</h4>
+      <p>Fiefia carried Fillmore&rsquo;s S.B. 108 in the House. On June 25, after the primary, Fillmore&rsquo;s committee gave Fiefia $1,500. Fillmore&rsquo;s committee also gave Benson $1,000.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case"><a href="https://weber-county-hive.github.io/pac/education-first-utah.html">EDUCATION FIRST UTAH</a></div>
+      <h4>$5,000 on June 10</h4>
+      <p>A PAC this site has tracked. It gave two weeks before the primary.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case">SHARED DONORS</div>
+      <h4>Same PACs as other Senate races</h4>
+      <p>U-Car PAC ($1,001) also gave to Kwan. Utah Bankers ($500) also gave to Benson and Catten.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case"><a href="luke-searle-hd59.html">HD-59</a></div>
+      <h4>Fiefia as a donor</h4>
+      <p>Fiefia gave $250 to Luke Searle (HD-59) in August, per this site&rsquo;s earlier research. During the primary he gave $1,000 to Casey Saxton (HD-37).</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="rubric"><div class="wrap">
+  <div class="eyebrow">THE RUBRIC</div>
+  <h2>Graded Topic by Topic</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Each topic gets a grade, A (best) to F (worst), on five questions: Does it check power? Can the public see it? Is it clear who pays? What does it do to air, water and land? Do the people affected get a real say? N/A means the question doesn&rsquo;t apply.</p>
+  <p class="section-dek"><strong>How to read these:</strong> grades judge only what has already happened in the filings as of Sept. 24, 2026. They judge the record, not the person. <strong>Scale:</strong> C means the record meets what the law requires. B or A means it goes beyond that in a way the record shows. D means required information is there but the key part is vague or bundled. F means required information is missing.</p>
+  <div class="topic-head">1. Fiefia&rsquo;s campaign money</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Criterion</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-c">C</span>Four checks of $10,000 or more make up about 31% of his new money.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-c">C</span>Every entry is itemized, as the law requires, and the House-account transfer is labeled. One $13.91 expense has no payee name. Two donors share names with his own businesses, one with a different address.</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-d">D</span>Payees are named, but $91,838 (68% of spending) is described only as &ldquo;Campaign Expense&rdquo; and another 29% only as &ldquo;Advertising,&rdquo; so the filings don&rsquo;t show what most of the $134,533 paid for.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-c">C</span>58% came from individuals and 13% from outside Utah, but gifts under $200 add up to less than 3%.</td></tr>
+  </table></div>
+  <div class="topic-head">2. Anderson&rsquo;s filings</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Criterion</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-na">N/A</span>No money to weigh.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-c">C</span>His disclosure form is complete. This grade covers the form only: whether he filed $0 finance reports or none was not checked.</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-na">N/A</span>No money reported.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-na">N/A</span>No money or votes to weigh.</td></tr>
+  </table></div>
+  <div class="topic-head">3. The disclosure forms</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Criterion</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-b">B</span>Fiefia used the optional item to list seven rental properties, though by city only. Anderson answered every required item.</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>Both named their income sources, as required. Stock values are not required and were not given.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-na">N/A</span>A disclosure form doesn&rsquo;t decide who bears a cost.</td></tr>
+  </table></div>
+  <div class="topic-head">4. The 2026 laws he sponsored or carried, bill by bill</div>
+  <p class="section-dek">Graded on what the final law does. Read from enrolled-bill summaries, compare documents and bill text on le.utah.gov. P = power, T = transparency, $ = financial accountability, E = environmental impact, C = community impact.</p>
+  <div class="table-scroll"><table class="rubric-table" style="min-width:860px;">
+    <tr><th>Bill</th><th>What it does</th><th>P</th><th>T</th><th>$</th><th>E</th><th>C</th><th>Why</th></tr>
+<tr><td><strong>H.B. 108</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Foster youth benefits &middot; primary sponsor</span></td><td>The state may use up to 25% of a child in state custody&rsquo;s federal benefits for their care, down from 75%; the rest is saved for the child.</td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Keeps more of a child&rsquo;s own money for the child.</td></tr>
+<tr><td><strong>H.B. 321</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Inmate medical rates &middot; primary sponsor</span></td><td>The state pays Medicare rates to University of Utah hospitals for inmate care, with a restricted account and yearly savings reports.</td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>Requires yearly savings reports. The records read don&rsquo;t show who absorbs the lower rates.</td></tr>
+<tr><td><strong>H.B. 408</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Social media data &middot; primary sponsor</span></td><td>Adds user consent and open-standard disclosure rules to Utah&rsquo;s 2025 data-portability law, but pushes that law&rsquo;s start to July 1, 2027, drops a requirement to share internal interfaces, and narrows what data users can take.</td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>Mixed: new consent rules, but the 2025 law is delayed a year (a Senate change) and trimmed.</td></tr>
+<tr><td><strong>S.B. 267</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">School software &middot; carried in the House</span></td><td>Has the State Board of Education study software in schools and post guidance by July 1, 2027; reports only if asked.</td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>Introduced as binding student-privacy rules with audits and enforcement; passed as a study that reports only if asked.</td></tr>
+<tr><td><strong>S.B. 108</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Online marketplaces &middot; carried in the House</span></td><td>Bars cities and counties from regulating online marketplaces, with exceptions including short-term rentals; requires a subpoena or court order before local governments demand users&rsquo; data.</td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>Adds a court-order check on data demands, but removes local governments&rsquo; power to regulate online marketplaces.</td></tr>
+  </table></div>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;margin-top:10px;"><strong>The pattern:</strong> his own foster-youth and inmate-medical laws grade best. The two tech-privacy laws that passed were narrower than they started, one delayed a year and one turned into a study. His broadest bills, on AI, did not pass.</p>
+</div></section>
+
+<section id="ask"><div class="wrap">
+  <div class="eyebrow">QUESTIONS VOTERS CAN ASK</div>
+  <h2>Questions From the Records</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>These come from what the filings show and what they leave out. Each has a direct answer. None assumes anything improper.</p>
+  <div class="vs-grid" style="grid-template-columns:1fr 1fr;">
+    <div class="vs-head">FOR REP. DOUG FIEFIA (R)</div><div class="vs-head">FOR DANE ANDERSON (D)</div>
+    <div class="said"><strong>1.</strong> Encode AI Corporation gave you $10,000 two weeks before your AI bill&rsquo;s hearing. What is your relationship with the group?</div><div class="said"><strong>1.</strong> No money has been reported by your campaign. How are you reaching voters?</div>
+    <div class="said"><strong>2.</strong> You own Google, Domo and Workday stock and work at Domo. How would you handle Senate votes on AI and tech companies?</div><div class="said"><strong>2.</strong> You work for the Utah Housing Corporation. How would you handle votes on state housing finance?</div>
+    <div class="said"><strong>3.</strong> S.B. 267 passed as a study instead of student-privacy rules. Will you push for the binding version in 2027?</div><div class="said"><strong>3.</strong> Who should pay for new power built for data centers: the companies or all ratepayers?</div>
+    <div class="said"><strong>4.</strong> You said the Box Elder data center should be &ldquo;a true net benefit.&rdquo; Who should pay for the power it needs?</div><div class="said"><strong>4.</strong> What would you do about the Great Salt Lake, specifically?</div>
+  </div>
+  <div class="record-card" style="margin-top:16px;"><h3>For both</h3><ul style="margin:0;padding-left:18px;"><li>You both list housing as a priority. Would you support letting cities decide zoning, as Fiefia&rsquo;s site says, even when the state wants more housing built?</li></ul></div>
+</div></section>
+
+<section id="limits"><div class="wrap">
+  <div class="eyebrow">WHAT THIS DOESN&rsquo;T SHOW</div>
+  <h2>Limits of the Record</h2>
+  <div class="record-card"><ul style="margin:0;padding-left:18px;">
+    <li>Fiefia&rsquo;s spending after June 11 and any contributions after June 25 are not in hand.</li>
+    <li>Anderson&rsquo;s $0 is from a search of the state disclosure site; whether he filed $0 reports or none was not separated.</li>
+    <li>Encode AI Corporation, ProDough, Elk Ridge Management and Rep Labs were not checked in the state business registry.</li>
+    <li>The H.B. 408 changes were read from the enrolled bill through this site&rsquo;s reading tool and a compare document; the March 3 committee minutes are marked draft.</li>
+    <li>Bill grades use enrolled-bill summaries and bill text, not fiscal notes. Co-sponsored bills are listed, not graded. Only the H.B. 408 votes were reviewed.</li>
+    <li>An Associated Press story says H.B. 286 died in the Senate; the Legislature&rsquo;s record shows it was struck and filed in the House. This page follows the Legislature&rsquo;s record.</li>
+    <li>Nothing here suggests any rule was broken.</li>
+  </ul></div>
+</div></section>
+
+<section><div class="wrap">
+  <details class="sources">
+    <summary>View all sources (15)</summary>
+    <ol>
+      <li>Douglas Fiefia, 2026 Convention and Primary reports, DEX export DEX20260924_125427.csv (disclosures.utah.gov)</li>
+      <li>Douglas Fiefia, itemized contributions listed 6/25/26 (disclosures.utah.gov)</li>
+      <li>Douglas Kaleikini Fiefia, conflict-of-interest disclosure, Utah State Senate (disclosures.utah.gov), read from filed text</li>
+      <li>Anthony Dane Anderson, conflict-of-interest disclosure, Utah Senate (disclosures.utah.gov), read from filed text</li>
+      <li>disclosures.utah.gov search for Anderson&rsquo;s campaign finance reports, Sept. 24, 2026</li>
+      <li>Utah Legislature, bill list for Rep. Doug Fiefia, 2026 General Session; enrolled and introduced texts of H.B. 108, 206, 291, 321, 408, 438 and S.B. 108, 267 (le.utah.gov)</li>
+      <li>le.utah.gov compare documents: HB0408S03 vs. HB0408; SB0267S05 vs. SB0267</li>
+      <li>H.B. 408 votes: House Econ. Dev. committee 2/24/26; House 3rd reading 3/2/26; House concurrence 3/5/26; Senate Econ. Dev. committee draft minutes 3/3/26 (le.utah.gov)</li>
+      <li>This outlet&rsquo;s Bill-Tracker case file on H.B. 286 and its underlying records (committee minutes, bill status, White House letter as reported by Axios and Deseret News)</li>
+      <li>Doug Fiefia campaign site, Key Issues and About Me pages (dougfiefia.com)</li>
+      <li>Associated Press (Nicholas Riccardi), &ldquo;Trump wants to stop states from regulating AI. This Utah Republican isn&rsquo;t listening,&rdquo; April 19, 2026</li>
+      <li>KSL (Daniel Woodruff), &ldquo;2 sitting GOP lawmakers battle each other in Utah Senate primary,&rdquo; June 5, 2026; KSL (Beal-Cvetko and Woodruff), primary results, June 23, 2026</li>
+      <li>Ballotpedia, &ldquo;Doug Fiefia&rdquo;</li>
+      <li>Salt Lake County Democratic Party, 2026 Candidates page</li>
+      <li>This outlet&rsquo;s own files: Cases 24 and 25, the HD-59 file and the Education First Utah PAC file</li>
+    </ol>
+  </details>
+</div></section>
+
+<footer><div class="wrap">
+  Compiled from Utah campaign-finance disclosures (disclosures.utah.gov), the candidates&rsquo; conflict-of-interest forms, le.utah.gov and published news coverage. Public records only · No comment requested.<br>
+  <a href="index.html">&larr; Back to the Candidates 2026 docket</a>
+</div></footer>
+
+<script>
+document.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('flipped');b.setAttribute('aria-pressed',b.classList.contains('flipped'));}));
+if (window.Chart && document.getElementById('spendChart')) {
+  Chart.defaults.font.family = "'Source Serif 4', Georgia, serif"; Chart.defaults.color = '#5c534c';
+  const money = v => '$' + Number(v).toLocaleString();
+  new Chart(document.getElementById('spendChart'), { type:'bar',
+    data: { labels: ['Sandy Expo Center','Utah GOP (postage indicia)','Broadway Media','Reagan Outdoor Advertising','Freeway Marketing','Taylor Mountain West','Express Digital','Marcelimage','Fat Cats','Yard Sign Plus','Amazon','Right Insight'],
+      datasets: [{ data: [24000,12444,8575,8196,6000,4900,4595.21,4115.53,4014.82,3939.19,3758.20,3585.68], backgroundColor:'#5c1a2b', borderRadius:3 }] },
+    options: { indexAxis:'y', maintainAspectRatio:false, plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label: c => money(c.parsed.x) } } },
+      scales: { x: { ticks: { callback: money }, grid: { color:'#e6dfcf' } }, y: { grid: { display:false } } } } });
+}
+</script>
+</body>
+</html>

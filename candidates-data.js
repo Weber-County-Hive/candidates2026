@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "sd18-fiefia-anderson",
+    race: "Senate District 18 — Salt Lake and Utah Counties",
+    level: "State",
+    county: "Salt Lake / Utah",
+    caseNumber: "CASE 27",
+    names: "Fiefia vs. Anderson",
+    verdict: "$161,780 vs. $0",
+    tags: ["Open Seat", "AI Bill", "Tech Money", "No Money Reported", "Disclosure Forms"],
+    stamp: "Active",
+    href: "sd18-fiefia-anderson.html",
+    datePosted: "2026-09-24",
+    dateUpdated: "2026-09-24"
+  },
+  {
     id: "sd13-catten-smith-mahoney",
     race: "Senate District 13 — Salt Lake County (open seat)",
     level: "State",
