@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "sd12-kwan-tyler",
+    race: "Senate District 12 — Salt Lake County (House Districts 27, 30, 31, 36, 37)",
+    level: "State",
+    county: "Salt Lake",
+    caseNumber: "CASE 25",
+    names: "Kwan vs. Tyler",
+    verdict: "$88,651 vs. $726",
+    tags: ["Incumbent", "SenDemPAC", "Small Donors", "Voluntary Disclosure", "Disclosure Forms"],
+    stamp: "Active",
+    href: "sd12-kwan-tyler.html",
+    datePosted: "2026-09-24",
+    dateUpdated: "2026-09-24"
+  },
+  {
     id: "sd11-buss-benson",
     race: "Senate District 11 — Eagle Mountain, Herriman, Magna, Kearns, Tooele",
     level: "State",
