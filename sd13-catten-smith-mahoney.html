@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD-13: Catten vs. Smith vs. Mahoney | The Weber County Hive</title>
+<meta name="description" content="Senate District 13, 2026, an open seat. Silvia Catten (D), Colin Smith (Forward) and Ryan Mahoney (R): their money, disclosure forms, stated priorities and where their donors show up in other races.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-paper:#f4f0e6;
+    --color-paper-deep:#ece5d4;
+    --color-ink:#241a16;
+    --color-ink-soft:#5c534c;
+    --color-link:#c0572e;
+    --color-stat:#d9a441;
+    --color-burgundy-light:#5c1a2b;
+    --color-burgundy-deep:#3d0f1c;
+    --color-line:#d8cfbc;
+    --color-card:#fbf8f1;
+    --color-good:#4d7c5f;
+    --color-flag:#a5372a;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.6;}
+  h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif;font-weight:700;margin:0 0 .4em;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:.72rem;letter-spacing:.06em;color:var(--color-ink-soft);}
+  a{color:var(--color-link);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header.band{background:linear-gradient(135deg, var(--color-burgundy-light), var(--color-burgundy-deep));color:#f4ece6;padding:22px 0;}
+  header.band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .brandmark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#f4ece6;text-decoration:none;}
+  nav.topnav a{color:#f4ece6cc;text-decoration:none;margin-left:22px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.03em;border-bottom:1px solid transparent;}
+  nav.topnav a:hover{border-bottom-color:#f4ece6cc;}
+
+  .hero{padding:56px 0 40px;border-bottom:1px solid var(--color-line);}
+  .hero .eyebrow{margin-bottom:14px;}
+  .hero h1{font-size:2.5rem;line-height:1.15;max-width:760px;}
+  .hero .dek{font-size:1.12rem;color:var(--color-ink-soft);max-width:660px;margin-top:14px;}
+  .hero-meta{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+  .hero-meta .stat-num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-stat);}
+  .hero-meta .stat-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);letter-spacing:.02em;max-width:170px;}
+
+  section{padding:44px 0;border-bottom:1px solid var(--color-line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:1.6rem;margin-bottom:6px;}
+  section .section-dek{color:var(--color-ink-soft);max-width:660px;margin-bottom:26px;font-size:1rem;}
+
+  .start-here{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-stat);padding:20px 24px;}
+  .start-here ol{margin:8px 0 0;padding-left:20px;}
+  .start-here li{margin-bottom:8px;}
+
+  .record-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:2px;padding:24px 26px;margin-bottom:18px;}
+  .record-card h3{font-size:1.15rem;margin-bottom:8px;}
+  .record-card p{margin:.6em 0;}
+  .record-card p:first-of-type{margin-top:0;}
+  .rc-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-link);border:1px solid var(--color-link);padding:3px 9px;border-radius:20px;margin:2px 6px 2px 0;text-decoration:none;}
+  a.rc-tag:hover{background:var(--color-link);color:#fff;}
+  .rc-flag{border-color:var(--color-flag);color:var(--color-flag);}
+  .rc-good{border-color:var(--color-good);color:var(--color-good);}
+
+  .quote-block{border-left:3px solid var(--color-stat);padding:4px 0 4px 18px;font-style:italic;color:var(--color-ink-soft);margin:14px 0;}
+
+  .fund-row{display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;margin-bottom:20px;}
+  .fund-donut{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fund-donut-center{width:96px;height:96px;background:var(--color-paper);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+  .fund-donut-center .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--color-ink);}
+  .fund-donut-center .lbl{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--color-ink-soft);}
+  .fund-donut-legend{list-style:none;padding:0;margin:8px 0 0;font-size:.92rem;}
+  .fund-donut-legend li{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0;}
+  .fund-bar-row{margin-bottom:10px;}
+  .fund-bar-row .bar-label{display:flex;justify-content:space-between;gap:12px;font-size:.86rem;margin-bottom:4px;}
+  .fund-bar-track{background:var(--color-paper-deep);border-radius:3px;height:8px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);}
+  .fund-bar-fill.alt{background:var(--color-stat);}
+
+  .table-scroll{overflow-x:auto;}
+  .entity-table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px;}
+  .entity-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:8px 10px;}
+  .entity-table td{padding:10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .entity-table td.num{font-family:'IBM Plex Mono',monospace;font-size:.85rem;white-space:nowrap;}
+  .status-pill{font-family:'IBM Plex Mono',monospace;font-size:.65rem;padding:3px 8px;border-radius:12px;white-space:nowrap;display:inline-block;}
+  .status-confirmed{background:#e2ede4;color:var(--color-good);}
+  .status-flag{background:#f3dedb;color:var(--color-flag);}
+  .status-unresolved{background:#f4ecd9;color:#8a6d1f;}
+
+  .timeline{border-left:2px solid var(--color-line);padding-left:22px;margin-left:6px;}
+  .timeline-item{position:relative;margin-bottom:22px;}
+  .timeline-item::before{content:"";position:absolute;left:-28px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--color-stat);}
+  .timeline-item.key::before{background:var(--color-flag);}
+  .timeline-item .t-date{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);}
+  .timeline-item h4{font-size:1rem;margin:.2em 0;}
+  .timeline-item p{margin:.2em 0;font-size:.95rem;color:var(--color-ink-soft);}
+
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--color-line);background:var(--color-card);}
+  .vs-grid > div{padding:16px 20px;border-bottom:1px solid var(--color-line);}
+  .vs-grid > div:nth-child(odd){border-right:1px solid var(--color-line);}
+  .vs-grid .vs-head{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  .vs-grid .said{font-style:italic;}
+
+  /* connections */
+  .hub{background:var(--color-burgundy-deep);color:#f4ece6;padding:22px 26px;border-radius:2px;margin-bottom:22px;}
+  .hub .eyebrow{color:#d9a441;}
+  .hub h3{color:#f4ece6;font-size:1.3rem;margin:6px 0 4px;}
+  .hub p{margin:0;color:#e8d9c8;font-size:.95rem;}
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .conn-card{background:var(--color-card);border:1px solid var(--color-line);border-top:4px solid var(--color-link);padding:18px 20px;}
+  .conn-card.doers{border-top-color:var(--color-burgundy-light);}
+  .conn-card.gold{border-top-color:var(--color-stat);}
+  .conn-card.unres{border-top-color:#b8952e;border-top-style:dashed;}
+  .conn-card .case{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .conn-card h4{font-size:1.05rem;margin:4px 0 8px;}
+  .conn-card p{margin:.4em 0;font-size:.94rem;}
+  .conn-card ul{margin:.4em 0;padding-left:18px;font-size:.93rem;}
+  .conn-card li{margin-bottom:4px;}
+
+  details.sources{margin-top:6px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.05em;color:var(--color-burgundy-light);font-weight:600;}
+  details.sources ol{font-size:.9rem;color:var(--color-ink-soft);padding-left:22px;}
+  details.sources li{margin-bottom:7px;}
+
+  @media (max-width:680px){
+    .hero h1{font-size:1.9rem;}
+    .fund-row{flex-direction:column;}
+    .conn-grid{grid-template-columns:1fr;}
+    .vs-grid{grid-template-columns:1fr;}
+    .vs-grid > div:nth-child(odd){border-right:none;}
+    .vs-grid .vs-head:nth-child(2){display:none;}
+  }
+  footer{padding:40px 0 60px;text-align:center;color:var(--color-ink-soft);font-size:.85rem;}
+  footer a{color:var(--color-link);}
+  .jumpnav{background:var(--color-paper-deep);border-bottom:1px solid var(--color-line);padding:12px 0;position:sticky;top:0;z-index:5;}
+  .jumpnav .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .jumpnav a{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.03em;color:var(--color-ink);text-decoration:none;border-bottom:1px solid transparent;}
+  .jumpnav a:hover{border-bottom-color:var(--color-link);color:var(--color-link);}
+  section[id]{scroll-margin-top:60px;}
+  .race-strip{display:grid;grid-template-columns:repeat(8,1fr);margin-top:26px;border-top:1px solid var(--color-line);border-left:1px solid var(--color-line);background:var(--color-card);}
+  .race-strip > div{padding:12px 12px 14px;border-right:1px solid var(--color-line);border-bottom:1px solid var(--color-line);min-width:0;}
+  .race-strip .d{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-link);font-weight:600;white-space:nowrap;}
+  .race-strip .e{font-size:.84rem;line-height:1.35;margin-top:6px;hyphens:none;overflow-wrap:normal;}
+  .race-strip .future .d{color:var(--color-ink-soft);}
+  @media (max-width:1000px){.race-strip{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:560px){.race-strip{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:680px){.jumpnav{position:static;} .rubric-table td:first-child{width:auto;}}
+  .chart-card{background:var(--color-card);border:1px solid var(--color-line);padding:18px 20px;margin:22px 0;}
+  .chart-card h3{font-size:1.05rem;margin-bottom:4px;}
+  .chart-card .cap{font-size:.86rem;color:var(--color-ink-soft);margin:0 0 12px;}
+  .chart-box{position:relative;height:260px;}
+  .mermaid-wrap{background:var(--color-card);border:1px solid var(--color-line);padding:18px;margin:22px 0;overflow-x:auto;}
+  .mermaid-wrap .cap{font-size:.86rem;color:var(--color-ink-soft);margin:10px 0 0;}
+  .mermaid{text-align:center;}
+  details.ledger{background:var(--color-card);border:1px solid var(--color-line);padding:12px 18px;margin:12px 0;}
+  details.ledger summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.04em;color:var(--color-burgundy-light);font-weight:600;}
+  details.ledger .table-scroll{max-height:460px;overflow:auto;margin-top:10px;}
+  .rubric-table{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--color-card);border:1px solid var(--color-line);}
+  .rubric-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:10px;background:var(--color-paper-deep);}
+  .rubric-table td{padding:12px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .rubric-table td:first-child{font-weight:600;width:170px;}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:#fff;border-radius:3px;padding:1px 6px;margin-right:6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--color-stat);} .g-d{background:#b5652f;} .g-f{background:var(--color-burgundy-light);} .g-na{background:#9a9186;font-size:.8rem;}
+  .topic-head{font-family:'Playfair Display',serif;font-size:1.15rem;margin:26px 0 8px;}
+  .compare-table td.num{text-align:right;}
+
+  .flip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0;}
+  @media (max-width:900px){.flip-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.flip-grid{grid-template-columns:1fr;}}
+  .flip{perspective:900px;background:none;border:0;padding:0;cursor:pointer;text-align:left;font:inherit;color:inherit;min-height:250px;}
+  .flip-inner{position:relative;width:100%;height:100%;min-height:250px;transition:transform .5s;transform-style:preserve-3d;}
+  .flip.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:18px 20px;display:flex;flex-direction:column;justify-content:center;}
+  .flip-front{text-align:center;}
+  .flip-front .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  .flip-front .label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);letter-spacing:.03em;margin-top:6px;}
+  .flip-front .hint{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--color-ink-soft);margin-top:10px;opacity:.75;}
+  .flip-back{transform:rotateY(180deg);background:var(--color-burgundy-deep);color:#f4ece6;border-color:var(--color-burgundy-deep);font-size:.9rem;line-height:1.5;overflow:auto;}
+  .flip-back strong{color:var(--color-stat);}
+  .plain{background:#fff8e6;border-left:4px solid var(--color-stat);padding:12px 16px;margin:0 0 16px;font-size:.98rem;}
+  .plain b{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.06em;color:#8a6d1f;margin-right:8px;}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--color-line);background:var(--color-card);margin:18px 0;}
+  .three > div{padding:16px 18px;border-right:1px solid var(--color-line);}
+  .three > div:last-child{border-right:none;}
+  .three .who{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .three .amt{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  @media (max-width:760px){.three{grid-template-columns:1fr;} .three > div{border-right:none;border-bottom:1px solid var(--color-line);}}
+  details.ledger{max-width:100%;min-width:0;}
+  details.ledger .table-scroll{max-width:100%;}
+  @media (max-width:760px){.vs-grid{grid-template-columns:1fr !important;}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+
+<body>
+
+<header class="band">
+  <div class="wrap">
+    <a class="brandmark" href="index.html">Weber County Hive — Candidates 2026</a>
+    <nav class="topnav">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">CASE 26 · SENATE DISTRICT 13 (SALT LAKE COUNTY) — OPEN SEAT — GENERAL ELECTION NOV. 3, 2026</div>
+    <h1>An Open Seat, Three Very Different Campaigns</h1>
+    <p class="dek">Sen. Nate Blouin (D) is leaving this seat. Millcreek council member Silvia Catten (D) reports $85,846 raised and $52,050 spent through the primary. Recovery coach Colin Smith (Forward) reports $23,018, more than half from outside Utah. Fleet repair manager Ryan Mahoney (R) reports $1,262, a third of it his own in-kind help.</p>
+    <div class="hero-meta">
+      <div><div class="stat-num">$85,846</div><div class="stat-label">CATTEN, CASH RAISED (TO 9/23)</div></div>
+      <div><div class="stat-num">$23,018</div><div class="stat-label">SMITH, CASH RAISED (TO 9/11)</div></div>
+      <div><div class="stat-num">$1,262</div><div class="stat-label">MAHONEY, CASH + IN-KIND (TO 9/24)</div></div>
+      <div><div class="stat-num">68.6%</div><div class="stat-label">OF CATTEN&rsquo;S SPENDING TO ONE FIRM</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="jumpnav" aria-label="Sections"><div class="wrap">
+  <a href="#start">Start here</a><a href="#words">Words</a><a href="#catten">Catten</a><a href="#smith">Smith</a><a href="#mahoney">Mahoney</a><a href="#stands">Where they stand</a><a href="#disclosure">Disclosure forms</a><a href="#connections">Connections</a><a href="#rubric">Rubric</a><a href="#ask">Questions</a><a href="#limits">Limits</a>
+</div></nav>
+
+<section id="start">
+  <div class="wrap">
+    <div class="eyebrow">START HERE</div>
+    <h2>Five Things the Records Show</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Nobody in this race has been a state senator. One is a city council member with a large campaign, one is a first-time Forward Party candidate, and one has raised very little.</p>
+    <div class="start-here">
+      <ol>
+        <li><strong>Catten raised $85,846 in cash and spent $52,049.88 by June 11,</strong> before a contested Democratic primary. <strong>Elevate Strategies</strong> received $35,685.68 of that (68.6%). Individuals gave about 71% of her money.</li>
+        <li><strong>A PAC named Elevate PAC gave Catten $5,000 on June 11.</strong> It shares a name with her main vendor. The filings don&rsquo;t show whether the two are related.</li>
+        <li><strong>Blue Star Steel, the company her disclosure form lists as her spouse&rsquo;s employer, gave her campaign $2,000.</strong> She and her spouse gave $6,000 more.</li>
+        <li><strong>Smith raised $23,018 in cash, 52% from outside Utah</strong> (by ZIP code), including $2,604.48 from California and $2,500 from Arkansas. The Forward Party gave $300.</li>
+        <li><strong>Mahoney raised $768.85 in cash and gave $418.52 of in-kind help himself.</strong> His export runs through Sept. 24, the most current filing of the three.</li>
+      </ol>
+    </div>
+    <div class="race-strip" aria-label="Race timeline">
+      <div><div class="d">JAN 27, 2026</div><div class="e">Catten&rsquo;s first 2026 gifts</div></div>
+      <div><div class="d">MAR 14</div><div class="e">Smith&rsquo;s campaign kickoff</div></div>
+      <div><div class="d">MAR 28</div><div class="e">Forward Party nominates Smith</div></div>
+      <div><div class="d">APR 18</div><div class="e">GOP convention (Mahoney)</div></div>
+      <div><div class="d">JUN 23</div><div class="e">Democratic primary</div></div>
+      <div class="future"><div class="d">OCT 20–30</div><div class="e">Early voting</div></div>
+      <div class="future"><div class="d">NOV 3</div><div class="e">General election</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="words">
+  <div class="wrap">
+    <div class="eyebrow">QUICK RECAP</div>
+    <h2>Words Used on This Page</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Tap any card to see what the word means.</p>
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Open seat</div><div class="label">NO INCUMBENT</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>The current senator isn&rsquo;t running again. Sen. Nate Blouin is running for Congress.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">In-kind</div><div class="label">HELP INSTEAD OF CASH</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Goods or services reported at a value, like T-shirts, pizza or vehicle graphics. A candidate can give in-kind help to their own campaign.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Redacted</div><div class="label">REMOVED UNDER STATE LAW</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Utah law (20A-11-1604(7)(a)) lets some personal details on a disclosure form be kept from public view. Mahoney and Smith used it for employer and spouse. That is allowed.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">DEX export</div><div class="label">THE STATE&rsquo;S MONEY FILE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A download from disclosures.utah.gov listing every contribution and expense a campaign reported, by report period.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Vendor</div><div class="label">WHO THE CAMPAIGN PAYS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A business paid for campaign work, such as consulting, ads, fundraising or printing.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">COI form</div><div class="label">CONFLICT-OF-INTEREST DISCLOSURE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A state form listing a candidate&rsquo;s jobs, businesses, big income sources, stocks and board seats.</div></div></div></button>
+
+    </div>
+  </div>
+</section>
+
+<section id="catten">
+  <div class="wrap">
+    <div class="eyebrow">SILVIA CATTEN (D)</div>
+    <h2>A Large, Mostly Individual Campaign</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Catten raised the most money by far. Most came from people, much of it local. She spent most of it on one consulting firm during the primary.</p>
+    <p class="section-dek">Her DEX export (Convention and Primary reports, 1/26&ndash;6/11/26) plus her itemized contributions for 6/12&ndash;9/23/26. Spending after June 11 is not in hand.</p>
+    <div class="fund-row">
+      <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 28.8%, var(--color-stat) 28.8% 100%);">
+        <div class="fund-donut-center"><div class="num">$85,846</div><div class="lbl">CASH RAISED</div></div>
+      </div>
+      <ul class="fund-donut-legend">
+        <li><span class="swatch" style="background:var(--color-link)"></span> PACs, unions, businesses and campaign committees &mdash; $24,700 (28.8%)</li>
+        <li><span class="swatch" style="background:var(--color-stat)"></span> Individuals &mdash; $61,146 (71.2%)</li>
+      </ul>
+    </div>
+    <div class="fund-bar-row"><div class="bar-label"><span>The candidate and her spouse (three checks)</span><span>$6,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:100%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Elevate PAC (6/11/26)</span><span>$5,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:83%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Dan Lofgren (two checks)</span><span>$3,500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:58%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>UFCW Local 99 PAC &middot; Celia Navejar &middot; Tim Fluetsch</span><span>$2,500 each</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:42%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Blue Star Steel &middot; Jeff 4 Mayor &middot; Fresh Air PAC &middot; IBEW (two checks) &middot; Jerry Coon (two checks)</span><span>$2,000 each</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:33%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Laborers Local 295 &middot; Utah Realtors &middot; Reagan Outdoor Advertising</span><span>$1,500 each</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:25%"></div></div></div>
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$35,686</div><div class="label">TO ELEVATE STRATEGIES</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Her largest vendor, paid in 14 entries from Feb. 2 to June 3, listed as &ldquo;Campaign Expense&rdquo; or &ldquo;Advertising.&rdquo; That&rsquo;s 68.6% of her spending through the primary.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$8,900</div><div class="label">FROM THE CATTEN NAME</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>She and her spouse gave $6,000. Seven other people with the Catten surname gave $2,900. The filings don&rsquo;t say how they&rsquo;re related, and $289.01 more came as her spouse&rsquo;s in-kind pizza for a fundraiser.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$12,115</div><div class="label">FROM OUTSIDE UTAH</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>14.1% of her cash, counted by ZIP code, including $2,000 from Florida in two checks. A few entries list a state code that doesn&rsquo;t match the ZIP.</div></div></div></button>
+
+    </div>
+    <div class="record-card">
+      <h3>Two gifts worth seeing plainly</h3>
+      <p><strong>Elevate PAC and Elevate Strategies.</strong> Elevate PAC (631 E. Garfield Ave., Salt Lake City) gave $5,000 on June 11. Elevate Strategies was paid $35,685.68. Her export lists no address for the vendor, so the filings don&rsquo;t show whether the PAC and the firm are connected. This page only notes that they share a name.</p>
+      <p><strong>Blue Star Steel.</strong> Her disclosure form lists Blue Star Steel as her spouse&rsquo;s employer. The company gave $2,000 on Feb. 12. Her own business, Arc Tags, makes tags for steel fabricators. She disclosed both.</p>
+      <p><strong>Jeff 4 Mayor.</strong> The committee gave $2,000; Jeffrey Silvestrini gave $1,000 more. Both list the same street address. The name matches Jeff Silvestrini, whom her campaign site lists as a former Millcreek mayor and an endorser. The current mayor, Cheri Jackson, gave $500 and also endorses her.</p>
+    </div>
+    <details class="ledger">
+      <summary>Every Catten contribution, 1/27&ndash;9/23/26 (291 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Contributor (as filed)</th><th>City, state (as filed)</th><th>Report</th><th>Note</th><th>Amount</th></tr>
+<tr><td>1/27/2026</td><td>JESSICA ARCE-LARRETA</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/27/2026</td><td>KATIE COON</td><td>Alexandria, VA</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/27/2026</td><td>MARIO ORGANISTA</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>1/27/2026</td><td>JACOB RICHARDSON</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>1/27/2026</td><td>JODI NEELY</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>1/27/2026</td><td>MCKENZIE CATTEN</td><td>West Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/27/2026</td><td>ASHLEY ROMNEY</td><td>Magna, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/27/2026</td><td>PATTY CATTEN</td><td>Springdale, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>1/27/2026</td><td>KESHIA ANDERSON</td><td>Murray, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/27/2026</td><td>RACHEAL NEIGER</td><td>Vineyard, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>1/27/2026</td><td>SHANNON COON</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/27/2026</td><td>MICHAEL LASKO</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/27/2026</td><td>R KATE BECHTHOLD</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>1/27/2026</td><td>ASHTON JENKINS</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>1/27/2026</td><td>DELL BUTTERFIELD</td><td>West Bountiful, UT</td><td>Convention</td><td></td><td class="num">$750.00</td></tr>
+<tr><td>1/27/2026</td><td>LESLIE SILVESTRINI</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>1/27/2026</td><td>JOSIE ANGERHOFER</td><td>Tooele, UT</td><td>Convention</td><td></td><td class="num">$5.00</td></tr>
+<tr><td>1/27/2026</td><td>AIMEE STONE MCCONKIE</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>1/27/2026</td><td>BEN MCADAMS</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/27/2026</td><td>JOHN BREMS</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/27/2026</td><td>LARRY CATTEN</td><td>Tombstone, AZ</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>1/27/2026</td><td>CALLEY COON</td><td>Durango, CO</td><td>Convention</td><td></td><td class="num">$15.00</td></tr>
+<tr><td>1/27/2026</td><td>KIT CATTEN</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>1/28/2026</td><td>RITA LUND</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>1/28/2026</td><td>LAURIE JOHNSON</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/28/2026</td><td>REBECCA CHAVEZ-HOUCK</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>1/28/2026</td><td>MONA THOMAS</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>1/28/2026</td><td>NOEL SANDBERG</td><td>Portland, OR</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>1/29/2026</td><td>KIMBERLY NGARUPE</td><td>Provo, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/30/2026</td><td>ELECT AIMEE WINDER NEWTON</td><td>Taylorsville, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/1/2026</td><td>CHELSEA SOLORZANO</td><td>Holladay, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/1/2026</td><td>NAOMI SHINGLETON</td><td>Livermore, CA</td><td>Convention</td><td></td><td class="num">$150.00</td></tr>
+<tr><td>2/1/2026</td><td>MILES PETTY</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/2/2026</td><td>ERIKA BARBER</td><td>Tampa, FL</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>2/3/2026</td><td>ANN GRANATO</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/3/2026</td><td>AMANDA FULTON</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/4/2026</td><td>BRIENNE HENDERSON</td><td>Olympia, WA</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/5/2026</td><td>BRIAN HOUGAARD</td><td>Manti, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/5/2026</td><td>KURT HANSEN</td><td>Taylorsville, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/6/2026</td><td>NICOLE HANDY</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>2/6/2026</td><td>BECCA ANDERSON</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/9/2026</td><td>MICKEY IBARRA</td><td>Washington, WA</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/9/2026</td><td>Jacquie Catten</td><td>Murray, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>2/10/2026</td><td>ERIN LIPP</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/11/2026</td><td>RYAN LEAVITT</td><td>Oakton, VA</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/11/2026</td><td>CHRIS MUMFORD</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/12/2026</td><td>JULIANNE PECK-DABLING</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/12/2026</td><td>JOE FINLINSON</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/12/2026</td><td>ASHLEY JOLIN</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/12/2026</td><td>BLUE STAR STEEL</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>2/13/2026</td><td>APRIL FLORES</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/13/2026</td><td>KELSEY PRICE</td><td>Washington, DC</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/15/2026</td><td>MARINA TATEOKA</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/16/2026</td><td>CLARKE NELSON</td><td>Holladay, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>2/16/2026</td><td>BRADLEY WALDRAM</td><td>Aubrey, TX</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/17/2026</td><td>CARLY RED</td><td>American Fork, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>2/17/2026</td><td>PAT PARTRIDGE</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/18/2026</td><td>LISA BAGLEY</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/18/2026</td><td>GAVIN CATTEN</td><td>Wynnewood, PA</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/18/2026</td><td>NATALIE CHANNELL</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>2/19/2026</td><td>EMILY CLIFFORD</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>2/19/2026</td><td>JOSEPH ANDRADE</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/19/2026</td><td>BEN MCADAMS</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/19/2026</td><td>LAUREN OKLAND</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>2/20/2026</td><td>SANDY CHANNELL</td><td>Orem, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/20/2026</td><td>ETHAN THOMAS</td><td>Las Vegas, NV</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/22/2026</td><td>DEONDRA NIELSEN</td><td>Holladay, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>2/23/2026</td><td>SHAWN COON</td><td>Taylorsville, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/25/2026</td><td>JENNY ZACHER</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>2/25/2026</td><td>CHELSEA SOLORZANO</td><td>Holladay, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/25/2026</td><td>JACOB RICHARDSON</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/25/2026</td><td>SCOTT CLAERHOUT</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/26/2026</td><td>RITA LUND</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/26/2026</td><td>MARIO ORGANISTA</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/27/2026</td><td>R KATE BECHTHOLD</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>2/27/2026</td><td>ROBERT MAY</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/28/2026</td><td>MONA THOMAS</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>3/4/2026</td><td>JENNIFER SIMMONS</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/4/2026</td><td>CHRISTINA THURSTON</td><td>Brooklyn, NY</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>3/5/2026</td><td>LISA DUDLEY</td><td>Riverton, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/6/2026</td><td>JORDAN BLASER</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/7/2026</td><td>SHERYL GINSBERG</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>3/7/2026</td><td>ERIN JEMISON</td><td>Holladay, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/7/2026</td><td>EVAN DONE</td><td>South Salt Lake, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/7/2026</td><td>JOAN MITCHELL</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/8/2026</td><td>ILENE RISK</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>3/9/2026</td><td>PATRICE ARENT</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/9/2026</td><td>TAMEISHA BRANNON</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$35.00</td></tr>
+<tr><td>3/9/2026</td><td>DUSTIN GETTEL</td><td>Midvale, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/10/2026</td><td>MARGARET MCDERMOTT</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>3/10/2026</td><td>ERICA FEARNLEY</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/10/2026</td><td>STEPHANIE PITCHER</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>3/10/2026</td><td>MARIO ORGANISTA</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/10/2026</td><td>DAVID BAIRD</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/10/2026</td><td>SPENCER NAVEJAR</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$120.00</td></tr>
+<tr><td>3/10/2026</td><td>WHITNEY WILDE NAIDETH</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$238.00</td></tr>
+<tr><td>3/10/2026</td><td>JEFF 4 MAYOR</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>3/10/2026</td><td>CHERI JACKSON</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>3/11/2026</td><td>SHANNON ELLSWORTH</td><td>South Jordan, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/11/2026</td><td>MARY GRAY</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>3/11/2026</td><td>KAITLIN JULANDER</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>3/12/2026</td><td>JESSICA THURSTON</td><td>Springville, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/13/2026</td><td>ED HUNT</td><td>Provo, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/14/2026</td><td>PAUL FOTHERINGHAM</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/14/2026</td><td>JARED EBORN</td><td>Murray, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/18/2026</td><td>KRISTINA REEDER</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>3/18/2026</td><td>UFCW LOCAL 99 PAC</td><td>Phoenix, AZ</td><td>Convention</td><td></td><td class="num">$2,500.00</td></tr>
+<tr><td>3/18/2026</td><td>ROBERT BROUGH</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$400.00</td></tr>
+<tr><td>3/20/2026</td><td>JOAN HAVEN</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/20/2026</td><td>KATE CONYERS</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/20/2026</td><td>JILLIAN SILVESTRINI</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>3/23/2026</td><td>GREGORY SNEYD</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>3/23/2026</td><td>LABORERS’ LOCAL UNION 295 LIUNA</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$1,500.00</td></tr>
+<tr><td>3/23/2026</td><td>EMILY POTTER</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>3/23/2026</td><td>MATTHEW HUEFNER</td><td>Washingtom, DC</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>3/26/2026</td><td>JOHN SACCOMANNO</td><td>Bountiful, DC</td><td>Convention</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>3/26/2026</td><td>CONNIE SACCOMANNO</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/27/2026</td><td>BEVERLEY UIPI</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>3/28/2026</td><td>MONA THOMAS</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>3/29/2026</td><td>KYLE FRIANT</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/30/2026</td><td>JOHN KNOBLOCK</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/30/2026</td><td>NICOLE CHRISTENSEN DICOU</td><td>Portland, OR</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>3/30/2026</td><td>SILVIA CATTEN</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>3/31/2026</td><td>LAURA MORTENSEN</td><td>Cedar Hills, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>4/2/2026</td><td>DAN LOFGREN</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>4/3/2026</td><td>QUENTIN WELLS</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/3/2026</td><td>PUBLISHERS SOFTWARE NETWORK</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>4/3/2026</td><td>KRISTIN THOMPSON</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$150.00</td></tr>
+<tr><td>4/6/2026</td><td>REAGAN OUTDOOR ADVERTISING</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1,500.00</td></tr>
+<tr><td>4/6/2026</td><td>DULCE BETTY BOUCHER</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>4/9/2026</td><td>LAUREL BROWN</td><td>Murray, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/13/2026</td><td>REBECCA CHAVEZ-HOUCK</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/14/2026</td><td>BARBARA THORNTON</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>4/14/2026</td><td>DAVID GROW</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>4/14/2026</td><td>CLARK A BULLEN</td><td>Murray, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>4/14/2026</td><td>MARK EGGEN</td><td>Holladay, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/15/2026</td><td>ALOYSIUS CHURCH</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$150.00</td></tr>
+<tr><td>4/15/2026</td><td>RUSSELL BOOTH</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>4/16/2026</td><td>ROB DAHLE</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/16/2026</td><td>SINA SHARIFAN</td><td>North Salt Lake, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/17/2026</td><td>JACQUELINE CATTEN</td><td>Murray, UT</td><td>Primary</td><td></td><td class="num">$800.00</td></tr>
+<tr><td>4/18/2026</td><td>JOHN GRIFFITH</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>4/18/2026</td><td>TISH BUROKER</td><td>Riverton, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/18/2026</td><td>BENJAMIN DAMSTEDT</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>4/19/2026</td><td>JESSICA ARCE-LARRETA</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/23/2026</td><td>ADAM GARDINER</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/23/2026</td><td>DON SHELTON</td><td>South Jordan, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/27/2026</td><td>ASHLEY SPATAFORE MIRABELLI</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>4/27/2026</td><td>DARIN MANO</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>4/28/2026</td><td>MONA THOMAS</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>4/28/2026</td><td>JASON LANG</td><td>Holladay, UT</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>4/29/2026</td><td>CLAIRE TRAPP</td><td>South Portland, ME</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/29/2026</td><td>MAX CHANG</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>4/29/2026</td><td>THOM DESIRANT</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/30/2026</td><td>KARI CALTON</td><td>South Salt Lake, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/30/2026</td><td>RACHEL NASSE</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>4/30/2026</td><td>MARIO ORGANISTA</td><td>South Jordan, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>5/1/2026</td><td>BEN MCADAMS</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>5/2/2026</td><td>MICKEY IBARRA</td><td>Washington, DC</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>5/3/2026</td><td>MICHAEL CATTEN</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>5/4/2026</td><td>MARIO ORGANISTA</td><td>South Jordan, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>5/6/2026</td><td>RICHARD HANSEN</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>5/6/2026</td><td>TIM FLUETSCH</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$2,500.00</td></tr>
+<tr><td>5/6/2026</td><td>IBEW PAC VOLUNTARY FUND</td><td>Washington, DC</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>5/7/2026</td><td>KIT CATTEN</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>5/7/2026</td><td>JUDY PAYNE</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>5/12/2026</td><td>Brian Johnson</td><td>Holladay, UT</td><td>Primary</td><td>In-kind: Campaign T-Shirts</td><td class="num">$709.40</td></tr>
+<tr><td>5/13/2026</td><td>ANNABEL SHEINBERG</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>5/13/2026</td><td>DANIEL WOODBURY</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>5/13/2026</td><td>ETHAN THOMAS</td><td>Las Vegas, NV</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>5/13/2026</td><td>PATRICK DE FREITAS</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>5/13/2026</td><td>PETER CORROON</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$150.00</td></tr>
+<tr><td>5/13/2026</td><td>LABORERS POLITICAL LEAGUE</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>5/14/2026</td><td>LESLIE CARPENTER</td><td>Hyde Park, UT</td><td>Primary</td><td></td><td class="num">$70.00</td></tr>
+<tr><td>5/15/2026</td><td>KHOSROW SEMNANI</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>5/15/2026</td><td>Silvia Catten</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>5/20/2026</td><td>JERRY COON</td><td>Ponte Vedra Beach, FL</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>5/21/2026</td><td>PATTY CATTEN</td><td>Springdale, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>5/21/2026</td><td>ANNETTE HARRIS</td><td>West Jordan, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>5/22/2026</td><td>TAMARA DAVIES</td><td>Centerville, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>5/27/2026</td><td>RITA LUND</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>5/28/2026</td><td>MONA THOMAS</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>5/28/2026</td><td>UTAH ASSOCIATION OF REALTORS</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$1,500.00</td></tr>
+<tr><td>6/1/2026</td><td>JAMEY HULSBERG</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/2/2026</td><td>LAUREL BROWN</td><td>Murray, UT</td><td>Primary</td><td></td><td class="num">$600.00</td></tr>
+<tr><td>6/2/2026</td><td>NOEL SANDBERG</td><td>Portland, OR</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>6/2/2026</td><td>JOHN GRIFFITH</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>6/2/2026</td><td>MCKENZIE CATTEN</td><td>West Jordan, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/2/2026</td><td>LARRY CATTEN</td><td>Tombstone, AZ</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/2/2026</td><td>JILL HEALEY</td><td>Salt Lake City, AZ</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>6/4/2026</td><td>GARRETT CATTEN</td><td>Millcreek, UT</td><td>Primary</td><td>In-kind: Food purchase for fundraiser from Millcreek Pizza House</td><td class="num">$289.01</td></tr>
+<tr><td>6/8/2026</td><td>SPENCER NAVEJAR</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>6/9/2026</td><td>FRIENDS OF SAHARA HAYES</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>6/9/2026</td><td>PUBLISHER SOFTWARE NETWORK</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/9/2026</td><td>RACHEAL NEIGER</td><td>Vineyard, UT</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>6/9/2026</td><td>CARLY RED</td><td>American Fork, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>ALISIA SANSOM</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>6/10/2026</td><td>LAVERNE SNOW</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>6/10/2026</td><td>TESS N WENGER</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>WHITNEY MCBRIDE</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>KIMBERLY NGARUPE</td><td>Provo, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>PETRA FARMER</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>6/10/2026</td><td>THOM DESIRANT</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>6/10/2026</td><td>JEFFREY SILVESTRINI</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>6/10/2026</td><td>ALIZA FREEDMAN</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>ROGELIO FRANCO</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>NICOLE HANDY</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>6/10/2026</td><td>JULIAN TIPPETS</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>6/10/2026</td><td>DWIGHT MARCHANT</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>LAUREL BROWN</td><td>Murray, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>GARRETT CATTEN</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$3,000.00</td></tr>
+<tr><td>6/10/2026</td><td>WHITNEY WILDE NAIDETH</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>NORM STEFFEN</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>JOEL MOORE</td><td>Holladay, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/10/2026</td><td>Jacquie Catten</td><td>Murray, UT</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>6/11/2026</td><td>RAUL GARCIA</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/11/2026</td><td>JAMIE NEY</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>6/11/2026</td><td>RACHEAL NEIGER</td><td>Vineyard, UT</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>6/11/2026</td><td>ELEVATE PAC</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>6/11/2026</td><td>REBECCA BRIGGS</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/11/2026</td><td>JENNIFER GODINA</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>6/11/2026</td><td>MARIAN MARRIOTT</td><td>Millcreek, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>6/12/2026</td><td>YVONNE CURLEY</td><td>Orem, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>6/12/2026</td><td>RACHEL MABEY</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/15/2026</td><td>ERIN MENDENHALL</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>6/16/2026</td><td>MARCUS STEVENSON</td><td>Layton, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>6/16/2026</td><td>CELIA NAVEJAR</td><td>Provo, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$2,500.00</td></tr>
+<tr><td>6/16/2026</td><td>TIM BROWN</td><td>Liberty, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>6/17/2026</td><td>BRENNA MARRON</td><td>Washington, DC</td><td>6/12&ndash;9/23</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>6/18/2026</td><td>RICHARD SMITH</td><td>Highland, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>6/18/2026</td><td>CHRISTIAN LARSEN</td><td>Millcreek, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>6/18/2026</td><td>LAURA BRIEFER</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>6/19/2026</td><td>TERI KLUG</td><td>Holladay, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>6/21/2026</td><td>PORSCHE SALT LAKE CITY</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>6/28/2026</td><td>MONA THOMAS</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>6/29/2026</td><td>CHRISTOPHER LARSON</td><td>Millcreek, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>6/30/2026</td><td>UTAH BANKERS ASSOCIATION</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>6/30/2026</td><td>PUBLISHERS SOFTWARE NETWORK</td><td>Millcreek, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>7/6/2026</td><td>IBEW PAC VOLUNTARY FUND</td><td>Washington, DC</td><td>6/12&ndash;9/23</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>7/8/2026</td><td>MARIO ORGANISTA</td><td>South Jordan, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>7/8/2026</td><td>MARK EGGEN</td><td>Holladay, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>7/9/2026</td><td>SARAH YOUNG</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>7/15/2026</td><td>UTAH AFL-CIO</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>7/15/2026</td><td>JERRY COON</td><td>Ponte Vedra Beach, FL</td><td>6/12&ndash;9/23</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>7/27/2026</td><td>OPERATING ENGINEERS 3</td><td>Concord, CA</td><td>6/12&ndash;9/23</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>7/28/2026</td><td>MONA THOMAS</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>8/4/2026</td><td>DAN LOFGREN</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$2,500.00</td></tr>
+<tr><td>8/6/2026</td><td>SHERYL GINSBERG</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>8/12/2026</td><td>PETER CORROON</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>8/12/2026</td><td>ELLEN BIRRELL</td><td>Sandy, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>8/13/2026</td><td>ALICE STEINER</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>8/14/2026</td><td>JAY GRIFFITH</td><td>Millcreek, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>8/17/2026</td><td>ROSS ROMERO</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>8/17/2026</td><td>JADE VELAZQUEZ</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>8/17/2026</td><td>JOHN ARTHUR</td><td>Holladay, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>8/18/2026</td><td>WOMEN'S DEMOCRATIC CLUB</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$400.00</td></tr>
+<tr><td>8/24/2026</td><td>RICHARD SPOTTS</td><td>Saint George, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>8/24/2026</td><td>BRIAN KING</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>8/24/2026</td><td>RICHARD HANSEN</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>8/24/2026</td><td>CHRIS WHARTON</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>8/24/2026</td><td>CHRIS WHARTON</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$180.00</td></tr>
+<tr><td>8/28/2026</td><td>MONA THOMAS</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>8/28/2026</td><td>RAUL GARCIA</td><td>Sandy, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>8/29/2026</td><td>PATRICK PARTRIDGE</td><td>Sandy, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>8/31/2026</td><td>JACOB RICHARDSON</td><td>Millcreek, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>8/31/2026</td><td>SEL INC.</td><td>Pleasant Grove, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>8/31/2026</td><td>NICOLE CHRISTENSEN DICOU</td><td>Portland, OR</td><td>6/12&ndash;9/23</td><td></td><td class="num">$150.00</td></tr>
+<tr><td>9/2/2026</td><td>DAVID MCCANN</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>9/2/2026</td><td>GREG SCHOW</td><td>Farmington, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/8/2026</td><td>HENRY WHITESIDE</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/8/2026</td><td>KAREN KWAN</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>9/8/2026</td><td>JOHN SMEATH</td><td>West Valley City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>9/8/2026</td><td>JENNIFER DAILEY-PROVOST</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/9/2026</td><td>LUZ ESCAMILLA</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>9/9/2026</td><td>ERIC MANN</td><td>Las Vegas, NV</td><td>6/12&ndash;9/23</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>9/9/2026</td><td>LIZ OATES</td><td>Magna, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>9/9/2026</td><td>KESHIA ANDERSON</td><td>Murray, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/9/2026</td><td>JOEL JOHNSON</td><td>Draper, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>9/9/2026</td><td>BRITT MILLER</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/9/2026</td><td>EMILY STEMBRIDGE</td><td>Lehi, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/9/2026</td><td>BEN MCADAMS</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>9/9/2026</td><td>SARAH YOUNG</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>9/9/2026</td><td>SONNY MARTINEZ</td><td>Chandler, AZ</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/11/2026</td><td>MICHAEL KALM</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$18.00</td></tr>
+<tr><td>9/11/2026</td><td>FRESH AIR PAC</td><td>South Salt Lake, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>9/11/2026</td><td>CATHERINE KANTER</td><td>Sandy, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>9/13/2026</td><td>LYNDA BAGLEY-GIBSON</td><td>Millcreek, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/15/2026</td><td>BRENT CAMERON</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>9/16/2026</td><td>CHRISTINE BALDERAS</td><td>Millcreek, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>9/23/2026</td><td>DAVID WILLIAMS</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$5.00</td></tr>
+<tr><td>9/23/2026</td><td>MLH ADVISORS</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/23</td><td></td><td class="num">$300.00</td></tr>
+        <tr><td></td><td><strong>Cash total</strong></td><td></td><td></td><td></td><td class="num"><strong>$85,846.00</strong></td></tr>
+        <tr><td></td><td><strong>In-kind total</strong></td><td></td><td></td><td></td><td class="num"><strong>$998.41</strong></td></tr>
+      </table></div>
+    </details>
+    <details class="ledger">
+      <summary>Every Catten expenditure through 6/11/26 (72 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Report</th><th>Amount</th></tr>
+<tr><td>1/26/2026</td><td>Utah Democratic Party</td><td>Campaign Expense</td><td>Convention</td><td class="num">$750.00</td></tr>
+<tr><td>1/30/2026</td><td>Zions Bank</td><td>Campaign Expense</td><td>Convention</td><td class="num">$15.00</td></tr>
+<tr><td>1/30/2026</td><td>Zions Bank</td><td>Campaign Expense</td><td>Convention</td><td class="num">$3.00</td></tr>
+<tr><td>2/1/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$216.53</td></tr>
+<tr><td>2/2/2026</td><td>Google WorkSpace</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1.74</td></tr>
+<tr><td>2/2/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Convention</td><td class="num">$27.11</td></tr>
+<tr><td>2/2/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Convention</td><td class="num">$318.10</td></tr>
+<tr><td>2/8/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$100.74</td></tr>
+<tr><td>2/12/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Convention</td><td class="num">$3,000.00</td></tr>
+<tr><td>2/12/2026</td><td>Tissot Solutions</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1,000.00</td></tr>
+<tr><td>2/12/2026</td><td>Tissot Solutions</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1,000.00</td></tr>
+<tr><td>2/15/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$75.08</td></tr>
+<tr><td>2/17/2026</td><td>SquareSpace</td><td>Campaign Expense</td><td>Convention</td><td class="num">$26.86</td></tr>
+<tr><td>2/22/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$122.48</td></tr>
+<tr><td>2/24/2026</td><td>Apollo Political</td><td>Campaign Expense</td><td>Convention</td><td class="num">$2,500.00</td></tr>
+<tr><td>2/25/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Convention</td><td class="num">$3,000.00</td></tr>
+<tr><td>2/27/2026</td><td>Zions Bank</td><td>Campaign Expense</td><td>Convention</td><td class="num">$15.00</td></tr>
+<tr><td>2/27/2026</td><td>Zions Bank</td><td>Campaign Expense</td><td>Convention</td><td class="num">$3.00</td></tr>
+<tr><td>3/1/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$36.94</td></tr>
+<tr><td>3/2/2026</td><td>Google WorkSpace</td><td>Campaign Expense</td><td>Convention</td><td class="num">$18.05</td></tr>
+<tr><td>3/2/2026</td><td>Salt Lake County Dems</td><td>Donations</td><td>Convention</td><td class="num">$310.75</td></tr>
+<tr><td>3/2/2026</td><td>Xane Uipi</td><td>Campaign Expense</td><td>Convention</td><td class="num">$308.00</td></tr>
+<tr><td>3/4/2026</td><td>Tissot Solutions</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1,000.00</td></tr>
+<tr><td>3/4/2026</td><td>Xane Uipi</td><td>Campaign Expense</td><td>Convention</td><td class="num">$132.00</td></tr>
+<tr><td>3/8/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$34.57</td></tr>
+<tr><td>3/10/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Convention</td><td class="num">$3,000.00</td></tr>
+<tr><td>3/15/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$63.42</td></tr>
+<tr><td>3/16/2026</td><td>SquareSpace</td><td>Campaign Expense</td><td>Convention</td><td class="num">$26.86</td></tr>
+<tr><td>3/16/2026</td><td>Xane Uipi</td><td>Campaign Expense</td><td>Convention</td><td class="num">$242.00</td></tr>
+<tr><td>3/22/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$45.43</td></tr>
+<tr><td>3/24/2026</td><td>Amazon</td><td>Supplies</td><td>Convention</td><td class="num">$37.55</td></tr>
+<tr><td>3/24/2026</td><td>Costco</td><td>Supplies</td><td>Convention</td><td class="num">$77.75</td></tr>
+<tr><td>3/29/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$79.40</td></tr>
+<tr><td>3/30/2026</td><td>Xane Uipi</td><td>Campaign Expense</td><td>Convention</td><td class="num">$450.00</td></tr>
+<tr><td>4/2/2026</td><td>Google WorkSpace</td><td>Campaign Expense</td><td>Primary</td><td class="num">$18.05</td></tr>
+<tr><td>4/2/2026</td><td>Tissot Solutions</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1,000.00</td></tr>
+<tr><td>4/7/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Primary</td><td class="num">$260.28</td></tr>
+<tr><td>4/7/2026</td><td>Costco</td><td>Campaign Expense</td><td>Primary</td><td class="num">$194.32</td></tr>
+<tr><td>4/9/2026</td><td>Elevate Strategies</td><td>Advertising</td><td>Primary</td><td class="num">$1,200.00</td></tr>
+<tr><td>4/10/2026</td><td>Sugar House</td><td>Campaign Expense</td><td>Primary</td><td class="num">$201.81</td></tr>
+<tr><td>4/12/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$11.85</td></tr>
+<tr><td>4/16/2026</td><td>Amazon</td><td>Office</td><td>Primary</td><td class="num">$16.24</td></tr>
+<tr><td>4/16/2026</td><td>SquareSpace</td><td>Campaign Expense</td><td>Primary</td><td class="num">$26.86</td></tr>
+<tr><td>4/19/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$75.08</td></tr>
+<tr><td>4/26/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$9.88</td></tr>
+<tr><td>5/3/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$95.22</td></tr>
+<tr><td>5/4/2026</td><td>Google WorkSpace</td><td>Campaign Expense</td><td>Primary</td><td class="num">$18.05</td></tr>
+<tr><td>5/4/2026</td><td>Tissot Solutions</td><td>Campaign Expense</td><td>Primary</td><td class="num">$345.08</td></tr>
+<tr><td>5/4/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Primary</td><td class="num">$3,000.00</td></tr>
+<tr><td>5/4/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Primary</td><td class="num">$78.19</td></tr>
+<tr><td>5/5/2026</td><td>BW Productions</td><td>Campaign Expense</td><td>Primary</td><td class="num">$2,000.00</td></tr>
+<tr><td>5/5/2026</td><td>Tissot Solutions</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1,000.00</td></tr>
+<tr><td>5/5/2026</td><td>Elevate Strategies</td><td>Advertising</td><td>Primary</td><td class="num">$5,000.00</td></tr>
+<tr><td>5/10/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$110.61</td></tr>
+<tr><td>5/17/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$43.46</td></tr>
+<tr><td>5/18/2026</td><td>SquareSpace</td><td>Campaign Expense</td><td>Primary</td><td class="num">$26.86</td></tr>
+<tr><td>5/18/2026</td><td>Amazon</td><td>Office</td><td>Primary</td><td class="num">$10.01</td></tr>
+<tr><td>5/18/2026</td><td>Salt Lake County Dems</td><td>Donations</td><td>Primary</td><td class="num">$103.45</td></tr>
+<tr><td>5/20/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Primary</td><td class="num">$4,562.43</td></tr>
+<tr><td>5/24/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$11.86</td></tr>
+<tr><td>5/26/2026</td><td>Xane Uipi</td><td>Campaign Expense</td><td>Primary</td><td class="num">$200.00</td></tr>
+<tr><td>5/29/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Primary</td><td class="num">$899.26</td></tr>
+<tr><td>5/29/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Primary</td><td class="num">$2,975.07</td></tr>
+<tr><td>5/31/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$2.38</td></tr>
+<tr><td>6/2/2026</td><td>Google WorkSpace</td><td>Campaign Expense</td><td>Primary</td><td class="num">$18.05</td></tr>
+<tr><td>6/2/2026</td><td>Miguel Fregoso</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1,087.50</td></tr>
+<tr><td>6/3/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Primary</td><td class="num">$2,757.44</td></tr>
+<tr><td>6/3/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Primary</td><td class="num">$3,000.00</td></tr>
+<tr><td>6/3/2026</td><td>Elevate Strategies</td><td>Advertising</td><td>Primary</td><td class="num">$2,300.00</td></tr>
+<tr><td>6/3/2026</td><td>Elevate Strategies</td><td>Campaign Expense</td><td>Primary</td><td class="num">$307.80</td></tr>
+<tr><td>6/7/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$45.43</td></tr>
+<tr><td>6/9/2026</td><td>Tissot Solutions</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1,000.00</td></tr>
+        <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>$52,049.88</strong></td></tr>
+      </table></div>
+    </details>
+    <p style="color:var(--color-ink-soft);font-size:.92rem;">Other paid vendors include Tissot Solutions ($6,345.08, a fundraising and compliance firm that also works for Sen. Karen Kwan), Apollo Political ($2,500) and BW Productions ($2,000). Thirteen contribution rows are marked &ldquo;[DELETED]&rdquo; with no details.</p>
+  </div>
+</section>
+
+<section id="smith">
+  <div class="wrap">
+    <div class="eyebrow">COLIN SMITH (FORWARD)</div>
+    <h2>Half the Money From Out of State</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Smith raised a mid-sized amount, much of it from Michigan and other states. His biggest cost was campaign merchandise.</p>
+    <p class="section-dek">His DEX export (Convention and Primary reports, 1/12&ndash;6/11/26) plus itemized contributions 6/12&ndash;9/11/26. Spending after June 11 is not in hand.</p>
+    <div class="fund-row">
+      <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 50.3%, var(--color-stat) 50.3% 96.5%, var(--color-burgundy-light) 96.5% 100%);">
+        <div class="fund-donut-center"><div class="num">$23,018</div><div class="lbl">CASH RAISED</div></div>
+      </div>
+      <ul class="fund-donut-legend">
+        <li><span class="swatch" style="background:var(--color-link)"></span> Individuals outside Utah &mdash; $11,567.04 (50.3%)</li>
+        <li><span class="swatch" style="background:var(--color-stat)"></span> Individuals in Utah, incl. $6.97 from the candidate &mdash; $10,650.88 (46.3%)</li>
+        <li><span class="swatch" style="background:var(--color-burgundy-light)"></span> Groups: A &amp; M Distribution LLC (Troy, Mich.) $500 and the Forward Party of Utah $300 &mdash; $800 (3.5%)</li>
+      </ul>
+    </div>
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">52%</div><div class="label">OF HIS CASH FROM OUTSIDE UTAH</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>$12,067 by ZIP code, led by Tim Disney (Encino, Calif., $2,604.48), Bart Bauer (Rogers, Ark., $2,500) and several Michigan donors.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$1,925</div><div class="label">FROM ONE MICHIGAN DONOR</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Alice D. Smith of Interlochen, Mich., gave 19 cash entries. Several match a same-day campaign purchase to the cent (for example, $19.59 to Amazon and $19.59 from her on Feb. 1). James E. Smith of Pinckney, Mich., gave $1,604.48. The filings don&rsquo;t say how they&rsquo;re related to the candidate.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$4,126</div><div class="label">TO MERCH MARKETING</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>His largest payment, on May 26, listed as &ldquo;Advertising.&rdquo; That&rsquo;s 47% of his spending through the primary.</div></div></div></button>
+
+    </div>
+    <p>Many of his gifts are odd amounts, such as $104.48 or $1,041.98. That is common when donors choose to cover an online processing fee; the filing doesn&rsquo;t say. His campaign also paid two of its donors for campaign expenses (Brianna Jones-Whelan $315.76 and Ed Manion $170.99) and reimbursed the candidate $93.15 for advertising. He lists $372.70 in in-kind help, mostly his own food, candy and supplies.</p>
+    <details class="ledger">
+      <summary>Every Smith contribution, 1/12&ndash;9/11/26 (113 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Contributor (as filed)</th><th>City, state (as filed)</th><th>Report</th><th>Note</th><th>Amount</th></tr>
+<tr><td>1/12/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Convention</td><td></td><td class="num">$97.00</td></tr>
+<tr><td>1/14/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>2/1/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Convention</td><td></td><td class="num">$19.59</td></tr>
+<tr><td>2/3/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Convention</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>2/3/2026</td><td>Brianna Jones-Whelan</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>2/3/2026</td><td>Charles J Smith</td><td>Grand Ledge, MI</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/4/2026</td><td>Ed Manion</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/4/2026</td><td>Allie Lee</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/9/2026</td><td>James E Smith</td><td>Pinckney, MI</td><td>Convention</td><td></td><td class="num">$1,500.00</td></tr>
+<tr><td>2/9/2026</td><td>Lindsey Imber</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>2/14/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Convention</td><td></td><td class="num">$13.17</td></tr>
+<tr><td>2/14/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Convention</td><td></td><td class="num">$7.80</td></tr>
+<tr><td>2/16/2026</td><td>Colin Smith</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$4.62</td></tr>
+<tr><td>3/2/2026</td><td>Bennett Washaw</td><td>Midvale, UT</td><td>Convention</td><td></td><td class="num">$1.00</td></tr>
+<tr><td>3/3/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>3/9/2026</td><td>Bart Bauer</td><td>Rogers, AR</td><td>Convention</td><td></td><td class="num">$2,500.00</td></tr>
+<tr><td>3/13/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Convention</td><td></td><td class="num">$103.21</td></tr>
+<tr><td>3/13/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>3/13/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Convention</td><td></td><td class="num">$25.12</td></tr>
+<tr><td>3/14/2026</td><td>Susan Mark Lunde</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>3/14/2026</td><td>James L. Brown</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$150.00</td></tr>
+<tr><td>3/14/2026</td><td>Creed Archibald</td><td>Alpine, UT</td><td>Convention</td><td></td><td class="num">$40.00</td></tr>
+<tr><td>3/14/2026</td><td>Benjamin K Van Treese</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>3/14/2026</td><td>Laura Bussey-Johnson</td><td>Ogden, UT</td><td>Convention</td><td>In-kind: Balloons for Launch Party</td><td class="num">$32.14</td></tr>
+<tr><td>3/18/2026</td><td>Sam Brown</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>3/18/2026</td><td>Ally-Marie Dahlstrom</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/18/2026</td><td>Creed Archibald</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/18/2026</td><td>Ryan Townsend</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>3/18/2026</td><td>Kim Gillett</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$38.00</td></tr>
+<tr><td>3/18/2026</td><td>Ed Manion</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$38.00</td></tr>
+<tr><td>3/18/2026</td><td>Renee Baglini</td><td>South Jordan, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>3/18/2026</td><td>Phillip Boileau</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/19/2026</td><td>Steve Cook</td><td>Belding, MI</td><td>Primary</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>3/19/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Primary</td><td></td><td class="num">$15.60</td></tr>
+<tr><td>3/19/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Primary</td><td>In-kind: office supplies</td><td class="num">$11.77</td></tr>
+<tr><td>3/24/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Primary</td><td>In-kind: office supplies</td><td class="num">$24.20</td></tr>
+<tr><td>3/27/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Primary</td><td>In-kind: office supplies</td><td class="num">$13.69</td></tr>
+<tr><td>3/28/2026</td><td>Christopher Bachelder</td><td>Maineville, OH</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/2/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Primary</td><td></td><td class="num">$25.83</td></tr>
+<tr><td>4/6/2026</td><td>Colin Smith</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1.00</td></tr>
+<tr><td>4/10/2026</td><td>Melissa Smith</td><td>Rockford, IL</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/10/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Primary</td><td></td><td class="num">$36.41</td></tr>
+<tr><td>4/13/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Primary</td><td></td><td class="num">$18.22</td></tr>
+<tr><td>4/14/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Primary</td><td></td><td class="num">$34.68</td></tr>
+<tr><td>4/15/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>4/15/2026</td><td>Andrew Yang</td><td>New York, NY</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>4/16/2026</td><td>Ciaran Disney</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1,041.98</td></tr>
+<tr><td>4/17/2026</td><td>Jeanne Messner</td><td>Monterey, TN</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/17/2026</td><td>Colleen Mott</td><td>Rochester Hills, MI</td><td>Primary</td><td></td><td class="num">$150.00</td></tr>
+<tr><td>4/17/2026</td><td>Janie Corbyn</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$521.15</td></tr>
+<tr><td>4/17/2026</td><td>Tim Disney</td><td>Encino, CA</td><td>Primary</td><td></td><td class="num">$2,604.48</td></tr>
+<tr><td>4/17/2026</td><td>Charlie Delisi</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$26.35</td></tr>
+<tr><td>4/17/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Primary</td><td></td><td class="num">$44.05</td></tr>
+<tr><td>4/24/2026</td><td>Laura Bussey-Johnson</td><td>Ogden, UT</td><td>Primary</td><td></td><td class="num">$52.40</td></tr>
+<tr><td>4/24/2026</td><td>James E Smith</td><td>Pinckney, MI</td><td>Primary</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>4/30/2026</td><td>Louise Dean</td><td>Traverse City, MI</td><td>Primary</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>5/2/2026</td><td>Steve Cook</td><td>Belding, MI</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>5/3/2026</td><td>Susan Beatty Schulman</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>5/3/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>5/6/2026</td><td>Jared J Young</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>5/8/2026</td><td>David Patton</td><td>Hixson, TN</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>5/8/2026</td><td>Melinda Bradley</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>5/8/2026</td><td>Andrew Taylor</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$521.15</td></tr>
+<tr><td>5/8/2026</td><td>Anthony Padjen</td><td>Midway, UT</td><td>Primary</td><td></td><td class="num">$130.52</td></tr>
+<tr><td>5/14/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>5/14/2026</td><td>Austin Wyman</td><td>South Jordan, UT</td><td>Primary</td><td></td><td class="num">$416.98</td></tr>
+<tr><td>5/19/2026</td><td>Forward Party of Utah</td><td>Draper, UT</td><td>Primary</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>5/20/2026</td><td>Samuel Taylor</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$52.40</td></tr>
+<tr><td>5/20/2026</td><td>Penny Bartlett</td><td>Longview, TX</td><td>Primary</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>5/20/2026</td><td>John Vannest</td><td>Loves Park, IL</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>5/20/2026</td><td>Gwen Vinson</td><td>Venice, FL</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>5/20/2026</td><td>Eric Jernberg</td><td>Milwaukee, WI</td><td>Primary</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>5/22/2026</td><td>Lynn Corrie</td><td>Monticello, IL</td><td>Primary</td><td></td><td class="num">$26.35</td></tr>
+<tr><td>5/22/2026</td><td>John Hardy</td><td>Riverton, UT</td><td>Primary</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>5/25/2026</td><td>Walter Knight</td><td>Troy, MI</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>6/2/2026</td><td>Creed Archibald</td><td>Alpine, UT</td><td>Primary</td><td></td><td class="num">$120.00</td></tr>
+<tr><td>6/2/2026</td><td>Penny Roberts</td><td>Fraser, MI</td><td>Primary</td><td></td><td class="num">$208.65</td></tr>
+<tr><td>6/9/2026</td><td>Tara Reid</td><td>Taylorsville, UT</td><td>Primary</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>6/10/2026</td><td>Nan Michaelis</td><td>Taylorsville, UT</td><td>Primary</td><td></td><td class="num">$150.00</td></tr>
+<tr><td>6/10/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>Primary</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>6/11/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>6/12/2026</td><td>Colin Smith</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/11</td><td>In-kind: food for volunteer meeting</td><td class="num">$98.66</td></tr>
+<tr><td>6/20/2026</td><td>Grady Mellin</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>6/24/2026</td><td>James Silvestri</td><td>Sandy, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$312.81</td></tr>
+<tr><td>6/29/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>6/12&ndash;9/11</td><td>In-kind: office supplies</td><td class="num">$14.08</td></tr>
+<tr><td>6/30/2026</td><td>Colin Smith</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/11</td><td>In-kind: candy to hand out during parade</td><td class="num">$117.07</td></tr>
+<tr><td>7/8/2026</td><td>Mark Rubin</td><td>Hideout, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>7/9/2026</td><td>Brian Collaer</td><td>St Louis, MO</td><td>6/12&ndash;9/11</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>7/10/2026</td><td>Joesph P Harrison</td><td>Hancock, MI</td><td>6/12&ndash;9/11</td><td></td><td class="num">$52.40</td></tr>
+<tr><td>7/10/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>6/12&ndash;9/11</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>7/11/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>7/14/2026</td><td>David Hinkley</td><td>Orem, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>7/17/2026</td><td>Eli Rand</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$52.40</td></tr>
+<tr><td>7/17/2026</td><td>Claire Finch</td><td>Raleigh, NC</td><td>6/12&ndash;9/11</td><td></td><td class="num">$26.35</td></tr>
+<tr><td>7/29/2026</td><td>Colin Smith</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$1.35</td></tr>
+<tr><td>7/29/2026</td><td>Casey Mangnall</td><td>Sandy, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$21.15</td></tr>
+<tr><td>7/29/2026</td><td>Todd Reid</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$1,041.98</td></tr>
+<tr><td>7/31/2026</td><td>Mark Smith</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>8/11/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>8/12/2026</td><td>A &amp; M Distribution LLC</td><td>Troy, MI</td><td>6/12&ndash;9/11</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>8/15/2026</td><td>Derek Daley</td><td>Teasdale, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>8/15/2026</td><td>Amy L Messner</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/11</td><td>In-kind: Canva</td><td class="num">$21.69</td></tr>
+<tr><td>8/16/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>6/12&ndash;9/11</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>8/16/2026</td><td>Logan McGoodwin</td><td>South Jordan, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$400.00</td></tr>
+<tr><td>8/16/2026</td><td>Colin M Smith</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/11</td><td>In-kind: pizza for volunteers</td><td class="num">$39.40</td></tr>
+<tr><td>8/17/2026</td><td>Ryan Merrell</td><td>Sandy, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$208.65</td></tr>
+<tr><td>8/21/2026</td><td>Devon Nanton</td><td>Fremont, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>8/24/2026</td><td>Ryan Ball</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$21.15</td></tr>
+<tr><td>9/5/2026</td><td>David Westerby</td><td>Saint George, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>9/10/2026</td><td>Sandra Thomas-Warner</td><td>Rochester Hills, MI</td><td>6/12&ndash;9/11</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>9/11/2026</td><td>Kimberly Harrison</td><td>Salt Lake City, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$104.48</td></tr>
+<tr><td>9/11/2026</td><td>Alice D Smith</td><td>Interlochen, MI</td><td>6/12&ndash;9/11</td><td></td><td class="num">$135.73</td></tr>
+<tr><td>9/11/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>6/12&ndash;9/11</td><td></td><td class="num">$25.00</td></tr>
+        <tr><td></td><td><strong>Cash total</strong></td><td></td><td></td><td></td><td class="num"><strong>$23,017.92</strong></td></tr>
+        <tr><td></td><td><strong>In-kind total</strong></td><td></td><td></td><td></td><td class="num"><strong>$372.70</strong></td></tr>
+      </table></div>
+    </details>
+    <details class="ledger">
+      <summary>Every Smith expenditure through 6/11/26 (63 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Report</th><th>Amount</th></tr>
+<tr><td>1/12/2026</td><td>State of Utah</td><td>Campaign Expense</td><td>Convention</td><td class="num">$97.00</td></tr>
+<tr><td>1/15/2026</td><td>Network Solutions</td><td>Advertising</td><td>Convention</td><td class="num">$5.20</td></tr>
+<tr><td>1/16/2026</td><td>Elections</td><td>Campaign Expense</td><td>Convention</td><td class="num">$15.00</td></tr>
+<tr><td>1/21/2026</td><td>Harland Clarke</td><td>Supplies</td><td>Convention</td><td class="num">$28.85</td></tr>
+<tr><td>1/22/2026</td><td>USPS</td><td>Campaign Expense</td><td>Convention</td><td class="num">$98.00</td></tr>
+<tr><td>1/27/2026</td><td>Wix</td><td>Advertising</td><td>Convention</td><td class="num">$12.90</td></tr>
+<tr><td>1/27/2026</td><td>Wix</td><td>Advertising</td><td>Convention</td><td class="num">$186.96</td></tr>
+<tr><td>2/1/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Convention</td><td class="num">$19.59</td></tr>
+<tr><td>2/3/2026</td><td>Wix</td><td>Campaign Expense</td><td>Convention</td><td class="num">$37.89</td></tr>
+<tr><td>2/4/2026</td><td>Wix</td><td>Campaign Expense</td><td>Convention</td><td class="num">$3.98</td></tr>
+<tr><td>2/4/2026</td><td>Wix</td><td>Campaign Expense</td><td>Convention</td><td class="num">$6.40</td></tr>
+<tr><td>2/9/2026</td><td>Wix</td><td>Campaign Expense</td><td>Convention</td><td class="num">$45.55</td></tr>
+<tr><td>2/14/2026</td><td>Dollar Tree</td><td>Campaign Expense</td><td>Convention</td><td class="num">$13.17</td></tr>
+<tr><td>2/14/2026</td><td>USPS</td><td>Campaign Expense</td><td>Convention</td><td class="num">$7.80</td></tr>
+<tr><td>2/15/2026</td><td>Wix</td><td>Advertising</td><td>Convention</td><td class="num">$191.34</td></tr>
+<tr><td>2/16/2026</td><td>Fed Ex</td><td>Advertising</td><td>Convention</td><td class="num">$4.62</td></tr>
+<tr><td>2/22/2026</td><td>Ask QR Code</td><td>Advertising</td><td>Convention</td><td class="num">$147.38</td></tr>
+<tr><td>2/28/2026</td><td>America First CU</td><td>Campaign Expense</td><td>Convention</td><td class="num">$0.83</td></tr>
+<tr><td>3/2/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Convention</td><td class="num">$0.34</td></tr>
+<tr><td>3/3/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1.30</td></tr>
+<tr><td>3/11/2026</td><td>Fed Ex</td><td>Advertising</td><td>Convention</td><td class="num">$108.19</td></tr>
+<tr><td>3/13/2026</td><td>Sams Club</td><td>Campaign Expense</td><td>Convention</td><td class="num">$103.21</td></tr>
+<tr><td>3/13/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1.30</td></tr>
+<tr><td>3/13/2026</td><td>Dollar Tree</td><td>Campaign Expense</td><td>Convention</td><td class="num">$15.58</td></tr>
+<tr><td>3/13/2026</td><td>Walmart</td><td>Campaign Expense</td><td>Convention</td><td class="num">$9.54</td></tr>
+<tr><td>3/16/2026</td><td>Wix</td><td>Advertising</td><td>Convention</td><td class="num">$10.83</td></tr>
+<tr><td>3/18/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$28.44</td></tr>
+<tr><td>3/18/2026</td><td>Brianna Jones-Whelan</td><td>Campaign Expense</td><td>Primary</td><td class="num">$315.76</td></tr>
+<tr><td>3/18/2026</td><td>Wix</td><td>Advertising</td><td>Primary</td><td class="num">$43.67</td></tr>
+<tr><td>3/19/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1.10</td></tr>
+<tr><td>3/19/2026</td><td>Integrity Matters</td><td>Advertising</td><td>Primary</td><td class="num">$900.00</td></tr>
+<tr><td>3/19/2026</td><td>USPS</td><td>Office</td><td>Primary</td><td class="num">$15.60</td></tr>
+<tr><td>4/2/2026</td><td>Snapfish</td><td>Campaign Expense</td><td>Primary</td><td class="num">$25.83</td></tr>
+<tr><td>4/10/2026</td><td>Amazon</td><td>Supplies</td><td>Primary</td><td class="num">$30.09</td></tr>
+<tr><td>4/10/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$10.20</td></tr>
+<tr><td>4/10/2026</td><td>Sam's Club</td><td>Campaign Expense</td><td>Primary</td><td class="num">$36.41</td></tr>
+<tr><td>4/12/2026</td><td>Colin Smith</td><td>Advertising</td><td>Primary</td><td class="num">$93.15</td></tr>
+<tr><td>4/13/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$18.22</td></tr>
+<tr><td>4/14/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$34.68</td></tr>
+<tr><td>4/14/2026</td><td>SLC Print</td><td>Advertising</td><td>Primary</td><td class="num">$325.35</td></tr>
+<tr><td>4/15/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$21.60</td></tr>
+<tr><td>4/16/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$41.98</td></tr>
+<tr><td>4/17/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$44.05</td></tr>
+<tr><td>4/20/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$133.28</td></tr>
+<tr><td>4/20/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$13.82</td></tr>
+<tr><td>4/22/2026</td><td>USPS</td><td>Campaign Expense</td><td>Primary</td><td class="num">$46.80</td></tr>
+<tr><td>4/24/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$6.18</td></tr>
+<tr><td>4/29/2026</td><td>Amazon</td><td>Campaign Expense</td><td>Primary</td><td class="num">$28.19</td></tr>
+<tr><td>5/2/2026</td><td>Fed Ex</td><td>Advertising</td><td>Primary</td><td class="num">$132.24</td></tr>
+<tr><td>5/3/2026</td><td>Ed Manion</td><td>Campaign Expense</td><td>Primary</td><td class="num">$170.99</td></tr>
+<tr><td>5/6/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$6.60</td></tr>
+<tr><td>5/12/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$18.28</td></tr>
+<tr><td>5/13/2026</td><td>Ecanvasser</td><td>Campaign Expense</td><td>Primary</td><td class="num">$200.99</td></tr>
+<tr><td>5/20/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$2.40</td></tr>
+<tr><td>5/26/2026</td><td>Merch Marketing</td><td>Advertising</td><td>Primary</td><td class="num">$4,125.80</td></tr>
+<tr><td>5/28/2026</td><td>Anedot</td><td>Constituent Services</td><td>Primary</td><td class="num">$20.30</td></tr>
+<tr><td>5/28/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$5.83</td></tr>
+<tr><td>5/28/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$35.45</td></tr>
+<tr><td>6/4/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$7.65</td></tr>
+<tr><td>6/5/2026</td><td>Utah Pride Festival</td><td>Campaign Expense</td><td>Primary</td><td class="num">$108.00</td></tr>
+<tr><td>6/5/2026</td><td>Minuteman Press</td><td>Advertising</td><td>Primary</td><td class="num">$391.87</td></tr>
+<tr><td>6/8/2026</td><td>Murray Parks</td><td>Campaign Expense</td><td>Primary</td><td class="num">$115.00</td></tr>
+<tr><td>6/9/2026</td><td>Anedot</td><td>Campaign Expense</td><td>Primary</td><td class="num">$4.48</td></tr>
+        <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>$8,733.03</strong></td></tr>
+      </table></div>
+    </details>
+  </div>
+</section>
+
+<section id="mahoney">
+  <div class="wrap">
+    <div class="eyebrow">RYAN MAHONEY (R)</div>
+    <h2>$1,262, Through Sept. 24</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Mahoney&rsquo;s campaign is very small. A third of its value is things he paid for himself, like vehicle graphics and a sign.</p>
+    <div class="fund-row">
+      <div class="fund-donut" style="background:conic-gradient(var(--color-stat) 0% 60.8%, var(--color-link) 60.8% 94.1%, var(--color-burgundy-light) 94.1% 100%);">
+        <div class="fund-donut-center"><div class="num">$1,262</div><div class="lbl">CASH + IN-KIND</div></div>
+      </div>
+      <ul class="fund-donut-legend">
+        <li><span class="swatch" style="background:var(--color-stat)"></span> Cash from five other people &mdash; $767.85 (60.8%)</li>
+        <li><span class="swatch" style="background:var(--color-link)"></span> The candidate himself ($1 cash, $418.52 in-kind) &mdash; $419.52 (33.2%)</li>
+        <li><span class="swatch" style="background:var(--color-burgundy-light)"></span> In-kind business cards, Salt Lake Mailing &amp; Printing &mdash; $75 (5.9%)</li>
+      </ul>
+    </div>
+    <div class="three">
+      <div><div class="who">CASH FROM OTHERS</div><div class="amt">$767.85</div><p>Six gifts from five people, the largest $364.35 in two gifts, plus $1 from himself to open the account. One $260.25 gift is from his mother, per his own site.</p></div>
+      <div><div class="who">IN-KIND</div><div class="amt">$493.52</div><p>$418.52 his own (vehicle graphics $250, cloth campaign sign $150, convention cookies $18.52) and $75 in business cards from Salt Lake Mailing &amp; Printing.</p></div>
+      <div><div class="who">SPENT</div><div class="amt">$497.08</div><p>Sign printing, Amazon, groceries and online donation fees, through 9/24/26.</p></div>
+    </div>
+    <details class="ledger">
+      <summary>Every Mahoney contribution (12 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Contributor (as filed)</th><th>City, state (as filed)</th><th>Report</th><th>Note</th><th>Amount</th></tr>
+<tr><td>1/20/2026</td><td>Ryan Mahoney</td><td>West Valley City, UT</td><td>Convention</td><td></td><td class="num">$1.00</td></tr>
+<tr><td>2/19/2026</td><td>Karl Jurek</td><td>Murray, UT</td><td>Convention</td><td></td><td class="num">$104.10</td></tr>
+<tr><td>3/2/2026</td><td>Salt Lake Mailing &amp; Printing</td><td>Salt Lake City, UT</td><td>Convention</td><td>In-kind: Business Cards</td><td class="num">$75.00</td></tr>
+<tr><td>3/15/2026</td><td>kathy Bacher</td><td>West Valley City, UT</td><td>Convention</td><td></td><td class="num">$31.23</td></tr>
+<tr><td>3/15/2026</td><td>Georgia Vallejos</td><td>West Jordan, UT</td><td>Convention</td><td></td><td class="num">$260.25</td></tr>
+<tr><td>3/27/2026</td><td>Karl Jurek</td><td>Murray, UT</td><td>Convention</td><td></td><td class="num">$260.25</td></tr>
+<tr><td>4/14/2026</td><td>Jared Christensen</td><td>Herriman, UT</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>4/15/2026</td><td>Ryan Mahoney</td><td>West Valley City, UT</td><td>Primary</td><td>In-kind: Vehicle graphics</td><td class="num">$250.00</td></tr>
+<tr><td>4/18/2026</td><td>Ryan Mahoney</td><td>West Valley City, UT</td><td>Primary</td><td>In-kind: Textile campaign sign</td><td class="num">$150.00</td></tr>
+<tr><td>4/18/2026</td><td>Ryan Mahoney</td><td>West Valley City, UT</td><td>Primary</td><td>In-kind: Convention refreshments - cookies for delegates</td><td class="num">$18.52</td></tr>
+<tr><td>6/4/2026</td><td>Aaron Anderson</td><td>West Valley City, UT</td><td>Primary</td><td></td><td class="num">$52.02</td></tr>
+<tr><td>8/12/2026</td><td>Aaron Anderson</td><td>West Valley City, UT</td><td>September 30th</td><td></td><td class="num">$50.00</td></tr>
+        <tr><td></td><td><strong>Cash total</strong></td><td></td><td></td><td></td><td class="num"><strong>$768.85</strong></td></tr>
+        <tr><td></td><td><strong>In-kind total</strong></td><td></td><td></td><td></td><td class="num"><strong>$493.52</strong></td></tr>
+      </table></div>
+    </details>
+    <details class="ledger">
+      <summary>Every Mahoney expenditure (14 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Report</th><th>Amount</th></tr>
+<tr><td>2/19/2026</td><td>winred donation portal</td><td>Campaign Expense</td><td>Convention</td><td class="num">$4.10</td></tr>
+<tr><td>3/15/2026</td><td>winred donation portal</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1.23</td></tr>
+<tr><td>3/15/2026</td><td>winred donation portal</td><td>Campaign Expense</td><td>Convention</td><td class="num">$10.25</td></tr>
+<tr><td>3/26/2026</td><td>winred donation portal</td><td>Campaign Expense</td><td>Convention</td><td class="num">$10.25</td></tr>
+<tr><td>4/17/2026</td><td>smiths grocery</td><td>Campaign Expense</td><td>Primary</td><td class="num">$18.52</td></tr>
+<tr><td>5/21/2026</td><td>Team Twill</td><td>Campaign Expense</td><td>Primary</td><td class="num">$50.00</td></tr>
+<tr><td>6/3/2026</td><td>winred donation portal</td><td>Campaign Expense</td><td>Primary</td><td class="num">$2.05</td></tr>
+<tr><td>7/16/2026</td><td>smiths grocery</td><td>Campaign Expense</td><td>September 30th</td><td class="num">$45.70</td></tr>
+<tr><td>8/12/2026</td><td>winred donation portal</td><td>Campaign Expense</td><td>September 30th</td><td class="num">$1.97</td></tr>
+<tr><td>9/2/2026</td><td>Spandex Utah</td><td>Campaign Expense</td><td>September 30th</td><td class="num">$85.67</td></tr>
+<tr><td>9/2/2026</td><td>Amazon</td><td>Campaign Expense</td><td>September 30th</td><td class="num">$60.16</td></tr>
+<tr><td>9/2/2026</td><td>Amazon</td><td>Campaign Expense</td><td>September 30th</td><td class="num">$120.34</td></tr>
+<tr><td>9/17/2026</td><td>autozone</td><td>Campaign Expense</td><td>September 30th</td><td class="num">$6.44</td></tr>
+<tr><td>9/24/2026</td><td>Spandex Utah</td><td>Campaign Expense</td><td>September 30th</td><td class="num">$80.40</td></tr>
+        <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>$497.08</strong></td></tr>
+      </table></div>
+    </details>
+    <p style="color:var(--color-ink-soft);font-size:.92rem;">His export includes his &ldquo;September 30th&rdquo; report, so his figures run later than the other two. Nine contribution rows are marked &ldquo;[DELETED]&rdquo; with no details. His street address appears on his own contribution lines; this page lists only his city.</p>
+  </div>
+</section>
+
+<section id="stands">
+  <div class="wrap">
+    <div class="eyebrow">WHERE THEY STAND</div>
+    <h2>In Their Own Words</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>What each candidate says they&rsquo;ll work on. These are their claims, not checked facts.</p>
+    <div class="vs-grid" style="grid-template-columns:1fr 1fr 1fr;">
+      <div class="vs-head">CATTEN (D)</div><div class="vs-head">SMITH (FORWARD)</div><div class="vs-head">MAHONEY (R)</div>
+      <div class="said"><strong>Her three priorities:</strong> &ldquo;finding solutions to housing, investing in strong public schools, and protecting our quality of life by taking action to save the Great Salt Lake.&rdquo;</div><div class="said">No issues page was read. His background, from a 2021 program listing: in addiction treatment since 2010, including wilderness therapy and recreation therapy.</div><div class="said"><strong>Water:</strong> &ldquo;zoning that enables homeowners to use zero-scaping and other water-wise landscaping without unnecessary red tape.&rdquo;</div>
+      <div class="said"><strong>Why she&rsquo;s running:</strong> &ldquo;Utahns are faced with rising costs, limited housing options, underfunded schools, and weak environmental policies that will have lasting impacts on quality of life.&rdquo;</div><div class="said">&nbsp;</div><div class="said"><strong>Housing:</strong> &ldquo;affordable, well-planned housing that meets growth needs while respecting single-family neighborhoods.&rdquo;</div>
+      <div class="said"><strong>Her record, as she describes it:</strong> joined Millcreek&rsquo;s community council in 2010; elected to the first Millcreek City Council after the city formed in 2016 (her home page says 10 years on the council); says she also serves as City Treasurer; most proud of the Millcreek Promise Program and youth mental-health work with the Healthy Millcreek Coalition. <em>(Her account.)</em></div><div class="said">&nbsp;</div><div class="said"><strong>Spending:</strong> opposes the Little Cottonwood Canyon gondola: &ldquo;$1.4 billion in taxpayer funds to a single fixed-guideway system is not fiscally responsible.&rdquo; Also skilled-trades training and public safety.</div>
+      <div class="said"><strong>Housing:</strong> she &ldquo;will prioritize housing initiatives that support first-time home buyers, strengthen protections for renters, prohibit corporations from buying up housing stock, and initiating mixed or creative solutions to housing where it makes the most sense.&rdquo;</div><div class="said">&nbsp;</div><div class="said">&nbsp;</div>
+      <div class="said"><strong>The river, in her words (2023):</strong> &ldquo;Before I joined the JRC Governing Board, I hadn&rsquo;t considered it or used it much at all.&rdquo; She now calls it &ldquo;a hidden gem in this valley.&rdquo;</div><div class="said">&nbsp;</div><div class="said"><strong>City taxes:</strong> on West Valley City&rsquo;s proposed 5% adjustment for police and firefighters: &ldquo;No one likes a tax increase, but&hellip; this is a necessary evil, especially when it is required to fund the police officers, firefighters, and first responders.&rdquo;</div>
+      <div class="said">&nbsp;</div><div class="said">&nbsp;</div><div class="said"><strong>His record, as he describes it:</strong> he says he spoke against West Valley City&rsquo;s single towing contract (Resolution 26-96), which the council defeated 4&ndash;3, and led a petition that reached Mayor Erin Mendenhall&rsquo;s office. <em>(His account; not checked.)</em> He calls himself a &ldquo;life long Utahn and proud resident of West Valley City,&rdquo; a Job Corps graduate and A.S.E.-certified technician, and Central Region Chair of the Salt Lake County GOP.</div>
+    </div>
+    <p style="color:var(--color-ink-soft);font-size:.92rem;margin-top:14px;"><strong>How this was read:</strong> Mahoney&rsquo;s quotes are from his campaign site (page text captured Sept. 24, 2026; the site says it was last updated 9/22/2026). Catten&rsquo;s quotes are from the &ldquo;Meet Silvia&rdquo; page of her campaign site (text captured Sept. 24, 2026) and a Jordan River Commission profile (Feb. 17, 2023). Smith&rsquo;s site (forwardwithcolin.org) was not read. None of the three was found addressing data centers in the sources read.</p>
+  </div>
+</section>
+
+<section id="disclosure">
+  <div class="wrap">
+    <div class="eyebrow">THE DISCLOSURE FORMS</div>
+    <h2>What Each Candidate Listed</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Each candidate filled out the state&rsquo;s conflict-of-interest form. Two used a legal option to keep some personal details private.</p>
+    <div class="table-scroll">
+    <table class="entity-table">
+      <tr><th>Item</th><th>Catten (D)</th><th>Smith (Forward)</th><th>Mahoney (R)</th></tr>
+      <tr><td>Employers</td><td>Arc Tags, LLC (owner/operator; tags for industrial steel fabricators); Millcreek City (council member, District 1). Previous: self-employed marketing and writing contractor</td><td>Redacted under 20A-11-1604(7)(a); named elsewhere on the form (see below)</td><td>Redacted under 20A-11-1604(7)(a)</td></tr>
+      <tr><td>Entities owned or led</td><td>Arc Tags, LLC (owner and operator)</td><td>C&amp;C Recovery (CEO; recovery coaching and companioning; started May 2024)</td><td>n/a</td></tr>
+      <tr><td>$5,000+ income sources</td><td>N/A</td><td>C&amp;C Recovery; Balance House (dual-diagnosis treatment center; outdoor director since May 2019)</td><td>Utah fleet service (automotive fleet repair)</td></tr>
+      <tr><td>Stocks of $5,000+</td><td>N/A</td><td>N/A</td><td>n/a</td></tr>
+      <tr><td>Boards</td><td>South Salt Lake Valley Mosquito Abatement District (appointed; chair); Jordan River Commission (appointed governing board; past chair)</td><td>Wood Hollow HOA board</td><td>n/a</td></tr>
+      <tr><td>Spouse</td><td>Garrett Catten; Blue Star Steel</td><td>Redacted</td><td>Redacted</td></tr>
+      <tr><td>Other adult in household</td><td>N/A</td><td>N/A</td><td>One other adult, occupation listed as &ldquo;farm hay&rdquo;</td></tr>
+      <tr><td>Optional sections</td><td>N/A</td><td>Blank</td><td>n/a</td></tr>
+    </table>
+    </div>
+    <div class="record-card" style="margin-top:18px;">
+      <h3>Worth seeing side by side</h3>
+      <p><strong>Catten and the Jordan River.</strong> She joined the Jordan River Commission board in fall 2018 and served as its chair. Its job is planning, restoration and development along the river corridor. Her campaign site lists saving the Great Salt Lake among her three priorities. She disclosed the role.</p>
+      <p><strong>Smith&rsquo;s entities, checked.</strong> State business records, as shown on OpenCorporates, list a Colin Smith as a member of <strong>C&amp;C Recovery, LLC</strong> since May 20, 2024, and as a director of <strong>Wood Hollow Condominium Homeowners&rsquo; Association</strong> since Oct. 27, 2025. Both match what his form lists. Other Utah companies with a &ldquo;Colin Smith&rdquo; officer could not be tied to him, so they are not listed here.</p>
+      <p><strong>Smith and recovery care.</strong> His income comes from a treatment center and his own recovery-coaching business. State budget and licensing decisions on behavioral health could touch that field. He disclosed both.</p>
+      <p><strong>The redactions.</strong> The state form says redacted details &ldquo;will be used for administrative purposes and will not be displayed to the public.&rdquo; Using the redaction is a choice the law allows, and this page doesn&rsquo;t treat it as hiding anything.</p>
+      <span class="rc-tag rc-good">All three filed forms</span>
+      <span class="rc-tag rc-good">Smith&rsquo;s entities match state records</span>
+    </div>
+  </div>
+</section>
+
+<section id="connections">
+  <div class="wrap">
+    <div class="eyebrow">THE CONNECTIONS</div>
+    <h2>Where This Race Meets the Rest of the Docket</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Many of these donors gave in the other Senate races on this site. A shared donor is a connection, not an accusation.</p>
+    <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    PD["Patrick de Freitas<br/>$500"] --> SC(["SILVIA CATTEN<br/>SD-13 (D)"])
+    KK["Sen. Karen Kwan<br/>SD-12, Case 25"] -->|"$500"| SC
+    SC -->|"$100"| KK
+    EM["Eric Mann &middot; Tim Fluetsch<br/>$3,500"] --> SC
+    EM --> KK
+    RE["Utah Realtors PAC<br/>$1,500"] --> SC
+    RE --> BB["Brooks Benson<br/>SD-11, Case 24"]
+    TS["Tissot Solutions<br/>(vendor)"] -.->|"paid by"| SC
+    TS -.->|"paid by"| KK
+    FP["Forward Party of Utah<br/>$300"] --> CS(["COLIN SMITH<br/>SD-13 (Forward)"])
+    FP -->|"$25,999"| EB["Emily Buss<br/>SD-11, Case 24"]
+    FD["Chris Scott &middot; David Hinckley &middot;<br/>Mark Rubin &middot; David Westerby &middot; Phil Boileau"] --> CS
+    FD --> EB
+    PD --> EB
+    style SC fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style CS fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+</div>
+      <p class="cap">Solid arrows are money as filed; dotted arrows are payments from a campaign to a vendor. Shared donors are matched by street address.</p>
+    </div>
+    <div class="conn-grid">
+      <div class="conn-card gold">
+        <div class="case"><a href="sd9-plumb-evans-snow.html">CASE 23</a> · <a href="sd11-buss-benson.html">24</a> · <a href="sd12-kwan-tyler.html">25</a> · CONFIRMED BY ADDRESS</div>
+        <h4>One donor, four Senate races</h4>
+        <p>Patrick de Freitas gave Catten $500 (5/13/26). The same address also gave Jen Plumb, Emily Buss and Karen Kwan.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case"><a href="sd12-kwan-tyler.html">CASE 25</a> · CONFIRMED BY ADDRESS</div>
+        <h4>Catten and Kwan</h4>
+        <p>Kwan gave Catten $500 (9/8/26), and Catten gave Kwan $100. Both also got money from Eric Mann (Las Vegas) and Tim Fluetsch (Sandy), from the Realtors PAC, Fresh Air PAC and Reagan Outdoor Advertising, and both paid Tissot Solutions.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case"><a href="sd11-buss-benson.html">CASE 24</a> · CONFIRMED BY ADDRESS</div>
+        <h4>Smith and Buss share a donor base</h4>
+        <p>Five people gave to both Forward Party senators: Chris Scott (Magna), David Hinckley (Orem; filed as &ldquo;Hinkley&rdquo; on Smith&rsquo;s list), Mark Rubin (Hideout), David Westerby (St. George) and party treasurer Phil Boileau. The Forward Party gave Smith $300 and Buss $25,999.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case">CATTEN&rsquo;S ENDORSEMENTS · FROM HER SITE</div>
+        <h4>Endorsers who also gave</h4>
+        <p>Her site lists 14 officials and 18 unions and PACs. Several also appear on her contributor list: Millcreek Mayor Cheri Jackson ($500), council members Nicole Handy ($1,250) and Thom DeSirant ($150), Bev Uipi ($250), former mayor Jeff Silvestrini ($3,000 with his committee), Mayor Erin Mendenhall ($300), Sen. Stephanie Pitcher ($250), Rep. Sahara Hayes&rsquo;s committee ($300), Darin Mano ($50), UFCW Local 99 ($2,500), IBEW ($2,000), Laborers ($2,000 with its political league), Utah AFL-CIO ($500) and Operating Engineers Local 3 ($500). Teamsters Local 222, also an endorser, is not on her contributor list; entries filed as &ldquo;Local 222&rdquo; appear on Kwan&rsquo;s and Buss&rsquo;s lists, not confirmed as this union.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case">NAME MATCHES ONLY</div>
+        <h4>Andrew Yang and Alice Smith</h4>
+        <p>An &ldquo;Andrew Yang&rdquo; gave Smith $500 from 650 W. 42nd St., New York, a different street number from the entries on Buss&rsquo;s and Kwan&rsquo;s lists. An &ldquo;Alice Smith&rdquo; of Interlochen, Mich., gave to both Smith and Buss from different addresses. Neither is confirmed as the same person.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case">OFFICEHOLDERS</div>
+        <h4>Who gave to Catten</h4>
+        <p>Entries under the names of Senate Minority Leader Luz Escamilla ($300), Salt Lake City Mayor Erin Mendenhall ($300), Ben McAdams ($350 in four gifts), Brian King ($250), Rep. Jennifer Dailey-Provost ($100), Sen. Stephanie Pitcher ($250) and Rep. Sahara Hayes&rsquo;s committee ($300). Evan Done, who ran in the Democratic primary for this seat, gave $100 in March.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rubric">
+  <div class="wrap">
+    <div class="eyebrow">THE RUBRIC</div>
+    <h2>Graded Topic by Topic</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Each topic gets a grade, A (best) to F (worst), on five questions: Does it check power? Can the public see it? Is it clear who pays? What does it do to air, water and land? Do the people affected get a real say? N/A means the question doesn&rsquo;t apply.</p>
+    <p class="section-dek"><strong>How to read these:</strong> grades judge only what has already happened in the filings as of Sept. 24, 2026. They judge the record, not the person. None of the three has a state legislative voting record.</p>
+    <div class="topic-head">1. Catten&rsquo;s campaign money</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-b">B</span>About 71% from individuals; group money is spread across unions, businesses and officeholders.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>Every entry is itemized. Her largest vendor and a PAC share a name, and the filings don&rsquo;t show whether they&rsquo;re related.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>$35,685.68 to one firm is described only as &ldquo;Campaign Expense&rdquo; or &ldquo;Advertising.&rdquo;</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-b">B</span>Most gifts are small and local; 14.1% from outside Utah.</td></tr>
+    </table></div>
+    <div class="topic-head">2. Smith&rsquo;s campaign money</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-b">B</span>No large institutional checks; the party gave $300.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>Every entry is itemized, including small reimbursements and in-kind help.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-b">B</span>Payees are named; his largest (Merch Marketing, $4,125.80) is described only as &ldquo;Advertising.&rdquo;</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-c">C</span>52% of his cash comes from outside Utah.</td></tr>
+    </table></div>
+    <div class="topic-head">3. Mahoney&rsquo;s campaign money</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-na">N/A</span>Too little money to weigh.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>Every entry is itemized, including his own in-kind help, and he has filed through Sept. 24.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-b">B</span>Small, named expenses.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-c">C</span>Five donors; voters have little from the filings to go on.</td></tr>
+    </table></div>
+    <div class="topic-head">4. The disclosure forms</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>Catten answered every item in full. Smith and Mahoney used the redaction the law allows; Smith still named his income sources.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-b">B</span>Each lists income sources or business ownership.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-b">B</span>Catten&rsquo;s Jordan River Commission role is disclosed.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-b">B</span>Industry ties (steel for Catten, recovery care for Smith) are on the forms.</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="ask">
+  <div class="wrap">
+    <div class="eyebrow">QUESTIONS VOTERS CAN ASK</div>
+    <h2>Questions From the Records</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>These come from what the filings show and what they leave out. Each has a direct answer. None assumes anything improper.</p>
+    <div class="vs-grid" style="grid-template-columns:1fr 1fr 1fr;">
+      <div class="vs-head">CATTEN (D)</div><div class="vs-head">SMITH (FORWARD)</div><div class="vs-head">MAHONEY (R)</div>
+      <div class="said"><strong>1.</strong> Is Elevate PAC, which gave you $5,000, connected to Elevate Strategies, your largest vendor?</div><div class="said"><strong>1.</strong> 52% of your money came from outside Utah. How will you weigh out-of-state supporters against district voters?</div><div class="said"><strong>1.</strong> Your reports list $1,262 in support. How are you reaching voters?</div>
+      <div class="said"><strong>2.</strong> Your spouse&rsquo;s employer, Blue Star Steel, gave $2,000. How would you handle votes that affect the steel industry?</div><div class="said"><strong>2.</strong> Your income comes from recovery care. How would you handle state votes on behavioral health funding or licensing?</div><div class="said"><strong>2.</strong> You oppose the gondola on cost. Who should pay for new power built for data centers: the companies or all ratepayers?</div>
+      <div class="said"><strong>3.</strong> You chaired the Jordan River Commission. How would you handle a Senate vote on development along the river?</div><div class="said"><strong>3.</strong> Who should pay for new power built for data centers: the companies or all ratepayers?</div><div class="said"><strong>3.</strong> You supported a city tax increase for police and fire pay. Would you support state tax changes to fund first responders?</div>
+    </div>
+    <div class="record-card" style="margin-top:16px;">
+      <h3>For all three</h3>
+      <ul style="margin:0;padding-left:18px;"><li>Will you post your campaign spending, not just contributions, before early voting starts Oct. 20?</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="limits">
+  <div class="wrap">
+    <div class="eyebrow">WHAT THIS DOESN&rsquo;T SHOW</div>
+    <h2>Limits of the Record</h2>
+    <div class="record-card">
+      <ul style="margin:0;padding-left:18px;">
+        <li>Catten&rsquo;s and Smith&rsquo;s spending after June 11 is not in hand; their later lists cover contributions only.</li>
+        <li>Group vs. individual and out-of-state figures are this site&rsquo;s sorting (by name and ZIP code).</li>
+        <li>Family relationships among donors who share a surname are not stated in the filings and are not assumed here.</li>
+        <li>Elevate Strategies, Elevate PAC, Merch Marketing and Arc Tags, LLC were not checked in the state business registry. Smith&rsquo;s two entities were checked through OpenCorporates.</li>
+        <li>Catten&rsquo;s Millcreek council votes, and the Democratic primary results, were not reviewed.</li>
+        <li>Smith&rsquo;s campaign site was not read.</li>
+        <li>Nothing here suggests any rule was broken.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <details class="sources">
+      <summary>View all sources (17)</summary>
+      <ol>
+        <li>Silvia Catten, 2026 Convention and Primary reports, DEX export DEX20260924_121654.csv (disclosures.utah.gov)</li>
+        <li>Silvia Catten, itemized contributions 6/12&ndash;9/23/26 (disclosures.utah.gov)</li>
+        <li>Silvia Catten, conflict-of-interest disclosure, Utah Senate District 13 (disclosures.utah.gov), read from filed text</li>
+        <li>Colin Smith, 2026 Convention and Primary reports, DEX export DEX20260924_121849.csv (disclosures.utah.gov)</li>
+        <li>Colin Smith, itemized contributions 6/12&ndash;9/11/26, with in-kind comments (disclosures.utah.gov)</li>
+        <li>Colin Michael Smith, conflict-of-interest disclosure, Senate (disclosures.utah.gov), read from filed text</li>
+        <li>Ryan Mahoney, 2026 Convention, Primary and September 30th reports, DEX export DEX20260924_121531.csv (disclosures.utah.gov)</li>
+        <li>Ryan L. Mahoney, conflict-of-interest disclosure, Senator 13 (disclosures.utah.gov), read from filed text</li>
+        <li>Ryan Mahoney campaign site (ryanmahoney4utah.godaddysites.com); Utah Republican Party 2026 candidate page (utgop.org); Ballotpedia</li>
+        <li>Silvia Catten campaign site, home page (priorities, endorsements) and &ldquo;Meet Silvia&rdquo; page (silviacatten.com), captured Sept. 24, 2026</li>
+        <li>Jordan River Commission, &ldquo;Meet the Chair &ndash; Silvia Catten,&rdquo; Feb. 17, 2023</li>
+        <li>Millcreek Journal, &ldquo;Mayor Silvestrini and Councilmember Catten re-elected in uncontested race,&rdquo; Oct. 12, 2023</li>
+        <li>Forward Party of Utah, campaign kickoff event page (March 14, 2026) and 2026 convention results (March 28, 2026)</li>
+        <li>All Kinds of Therapy, &ldquo;Balance House: The Outside with Colin Smith,&rdquo; July 14, 2021</li>
+        <li>Tissot Solutions LLC website (tissotsolutions.com)</li>
+        <li>OpenCorporates, Utah officer search for &ldquo;Colin Smith&rdquo; (C&amp;C Recovery, LLC; Wood Hollow Condominium Homeowners&rsquo; Association, Inc.), Sept. 24, 2026</li>
+        <li>This outlet&rsquo;s own case files: Cases 23, 24 and 25</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Compiled from Utah campaign-finance disclosures (disclosures.utah.gov), the candidates&rsquo; own conflict-of-interest forms and campaign materials. Public records only · No comment requested.<br>
+    <a href="index.html">&larr; Back to the Candidates 2026 docket</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('flipped');b.setAttribute('aria-pressed',b.classList.contains('flipped'));}));
+if (window.mermaid) { mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'IBM Plex Mono, monospace', themeVariables: { fontSize: '16px' }, flowchart:{htmlLabels:true, curve:'basis', useMaxWidth:true} }); }
+</script>
+</body>
+</html>
