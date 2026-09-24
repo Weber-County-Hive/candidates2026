@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "sd23-grover-smith",
+    race: "Senate District 23 — Utah County",
+    level: "State",
+    county: "Utah",
+    caseNumber: "CASE 29",
+    names: "Grover vs. Smith",
+    verdict: "$225,330 Since 2022 vs. $4,454",
+    tags: ["Incumbent", "School Bonds", "Alpine School District", "Consultant Payments", "Disclosure Forms"],
+    stamp: "Active",
+    href: "sd23-grover-smith.html",
+    datePosted: "2026-09-24",
+    dateUpdated: "2026-09-24"
+  },
+  {
     id: "sd20-winterton-mcrae",
     race: "Senate District 20 — Daggett, Duchesne, Summit, Uintah, Wasatch",
     level: "State",
