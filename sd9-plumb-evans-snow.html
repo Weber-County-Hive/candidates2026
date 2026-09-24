@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD-9: Plumb vs. Evans vs. Snow | The Weber County Hive</title>
+<meta name="description" content="Senate District 9, 2026. Sen. Jen Plumb's campaign money and the Senate Democratic PAC she is listed as an officer of, two challengers with no reported contributions, and what each candidate's disclosure form lists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-paper:#f4f0e6;
+    --color-paper-deep:#ece5d4;
+    --color-ink:#241a16;
+    --color-ink-soft:#5c534c;
+    --color-link:#c0572e;
+    --color-stat:#d9a441;
+    --color-burgundy-light:#5c1a2b;
+    --color-burgundy-deep:#3d0f1c;
+    --color-line:#d8cfbc;
+    --color-card:#fbf8f1;
+    --color-good:#4d7c5f;
+    --color-flag:#a5372a;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.6;}
+  h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif;font-weight:700;margin:0 0 .4em;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:.72rem;letter-spacing:.06em;color:var(--color-ink-soft);}
+  a{color:var(--color-link);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header.band{background:linear-gradient(135deg, var(--color-burgundy-light), var(--color-burgundy-deep));color:#f4ece6;padding:22px 0;}
+  header.band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .brandmark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#f4ece6;text-decoration:none;}
+  nav.topnav a{color:#f4ece6cc;text-decoration:none;margin-left:22px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.03em;border-bottom:1px solid transparent;}
+  nav.topnav a:hover{border-bottom-color:#f4ece6cc;}
+
+  .hero{padding:56px 0 40px;border-bottom:1px solid var(--color-line);}
+  .hero .eyebrow{margin-bottom:14px;}
+  .hero h1{font-size:2.5rem;line-height:1.15;max-width:760px;}
+  .hero .dek{font-size:1.12rem;color:var(--color-ink-soft);max-width:660px;margin-top:14px;}
+  .hero-meta{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+  .hero-meta .stat-num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-stat);}
+  .hero-meta .stat-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);letter-spacing:.02em;max-width:170px;}
+
+  section{padding:44px 0;border-bottom:1px solid var(--color-line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:1.6rem;margin-bottom:6px;}
+  section .section-dek{color:var(--color-ink-soft);max-width:660px;margin-bottom:26px;font-size:1rem;}
+
+  .start-here{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-stat);padding:20px 24px;}
+  .start-here ol{margin:8px 0 0;padding-left:20px;}
+  .start-here li{margin-bottom:8px;}
+
+  .record-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:2px;padding:24px 26px;margin-bottom:18px;}
+  .record-card h3{font-size:1.15rem;margin-bottom:8px;}
+  .record-card p{margin:.6em 0;}
+  .record-card p:first-of-type{margin-top:0;}
+  .rc-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-link);border:1px solid var(--color-link);padding:3px 9px;border-radius:20px;margin:2px 6px 2px 0;text-decoration:none;}
+  a.rc-tag:hover{background:var(--color-link);color:#fff;}
+  .rc-flag{border-color:var(--color-flag);color:var(--color-flag);}
+  .rc-good{border-color:var(--color-good);color:var(--color-good);}
+
+  .quote-block{border-left:3px solid var(--color-stat);padding:4px 0 4px 18px;font-style:italic;color:var(--color-ink-soft);margin:14px 0;}
+
+  .fund-row{display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;margin-bottom:20px;}
+  .fund-donut{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fund-donut-center{width:96px;height:96px;background:var(--color-paper);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+  .fund-donut-center .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--color-ink);}
+  .fund-donut-center .lbl{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--color-ink-soft);}
+  .fund-donut-legend{list-style:none;padding:0;margin:8px 0 0;font-size:.92rem;}
+  .fund-donut-legend li{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0;}
+  .fund-bar-row{margin-bottom:10px;}
+  .fund-bar-row .bar-label{display:flex;justify-content:space-between;gap:12px;font-size:.86rem;margin-bottom:4px;}
+  .fund-bar-track{background:var(--color-paper-deep);border-radius:3px;height:8px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);}
+  .fund-bar-fill.alt{background:var(--color-stat);}
+
+  .table-scroll{overflow-x:auto;}
+  .entity-table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px;}
+  .entity-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:8px 10px;}
+  .entity-table td{padding:10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .entity-table td.num{font-family:'IBM Plex Mono',monospace;font-size:.85rem;white-space:nowrap;}
+  .status-pill{font-family:'IBM Plex Mono',monospace;font-size:.65rem;padding:3px 8px;border-radius:12px;white-space:nowrap;display:inline-block;}
+  .status-confirmed{background:#e2ede4;color:var(--color-good);}
+  .status-flag{background:#f3dedb;color:var(--color-flag);}
+  .status-unresolved{background:#f4ecd9;color:#8a6d1f;}
+
+  .timeline{border-left:2px solid var(--color-line);padding-left:22px;margin-left:6px;}
+  .timeline-item{position:relative;margin-bottom:22px;}
+  .timeline-item::before{content:"";position:absolute;left:-28px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--color-stat);}
+  .timeline-item.key::before{background:var(--color-flag);}
+  .timeline-item .t-date{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);}
+  .timeline-item h4{font-size:1rem;margin:.2em 0;}
+  .timeline-item p{margin:.2em 0;font-size:.95rem;color:var(--color-ink-soft);}
+
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--color-line);background:var(--color-card);}
+  .vs-grid > div{padding:16px 20px;border-bottom:1px solid var(--color-line);}
+  .vs-grid > div:nth-child(odd){border-right:1px solid var(--color-line);}
+  .vs-grid .vs-head{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  .vs-grid .said{font-style:italic;}
+
+  /* connections */
+  .hub{background:var(--color-burgundy-deep);color:#f4ece6;padding:22px 26px;border-radius:2px;margin-bottom:22px;}
+  .hub .eyebrow{color:#d9a441;}
+  .hub h3{color:#f4ece6;font-size:1.3rem;margin:6px 0 4px;}
+  .hub p{margin:0;color:#e8d9c8;font-size:.95rem;}
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .conn-card{background:var(--color-card);border:1px solid var(--color-line);border-top:4px solid var(--color-link);padding:18px 20px;}
+  .conn-card.doers{border-top-color:var(--color-burgundy-light);}
+  .conn-card.gold{border-top-color:var(--color-stat);}
+  .conn-card.unres{border-top-color:#b8952e;border-top-style:dashed;}
+  .conn-card .case{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .conn-card h4{font-size:1.05rem;margin:4px 0 8px;}
+  .conn-card p{margin:.4em 0;font-size:.94rem;}
+  .conn-card ul{margin:.4em 0;padding-left:18px;font-size:.93rem;}
+  .conn-card li{margin-bottom:4px;}
+
+  details.sources{margin-top:6px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.05em;color:var(--color-burgundy-light);font-weight:600;}
+  details.sources ol{font-size:.9rem;color:var(--color-ink-soft);padding-left:22px;}
+  details.sources li{margin-bottom:7px;}
+
+  @media (max-width:680px){
+    .hero h1{font-size:1.9rem;}
+    .fund-row{flex-direction:column;}
+    .conn-grid{grid-template-columns:1fr;}
+    .vs-grid{grid-template-columns:1fr;}
+    .vs-grid > div:nth-child(odd){border-right:none;}
+    .vs-grid .vs-head:nth-child(2){display:none;}
+  }
+  footer{padding:40px 0 60px;text-align:center;color:var(--color-ink-soft);font-size:.85rem;}
+  footer a{color:var(--color-link);}
+  .jumpnav{background:var(--color-paper-deep);border-bottom:1px solid var(--color-line);padding:12px 0;position:sticky;top:0;z-index:5;}
+  .jumpnav .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .jumpnav a{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.03em;color:var(--color-ink);text-decoration:none;border-bottom:1px solid transparent;}
+  .jumpnav a:hover{border-bottom-color:var(--color-link);color:var(--color-link);}
+  section[id]{scroll-margin-top:60px;}
+  .race-strip{display:grid;grid-template-columns:repeat(8,1fr);margin-top:26px;border-top:1px solid var(--color-line);border-left:1px solid var(--color-line);background:var(--color-card);}
+  .race-strip > div{padding:12px 12px 14px;border-right:1px solid var(--color-line);border-bottom:1px solid var(--color-line);min-width:0;}
+  .race-strip .d{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-link);font-weight:600;white-space:nowrap;}
+  .race-strip .e{font-size:.84rem;line-height:1.35;margin-top:6px;hyphens:none;overflow-wrap:normal;}
+  .race-strip .future .d{color:var(--color-ink-soft);}
+  @media (max-width:1000px){.race-strip{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:560px){.race-strip{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:680px){.jumpnav{position:static;} .rubric-table td:first-child{width:auto;}}
+  .chart-card{background:var(--color-card);border:1px solid var(--color-line);padding:18px 20px;margin:22px 0;}
+  .chart-card h3{font-size:1.05rem;margin-bottom:4px;}
+  .chart-card .cap{font-size:.86rem;color:var(--color-ink-soft);margin:0 0 12px;}
+  .chart-box{position:relative;height:260px;}
+  .mermaid-wrap{background:var(--color-card);border:1px solid var(--color-line);padding:18px;margin:22px 0;overflow-x:auto;}
+  .mermaid-wrap .cap{font-size:.86rem;color:var(--color-ink-soft);margin:10px 0 0;}
+  .mermaid{text-align:center;}
+  details.ledger{background:var(--color-card);border:1px solid var(--color-line);padding:12px 18px;margin:12px 0;}
+  details.ledger summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.04em;color:var(--color-burgundy-light);font-weight:600;}
+  details.ledger .table-scroll{max-height:460px;overflow:auto;margin-top:10px;}
+  .rubric-table{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--color-card);border:1px solid var(--color-line);}
+  .rubric-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:10px;background:var(--color-paper-deep);}
+  .rubric-table td{padding:12px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .rubric-table td:first-child{font-weight:600;width:170px;}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:#fff;border-radius:3px;padding:1px 6px;margin-right:6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--color-stat);} .g-d{background:#b5652f;} .g-f{background:var(--color-burgundy-light);} .g-na{background:#9a9186;font-size:.8rem;}
+  .topic-head{font-family:'Playfair Display',serif;font-size:1.15rem;margin:26px 0 8px;}
+  .compare-table td.num{text-align:right;}
+
+  .flip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0;}
+  @media (max-width:900px){.flip-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.flip-grid{grid-template-columns:1fr;}}
+  .flip{perspective:900px;background:none;border:0;padding:0;cursor:pointer;text-align:left;font:inherit;color:inherit;min-height:250px;}
+  .flip-inner{position:relative;width:100%;height:100%;min-height:250px;transition:transform .5s;transform-style:preserve-3d;}
+  .flip.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:18px 20px;display:flex;flex-direction:column;justify-content:center;}
+  .flip-front{text-align:center;}
+  .flip-front .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  .flip-front .label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);letter-spacing:.03em;margin-top:6px;}
+  .flip-front .hint{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--color-ink-soft);margin-top:10px;opacity:.75;}
+  .flip-back{transform:rotateY(180deg);background:var(--color-burgundy-deep);color:#f4ece6;border-color:var(--color-burgundy-deep);font-size:.9rem;line-height:1.5;overflow:auto;}
+  .flip-back strong{color:var(--color-stat);}
+  .plain{background:#fff8e6;border-left:4px solid var(--color-stat);padding:12px 16px;margin:0 0 16px;font-size:.98rem;}
+  .plain b{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.06em;color:#8a6d1f;margin-right:8px;}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--color-line);background:var(--color-card);margin:18px 0;}
+  .three > div{padding:16px 18px;border-right:1px solid var(--color-line);}
+  .three > div:last-child{border-right:none;}
+  .three .who{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .three .amt{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  @media (max-width:760px){.three{grid-template-columns:1fr;} .three > div{border-right:none;border-bottom:1px solid var(--color-line);}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+
+<body>
+
+<header class="band">
+  <div class="wrap">
+    <a class="brandmark" href="index.html">Weber County Hive — Candidates 2026</a>
+    <nav class="topnav">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">CASE 23 · SENATE DISTRICT 9 (SALT LAKE CITY) — GENERAL ELECTION NOV. 3, 2026</div>
+    <h1>One Campaign Reports Money</h1>
+    <p class="dek">Senate District 9 covers part of Salt Lake City, including the University of Utah. Sen. Jen Plumb (D), a pediatric emergency physician first elected in 2022, faces Thaddeus A. Evans (R) and J. Lowry Snow (Utah Forward Party). Plumb's reports list $19,461 raised, more than half of it one $10,000 check from the Senate Democratic caucus PAC, whose registration lists her as an officer. Evans's reports list $0 in and $0 out. Snow's list $446.19 spent and no contributions.</p>
+    <div class="hero-meta">
+      <div><div class="stat-num">$19,461</div><div class="stat-label">PLUMB, RAISED THROUGH 9/11/26</div></div>
+      <div><div class="stat-num">$10,000</div><div class="stat-label">HER LARGEST CHECK: SENATE DEM PAC</div></div>
+      <div><div class="stat-num">$0</div><div class="stat-label">EVANS, RAISED AND SPENT (TWO REPORTS)</div></div>
+      <div><div class="stat-num">$446.19</div><div class="stat-label">SNOW, SPENT, WITH NO CONTRIBUTIONS LISTED</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="jumpnav" aria-label="Sections"><div class="wrap">
+  <a href="#start">Start here</a><a href="#words">Words</a><a href="#money">Plumb's money</a><a href="#spending">Spending</a><a href="#record">Plumb's 2026 bills</a><a href="#challengers">Evans &amp; Snow</a><a href="#stands">Where they stand</a><a href="#disclosure">Disclosure forms</a><a href="#connections">Connections</a><a href="#rubric">Rubric</a><a href="#limits">Limits</a>
+</div></nav>
+
+<section id="start">
+  <div class="wrap">
+    <div class="eyebrow">START HERE</div>
+    <h2>Five Things the Records Show</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Three people are running for this state Senate seat. Only one of them, the current senator, reports raising money. Here is what each one's filings say.</p>
+    <div class="start-here">
+      <ol>
+        <li><strong>Plumb raised $19,461 through Sept. 11.</strong> $13,450 of it (69%) came from seven PAC, business or association checks. $6,011 came from 32 individual entries, nearly all with Salt Lake City addresses.</li>
+        <li><strong>Her largest donor is a PAC she is listed as an officer of.</strong> The Senate Democratic caucus PAC (SenDemPAC) gave $10,000 on April 5. SenDemPAC's registration lists Jennifer Plumb as an officer. Its own reports list payments to her campaign that match.</li>
+        <li><strong>Evans's two reports show $0.</strong> His Convention and Primary reports list no contributions and no expenditures. No campaign website or bio was found.</li>
+        <li><strong>Snow's report lists $446.19 in spending and no contributions.</strong> It covers a filing fee, $300 to a communications firm and website hosting. The export doesn't show where that money came from.</li>
+        <li><strong>12 of her 30 bills in 2026 became law, each with a Republican House sponsor.</strong> None of her housing bills passed, and a draft on opioid settlement money was abandoned. All three candidates filed disclosure forms with entries filled in: Plumb lists her medical jobs and five unpaid or nonprofit roles, including chair of the state's Opioid Settlement Advisory Committee. Snow lists Amazon Web Services as his employer and Amazon stock. Evans lists his cybersecurity job.</li>
+      </ol>
+    </div>
+    <div class="race-strip" aria-label="Race timeline">
+      <div><div class="d">JAN 2, 2026</div><div class="e">Plumb's first contribution</div></div>
+      <div><div class="d">JAN 8</div><div class="e">Snow pays his filing fee</div></div>
+      <div><div class="d">JAN 15</div><div class="e">Snow announces as Forward Party candidate</div></div>
+      <div><div class="d">APR 5</div><div class="e">SenDemPAC gives Plumb $10,000</div></div>
+      <div><div class="d">APR 10</div><div class="e">Evans files Convention Report (due Apr. 4)</div></div>
+      <div><div class="d">JUN 16</div><div class="e">Evans files Primary Report, on the due date</div></div>
+      <div class="future"><div class="d">OCT 20–30</div><div class="e">Early voting</div></div>
+      <div class="future"><div class="d">NOV 3</div><div class="e">General election</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="words">
+  <div class="wrap">
+    <div class="eyebrow">QUICK RECAP</div>
+    <h2>Words Used on This Page</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Tap any card to see what the word means.</p>
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">PAC</div><div class="label">POLITICAL ACTION COMMITTEE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A group that collects money and gives it to candidates or spends it in elections. A <strong>caucus PAC</strong> is run by members of one party in one chamber, here the Senate Democrats.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Officer</div><div class="label">A NAMED LEADER OF A GROUP</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>The people a PAC lists on its state registration as responsible for it, such as its chair or treasurer.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">DEX export</div><div class="label">THE STATE'S MONEY FILE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A download from disclosures.utah.gov listing every contribution and expense a campaign reported, by report period.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Convention / Primary Report</div><div class="label">TWO REQUIRED REPORTS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Campaign money reports due before party conventions (April) and before the June primary. Each covers a set period.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">COI form</div><div class="label">CONFLICT-OF-INTEREST DISCLOSURE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A state form listing a candidate's jobs, businesses, big income sources, stocks and board seats, so voters can spot possible conflicts.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">In-kind</div><div class="label">HELP INSTEAD OF CASH</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Goods or services given to a campaign, like printing or ads, reported at their value. None of these three campaigns reports any.</div></div></div></button>
+
+    </div>
+  </div>
+</section>
+
+<section id="money">
+  <div class="wrap">
+    <div class="eyebrow">PLUMB'S MONEY</div>
+    <h2>Where Her Campaign's Dollars Came From</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Most of Plumb's money came from a few groups. One group, the Senate Democrats' PAC, gave more than half.</p>
+    <p class="section-dek">Her DEX export (Convention and Primary reports, through 6/8/26) plus her itemized contributions for 6/13&ndash;9/11/26. No in-kind help or loans are listed.</p>
+
+    <div class="fund-row">
+      <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 51.4%, var(--color-burgundy-light) 51.4% 69.1%, var(--color-stat) 69.1% 100%);">
+        <div class="fund-donut-center"><div class="num">$19,461</div><div class="lbl">RAISED</div></div>
+      </div>
+      <ul class="fund-donut-legend">
+        <li><span class="swatch" style="background:var(--color-link)"></span> Senate Dem PAC — $10,000 (51.4%)</li>
+        <li><span class="swatch" style="background:var(--color-burgundy-light)"></span> Six other PAC, business and association checks — $3,450 (17.7%)</li>
+        <li><span class="swatch" style="background:var(--color-stat)"></span> Individuals (32 entries) — $6,011 (30.9%)</li>
+      </ul>
+    </div>
+
+    <div class="fund-bar-row"><div class="bar-label"><span>Senate Dem PAC (State Capitol address)</span><span>$10,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:100%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Fresh Air PAC (South Salt Lake)</span><span>$2,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:20%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Stephen Letendre (two checks)</span><span>$1,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:10%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Holland &amp; Hart (law firm, two checks)</span><span>$500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:5%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Women's Democratic Club of Utah</span><span>$400</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:4%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>SEL Inc (Pleasant Grove)</span><span>$300</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:3%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Utah Dental Association</span><span>$250</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:2.5%"></div></div></div>
+
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">51%</div><div class="label">ONE CHECK, MORE THAN HALF</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>SenDemPAC's <strong>$10,000</strong> on April 5 is 51.4% of everything she reports raising. SenDemPAC's own reports list <strong>$10,000 + $500</strong> to her campaign committees under two name variants.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$431</div><div class="label">FROM OUTSIDE UTAH</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Two entries: <strong>$331</strong> from Northampton, Mass., and <strong>$100</strong> from Denver. That's 2.2%. Nearly every other entry lists a Salt Lake City or nearby address.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$2,330</div><div class="label">RAISED JUNE 13–SEPT. 11</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Fifteen smaller entries, mostly $25 to $500, including a second $250 from Holland &amp; Hart and $400 from the Women's Democratic Club of Utah.</div></div></div></button>
+
+    </div>
+
+    <div class="chart-card">
+      <h3>Raised and spent, by report</h3>
+      <p class="cap">Spending after June 8 is not in hand; her later list covers contributions only.</p>
+      <div class="chart-box"><canvas id="periodChart" aria-label="Bar chart of Plumb contributions and expenditures by reporting period"></canvas></div>
+    </div>
+
+    <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    SD["Senate Dem PAC<br/>$10,000"] --> CAMP
+    FA["Fresh Air PAC<br/>$2,000"] --> CAMP
+    OT["5 other groups<br/>$1,450"] --> CAMP
+    IN["32 individual entries<br/>$6,011"] --> CAMP
+    CAMP(["PLUMB CAMPAIGN<br/>$19,461 raised"])
+    CAMP --> SP["Spent through 6/8/26<br/>$3,605.26"]
+    style CAMP fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style SD fill:#fbf3e6,stroke:#d9a441
+</div>
+      <p class="cap">Money in runs through 9/11/26; money out through 6/8/26.</p>
+    </div>
+
+    <details class="ledger">
+      <summary>Every Plumb contribution, 1/2&ndash;9/11/26 (39 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Contributor (as filed)</th><th>City</th><th>Report</th><th>Amount</th></tr>
+<tr><td>1/2/2026</td><td>Adam Cohen</td><td>SLC, UT</td><td>Convention</td><td class="num">$250.00</td></tr>
+<tr><td>1/3/2026</td><td>Chris Wharton</td><td>SLC, UT</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>1/4/2026</td><td>Dhiraj Chand</td><td>SLC, UT</td><td>Convention</td><td class="num">$50.00</td></tr>
+<tr><td>1/4/2026</td><td>Richard Ferguson</td><td>NoSL, UT</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>1/5/2026</td><td>Walter Bugden</td><td>SLC, UT</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>1/9/2026</td><td>Lisa Himonas</td><td>SLC, UT</td><td>Convention</td><td class="num">$250.00</td></tr>
+<tr><td>1/12/2026</td><td>T Stephen Jones</td><td>Northampton, MA</td><td>Convention</td><td class="num">$331.00</td></tr>
+<tr><td>1/12/2026</td><td>Holland&amp;Hart</td><td>SLC, UT</td><td>Convention</td><td class="num">$250.00</td></tr>
+<tr><td>1/14/2026</td><td>Russell Vinik</td><td>SLC, UT</td><td>Convention</td><td class="num">$250.00</td></tr>
+<tr><td>1/15/2026</td><td>Tyler Sebahar</td><td>SLC, UT</td><td>Convention</td><td class="num">$25.00</td></tr>
+<tr><td>1/17/2026</td><td>Andrei Tarassov</td><td>SLC, UT</td><td>Convention</td><td class="num">$500.00</td></tr>
+<tr><td>1/18/2026</td><td>Patrice Corneli</td><td>SLC, UT</td><td>Convention</td><td class="num">$50.00</td></tr>
+<tr><td>3/8/2026</td><td>Jonathan and Maki Lerwioll</td><td>SLC, UT</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>3/8/2026</td><td>Fresh Air PAC</td><td>South SL, UT</td><td>Convention</td><td class="num">$2,000.00</td></tr>
+<tr><td>3/23/2026</td><td>Stephen Letendre</td><td>SLC, UT</td><td>Convention</td><td class="num">$500.00</td></tr>
+<tr><td>3/31/2026</td><td>Stephen Letendre</td><td>SLC, UT</td><td>Convention</td><td class="num">$500.00</td></tr>
+<tr><td>4/5/2026</td><td>Senate Dem PAC</td><td>SLC, UT</td><td>Primary</td><td class="num">$10,000.00</td></tr>
+<tr><td>4/19/2026</td><td>MaryJo McMillan</td><td>SLC, UT</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>4/23/2026</td><td>Annie Payne</td><td>SLC, UT</td><td>Primary</td><td class="num">$500.00</td></tr>
+<tr><td>4/25/2026</td><td>Sandra Kresser</td><td>SLC, UT</td><td>Primary</td><td class="num">$500.00</td></tr>
+<tr><td>5/5/2026</td><td>Utah Dental Association</td><td>woods cross, UT</td><td>Primary</td><td class="num">$250.00</td></tr>
+<tr><td>5/17/2026</td><td>SEL Inc</td><td>Pleasant Grove, UT</td><td>Primary</td><td class="num">$300.00</td></tr>
+<tr><td>5/29/2026</td><td>Jackie Biscupski</td><td>SLC, UT</td><td>Primary</td><td class="num">$100.00</td></tr>
+<tr><td>6/2/2026</td><td>Teresa &amp; Brian Garrett</td><td>SLC, UT</td><td>Primary</td><td class="num">$25.00</td></tr>
+<tr><td>6/13/2026</td><td>Amy Redford</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$100.00</td></tr>
+<tr><td>6/26/2026</td><td>Jade Velazquez</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$25.00</td></tr>
+<tr><td>7/7/2026</td><td>Robert Milsap</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$100.00</td></tr>
+<tr><td>8/4/2026</td><td>Pat de Freitas</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$500.00</td></tr>
+<tr><td>8/31/2026</td><td>Amanda Whitworth</td><td>Denver, CO</td><td>6/13&ndash;9/11</td><td class="num">$100.00</td></tr>
+<tr><td>8/31/2026</td><td>Robert Milsap</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$100.00</td></tr>
+<tr><td>9/1/2026</td><td>Roni Lane</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$100.00</td></tr>
+<tr><td>9/2/2026</td><td>Dave Spatafore</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$300.00</td></tr>
+<tr><td>9/2/2026</td><td>Women's Democratic Club of Utah</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$400.00</td></tr>
+<tr><td>9/2/2026</td><td>Holland&amp;Hart</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$250.00</td></tr>
+<tr><td>9/2/2026</td><td>Shawn McMillen</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$100.00</td></tr>
+<tr><td>9/7/2026</td><td>Karen Horne</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$80.00</td></tr>
+<tr><td>9/9/2026</td><td>Amy Redford</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$100.00</td></tr>
+<tr><td>9/10/2026</td><td>Larissa Trout</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$25.00</td></tr>
+<tr><td>9/11/2026</td><td>MaryJo McMillan</td><td>SLC, UT</td><td>6/13&ndash;9/11</td><td class="num">$50.00</td></tr>
+        <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>$19,461.00</strong></td></tr>
+      </table>
+      </div>
+    </details>
+
+    <details class="ledger">
+      <summary>The amendment trail</summary>
+      <div class="table-scroll" style="max-height:none;">
+      <table class="entity-table">
+        <tr><th>Change</th><th>What the report shows now</th></tr>
+        <tr><td>Sandra Kresser, $500 dated 3/25/26, deleted 5/1/26</td><td>Sandra Kresser, $500, dated 4/25/26, on the Primary Report. Same donor and amount with a new date.</td></tr>
+        <tr><td>Ten other deleted contribution rows</td><td>The export lists them as "[DELETED]" with $0 and no details, so what they were is not shown.</td></tr>
+      </table>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section id="spending">
+  <div class="wrap">
+    <div class="eyebrow">PLUMB'S SPENDING</div>
+    <h2>$3,605.26 Through June 8</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>She has spent a small part of what she raised. The biggest costs were one person paid for campaign work and printing.</p>
+    <div class="chart-card">
+      <h3>Where the money went</h3>
+      <p class="cap">Every expenditure on her Convention and Primary reports, by payee. "Campaign Expense" is the purpose the report gives for most entries.</p>
+      <div class="chart-box" style="height:330px;"><canvas id="spendChart" aria-label="Bar chart of Plumb spending by payee"></canvas></div>
+    </div>
+    <details class="ledger">
+      <summary>Every Plumb expenditure through 6/8/26 (25 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Report</th><th>Amount</th></tr>
+<tr><td>1/5/2026</td><td>Lt Governor's Office</td><td>Campaign Expense</td><td>Convention</td><td class="num">$117.73</td></tr>
+<tr><td>1/7/2026</td><td>Wix.com</td><td>Campaign Expense</td><td>Convention</td><td class="num">$9.02</td></tr>
+<tr><td>1/19/2026</td><td>NAACP SLC Branch</td><td>Campaign Expense</td><td>Convention</td><td class="num">$300.00</td></tr>
+<tr><td>1/30/2026</td><td>Interform Business</td><td>Campaign Expense</td><td>Convention</td><td class="num">$696.31</td></tr>
+<tr><td>1/30/2026</td><td>Brighton Bank</td><td>Campaign Expense</td><td>Convention</td><td class="num">$5.00</td></tr>
+<tr><td>2/2/2026</td><td>Wix.com</td><td>Campaign Expense</td><td>Convention</td><td class="num">$31.25</td></tr>
+<tr><td>2/9/2026</td><td>Wix.com</td><td>Campaign Expense</td><td>Convention</td><td class="num">$9.02</td></tr>
+<tr><td>2/27/2026</td><td>Brighton Bank</td><td>Campaign Expense</td><td>Convention</td><td class="num">$5.00</td></tr>
+<tr><td>3/9/2026</td><td>Wix.com</td><td>Campaign Expense</td><td>Convention</td><td class="num">$9.02</td></tr>
+<tr><td>3/27/2026</td><td>Saffron Valley</td><td>Campaign Expense</td><td>Convention</td><td class="num">$91.67</td></tr>
+<tr><td>3/31/2026</td><td>Brighton Bank</td><td>Campaign Expense</td><td>Convention</td><td class="num">$5.00</td></tr>
+<tr><td>3/31/2026</td><td>SLCounty Democratic Party</td><td>Donations</td><td>Convention</td><td class="num">$103.56</td></tr>
+<tr><td>4/2/2026</td><td>AT&amp;T</td><td>Campaign Expense</td><td>Primary</td><td class="num">$350.26</td></tr>
+<tr><td>4/8/2026</td><td>Wix.com</td><td>Campaign Expense</td><td>Primary</td><td class="num">$9.02</td></tr>
+<tr><td>4/8/2026</td><td>SLCounty Democratic Party</td><td>Campaign Expense</td><td>Primary</td><td class="num">$300.00</td></tr>
+<tr><td>4/10/2026</td><td>Costco</td><td>Campaign Expense</td><td>Primary</td><td class="num">$397.44</td></tr>
+<tr><td>4/10/2026</td><td>Peter Hilyard</td><td>Campaign Expense</td><td>Primary</td><td class="num">$855.00</td></tr>
+<tr><td>4/30/2026</td><td>Brighton Bank</td><td>Campaign Expense</td><td>Primary</td><td class="num">$5.00</td></tr>
+<tr><td>5/4/2026</td><td>Costco</td><td>Campaign Expense</td><td>Primary</td><td class="num">$26.70</td></tr>
+<tr><td>5/4/2026</td><td>Costco</td><td>Campaign Expense</td><td>Primary</td><td class="num">$81.05</td></tr>
+<tr><td>5/7/2026</td><td>Wix.com</td><td>Campaign Expense</td><td>Primary</td><td class="num">$9.02</td></tr>
+<tr><td>5/29/2026</td><td>Brighton Bank</td><td>Campaign Expense</td><td>Primary</td><td class="num">$5.00</td></tr>
+<tr><td>5/31/2026</td><td>Fundhero</td><td>Campaign Expense</td><td>Primary</td><td class="num">$24.80</td></tr>
+<tr><td>5/31/2026</td><td>Act Blue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$150.37</td></tr>
+<tr><td>6/8/2026</td><td>Wix.com</td><td>Campaign Expense</td><td>Primary</td><td class="num">$9.02</td></tr>
+        <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>$3,605.26</strong></td></tr>
+      </table>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section id="record">
+  <div class="wrap">
+    <div class="eyebrow">PLUMB'S 2026 BILLS</div>
+    <h2>12 Signed, 17 Left Filed</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>This is what happened to the bills Plumb sponsored in the 2026 session. Twelve became law, and every one of them had a Republican carrying it in the House.</p>
+    <p class="section-dek">From the Legislature's bill list for Jen Plumb, 2026 General Session. "Filed" means the bill did not pass before the session ended. Her votes on other members' bills were not reviewed.</p>
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">12 of 30</div><div class="label">SPONSORED BILLS SIGNED INTO LAW</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Of her <strong>29 numbered Senate bills</strong> plus one resolution, <strong>12</strong> were signed by the governor. Her Senate resolution on animal sheltering in disasters also passed. <strong>17</strong> were left filed.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">12 of 12</div><div class="label">SIGNED BILLS WITH A REPUBLICAN HOUSE SPONSOR</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Every one of her 12 signed bills was carried in the House by a Republican: Hall (3), Gwynn (2), Clancy (2), Wilcox, Defay, Loubet, Ward and Burton. Several of them are on the 2026 ballot.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">6</div><div class="label">DRAFTS ABANDONED</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Six bill requests were never numbered and are marked &ldquo;Bill Abandoned per Sponsor,&rdquo; including <strong>Opioid Settlement Proceeds Amendments</strong> and <strong>Water Conservation Amendments</strong>.</div></div></div></button>
+
+    </div>
+    <details class="ledger" open>
+      <summary>Her 12 bills signed by the governor, 2026</summary>
+      <div class="table-scroll" style="max-height:none;">
+      <table class="entity-table">
+        <tr><th>Bill</th><th>Short title</th><th>House floor sponsor</th></tr>
+<tr><td>S.B. 50</td><td>Anesthesia Dosage Amendments</td><td>Katy Hall</td></tr>
+<tr><td>S.B. 80</td><td>Physician Practice Amendments</td><td>Ryan D. Wilcox</td></tr>
+<tr><td>S.B. 81</td><td>Dyslexia Testing Amendments</td><td>Ariel Defay</td></tr>
+<tr><td>S.B. 87</td><td>Naloxone Amendments</td><td>Matthew H. Gwynn</td></tr>
+<tr><td>S.B. 96</td><td>Opioid Fatality Review Amendments</td><td>Matthew H. Gwynn</td></tr>
+<tr><td>S.B. 98</td><td>Substance Use Rehabilitation Amendments</td><td>Tyler Clancy</td></tr>
+<tr><td>S.B. 111</td><td>Veterinary Post-employment Amendments</td><td>Katy Hall</td></tr>
+<tr><td>S.B. 127</td><td>Pediatric Care Amendments</td><td>Katy Hall</td></tr>
+<tr><td>S.B. 128</td><td>Public Alert Amendments</td><td>Tyler Clancy</td></tr>
+<tr><td>S.B. 142</td><td>Private Probation and Court Ordered Services Amendments</td><td>Anthony E. Loubet</td></tr>
+<tr><td>S.B. 170</td><td>Vitamin K Amendments</td><td>Raymond P. Ward</td></tr>
+<tr><td>S.B. 210</td><td>Nicotine Amendments</td><td>Jefferson S. Burton</td></tr>
+      </table>
+      </div>
+    </details>
+    <div class="vs-grid" style="grid-template-columns:1fr 1fr;margin-top:18px;">
+      <div class="vs-head">WHAT SHE SAYS</div><div class="vs-head">HER 2026 BILLS</div>
+      <div class="said">Opioids and the settlement money: "I am ready to lead the state in this effort."</div><div>Signed: Naloxone Amendments, Opioid Fatality Review Amendments, Substance Use Rehabilitation Amendments. Left filed: Opioid Terminology Amendments. Abandoned draft: Opioid Settlement Proceeds Amendments.</div>
+      <div class="said">Housing and homelessness: "compassionate solutions for our neighbors experiencing homelessness."</div><div>Left filed: Homeless Services Board Amendments, Driver License Amendments for Unhoused Individuals, Residential Rental Payment Reporting Amendments. None of her housing bills passed in 2026.</div>
+      <div class="said">Climate and water: "protecting our air, water, and watersheds through legislation."</div><div>Left filed: Natural Organic Reduction Amendments, Natural Disaster Amendments. Abandoned draft: Water Conservation Amendments.</div>
+      <div class="said">Health care and public health.</div><div>Signed: Anesthesia Dosage, Physician Practice, Pediatric Care, Vitamin K, Nicotine, Public Alert, Dyslexia Testing. Most of her signed bills fall here.</div>
+    </div>
+    <p style="color:var(--color-ink-soft);font-size:.92rem;margin-top:12px;">She also carried two House bills that were signed: H.B. 380, Hospital Workplace Violence Reporting Requirements (Rep. Katy Hall), and H.B. 87, Animal Crime Victim Amendments (Rep. Verona Mauga). Her site's figure of "39 pieces of impactful legislation" over four sessions covers earlier years that aren't on this list, so it is still not checked.</p>
+  </div>
+</section>
+
+<section id="challengers">
+  <div class="wrap">
+    <div class="eyebrow">THE CHALLENGERS</div>
+    <h2>Evans and Snow: No Contributions Listed</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Neither challenger reports taking in any money. Evans reports spending none. Snow reports spending $446.19.</p>
+
+    <div class="three">
+      <div><div class="who">JEN PLUMB (D), INCUMBENT</div><div class="amt">$19,461</div><p>Raised through 9/11/26. $3,605.26 spent through 6/8/26.</p></div>
+      <div><div class="who">THADDEUS A. EVANS (R)</div><div class="amt">$0</div><p>Raised and spent, on both his Convention and Primary reports.</p></div>
+      <div><div class="who">J. LOWRY SNOW (FORWARD)</div><div class="amt">$0 in</div><p>$446.19 spent, all dated 1/8&ndash;2/27/26 on his Convention report.</p></div>
+    </div>
+
+    <div class="chart-card">
+      <h3>Money in the SD-9 race</h3>
+      <p class="cap">Raised and spent by each campaign, on one scale.</p>
+      <div class="chart-box" style="height:220px;"><canvas id="raceChart" aria-label="Bar chart comparing money raised and spent by the three SD-9 candidates"></canvas></div>
+    </div>
+
+    <div class="record-card">
+      <h3>Thaddeus A. Evans (R)</h3>
+      <div class="table-scroll"><table class="entity-table">
+        <tr><th>Report</th><th>Period</th><th>Due</th><th>Submitted</th><th>Raised</th><th>Spent</th></tr>
+        <tr><td>2026 Convention</td><td>1/1&ndash;3/30/26</td><td>4/4/26</td><td>4/10/26</td><td class="num">$0.00</td><td class="num">$0.00</td></tr>
+        <tr><td>2026 Primary</td><td>3/31&ndash;6/11/26</td><td>6/16/26</td><td>6/16/26</td><td class="num">$0.00</td><td class="num">$0.00</td></tr>
+      </table></div>
+      <p>Both reports show a $0 beginning and ending balance. The Primary Report's itemized list reads "There are no records to display." Dates are as printed on each report.</p>
+      <p>No campaign website or social media page was found as of Sept. 24, 2026. The Utah Republican Party's 2026 candidate page lists his name and contact information, with no bio.</p>
+      <span class="rc-tag">Read from the rendered report pages</span>
+    </div>
+
+    <div class="record-card">
+      <h3>J. Lowry Snow (Utah Forward Party)</h3>
+      <p>His DEX export lists six expenditures totaling <strong>$446.19</strong>, all on the Convention report, and no contributions. Four contribution rows are marked "[DELETED]" with no details. The export doesn't show how the spending was paid for.</p>
+      <details class="ledger" open>
+        <summary>Every Snow expenditure (6 entries)</summary>
+        <div class="table-scroll" style="max-height:none;">
+        <table class="entity-table">
+          <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Amount</th></tr>
+<tr><td>1/8/2026</td><td>Utah State - Salt Lake County Clerk</td><td>Campaign Expense</td><td class="num">$117.73</td></tr>
+<tr><td>1/14/2026</td><td>Cloudflare</td><td>Advertising</td><td class="num">$10.46</td></tr>
+<tr><td>1/14/2026</td><td>Nixihost</td><td>Advertising</td><td class="num">$6.00</td></tr>
+<tr><td>1/30/2026</td><td>Nixihost</td><td>Advertising</td><td class="num">$6.00</td></tr>
+<tr><td>2/5/2026</td><td>X-Factor Strategic Communications</td><td>Advertising</td><td class="num">$300.00</td></tr>
+<tr><td>2/27/2026</td><td>Nixihost</td><td>Advertising</td><td class="num">$6.00</td></tr>
+          <tr><td></td><td><strong>Total</strong></td><td></td><td class="num"><strong>$446.19</strong></td></tr>
+        </table>
+        </div>
+      </details>
+      <p>His campaign site, jlowrysnow.com, describes "a multigenerational family legacy of public service in Utah that dates back to the late 1800s." He is not the same person as former Rep. V. Lowry Snow of St. George, and nothing in these records connects them.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stands">
+  <div class="wrap">
+    <div class="eyebrow">WHERE THEY STAND</div>
+    <h2>In Their Own Words</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>What each candidate says they'll work on, quoted from their own campaign materials. These are their claims, not checked facts.</p>
+    <div class="vs-grid" style="grid-template-columns:1fr 1fr;">
+      <div class="vs-head">PLUMB (D)</div><div class="vs-head">SNOW (FORWARD)</div>
+      <div class="said"><strong>Opioid settlement:</strong> Utah "is scheduled to receive over $400 million in opioid litigation settlement funds... It is crucial that this money is spent responsibly and appropriately... I am ready to lead the state in this effort."</div><div class="said"><strong>Representation:</strong> "A modern, voter-driven approach to representation that gives District 9 residents a stronger and more continuous voice."</div>
+      <div class="said"><strong>Health care:</strong> "No one should have to go into debt in order to receive the health care they or their loved ones need to survive."</div><div class="said"><strong>Housing:</strong> "Advancing bipartisan, data-driven solutions that expand housing supply, support smart density, and remove unnecessary regulatory barriers."</div>
+      <div class="said"><strong>Air, water, the lake:</strong> "sanctioning polluters, protecting our air, water, and watersheds through legislation, and improving our forest management."</div><div class="said"><strong>Clean air and Great Salt Lake:</strong> "Strong, science-based policies that protect public health, responsibly manage water resources, and safeguard wildlife."</div>
+      <div class="said"><strong>Her record, as she describes it:</strong> "In my first 4 sessions, I have been able to pass 39 pieces of impactful legislation." <em>(Her count; not checked here.)</em></div><div class="said"><strong>Endorsement on his site:</strong> Forward Party of Utah chair Michelle Quist.</div>
+    </div>
+    <p style="color:var(--color-ink-soft);font-size:.95rem;margin-top:14px;"><strong>Evans (R):</strong> no campaign website, bio or stated priorities were found.</p>
+  </div>
+</section>
+
+<section id="disclosure">
+  <div class="wrap">
+    <div class="eyebrow">THE DISCLOSURE FORMS</div>
+    <h2>What Each Candidate Listed</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Each candidate filled out the state's conflict-of-interest form. This is what each one wrote. All three were read from the filed text with the answers filled in.</p>
+    <div class="table-scroll">
+    <table class="entity-table">
+      <tr><th>Item</th><th>Plumb (D)</th><th>Evans (R)</th><th>Snow (Forward)</th></tr>
+      <tr><td>Employers</td><td>University of Utah School of Medicine (pediatric emergency physician, professor); Intermountain Healthcare (urgent care pediatrics); FDA Pediatric Advisory Committee (subject-matter expert)</td><td>TruHearing Inc., Draper (System Security Manager). Previous: Chief Information Security Officer; the form gives an address in Onalaska, Wis., with no company name</td><td>Amazon Web Services (Principal, Worldwide GTM Specialist, Machine Learning and AI). Previous: Canonical, London (Director of Strategic Global Alliances)</td></tr>
+      <tr><td>Entities owned or led</td><td>Utah Naloxone (medical director, co-founder); Utah Opioid Settlement Advisory Committee (chair, unpaid); Utah Opioid Task Force (executive team, unpaid); Spy Hop (board, unpaid); Salt Lake City Police Foundation (board, unpaid)</td><td>N/A</td><td>n/a</td></tr>
+      <tr><td>$5,000+ income sources</td><td>N/A</td><td>N/A</td><td>n/a</td></tr>
+      <tr><td>Stocks of $5,000+</td><td>N/A</td><td>N/A</td><td>Amazon.com, Inc.</td></tr>
+      <tr><td>Other boards</td><td>N/A</td><td>N/A</td><td>n/a</td></tr>
+      <tr><td>Spouse / household</td><td>N/A</td><td>Spouse listed; employer "Specialty Care"</td><td>One other adult in the household, a Salt Lake City schoolteacher</td></tr>
+      <tr><td>Optional: other possible conflicts</td><td>Animal-rescue fostering for nine groups; an extended-family business (Alpine Auto Renovation); extended-family property on Emigration Canyon Road</td><td>N/A</td><td>No entry</td></tr>
+    </table>
+    </div>
+    <div class="record-card" style="margin-top:18px;">
+      <h3>Two things worth seeing side by side</h3>
+      <p><strong>Plumb and SenDemPAC.</strong> SenDemPAC's state registration lists Jennifer Plumb as an officer, alongside Sen. Luz Escamilla and Sen. Kathleen Riebe. Her form's list of entities she is "an owner or officer" of doesn't include SenDemPAC. The form doesn't say whether a PAC counts as an "entity" for that item, and this page doesn't decide that.</p>
+      <p><strong>Plumb and the opioid settlement.</strong> She chairs the state's Opioid Settlement Advisory Committee, unpaid, and her campaign site says she is "ready to lead the state" on spending the settlement money. She disclosed the role herself.</p>
+      <p><strong>Snow and Amazon.</strong> He works on machine learning and AI at Amazon Web Services, which operates large data centers, and he holds Amazon stock. Data center rules are expected before the Legislature in 2027 (see <a href="https://webercountyhive-coder.github.io/Data-Centers/meta-eagle-mountain-gas-plant.html">this site's Meta gas plant file</a>). He disclosed both himself.</p>
+      <span class="rc-tag rc-good">All three answered every item</span>
+      <span class="rc-tag">Plumb used the optional section</span>
+    </div>
+  </div>
+</section>
+
+<section id="connections">
+  <div class="wrap">
+    <div class="eyebrow">THE CONNECTIONS</div>
+    <h2>Where This Race Meets the Rest of the Docket</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Some of Plumb's donors also show up in other races this site has covered. A shared donor is a connection, not an accusation.</p>
+
+    <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    SD["SenDemPAC<br/>Senate Democrats' caucus PAC"] -->|"$10,000"| JP(["JEN PLUMB<br/>SD-9"])
+    FA["Fresh Air PAC<br/>Stewardship Utah"] -->|"$2,000"| JP
+    SEL["SEL Inc"] -->|"$300"| JP
+    HH["Holland &amp; Hart"] -->|"$500"| JP
+    SD -->|"$20,000"| KK["Karen Kwan<br/>SD-12, on the 2026 ballot"]
+    SD -->|"$10,500"| SP["Stephanie Pitcher<br/>SD-14, on the 2026 ballot"]
+    FA -->|"also gave"| OT["Lesser HD-10, Stevenson HD-16,<br/>Okerlund HD-42, Smith SD-21"]
+    HH -->|"also gave"| TB["Tran SD-6, Bitner HD-17"]
+    JP -.->|"listed as an officer"| SD
+    style JP fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style SD fill:#fbf3e6,stroke:#d9a441
+</div>
+      <p class="cap">Solid arrows are money. The dotted arrow is SenDemPAC's registration listing Plumb as an officer. SenDemPAC totals are from its own reports, 2022&ndash;2026.</p>
+    </div>
+
+    <div class="conn-grid">
+      <div class="conn-card gold">
+        <div class="case">SENDEMPAC · SENATE DEMOCRATIC CAUCUS PAC</div>
+        <h4>The PAC and its officers</h4>
+        <ul>
+          <li>Registration lists Sen. Luz Escamilla (primary officer and treasurer), Sen. Kathleen Riebe and Jennifer Plumb.</li>
+          <li>Its reports list money to all three officers' campaigns: Escamilla $10,000+, Riebe $11,870.54, Plumb $10,500.</li>
+          <li>Its donors include trade groups and companies that also give to Republican legislators: credit unions, bankers, realtors, the Utah Medical Association.</li>
+        </ul>
+      </div>
+      <div class="conn-card">
+        <div class="case">FRESH AIR PAC · <a href="hd16-stevenson-treasure.html">HD-16</a> · <a href="hd42-okerlund-williams.html">HD-42</a> · <a href="sd21-brammer-smith-myers-woodfield.html">SD-21</a> · <a href="hd10-lesser-alvey.html">HD-10</a></div>
+        <h4>A PAC that gives to both parties</h4>
+        <p>Its state registration says it represents Stewardship Utah and was created 6/3/2021 in South Salt Lake. Officers: David Garbett (chair), Travis Suite (manager) and TJ Ellerbeck (treasurer). Plumb got $2,000. It also gave Republicans Bob Stevenson and Clint Okerlund $3,000 each, Kelly Smith $16,500, and Democrat Rosemary Lesser $2,500.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case">SEL INC · <a href="hd7-mittendorf-wilcox.html">HD-7</a></div>
+        <h4>A grid-technology company's giving</h4>
+        <p>SEL Inc (Schweitzer Engineering Laboratories) lists Stan Lockhart as its registered agent. Its 2026 giving list includes dozens of legislators in both parties; Plumb's $300 matches it. Ryan Wilcox (HD-7) also appears.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case"><a href="sd6-tran-neal.html">CASE 21</a> · <a href="hd17-bitner-last.html">CASE 22</a></div>
+        <h4>Holland &amp; Hart</h4>
+        <p>The law firm gave Plumb $500 in two checks. It also appears as a donor to Tami Tran (SD-6) and Lili Bitner (HD-17), both Republicans.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case">SPY HOP</div>
+        <h4>A board seat and a PAC payment</h4>
+        <p>Plumb lists an unpaid seat on Spy Hop's board. SenDemPAC's reports list $4,020 paid to Spy Hop (Spy Hop Productions and Spy Hop Rooftop). What the payments were for is not described beyond the payee name.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case">REGISTERED LOBBYIST · CONFIRMED BY ADDRESS</div>
+        <h4>Dave Spatafore, $300</h4>
+        <ul>
+          <li>David Spatafore is registered with the state as a lobbyist, with filings from 2012 through 2026. His firm is Capstone Strategies LLC.</li>
+          <li>The address on Plumb's contribution entry is the same address his lobbyist registration lists for the firm.</li>
+          <li>His current clients include Salt Lake City, Millcreek, South Salt Lake, Midvale and Holladay; fire, police and 911 groups; construction and trades groups; and tech companies including Verkada, Pure Storage, Axon and Cisco.</li>
+          <li>A David Spatafore also gave SenDemPAC $2,050.</li>
+          <li>Lobbyists giving to candidates is legal and reported.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rubric">
+  <div class="wrap">
+    <div class="eyebrow">THE RUBRIC</div>
+    <h2>Graded Topic by Topic</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Each topic gets a grade, A (best) to F (worst), on five questions: Does it check power? Can the public see it? Is it clear who pays? What does it do to air, water and land? Do the people affected get a real say? N/A means the question doesn't apply.</p>
+    <p class="section-dek"><strong>How to read these:</strong> grades judge only what has already happened in the filings as of Sept. 24, 2026. They judge the record, not the person.</p>
+
+    <div class="topic-head">1. Plumb's campaign money</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-c">C</span>More than half her money came from a caucus PAC whose registration lists her as an officer.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>Every contribution is itemized with a name and address. Ten deleted rows show no details.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-b">B</span>Her report and SenDemPAC's reports list matching amounts. Spending after June 8 is not in hand.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-b">B</span>Individual gifts are small and local; 69% of the dollars came from seven group checks.</td></tr>
+    </table></div>
+
+    <div class="topic-head">2. The challengers' filings</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-na">N/A</span>No money reported to weigh.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-c">C</span>Both filed reports and disclosure forms. Evans's Convention Report lists a submit date six days after its due date, and no bio or stated priorities were found for him. Snow's spending is itemized.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>Snow's export lists $446.19 spent and no contributions, so it doesn't show how the spending was paid for.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-c">C</span>Voters get little from the filings to compare Evans with the others.</td></tr>
+    </table></div>
+
+    <div class="topic-head">3. The disclosure forms</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>All three answered every item. Plumb used the optional section. Her form does not list her SenDemPAC officer role; whether it had to is not settled here.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-b">B</span>Snow names his Amazon stock; Plumb names her unpaid roles, including the opioid settlement committee.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-b">B</span>The roles most likely to touch state policy (opioid settlement money; data centers) are disclosed by the candidates themselves.</td></tr>
+    </table></div>
+
+    <div class="topic-head">4. Her 2026 laws, bill by bill</div>
+    <p class="section-dek">Each of the 12 bills she sponsored that became law, plus the two House bills she carried in the Senate, graded on what the law does. Read from the enrolled bills' summaries and "money appropriated" lines on le.utah.gov. The state lists no bills she co-sponsored in 2026. P = power, T = transparency, $ = financial accountability, E = environmental impact, C = community impact.</p>
+    <div class="table-scroll"><table class="rubric-table" style="min-width:860px;">
+      <tr><th>Bill</th><th>What it does</th><th>P</th><th>T</th><th>$</th><th>E</th><th>C</th><th>Why</th></tr>
+<tr><td><strong>S.B. 87</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Naloxone</span></td><td>Protects people who give or hand out <em>expired</em> overdose-reversal medicine, with an education requirement.</td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-a">A</span></td><td>Uses supplies already on hand; no new cost.</td></tr>
+<tr><td><strong>S.B. 96</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Opioid Fatality Review</span></td><td>Clarifies the health department can investigate overdose deaths and look for ways to prevent them.</td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Adds state review power, with federal privacy limits on treatment records.</td></tr>
+<tr><td><strong>S.B. 98</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Recovery-ready workplaces</span></td><td>Lets the health department create an optional employer certification for supporting workers in recovery.</td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Optional; could be paid for from the e-cigarette restricted account, but no money is set aside.</td></tr>
+<tr><td><strong>S.B. 50</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Anesthesia coverage</span></td><td>Health plans must pay for medically necessary anesthesia and can't deny it based only on preset time limits.</td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Protects patients from a denial rule; costs may show up in premiums.</td></tr>
+<tr><td><strong>S.B. 127</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Pediatric ER readiness</span></td><td>Hospital ERs need child-care policies, a pediatric coordinator and readiness checks reported to the state.</td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Reporting is required; $278,000 is moved within existing funds, net $0.</td></tr>
+<tr><td><strong>S.B. 170</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Vitamin K for newborns</span></td><td>Providers must educate parents about vitamin K, and parents get a formal process to decline it.</td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>Informed choice for parents; the health effect depends on how many decline.</td></tr>
+<tr><td><strong>S.B. 81</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Dyslexia testing</span></td><td>Schools must provide interventions when a licensed professional's dyslexia assessment shows reading needs.</td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Helps students; no money is set aside for schools to do it.</td></tr>
+<tr><td><strong>S.B. 80</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Physicians and executions</span></td><td>A physician is not guilty of unprofessional conduct whether they take part in an execution or refuse.</td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>Protects either choice; does not change whether executions happen.</td></tr>
+<tr><td><strong>S.B. 111</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Veterinarian non-competes</span></td><td>Voids most new non-compete, nondisclosure and non-solicitation deals for vets (unless they own 5%+).</td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Shifts power toward workers; ends gag clauses going forward.</td></tr>
+<tr><td><strong>S.B. 142</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Private probation</span></td><td>A program generally can't both supervise someone's probation and sell them other paid services.</td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Removes a built-in conflict for people on probation.</td></tr>
+<tr><td><strong>S.B. 128</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Purple Alert</span></td><td>Creates a state alert system to help find missing vulnerable adults. Starts Jan. 1, 2027.</td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>No money set aside to run it.</td></tr>
+<tr><td><strong>S.B. 210</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Nicotine rules</span></td><td>Ends local health department inspections of e-cigarette shops, changes fees and penalties, and funds disposal of seized products.</td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>Mixed: tougher penalties and funded disposal, but less local inspection.</td></tr>
+<tr><td><strong>H.B. 380 (carried)</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Hospital workplace violence</span></td><td>Hospitals must track and report workplace violence.</td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Creates a public-facing count where there wasn't one.</td></tr>
+<tr><td><strong>H.B. 87 (carried)</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Seized animals</span></td><td>Changes where animals taken in abuse cases are placed.</td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Narrow, practical change.</td></tr>
+    </table></div>
+    <p style="color:var(--color-ink-soft);font-size:.92rem;margin-top:10px;"><strong>The pattern:</strong> mostly B's and C's, with no D or F. Most of her laws are narrow health and safety changes. Only one touches the environment (funded disposal of seized e-cigarette products). Several add new duties for schools, hospitals or state agencies without setting money aside. Her bills on housing and water did not pass.</p>
+  </div>
+</section>
+
+<section id="limits">
+  <div class="wrap">
+    <div class="eyebrow">WHAT THIS DOESN'T SHOW</div>
+    <h2>Limits of the Record</h2>
+    <div class="record-card">
+      <ul style="margin:0;padding-left:18px;">
+        <li>Plumb's spending after June 8, 2026, and her cash on hand, are not in hand. Her June 13&ndash;Sept. 11 list covers contributions only.</li>
+        <li>Plumb's 2026 sponsored bills are covered above; her votes on other members' bills, and her bills from 2023&ndash;2025, were not reviewed.</li>
+        <li>The bill-by-bill grades are based on each enrolled bill's summary and appropriation line, not a full reading of every section, fiscal notes or vote counts.</li>
+        <li>"39 pieces of impactful legislation" is her own count and has not been checked.</li>
+        <li>Nothing here shows how Snow's $446.19 in spending was paid for.</li>
+        <li>Evans's reports after the Primary Report were not shown. Any later report will be added.</li>
+        <li>SenDemPAC figures come from its own reports as compiled in this site's research; the SenDemPAC payment dates were not matched line by line for this page.</li>
+        <li>Nothing here suggests any rule was broken.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <details class="sources">
+      <summary>View all sources (18)</summary>
+      <ol>
+        <li>Jennifer Plumb, 2026 Convention and Primary reports, DEX export DEX20260924_072853.csv (disclosures.utah.gov)</li>
+        <li>Jennifer Plumb, itemized contributions 6/13&ndash;9/11/26 (disclosures.utah.gov)</li>
+        <li>Jennifer Plumb, conflict-of-interest disclosure, Senate District 9 (disclosures.utah.gov), read from filed text</li>
+        <li>Jen Plumb campaign site: home, about, priorities and news pages (jenplumb.com)</li>
+        <li>Thaddeus Evans, 2026 Convention Report and 2026 Primary Report (disclosures.utah.gov), read from rendered report pages</li>
+        <li>Thaddeus Allen Evans, conflict-of-interest disclosure, State Senate 9 (disclosures.utah.gov), read from filed text</li>
+        <li>Utah Republican Party, 2026 Republican Candidates page (utgop.org)</li>
+        <li>J. Lowry Snow, 2026 Convention and Primary reports, DEX export DEX20260924_073828.csv (disclosures.utah.gov)</li>
+        <li>J. Lowry Snow, conflict-of-interest disclosure, State Senate (disclosures.utah.gov), read from filed text</li>
+        <li>J. Lowry Snow campaign site (jlowrysnow.com); Utah Policy, "J. Lowry Snow announces candidacy for Utah State Senate District 9," Jan. 15, 2026</li>
+        <li>SenDemPAC Statement of Organization and 2022&ndash;2026 reports (disclosures.utah.gov), as compiled in this site's research</li>
+        <li>Lt. Governor, 2026 General Election Certification (vote.utah.gov); KSL, "Here's who's running for the Utah Legislature in 2026"</li>
+        <li>Fresh Air PAC, PAC registration (disclosures.utah.gov)</li>
+        <li>David Spatafore, lobbyist registration, principal list and Statement of Organization (Capstone Strategies LLC), 2012&ndash;2026 (disclosures.utah.gov)</li>
+        <li>Enrolled bills, 2026 General Session: S.B. 50, 80, 81, 87, 96, 98, 111, 127, 128, 142, 170, 210 and H.B. 87, 380 (le.utah.gov/Session/2026/bills/enrolled)</li>
+        <li>Utah Legislature, bill list for Sen. Jen Plumb, 2026 General Session (le.utah.gov), and S.B. 87 bill page confirming the session</li>
+        <li>Daily Utah Chronicle, Zane Poss, "Ben McAdams wins CD1 Democratic Primary," June 25, 2026 (University of Utah within Senate District 9)</li>
+        <li>This outlet's own case files: Cases 04, 06, 07, 21 and 22, the HD-7, HD-16 and SD-21 files, and the SEL Inc research</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Compiled from Utah campaign-finance disclosures (disclosures.utah.gov), the candidates' own conflict-of-interest forms and campaign sites. Public records only · No comment requested.<br>
+    <a href="index.html">&larr; Back to the Candidates 2026 docket</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('flipped');b.setAttribute('aria-pressed',b.classList.contains('flipped'));}));
+if (window.mermaid) { mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'IBM Plex Mono, monospace', themeVariables: { fontSize: '16px' }, flowchart:{htmlLabels:true, curve:'basis', useMaxWidth:true} }); }
+if (window.Chart) {
+  Chart.defaults.font.family = "'Source Serif 4', Georgia, serif";
+  Chart.defaults.color = '#5c534c';
+  const money = v => '$' + Number(v).toLocaleString();
+  new Chart(document.getElementById('periodChart'), {
+    type: 'bar',
+    data: { labels: ['Convention (to 3/31)', 'Primary (4/2–6/8)', '6/13–9/11'],
+      datasets: [
+        { label: 'Raised', data: [5356, 11775, 2330], backgroundColor: '#c0572e', borderRadius: 2 },
+        { label: 'Spent', data: [1382.58, 2222.68, null], backgroundColor: '#5c534c', borderRadius: 2 } ] },
+    options: { maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + money(c.parsed.y) } } },
+      scales: { y: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, x: { grid: { display: false } } } }
+  });
+  new Chart(document.getElementById('spendChart'), {
+    type: 'bar',
+    data: { labels: ['Peter Hilyard', 'Interform Business', 'Costco', 'SL County Democratic Party', 'AT&T', 'NAACP SLC Branch', 'ActBlue', "Lt. Governor's Office", 'Saffron Valley', 'Wix.com', 'Brighton Bank', 'Fundhero'],
+      datasets: [{ data: [855, 696.31, 505.19, 403.56, 350.26, 300, 150.37, 117.73, 91.67, 85.37, 25, 24.80], backgroundColor: '#5c1a2b', borderRadius: 3 }] },
+    options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => money(c.parsed.x) } } },
+      scales: { x: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, y: { grid: { display: false } } } }
+  });
+  new Chart(document.getElementById('raceChart'), {
+    type: 'bar',
+    data: { labels: ['Plumb (D)', 'Evans (R)', 'Snow (Forward)'],
+      datasets: [
+        { label: 'Raised', data: [19461, 0, 0], backgroundColor: '#c0572e', borderRadius: 2 },
+        { label: 'Spent (reported)', data: [3605.26, 0, 446.19], backgroundColor: '#5c534c', borderRadius: 2 } ] },
+    options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + money(c.parsed.x) } } },
+      scales: { x: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, y: { grid: { display: false } } } }
+  });
+}
+</script>
+</body>
+</html>

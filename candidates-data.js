@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "sd9-plumb-evans-snow",
+    race: "Senate District 9 — Salt Lake City (incl. University of Utah)",
+    level: "State",
+    county: "Salt Lake",
+    caseNumber: "CASE 23",
+    names: "Plumb vs. Evans vs. Snow",
+    verdict: "One Campaign Reports Money",
+    tags: ["SenDemPAC", "Incumbent", "$0 Reports", "Forward Party", "Disclosure Forms"],
+    stamp: "Active",
+    href: "sd9-plumb-evans-snow.html",
+    datePosted: "2026-09-24",
+    dateUpdated: "2026-09-24"
+  },
+  {
     id: "hd17-bitner-last",
     race: "House District 17 — Davis County (Fruit Heights area)",
     level: "State",
