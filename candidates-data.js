@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "sd11-buss-benson",
+    race: "Senate District 11 — Eagle Mountain, Herriman, Magna, Kearns, Tooele",
+    level: "State",
+    county: "Salt Lake / Utah / Tooele",
+    caseNumber: "CASE 24",
+    names: "Buss vs. Benson",
+    verdict: "Nearly Even Totals, Different Sources",
+    tags: ["Forward Party", "Doers Network", "Appointed Incumbent", "Meta / Eagle Mountain", "Disclosure Forms"],
+    stamp: "Active",
+    href: "sd11-buss-benson.html",
+    datePosted: "2026-09-24",
+    dateUpdated: "2026-09-24"
+  },
+  {
     id: "sd9-plumb-evans-snow",
     race: "Senate District 9 — Salt Lake City (incl. University of Utah)",
     level: "State",

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD-11: Buss vs. Benson | The Weber County Hive</title>
+<meta name="description" content="Senate District 11, 2026. Sen. Emily Buss (Forward) and Brooks Benson (R) report nearly the same cash raised, from very different sources. Their money, disclosure forms, Buss's 2026 bills and where the race meets the Meta data center in Eagle Mountain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-paper:#f4f0e6;
+    --color-paper-deep:#ece5d4;
+    --color-ink:#241a16;
+    --color-ink-soft:#5c534c;
+    --color-link:#c0572e;
+    --color-stat:#d9a441;
+    --color-burgundy-light:#5c1a2b;
+    --color-burgundy-deep:#3d0f1c;
+    --color-line:#d8cfbc;
+    --color-card:#fbf8f1;
+    --color-good:#4d7c5f;
+    --color-flag:#a5372a;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.6;}
+  h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif;font-weight:700;margin:0 0 .4em;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:.72rem;letter-spacing:.06em;color:var(--color-ink-soft);}
+  a{color:var(--color-link);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header.band{background:linear-gradient(135deg, var(--color-burgundy-light), var(--color-burgundy-deep));color:#f4ece6;padding:22px 0;}
+  header.band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .brandmark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#f4ece6;text-decoration:none;}
+  nav.topnav a{color:#f4ece6cc;text-decoration:none;margin-left:22px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.03em;border-bottom:1px solid transparent;}
+  nav.topnav a:hover{border-bottom-color:#f4ece6cc;}
+
+  .hero{padding:56px 0 40px;border-bottom:1px solid var(--color-line);}
+  .hero .eyebrow{margin-bottom:14px;}
+  .hero h1{font-size:2.5rem;line-height:1.15;max-width:760px;}
+  .hero .dek{font-size:1.12rem;color:var(--color-ink-soft);max-width:660px;margin-top:14px;}
+  .hero-meta{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+  .hero-meta .stat-num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-stat);}
+  .hero-meta .stat-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);letter-spacing:.02em;max-width:170px;}
+
+  section{padding:44px 0;border-bottom:1px solid var(--color-line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:1.6rem;margin-bottom:6px;}
+  section .section-dek{color:var(--color-ink-soft);max-width:660px;margin-bottom:26px;font-size:1rem;}
+
+  .start-here{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-stat);padding:20px 24px;}
+  .start-here ol{margin:8px 0 0;padding-left:20px;}
+  .start-here li{margin-bottom:8px;}
+
+  .record-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:2px;padding:24px 26px;margin-bottom:18px;}
+  .record-card h3{font-size:1.15rem;margin-bottom:8px;}
+  .record-card p{margin:.6em 0;}
+  .record-card p:first-of-type{margin-top:0;}
+  .rc-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-link);border:1px solid var(--color-link);padding:3px 9px;border-radius:20px;margin:2px 6px 2px 0;text-decoration:none;}
+  a.rc-tag:hover{background:var(--color-link);color:#fff;}
+  .rc-flag{border-color:var(--color-flag);color:var(--color-flag);}
+  .rc-good{border-color:var(--color-good);color:var(--color-good);}
+
+  .quote-block{border-left:3px solid var(--color-stat);padding:4px 0 4px 18px;font-style:italic;color:var(--color-ink-soft);margin:14px 0;}
+
+  .fund-row{display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;margin-bottom:20px;}
+  .fund-donut{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fund-donut-center{width:96px;height:96px;background:var(--color-paper);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+  .fund-donut-center .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--color-ink);}
+  .fund-donut-center .lbl{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--color-ink-soft);}
+  .fund-donut-legend{list-style:none;padding:0;margin:8px 0 0;font-size:.92rem;}
+  .fund-donut-legend li{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0;}
+  .fund-bar-row{margin-bottom:10px;}
+  .fund-bar-row .bar-label{display:flex;justify-content:space-between;gap:12px;font-size:.86rem;margin-bottom:4px;}
+  .fund-bar-track{background:var(--color-paper-deep);border-radius:3px;height:8px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);}
+  .fund-bar-fill.alt{background:var(--color-stat);}
+
+  .table-scroll{overflow-x:auto;}
+  .entity-table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px;}
+  .entity-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:8px 10px;}
+  .entity-table td{padding:10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .entity-table td.num{font-family:'IBM Plex Mono',monospace;font-size:.85rem;white-space:nowrap;}
+  .status-pill{font-family:'IBM Plex Mono',monospace;font-size:.65rem;padding:3px 8px;border-radius:12px;white-space:nowrap;display:inline-block;}
+  .status-confirmed{background:#e2ede4;color:var(--color-good);}
+  .status-flag{background:#f3dedb;color:var(--color-flag);}
+  .status-unresolved{background:#f4ecd9;color:#8a6d1f;}
+
+  .timeline{border-left:2px solid var(--color-line);padding-left:22px;margin-left:6px;}
+  .timeline-item{position:relative;margin-bottom:22px;}
+  .timeline-item::before{content:"";position:absolute;left:-28px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--color-stat);}
+  .timeline-item.key::before{background:var(--color-flag);}
+  .timeline-item .t-date{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);}
+  .timeline-item h4{font-size:1rem;margin:.2em 0;}
+  .timeline-item p{margin:.2em 0;font-size:.95rem;color:var(--color-ink-soft);}
+
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--color-line);background:var(--color-card);}
+  .vs-grid > div{padding:16px 20px;border-bottom:1px solid var(--color-line);}
+  .vs-grid > div:nth-child(odd){border-right:1px solid var(--color-line);}
+  .vs-grid .vs-head{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  .vs-grid .said{font-style:italic;}
+
+  /* connections */
+  .hub{background:var(--color-burgundy-deep);color:#f4ece6;padding:22px 26px;border-radius:2px;margin-bottom:22px;}
+  .hub .eyebrow{color:#d9a441;}
+  .hub h3{color:#f4ece6;font-size:1.3rem;margin:6px 0 4px;}
+  .hub p{margin:0;color:#e8d9c8;font-size:.95rem;}
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .conn-card{background:var(--color-card);border:1px solid var(--color-line);border-top:4px solid var(--color-link);padding:18px 20px;}
+  .conn-card.doers{border-top-color:var(--color-burgundy-light);}
+  .conn-card.gold{border-top-color:var(--color-stat);}
+  .conn-card.unres{border-top-color:#b8952e;border-top-style:dashed;}
+  .conn-card .case{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .conn-card h4{font-size:1.05rem;margin:4px 0 8px;}
+  .conn-card p{margin:.4em 0;font-size:.94rem;}
+  .conn-card ul{margin:.4em 0;padding-left:18px;font-size:.93rem;}
+  .conn-card li{margin-bottom:4px;}
+
+  details.sources{margin-top:6px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.05em;color:var(--color-burgundy-light);font-weight:600;}
+  details.sources ol{font-size:.9rem;color:var(--color-ink-soft);padding-left:22px;}
+  details.sources li{margin-bottom:7px;}
+
+  @media (max-width:680px){
+    .hero h1{font-size:1.9rem;}
+    .fund-row{flex-direction:column;}
+    .conn-grid{grid-template-columns:1fr;}
+    .vs-grid{grid-template-columns:1fr;}
+    .vs-grid > div:nth-child(odd){border-right:none;}
+    .vs-grid .vs-head:nth-child(2){display:none;}
+  }
+  footer{padding:40px 0 60px;text-align:center;color:var(--color-ink-soft);font-size:.85rem;}
+  footer a{color:var(--color-link);}
+  .jumpnav{background:var(--color-paper-deep);border-bottom:1px solid var(--color-line);padding:12px 0;position:sticky;top:0;z-index:5;}
+  .jumpnav .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .jumpnav a{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.03em;color:var(--color-ink);text-decoration:none;border-bottom:1px solid transparent;}
+  .jumpnav a:hover{border-bottom-color:var(--color-link);color:var(--color-link);}
+  section[id]{scroll-margin-top:60px;}
+  .race-strip{display:grid;grid-template-columns:repeat(8,1fr);margin-top:26px;border-top:1px solid var(--color-line);border-left:1px solid var(--color-line);background:var(--color-card);}
+  .race-strip > div{padding:12px 12px 14px;border-right:1px solid var(--color-line);border-bottom:1px solid var(--color-line);min-width:0;}
+  .race-strip .d{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-link);font-weight:600;white-space:nowrap;}
+  .race-strip .e{font-size:.84rem;line-height:1.35;margin-top:6px;hyphens:none;overflow-wrap:normal;}
+  .race-strip .future .d{color:var(--color-ink-soft);}
+  @media (max-width:1000px){.race-strip{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:560px){.race-strip{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:680px){.jumpnav{position:static;} .rubric-table td:first-child{width:auto;}}
+  .chart-card{background:var(--color-card);border:1px solid var(--color-line);padding:18px 20px;margin:22px 0;}
+  .chart-card h3{font-size:1.05rem;margin-bottom:4px;}
+  .chart-card .cap{font-size:.86rem;color:var(--color-ink-soft);margin:0 0 12px;}
+  .chart-box{position:relative;height:260px;}
+  .mermaid-wrap{background:var(--color-card);border:1px solid var(--color-line);padding:18px;margin:22px 0;overflow-x:auto;}
+  .mermaid-wrap .cap{font-size:.86rem;color:var(--color-ink-soft);margin:10px 0 0;}
+  .mermaid{text-align:center;}
+  details.ledger{background:var(--color-card);border:1px solid var(--color-line);padding:12px 18px;margin:12px 0;}
+  details.ledger summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.04em;color:var(--color-burgundy-light);font-weight:600;}
+  details.ledger .table-scroll{max-height:460px;overflow:auto;margin-top:10px;}
+  .rubric-table{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--color-card);border:1px solid var(--color-line);}
+  .rubric-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:10px;background:var(--color-paper-deep);}
+  .rubric-table td{padding:12px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .rubric-table td:first-child{font-weight:600;width:170px;}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:#fff;border-radius:3px;padding:1px 6px;margin-right:6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--color-stat);} .g-d{background:#b5652f;} .g-f{background:var(--color-burgundy-light);} .g-na{background:#9a9186;font-size:.8rem;}
+  .topic-head{font-family:'Playfair Display',serif;font-size:1.15rem;margin:26px 0 8px;}
+  .compare-table td.num{text-align:right;}
+
+  .flip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0;}
+  @media (max-width:900px){.flip-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.flip-grid{grid-template-columns:1fr;}}
+  .flip{perspective:900px;background:none;border:0;padding:0;cursor:pointer;text-align:left;font:inherit;color:inherit;min-height:250px;}
+  .flip-inner{position:relative;width:100%;height:100%;min-height:250px;transition:transform .5s;transform-style:preserve-3d;}
+  .flip.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:18px 20px;display:flex;flex-direction:column;justify-content:center;}
+  .flip-front{text-align:center;}
+  .flip-front .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  .flip-front .label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);letter-spacing:.03em;margin-top:6px;}
+  .flip-front .hint{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--color-ink-soft);margin-top:10px;opacity:.75;}
+  .flip-back{transform:rotateY(180deg);background:var(--color-burgundy-deep);color:#f4ece6;border-color:var(--color-burgundy-deep);font-size:.9rem;line-height:1.5;overflow:auto;}
+  .flip-back strong{color:var(--color-stat);}
+  .plain{background:#fff8e6;border-left:4px solid var(--color-stat);padding:12px 16px;margin:0 0 16px;font-size:.98rem;}
+  .plain b{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.06em;color:#8a6d1f;margin-right:8px;}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--color-line);background:var(--color-card);margin:18px 0;}
+  .three > div{padding:16px 18px;border-right:1px solid var(--color-line);}
+  .three > div:last-child{border-right:none;}
+  .three .who{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .three .amt{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  @media (max-width:760px){.three{grid-template-columns:1fr;} .three > div{border-right:none;border-bottom:1px solid var(--color-line);}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+
+<body>
+
+<header class="band">
+  <div class="wrap">
+    <a class="brandmark" href="index.html">Weber County Hive — Candidates 2026</a>
+    <nav class="topnav">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">CASE 24 · SENATE DISTRICT 11 (EAGLE MOUNTAIN, HERRIMAN, MAGNA, KEARNS, TOOELE) — GENERAL ELECTION NOV. 3, 2026</div>
+    <h1>Nearly Even Totals, Different Sources</h1>
+    <p class="dek">Sen. Emily Buss of Eagle Mountain, the only Forward Party member of the Legislature, was appointed to this seat in December 2025. She faces Republican Brooks Benson. Each campaign reports about $35,800 to $35,900 in cash raised. Most of Buss&rsquo;s came from her own party. Most of Benson&rsquo;s came from PACs, businesses and the campaign committees of sitting Republican senators. The district includes Eagle Mountain, home of Meta&rsquo;s data center campus.</p>
+    <div class="hero-meta">
+      <div><div class="stat-num">$35,803</div><div class="stat-label">BUSS, CASH RAISED THROUGH 9/21/26</div></div>
+      <div><div class="stat-num">$25,999</div><div class="stat-label">OF IT FROM THE FORWARD PARTY OF UTAH</div></div>
+      <div><div class="stat-num">$35,900</div><div class="stat-label">BENSON, RAISED THROUGH 8/7/26</div></div>
+      <div><div class="stat-num">$18,991</div><div class="stat-label">BENSON, SPENT THROUGH THE PRIMARY REPORT</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="jumpnav" aria-label="Sections"><div class="wrap">
+  <a href="#start">Start here</a><a href="#words">Words</a><a href="#buss-money">Buss&rsquo;s money</a><a href="#benson-money">Benson&rsquo;s money</a><a href="#record">Buss&rsquo;s 2026 bills</a><a href="#stands">Where they stand</a><a href="#disclosure">Disclosure forms</a><a href="#connections">Connections</a><a href="#meta">Eagle Mountain &amp; Meta</a><a href="#rubric">Rubric</a><a href="#ask">Questions</a><a href="#limits">Limits</a>
+</div></nav>
+
+<section id="start">
+  <div class="wrap">
+    <div class="eyebrow">START HERE</div>
+    <h2>Five Things the Records Show</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Two people are on the ballot for this state Senate seat. They have raised almost the same amount of cash. Who gave it is very different.</p>
+    <div class="start-here">
+      <ol>
+        <li><strong>Buss reports $35,803.36 in cash and $12,894.06 in in-kind help.</strong> The Forward Party of Utah gave $25,999 in cash (72.6% of her cash) and $7,628.06 in in-kind help, including $6,446.51 listed only as &ldquo;Data.&rdquo; Her campaign spent $567.51 through the Primary Report.</li>
+        <li><strong>Benson reports $35,900 raised and $18,990.92 spent through the Primary Report.</strong> About 90% of his money came in 15 checks from PACs, businesses and campaign committees, including $5,000 from Senate Majority Leader Kirk Cullimore&rsquo;s campaign and $3,000 from the Doers Network. Individuals gave $3,550.</li>
+        <li><strong>Benson files as &ldquo;David Benson.&rdquo;</strong> His disclosure form is signed &ldquo;David Brooks Benson,&rdquo; and his report lists a $4,451.50 travel payment to &ldquo;Brooks Benson.&rdquo; The Doers Network&rsquo;s $3,000 to &ldquo;David Benson,&rdquo; which this site&rsquo;s Doers file listed without a race, is this campaign.</li>
+        <li><strong>None of the six bills Buss sponsored in 2026 passed.</strong> Four bills she floor-sponsored or co-sponsored were signed, including a firefighter cancer fund and higher nicotine taxes. She took office Dec. 17, 2025, weeks before the session.</li>
+        <li><strong>Both candidates say growth should pay its own way.</strong> Buss has called for impact fees &ldquo;that reflect the real cost development places on our strained infrastructure.&rdquo; Benson&rsquo;s site says impact fees &ldquo;cover a fraction&rdquo; of the cost and that AI data centers are projected to need far more power. In the sources read, only Benson addresses data centers directly.</li>
+      </ol>
+    </div>
+    <div class="race-strip" aria-label="Race timeline">
+      <div><div class="d">OCT 21, 2025</div><div class="e">Sen. Daniel Thatcher resigns</div></div>
+      <div><div class="d">DEC 12</div><div class="e">Forward Party vote picks Buss</div></div>
+      <div><div class="d">DEC 17</div><div class="e">Buss takes office, appointed by Gov. Cox</div></div>
+      <div><div class="d">JAN&ndash;MAR 2026</div><div class="e">Session: 6 Buss bills, none pass</div></div>
+      <div><div class="d">SPRING</div><div class="e">Benson wins GOP convention, 73.1%</div></div>
+      <div><div class="d">SEPT 1</div><div class="e">Democrat MacKenzie Miller withdraws</div></div>
+      <div><div class="d">SEPT 18</div><div class="e">Forward Party gives Buss $15,000</div></div>
+      <div class="future"><div class="d">OCT 20–30</div><div class="e">Early voting</div></div>
+      <div class="future"><div class="d">NOV 3</div><div class="e">General election</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="words">
+  <div class="wrap">
+    <div class="eyebrow">QUICK RECAP</div>
+    <h2>Words Used on This Page</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Tap any card to see what the word means.</p>
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Appointed</div><div class="label">FILLING A SEAT MID-TERM</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>When a legislator leaves early, the departing member&rsquo;s party picks a replacement and the governor appoints them. Sen. Thatcher had left the Republican Party and joined the Forward Party, so the <strong>Forward Party</strong> made the pick.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">In-kind</div><div class="label">HELP INSTEAD OF CASH</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Goods or services given to a campaign, like signs, software or data, reported at a value. Buss reports <strong>{money(b_ink)}</strong> of it. Benson reports none.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">PAC</div><div class="label">POLITICAL ACTION COMMITTEE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A group that collects money and gives it to candidates. Candidates&rsquo; own campaign committees can also give to other candidates, and several senators&rsquo; committees gave to Benson.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">DEX export</div><div class="label">THE STATE&rsquo;S MONEY FILE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A download from disclosures.utah.gov listing every contribution and expense a campaign reported, by report period.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Floor sponsor</div><div class="label">CARRYING A BILL IN THE OTHER CHAMBER</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>The lawmaker who carries a bill through the second chamber. A <strong>co-sponsor</strong> signs on to support a bill someone else runs.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">COI form</div><div class="label">CONFLICT-OF-INTEREST DISCLOSURE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A state form listing a candidate&rsquo;s jobs, businesses, big income sources, stocks and board seats, so voters can spot possible conflicts.</div></div></div></button>
+
+    </div>
+  </div>
+</section>
+
+<section id="buss-money">
+  <div class="wrap">
+    <div class="eyebrow">BUSS&rsquo;S MONEY</div>
+    <h2>Mostly From Her Own Party</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>The Forward Party of Utah paid for most of Buss&rsquo;s campaign, in cash and in services. Many small gifts came from other states.</p>
+    <p class="section-dek">Her DEX export (Convention and Primary reports) plus her itemized contributions for 6/21&ndash;9/21/26. In-kind values are as she reported them. Spending after the Primary Report is not in hand.</p>
+
+    <div class="fund-row">
+      <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 72.6%, var(--color-stat) 72.6% 100%);">
+        <div class="fund-donut-center"><div class="num">$35,803</div><div class="lbl">CASH RAISED</div></div>
+      </div>
+      <ul class="fund-donut-legend">
+        <li><span class="swatch" style="background:var(--color-link)"></span> Forward Party of Utah &mdash; $25,999 in 3 checks (72.6%)</li>
+        <li><span class="swatch" style="background:var(--color-stat)"></span> Everyone else &mdash; $9,804.36 (27.4%)</li>
+      </ul>
+    </div>
+
+    <div class="fund-bar-row"><div class="bar-label"><span>Forward Party of Utah, cash (1/13, 6/9, 9/18)</span><span>$25,999</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:100%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Forward Party of Utah, in-kind (&ldquo;Data,&rdquo; website, signs, door hangers)</span><span>$7,628</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:29.3%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Daryl Acumen (Draper), in-kind &ldquo;Software and data&rdquo;</span><span>$4,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:15.4%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>&ldquo;Governor Christine Todd Whitman&rdquo; (Oldwick, N.J.)</span><span>$1,500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:5.8%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Wayne Woodfield (Lehi), in-kind canvassing software</span><span>$1,200</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:4.6%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Tavan Pechet (Kirkland, Wash.)</span><span>$1,030</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:4%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Andrew Yang (New York) &middot; Local 222 (West Valley City)</span><span>$750 each</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:2.9%"></div></div></div>
+
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">69%</div><div class="label">OF ALL HER SUPPORT, CASH PLUS IN-KIND</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Counting in-kind help, the Forward Party provided <strong>$33,627.06</strong> of <strong>{money(b_cash+b_ink)}</strong>. Its chair, Adam Teuscher, and treasurer, Phil Boileau, also gave small personal amounts ($20.60 and $103).</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$5,404</div><div class="label">FROM OUTSIDE UTAH</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div><strong>19 entries</strong> from 11 other states, 15.1% of her cash. The largest are filed under the names Christine Todd Whitman ($1,500), Tavan Pechet ($1,030) and Andrew Yang ($750). Whitman and Yang share names with national Forward Party leaders; the filings don&rsquo;t say more.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$10,446</div><div class="label">IN-KIND DESCRIBED IN ONE OR TWO WORDS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>&ldquo;Data&rdquo; ($6,446.51 from the party) and &ldquo;Software and data&rdquo; ($4,000 from Daryl Acumen). The filings give a value but not what the data was or how it was priced.</div></div></div></button>
+
+    </div>
+
+    <div class="chart-card">
+      <h3>Buss vs. Benson, money in by period</h3>
+      <p class="cap">Cash only. Buss&rsquo;s in-kind help ($12,894.06) is not in these bars. Her last period runs to 9/21; his runs to 8/7.</p>
+      <div class="chart-box"><canvas id="periodChart" aria-label="Bar chart of Buss and Benson cash raised by reporting period"></canvas></div>
+    </div>
+
+    <details class="ledger">
+      <summary>Every Buss contribution, 1/13&ndash;9/21/26 (71 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Contributor (as filed)</th><th>City</th><th>Report</th><th>Note</th><th>Amount</th></tr>
+<tr><td>1/13/2026</td><td>Forward Party of Utah</td><td>Draper, UT</td><td>Convention</td><td></td><td class="num">$999.00</td></tr>
+<tr><td>4/11/2026</td><td>Forward Party of Utah</td><td>Draper, UT</td><td>Primary</td><td>In-kind: campaign website support</td><td class="num">$280.00</td></tr>
+<tr><td>4/11/2026</td><td>Emily Buss</td><td>Eagle Mountain, UT</td><td>Primary</td><td></td><td class="num">$1.03</td></tr>
+<tr><td>4/15/2026</td><td>Alice Smith</td><td>Interlochen, MI</td><td>Primary</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>4/18/2026</td><td>Forward Party of Utah</td><td>Draper, UT</td><td>Primary</td><td>In-kind: Data</td><td class="num">$6,446.51</td></tr>
+<tr><td>4/22/2026</td><td>Laura Johnson</td><td>Ogden, UT</td><td>Primary</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>5/4/2026</td><td>Colin Smith</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>5/18/2026</td><td>Wayne Woodfield</td><td>Lehi, UT</td><td>Primary</td><td>In-kind: Proprietary canvasing software platform and hosting.</td><td class="num">$1,200.00</td></tr>
+<tr><td>5/19/2026</td><td>June Call</td><td>Elk Ridge, UT</td><td>Primary</td><td></td><td class="num">$103.00</td></tr>
+<tr><td>5/19/2026</td><td>Melissa Barnum</td><td>Saratoga Springs, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>5/19/2026</td><td>Phil Boileau</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$103.00</td></tr>
+<tr><td>5/21/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>Primary</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>5/23/2026</td><td>Tamara Sasser</td><td>Eagle Mountain, UT</td><td>Primary</td><td></td><td class="num">$25.75</td></tr>
+<tr><td>5/27/2026</td><td>Emily Buss</td><td>Eagle Mountain, UT</td><td>Primary</td><td>In-kind: candy for parade</td><td class="num">$66.00</td></tr>
+<tr><td>6/9/2026</td><td>Forward Party of Utah</td><td>Draper, UT</td><td>Primary</td><td></td><td class="num">$10,000.00</td></tr>
+<tr><td>6/21/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>7/5/2026</td><td>Mark Rubin</td><td>Hideout, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>7/14/2026</td><td>David Hinckley</td><td>Orem, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>7/21/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>7/23/2026</td><td>Kevin Volk</td><td>Tucson, AZ</td><td>6/21&ndash;9/21</td><td></td><td class="num">$103.00</td></tr>
+<tr><td>7/24/2026</td><td>Jason Palmer</td><td>Baltimore, MD</td><td>6/21&ndash;9/21</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>8/4/2026</td><td>Ari Levenbaum</td><td>Scottsdale, AZ</td><td>6/21&ndash;9/21</td><td></td><td class="num">$257.50</td></tr>
+<tr><td>8/10/2026</td><td>Alex Washburn</td><td>Eagle Mountain, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$25.75</td></tr>
+<tr><td>8/10/2026</td><td>Julie Varner</td><td>Brighton, CO</td><td>6/21&ndash;9/21</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>8/10/2026</td><td>Natalie Weidner &amp; Cedric de Chermont</td><td>Eagle Mountain, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>8/11/2026</td><td>Andrew Yang</td><td>New York, NY</td><td>6/21&ndash;9/21</td><td></td><td class="num">$750.00</td></tr>
+<tr><td>8/11/2026</td><td>Angela Van Wagoner</td><td>South Jordan, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$25.75</td></tr>
+<tr><td>8/11/2026</td><td>Calvin Neal</td><td>Saratoga Springs, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$25.75</td></tr>
+<tr><td>8/11/2026</td><td>Jennifer Stout</td><td>Saratoga Springs, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>8/11/2026</td><td>Daniel Laub</td><td>Eagle Mountain, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>8/11/2026</td><td>Carly Correa</td><td>Tucson, AZ</td><td>6/21&ndash;9/21</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>8/11/2026</td><td>Kathi Wotal</td><td>Palatine, IL</td><td>6/21&ndash;9/21</td><td></td><td class="num">$103.00</td></tr>
+<tr><td>8/11/2026</td><td>Forward Party of Utah</td><td>Draper, UT</td><td>6/21&ndash;9/21</td><td>In-kind: signs</td><td class="num">$750.00</td></tr>
+<tr><td>8/11/2026</td><td>Julie Santa Cruz</td><td>Midvale, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>8/11/2026</td><td>Philip Titus</td><td>North Salt Lake, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$103.00</td></tr>
+<tr><td>8/12/2026</td><td>Jennifer Koftinow</td><td>South Jordan, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$206.00</td></tr>
+<tr><td>8/12/2026</td><td>Paul Pickett</td><td>Murray, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$45.00</td></tr>
+<tr><td>8/15/2026</td><td>Skyler Rude</td><td>Walla Walla, WA</td><td>6/21&ndash;9/21</td><td></td><td class="num">$257.50</td></tr>
+<tr><td>8/19/2026</td><td>Forward Party of Utah</td><td>Draper, UT</td><td>6/21&ndash;9/21</td><td>In-kind: door hangers</td><td class="num">$151.55</td></tr>
+<tr><td>8/21/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>8/22/2026</td><td>Richard Davis</td><td>DeLand, FL</td><td>6/21&ndash;9/21</td><td></td><td class="num">$103.00</td></tr>
+<tr><td>8/24/2026</td><td>Daryl Acumen</td><td>Draper, UT</td><td>6/21&ndash;9/21</td><td>In-kind: software and data</td><td class="num">$4,000.00</td></tr>
+<tr><td>9/1/2026</td><td>Ashley Erskine</td><td>Eagle Mountain, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>9/1/2026</td><td>Local 222</td><td>West Valley City, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$750.00</td></tr>
+<tr><td>9/1/2026</td><td>Lyle Bates</td><td>Freedom, WY</td><td>6/21&ndash;9/21</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>9/1/2026</td><td>Patrick de Freitas</td><td>Salt Lake City, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$515.00</td></tr>
+<tr><td>9/3/2026</td><td>Tricia Bunderson</td><td>Lehi, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>9/3/2026</td><td>Kimberly Wagner</td><td>Fruit Heights, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$103.00</td></tr>
+<tr><td>9/4/2026</td><td>Tavan Pechet</td><td>Kirkland, WA</td><td>6/21&ndash;9/21</td><td></td><td class="num">$1,030.00</td></tr>
+<tr><td>9/5/2026</td><td>David Westerby</td><td>Saint George, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/8/2026</td><td>Kelli Stephenson</td><td>South Jordan, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$103.00</td></tr>
+<tr><td>9/8/2026</td><td>Josh Smith</td><td>Layton, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/9/2026</td><td>Alice Smith</td><td>Interlochen, MI</td><td>6/21&ndash;9/21</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>9/9/2026</td><td>David Susko</td><td>San Diego, CA</td><td>6/21&ndash;9/21</td><td></td><td class="num">$51.50</td></tr>
+<tr><td>9/9/2026</td><td>SUSAN HORNE</td><td>Salt Lake City, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$257.50</td></tr>
+<tr><td>9/9/2026</td><td>Scott Petersen</td><td>Tooele, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$10.30</td></tr>
+<tr><td>9/10/2026</td><td>Carl Luster</td><td>San Diego, CA</td><td>6/21&ndash;9/21</td><td></td><td class="num">$257.50</td></tr>
+<tr><td>9/10/2026</td><td>Laura Del Savio</td><td>Redding, CT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$10.30</td></tr>
+<tr><td>9/11/2026</td><td>Deborah Sigman</td><td>Salt Lake City, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$103.00</td></tr>
+<tr><td>9/11/2026</td><td>John Boyd</td><td>Lehi, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$103.00</td></tr>
+<tr><td>9/12/2026</td><td>Matthew Coombs</td><td>West Jordan, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$11.33</td></tr>
+<tr><td>9/12/2026</td><td>Russ &amp; Kelly Sheldon</td><td>Forest Grove, OR</td><td>6/21&ndash;9/21</td><td></td><td class="num">$66.00</td></tr>
+<tr><td>9/12/2026</td><td>Teri McCabe</td><td>Provo, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>9/12/2026</td><td>Ashley Gibson</td><td>Eagle Mountain, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$11.00</td></tr>
+<tr><td>9/14/2026</td><td>Carol Mayefsky</td><td>Mountain View, CA</td><td>6/21&ndash;9/21</td><td></td><td class="num">$10.30</td></tr>
+<tr><td>9/16/2026</td><td>Adam Teuscher</td><td>Vineyard, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$20.60</td></tr>
+<tr><td>9/17/2026</td><td>Governor Christine Todd Whitman</td><td>Oldwick, NJ</td><td>6/21&ndash;9/21</td><td></td><td class="num">$1,500.00</td></tr>
+<tr><td>9/17/2026</td><td>Nikki Jepson</td><td>Eagle Mountain, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>9/18/2026</td><td>Forward Party of Utah</td><td>Draper, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$15,000.00</td></tr>
+<tr><td>9/19/2026</td><td>Julie Jackson</td><td>Holladay, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$515.00</td></tr>
+<tr><td>9/21/2026</td><td>Chris Scott</td><td>Magna, UT</td><td>6/21&ndash;9/21</td><td></td><td class="num">$51.50</td></tr>
+        <tr><td></td><td><strong>Cash total</strong></td><td></td><td></td><td></td><td class="num"><strong>$35,803.36</strong></td></tr>
+        <tr><td></td><td><strong>In-kind total</strong></td><td></td><td></td><td></td><td class="num"><strong>$12,894.06</strong></td></tr>
+      </table>
+      </div>
+    </details>
+    <details class="ledger">
+      <summary>Every Buss expenditure through the Primary Report (13 entries, $567.51)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Report</th><th>Amount</th></tr>
+<tr><td>1/5/2026</td><td>Utah County Clerk</td><td>Campaign Expense</td><td>Convention</td><td class="num">$121.68</td></tr>
+<tr><td>1/6/2026</td><td>GoDaddy</td><td>Advertising</td><td>Convention</td><td class="num">$18.18</td></tr>
+<tr><td>1/7/2026</td><td>Utah Division of Corporation and Commercial Code</td><td>Campaign Expense</td><td>Convention</td><td class="num">$22.00</td></tr>
+<tr><td>2/17/2026</td><td>SquareSpace</td><td>Advertising</td><td>Convention</td><td class="num">$237.03</td></tr>
+<tr><td>3/12/2026</td><td>Maverick</td><td>Travel Expenses</td><td>Convention</td><td class="num">$40.38</td></tr>
+<tr><td>3/27/2026</td><td>SquareSpace</td><td>Advertising</td><td>Convention</td><td class="num">$18.05</td></tr>
+<tr><td>4/27/2026</td><td>Google Workspace</td><td>Campaign Expense</td><td>Primary</td><td class="num">$18.05</td></tr>
+<tr><td>4/28/2026</td><td>Good Party LLC</td><td>Campaign Expense</td><td>Primary</td><td class="num">$10.00</td></tr>
+<tr><td>5/4/2026</td><td>Good Party LLC</td><td>Advertising</td><td>Primary</td><td class="num">$8.99</td></tr>
+<tr><td>5/13/2026</td><td>Meta</td><td>Advertising</td><td>Primary</td><td class="num">$12.88</td></tr>
+<tr><td>5/27/2026</td><td>SquareSpace</td><td>Advertising</td><td>Primary</td><td class="num">$18.05</td></tr>
+<tr><td>5/28/2026</td><td>Adobe</td><td>Campaign Expense</td><td>Primary</td><td class="num">$32.22</td></tr>
+<tr><td>5/28/2026</td><td>Good Party LLC</td><td>Advertising</td><td>Primary</td><td class="num">$10.00</td></tr>
+        <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>$567.51</strong></td></tr>
+      </table>
+      </div>
+    </details>
+    <p style="color:var(--color-ink-soft);font-size:.92rem;">Her spending through the Primary Report went mostly to websites, software and filing fees. One entry is $12.88 to Meta, listed as advertising. Her export also shows a $1.03 contribution from herself marked &ldquo;test&rdquo; and $66 in-kind for parade candy. Three contribution rows are marked &ldquo;[DELETED]&rdquo; with no details.</p>
+  </div>
+</section>
+
+<section id="benson-money">
+  <div class="wrap">
+    <div class="eyebrow">BENSON&rsquo;S MONEY</div>
+    <h2>Mostly From PACs, Businesses and Fellow Senators</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Most of Benson&rsquo;s money came in large checks from groups, including the campaigns of six Republican senators. He has spent more than half of it, mostly on one consulting firm.</p>
+    <p class="section-dek">His DEX export (filed as &ldquo;Benson David,&rdquo; Convention and Primary reports) plus itemized contributions for 6/24&ndash;8/7/26. He reports no in-kind help or loans. Spending after the Primary Report is not in hand.</p>
+
+    <div class="fund-row">
+      <div class="fund-donut" style="background:conic-gradient(var(--color-link) 0% 29.9%, var(--color-burgundy-light) 29.9% 90.1%, var(--color-stat) 90.1% 100%);">
+        <div class="fund-donut-center"><div class="num">$35,900</div><div class="lbl">RAISED</div></div>
+      </div>
+      <ul class="fund-donut-legend">
+        <li><span class="swatch" style="background:var(--color-link)"></span> Six committees named for sitting GOP senators &mdash; $10,750 (29.9%)</li>
+        <li><span class="swatch" style="background:var(--color-burgundy-light)"></span> PACs, associations and businesses (9 checks) &mdash; $21,600 (60.2%)</li>
+        <li><span class="swatch" style="background:var(--color-stat)"></span> Individuals (8 entries) &mdash; $3,550 (9.9%)</li>
+      </ul>
+    </div>
+
+    <div class="fund-bar-row"><div class="bar-label"><span>Utah Chamber PAC</span><span>$7,500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:100%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Cullimore For Senate (Draper)</span><span>$5,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:66.7%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>DAI Managers LLC (Draper)</span><span>$5,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:66.7%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Doers Network (Wilmington, Del. address)</span><span>$3,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:40%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Friends of Chris Wilson Inc (Logan) &middot; Brett Wright (Eagle Mountain)</span><span>$2,000 each</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:26.7%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Utah Association of Realtors</span><span>$1,500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:20%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>$1,000 each: Utah Rural Electric PAC, Utah Bankers, UCU PAC, McKell, Fillmore, Sandall</span><span>$6,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:13.3%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Lincoln Hill Partners &middot; HF Sinclair PAC (&ldquo;Dino PAC,&rdquo; Dallas)</span><span>$800 each</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:10.7%"></div></div></div>
+
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$10,750</div><div class="label">FROM SIX SENATORS&rsquo; CAMPAIGNS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Committees named for Kirk Cullimore ($5,000), Chris Wilson ($2,000), Mike McKell, Lincoln Fillmore and Scott Sandall ($1,000 each), and Evan Vickers ($750, filed as &ldquo;Evan Vicker&rdquo;). All are Republican senators Benson would serve with.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">59%</div><div class="label">OF HIS SPENDING TO ONE FIRM</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Wilkerson Public Affairs was paid <strong>$11,196.74</strong> in three payments, all listed as advertising.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$4,451.50</div><div class="label">PAID TO THE CANDIDATE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A 6/10/26 payment to &ldquo;Brooks Benson,&rdquo; purpose &ldquo;Travel Expenses.&rdquo; The report doesn&rsquo;t list the trips. It is 23% of what he spent.</div></div></div></button>
+
+    </div>
+
+    <div class="chart-card">
+      <h3>Where Benson&rsquo;s money went</h3>
+      <p class="cap">Every expenditure on his Convention and Primary reports, by payee, names as filed.</p>
+      <div class="chart-box" style="height:330px;"><canvas id="spendChart" aria-label="Bar chart of Benson spending by payee"></canvas></div>
+    </div>
+
+    <details class="ledger">
+      <summary>Every Benson contribution, 1/5&ndash;8/7/26 (23 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Contributor (as filed)</th><th>City</th><th>Report</th><th>Amount</th></tr>
+<tr><td>1/5/2026</td><td>Stephen Maquinalaz</td><td>Saratoga Springs, UT</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>2/12/2026</td><td>Emily Lockhart</td><td>Lehi, UT</td><td>Convention</td><td class="num">$250.00</td></tr>
+<tr><td>2/12/2026</td><td>Melissa Clark</td><td>Eagle Mountain, UT</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>2/12/2026</td><td>Corbin Whie</td><td>South Jordan, UT</td><td>Convention</td><td class="num">$100.00</td></tr>
+<tr><td>3/24/2026</td><td>Maryann Christiansen</td><td>Herriman, UT</td><td>Convention</td><td class="num">$250.00</td></tr>
+<tr><td>3/24/2026</td><td>corey astill</td><td>Lehi, UT</td><td>Convention</td><td class="num">$250.00</td></tr>
+<tr><td>4/13/2026</td><td>Trent Staggs</td><td>Riverton, UT</td><td>Convention</td><td class="num">$500.00</td></tr>
+<tr><td>4/29/2026</td><td>Lincoln Hill Partners</td><td>Salt Lake, UT</td><td>Primary</td><td class="num">$800.00</td></tr>
+<tr><td>4/29/2026</td><td>Utah Rural Electric PAC</td><td>South Jordan, UT</td><td>Primary</td><td class="num">$1,000.00</td></tr>
+<tr><td>5/1/2026</td><td>Friends of Chris Wilson INC</td><td>Logan, UT</td><td>Primary</td><td class="num">$2,000.00</td></tr>
+<tr><td>5/7/2026</td><td>Evan Vicker Campaign Fund</td><td>Cedar City, UT</td><td>Primary</td><td class="num">$750.00</td></tr>
+<tr><td>5/9/2026</td><td>Brett Wright</td><td>Eagle Mountain, UT</td><td>Primary</td><td class="num">$2,000.00</td></tr>
+<tr><td>5/26/2026</td><td>Utah Banker's Association</td><td>Salt Lake City, UT</td><td>Primary</td><td class="num">$1,000.00</td></tr>
+<tr><td>5/26/2026</td><td>Committee to elect Mike Mckell</td><td>Spanish Fork, UT</td><td>Primary</td><td class="num">$1,000.00</td></tr>
+<tr><td>5/26/2026</td><td>UCU Political action Committee</td><td>Salt Lake City, UT</td><td>Primary</td><td class="num">$1,000.00</td></tr>
+<tr><td>6/3/2026</td><td>Utah Association of Realtors</td><td>Sandy, UT</td><td>Primary</td><td class="num">$1,500.00</td></tr>
+<tr><td>6/3/2026</td><td>Doers Network</td><td>Wilmington, DE</td><td>Primary</td><td class="num">$3,000.00</td></tr>
+<tr><td>6/24/2026</td><td>Committee to elect Lincoln Fillmore</td><td>South Jordan, UT</td><td>6/24&ndash;8/7</td><td class="num">$1,000.00</td></tr>
+<tr><td>7/7/2026</td><td>Cullimore For Senate</td><td>Draper, UT</td><td>6/24&ndash;8/7</td><td class="num">$5,000.00</td></tr>
+<tr><td>7/15/2026</td><td>Scott Sandall campaign fund</td><td>Tremonton, UT</td><td>6/24&ndash;8/7</td><td class="num">$1,000.00</td></tr>
+<tr><td>8/3/2026</td><td>Utah Chamber PAC</td><td>Salt Lake City, UT</td><td>6/24&ndash;8/7</td><td class="num">$7,500.00</td></tr>
+<tr><td>8/4/2026</td><td>DAI Managers LLC</td><td>Draper, UT</td><td>6/24&ndash;8/7</td><td class="num">$5,000.00</td></tr>
+<tr><td>8/7/2026</td><td>HF Sinclair Political Action Committee (Dino PAC)</td><td>Dallas, TX</td><td>6/24&ndash;8/7</td><td class="num">$800.00</td></tr>
+        <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>$35,900.00</strong></td></tr>
+      </table>
+      </div>
+    </details>
+    <details class="ledger">
+      <summary>Every Benson expenditure through the Primary Report (16 entries)</summary>
+      <div class="table-scroll">
+      <table class="entity-table">
+        <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Report</th><th>Amount</th></tr>
+<tr><td>1/2/2026</td><td>Utah County Elections Office</td><td>Campaign Expense</td><td>Convention</td><td class="num">$117.73</td></tr>
+<tr><td>2/18/2026</td><td>Wilkerson Public Affairs</td><td>Advertising</td><td>Convention</td><td class="num">$3,881.55</td></tr>
+<tr><td>2/24/2026</td><td>signs on the cheap</td><td>Advertising</td><td>Convention</td><td class="num">$1,136.20</td></tr>
+<tr><td>2/27/2026</td><td>alphagraphics</td><td>Advertising</td><td>Convention</td><td class="num">$208.95</td></tr>
+<tr><td>3/13/2026</td><td>UTcoGOP</td><td>Campaign Expense</td><td>Convention</td><td class="num">$375.00</td></tr>
+<tr><td>3/24/2026</td><td>alphagraphics</td><td>Advertising</td><td>Convention</td><td class="num">$135.44</td></tr>
+<tr><td>4/3/2026</td><td>UT GOP</td><td>Campaign Expense</td><td>Convention</td><td class="num">$300.00</td></tr>
+<tr><td>4/10/2026</td><td>Papa Johns</td><td>Campaign Expense</td><td>Convention</td><td class="num">$47.48</td></tr>
+<tr><td>4/13/2026</td><td>Temu</td><td>Campaign Expense</td><td>Convention</td><td class="num">$125.92</td></tr>
+<tr><td>4/16/2026</td><td>walmart</td><td>Campaign Expense</td><td>Primary</td><td class="num">$222.42</td></tr>
+<tr><td>4/16/2026</td><td>UCCU</td><td>Campaign Expense</td><td>Primary</td><td class="num">$400.00</td></tr>
+<tr><td>4/16/2026</td><td>Utah GOP</td><td>Campaign Expense</td><td>Primary</td><td class="num">$200.00</td></tr>
+<tr><td>4/17/2026</td><td>alphagraphics</td><td>Advertising</td><td>Primary</td><td class="num">$73.54</td></tr>
+<tr><td>5/22/2026</td><td>Wilkerson Public Affairs</td><td>Advertising</td><td>Primary</td><td class="num">$6,270.55</td></tr>
+<tr><td>6/10/2026</td><td>Wilkerson Public Affairs</td><td>Advertising</td><td>Primary</td><td class="num">$1,044.64</td></tr>
+<tr><td>6/10/2026</td><td>Brooks Benson</td><td>Travel Expenses</td><td>Primary</td><td class="num">$4,451.50</td></tr>
+        <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>$18,990.92</strong></td></tr>
+      </table>
+      </div>
+    </details>
+    <p style="color:var(--color-ink-soft);font-size:.92rem;">21 of the 33 rows in his export are marked as amended; the export doesn&rsquo;t show what changed. Eight contribution rows are marked &ldquo;[DELETED]&rdquo; with no details.</p>
+  </div>
+</section>
+
+<section id="record">
+  <div class="wrap">
+    <div class="eyebrow">BUSS&rsquo;S 2026 BILLS</div>
+    <h2>Six Sponsored, None Passed; Four She Backed Became Law</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Buss had one session in office. None of her own bills passed. She also helped carry or co-sponsored other members&rsquo; bills, and four of those became law.</p>
+    <p class="section-dek">From the Legislature&rsquo;s bill list for Emily Buss, 2026 General Session, and each bill&rsquo;s introduced or enrolled text on le.utah.gov. &ldquo;Filed&rdquo; means the bill did not pass before the session ended. Her votes on other bills were not reviewed. Benson has not held office, so he has no bill record.</p>
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">0 of 6</div><div class="label">HER OWN BILLS THAT PASSED</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>All six she was primary sponsor of ended the session &ldquo;Senate/ filed.&rdquo; Four of them had a House sponsor named (Defay, Hayes, Dailey-Provost, Miller).</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">1 of 3</div><div class="label">BILLS SHE CARRIED IN THE SENATE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>As Senate floor sponsor, she carried <strong>H.B. 22</strong> (vintage vehicles), which was signed. H.J.R. 11 (neonatal abstinence syndrome) and H.B. 541 (first-time homebuyer help) stayed in the House.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">3 of 4</div><div class="label">CO-SPONSORED BILLS SIGNED</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>S.C.R. 6, H.B. 416 and H.B. 337 were signed. H.B. 294 (employer verification) was left filed.</div></div></div></button>
+
+    </div>
+    <details class="ledger" open>
+      <summary>The six bills she sponsored (none passed)</summary>
+      <div class="table-scroll" style="max-height:none;">
+      <table class="entity-table">
+        <tr><th>Bill</th><th>Short title</th><th>What it would have done</th><th>House sponsor</th></tr>
+<tr><td>S.J.R. 17</td><td>Resolution Encouraging Innovation in Legislative Analysis and Information Services</td><td>Encourage legislative staff to use AI tools, with human oversight.</td><td>Ariel Defay</td></tr>
+<tr><td>S.B. 189</td><td>School District Funding</td><td>Create a High Growth District Grant Program; no money was attached.</td><td>Tracy Miller</td></tr>
+<tr><td>S.B. 247</td><td>Road Funding</td><td>Set a minimum rack price used in figuring the fuel tax.</td><td>Jennifer Dailey-Provost</td></tr>
+<tr><td>S.B. 291</td><td>Student Transportation</td><td>Change who is eligible for school busing, including for hazardous walking routes.</td><td>&ndash;</td></tr>
+<tr><td>S.B. 297</td><td>School Social Worker</td><td>Align school social worker terms with state licensing (DOPL).</td><td>Hayes</td></tr>
+<tr><td>S.B. 320</td><td>School-based Food Pantry</td><td>Exempt food from school pantries from lawful-presence verification.</td><td>&ndash;</td></tr>
+      </table>
+      </div>
+    </details>
+    <p style="color:var(--color-ink-soft);font-size:.92rem;margin-top:12px;"><strong>A correction to this site&rsquo;s earlier notes:</strong> a July draft said S.J.R. 17 passed on Feb. 24, 2026. The Legislature&rsquo;s bill list shows it ended &ldquo;Senate/ filed,&rdquo; so it did not pass.</p>
+    <p style="color:var(--color-ink-soft);font-size:.92rem;">What she says and what she filed: her December 2025 priorities were growth, infrastructure, impact fees and housing, including limits on large investors buying single-family homes. Her filed bills were mostly about schools and road funding. H.B. 541, first-time homebuyer help, was the one housing bill she carried; it stayed in the House. No bill on investor purchases or impact fees appears on her 2026 list.</p>
+  </div>
+</section>
+
+<section id="stands">
+  <div class="wrap">
+    <div class="eyebrow">WHERE THEY STAND</div>
+    <h2>In Their Own Words</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>What each candidate says they&rsquo;ll work on, quoted from their own words. These are their claims, not checked facts.</p>
+    <div class="vs-grid" style="grid-template-columns:1fr 1fr;">
+      <div class="vs-head">BUSS (FORWARD)</div><div class="vs-head">BENSON (R)</div>
+      <div class="said"><strong>Growth and impact fees:</strong> &ldquo;I will push to restore local control so cities can responsibly manage growth, require timely infrastructure improvements, and fairly charge impact fees that reflect the real cost development places on our strained infrastructure.&rdquo;</div><div class="said"><strong>Growth and impact fees:</strong> His infrastructure page says impact fees &ldquo;cover a fraction&rdquo; of the cost of growth and calls for checking infrastructure capacity before projects are approved.</div>
+      <div class="said"><strong>Housing:</strong> policies for families and first-time homebuyers, including limiting large investors from buying single-family homes (as summarized by Eagle Mountain City, Dec. 17, 2025).</div><div class="said"><strong>Energy and data centers:</strong> &ldquo;AI data centers are projected to consume triple Utah&rsquo;s current power supply.&rdquo; He backs Operation Gigawatt, small modular nuclear reactors and natural gas, and competition from municipal power. <em>(His figure; not checked here.)</em></div>
+      <div class="said"><strong>Approach:</strong> &ldquo;We are in a crisis of distrust and divisive politics. I am committed to common sense solutions that put people over party and people over profits.&rdquo;</div><div class="said"><strong>Water:</strong> new developments should show they have water before breaking ground.</div>
+      <div class="said"><strong>The district:</strong> she has called it &ldquo;very gerrymandered&rdquo; (Utah News Dispatch, Sept. 1, 2026).</div><div class="said"><strong>Other priorities (Utah News Dispatch):</strong> cutting waste, lowering taxes, stopping mass surveillance and roads. His site says he won the convention on the first ballot with 95 of 130 votes (73.1%).</div>
+    </div>
+    <p style="color:var(--color-ink-soft);font-size:.92rem;margin-top:14px;"><strong>How this was read:</strong> Buss&rsquo;s campaign site (emilybussutah.com) could not be opened by this site&rsquo;s reading tool on Sept. 24, 2026 (the site blocks automated readers), so her quotes come from Eagle Mountain City&rsquo;s Dec. 17, 2025 article and Utah News Dispatch. No statement by Buss on data centers was found in those sources. That is not the same as saying she has none. Benson&rsquo;s quotes come from his campaign site&rsquo;s home, energy, infrastructure and water pages.</p>
+  </div>
+</section>
+
+<section id="disclosure">
+  <div class="wrap">
+    <div class="eyebrow">THE DISCLOSURE FORMS</div>
+    <h2>What Each Candidate Listed</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Each candidate filled out the state&rsquo;s conflict-of-interest form. This is what each one wrote, read from the filed text with the answers filled in.</p>
+    <div class="table-scroll">
+    <table class="entity-table">
+      <tr><th>Item</th><th>Buss (Forward)</th><th>Benson (R), signed &ldquo;David Brooks Benson&rdquo;</th></tr>
+      <tr><td>Employers</td><td>Utah State Senate (state senator). Previous: One Utah Service / Utah State University Salt Lake Center (volunteer manager and capacity-building coordinator)</td><td>Above and Beyond Fitness (business owner); Bencer Business Advisors, Orem (business consultant)</td></tr>
+      <tr><td>Entities owned or led</td><td>Birthday Box Foundation (board chair and executive director); Eagle Mountain City Public Library (advisory board); The Wellness Farm Foundation (advisory board, former executive board)</td><td>Above and Beyond Fitness; Send It Climbing (owner)</td></tr>
+      <tr><td>$5,000+ income sources</td><td>N/A</td><td>Bencer Business Advisors (business consulting)</td></tr>
+      <tr><td>Stocks of $5,000+</td><td>N/A</td><td>Send It Climbing; Above and Beyond Fitness</td></tr>
+      <tr><td>Other boards</td><td>N/A</td><td>Not listed</td></tr>
+      <tr><td>Spouse</td><td>Joel; employer Qualitas Executive Group (consultant)</td><td>CeCelia Benson; Lakeview Academy</td></tr>
+      <tr><td>Optional: other possible conflicts</td><td>No entry</td><td>No entry</td></tr>
+    </table>
+    </div>
+    <div class="record-card" style="margin-top:18px;">
+      <h3>Worth seeing side by side</h3>
+      <p><strong>Benson&rsquo;s energy background.</strong> The Utah Republican Party&rsquo;s candidate bio describes 18+ years in technology, operations and energy infrastructure. His form lists no energy employer. The form only covers the current and prior year, so the two don&rsquo;t conflict.</p>
+      <p><strong>Buss and Eagle Mountain.</strong> She lists an advisory seat on the Eagle Mountain City Public Library board. That is the city where Meta&rsquo;s data center campus sits (see below). She disclosed the role herself.</p>
+      <span class="rc-tag rc-good">Both forms filled in</span>
+      <span class="rc-tag">Neither used the optional section</span>
+    </div>
+  </div>
+</section>
+
+<section id="connections">
+  <div class="wrap">
+    <div class="eyebrow">THE CONNECTIONS</div>
+    <h2>Where This Race Meets the Rest of the Docket</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Several of these donors show up in other races this site has covered. A shared donor is a connection, not an accusation.</p>
+
+    <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    FP["Forward Party of Utah<br/>$25,999 cash + $7,628 in-kind"] --> EB(["EMILY BUSS<br/>SD-11 (Forward)"])
+    PD["Patrick de Freitas<br/>$515"] --> EB
+    PD -->|"$500"| JP["Jen Plumb<br/>SD-9, Case 23"]
+    WW["Wayne Woodfield<br/>$1,200 in-kind"] --> EB
+    DN["Doers Network<br/>$3,000"] --> BB(["BROOKS BENSON<br/>SD-11 (R)"])
+    KC["Cullimore For Senate<br/>$5,000"] --> BB
+    SS["Scott Sandall campaign<br/>$1,000"] --> BB
+    LH["Lincoln Hill Partners<br/>$800"] --> BB
+    CH["Utah Chamber PAC<br/>$7,500"] --> BB
+    SS -.->|"Senate sponsor of H.B. 416,<br/>which Buss co-sponsored"| EB
+    LH -.->|"principal Chase Everton<br/>lobbies for Meta"| META["Meta<br/>Eagle Mountain campus"]
+    style EB fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style BB fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style FP fill:#fbf3e6,stroke:#d9a441
+</div>
+      <p class="cap">Solid arrows are money, as filed. Dotted lines are other ties from public records, not money.</p>
+    </div>
+
+    <div class="conn-grid">
+      <div class="conn-card gold">
+        <div class="case"><a href="https://weber-county-hive.github.io/pac/weber-hive-doers-network.html">DOERS NETWORK FILE</a></div>
+        <h4>The &ldquo;David Benson&rdquo; on the Doers list</h4>
+        <p>This site&rsquo;s Doers Network file lists &ldquo;David Benson, $3,000&rdquo; as paid but not publicly endorsed. Benson&rsquo;s own report lists the same $3,000 on 6/3/26 from &ldquo;Doers Network&rdquo; at a Wilmington, Del. address. That entry now links here.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case"><a href="https://weber-county-hive.github.io/utah-senators/kirk-cullimore.html">SEN. KIRK CULLIMORE</a></div>
+        <h4>$5,000 from the Majority Leader&rsquo;s campaign</h4>
+        <p>Cullimore For Senate gave Benson $5,000 on 7/7/26, his second-largest check. Cullimore&rsquo;s committee has also given to other Republican candidates, including Brady Brammer (SD-21). Cullimore is himself a Doers Network recipient and endorsee.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case">SEN. SCOTT SANDALL · <a href="sd6-tran-neal.html">CASE 21</a></div>
+        <h4>Gave to Benson; sponsored a bill Buss co-sponsored</h4>
+        <p>Sandall&rsquo;s campaign fund gave Benson $1,000 on 7/15/26. Sandall was also the Senate sponsor of H.B. 416, the firefighter cancer fund Buss co-sponsored. His campaign also gave Tami Tran (SD-6) $1,000.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case"><a href="https://weber-county-hive.github.io/pac/lincoln-hill-partners-pac-case.html">LINCOLN HILL PARTNERS PAC</a> · <a href="https://weber-county-hive.github.io/pac/lincoln-hill-men-behind.html">THE MEN BEHIND IT</a></div>
+        <h4>A lobbying firm&rsquo;s PAC, with a Meta client</h4>
+        <ul>
+          <li>Benson&rsquo;s report lists $800 on 4/29/26 from &ldquo;Lincoln Hill Partners.&rdquo; The Lincoln Hill Partners PAC&rsquo;s own report lists the same $800 to &ldquo;David Benson&rdquo; on the same date.</li>
+          <li>The same PAC report lists $1,000 to Sen. Tamara Tran (SD-6, <a href="sd6-tran-neal.html">Case 21</a>).</li>
+          <li>The firm&rsquo;s 2021 announcement names Lincoln Shurtz, Casey Hill, Chase Everton and Derek Brown as principals. State lobbyist records list Meta Platforms as a client of Everton since 2017.</li>
+          <li>Lobbying firms giving to candidates is legal and reported.</li>
+        </ul>
+      </div>
+      <div class="conn-card">
+        <div class="case">FORWARD PARTY OF UTAH</div>
+        <h4>The party that picked her and pays for most of her race</h4>
+        <p>Registered as a political party 2/28/2024. Its registration lists Adam Teuscher (Vineyard) as chair and Philip Boileau as treasurer. Donors under both names appear on Buss&rsquo;s list; Boileau&rsquo;s address matches the registration. Other Buss donors share names with 2026 Forward Party candidates, including Wayne Woodfield of Lehi (SD-21, <a href="sd21-brammer-smith-myers-woodfield.html">Case file</a>); those matches are by name and city only.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case"><a href="sd9-plumb-evans-snow.html">CASE 23</a> · CONFIRMED BY ADDRESS</div>
+        <h4>A donor to both a Forward senator and a Democrat</h4>
+        <p>Patrick de Freitas of Salt Lake City gave Buss $515 (9/1/26) and Sen. Jen Plumb (D, SD-9) $500. Both entries list the same address.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case">ENERGY-INDUSTRY PACS</div>
+        <h4>Utility and refinery PACs</h4>
+        <p>Utah Rural Electric PAC gave Benson $1,000 (4/29/26), and HF Sinclair&rsquo;s PAC (&ldquo;Dino PAC,&rdquo; Dallas) gave $800 (8/7/26). Benson&rsquo;s platform centers on energy supply. Both are listed as filed; this site has no earlier records on either.</p>
+      </div>
+      <div class="conn-card">
+        <div class="case">UTAH CHAMBER PAC</div>
+        <h4>Benson&rsquo;s largest check</h4>
+        <p>Utah Chamber PAC gave Benson $7,500 on 8/3/26. It is the Salt Lake Chamber&rsquo;s PAC, and its reports show it giving to candidates in batches, including to Democrats.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="meta">
+  <div class="wrap">
+    <div class="eyebrow">EAGLE MOUNTAIN &amp; META</div>
+    <h2>The Data Center in This District</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Meta&rsquo;s big data center is in Eagle Mountain, which both campaigns list as part of this district. Whoever wins will vote on data center and power rules.</p>
+    <div class="record-card">
+      <ul style="margin:0;padding-left:18px;">
+        <li>By Meta&rsquo;s own 2024 figures, the Eagle Mountain campus used more than 1 million megawatt-hours of electricity and about 35 million gallons of water. The full story is in this site&rsquo;s <a href="https://webercountyhive-coder.github.io/Data-Centers/weber-hive-dc-meta-eagle-mountain.html">Meta campus file (Part 1)</a>.</li>
+        <li>A gas plant to power it is before the Public Service Commission in docket 26-2660-01. See <a href="https://webercountyhive-coder.github.io/Data-Centers/meta-eagle-mountain-gas-plant.html">Part 2: the gas plant</a>.</li>
+        <li>Buss lives in Eagle Mountain and sits on its city library&rsquo;s advisory board. No statement by her on the data center was found in the sources read.</li>
+        <li>Benson&rsquo;s energy page names AI data centers as a driver of power demand and backs more supply, including natural gas and nuclear.</li>
+        <li>Benson received $800 from a lobbying firm whose principal lists Meta as a client. Buss&rsquo;s campaign paid Meta $12.88 for advertising. Neither is a sign of a position on the data center.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="rubric">
+  <div class="wrap">
+    <div class="eyebrow">THE RUBRIC</div>
+    <h2>Graded Topic by Topic</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Each topic gets a grade, A (best) to F (worst), on five questions: Does it check power? Can the public see it? Is it clear who pays? What does it do to air, water and land? Do the people affected get a real say? N/A means the question doesn&rsquo;t apply.</p>
+    <p class="section-dek"><strong>How to read these:</strong> grades judge only what has already happened in the filings as of Sept. 24, 2026. They judge the record, not the person.</p>
+
+    <div class="topic-head">1. Buss&rsquo;s campaign money</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-c">C</span>About 69% of her total support comes from the party that picked her for the seat.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>Every entry is itemized with a name and address, and in-kind help is flagged.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>$10,446.51 of in-kind help is described only as &ldquo;Data&rdquo; or &ldquo;Software and data,&rdquo; so its value can&rsquo;t be checked from the filings.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-c">C</span>15% of her cash is from out of state; district individuals are a small share.</td></tr>
+    </table></div>
+
+    <div class="topic-head">2. Benson&rsquo;s campaign money</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-c">C</span>About 90% comes from PACs, businesses and six sitting senators&rsquo; committees, including a lobbying firm and a Delaware-addressed network.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>Every entry is itemized. 21 rows are marked amended, with no explanation in the export.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>$4,451.50 was paid to the candidate for travel without the trips listed; the rest of the spending names each payee.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-c">C</span>Individuals gave 9.9% of his money.</td></tr>
+    </table></div>
+
+    <div class="topic-head">3. The disclosure forms</div>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Criterion</th><th>Grade and reason</th></tr>
+      <tr><td>Power</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Transparency</td><td><span class="gl g-b">B</span>Both filled in the required items. Benson&rsquo;s name differs between his form (&ldquo;David Brooks Benson&rdquo;) and the ballot (&ldquo;Brooks&rdquo;), which makes his filings harder to find.</td></tr>
+      <tr><td>Financial accountability</td><td><span class="gl g-b">B</span>Benson names his $5,000+ income source; Buss lists her nonprofit roles.</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-b">B</span>Nothing listed ties either candidate to the energy or development decisions before the Legislature.</td></tr>
+    </table></div>
+
+    <div class="topic-head">4. The 2026 laws Buss helped pass, bill by bill</div>
+    <p class="section-dek">The four signed bills she floor-sponsored or co-sponsored, graded on what the law does. Read from each enrolled bill&rsquo;s summary and money lines on le.utah.gov. Her six own bills did not pass, so there is no law to grade. P = power, T = transparency, $ = financial accountability, E = environmental impact, C = community impact.</p>
+    <div class="table-scroll"><table class="rubric-table" style="min-width:860px;">
+      <tr><th>Bill</th><th>What it does</th><th>P</th><th>T</th><th>$</th><th>E</th><th>C</th><th>Why</th></tr>
+<tr><td><strong>H.B. 22</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Vintage vehicles &middot; she was the Senate floor sponsor</span></td><td>Creates a classic-vehicle designation and removes emissions testing for certain vehicles. Takes effect Oct. 1, 2026.</td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>Funded ($36,400 in transfers). Drops an air-quality test for some older cars; the summary doesn&rsquo;t say how many.</td></tr>
+<tr><td><strong>S.C.R. 6</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">POTS awareness &middot; co-sponsor</span></td><td>A resolution recognizing postural orthostatic tachycardia syndrome and urging insurers to cover care for it.</td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Non-binding; no money. Raises awareness for patients.</td></tr>
+<tr><td><strong>H.B. 416</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">First responder health &middot; co-sponsor</span></td><td>Creates a Firefighter Cancer Benefit Trust Fund with an 11-member board and adds first-responder mental-health provisions.</td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-a">A</span></td><td>Money is set aside (including $800,000 in restricted-account transfers) and a board is named to oversee it.</td></tr>
+<tr><td><strong>H.B. 337</strong><br><span style="font-weight:400;font-size:.85rem;color:var(--color-ink-soft);">Nicotine taxes &middot; co-sponsor</span></td><td>Raises cigarette and e-cigarette taxes, adds a per-unit tax on nicotine pouches and a one-time tax on inventory. Effective July 1, 2026.</td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td>Aims at youth nicotine use; the summary doesn&rsquo;t say where the new revenue goes.</td></tr>
+    </table></div>
+    <p style="color:var(--color-ink-soft);font-size:.92rem;margin-top:10px;"><strong>The pattern:</strong> mostly B&rsquo;s, one A for the funded firefighter cancer program, and a C on the environment for dropping emissions tests on some older vehicles. She was a co-sponsor, not the lead, on three of the four.</p>
+  </div>
+</section>
+
+<section id="ask">
+  <div class="wrap">
+    <div class="eyebrow">QUESTIONS VOTERS CAN ASK</div>
+    <h2>Twelve Questions From the Records</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>These questions come from what the filings show and what they leave out. Ask them at a debate, town hall or meet-the-candidate night. Each has a direct answer. None assumes anything improper.</p>
+    <div class="vs-grid" style="grid-template-columns:1fr 1fr;">
+      <div class="vs-head">FOR SEN. EMILY BUSS (FORWARD)</div><div class="vs-head">FOR BROOKS BENSON (R)</div>
+      <div class="said"><strong>1.</strong> About 69% of your support came from the party that picked you for the seat. How would you vote if the party&rsquo;s position and the district&rsquo;s wishes disagreed?</div><div class="said"><strong>1.</strong> About 90% of your money came from PACs, businesses and six sitting senators&rsquo; campaigns. How will you show voters you&rsquo;ll vote independently of the leaders who helped fund you?</div>
+      <div class="said"><strong>2.</strong> Your report lists $6,446.51 of in-kind help described only as &ldquo;Data,&rdquo; plus $4,000 as &ldquo;Software and data.&rdquo; What was it, and how was its value set?</div><div class="said"><strong>2.</strong> Your report lists $4,451.50 paid to you for travel. What trips did it cover?</div>
+      <div class="said"><strong>3.</strong> Impact fees and limits on large investors buying homes were among your stated priorities. Will you file a bill on either in 2027?</div><div class="said"><strong>3.</strong> Your site says AI data centers could need triple Utah&rsquo;s current power supply. Who should pay for new plants built mainly for data centers: the companies or all ratepayers?</div>
+      <div class="said"><strong>4.</strong> Meta&rsquo;s data center is in Eagle Mountain, where you live. Where do you stand on the proposed gas plant to power it, and on who should pay for power built for data centers?</div><div class="said"><strong>4.</strong> You received money from a lobbying firm&rsquo;s PAC whose principal lobbies for Meta, and from utility and refinery PACs. How will you handle votes that directly affect those donors?</div>
+      <div class="said"><strong>5.</strong> About 15% of your cash came from outside Utah. How do you weigh that against what district voters want?</div><div class="said"><strong>5.</strong> You file as &ldquo;David Benson&rdquo; and campaign as &ldquo;Brooks Benson.&rdquo; Will you use one name on all filings so voters can find your records?</div>
+    </div>
+    <div class="record-card" style="margin-top:16px;">
+      <h3>For both</h3>
+      <ul style="margin:0;padding-left:18px;">
+        <li>You both say growth should pay its own way. Would you support a bill requiring developers and data centers to cover the full cost of the roads, water and power they need?</li>
+        <li>Will you post your campaign spending, not just contributions, before early voting starts Oct. 20?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="limits">
+  <div class="wrap">
+    <div class="eyebrow">WHAT THIS DOESN&rsquo;T SHOW</div>
+    <h2>Limits of the Record</h2>
+    <div class="record-card">
+      <ul style="margin:0;padding-left:18px;">
+        <li>Neither campaign&rsquo;s spending after the Primary Report is in hand. Buss&rsquo;s later list runs to 9/21/26; Benson&rsquo;s to 8/7/26.</li>
+        <li>Name matches (Whitman, Yang, Woodfield, other Forward Party candidates, Chris Wilson) are by name and city only unless marked confirmed.</li>
+        <li>Daryl Acumen, DAI Managers LLC, Local 222 and Wilkerson Public Affairs were not identified beyond the filings.</li>
+        <li>Buss&rsquo;s bill grades use each enrolled bill&rsquo;s summary and money lines, not a full reading, fiscal notes or vote counts. Her votes on other bills were not reviewed.</li>
+        <li>Her campaign site could not be read by this site&rsquo;s tool; her positions come from news and city sources.</li>
+        <li>Benson&rsquo;s data center power figure is his claim and was not checked.</li>
+        <li>Nothing here suggests any rule was broken.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <details class="sources">
+      <summary>View all sources (16)</summary>
+      <ol>
+        <li>Emily Buss, 2026 Convention and Primary reports, DEX export DEX20260924_080608.csv (disclosures.utah.gov)</li>
+        <li>Emily Buss, itemized contributions 6/21&ndash;9/21/26, with in-kind comments (disclosures.utah.gov)</li>
+        <li>Emily Buss, conflict-of-interest disclosure, State Senate (disclosures.utah.gov), read from filed text</li>
+        <li>David Benson, 2026 Convention and Primary reports, DEX export DEX20260924_080859.csv (disclosures.utah.gov)</li>
+        <li>David Benson, itemized contributions 6/24&ndash;8/7/26 (disclosures.utah.gov)</li>
+        <li>David Brooks Benson, conflict-of-interest disclosure, State Senate (disclosures.utah.gov), read from filed text</li>
+        <li>disclosures.utah.gov entity search for &ldquo;brooks&rdquo; and &ldquo;bens,&rdquo; Sept. 24, 2026 (only &ldquo;Benson, David (2025 Utah Senator-11)&rdquo; returned)</li>
+        <li>Brooks Benson campaign site: home, energy, infrastructure and water pages (brooksbenson4utah.com)</li>
+        <li>Utah Republican Party, 2026 Republican Candidates page (utgop.org)</li>
+        <li>Eagle Mountain City, Kyle Ireland, &ldquo;Following Forward Party vote, State Sen. Buss outlines priorities,&rdquo; Dec. 17, 2025 (eaglemountain.gov)</li>
+        <li>Utah News Dispatch, Katie McKellar, Forward Party preference vote and appointment of Emily Buss, Dec. 12, 2025</li>
+        <li>Utah News Dispatch, Katie McKellar, SD-11 Democrat MacKenzie Miller withdraws, Sept. 1, 2026</li>
+        <li>Utah Legislature, bill list for Sen. Emily Buss, 2026 General Session; introduced and enrolled texts of S.J.R. 17, S.B. 189, 247, 291, 297, 320, H.B. 22, 337, 416 and S.C.R. 6 (le.utah.gov)</li>
+        <li>Forward Party of Utah, party registration and assumed-name filings (as compiled in this site&rsquo;s research)</li>
+        <li>Lincoln Hill Partners PAC reports, 2026; Lincoln Hill Partners 2021 announcement; Chase Everton lobbyist registration and principal list (disclosures.utah.gov), as compiled in this site&rsquo;s PAC files</li>
+        <li>This outlet&rsquo;s own files: the Doers Network file, Case 21 (SD-6), Case 23 (SD-9), the SD-21 file, the Kirk Cullimore file and the Meta Eagle Mountain files (Parts 1 and 2)</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Compiled from Utah campaign-finance disclosures (disclosures.utah.gov), the candidates&rsquo; own conflict-of-interest forms and campaign sources, and le.utah.gov. Public records only · No comment requested.<br>
+    <a href="index.html">&larr; Back to the Candidates 2026 docket</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('flipped');b.setAttribute('aria-pressed',b.classList.contains('flipped'));}));
+if (window.mermaid) { mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'IBM Plex Mono, monospace', themeVariables: { fontSize: '16px' }, flowchart:{htmlLabels:true, curve:'basis', useMaxWidth:true} }); }
+if (window.Chart) {
+  Chart.defaults.font.family = "'Source Serif 4', Georgia, serif";
+  Chart.defaults.color = '#5c534c';
+  const money = v => '$' + Number(v).toLocaleString();
+  if (document.getElementById('periodChart')) new Chart(document.getElementById('periodChart'), {
+    type: 'bar',
+    data: { labels: ['Convention report', 'Primary report', 'Later (to 9/21 Buss, 8/7 Benson)'],
+      datasets: [
+        { label: 'Buss (cash)', data: [999, 10488.78, 24315.58], backgroundColor: '#c0572e', borderRadius: 2 },
+        { label: 'Benson', data: [1550, 14050, 20300], backgroundColor: '#5c1a2b', borderRadius: 2 } ] },
+    options: { maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + money(c.parsed.y) } } },
+      scales: { y: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, x: { grid: { display: false } } } }
+  });
+  if (document.getElementById('spendChart')) new Chart(document.getElementById('spendChart'), {
+    type: 'bar',
+    data: { labels: ['Wilkerson Public Affairs', 'Brooks Benson (travel)', 'Signs on the Cheap', 'AlphaGraphics', 'UCCU', 'Utah County GOP', 'Utah GOP (2 entries)', 'Walmart', 'Temu', 'Utah County Elections', 'Papa Johns'],
+      datasets: [{ data: [11196.74, 4451.50, 1136.20, 417.93, 400, 375, 500, 222.42, 125.92, 117.73, 47.48], backgroundColor: '#5c1a2b', borderRadius: 3 }] },
+    options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => money(c.parsed.x) } } },
+      scales: { x: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, y: { grid: { display: false } } } }
+  });
+}
+</script>
+</body>
+</html>
