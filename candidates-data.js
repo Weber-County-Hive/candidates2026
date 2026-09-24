@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "sd20-winterton-mcrae",
+    race: "Senate District 20 — Daggett, Duchesne, Summit, Uintah, Wasatch",
+    level: "State",
+    county: "Daggett / Duchesne / Summit / Uintah / Wasatch",
+    caseNumber: "CASE 28",
+    names: "Winterton vs. McRae",
+    verdict: "A Campaign Balance Below Zero vs. $180 in Cash",
+    tags: ["Incumbent", "Forward Party", "Oil and Gas", "Negative Balance", "Disclosure Forms"],
+    stamp: "Active",
+    href: "sd20-winterton-mcrae.html",
+    datePosted: "2026-09-24",
+    dateUpdated: "2026-09-24"
+  },
+  {
     id: "sd18-fiefia-anderson",
     race: "Senate District 18 — Salt Lake and Utah Counties",
     level: "State",
