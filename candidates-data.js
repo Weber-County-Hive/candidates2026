@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "hd27-loubet-oates",
+    race: "House District 27 — Kearns, Magna and the West Side",
+    level: "State",
+    county: "Salt Lake",
+    caseNumber: "CASE 32",
+    names: "Loubet vs. Oates",
+    verdict: "Loubet\u2019s $75,269 vs. Oates\u2019s $66,374",
+    tags: ["Incumbent", "Competitive Seat", "Caucus PACs", "How Bills Changed", "Disclosure Forms"],
+    stamp: "Active",
+    href: "hd27-loubet-oates.html",
+    datePosted: "2026-09-25",
+    dateUpdated: "2026-09-25"
+  },
+  {
     id: "hd26-macpherson-finch",
     race: "House District 26 — West Valley City and Magna",
     level: "State",
