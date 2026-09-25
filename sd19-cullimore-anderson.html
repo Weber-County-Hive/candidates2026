@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD-19: Cullimore vs. Anderson | The Weber County Hive</title>
+<meta name="description" content="Senate District 19, 2026. Senate Majority Leader Kirk Cullimore (R) vs. Shana Anderson (D). Campaign money, disclosure forms, the bills he carried, and questions voters can ask.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-paper:#f4f0e6;
+    --color-paper-deep:#ece5d4;
+    --color-ink:#241a16;
+    --color-ink-soft:#5c534c;
+    --color-link:#c0572e;
+    --color-stat:#d9a441;
+    --color-burgundy-light:#5c1a2b;
+    --color-burgundy-deep:#3d0f1c;
+    --color-line:#d8cfbc;
+    --color-card:#fbf8f1;
+    --color-good:#4d7c5f;
+    --color-flag:#a5372a;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.6;}
+  h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif;font-weight:700;margin:0 0 .4em;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:.72rem;letter-spacing:.06em;color:var(--color-ink-soft);}
+  a{color:var(--color-link);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header.band{background:linear-gradient(135deg, var(--color-burgundy-light), var(--color-burgundy-deep));color:#f4ece6;padding:22px 0;}
+  header.band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .brandmark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#f4ece6;text-decoration:none;}
+  nav.topnav a{color:#f4ece6cc;text-decoration:none;margin-left:22px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.03em;border-bottom:1px solid transparent;}
+  nav.topnav a:hover{border-bottom-color:#f4ece6cc;}
+
+  .hero{padding:56px 0 40px;border-bottom:1px solid var(--color-line);}
+  .hero .eyebrow{margin-bottom:14px;}
+  .hero h1{font-size:2.5rem;line-height:1.15;max-width:760px;}
+  .hero .dek{font-size:1.12rem;color:var(--color-ink-soft);max-width:660px;margin-top:14px;}
+  .hero-meta{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+  .hero-meta .stat-num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-stat);}
+  .hero-meta .stat-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);letter-spacing:.02em;max-width:170px;}
+
+  section{padding:44px 0;border-bottom:1px solid var(--color-line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:1.6rem;margin-bottom:6px;}
+  section .section-dek{color:var(--color-ink-soft);max-width:660px;margin-bottom:26px;font-size:1rem;}
+
+  .start-here{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-stat);padding:20px 24px;}
+  .start-here ol{margin:8px 0 0;padding-left:20px;}
+  .start-here li{margin-bottom:8px;}
+
+  .record-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:2px;padding:24px 26px;margin-bottom:18px;}
+  .record-card h3{font-size:1.15rem;margin-bottom:8px;}
+  .record-card p{margin:.6em 0;}
+  .record-card p:first-of-type{margin-top:0;}
+  .rc-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-link);border:1px solid var(--color-link);padding:3px 9px;border-radius:20px;margin:2px 6px 2px 0;text-decoration:none;}
+  a.rc-tag:hover{background:var(--color-link);color:#fff;}
+  .rc-flag{border-color:var(--color-flag);color:var(--color-flag);}
+  .rc-good{border-color:var(--color-good);color:var(--color-good);}
+
+  .quote-block{border-left:3px solid var(--color-stat);padding:4px 0 4px 18px;font-style:italic;color:var(--color-ink-soft);margin:14px 0;}
+
+  .fund-row{display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;margin-bottom:20px;}
+  .fund-donut{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fund-donut-center{width:96px;height:96px;background:var(--color-paper);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+  .fund-donut-center .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--color-ink);}
+  .fund-donut-center .lbl{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--color-ink-soft);}
+  .fund-donut-legend{list-style:none;padding:0;margin:8px 0 0;font-size:.92rem;}
+  .fund-donut-legend li{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0;}
+  .fund-bar-row{margin-bottom:10px;}
+  .fund-bar-row .bar-label{display:flex;justify-content:space-between;gap:12px;font-size:.86rem;margin-bottom:4px;}
+  .fund-bar-track{background:var(--color-paper-deep);border-radius:3px;height:8px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);}
+  .fund-bar-fill.alt{background:var(--color-stat);}
+
+  .table-scroll{overflow-x:auto;}
+  .entity-table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px;}
+  .entity-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:8px 10px;}
+  .entity-table td{padding:10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .entity-table td.num{font-family:'IBM Plex Mono',monospace;font-size:.85rem;white-space:nowrap;}
+  .status-pill{font-family:'IBM Plex Mono',monospace;font-size:.65rem;padding:3px 8px;border-radius:12px;white-space:nowrap;display:inline-block;}
+  .status-confirmed{background:#e2ede4;color:var(--color-good);}
+  .status-flag{background:#f3dedb;color:var(--color-flag);}
+  .status-unresolved{background:#f4ecd9;color:#8a6d1f;}
+
+  .timeline{border-left:2px solid var(--color-line);padding-left:22px;margin-left:6px;}
+  .timeline-item{position:relative;margin-bottom:22px;}
+  .timeline-item::before{content:"";position:absolute;left:-28px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--color-stat);}
+  .timeline-item.key::before{background:var(--color-flag);}
+  .timeline-item .t-date{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);}
+  .timeline-item h4{font-size:1rem;margin:.2em 0;}
+  .timeline-item p{margin:.2em 0;font-size:.95rem;color:var(--color-ink-soft);}
+
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--color-line);background:var(--color-card);}
+  .vs-grid > div{padding:16px 20px;border-bottom:1px solid var(--color-line);}
+  .vs-grid > div:nth-child(odd){border-right:1px solid var(--color-line);}
+  .vs-grid .vs-head{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  .vs-grid .said{font-style:italic;}
+
+  /* connections */
+  .hub{background:var(--color-burgundy-deep);color:#f4ece6;padding:22px 26px;border-radius:2px;margin-bottom:22px;}
+  .hub .eyebrow{color:#d9a441;}
+  .hub h3{color:#f4ece6;font-size:1.3rem;margin:6px 0 4px;}
+  .hub p{margin:0;color:#e8d9c8;font-size:.95rem;}
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .conn-card{background:var(--color-card);border:1px solid var(--color-line);border-top:4px solid var(--color-link);padding:18px 20px;}
+  .conn-card.doers{border-top-color:var(--color-burgundy-light);}
+  .conn-card.gold{border-top-color:var(--color-stat);}
+  .conn-card.unres{border-top-color:#b8952e;border-top-style:dashed;}
+  .conn-card .case{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .conn-card h4{font-size:1.05rem;margin:4px 0 8px;}
+  .conn-card p{margin:.4em 0;font-size:.94rem;}
+  .conn-card ul{margin:.4em 0;padding-left:18px;font-size:.93rem;}
+  .conn-card li{margin-bottom:4px;}
+
+  details.sources{margin-top:6px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.05em;color:var(--color-burgundy-light);font-weight:600;}
+  details.sources ol{font-size:.9rem;color:var(--color-ink-soft);padding-left:22px;}
+  details.sources li{margin-bottom:7px;}
+
+  @media (max-width:680px){
+    .hero h1{font-size:1.9rem;}
+    .fund-row{flex-direction:column;}
+    .conn-grid{grid-template-columns:1fr;}
+    .vs-grid{grid-template-columns:1fr;}
+    .vs-grid > div:nth-child(odd){border-right:none;}
+    .vs-grid .vs-head:nth-child(2){display:none;}
+  }
+  footer{padding:40px 0 60px;text-align:center;color:var(--color-ink-soft);font-size:.85rem;}
+  footer a{color:var(--color-link);}
+  .jumpnav{background:var(--color-paper-deep);border-bottom:1px solid var(--color-line);padding:12px 0;position:sticky;top:0;z-index:5;}
+  .jumpnav .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .jumpnav a{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.03em;color:var(--color-ink);text-decoration:none;border-bottom:1px solid transparent;}
+  .jumpnav a:hover{border-bottom-color:var(--color-link);color:var(--color-link);}
+  section[id]{scroll-margin-top:60px;}
+  .race-strip{display:grid;grid-template-columns:repeat(8,1fr);margin-top:26px;border-top:1px solid var(--color-line);border-left:1px solid var(--color-line);background:var(--color-card);}
+  .race-strip > div{padding:12px 12px 14px;border-right:1px solid var(--color-line);border-bottom:1px solid var(--color-line);min-width:0;}
+  .race-strip .d{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-link);font-weight:600;white-space:nowrap;}
+  .race-strip .e{font-size:.84rem;line-height:1.35;margin-top:6px;hyphens:none;overflow-wrap:normal;}
+  .race-strip .future .d{color:var(--color-ink-soft);}
+  @media (max-width:1000px){.race-strip{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:560px){.race-strip{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:680px){.jumpnav{position:static;} .rubric-table td:first-child{width:auto;}}
+  .chart-card{background:var(--color-card);border:1px solid var(--color-line);padding:18px 20px;margin:22px 0;}
+  .chart-card h3{font-size:1.05rem;margin-bottom:4px;}
+  .chart-card .cap{font-size:.86rem;color:var(--color-ink-soft);margin:0 0 12px;}
+  .chart-box{position:relative;height:260px;}
+  .mermaid-wrap{background:var(--color-card);border:1px solid var(--color-line);padding:18px;margin:22px 0;overflow-x:auto;}
+  .mermaid-wrap .cap{font-size:.86rem;color:var(--color-ink-soft);margin:10px 0 0;}
+  .mermaid{text-align:center;}
+  details.ledger{background:var(--color-card);border:1px solid var(--color-line);padding:12px 18px;margin:12px 0;}
+  details.ledger summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.04em;color:var(--color-burgundy-light);font-weight:600;}
+  details.ledger .table-scroll{max-height:460px;overflow:auto;margin-top:10px;}
+  .rubric-table{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--color-card);border:1px solid var(--color-line);}
+  .rubric-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:10px;background:var(--color-paper-deep);}
+  .rubric-table td{padding:12px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .rubric-table td:first-child{font-weight:600;width:170px;}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:#fff;border-radius:3px;padding:1px 6px;margin-right:6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--color-stat);} .g-d{background:#b5652f;} .g-f{background:var(--color-burgundy-light);} .g-na{background:#9a9186;font-size:.8rem;}
+  .topic-head{font-family:'Playfair Display',serif;font-size:1.15rem;margin:26px 0 8px;}
+  .compare-table td.num{text-align:right;}
+
+  .flip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0;}
+  @media (max-width:900px){.flip-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.flip-grid{grid-template-columns:1fr;}}
+  .flip{perspective:900px;background:none;border:0;padding:0;cursor:pointer;text-align:left;font:inherit;color:inherit;min-height:250px;}
+  .flip-inner{position:relative;width:100%;height:100%;min-height:250px;transition:transform .5s;transform-style:preserve-3d;}
+  .flip.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:18px 20px;display:flex;flex-direction:column;justify-content:center;}
+  .flip-front{text-align:center;}
+  .flip-front .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  .flip-front .label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);letter-spacing:.03em;margin-top:6px;}
+  .flip-front .hint{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--color-ink-soft);margin-top:10px;opacity:.75;}
+  .flip-back{transform:rotateY(180deg);background:var(--color-burgundy-deep);color:#f4ece6;border-color:var(--color-burgundy-deep);font-size:.9rem;line-height:1.5;overflow:auto;}
+  .flip-back strong{color:var(--color-stat);}
+  .plain{background:#fff8e6;border-left:4px solid var(--color-stat);padding:12px 16px;margin:0 0 16px;font-size:.98rem;}
+  .plain b{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.06em;color:#8a6d1f;margin-right:8px;}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--color-line);background:var(--color-card);margin:18px 0;}
+  .three > div{padding:16px 18px;border-right:1px solid var(--color-line);}
+  .three > div:last-child{border-right:none;}
+  .three .who{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .three .amt{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  @media (max-width:760px){.three{grid-template-columns:1fr;} .three > div{border-right:none;border-bottom:1px solid var(--color-line);}}
+  details.ledger{max-width:100%;min-width:0;}
+  details.ledger .table-scroll{max-width:100%;}
+  @media (max-width:760px){.vs-grid{grid-template-columns:1fr !important;}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+
+<body>
+<header class="band"><div class="wrap">
+  <a class="brandmark" href="index.html">Weber County Hive — Candidates 2026</a>
+  <nav class="topnav"><a href="index.html">Docket</a><a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">CASE 30 · SENATE DISTRICT 19 (SALT LAKE AND UTAH COUNTIES) — GENERAL ELECTION NOV. 3, 2026</div>
+  <h1>The Majority Leader&rsquo;s $114,250 vs. $23,989</h1>
+  <p class="dek">Sen. Kirk Cullimore (R) of Sandy has been in the Senate since 2019 and Majority Leader since 2025. His 2026 campaign has raised $114,250, 94% of it from businesses, PACs and associations. Shana Anderson (D) has raised $23,989, almost all from individuals. His disclosure form lists a law practice, the presidency of a life insurance company and four boards; hers lists one stock.</p>
+  <div class="hero-meta">
+    <div><div class="stat-num">$114,250</div><div class="stat-label">CULLIMORE RAISED IN 2026</div></div>
+    <div><div class="stat-num">94%</div><div class="stat-label">OF HIS FROM BUSINESSES, PACS AND GROUPS</div></div>
+    <div><div class="stat-num">$23,989</div><div class="stat-label">ANDERSON RAISED IN 2026</div></div>
+    <div><div class="stat-num">94%</div><div class="stat-label">OF HERS FROM INDIVIDUALS</div></div>
+  </div>
+</div></div>
+
+<nav class="jumpnav" aria-label="Sections"><div class="wrap">
+  <a href="#start">Start here</a><a href="#words">Words</a><a href="#money">Cullimore&rsquo;s money</a><a href="#spending">His spending</a><a href="#anderson-money">Anderson&rsquo;s money</a><a href="#anderson-spending">Her spending</a><a href="#record">His record</a><a href="#stands">Where they stand</a><a href="#promises">Priorities and record</a><a href="#disclosure">Disclosure forms</a><a href="#connections">Connections</a><a href="#rubric">Rubric</a><a href="#ask">Questions</a><a href="#limits">Limits</a>
+</div></nav>
+
+<section id="start"><div class="wrap">
+  <div class="eyebrow">START HERE</div>
+  <h2>Seven Things the Records Show</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>The Senate&rsquo;s No. 2 leader, backed mostly by business and professional groups, faces a Democratic candidate backed mostly by individuals. Both are checked the same way: money in, money out, disclosure form, stated positions. Only he has a voting record.</p>
+  <div class="start-here"><ol>
+    <li><strong>Cullimore raised $114,250.00 in 2026.</strong> 93.9% came from businesses, PACs and associations, about 35.0% from outside Utah, and $2,000 in two gifts from individuals. His largest donor is a law firm, Robert J. DeBry &amp; Associates ($15,000); the Utah Association for Justice, the trial lawyers&rsquo; group, and Nexiuum, LLC gave $10,000 each.</li>
+    <li><strong>He spent $38,510.00 through June 7,</strong> $21,500.00 of it to other Republican campaigns, and $7,468.29 on travel.</li>
+    <li><strong>His form lists a law practice, the presidency of Sentinel Security Life and four boards.</strong> He sits on the Senate Business and Labor Committee, which handles insurance bills. The state registry lists two more companies, COLLEX, LLC (with him as a member) and Fuerza Legal LLC (with his company KCJR as a member); his form lists neither.</li>
+    <li><strong>His site says &ldquo;We must continue to encourage open meetings rules.&rdquo;</strong> H.B. 530 (2025), which he carried in the Senate, exempts the Nucleus Institute from the open-meetings and records laws. The final version of H.B. 276 (2026), a substitute the bill page lists him as sponsoring, does not include the original bill&rsquo;s minimum damages for people depicted in AI-made intimate images.</li>
+    <li><strong>Anderson raised $23,988.70 in 2026.</strong> 94.2% came from 158 individual gifts, 125 of them $100 or less. Two unions and a party club gave $1,400.</li>
+    <li><strong>She spent $9,831.73 through June 9,</strong> mostly on printing ($3,046) and two campaign firms ($5,000).</li>
+    <li><strong>Her form lists no outside employer (&ldquo;Stay at home mom&rdquo;), business or board, and one stock:</strong> Mineral Rite, a mining and reclamation company. She also listed her spouse&rsquo;s employers, a defense contractor and the Utah National Guard.</li>
+  </ol></div>
+  <div class="race-strip" aria-label="Race timeline">
+    <div><div class="d">JAN 21, 2025</div><div class="e">Becomes Majority Leader</div></div>
+    <div><div class="d">MAR 9, 2026</div><div class="e">DeBry firm gives $15,000</div></div>
+    <div><div class="d">APR 2</div><div class="e">Named Sentinel president</div></div>
+    <div><div class="d">APR 3</div><div class="e">$19,500 to six campaigns</div></div>
+    <div><div class="d">APR 25</div><div class="e">Party conventions</div></div>
+    <div><div class="d">JULY 8</div><div class="e">Nexiuum gives $10,000</div></div>
+    <div class="future"><div class="d">OCT 20–30</div><div class="e">Early voting</div></div>
+    <div class="future"><div class="d">NOV 3</div><div class="e">General election</div></div>
+  </div>
+</div></section>
+
+<section id="words"><div class="wrap">
+  <div class="eyebrow">QUICK RECAP</div>
+  <h2>Words Used on This Page</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Tap any card to see what the word means.</p>
+  <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Majority Leader</div><div class="label">THE SENATE&rsquo;S NO. 2 LEADER</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Chosen by the majority party&rsquo;s senators. Runs floor scheduling and caucus strategy under the Senate President.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Floor sponsor</div><div class="label">THE OTHER CHAMBER&rsquo;S CARRIER</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>The senator who carries a House bill in the Senate. Cullimore floor-sponsored 26 House bills in 2026.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Tort</div><div class="label">A CIVIL WRONG</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>An injury or harm one party can sue another over, like a car crash. Tort law sets the rules for those lawsuits.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">GRAMA</div><div class="label">UTAH&rsquo;S RECORDS LAW</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>The Government Records Access and Management Act lets the public request government records. Some bodies are written out of it.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Political support</div><div class="label">MONEY TO OTHER CAMPAIGNS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>The label campaigns use when they give money to other candidates or parties.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Reinsurance</div><div class="label">INSURANCE FOR INSURERS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A company that takes on part of another insurer&rsquo;s risk. Cullimore sits on the board of one, Haymarket.</div></div></div></button>
+
+  </div>
+</div></section>
+
+<section id="money"><div class="wrap">
+  <div class="eyebrow">CULLIMORE&rsquo;S MONEY</div>
+  <h2>$114,250 in 2026, Almost All From Groups</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Nearly every dollar Cullimore raised this year came from a business, a PAC or an association. Two gifts came from individual people.</p>
+  <p class="section-dek">His DEX export (DEX20260924_215731; Convention and Primary reports, Jan. 1&ndash;June 7, 2026) plus his later contribution list (July 8&ndash;Sept. 4, 2026). One row marked &ldquo;[DELETED]&rdquo; is left out. His 2022&ndash;2025 money is summarized below from this outlet&rsquo;s notes; some of it is on his <a href="https://weber-county-hive.github.io/utah-senators/kirk-cullimore.html">Utah Senators profile</a>.</p>
+  <div class="fund-row">
+    <div class="fund-donut" style="background:conic-gradient(var(--color-stat) 0% 93.9%, var(--color-link) 93.9% 98.2%, #b9a98f 98.2% 100%);">
+      <div class="fund-donut-center"><div class="num">$114,250</div><div class="lbl">RAISED, 2026</div></div>
+    </div>
+    <ul class="fund-donut-legend">
+      <li><span class="swatch" style="background:var(--color-stat)"></span> Businesses, PACs and associations &mdash; $107,250.00 (93.9%)</li>
+      <li><span class="swatch" style="background:var(--color-link)"></span> Senate GOP campaign committee &mdash; $5,000.00 (4.4%)</li>
+      <li><span class="swatch" style="background:#b9a98f"></span> Individuals &mdash; $2,000.00 (1.8%)</li>
+    </ul>
+  </div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Law firm and trial lawyers&rsquo; group: Robert J. DeBry &amp; Associates ($15,000) and the Utah Association for Justice ($10,000)</span><span>$25,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:100%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Health care and drug makers: Johnson &amp; Johnson, PhRMA, PCMA, Utah Health Care Assn., Squibb, MountainStar and others</span><span>$17,500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:70%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Real estate and title: Utah Association of Realtors, Cottonwood Title, Clyde Companies</span><span>$12,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:48%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Advocacy PACs: Fresh Air PAC, Lincoln Hill Partners PAC, Doers Network</span><span>$10,500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:42%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Tech: Encode AI and Google</span><span>$10,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:40%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Energy and fuel: rPlus Energies, Maverik, Sinclair PAC, Utah Petroleum Assn.</span><span>$5,250</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:21%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Tobacco: Altria</span><span>$5,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:20%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Lobbyists, law firms, banks and insurers: Stokes Strategies, MJH Advisors, Holland &amp; Hart, Utah Bankers, APCIA</span><span>$3,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:12%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Other businesses: Nexiuum, LLC ($10,000), Magellan Technology ($5,000), PepsiCo, Boeing PAC, Utah Trucking Assn., Kodiak Solutions, SEL Inc.</span><span>$19,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:76%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Utah Republican Senate Campaign Committee</span><span>$5,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:20%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Individuals: two gifts</span><span>$2,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:8%"></div></div></div>
+  <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$25,000</div><div class="label">FROM A LAW FIRM AND THE TRIAL LAWYERS&rsquo; GROUP</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Robert J. DeBry &amp; Associates $15,000 (March 9) and the Utah Association for Justice, filed as &ldquo;Lawyers Involved for Utah,&rdquo; $10,000 (Jan. 8). His S.B. 211, &ldquo;Tort Amendments,&rdquo; was filed without passing in 2026.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$10,000</div><div class="label">FROM NEXIUUM, LLC</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>An American Fork company, July 8. This outlet&rsquo;s earlier research found no lobbyist registration or earlier Utah political giving for it.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">35%</div><div class="label">FROM OUTSIDE UTAH</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>$40,000, including PhRMA and Johnson &amp; Johnson ($10,500 together), Encode AI of Washington, D.C., Google, Magellan Technology of Buffalo, N.Y., and Altria.</div></div></div></button>
+
+  </div>
+  <details class="ledger">
+    <summary>Every Cullimore contribution, 2026 (44 entries)</summary>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Date</th><th>Contributor (as filed)</th><th>City, state</th><th>Report</th><th>Note</th><th>Amount</th></tr>
+<tr><td>1/2/2026</td><td>Alex Iorg</td><td>West Bountiful, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/8/2026</td><td>Fresh Air PAC</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$2,500.00</td></tr>
+<tr><td>1/8/2026</td><td>Utah Trucking Association</td><td>West Valley, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>1/8/2026</td><td>Utah Behavior Services Inc</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/8/2026</td><td>Holland &amp; Hart</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>1/8/2026</td><td>Utah Association of Realtors</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$3,500.00</td></tr>
+<tr><td>1/8/2026</td><td>Utah Association for Justice INC Lawyers Involved for Utah</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$10,000.00</td></tr>
+<tr><td>1/15/2026</td><td>Encode AI</td><td>Washington, DC</td><td>Convention</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>1/15/2026</td><td>Lincoln Hill Partners PAC</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/15/2026</td><td>E.R. Squibb &amp; Sons</td><td>Tampa, FL</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/15/2026</td><td>Maverik Inc.</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>1/15/2026</td><td>Utah Republican Senate Campaign Committee</td><td>Lehi, UT</td><td>Convention</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>1/15/2026</td><td>Utah Dental Association</td><td>Woods Cross, UT</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>3/9/2026</td><td>Johnson &amp; Johnson PAC</td><td>Washington, DC</td><td>Convention</td><td></td><td class="num">$1,500.00</td></tr>
+<tr><td>3/9/2026</td><td>American Property Casualty Insurance Association</td><td>Chicago, IL</td><td>Convention</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>3/9/2026</td><td>Cottonwood Title</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>3/9/2026</td><td>Robert J Debry &amp; Associates</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$15,000.00</td></tr>
+<tr><td>5/7/2026</td><td>Utah Association of Realtors</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$2,500.00</td></tr>
+<tr><td>5/7/2026</td><td>Johnson &amp; Johnson PAC</td><td>Washington, DC</td><td>Primary</td><td></td><td class="num">$4,000.00</td></tr>
+<tr><td>5/7/2026</td><td>Kodiak Solutions LLC</td><td>Indianapolis, IN</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>5/7/2026</td><td>PhRMA</td><td>Washington, DC</td><td>Primary</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>5/7/2026</td><td>SEL Inc.</td><td>Pleasant Grove, UT</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>5/7/2026</td><td>Utah Bankers Association</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>5/13/2026</td><td>Clyde Companies</td><td>Orem, UT</td><td>Primary</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>6/1/2026</td><td>DOERS NETWORK</td><td>Wilmington, DE</td><td>Primary</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>6/1/2026</td><td>MAGELLAN TECHNOLOGY INC.</td><td>Buffalo, NY</td><td>Primary</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>6/4/2026</td><td>Maverik Inc.</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$750.00</td></tr>
+<tr><td>7/8/2026</td><td>Nexiuum, LLC</td><td>American Fork, UT</td><td>Later list</td><td></td><td class="num">$10,000.00</td></tr>
+<tr><td>7/8/2026</td><td>Mental Health PAC</td><td>Washington, DC</td><td>Later list</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>7/8/2026</td><td>Stokes Strategies</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>7/8/2026</td><td>Joshua and Jennifer Romney</td><td>Holladay, UT</td><td>Later list</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>7/8/2026</td><td>MJH Advisors</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>7/16/2026</td><td>Utah Health Care Association</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$1,500.00</td></tr>
+<tr><td>7/16/2026</td><td>Google Client Services</td><td>Mountain View, CA</td><td>Later list</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>7/17/2026</td><td>Lincoln Hill Partners PAC</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$2,500.00</td></tr>
+<tr><td>7/17/2026</td><td>Fresh Air PAC</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$2,500.00</td></tr>
+<tr><td>7/17/2026</td><td>rPlus Energies, LLC</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>7/17/2026</td><td>MountainStar Healthcare Good Government</td><td>Cottonwood Heights, UT</td><td>Later list</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>7/29/2026</td><td>Pepsico</td><td>New Castle, DE</td><td>Later list</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>9/1/2026</td><td>Altria Client Services LLC</td><td>Richmond, VA</td><td>Later list</td><td></td><td class="num">$5,000.00</td></tr>
+<tr><td>9/4/2026</td><td>Sinclair Political Action Committee</td><td>Dallas, TX</td><td>Later list</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>9/4/2026</td><td>PCMA</td><td>Washington, DC</td><td>Later list</td><td></td><td class="num">$1,500.00</td></tr>
+<tr><td>9/4/2026</td><td>Utah Petroleum Association</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>9/4/2026</td><td>Boeing PAC</td><td>Arlington, VA</td><td>Later list</td><td></td><td class="num">$500.00</td></tr>
+      <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td></td><td class="num"><strong>$114,250.00</strong></td></tr>
+    </table></div>
+  </details>
+  <div class="record-card">
+    <h3>Earlier years, from this outlet&rsquo;s research</h3>
+    <ul style="margin:0;padding-left:18px;">
+      <li>He carried $87,446.91 into 2022 from his 2018 Senate campaign.</li>
+      <li>From 2022 to 2025 his campaign paid Kyle Palmer and Palmer&rsquo;s firm, Irish Elk LLC, $78,912.24, filed mostly as &ldquo;Campaign Expense.&rdquo;</li>
+      <li>In 2022 it paid Majority 51, L.L.C. $27,402.01. Majority 51&rsquo;s certificate of organization lists its purpose as &ldquo;Full service campaign management&rdquo;; it is the same firm that is Sen. Keith Grover&rsquo;s largest vendor (<a href="sd23-grover-smith.html">Case 29</a>).</li>
+    </ul>
+    <span class="rc-tag">From his 2022&ndash;2025 DEX exports, read Aug. 26, 2026; not re-read for this page</span>
+  </div>
+</div></section>
+
+<section id="spending"><div class="wrap">
+  <div class="eyebrow">CULLIMORE&rsquo;S SPENDING</div>
+  <h2>$38,510.00 Out, More Than Half to Other Campaigns</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Cullimore&rsquo;s campaign gives money to other Republicans and pays for travel to legislative conferences. Every payee is named.</p>
+  <div class="chart-card">
+    <h3>Where his money went</h3>
+    <p class="cap">His largest payees, Jan. 1&ndash;June 7, 2026, as filed.</p>
+    <div class="chart-box" style="height:360px;"><canvas id="spendChartC" aria-label="Bar chart of Cullimore spending by payee"></canvas></div>
+  </div>
+  <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$21,500</div><div class="label">TO OTHER CAMPAIGNS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>April 3: Friends of Dan McCay, Elect Brammer and Scott Sandall Campaign Fund, $5,000 each; Committee to Elect Jordan Teuscher $2,500; John Knotwell and Chris Sloan, $1,000 each. May 26: &ldquo;John Adams Political Campaign,&rdquo; $2,000.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$7,468</div><div class="label">TRAVEL</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Delta $5,341.86, Marriott $1,677.68, parking, Uber and taxis. He also paid NCSL $755 and CSG West $425, two legislators&rsquo; associations.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$4,500</div><div class="label">MORGAN OLSON</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>$1,500 in January, February and May, filed as &ldquo;Campaign Expense.&rdquo; Earlier research found the same monthly payment in most months since 2022.</div></div></div></button>
+
+  </div>
+  <details class="ledger">
+    <summary>Every Cullimore expenditure, 1/1/26&ndash;6/7/26 (42 entries)</summary>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Report</th><th>Amount</th></tr>
+<tr><td>1/1/2026</td><td>Uber</td><td>Travel Expenses</td><td>Convention</td><td class="num">$20.52</td></tr>
+<tr><td>1/1/2026</td><td>Tuk Tuks</td><td>Campaign Expense</td><td>Convention</td><td class="num">$56.68</td></tr>
+<tr><td>1/1/2026</td><td>Delta</td><td>Travel Expenses</td><td>Convention</td><td class="num">$1,406.49</td></tr>
+<tr><td>1/2/2026</td><td>The Parking Spot</td><td>Travel Expenses</td><td>Convention</td><td class="num">$90.22</td></tr>
+<tr><td>1/15/2026</td><td>Andedot Fee</td><td>Campaign Expense</td><td>Convention</td><td class="num">$200.30</td></tr>
+<tr><td>1/15/2026</td><td>Costco</td><td>Office</td><td>Convention</td><td class="num">$123.33</td></tr>
+<tr><td>1/15/2026</td><td>Morgan Olson</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1,500.00</td></tr>
+<tr><td>2/7/2026</td><td>Sette Bellos</td><td>Other</td><td>Convention</td><td class="num">$177.47</td></tr>
+<tr><td>2/13/2026</td><td>Mail Chimp LLC</td><td>Campaign Expense</td><td>Convention</td><td class="num">$322.35</td></tr>
+<tr><td>2/19/2026</td><td>Le Casa Del Tamal</td><td>Other</td><td>Convention</td><td class="num">$83.58</td></tr>
+<tr><td>2/23/2026</td><td>Morgan Olson</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1,500.00</td></tr>
+<tr><td>3/18/2026</td><td>Parking</td><td>Travel Expenses</td><td>Convention</td><td class="num">$11.20</td></tr>
+<tr><td>3/26/2026</td><td>Blind Rabbit</td><td>Campaign Expense</td><td>Convention</td><td class="num">$236.97</td></tr>
+<tr><td>4/1/2026</td><td>NCSL</td><td>Association Expense</td><td>Convention</td><td class="num">$755.00</td></tr>
+<tr><td>4/3/2026</td><td>Friends of Dan McCay</td><td>Political Support</td><td>Convention</td><td class="num">$5,000.00</td></tr>
+<tr><td>4/3/2026</td><td>John Knotwell for State Senate</td><td>Political Support</td><td>Convention</td><td class="num">$1,000.00</td></tr>
+<tr><td>4/3/2026</td><td>Chris Sloan for Senate</td><td>Political Support</td><td>Convention</td><td class="num">$1,000.00</td></tr>
+<tr><td>4/3/2026</td><td>Committee to Elect Jordan Teuscher</td><td>Political Support</td><td>Convention</td><td class="num">$2,500.00</td></tr>
+<tr><td>4/3/2026</td><td>Elect Brammer</td><td>Political Support</td><td>Convention</td><td class="num">$5,000.00</td></tr>
+<tr><td>4/3/2026</td><td>Scott Sandall Campaign Fund</td><td>Political Support</td><td>Convention</td><td class="num">$5,000.00</td></tr>
+<tr><td>4/4/2026</td><td>Delta</td><td>Travel Expenses</td><td>Convention</td><td class="num">$1,311.79</td></tr>
+<tr><td>4/7/2026</td><td>CSG WEST</td><td>Association Expense</td><td>Convention</td><td class="num">$425.00</td></tr>
+<tr><td>4/13/2026</td><td>UBC Inc</td><td>Travel Expenses</td><td>Convention</td><td class="num">$23.65</td></tr>
+<tr><td>4/13/2026</td><td>Mail Chimp LLC</td><td>Campaign Expense</td><td>Convention</td><td class="num">$322.35</td></tr>
+<tr><td>4/13/2026</td><td>UBC Inc</td><td>Travel Expenses</td><td>Convention</td><td class="num">$31.12</td></tr>
+<tr><td>4/20/2026</td><td>Uber</td><td>Travel Expenses</td><td>Primary</td><td class="num">$98.83</td></tr>
+<tr><td>4/20/2026</td><td>Uber</td><td>Travel Expenses</td><td>Primary</td><td class="num">$34.97</td></tr>
+<tr><td>4/20/2026</td><td>SLC Airport Parking</td><td>Travel Expenses</td><td>Primary</td><td class="num">$120.00</td></tr>
+<tr><td>4/20/2026</td><td>Marriott</td><td>Travel Expenses</td><td>Primary</td><td class="num">$1,677.68</td></tr>
+<tr><td>4/25/2026</td><td>Taxi Service</td><td>Travel Expenses</td><td>Primary</td><td class="num">$18.24</td></tr>
+<tr><td>4/26/2026</td><td>Pieros Italian</td><td>Constituent Services</td><td>Primary</td><td class="num">$381.54</td></tr>
+<tr><td>4/29/2026</td><td>Strap Tank</td><td>Constituent Services</td><td>Primary</td><td class="num">$124.55</td></tr>
+<tr><td>4/30/2026</td><td>The Parking Spot</td><td>Other</td><td>Primary</td><td class="num">$72.60</td></tr>
+<tr><td>4/30/2026</td><td>Chocolate Covered Wagon</td><td>Other</td><td>Primary</td><td class="num">$521.44</td></tr>
+<tr><td>4/30/2026</td><td>Market Haus</td><td>Other</td><td>Primary</td><td class="num">$402.84</td></tr>
+<tr><td>4/30/2026</td><td>March Mailchimp</td><td>Campaign Expense</td><td>Primary</td><td class="num">$322.35</td></tr>
+<tr><td>4/30/2026</td><td>Delta</td><td>Travel Expenses</td><td>Primary</td><td class="num">$2,623.58</td></tr>
+<tr><td>5/13/2026</td><td>Mail Chimp LLC</td><td>Campaign Expense</td><td>Primary</td><td class="num">$322.35</td></tr>
+<tr><td>5/20/2026</td><td>The Parking Spot</td><td>Other</td><td>Primary</td><td class="num">$61.85</td></tr>
+<tr><td>5/26/2026</td><td>Morgan Olson</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1,500.00</td></tr>
+<tr><td>5/26/2026</td><td>John Adams Political Campaign</td><td>Political Support</td><td>Primary</td><td class="num">$2,000.00</td></tr>
+<tr><td>6/7/2026</td><td>Hires Burgers</td><td>Other</td><td>Primary</td><td class="num">$129.16</td></tr>
+      <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>$38,510.00</strong></td></tr>
+    </table></div>
+  </details>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;">Restaurant and gift-shop payments (for example, Chocolate Covered Wagon $521.44 and Market Haus $402.84) are filed as &ldquo;Other&rdquo; or &ldquo;Constituent Services&rdquo; without saying what they were for. Spending after June 7, 2026 was not in hand.</p>
+</div></section>
+
+<section id="anderson-money"><div class="wrap">
+  <div class="eyebrow">ANDERSON&rsquo;S MONEY</div>
+  <h2>$23,989 in 2026, Almost All From Individuals</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Nearly every dollar Anderson raised this year came from individual people, many giving $100 or less. Three groups gave the rest.</p>
+  <p class="section-dek">Her DEX export (DEX20260924_215819; Convention and Primary reports, Jan. 14&ndash;June 9, 2026) plus her later contribution list (June 15&ndash;Sept. 21, 2026). Four rows marked &ldquo;[DELETED]&rdquo; are left out.</p>
+  <div class="fund-row">
+    <div class="fund-donut" style="background:conic-gradient(var(--color-stat) 0% 94.2%, var(--color-link) 94.2% 100%);">
+      <div class="fund-donut-center"><div class="num">$23,989</div><div class="lbl">RAISED, 2026</div></div>
+    </div>
+    <ul class="fund-donut-legend">
+      <li><span class="swatch" style="background:var(--color-stat)"></span> Individuals (158 gifts) &mdash; $22,588.70 (94.2%), including $203 in in-kind help</li>
+      <li><span class="swatch" style="background:var(--color-link)"></span> Unions and a party club (3 gifts) &mdash; $1,400.00 (5.8%)</li>
+    </ul>
+  </div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Individuals filed in Utah, mostly Sandy and Salt Lake City</span><span>$15,970.80</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:100%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Individuals filed outside Utah, mostly Idaho and Washington state</span><span>$6,617.90</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:41%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Teamsters 222 and Operating Engineers Local 3</span><span>$1,250</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:8%"></div></div></div>
+  <div class="fund-bar-row"><div class="bar-label"><span>Women&rsquo;s Democratic Club of Utah</span><span>$150</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:1%"></div></div></div>
+  <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$1,250</div><div class="label">FROM TWO UNIONS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Teamsters 222 $750 (May 29) and Operating Engineers Local 3 of Concord, Calif., $500 (July 21). The Women&rsquo;s Democratic Club of Utah gave $150.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">125</div><div class="label">GIFTS OF $100 OR LESS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Adding up to $5,728.70. Her largest were two $2,000 gifts from one Sandy donor and $1,500 plus $200 from a donor in Coeur d&rsquo;Alene, Idaho.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">55%</div><div class="label">OF EARLY MONEY FROM OUTSIDE UTAH</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Through June 9, mostly Washington state, Idaho and California. On her later list, 92.1% came from Utah.</div></div></div></button>
+
+  </div>
+  <details class="ledger">
+    <summary>Every Anderson contribution, 2026 (161 entries)</summary>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Date</th><th>Contributor (as filed)</th><th>City, state</th><th>Report</th><th>Note</th><th>Amount</th></tr>
+<tr><td>1/14/2026</td><td>Christine Helfrich</td><td>Millcreek, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>1/19/2026</td><td>Kevin Jones</td><td>Layton, UT</td><td>Convention</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>1/19/2026</td><td>Matthew Cain</td><td>Chicago, IL</td><td>Convention</td><td></td><td class="num">$2.50</td></tr>
+<tr><td>1/19/2026</td><td>Previn Witana</td><td>Sacramento, CA</td><td>Convention</td><td></td><td class="num">$1.00</td></tr>
+<tr><td>1/19/2026</td><td>Megan Stump</td><td>Taylorsville, UT</td><td>Convention</td><td></td><td class="num">$1.00</td></tr>
+<tr><td>1/19/2026</td><td>Jeannie Smith</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$2.50</td></tr>
+<tr><td>1/19/2026</td><td>James Van Wagtendonk</td><td>Allentown, PA</td><td>Convention</td><td></td><td class="num">$2.00</td></tr>
+<tr><td>1/20/2026</td><td>Samantha Critelli</td><td>Portland, OR</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>1/20/2026</td><td>Zachary Porter</td><td>Los Angeles, CA</td><td>Convention</td><td></td><td class="num">$1.00</td></tr>
+<tr><td>1/22/2026</td><td>Chris Schott</td><td>Brookline, NH</td><td>Convention</td><td></td><td class="num">$2.50</td></tr>
+<tr><td>1/25/2026</td><td>Jeff Ashcroft</td><td>Logan, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>1/27/2026</td><td>Matthew Erickson</td><td>Washington, DC</td><td>Convention</td><td></td><td class="num">$9.09</td></tr>
+<tr><td>1/30/2026</td><td>Janet Kinneberg</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>1/31/2026</td><td>Sam Heppell</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$18.18</td></tr>
+<tr><td>2/4/2026</td><td>Anne Anderson</td><td>Coeur D'Alene, ID</td><td>Convention</td><td></td><td class="num">$1,500.00</td></tr>
+<tr><td>2/7/2026</td><td>Mitchell Paulin</td><td>Lowell, MA</td><td>Convention</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>2/9/2026</td><td>Ryan Jacobson</td><td>Spokane, WA</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/9/2026</td><td>Callie Anderson</td><td>Lynwood, WA</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/10/2026</td><td>Ellen Wilson</td><td>Columbia, MD</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>2/10/2026</td><td>Larisa Stewart</td><td>Layton, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/11/2026</td><td>Rebekah Honeycutt</td><td>Fort Huachuca, AZ</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>2/11/2026</td><td>Ron Mcmahon</td><td>Newbury Park, CA</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/17/2026</td><td>Mandianne Orton</td><td>Ogden, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>2/19/2026</td><td>Mark Nolan</td><td>Puyallup, WA</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/19/2026</td><td>Jillian Ross</td><td>South Burlington, VT</td><td>Convention</td><td></td><td class="num">$300.00</td></tr>
+<tr><td>2/19/2026</td><td>David Vance</td><td>Layton, UT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>2/20/2026</td><td>Ryan Jacobson</td><td>Spokane, WA</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/21/2026</td><td>Andrea Stranger</td><td>Spokane, WA</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/21/2026</td><td>Luke Maynes</td><td>West Jordan, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>2/23/2026</td><td>Paige Treglown</td><td>Layton, UT</td><td>Convention</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>2/23/2026</td><td>Spencer Poll</td><td>Pensacola, FL</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>2/23/2026</td><td>Beth Strand</td><td>Hayden, ID</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>2/23/2026</td><td>Denise Lundy</td><td>Coeur D'Alene, ID</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>2/23/2026</td><td>Karen La Rue</td><td>Kcmo, MO</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/24/2026</td><td>Jeff Ashcroft</td><td>Logan, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>2/24/2026</td><td>John Brenner</td><td>Fulton, MD</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/24/2026</td><td>Brendan Rickerd</td><td>Crownsville, MD</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>2/26/2026</td><td>Mei Chen</td><td>Layton, UT</td><td>Convention</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>2/27/2026</td><td>Linda Stranger</td><td>Dalton Gardens, ID</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>2/28/2026</td><td>Geoffrey Robinson</td><td>Hartfordc, CT</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>3/5/2026</td><td>Marcela Lamprea Laguna</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>3/6/2026</td><td>Tacy Hartman</td><td>Salt Lake City, UT</td><td>Convention</td><td></td><td class="num">$2.36</td></tr>
+<tr><td>3/6/2026</td><td>Janet Kinneberg</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>3/6/2026</td><td>Briana Anderson</td><td>Seattle, WA</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/7/2026</td><td>Jihan Anderson Deryckx</td><td>Bellingham, WA</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>3/8/2026</td><td>Rena Pacheco-Theard</td><td>Fox Island, WA</td><td>Convention</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>3/9/2026</td><td>Ryan Jacobson</td><td>Spokane, WA</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/9/2026</td><td>Janet Kinneberg</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>3/9/2026</td><td>Kimberly Hodge</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>3/10/2026</td><td>Stephen Hansen</td><td>Sacramento, CA</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>3/10/2026</td><td>Carl Anderson</td><td>Pocatello, ID</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/10/2026</td><td>Brian Stranger</td><td>Dalton Gardens, ID</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/12/2026</td><td>Becky Tuttle</td><td>Lake Oswego, OR</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>3/18/2026</td><td>Kevin Mccarthy</td><td>Belvedere Tiburon, CA</td><td>Convention</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>3/18/2026</td><td>Shannon Kraemer</td><td>Wilmette, IL</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>3/19/2026</td><td>Natalie Moore</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>3/19/2026</td><td>William Donahoo</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>3/25/2026</td><td>Jeff Ashcroft</td><td>Logan, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>3/26/2026</td><td>Scott Adamson</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>3/30/2026</td><td>Dianne Doyle</td><td>Ogden, UT</td><td>Convention</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>4/1/2026</td><td>Erin Jemison</td><td>Holladay, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/3/2026</td><td>Mimi Dutton</td><td>Draper, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/7/2026</td><td>Suzanne Harrison</td><td>Draper, UT</td><td>Convention</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/9/2026</td><td>Janet Kinneberg</td><td>Sandy, UT</td><td>Convention</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>4/14/2026</td><td>Larry Stewart</td><td>Layton, UT</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>4/14/2026</td><td>Vicki Henderson</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/15/2026</td><td>Zach Robinson</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/15/2026</td><td>Lauren Carlson</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/15/2026</td><td>Luke Maynes</td><td>West Jordan, UT</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>4/15/2026</td><td>Casey Erickson</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/15/2026</td><td>Robert Hughes</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>4/15/2026</td><td>Lillian Bowles</td><td>Herriman, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>4/15/2026</td><td>Andrew Dressel</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/15/2026</td><td>Sharla Pearce</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>4/15/2026</td><td>Travis Smith</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>4/20/2026</td><td>Luke Maynes</td><td>West Jordan, UT</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>4/21/2026</td><td>Luke Maynes</td><td>West Jordan, UT</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>4/25/2026</td><td>Karen Schroyer</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>4/30/2026</td><td>Jeff Ashcroft</td><td>Logan, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>5/1/2026</td><td>Carolyn Shepherd</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>5/5/2026</td><td>James Longstaff</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>5/9/2026</td><td>Janet Kinneberg</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>5/13/2026</td><td>Trisha Beck</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>5/14/2026</td><td>Whitney Child</td><td>Saratoga Springs, UT</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>5/14/2026</td><td>Elizabeth Garcia</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>5/18/2026</td><td>Elizabeth Garcia</td><td>Sandy, UT</td><td>Primary</td><td>In-kind: Button making</td><td class="num">$43.00</td></tr>
+<tr><td>5/19/2026</td><td>Doug Nielsen</td><td>Cedar Hills, UT</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>5/20/2026</td><td>Briton Flynn</td><td>Draper, UT</td><td>Primary</td><td>In-kind: Graphic Design</td><td class="num">$160.00</td></tr>
+<tr><td>5/21/2026</td><td>Luke Maynes</td><td>West Jordan, UT</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>5/22/2026</td><td>Patrick de Freitas</td><td>Salt Lake City, UT</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>5/22/2026</td><td>Stephanie James</td><td>Draper, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>5/29/2026</td><td>Teamsters 222</td><td>West Valley City, UT</td><td>Primary</td><td></td><td class="num">$750.00</td></tr>
+<tr><td>5/31/2026</td><td>Jeff Ashcroft</td><td>Logan, UT</td><td>Primary</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>6/5/2026</td><td>Ryan Jacobson</td><td>Spokane, WA</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>6/7/2026</td><td>Teresa Schmidt</td><td>Spearfish, SD</td><td>Primary</td><td></td><td class="num">$1.47</td></tr>
+<tr><td>6/9/2026</td><td>Janet Kinneberg</td><td>Sandy, UT</td><td>Primary</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>6/15/2026</td><td>Women's Democratic Club of Utah</td><td>Midvale, UT</td><td>Later list</td><td></td><td class="num">$150.00</td></tr>
+<tr><td>6/21/2026</td><td>Luke Maynes</td><td>West Jordan, UT</td><td>Later list</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>6/21/2026</td><td>David Howe</td><td>Oakland, CA</td><td>Later list</td><td></td><td class="num">$5.88</td></tr>
+<tr><td>6/24/2026</td><td>Parker Bond</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>6/26/2026</td><td>Ben Jones</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$1.92</td></tr>
+<tr><td>7/1/2026</td><td>Luke Maynes</td><td>West Jordan, UT</td><td>Later list</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>7/2/2026</td><td>Sarah Reale</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>7/8/2026</td><td>Theresa McHugh</td><td>Dalton Gardens, ID</td><td>Later list</td><td></td><td class="num">$75.00</td></tr>
+<tr><td>7/9/2026</td><td>Janet Kinneberg</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>7/11/2026</td><td>James Scott</td><td>Glenelg, MD</td><td>Later list</td><td></td><td class="num">$250.00</td></tr>
+<tr><td>7/13/2026</td><td>Michelle Schult</td><td>Columbus, OH</td><td>Later list</td><td></td><td class="num">$1.39</td></tr>
+<tr><td>7/15/2026</td><td>Robert Vorwald</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$32.00</td></tr>
+<tr><td>7/15/2026</td><td>Jeff Ashcroft</td><td>Logan, UT</td><td>Later list</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>7/16/2026</td><td>Stephanie James</td><td>Draper, UT</td><td>Later list</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>7/17/2026</td><td>Sean Upton</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$75.00</td></tr>
+<tr><td>7/18/2026</td><td>Deborah Sigma</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>7/18/2026</td><td>John Mitcham</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>7/18/2026</td><td>Robert Vorwald</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>7/19/2026</td><td>Michele Evans</td><td>Draper, UT</td><td>Later list</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>7/20/2026</td><td>Barbara Antonetti</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>7/21/2026</td><td>Christine Bond</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>7/21/2026</td><td>Operating Engineers Local 3</td><td>Concord, CA</td><td>Later list</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>7/26/2026</td><td>Ben Jones</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$1.92</td></tr>
+<tr><td>8/1/2026</td><td>Luke Maynes</td><td>West Jordan, UT</td><td>Later list</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>8/3/2026</td><td>Robert Douglass</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$2,000.00</td></tr>
+<tr><td>8/6/2026</td><td>Kathy Van Dame</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>8/9/2026</td><td>Janet Kinneberg</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>8/13/2026</td><td>Alice Steiner</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>8/18/2026</td><td>Jeff Ashcroft</td><td>Logan, UT</td><td>Later list</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>8/18/2026</td><td>Ali Cloward</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>8/18/2026</td><td>Michele Evans</td><td>Draper, UT</td><td>Later list</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>8/19/2026</td><td>Tina Ruga</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>8/19/2026</td><td>Carolyn Curtis</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>8/19/2026</td><td>Diane Forster-Burke</td><td>Cottonwood Heights, UT</td><td>Later list</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>8/25/2026</td><td>Parker Bond</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$600.00</td></tr>
+<tr><td>8/26/2026</td><td>Ben Jones</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$1.92</td></tr>
+<tr><td>8/31/2026</td><td>Peter Metcalf</td><td>Park City, UT</td><td>Later list</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>8/31/2026</td><td>Christine Bond</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>8/31/2026</td><td>Darren Larsen</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>9/1/2026</td><td>Luke Maynes</td><td>West Jordan, UT</td><td>Later list</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>9/2/2026</td><td>David Kliger</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>9/2/2026</td><td>Alan Smith</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$500.00</td></tr>
+<tr><td>9/7/2026</td><td>Bob Gilchrist</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>9/9/2026</td><td>Janet Kinneberg</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$10.00</td></tr>
+<tr><td>9/9/2026</td><td>Patrice Arent</td><td>Milcreek, UT</td><td>Later list</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/9/2026</td><td>Robert Elkington</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/9/2026</td><td>Leonard Eccles</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>9/9/2026</td><td>Jackie G Detmers</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>9/11/2026</td><td>Jonathan King</td><td>Seattle, UT</td><td>Later list</td><td></td><td class="num">$1.00</td></tr>
+<tr><td>9/12/2026</td><td>Dave Moore</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>9/13/2026</td><td>David Kinnecom</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>9/15/2026</td><td>Jeff Ashcroft</td><td>Logan, UT</td><td>Later list</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>9/15/2026</td><td>Elaine Larson</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/15/2026</td><td>Mat Harris</td><td>Salt Lake City, UT</td><td>Later list</td><td></td><td class="num">$50.00</td></tr>
+<tr><td>9/16/2026</td><td>Fred Thompson</td><td>West Jordan, UT</td><td>Later list</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/16/2026</td><td>Marc Peterson</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/16/2026</td><td>Fred Thompson</td><td>West Jordan, UT</td><td>Later list</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/16/2026</td><td>Bruce Wood</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$1,000.00</td></tr>
+<tr><td>9/16/2026</td><td>Anne Anderson</td><td>Coeur d'Alene, ID</td><td>Later list</td><td></td><td class="num">$200.00</td></tr>
+<tr><td>9/16/2026</td><td>Nolan Williams</td><td>Tempe, AZ</td><td>Later list</td><td></td><td class="num">$1.07</td></tr>
+<tr><td>9/17/2026</td><td>Terri Hrechkosy</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/17/2026</td><td>Porter Williams</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$25.00</td></tr>
+<tr><td>9/18/2026</td><td>Victoria Schmidt</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$100.00</td></tr>
+<tr><td>9/19/2026</td><td>Michele Evans</td><td>Draper, UT</td><td>Later list</td><td></td><td class="num">$20.00</td></tr>
+<tr><td>9/21/2026</td><td>Robert Douglass</td><td>Sandy, UT</td><td>Later list</td><td></td><td class="num">$2,000.00</td></tr>
+      <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td></td><td class="num"><strong>$23,988.70</strong></td></tr>
+    </table></div>
+  </details>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;">Several donors share Anderson&rsquo;s surname; this page doesn&rsquo;t assign relationships from surnames. One later-list donor is filed as &ldquo;Seattle, UT&rdquo; with a Washington ZIP.</p>
+</div></section>
+
+<section id="anderson-spending"><div class="wrap">
+  <div class="eyebrow">ANDERSON&rsquo;S SPENDING</div>
+  <h2>$9,831.73 Out, Mostly Printing and Consultants</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Anderson&rsquo;s campaign pays for printing, campaign help and party fees. Every payee is named.</p>
+  <div class="chart-card">
+    <h3>Where her money went</h3>
+    <p class="cap">Her largest payees, Jan. 18&ndash;June 9, 2026, as filed.</p>
+    <div class="chart-box" style="height:360px;"><canvas id="spendChartA" aria-label="Bar chart of Anderson spending by payee"></canvas></div>
+  </div>
+  <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$3,046</div><div class="label">UNION PRINT SHOP</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>June 9, filed as &ldquo;Advertising.&rdquo; Her largest single payment.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$5,000</div><div class="label">TWO CAMPAIGN FIRMS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Giant Sequoia LLC $2,500 (March 6) and Tissot Solutions $1,250 twice (March 19 and April 6), filed as &ldquo;Campaign Expense.&rdquo;</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">$1,173</div><div class="label">TO DEMOCRATIC PARTY GROUPS</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Utah Democratic Party $772.71 (Feb. 28) and Salt Lake County Democratic Party $400 (March 30). ActBlue processing fees add $360.08.</div></div></div></button>
+
+  </div>
+  <details class="ledger">
+    <summary>Every Anderson expenditure, 1/18/26&ndash;6/9/26 (31 entries)</summary>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Date</th><th>Payee (as filed)</th><th>Purpose (as filed)</th><th>Report</th><th>Amount</th></tr>
+<tr><td>1/18/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$3.50</td></tr>
+<tr><td>1/25/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$56.81</td></tr>
+<tr><td>2/1/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1.31</td></tr>
+<tr><td>2/8/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$0.40</td></tr>
+<tr><td>2/15/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$37.53</td></tr>
+<tr><td>2/22/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$42.48</td></tr>
+<tr><td>2/28/2026</td><td>Utah Democratic Party</td><td>Campaign Expense</td><td>Convention</td><td class="num">$772.71</td></tr>
+<tr><td>3/1/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$46.24</td></tr>
+<tr><td>3/6/2026</td><td>Giant Sequoia LLC</td><td>Campaign Expense</td><td>Convention</td><td class="num">$2,500.00</td></tr>
+<tr><td>3/8/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$44.74</td></tr>
+<tr><td>3/15/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$20.95</td></tr>
+<tr><td>3/19/2026</td><td>Tissot Solutions</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1,250.00</td></tr>
+<tr><td>3/21/2026</td><td>DemCast</td><td>Donations</td><td>Convention</td><td class="num">$50.00</td></tr>
+<tr><td>3/22/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$16.80</td></tr>
+<tr><td>3/29/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$3.96</td></tr>
+<tr><td>3/30/2026</td><td>Salt Lake County Democratic Party</td><td>Donations</td><td>Convention</td><td class="num">$400.00</td></tr>
+<tr><td>3/31/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$0.99</td></tr>
+<tr><td>4/5/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$7.90</td></tr>
+<tr><td>4/6/2026</td><td>Tissot Solutions</td><td>Campaign Expense</td><td>Convention</td><td class="num">$1,250.00</td></tr>
+<tr><td>4/12/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Convention</td><td class="num">$4.35</td></tr>
+<tr><td>4/19/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$33.99</td></tr>
+<tr><td>4/26/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$4.75</td></tr>
+<tr><td>5/3/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$2.97</td></tr>
+<tr><td>5/10/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1.19</td></tr>
+<tr><td>5/17/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$0.70</td></tr>
+<tr><td>5/18/2026</td><td>DC Badge</td><td>Office</td><td>Primary</td><td class="num">$43.00</td></tr>
+<tr><td>5/20/2026</td><td>Briton Flynn</td><td>Advertising</td><td>Primary</td><td class="num">$160.00</td></tr>
+<tr><td>5/24/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$26.08</td></tr>
+<tr><td>5/31/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$1.98</td></tr>
+<tr><td>6/7/2026</td><td>ActBlue</td><td>Campaign Expense</td><td>Primary</td><td class="num">$0.46</td></tr>
+<tr><td>6/9/2026</td><td>Union Print Shop</td><td>Advertising</td><td>Primary</td><td class="num">$3,045.94</td></tr>
+      <tr><td></td><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>$9,831.73</strong></td></tr>
+    </table></div>
+  </details>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;">The two firm payments are filed as &ldquo;Campaign Expense&rdquo; without saying what they paid for. Spending after June 9, 2026 was not in hand.</p>
+</div></section>
+
+<section id="record"><div class="wrap">
+  <div class="eyebrow">CULLIMORE&rsquo;S RECORD</div>
+  <h2>A Senate Leader Who Carries Many Bills</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>As Majority Leader, Cullimore sponsored or carried 40 bills in 2026, from AI and digital identity to housing and economic development. This outlet has already graded several of them. Anderson has not held office.</p>
+  <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">8 of 14</div><div class="label">HIS OWN 2026 BILLS SIGNED</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Including S.B. 275 (state digital ID), S.B. 292 (autonomous systems), S.B. 267 (school software) and S.B. 270 (state courts). Six died: S.B. 211 (torts), S.B. 330 (land use), S.B. 306 (special districts), S.B. 138, S.B. 114 and S.B. 113. Six more drafts were abandoned.</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">20 of 26</div><div class="label">HOUSE BILLS HE CARRIED, SIGNED</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Including H.B. 320 (AI office), H.B. 492 (housing and infrastructure), H.B. 507 (economic development), H.B. 467 (Utah Fits All scholarships), H.B. 447 (tobacco) and H.B. 71 (health provider directory).</div></div></div></button>
+
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">19</div><div class="label">COMMITTEE SEATS, PER LEGISTORM</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>His profile counted 22. Including Senate Business and Labor, Revenue and Taxation, and six confirmation committees that review the governor&rsquo;s appointees, plus Executive Appropriations and Legislative Management.</div></div></div></button>
+
+  </div>
+  <div class="table-scroll" style="margin:18px 0;"><table class="entity-table">
+    <tr><th>Bill</th><th>His role</th><th>What it does, in one line</th><th>Result</th><th>Grade</th></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb276.html">H.B. 276 (2026)</a></td><td>Senate sponsor; listed as sponsor of the final substitute</td><td>AI-made intimate images and content-origin labels; the final version has no statutory damages and adds safe harbors</td><td>Signed</td><td>C</td></tr>
+    <tr><td>H.B. 71 (2026)</td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>New rules: insurers must post searchable provider directories that need no account, meet a 15-day standard (24 hours if urgent) for behavioral health care or arrange out-of-network care at in-network cost, and the insurance commissioner may hold patients to in-network costs when an insurer knew or should have known its directory was wrong. Between the original and the final version: 7 days became 15; the start moved from July 1, 2026 to Jan. 1, 2027; matching Medicaid rules became a study group; yearly directory audits and reports to the commissioner became &ldquo;upon request&rdquo;; the commissioner&rsquo;s &ldquo;shall&rdquo; make rules became &ldquo;may&rdquo;; and licensing penalties for providers who don&rsquo;t verify their listings became educational letters. The audit-filing and &ldquo;may&rdquo; changes came in the fourth substitute, after the Senate committee passed the third 5&ndash;0&ndash;2. It does not require price estimates before care.</td><td>Keeping the yearly audit filings with the commissioner, the Medicaid rules and the provider penalties, and adding cost estimates before non-emergency care, the goal his campaign site names.</td></tr>
+    <tr><td>H.B. 320 (2026)</td><td>Senate floor sponsor</td><td>Widens the state AI office&rsquo;s power to sign agreements letting companies use AI despite a state law or rule, now including courts, schools and local governments; 12 months per agreement plus up to two extensions</td><td>Signed</td><td>C</td></tr>
+    <tr><td>H.B. 220 (2026)</td><td>Senate floor sponsor</td><td>Moves several public-safety reports into a state data portal with a searchable public section; the commission running it can refer records requests to the source agency</td><td>Signed</td><td>C</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb337.html">S.B. 337 (2025)</a></td><td>Primary sponsor</td><td>Would have created the Beehive Development Agency, able to designate project areas statewide</td><td>Died without a Senate floor vote</td><td>F</td></tr>
+    <tr><td>H.B. 530 (2025)</td><td>Senate sponsor</td><td>Created the Nucleus Institute; exempts it from open-meetings and records law</td><td>Signed</td><td>D</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb492.html">H.B. 492 (2026)</a></td><td>Senate sponsor</td><td>Housing and infrastructure partnership; an $18 million loan relabeled; an ethics exemption for officials on affordable-housing matters</td><td>Signed</td><td>D</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb475.html">H.B. 475 (2026)</a></td><td>Senate sponsor</td><td>Renames the Governor&rsquo;s Office of Economic Opportunity and creates an Economic Development Council; a required oversight work group was dropped on the House floor</td><td>Signed</td><td>D</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb507.html">H.B. 507 (2026)</a></td><td>Senate sponsor</td><td>State coordination of regional and local economic development projects</td><td>Signed</td><td>D</td></tr>
+    <tr><td><a href="sd18-fiefia-anderson.html">S.B. 267 (2026)</a></td><td>Primary sponsor</td><td>School software privacy rules, narrowed to a study</td><td>Signed</td><td>D</td></tr>
+    <tr><td>H.B. 477 (2026)</td><td>Floor sponsor</td><td>Land use regulation; folded into S.B. 284</td><td>Died as its own bill</td><td>D</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb510.html">H.B. 510 (2026)</a></td><td>Senate sponsor</td><td>Municipal incorporation changes giving counties a role</td><td>Died</td><td>D</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb65-case-file.html">S.B. 65 (2026)</a></td><td>Voted yes (Sen. Fillmore&rsquo;s bill)</td><td>Moves a locally raised school levy into a state fund</td><td>Passed Senate 18&ndash;11; died in House</td><td>D</td></tr>
+    <tr><td>H.B. 467 (2026)</td><td>Senate sponsor</td><td>Utah Fits All scholarship rules</td><td>Signed</td><td>C</td></tr>
+    <tr><td>H.B. 71 (2026)</td><td>Senate sponsor</td><td>Insurer provider directories; timely behavioral health care</td><td>Signed</td><td>C</td></tr>
+    <tr><td>S.B. 211, S.B. 275, H.B. 447 and his other 2026 bills</td><td>Sponsor or floor sponsor</td><td>Torts; state digital ID; tobacco</td><td>S.B. 211 died; others signed</td><td>Not graded: bill text not read</td></tr>
+  </table></div>
+  <details class="ledger" open>
+    <summary>H.B. 530 (2025) and &ldquo;open meetings rules&rdquo;</summary>
+  <div class="record-card" style="margin-top:10px;">
+    <h3>H.B. 530 (2025) and &ldquo;open meetings rules&rdquo;</h3>
+    <p>Cullimore&rsquo;s campaign site lists &ldquo;Government Accountability&rdquo; as a priority: &ldquo;An accessible and transparent government best serves the people. We must continue to encourage open meetings rules, budget accountability, and proper oversight and reporting of government expenditures.&rdquo;</p>
+    <p>H.B. 530 (2025), which he carried in the Senate, created the Nucleus Institute and says: &ldquo;The institute and the Utah innovation fund are not subject to: (a) Title 52, Chapter 4, Open and Public Meetings Act; or (b) Title 63G, Chapter 2, Government Records Access and Management Act.&rdquo; The Nucleus Institute&rsquo;s own &ldquo;Our Team&rdquo; page, as read for his profile, lists him as a board member; his disclosure form does not list it.</p>
+    <p style="margin-top:8px;">Full detail: <a href="https://weber-county-hive.github.io/utah-senators/kirk-cullimore.html">his Utah Senators profile</a>, Movement III.</p>
+    <span class="rc-tag">Statute quoted from the enrolled bill as read for his profile; campaign site read Sept. 25, 2026</span>
+  </div>
+  </details>
+  <details class="ledger" open>
+    <summary>H.B. 276 (2026): AI-made intimate images, and the final version</summary>
+  <div class="record-card" style="margin-top:10px;">
+    <h3>H.B. 276 (2026): AI-made intimate images, and the final version</h3>
+    <p>Rep. Ariel Defay&rsquo;s H.B. 276, &ldquo;Artificial Intelligence Modifications,&rdquo; was signed March 24, 2026 and takes effect Jan. 1, 2027. Cullimore was its Senate sponsor, and the bill page lists him as sponsor of the second substitute, the version that became law. As enrolled, it:</p>
+    <ul style="margin:0;padding-left:18px;">
+      <li>creates the Digital Voyeurism Prevention Act: an AI &ldquo;generation service&rdquo; may not distribute a &ldquo;counterfeit intimate image&rdquo; of a real person without that person&rsquo;s consent, kept on record for seven years;</li>
+      <li>lets the person depicted sue for actual damages, including emotional distress, punitive damages for willful, reckless or malicious violations, and attorney fees, within three years of discovery or 10 years of the violation;</li>
+      <li>requires &ldquo;covered platforms,&rdquo; as the federal Take It Down Act defines them, to remove reported images within 48 hours;</li>
+      <li>gives generation services a safe harbor if they keep and publish a written policy and safeguards, run a consent system and act promptly on notice, and gives platforms one if they keep takedown procedures and act in good faith; either can raise it before trial, and a platform that wins on it is awarded its attorney fees;</li>
+      <li>requires a plaintiff to plead &ldquo;with particularity&rdquo; why the company doesn&rsquo;t qualify for the safe harbor; a second failed complaint is dismissed with prejudice and the company is awarded its fees; and</li>
+      <li>creates the Digital Content Provenance Standards Act: large platforms must show and keep content-origin data, camera makers must embed it (for devices sold from 2028), and AI providers with over 1 million monthly users must label AI-made images, video and audio, enforced by the Division of Consumer Protection with fines up to $2,500 per violation.</li>
+    </ul>
+    <p><strong>How the final version differs from the original.</strong> Per the compare document (original bill against the second substitute), the original&rsquo;s civil-liability sections included &ldquo;statutory damages in an amount not less than $10,000 and not more than $100,000 for each violation&rdquo; against generation services and $5,000 to $50,000 against platforms; those are gone. The original also had a separate &ldquo;actual knowledge&rdquo; clause for platforms and a rebuttable presumption after a missed takedown; the enacted version defines platform liability mainly by notice and takedown. File-sharing platforms were dropped from the definition of a large online platform, a section on licensing AI systems to third parties was removed, and the start date moved from May 6, 2026 to Jan. 1, 2027. The safe-harbor and pleading-standard sections are not among the original&rsquo;s sections. Which substitute, the House&rsquo;s first or the second, made each change was not determined; the compare to the first substitute was not read. The enacted law keeps that a plaintiff need not prove actual damages to win an order stopping the distribution and removing the images, and that a plaintiff who wins recovers attorney fees.</p>
+    <p><strong>Votes and hearings:</strong> the House Economic Development and Workforce Services Committee adopted the first substitute and recommended it 5&ndash;1 on Feb. 12, 2026 (Rep. Leah Hansen voting no); the House passed it, amended, 66&ndash;0 on Feb. 20. The Senate Transportation, Public Utilities, Energy, and Technology Committee amended and recommended it 5&ndash;0 on Feb. 26; per the minutes, the Commerce Department&rsquo;s executive director, the state&rsquo;s chief privacy officer and the CEO of SureMark Digital spoke in favor, and the Abundance Institute spoke to the bill. The Senate and final House votes on the second substitute were not in hand.</p>
+    <p><strong>Worth seeing side by side:</strong> Google, whose search engine and platforms fit the bill&rsquo;s &ldquo;large online platform&rdquo; definition, gave his campaign $5,000 on July 16, 2026; Encode AI gave $5,000 on Jan. 15. A personal-injury law firm and the trial lawyers&rsquo; association gave him $25,000 in 2026. The records don&rsquo;t show any connection between the gifts and the substitute beyond subject and timing.</p>
+    <span class="rc-tag rc-good">Heard and amended in open committee in both chambers</span>
+    <span class="rc-tag">Read from the enrolled text, the S02 compare document, both committees&rsquo; minutes and the House vote</span>
+    <p style="margin-top:8px;">Full case file: <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb276.html">H.B. 276 (Bill-Tracker, grade C)</a>.</p>
+  </div>
+  </details>
+  <details class="ledger">
+    <summary>H.B. 320 (2026): waivers of state law for AI companies</summary>
+  <div class="record-card" style="margin-top:10px;">
+    <h3>H.B. 320 (2026): waivers of state law for AI companies</h3>
+    <p>Cullimore was Senate floor sponsor of Rep. Paul Cutler&rsquo;s H.B. 320, &ldquo;Office of Artificial Intelligence Policy Amendments,&rdquo; signed March 18, 2026. It changes the Office of Artificial Intelligence Policy that Cullimore&rsquo;s 2024 bill created. As enrolled, it:</p>
+    <ul style="margin:0;padding-left:18px;">
+      <li>defines a &ldquo;regulatory mitigation agreement&rdquo; as one that &ldquo;permits a participant to use or deploy artificial intelligence technology despite a law or rule that might impede or interfere with that use or deployment,&rdquo; with terms such as cure periods before penalties or &ldquo;reduced civil fines during the demonstration period&rdquo;;</li>
+      <li>adds &ldquo;joint interpretation agreements&rdquo; that clarify how a state law or rule applies to an AI technology;</li>
+      <li>lets these agreements be made with a &ldquo;governmental entity,&rdquo; defined as the judiciary, a state-funded college or public school, or a city, county or other political subdivision, as well as state agencies;</li>
+      <li>requires each agreement to list safeguards, any required disclosures to consumers and reporting for audits, requires the office to &ldquo;perform regular audits&rdquo; while an agreement is in effect, and keeps the participant subject to every law not expressly waived;</li>
+      <li>requires the office&rsquo;s yearly report to the Business and Labor Interim Committee to cover &ldquo;any regulatory mitigation or joint interpretation agreements executed by the office&rdquo;;</li>
+      <li>says the state is not responsible for claims arising from a participant&rsquo;s actions under an agreement; and</li>
+      <li>limits an agreement&rsquo;s demonstration period to 12 months and lets the office grant &ldquo;up to two extensions&rdquo;; the length of an extension is not stated in the text as read.</li>
+    </ul>
+    <p style="margin-top:8px;"><strong>Votes and hearings:</strong> in the House Economic Development and Workforce Services Committee on Feb. 4, 2026, Rep. Doug Fiefia (<a href="sd18-fiefia-anderson.html">SD-18</a>) moved Amendment #1, which allows &ldquo;up to two extensions&rdquo; (7&ndash;0), and moved to recommend the bill (7&ndash;1, Rep. Leah Hansen voting no). Per the minutes, the director of the Office of Artificial Intelligence helped present it and a resident spoke against it. The House passed it 69&ndash;0 on Feb. 17. The Senate Government Operations and Political Subdivisions Committee recommended it 6&ndash;0 on Feb. 23, and the Senate passed it 26&ndash;0 and 28&ndash;0.</p>
+    <span class="rc-tag rc-good">Adds audits and yearly reporting of each agreement</span>
+    <span class="rc-tag">Read from the enrolled text (a plain-text copy that shows old and new wording together), the status page and both committees&rsquo; minutes</span>
+  </div>
+  </details>
+  <details class="ledger">
+    <summary>H.B. 492 (2026): housing loans, a convention center and the canyons</summary>
+  <div class="record-card" style="margin-top:10px;">
+    <h3>H.B. 492 (2026): housing loans, a convention center and the canyons</h3>
+    <p>Cullimore was Senate sponsor of Rep. Calvin Roberts&rsquo; H.B. 492, &ldquo;Transportation, Infrastructure, and Housing Amendments,&rdquo; signed March 25, 2026. Per its enrolled summary and text, it:</p>
+    <ul style="margin:0;padding-left:18px;">
+      <li>creates the State Housing Infrastructure Partnership Fund and a board that can lend to cities and other political subdivisions for infrastructure that allows housing to be built;</li>
+      <li>lets the board make one loan of up to $18,000,000, for up to three years, to the Point of the Mountain State Land Authority;</li>
+      <li>&ldquo;exempts conduct arising from the provision of affordable housing, if the housing benefits are provided to all qualified residents, from certain ethics requirements for public officers&rdquo;;</li>
+      <li>appropriates $100,000,000 in fund transfers and directs $50,000,000 from the County of the First Class Highway Projects Fund to a new Convention Center Reserves Restricted Account for a county-owned convention center; and</li>
+      <li>&ldquo;establishes requirements in relation to a public transit hub project for the Cottonwood Canyons,&rdquo; in the district.</li>
+    </ul>
+    <p style="margin-top:8px;">Full case file, including how the $18,000,000 loan was first labeled: <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb492.html">H.B. 492 (Bill-Tracker)</a>.</p>
+    <span class="rc-tag">Read from the enrolled text&rsquo;s summary and selected sections</span>
+  </div>
+  </details>
+  <details class="ledger">
+    <summary>H.B. 220 (2026): public-safety data and a records-request rule</summary>
+  <div class="record-card" style="margin-top:10px;">
+    <h3>H.B. 220 (2026): public-safety data and a records-request rule</h3>
+    <p>Cullimore was Senate floor sponsor of Rep. Ryan Wilcox&rsquo;s H.B. 220, &ldquo;Public Safety Data Amendments,&rdquo; signed March 26, 2026. As enrolled, it:</p>
+    <ul style="margin:0;padding-left:18px;">
+      <li>moves three reports (attempted gun purchases by people barred for domestic violence, and sexual assaults in juvenile detention and in prisons) from the Legislature&rsquo;s Law Enforcement and Criminal Justice Interim Committee to the State Commission on Criminal and Juvenile Justice&rsquo;s public safety portal;</li>
+      <li>adds new data to the portal, including crime in college student housing, sexual assault kits, a Board of Pardons and Parole report and the Prosecutor Conduct Commission&rsquo;s annual complaint report;</li>
+      <li>requires &ldquo;a searchable portion of the public safety portal&rdquo; that is &ldquo;available to the public&rdquo; and shows de-identified data; and</li>
+      <li>says the commission &ldquo;is not required to provide a record in response to a record request&rdquo; for records it receives for the portal, but &ldquo;shall inform the person making a record request&rdquo; of the agency it got the record from.</li>
+    </ul>
+    <p style="margin-top:8px;"><strong>What changed:</strong> per the compare document, the second substitute removed a new part titled &ldquo;Researcher Access to Criminal Justice Information,&rdquo; which would have required courts, police, prosecutors, jails and others to provide anonymized criminal justice information to researchers in certain circumstances. That substitute was adopted in the House Law Enforcement and Criminal Justice Committee on Feb. 2, 2026, 10&ndash;0, on a motion by Rep. Katy Hall (<a href="hd11-calder-hall.html">HD-11</a>), which then recommended it 10&ndash;0. The Senate Government Operations and Political Subdivisions Committee recommended it 6&ndash;0 on Feb. 17. No public speakers are recorded in either set of minutes. Rep. Wilcox, its primary sponsor, is on this year&rsquo;s ballot (<a href="hd7-mittendorf-wilcox.html">HD-7</a>). Floor votes were not in hand.</p>
+    <span class="rc-tag rc-good">Adds a searchable public section to the data portal</span>
+    <span class="rc-tag">Read from the enrolled text, the S02-vs-S01 compare document and both committees&rsquo; minutes</span>
+  </div>
+  </details>
+  <details class="ledger">
+    <summary>Bills next to his donors and board seats</summary>
+  <div class="record-card" style="margin-top:10px;">
+    <h3>Bills next to his donors and board seats</h3>
+    <ul style="margin:0;padding-left:18px;">
+      <li><strong>Torts:</strong> he was primary sponsor of S.B. 211, &ldquo;Tort Amendments&rdquo; (died). A personal-injury law firm and the trial lawyers&rsquo; association gave him $25,000 in 2026.</li>
+      <li><strong>Health care:</strong> he floor-sponsored H.B. 71, &ldquo;Health Provider Directory and Access Amendments&rdquo; (signed), which sets insurer provider-directory and behavioral-health access rules, and sits on Common Spirit Utah&rsquo;s community advisory board. Health care groups gave him $17,500 in 2026.</li>
+      <li><strong>Tobacco:</strong> he floor-sponsored H.B. 447, &ldquo;Tobacco Amendments&rdquo; (signed). Altria gave him $5,000 on Sept. 1, 2026.</li>
+      <li><strong>AI and tech:</strong> he sponsored or carried more than a dozen AI, data and digital-identity bills in 2026. Encode AI and Google gave him $5,000 each.</li>
+    </ul>
+    <p style="margin-top:8px;">The bills and the gifts are both public records. The records don&rsquo;t show any connection between them beyond subject and timing. H.B. 71 was read for the grades below; the other bills&rsquo; texts were not read for this page.</p>
+  </div>
+  </details>
+  <details class="ledger">
+    <summary>His votes on bills in other case files</summary>
+  <div class="record-card" style="margin-top:10px;">
+    <ul style="margin:0;padding-left:18px;">
+      <li><strong>S.B. 236 (2026),</strong> Sen. Keith Grover&rsquo;s property tax exemption bill: voted yes in the Senate Revenue and Taxation Committee, 5&ndash;0, on Feb. 5, 2026; absent for the floor vote. See <a href="sd23-grover-smith.html">Case 29</a>.</li>
+      <li><strong>S.B. 326 (2026),</strong> Grover&rsquo;s school board officer bill: absent for the Senate vote, 27&ndash;0.</li>
+      <li><strong>S.B. 65 (2026):</strong> voted yes, 18&ndash;11.</li>
+    </ul>
+  </div>
+  </details>
+</div></section>
+
+<section id="stands"><div class="wrap">
+  <div class="eyebrow">WHERE THEY STAND</div>
+  <h2>In Their Own Words, Topic by Topic</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>What each candidate&rsquo;s own campaign site says, lined up by topic. These are their claims, not checked facts.</p>
+  <div class="table-scroll"><table class="entity-table">
+    <tr><th>Topic</th><th>Cullimore (R), kirkcullimore.com</th><th>Anderson (D), andersonforutah.com</th></tr>
+    <tr><td><strong>Accountability</strong></td><td>&ldquo;An accessible and transparent government best serves the people. We must continue to encourage open meetings rules, budget accountability, and proper oversight and reporting of government expenditures.&rdquo;</td><td>&ldquo;Government and State Representatives should be accountable to the people they represent. Our rights in a democracy have been under attack from unfair maps, judicial restructuring, and MIDA asserting extra-governmental authority.&rdquo;</td></tr>
+    <tr><td><strong>Taxes and spending</strong></td><td>&ldquo;As Utah continues to grow, demands will increase on certain government functions like infrastructure, water, and education. However, we need not grow the state government.&rdquo; His biography page adds: &ldquo;Utah has reduced the state income tax six years in a row while maintaining one of the strongest economies in the nation.&rdquo;</td><td>&ldquo;Tax policy can be adjusted to lower property taxes for home owners. Let&rsquo;s start with ending the wasteful use of public money on individual households with the Utah Fits All Scholarship.&rdquo;</td></tr>
+    <tr><td><strong>Education</strong></td><td>&ldquo;Our number one resource is our children. Utah needs to find ways to continue to appropriately invest in education for all children.&rdquo;</td><td>&ldquo;The cornerstone of a strong economy is a healthy and well-educated population. I want to see public schools with adequate resources for students and teachers.&rdquo;</td></tr>
+    <tr><td><strong>Growth and housing</strong></td><td>&ldquo;We need to appropriately address that growth with investment in infrastructure and water conservation.&rdquo;</td><td>&ldquo;Utah is facing enormous pressure with the high cost of housing. With unattainable housing, families and small businesses have no place to get started.&rdquo;</td></tr>
+    <tr><td><strong>Health care</strong></td><td>&ldquo;Health care has become too complex and too expensive. Utah should lead the way in streamlining medical billing; innovating ways to inform patients before incurring significant healthcare costs; and, supporting strategies to reduce prescription costs.&rdquo;</td><td>&ldquo;For-profit health insurance companies have proven to be only interested in CEO pay and Wall Street bonuses. We must act now to protect affordable access to healthcare for all Utahns.&rdquo;</td></tr>
+    <tr><td><strong>Air, water and the lake</strong></td><td><em>No section on his site</em> (water conservation appears under Growth)</td><td>&ldquo;We must take bold and dramatic action to save the Great Salt Lake right now.&rdquo; On air: &ldquo;It is a challenging problem but one we know how to fix.&rdquo;</td></tr>
+    <tr><td><strong>Data centers</strong></td><td><em>No section on his site</em></td><td>&ldquo;Data Center build out is occurring at a reckless pace without community support and feedback. Local communities need transparency, communication, and control of the process when data centers are planned.&rdquo;</td></tr>
+    <tr><td><strong>Economy and family</strong></td><td>&ldquo;Utah has done well in developing policy that encourages entrepreneurship and business investment that create jobs, opportunity and an increased quality of life for all Utahns.&rdquo; &ldquo;The family is the fundamental unit of society.&rdquo;</td><td>&ldquo;A home should be the foundation of a family&rsquo;s security, not a profit center for insiders who write the rules.&rdquo;</td></tr>
+  </table></div>
+  <div class="record-card" style="margin-top:16px;">
+    <h3>Where their positions meet his record</h3>
+    <ul style="margin:0;padding-left:18px;">
+      <li><strong>Utah Fits All:</strong> Anderson&rsquo;s site calls for ending the Utah Fits All Scholarship. Cullimore was Senate floor sponsor of H.B. 467 (2026), &ldquo;Utah Fits All Scholarship Program Modifications,&rdquo; which was signed.</li>
+      <li><strong>MIDA and development authorities:</strong> Anderson&rsquo;s site names &ldquo;MIDA asserting extra-governmental authority.&rdquo; Cullimore&rsquo;s S.B. 337 (2025) would have created a statewide Beehive Development Agency; it died.</li>
+      <li><strong>Data centers:</strong> Anderson calls for local &ldquo;control of the process.&rdquo; Cullimore was Senate sponsor of H.B. 507 (2026), which sets state rules for incentives to large projects, including data centers.</li>
+    </ul>
+  </div>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;margin-top:14px;"><strong>How this was read:</strong> quotes are from each candidate&rsquo;s own site (kirkcullimore.com/philosophy and /meet-kirk; andersonforutah.com and /issues), read Sept. 25, 2026, through a web reader. His income-tax statement is his claim and was not checked for this page.</p>
+</div></section>
+
+<section id="promises"><div class="wrap">
+  <div class="eyebrow">STATED PRIORITIES AND RECORD</div>
+  <h2>His Stated Priorities Next to His Record</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Each row puts a line from Cullimore&rsquo;s campaign site next to bills he sponsored, carried or voted on. The rubric section grades each row on the same A&ndash;F scale. Anderson has not held office, so her positions can&rsquo;t be compared with votes yet.</p>
+  <div class="table-scroll"><table class="entity-table">
+    <tr><th>His site says</th><th>Bills on the record</th></tr>
+    <tr><td>&ldquo;We must continue to encourage open meetings rules, budget accountability, and proper oversight and reporting of government expenditures.&rdquo;</td><td>H.B. 530 (2025), which he carried in the Senate, exempts the Nucleus Institute and the Utah innovation fund from the open-meetings and records laws. H.B. 220 (2026), which he carried, adds a searchable public section to the state&rsquo;s public-safety data portal and lets the commission refer records requests to the agency a record came from. H.B. 276 (2026) requires AI companies to publish their policies and label AI-made content. H.B. 320 (2026), which he carried, widens agreements letting AI companies operate despite state laws or rules and requires each agreement to be reported yearly to a legislative committee. On H.B. 475 (2026), which he carried, an oversight work group was dropped on the House floor before the bill reached the Senate.</td></tr>
+    <tr><td>&ldquo;However, we need not grow the state government.&rdquo;</td><td>S.B. 337 (2025), his bill, would have created the Beehive Development Agency; it died. H.B. 530 (2025) reorganized the Utah Innovation Lab into the Nucleus Institute. H.B. 475 (2026) renamed an existing office and created an Economic Development Council.</td></tr>
+    <tr><td>&ldquo;Utah needs to find ways to continue to appropriately invest in education for all children.&rdquo;</td><td>He carried H.B. 467 (Utah Fits All scholarships, signed) and voted for S.B. 65 (moving a local school levy into a state fund). His S.B. 267 on school software became a study.</td></tr>
+    <tr><td>&ldquo;We need to appropriately address that growth with investment in infrastructure and water conservation.&rdquo;</td><td>H.B. 492 (2026), which he carried, created a funded housing-infrastructure loan program, directed $50,000,000 to a convention center reserve account and set requirements for a Cottonwood Canyons transit hub. H.B. 507 (2026), which he carried, sets state rules for incentives to large projects; its case file notes it has no water-use standard.</td></tr>
+    <tr><td>&ldquo;Innovating ways to inform patients before incurring significant healthcare costs.&rdquo;</td><td>He carried H.B. 71 (2026), &ldquo;Health Provider Directory and Access Amendments&rdquo; (signed).</td></tr>
+  </table></div>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;">Each row places a line from his campaign site next to bills he sponsored, carried or voted on, as described in this outlet&rsquo;s case files. Readers can compare them.</p>
+</div></section>
+
+<section id="disclosure"><div class="wrap">
+  <div class="eyebrow">THE DISCLOSURE FORMS</div>
+  <h2>What Each Candidate Listed</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Cullimore lists his law practice, the life insurance company he runs, and four boards; the state registry lists two more companies tied to him that are not on the form. Anderson lists no outside employer, no business and one stock.</p>
+  <div class="table-scroll"><table class="entity-table">
+    <tr><th>Item</th><th>Cullimore (R), signed &ldquo;Kirk Cullimore&rdquo;</th><th>Anderson (D), signed &ldquo;Shana Anderson&rdquo;</th></tr>
+    <tr><td>Employers</td><td>Current: KCJR, LLC (attorney); Sentinel Security &amp; Life (&ldquo;President of Life Insurance Company&rdquo;). Previous: Law Offices of Kirk A. Cullimore, LLC (attorney)</td><td>&ldquo;N/A Stay at Home Mom&rdquo;</td></tr>
+    <tr><td>Owner or officer</td><td>KCJR, LLC (member manager); Sentinel Security &amp; Life (employed as President)</td><td>NA</td></tr>
+    <tr><td>$5,000+ income</td><td>KCJR, LLC; the State of Utah (&ldquo;legislative duties&rdquo;)</td><td>NA</td></tr>
+    <tr><td>Stocks of $5,000+</td><td>N/A</td><td>Mineral Rite (RITE), &ldquo;Mineral extraction/ reclamation&rdquo;</td></tr>
+    <tr><td>Boards</td><td>Intermountain Suzuki String Institute and Suzuki Association of America (unpaid); Haymarket Insurance Company (&ldquo;a reinsurance company for life insurance and annuity products&rdquo;); Common Spirit Utah Board of Community Advisors</td><td>None</td></tr>
+    <tr><td>Spouse&rsquo;s employer</td><td>N/A</td><td>CACI International; Utah National Guard</td></tr>
+    <tr><td>Optional: property</td><td>&ldquo;N/A other than personal home&rdquo;</td><td>Blank</td></tr>
+    <tr><td>Optional: other</td><td>N/A</td><td>None</td></tr>
+  </table></div>
+  <div class="record-card" style="margin-top:18px;">
+    <h3>Worth seeing side by side</h3>
+    <p><strong>Sentinel and the income item.</strong> Cullimore lists Sentinel Security &amp; Life as a current employer and an entity he is an officer of, but not in the item for sources of $5,000 or more in the past year. The form doesn&rsquo;t explain whether that reflects timing; A-CAP announced his presidency on April 2, 2026.</p>
+    <p><strong>An insurer&rsquo;s president on the insurance committee.</strong> Sentinel is a Utah-domiciled insurer regulated by the Utah Insurance Department. He sits on the Senate Business and Labor Committee and its confirmation committee. An insurance trade group, the American Property Casualty Insurance Association, gave his campaign $500.</p>
+    <p><strong>A board not on the form.</strong> The Nucleus Institute&rsquo;s website lists him as a board member, per his profile&rsquo;s reading; the form&rsquo;s board item does not list it. Whether it must be listed is not settled here.</p>
+    <p><strong>A company in the state registry not on the form.</strong> His form lists one company he owns or runs, KCJR, LLC. Utah&rsquo;s business registry lists COLLEX, LLC (entity 11807328-0160, formed June 11, 2020) with two members: &ldquo;Kirk A Cullimore Jr&rdquo; and the Law Offices of Kirk A. Cullimore, L.L.C. Its status is &ldquo;Active&rdquo; with the detail &ldquo;Delinquent&rdquo;; it was last renewed June 19, 2025, and its renewal was due June 30, 2026. The form&rsquo;s owner-or-officer item covers the current year and the one before, and does not list COLLEX. The form doesn&rsquo;t explain the difference.</p>
+    <p><strong>A second company, through KCJR.</strong> KCJR, LLC is his own company: his form lists him as its &ldquo;member manager,&rdquo; and business listings show &ldquo;Kirk Cullimore Jr&rdquo; as its manager. Utah&rsquo;s registry lists Fuerza Legal LLC (entity 14068190-0160, formed July 3, 2024, &ldquo;Active&rdquo; and &ldquo;Current,&rdquo; last renewed July 2, 2025) with two members, KCJR and &ldquo;Kirk Cullimore,&rdquo; and KCJR as its registered agent. His form lists KCJR but not Fuerza Legal. The form doesn&rsquo;t explain the difference.</p>
+    <p><strong>A listing not matched to him.</strong> The registry lists LegalSoftware, LLC (entity 11364966-0160, formed July 2, 2019, &ldquo;Active&rdquo; and &ldquo;Current,&rdquo; last renewed June 19, 2025, the same day as COLLEX) with one member, &ldquo;Kirk Alan Cullimore,&rdquo; and &ldquo;Kirk Cullimore&rdquo; as registered agent, at the same office address as COLLEX. His father shares his name and the listing does not include &ldquo;Jr,&rdquo; so it is not matched to him here.</p>
+    <p><strong>Anderson&rsquo;s stock and spouse.</strong> She disclosed a mining and reclamation stock, and listed her spouse&rsquo;s employers, a defense contractor and the Utah National Guard, in a section that asks only for employment the candidate believes may be a conflict.</p>
+    <span class="rc-tag rc-good">Both forms filled in</span>
+    <span class="rc-tag rc-good">Anderson listed her spouse&rsquo;s employers</span>
+  </div>
+</div></section>
+
+<section id="connections"><div class="wrap">
+  <div class="eyebrow">THE CONNECTIONS</div>
+  <h2>Where This Race Meets the Rest of the Docket</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Cullimore&rsquo;s campaign sends and receives money across many races this site covers. A connection is not an accusation.</p>
+  <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    URS["Senate GOP<br/>campaign committee"] -->|"$5,000"| KC(["CULLIMORE<br/>SD-19 (R)"])
+    DN["Doers Network"] -->|"$2,000"| KC
+    EAI["Encode AI"] -->|"$5,000"| KC
+    KC -->|"$5,000"| BB["Brady Brammer<br/>SD-21"]
+    KC -->|"$5,000"| SS["Scott Sandall<br/>SD-1"]
+    KC -->|"$2,500"| JT["Jordan Teuscher<br/>HD-44"]
+</div>
+<p class="cap">Money into and out of Cullimore&rsquo;s campaign that connects to other races, as filed.</p>
+  </div>
+  <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    EAI2["Encode AI"] -->|"$5,000"| KC2(["CULLIMORE<br/>SD-19"])
+    EAI2 -->|"$10,000"| DF["Doug Fiefia<br/>SD-18"]
+    KC2 -.->|"paid $27,402<br/>in 2022"| M51["Majority 51"]
+    KG["Keith Grover<br/>SD-23"] -.->|"paid $58,286"| M51
+    L3["Operating<br/>Engineers Local 3"] -->|"$500"| SA(["ANDERSON<br/>SD-19 (D)"])
+    L3 -->|"$500"| TS["Tucker Smith<br/>SD-23"]
+</div>
+<p class="cap">Donors and vendors shared with other case files. Solid arrows are contributions; dotted arrows are campaign payments to a vendor. A connection is not an accusation.</p>
+  </div>
+  <div class="conn-grid">
+    <div class="conn-card gold">
+      <div class="case"><a href="https://weber-county-hive.github.io/utah-senators/kirk-cullimore.html">UTAH SENATORS</a></div>
+      <h4>His full profile</h4>
+      <p>Sentinel Security Life, the Nucleus Institute, his 2022&ndash;2025 money, KCJR and Fuerza Legal, and S.B. 213 (2024).</p>
+    </div>
+    <div class="conn-card">
+      <div class="case"><a href="doers-network.html">DOERS NETWORK</a></div>
+      <h4>$2,000 on June 1</h4>
+      <p>He is on the Doers Network&rsquo;s endorsed-and-paid list, filed with a Wilmington, Del., address.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case"><a href="sd11-buss-benson.html">CASE 24</a></div>
+      <h4>Brooks Benson</h4>
+      <p>Benson&rsquo;s reports list $5,000 from Cullimore&rsquo;s campaign.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case"><a href="sd23-grover-smith.html">CASE 29</a></div>
+      <h4>Majority 51 and Local 3</h4>
+      <p>Majority 51 was paid $27,402 by his 2022 campaign and is Grover&rsquo;s top vendor. Operating Engineers Local 3 gave $500 each to Anderson and Tucker Smith.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case"><a href="sd12-kwan-tyler.html">CASE 25</a></div>
+      <h4>Tissot Solutions</h4>
+      <p>Anderson paid Tissot Solutions $2,500; it is also Sen. Karen Kwan&rsquo;s largest payee.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case"><a href="sd21-brammer-smith-myers-woodfield.html">SD-21</a></div>
+      <h4>Brammer and Sandall</h4>
+      <p>He gave $5,000 each to Brammer and to Sen. Scott Sandall, whose SD-1 seat is also on the 2026 ballot.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="rubric"><div class="wrap">
+  <div class="eyebrow">THE RUBRIC</div>
+  <h2>Graded Topic by Topic</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Each topic gets a grade, A (best) to F (worst), on five questions: Does it check power? Can the public see it? Is it clear who pays? What does it do to air, water and land? Do the people affected get a real say? N/A means the question doesn&rsquo;t apply.</p>
+  <p class="section-dek"><strong>How to read these:</strong> grades judge only what has already happened in the filings as of Sept. 25, 2026. They judge the record, not the person. <strong>Scale:</strong> C means the record meets what the law requires. B or A means it goes beyond that in a way the record shows. D means required information is there but the key part is vague or bundled, or a public check is weakened. F means required information is missing, or a public check is removed with nothing in its place.</p>
+  <div class="record-card">
+    <h3>How the grades work</h3>
+    <p>Every topic is graded on the same five questions, written once for this site and used on every page:</p>
+    <ul style="margin:0;padding-left:18px;">
+      <li><strong>Power:</strong> Does it add or remove a check on power that the public, collectively, would otherwise have no say over?</li>
+      <li><strong>Transparency:</strong> Can the public actually see the process: posted hearings, itemized financials, disclosed conflicts, regardless of who ends up holding the final decision?</li>
+      <li><strong>Financial accountability:</strong> Who actually pays, who&rsquo;s protected from paying, and is that structure disclosed plainly or buried in a bundled figure?</li>
+      <li><strong>Environmental impact:</strong> What&rsquo;s the effect on water, wetlands and wildlife, and does the process treat that as a real constraint or a box to check?</li>
+      <li><strong>Community impact:</strong> Who bears the cost or holds a historical or cultural stake in this decision, tribal or otherwise, and did the process give them real standing to be heard, or was their interest treated as a formality?</li>
+    </ul>
+    <p style="margin-top:10px;"><strong>The scale:</strong> <b>A</b> goes well beyond what the law requires, in ways the record shows. <b>B</b> goes beyond the requirement. <b>C</b> meets what the law requires, and no more. <b>D</b> has the required information, but the key part is vague or lumped into a catch-all. <b>F</b> is missing required information, or removes a public check with nothing in its place. <b>N/A</b> means the question doesn&rsquo;t fit the topic.</p>
+    <p><strong>Ground rules:</strong> each topic is graded on its own, not averaged into one score for the person. Grades judge the record, not the person&rsquo;s reputation or other conduct. Where how something was built and how it turned out differ, both are noted. Meeting the legal minimum earns a C, not a B.</p>
+  </div>
+  <div class="topic-head">1. Cullimore&rsquo;s campaign money</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Criterion</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-d">D</span>94% of 2026 money came from businesses, PACs and associations, and 35% came from outside Utah.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-c">C</span>Every gift and payment is itemized with a named payee.</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>Political support is named by recipient. Restaurant and gift purchases are filed as &ldquo;Other&rdquo; or &ldquo;Constituent Services&rdquo; without a purpose.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-d">D</span>Two individual gifts ($2,000) in a year of $114,250.</td></tr>
+  </table></div>
+  <div class="better" style="margin:10px 0 4px;padding:10px 14px;border-left:4px solid var(--color-link);background:rgba(0,0,0,.03);font-size:.95rem;"><strong>What would have scored higher for the collective:</strong> raise more from people in the district, and say what the restaurant and gift purchases were for.</div>
+  <div class="topic-head">2. Anderson&rsquo;s campaign money</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Criterion</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-c">C</span>Mostly small individual gifts; two unions and one party club gave $1,400.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-c">C</span>Gifts are itemized, including ActBlue fees; four rows are marked deleted and one donor&rsquo;s state doesn&rsquo;t match the ZIP.</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>Payees are named. $5,000 to Giant Sequoia LLC and Tissot Solutions is filed as &ldquo;Campaign Expense.&rdquo;</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-c">C</span>70.3% from Utah; most early money came from other states.</td></tr>
+  </table></div>
+  <div class="better" style="margin:10px 0 4px;padding:10px 14px;border-left:4px solid var(--color-link);background:rgba(0,0,0,.03);font-size:.95rem;"><strong>What would have scored higher for the collective:</strong> say what Giant Sequoia LLC and Tissot Solutions did for the campaign, and fix the mismatched donor state.</div>
+  <div class="topic-head">3. Cullimore&rsquo;s disclosure form</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Criterion</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-f">F</span>Employers, the Sentinel presidency, KCJR and four boards are listed, with descriptions. COLLEX, LLC, which the state registry lists with him as a member, and Fuerza Legal LLC, in which his own company KCJR is a member, are not; a company missing from this item was graded F on Sen. Winterton&rsquo;s form (Case 28). Sentinel, a current employer, is also not in the income item. The Nucleus Institute question is noted above and not counted here.</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>His law practice and state pay are listed as income sources.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-na">N/A</span>A disclosure form doesn&rsquo;t decide who bears a cost.</td></tr>
+  </table></div>
+  <div class="better" style="margin:10px 0 4px;padding:10px 14px;border-left:4px solid var(--color-link);background:rgba(0,0,0,.03);font-size:.95rem;"><strong>What would have scored higher for the collective:</strong> list COLLEX, LLC and Fuerza Legal LLC and add Sentinel to the income item, list the Nucleus Institute board seat or say why it isn&rsquo;t required, and use the optional section to explain how he handles insurance bills and appointees while leading an insurer.</div>
+  <div class="topic-head">4. Anderson&rsquo;s disclosure form</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Criterion</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-b">B</span>Every required item is answered, and she listed her spouse&rsquo;s employers in a section that is required only if she sees a possible conflict.</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>Her one stock holding is listed and described.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-na">N/A</span>A disclosure form doesn&rsquo;t decide who bears a cost.</td></tr>
+  </table></div>
+  <div class="better" style="margin:10px 0 4px;padding:10px 14px;border-left:4px solid var(--color-link);background:rgba(0,0,0,.03);font-size:.95rem;"><strong>What would have scored higher for the collective:</strong> use the optional section to say how she would handle votes on mining and reclamation given her stock.</div>
+  <div class="topic-head">5. His bills</div>
+  <p class="section-dek">Every bill below is graded on the same five questions and the same A&ndash;F scale used for the money and forms above. Where a Bill-Tracker case file already graded a criterion, that grade is used; S.B. 337, H.B. 530, S.B. 65, H.B. 320, H.B. 220, H.B. 477, H.B. 467 and H.B. 71 are graded here from their case files and text as read.</p>
+  <div class="table-scroll"><table class="rubric-table" style="min-width:1000px;">
+    <tr><th>Bill</th><th>Power</th><th>Trans&shy;parency</th><th>Financial account&shy;ability</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th><th>Why</th><th>What would have scored higher for the collective</th></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb337.html">S.B. 337 (2025)</a></td><td style="text-align:center;"><span class="gl g-f">F</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-f">F</span></td><td>Would have created a statewide development agency able to capture up to 75% of taxes in its project areas; local consent, once given, could not be withdrawn. Died.</td><td>Requiring a local vote before any project area and replacing the tax revenue schools, cities and counties would lose.</td></tr>
+    <tr><td>H.B. 530 (2025)</td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-f">F</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td>Created the Nucleus Institute and the Utah innovation fund and exempted both from the open-meetings and records laws. An earlier C on the water tracker covered only its auditor language.</td><td>Keeping the institute and fund under the Open and Public Meetings Act and GRAMA, as most state bodies are.</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb492.html">H.B. 492 (2026)</a></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td>Real housing-infrastructure money; the $18,000,000 loan&rsquo;s first label isn&rsquo;t in the enacted text or fiscal note, and it adds an ethics exemption.</td><td>Disclosing the loan&rsquo;s original purpose in the bill and fiscal note, and keeping the ethics rules.</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb475.html">H.B. 475 (2026)</a></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td>A dedicated oversight work group was replaced on the House floor by voice vote with a one-time report.</td><td>Keeping the oversight work group, or a recorded vote on removing it.</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb507.html">H.B. 507 (2026)</a></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-f">F</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td>As it turned out: wide state discretion, a new confidential-records category and no water-use standard; its financial safeguards are not yet shown to work.</td><td>Scaling its size thresholds, adding a water-use standard, and dropping the new records exemption.</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb510.html">H.B. 510 (2026)</a></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td>A binding county role in town incorporations was narrowed in a House committee; the bill then failed in the Senate by one vote. He voted yes.</td><td>Keeping the binding county role the introduced bill had.</td></tr>
+    <tr><td><a href="sd18-fiefia-anderson.html">S.B. 267 (2026)</a></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td>Introduced as binding student-privacy rules with audits and enforcement; passed as a study that reports only if asked.</td><td>Keeping the binding rules and audits.</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb65-case-file.html">S.B. 65 (2026)</a> (his vote)</td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td>Would have routed each school district&rsquo;s locally raised levy through a new state fund first; the State Auditor criticized the approach. Died in the House.</td><td>Keeping local levy money in local accounts, or a House hearing with public testimony.</td></tr>
+    <tr><td>H.B. 477 (2026)</td><td style="text-align:center;"><span class="gl g-f">F</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td>Would have struck the existing right of &ldquo;each participant to be heard in each public hearing on a contested application&rdquo; from city and county planning law; no replacement appears in the text read. It also added removal causes, recusal rules and ethics training for planning commissioners, and (first substitute) required cities to allow a detached accessory dwelling unit on single-family lots of 10,000 square feet or more. Held in a House committee; died March 6.</td><td>Keeping the right to be heard at hearings on contested applications alongside the new recusal and ethics rules.</td></tr>
+    <tr><td>H.B. 320 (2026)</td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>Widens agreements letting AI companies operate despite state laws or rules, now reaching courts, schools and local governments; adds audits, consumer-disclosure terms and yearly reporting of each agreement.</td><td>Public notice and comment before each agreement, publishing its terms, and one extension instead of two.</td></tr>
+    <tr><td>H.B. 220 (2026)</td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>Adds a searchable public section to the public-safety data portal; lets the commission refer records requests to the source agency; a researcher-access section was dropped in the House.</td><td>Keeping copies of moved reports going to the interim committee, the researcher-access section, and a go-live date.</td></tr>
+    <tr><td>H.B. 467 (2026)</td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>Adds marketplace pricing rules (fair market value, no required marketplace purchases), call-center capacity and a pre-approval process with written reasons to Utah Fits All, and clarifies that students must be under 19. Its audit, monthly-report and fee-disclosure rules were already law under H.B. 455 (2025), which he also carried. The original&rsquo;s private-school definition and online-school changes are not in the final version.</td><td>Posting the independent audits and monthly financial reports for the public.</td></tr>
+    <tr><td><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb276.html">H.B. 276 (2026)</a></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-b">B</span></td><td style="text-align:center;"><span class="gl g-d">D</span></td><td style="text-align:center;"><span class="gl g-na">N/A</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td style="text-align:center;"><span class="gl g-c">C</span></td><td>New right to sue over AI-made intimate images and new content labels; the final version has no minimum damages and adds safe harbors, a stricter pleading rule and fee awards for platforms.</td><td>Keeping minimum statutory damages and pairing the safe harbor with public takedown reporting.</td></tr>
+  </table></div>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;">H.B. 530&rsquo;s D replaces an earlier C that graded only its auditor language; the water tracker now shows the same D. H.B. 507&rsquo;s grades are its case file&rsquo;s &ldquo;as it turned out&rdquo; column; its financial safeguards are marked N/A because the case file lists them as not yet shown.</p>
+  <div class="topic-head">6. His stated priorities and his record</div>
+  <p class="section-dek">Each line from his campaign site is graded on the same A&ndash;F scale against the bills he sponsored, carried or voted on: <b>A</b> or <b>B</b> means the bills advance the stated priority; <b>C</b> means they are mixed or neutral; <b>D</b> means a key bill moves against it; <b>F</b> means the bills move against it with nothing offsetting. All five priorities are graded.</p>
+  <div class="table-scroll"><table class="rubric-table" style="min-width:720px;">
+    <tr><th>His site says</th><th>Grade and reason</th><th>What would have scored higher for the collective</th></tr>
+    <tr><td>&ldquo;We must continue to encourage open meetings rules, budget accountability, and proper oversight and reporting of government expenditures.&rdquo;</td><td><span class="gl g-d">D</span>H.B. 530, which he carried, exempts a new state institute and its fund from the open-meetings and records laws. H.B. 320, H.B. 276 and H.B. 220 add reporting or public data, though H.B. 220 also lets its commission refer records requests elsewhere.</td><td>Carrying H.B. 530 with the institute and fund under the open-meetings and records laws.</td></tr>
+    <tr><td>&ldquo;However, we need not grow the state government.&rdquo;</td><td><span class="gl g-d">D</span>His S.B. 337 would have created a statewide agency (it died). Bills he carried created the Nucleus Institute and its fund (H.B. 530), a housing-infrastructure fund and board (H.B. 492) and an Economic Development Council (H.B. 475), and widened the AI office&rsquo;s powers (H.B. 320).</td><td>Pairing each new body with a sunset date or a matching cut elsewhere.</td></tr>
+    <tr><td>&ldquo;We need to appropriately address that growth with investment in infrastructure and water conservation.&rdquo;</td><td><span class="gl g-c">C</span>H.B. 492 funds housing infrastructure; H.B. 507 sets rules for large projects without a water-use standard.</td><td>A water-use standard in H.B. 507.</td></tr>
+    <tr><td>&ldquo;Utah needs to find ways to continue to appropriately invest in education for all children.&rdquo;</td><td><span class="gl g-c">C</span>H.B. 467, which he carried, adds spending and marketplace rules to Utah Fits All scholarships and appropriates no money. S.B. 65, which he voted for, and his S.B. 267 are each graded D above.</td><td>Posting scholarship audit results publicly, and keeping S.B. 267&rsquo;s binding student-privacy rules.</td></tr>
+    <tr><td>&ldquo;Innovating ways to inform patients before incurring significant healthcare costs.&rdquo;</td><td><span class="gl g-c">C</span>H.B. 71, which he carried, requires public, searchable provider directories and lets the regulator hold patients to in-network costs when an insurer&rsquo;s directory was wrong. Its access standard, start date, audit filings and penalties were each loosened before passage, and it does not require price estimates before care.</td><td>Requiring cost estimates before non-emergency care, and keeping the original bill&rsquo;s audit filings and penalties.</td></tr>
+    <tr><td><strong>Overall, on all five priorities</strong></td><td><span class="gl g-c">C</span>Two priorities are D and three are C.</td><td>&mdash;</td></tr>
+  </table></div>
+</div></section>
+
+<section id="ask"><div class="wrap">
+  <div class="eyebrow">QUESTIONS VOTERS CAN ASK</div>
+  <h2>Questions From the Records</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>These come from what the filings show and what they leave out. Each has a direct answer. None assumes anything improper.</p>
+  <div class="vs-grid" style="grid-template-columns:1fr 1fr;">
+    <div class="vs-head">FOR SEN. KIRK CULLIMORE (R)</div><div class="vs-head">FOR SHANA ANDERSON (D)</div>
+    <div class="said"><strong>1.</strong> Your site says you support open meetings rules. Why did H.B. 530 exempt the Nucleus Institute from open-meetings and records law?</div><div class="said"><strong>1.</strong> How would you handle votes on mining and reclamation, given your Mineral Rite stock?</div>
+    <div class="said"><strong>2.</strong> The state registry lists you as a member of COLLEX, LLC and your company KCJR as a member of Fuerza Legal LLC, and the Nucleus Institute lists you as a board member. Will you add them to your disclosure form?</div><div class="said"><strong>2.</strong> What drew out-of-state donors to your race?</div>
+    <div class="said"><strong>3.</strong> How do you handle insurance bills and insurance appointees while serving as president of an insurance company?</div><div class="said"><strong>3.</strong> What did Giant Sequoia LLC do for your campaign?</div>
+    <div class="said"><strong>4.</strong> Your largest 2026 donors include a personal-injury law firm and the trial lawyers&rsquo; association. What was S.B. 211 meant to do?</div><div class="said"><strong>4.</strong> Your site calls for ending the Utah Fits All Scholarship. What would you do with that money, and for families already using it?</div>
+    <div class="said"><strong>5.</strong> Why did your H.B. 276 substitute remove minimum damages for people depicted in AI-made intimate images, and add fee awards for companies?</div><div class="said"><strong>5.</strong> What local &ldquo;control&rdquo; over data centers would you write into law?</div>
+  </div>
+  <div class="record-card" style="margin-top:16px;"><h3>For both</h3><ul style="margin:0;padding-left:18px;">
+    <li>Should state-created bodies like the Nucleus Institute be covered by the open-meetings and public records laws?</li>
+    <li>Who should decide where data centers go and what water they can use: the state, or the city or county?</li>
+    <li>Should people depicted in AI-made intimate images be able to recover a set minimum in damages?</li>
+  </ul></div>
+</div></section>
+
+<section id="limits"><div class="wrap">
+  <div class="eyebrow">WHAT THIS DOESN&rsquo;T SHOW</div>
+  <h2>Limits of the Record</h2>
+  <div class="record-card"><ul style="margin:0;padding-left:18px;">
+    <li>Spending after June 7 (Cullimore) and June 9 (Anderson) was not in hand; the later lists cover contributions only. No report summary page was read, so no cash balance is stated.</li>
+    <li>Cullimore&rsquo;s 2022&ndash;2025 figures come from this outlet&rsquo;s Aug. 26, 2026 reading of his DEX exports and were not re-read. The Nucleus Institute, Sentinel announcement and H.B. 530 quotes come from research for his Utah Senators profile. The COLLEX, LegalSoftware and Fuerza Legal records are pasted captures of the state registry, Sept. 25, 2026.</li>
+    <li>His disclosure form was read from a pasted capture, Sept. 25, 2026; its filing date is not shown in the capture. Anderson&rsquo;s form was read the same way.</li>
+    <li>Her work history on BallotReady (U.S. Army, CACI, Utah Army National Guard) is not on her disclosure form, which covers only the past year.</li>
+    <li>H.B. 276 was read from its enrolled text and a plain-text copy of the compare document, which marks removed text but not added text; its Senate floor votes were not in hand. Only the bills listed with grades have been read in full by this outlet. Bill counts come from his 2026 bill list (pasted capture). Committee seats are from LegiStorm.</li>
+    <li>Donors are matched to people and groups by name only; out-of-state shares use the state as filed.</li>
+    <li>Which H.B. 276 substitute made each change was not determined; only the original-to-final compare was read.</li>
+    <li>H.B. 467 (enrolled and introduced), H.B. 455 (2025, enrolled) and H.B. 71 (enrolled) were read Sept. 25, 2026 through a web text reader that does not show underlining; which H.B. 467 rules were new in 2026 was judged by searching the 2025 text for the same phrases. H.B. 71 was compared from pasted copies of the original-to-fourth-substitute and third-to-fourth-substitute compare documents. The House Health and Human Services Committee passed the first substitute 11&ndash;2&ndash;1 (Jan. 22, 2026); the Senate Health and Human Services Committee passed the third substitute 5&ndash;0&ndash;2 (Feb. 12, 2026). Who offered the fourth substitute, and where, was not determined. Its floor votes were not in hand. H.B. 477 was read from pasted copies of its bill page (introduced text and status) and its first-substitute compare document; in the compare, text in square brackets is current law the bill would strike.</li>
+  </ul></div>
+</div></section>
+
+<section><div class="wrap">
+  <details class="sources">
+    <summary>View all sources (14)</summary>
+    <ol>
+      <li>Kirk Cullimore, DEX export DEX20260924_215731.csv (2026 Convention and Primary) and later contribution list through Sept. 4, 2026 (disclosures.utah.gov; pasted capture)</li>
+      <li>Kirk Alan Cullimore Jr., conflict-of-interest disclosure (disclosures.utah.gov), pasted capture, Sept. 25, 2026</li>
+      <li>Shana Anderson, DEX export DEX20260924_215819.csv and later contribution list through Sept. 21, 2026 (disclosures.utah.gov; pasted capture)</li>
+      <li>Shana F. Anderson, conflict-of-interest disclosure, Senate D19 (disclosures.utah.gov), pasted capture, Sept. 25, 2026</li>
+      <li>Utah Legislature, 2026 bill list for Sen. Kirk A. Cullimore (pasted capture); H.B. 320 (2026) enrolled text and status page, House Economic Development and Workforce Services Committee minutes 2/4/26 and Senate Government Operations and Political Subdivisions Committee draft minutes 2/23/26; H.B. 492 (2026) enrolled text; H.B. 220 (2026) enrolled text and bill page, HB0220S02 compare document, House Law Enforcement and Criminal Justice Committee minutes 2/2/26 and Senate Government Operations and Political Subdivisions Committee draft minutes 2/17/26; H.B. 276 (2026) enrolled text and bill page, HB0276S02 compare document, House 3rd reading 2/20/26, House Economic Development and Workforce Services Committee minutes 2/12/26 and Senate Transportation, Public Utilities, Energy, and Technology Committee minutes 2/26/26; Senate Revenue and Taxation Committee minutes 2/5/26; S.B. 326 and S.B. 65 Senate votes</li>
+      <li>Utah Legislature: H.B. 467 (2026) enrolled and introduced texts; H.B. 455 (2025) enrolled text; H.B. 71 (2026) enrolled text and HB0071S04 compare document (pasted capture); HB0071S03-to-S04 compare document; House Health and Human Services Committee minutes, Jan. 22, 2026, and Senate Health and Human Services Committee minutes, Feb. 12, 2026 (pasted captures); H.B. 477 (2026) introduced text, status page and HB0477S01 compare document (pasted captures, Sept. 25, 2026)</li>
+      <li>This outlet&rsquo;s Bill-Tracker: S.B. 337 (2025), H.B. 492, H.B. 475, H.B. 507, H.B. 510 and S.B. 65 case files; the water, land and local power tracker (H.B. 530, H.B. 477)</li>
+      <li>This outlet&rsquo;s Utah Senators profile of Kirk Cullimore, including enrolled H.B. 530 (2025), A-CAP&rsquo;s April 2, 2026 release, Nucleus Institute pages and registry records for KCJR and Fuerza Legal</li>
+      <li>This outlet&rsquo;s notes on his 2022&ndash;2025 DEX exports and on Majority 51, L.L.C.&rsquo;s certificate of organization</li>
+      <li>kirkcullimore.com/philosophy and /meet-kirk, read Sept. 25, 2026</li>
+      <li>andersonforutah.com (home and issues pages), read Sept. 25, 2026; BallotReady, Shana Anderson candidate page (work history)</li>
+      <li>LegiStorm, Utah State Sen. Kirk Cullimore profile (pasted capture)</li>
+      <li>Ballotpedia, Utah State Senate District 19 (2022 results; 2026 candidates)</li>
+      <li>OpenCorporates officer search, &ldquo;Kirk Cullimore,&rdquo; Utah (pasted capture, Sept. 25, 2026); Utah Division of Corporations, COLLEX, LLC, entity 11807328-0160, LegalSoftware, LLC, entity 11364966-0160, and Fuerza Legal LLC, entity 14068190-0160 (pasted captures, Sept. 25, 2026)</li>
+    </ol>
+  </details>
+</div></section>
+
+<footer><div class="wrap">
+  Compiled from Utah campaign-finance disclosures (disclosures.utah.gov), the candidates&rsquo; conflict-of-interest forms, le.utah.gov and this outlet&rsquo;s earlier case files. Public records only · No comment requested.<br>
+  <a href="index.html">&larr; Back to the Candidates 2026 docket</a>
+</div></footer>
+
+<script>
+if (window.mermaid) { mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'IBM Plex Mono, monospace', themeVariables: { fontSize: '19px' }, flowchart:{htmlLabels:true, curve:'basis', useMaxWidth:true} }); }
+document.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('flipped');b.setAttribute('aria-pressed',b.classList.contains('flipped'));}));
+if (window.Chart) {
+  Chart.defaults.font.family = "'Source Serif 4', Georgia, serif"; Chart.defaults.color = '#5c534c';
+  const money = v => '$' + Number(v).toLocaleString();
+  const mk=(id,labels,data)=>{ const el=document.getElementById(id); if(!el) return; new Chart(el,{type:'bar',data:{labels:labels,datasets:[{data:data,backgroundColor:'#5c1a2b',borderRadius:3}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>money(c.parsed.x)}}},scales:{x:{ticks:{callback:money},grid:{color:'#e6dfcf'}},y:{grid:{display:false}}}}}); };
+  mk('spendChartC',["Delta", "Friends of Dan McCay", "Elect Brammer", "Scott Sandall Campaign Fund", "Morgan Olson", "Committee to Elect Jordan Teuscher", "John Adams Political Campaign", "Marriott", "John Knotwell for State Senate", "Chris Sloan for Senate"],[5341.86, 5000.0, 5000.0, 5000.0, 4500.0, 2500.0, 2000.0, 1677.68, 1000.0, 1000.0]);
+  mk('spendChartA',["Union Print Shop", "Giant Sequoia LLC", "Tissot Solutions", "Utah Democratic Party", "Salt Lake County Democratic Party", "ActBlue", "Briton Flynn", "DemCast", "DC Badge"],[3045.94, 2500.0, 2500.0, 772.71, 400.0, 360.08, 160.0, 50.0, 43.0]);
+}
+</script>
+</body>
+</html>

@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "sd19-cullimore-anderson",
+    race: "Senate District 19 — Salt Lake and Utah Counties",
+    level: "State",
+    county: "Salt Lake / Utah",
+    caseNumber: "CASE 30",
+    names: "Cullimore vs. Anderson",
+    verdict: "The Majority Leader’s $114,250 vs. $23,989",
+    tags: ["Incumbent", "Senate Leadership", "Trial Lawyer Money", "AI Bills", "Disclosure Forms"],
+    stamp: "Active",
+    href: "sd19-cullimore-anderson.html",
+    datePosted: "2026-09-25",
+    dateUpdated: "2026-09-25"
+  },
+  {
     id: "sd23-grover-smith",
     race: "Senate District 23 — Utah County",
     level: "State",
