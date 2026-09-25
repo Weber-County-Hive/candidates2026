@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "hd26-macpherson-finch",
+    race: "House District 26 — West Valley City and Magna",
+    level: "State",
+    county: "Salt Lake",
+    caseNumber: "CASE 31",
+    names: "MacPherson vs. Finch",
+    verdict: "MacPherson\u2019s $103,349 vs. Finch\u2019s $48,230",
+    tags: ["Incumbent", "Competitive Seat", "Caucus PACs", "Courts Bills", "Disclosure Forms", "District Map"],
+    stamp: "Active",
+    href: "hd26-macpherson-finch.html",
+    datePosted: "2026-09-25",
+    dateUpdated: "2026-09-25"
+  },
+  {
     id: "sd19-cullimore-anderson",
     race: "Senate District 19 — Salt Lake and Utah Counties",
     level: "State",
