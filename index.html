@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="hive-bee.png">
 <title>2026 Candidates — Case Files | The Weber County Hive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#f4f0e6;
@@ -14,10 +15,10 @@
     --ink:#2a261e;
     --ink-soft:#5c5647;
     --ink-faint:#8b8470;
-    --rust:#c0572e;
+    --rust:#1d6b57;
     --amber:#d9a441;
-    --burgundy:#5c1a2b;
-    --burgundy-deep:#3d0f1c;
+    --burgundy:#1f4e6b;
+    --burgundy-deep:#12304a;
     --line:#ddd6c4;
     --line-strong:#c7bda3;
     --serif:'Source Serif 4', Georgia, serif;
@@ -29,12 +30,12 @@
   a{color:var(--rust);text-decoration:none;}
   a:hover{text-decoration:underline;}
 
-  .header-band{background:var(--burgundy-deep);background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);padding:44px 0 40px;}
+  .header-band{background:var(--burgundy-deep);background-image:linear-gradient(160deg, #1f5e6b 0%, #1f4e6b 45%, var(--burgundy-deep) 100%);padding:44px 0 40px;}
   .header-inner{max-width:920px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:18px;}
-  .hex{width:56px;height:56px;flex:0 0 auto;}
-  .hd-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#d9b8bf;margin-bottom:4px;}
+  .hex{width:64px;height:64px;flex:0 0 auto;}
+  .hd-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#a8d5c6;margin-bottom:4px;}
   .hd-title{font-family:var(--display);font-size:28px;font-weight:900;color:#f4e9dd;line-height:1.15;}
-  .hd-sub{font-family:var(--serif);font-size:15px;color:#e3c4cb;margin-top:6px;max-width:520px;}
+  .hd-sub{font-family:var(--serif);font-size:15px;color:#d6e6ea;margin-top:6px;max-width:520px;}
 
   .wrap{max-width:920px;margin:0 auto;padding:40px 24px 80px;}
 
@@ -73,7 +74,7 @@
   .pinned-section{margin-bottom:44px;}
   .pinned-section .level-heading{color:var(--rust);}
   .pinned-note{font-family:var(--serif);font-size:14px;color:var(--ink-faint);margin:-8px 0 16px;}
-  .pinned-section .case-card{border-left-color:var(--amber);background:#fbf5e6;}
+  .pinned-section .case-card{border-left-color:var(--amber);background:#fbf7ea;}
   .pinned-section .case-card:hover{border-left-color:var(--rust);}
 
   .county-section{margin-bottom:28px;}
@@ -124,15 +125,26 @@
   .tagline{font-family:var(--display);font-style:italic;font-size:16px;color:var(--burgundy);margin-bottom:10px;}
   footer nav{display:flex;gap:18px;flex-wrap:wrap;}
   .nav{font-family:var(--mono);font-size:13px;letter-spacing:.04em;}
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+@media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}.header-inner{align-items:flex-start}}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
 <div class="header-band">
   <div class="header-inner">
-    <svg class="hex" viewBox="0 0 100 100"><polygon points="50,3 93,25 93,75 50,97 7,75 7,25" fill="none" stroke="#d9a441" stroke-width="4"/><text x="50" y="60" font-family="Playfair Display" font-size="34" font-weight="900" fill="#f4e9dd" text-anchor="middle">H</text></svg>
+    <img class="hex" src="hive-bee.png" alt="The Hive bee seal">
     <div>
-      <div class="hd-kicker">The Weber County Hive</div>
+      <div class="hd-kicker">Utah Hive Politics · The Weber County Hive</div>
       <div class="hd-title">2026 Candidates — Case Files</div>
       <div class="hd-sub">Public records on every race we're tracking heading into November — federal races first, then state races by county. We report what's documented. You decide.</div>
     </div>
@@ -166,8 +178,9 @@
   </footer>
 
 </div>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
 
-<script src="candidates-data.js?v=24"></script>
+<script src="candidates-data.js?v=25"></script>
 <script>
   const pinnedGroupEl = document.getElementById('pinned-group');
   const groupsEl = document.getElementById('level-groups');
