@@ -357,7 +357,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "rachel-kahler-wasatch-seat-a.html",
     datePosted: "2026-09-01",
-    dateUpdated: "2026-09-11"
+    dateUpdated: "2026-09-27"
   },
   {
     id: "wasatch-seat-c-rowland",
@@ -461,6 +461,32 @@ const CANDIDATES = [
     href: "crosby-statement-ut2.html",
     datePosted: "2026-09-12",
     dateUpdated: "2026-09-12"
+  },
+  {
+    id: "wasatch-seat-a-kahler-statement",
+    race: "Wasatch County Council — Seat A (At-Large)",
+    level: "Statement",
+    caseNumber: "STATEMENT 02",
+    names: "Rachel Kahler",
+    verdict: "In Her Own Words: Why She's Running, and Her CAMS Role",
+    tags: ["Candidate Statement", "Wasatch County", "Letter to The Hive"],
+    stamp: "Active",
+    href: "https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/L-2026-001.html",
+    datePosted: "2026-09-27",
+    dateUpdated: "2026-09-27"
+  },
+  {
+    id: "wasatch-seat-a-hewlett-statement",
+    race: "Wasatch County Council — Seat A (At-Large)",
+    level: "Statement",
+    caseNumber: "STATEMENT 03",
+    names: "Jami Hewlett",
+    verdict: "In Her Own Words: Her Updated Disclosure",
+    tags: ["Candidate Statement", "Wasatch County", "Letter to The Hive"],
+    stamp: "Active",
+    href: "https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/L-2026-002.html",
+    datePosted: "2026-09-27",
+    dateUpdated: "2026-09-27"
   },
   {
     id: "kennedy-larsen-burt-ut4",
