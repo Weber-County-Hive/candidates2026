@@ -306,10 +306,11 @@ const CANDIDATES = [
     county: "Weber",
     caseNumber: "CASE 02",
     names: "Kyle vs. James vs. Shelton",
-    verdict: "The Career Total vs. The Six-Contribution Cycle",
-    tags: ["Three-Way Race", "Judicial Bills", "Promise vs. Record"],
+    verdict: "Where HD-8's Money Comes From",
+    tags: ["Three-Way Race", "Sept. 30 Reports", "Graded"],
     stamp: "Active",
-    href: "jason-kyle-hd8.html"
+    href: "jason-kyle-hd8.html",
+    dateUpdated: "2026-09-30"
   },
   {
     id: "hd7-mittendorf-wilcox",

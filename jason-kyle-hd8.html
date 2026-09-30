@@ -14,10 +14,10 @@
     --ink:#2a261e;
     --ink-soft:#5c5647;
     --ink-faint:#8b8470;
-    --rust:#c0572e;
+    --rust:#1d6b57;
     --amber:#d9a441;
-    --burgundy:#5c1a2b;
-    --burgundy-deep:#3d0f1c;
+    --burgundy:#1f4e6b;
+    --burgundy-deep:#12304a;
     --line:#ddd6c4;
     --line-strong:#c7bda3;
     --red:#a5301e;
@@ -40,7 +40,7 @@
 
   .header-band{
     background:var(--burgundy-deep);
-    background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);
+    background-image:linear-gradient(160deg, #1f5e6b 0%, #1f4e6b 45%, var(--burgundy-deep) 100%);
     padding:34px 0 30px;
   }
   .header-inner{
@@ -51,7 +51,7 @@
   .hd-kicker{
     font-family:var(--mono);
     font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-    color:#d9b8bf;
+    color:#b9d3dc;
   }
   .hd-title{
     font-family:var(--display);font-size:21px;font-weight:700;
@@ -162,9 +162,32 @@
   .tagline{font-family:var(--display);font-style:italic;font-size:16px;color:var(--burgundy);margin-bottom:10px;}
   footer nav{display:flex;gap:18px;flex-wrap:wrap;}
   .nav{font-family:var(--mono);font-size:13px;letter-spacing:.04em;}
+  .table-scroll{overflow-x:auto;}
+  table.rubric{width:100%;border-collapse:collapse;margin:10px 0 22px;font-size:15px;background:var(--paper-card);border:1px solid var(--line-strong);}
+  table.rubric th{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);text-align:center;border-bottom:2px solid var(--line-strong);padding:8px 6px;}
+  table.rubric th:first-child{text-align:left;}
+  table.rubric tr.bg-row td{padding:10px 6px 4px;text-align:center;}
+  table.rubric tr.bg-row td:first-child{text-align:left;font-weight:600;white-space:nowrap;}
+  table.rubric tr.bg-why td{font-size:14.5px;color:var(--ink-soft);padding:2px 10px 14px;border-bottom:1px solid var(--line);}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:var(--display);font-weight:900;font-size:16px;color:#fff;border-radius:3px;padding:1px 6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--amber);} .g-d{background:#b5652f;} .g-f{background:var(--red);} .g-na{background:#9a9186;font-size:12px;}
+  .topic-head{font-family:var(--display);font-size:18px;font-weight:700;color:var(--burgundy-deep);margin:26px 0 6px;}
+  .updated{font-family:var(--mono);font-size:12px;color:var(--ink-faint);margin-top:12px;}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .legend-dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:middle;margin-right:4px;}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
 <div class="header-band">
   <div class="header-inner">
@@ -180,8 +203,9 @@
 
   <div class="case-hero">
     <div class="case-kicker">Case 02 &middot; Utah House District 8 &middot; Ogden Valley, Pleasant View, North Ogden &amp; Mountain Green</div>
-    <h1 class="case-title">The Career Total vs. The Six-Contribution Cycle</h1>
-    <p class="case-dek">Rep. Jason Kyle (R) says he'll "fight against tax increases" and "protect your tax dollars." His own six-year fundraising record and 2026 legislative record tell a different story. Kim James (D) and Libby Shelton (Utah Forward Party) are also on the November ballot.</p>
+    <h1 class="case-title">Where HD-8's Money Comes From</h1>
+    <p class="case-dek">All three candidates have filed their September 30th reports. Rep. Jason Kyle (R) raised most of his 2026 money from PACs, parties and businesses. Kim James (D) and Libby Shelton (Utah Forward Party) raised most of theirs from individuals. Grades, the full money picture and Kyle's bill record are below.</p>
+    <p class="updated">Updated Sept. 30, 2026, with all three candidates' September 30th filings (period ending Sept. 25) and their disclosure forms.</p>
   </div>
 
   <div class="verdict-box">
@@ -193,10 +217,10 @@
   </div>
 
   <div class="stat-row">
-    <div class="stat"><div class="stat-num">$79,736</div><div class="stat-label">Kyle's career total, 6 cycles</div></div>
-    <div class="stat"><div class="stat-num">69%</div><div class="stat-label">of it is PAC/corporate money</div></div>
-    <div class="stat"><div class="stat-num">0</div><div class="stat-label">Weber County donors, 2026 cycle</div></div>
-    <div class="stat"><div class="stat-num">7</div><div class="stat-label">years with a [DELETED] entry on file</div></div>
+    <div class="stat"><div class="stat-num">$13,379</div><div class="stat-label">Kyle raised in 2026</div></div>
+    <div class="stat"><div class="stat-num">77%</div><div class="stat-label">of Kyle's 2026 money from PACs, parties &amp; businesses</div></div>
+    <div class="stat"><div class="stat-num">$32,143</div><div class="stat-label">James raised in 2026</div></div>
+    <div class="stat"><div class="stat-num">67%</div><div class="stat-label">of James's 2026 money from individuals</div></div>
   </div>
 
   <h2 class="sect">The career-long money</h2>
@@ -217,47 +241,83 @@
     <tr><td>Durbano Metals</td><td>$1,400.00</td></tr>
   </table>
 
-  <h2 class="sect">The 2026 cycle: six contributions, zero from Weber County</h2>
-  <p>Kyle's full 2026 itemized ledger, through the primary period, is just six real contributions (plus two trivial interest credits): Tourism Works PAC $250 (Monticello), Bridger Bolinder $1,000 (Grantsville — Tooele County, not Weber), Howard Rich $500 (Bala Cynwyd, PA), Utah Association of Realtors $1,500 (Sandy), Utah Bankers Association $500 (Salt Lake City), Boeing PAC $500 (Arlington, VA). <b>None of the six donors is from Weber County</b> — the district he represents.</p>
-  <p>By contrast, Kim James's 2026 cycle has more than 140 distinct contributions, dozens from named Weber-area individuals. The donor-count gap — 140+ vs. 6 — is the starkest single data point in the comparison.</p>
+  <h2 class="sect">The 2026 money, through the September 30th reports</h2>
+  <p>Each candidate's own filings on disclosures.utah.gov. The September 30th period ran June 12 (June 15 for James) through Sept. 25, 2026. Cash contributions only; in-kind gifts are listed separately.</p>
+  <div class="table-scroll"><table class="led">
+    <tr><th></th><th>Kyle (R)</th><th>James (D)</th><th>Shelton (UFP)</th></tr>
+    <tr><td>Raised, Sept. 30 period</td><td>$9,120.20</td><td>$11,284.37</td><td>$0</td></tr>
+    <tr><td>Spent, Sept. 30 period</td><td>$2,944.16</td><td>$19,139.59</td><td>$32.40</td></tr>
+    <tr><td>Cash on hand, Sept. 25</td><td>$35,852.22</td><td>Not in the data file</td><td>About $408 (our math)</td></tr>
+    <tr><td>Raised, all of 2026</td><td>$13,379.33</td><td>$32,143.03</td><td>$768.06</td></tr>
+    <tr><td>From individuals</td><td>23%</td><td>67%</td><td>100%</td></tr>
+    <tr><td>From PACs, parties &amp; businesses</td><td>77%</td><td>33%</td><td>0%</td></tr>
+  </table></div>
+  <p class="bill-footnote">Kyle's figures come from his September 30th Report's balance summary. James's and Shelton's come from the state's data export of their filings, which lists every entry but has no balance summary, so their 2026 totals are added up from the entries and Shelton's cash on hand is our own math from her earlier balance.</p>
+
+  <h3 class="sub-head">Kyle (R): $9,120 this period, 11 of 16 gifts from groups</h3>
+  <p>The largest gifts this period came from the Weber County Republican Party ($3,000), Google Client Services ($1,000), the Utah House Republican Election Committee ($1,000), U-Car PAC ($751) and Utah Medical PAC ($350). Five businesses and professional groups gave on Sept. 22: Cigna, NAIFA Utah IFAPAC, Paul Rogers &amp; Associates and WCF Mutual ($250 each) and Parsons Behle &amp; Latimer ($200). Individuals gave $1,569: Rep. Casey Snider of Paradise ($1,000), Adam Gardiner of West Jordan ($294.20), Cortlund Ashton of Ogden Valley ($250) and Sylvia Salisbury of Ogden ($25). CMV PAC also gave $537.82 in voter data, an in-kind gift. Earlier versions of this page said none of his 2026 donors were from Weber County; that was true through the primary, but this report includes the county Republican Party and two Weber County residents.</p>
+  <p>He spent $2,944 this period, mostly on signs (Renaissance Signs, $1,219) and printing (Salt Lake Mailing &amp; Printing, $702), plus Facebook ads, supplies and travel.</p>
+
+  <h3 class="sub-head">James (D): $11,284 this period, mostly from individuals</h3>
+  <p>About $9,131 came from roughly 60 individuals, many from Ogden, North Ogden, Eden and Huntsville. Repeat donors include Alan Livingston ($500 three times this period) and Jeanette Rodgers (several gifts of $100 to $200). Rosemary Lesser, the Democratic candidate in House District 10, gave $1,000. Groups gave $2,150: the Weber County Democratic Party ($2,000 on Sept. 25) and the Women's Democratic Club ($150).</p>
+  <p>She spent $19,140, and $15,930 of it (83%) went to Postcardmania for four rounds of mailers between Aug. 7 and Sept. 25. JM Alexander Corp received $1,625 for advertising, and Ogden Valley Adaptive Sports received $500 on June 30, listed as "Campaign Expense."</p>
+
+  <h3 class="sub-head">Shelton (UFP): no new cash this period</h3>
+  <p>Shelton reported no cash contributions this period and $32.40 in spending on web hosting and bank fees. She reported two in-kind gifts: $53.99 in door hangers from MoveForwardWithUs and a $100 Tomato Days booth she paid for herself, marked as a loan that two supporters will repay. All $768 of her 2026 cash came from individuals, about half from Shelton herself. Her largest support all year was in-kind: a $2,365 voter-data package from the Forward Party of Utah in June.</p>
 
   <div class="record-card">
-    <div class="rc-title">The deletion pattern — Kyle's own filings</div>
-    <p style="margin-bottom:0;"><b>Jason Kyle's</b> ledger shows <code>[DELETED]</code> contribution entries with blank donor/date fields in every cycle on file: 2018, 2022, 2023, 2024, and 2025 — five documented years running, seven total entries across his career ledger. No deletions have been found in James's filings.</p>
+    <div class="rc-title">About [DELETED] rows</div>
+    <p style="margin-bottom:0;">Kyle's ledger shows blank <code>[DELETED]</code> contribution rows in 2018, 2022, 2023, 2024 and 2025, seven entries across five years. James's and Shelton's 2026 data files also contain blank <code>[DELETED]</code> rows. The state's system leaves one whenever an entry is removed or replaced by an amendment, and the data file usually doesn't say which. We don't treat them as findings unless the public report page shows what was removed.</p>
   </div>
 
-  <h2 class="sect">2026 money: individual donors vs. PAC/corporate money</h2>
-  <p>Every real-money contribution reported in 2026 by each candidate, all reports filed to date. Circle size scales to total dollars raised; the split shows what share came from individual people versus PACs, trade associations, and corporations. In-kind gifts (data, T-shirts, door hangers) aren't counted — these are cash contributions only, the same subtotal each candidate's own report highlights.</p>
-
+  <h2 class="sect">2026 money: individuals vs. PACs, parties and businesses</h2>
+  <p>Every cash contribution each candidate reported in 2026. Circle size scales to total dollars raised. <span class="legend-dot" style="background:#3fa37f"></span>Individuals &nbsp; <span class="legend-dot" style="background:#12304a"></span>PACs, parties &amp; businesses</p>
   <div class="bubble-row">
     <div class="bubble-col">
-      <svg viewBox="0 0 200 200" class="bubble-svg">
-        <path d="M 100 100 L 100 54 A 46 46 0 0 1 130.42 134.50 Z" fill="var(--rust)"/>
-        <path d="M 100 100 L 130.42 134.50 A 46 46 0 1 1 100 54 Z" fill="var(--burgundy)"/>
-      </svg>
+      <svg viewBox="0 0 200 200" class="bubble-svg"><path d="M 100 100 L 100.00 41.93 A 58.1 58.1 0 0 1 157.59 92.56 Z" fill="#3fa37f"/><path d="M 100 100 L 157.59 92.56 A 58.1 58.1 0 1 1 100.00 41.93 Z" fill="#12304a"/></svg>
       <div class="bubble-name">Jason Kyle (R)</div>
-      <div class="bubble-total">$6,500 total</div>
-      <div class="bubble-split"><span style="color:var(--rust);">&#9679;</span> $2,500 individual (38%) &nbsp; <span style="color:var(--burgundy);">&#9679;</span> $4,000 PAC/corp (62%)</div>
+      <div class="bubble-total">$13,379 in 2026</div>
+      <div class="bubble-split"><span style="color:#3fa37f;">&#9679;</span> $3,069 individuals (23%) &nbsp; <span style="color:#12304a;">&#9679;</span> $10,301 groups (77%)</div>
     </div>
     <div class="bubble-col">
-      <svg viewBox="0 0 200 200" class="bubble-svg">
-        <path d="M 100 100 L 100 10 A 90 90 0 1 1 14.97 129.45 Z" fill="var(--rust)"/>
-        <path d="M 100 100 L 14.97 129.45 A 90 90 0 0 1 100 10 Z" fill="var(--burgundy)"/>
-      </svg>
+      <svg viewBox="0 0 200 200" class="bubble-svg"><path d="M 100 100 L 100.00 10.00 A 90.0 90.0 0 1 1 20.67 142.50 Z" fill="#3fa37f"/><path d="M 100 100 L 20.67 142.50 A 90.0 90.0 0 0 1 100.00 10.00 Z" fill="#12304a"/></svg>
       <div class="bubble-name">Kim James (D)</div>
-      <div class="bubble-total">$24,767 total</div>
-      <div class="bubble-split"><span style="color:var(--rust);">&#9679;</span> $17,267 individual (70%) &nbsp; <span style="color:var(--burgundy);">&#9679;</span> $7,500 PAC/corp (30%)</div>
+      <div class="bubble-total">$32,143 in 2026</div>
+      <div class="bubble-split"><span style="color:#3fa37f;">&#9679;</span> $21,587 individuals (67%) &nbsp; <span style="color:#12304a;">&#9679;</span> $10,550 groups (33%)</div>
     </div>
     <div class="bubble-col">
-      <svg viewBox="0 0 200 200" class="bubble-svg">
-        <circle cx="100" cy="100" r="16" fill="var(--rust)"/>
-      </svg>
+      <svg viewBox="0 0 200 200" class="bubble-svg"><circle cx="100" cy="100" r="13.9" fill="#3fa37f"/></svg>
       <div class="bubble-name">Libby Shelton (UFP)</div>
-      <div class="bubble-total">$768 total</div>
-      <div class="bubble-split"><span style="color:var(--rust);">&#9679;</span> $768 individual (100%) &nbsp; <span style="color:var(--burgundy);">&#9679;</span> $0 PAC/corp (0%)</div>
+      <div class="bubble-total">$768 in 2026</div>
+      <div class="bubble-split"><span style="color:#3fa37f;">&#9679;</span> $768 individuals (100%) &nbsp; <span style="color:#12304a;">&#9679;</span> $0 groups</div>
     </div>
   </div>
-  <p class="bill-footnote">Kyle's PAC/corp share includes the sole institutional gift in James's total: a one-time $7,500 from UINPAC (Utah Investment Network PAC), part of a coordinated multi-candidate Democratic slate, not a recurring funder — see the James section below. Shelton's only PAC-adjacent money, a $2,365 in-kind voter-data package from the Forward Party of Utah, is excluded here because it's in-kind, not cash.</p>
+  <p class="bill-footnote">Kyle's group money came from 15 different PACs, parties, associations and businesses; the largest were the Weber County Republican Party ($3,000) and the Utah Association of Realtors ($1,500). James's came from four: UINPAC ($7,500, convention period), the Weber County Democratic Party ($2,000), Teamsters Local 222 ($750) and the Women's Democratic Club ($300). Bank interest (about $9 for Kyle, $6 for James) is left out. In-kind gifts, like Shelton's voter data and Kyle's from CMV PAC, aren't counted.</p>
+
+  <h2 class="sect" id="grades">Grades on the five questions</h2>
+  <p>Every item is graded on the same five questions used across this project: Power, Transparency, Financial accountability, Environmental impact and Community impact. A C means the record meets what Utah law requires, the status quo. A B or A means the candidate went beyond it, and the record shows it. D means something is vague or bundled, or a public check is weakened; F means something required is missing, or a check is removed with nothing in its place.</p>
+  <div class="topic-head">1. Campaign money</div>
+  <div class="table-scroll"><table class="rubric">
+    <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
+    <tr class="bg-row"><td>Kyle</td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td></tr>
+    <tr class="bg-why"><td colspan="7"><b>Why:</b> About 77% of his 2026 money came from 15 different PACs, parties, associations and businesses, and 23% from individuals. No single group or treasurer accounts for most of it. Every contributor and payee is named, most spending lines name the vendor and what kind of purchase it was, and the September 30th Report was filed after the period closed. That meets the law.<br><b>What would have scored higher for the collective:</b> a broader base of donors who live in the district.</td></tr>
+    <tr class="bg-row"><td>James</td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td></tr>
+    <tr class="bg-why"><td colspan="7"><b>Why:</b> About 67% of her 2026 money came from individuals, many in gifts of $200 or less from Ogden-area addresses; the rest came from four groups, led by UINPAC's $7,500. Every contributor and payee is named. That meets the law.</td></tr>
+    <tr class="bg-row"><td>Shelton</td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td></tr>
+    <tr class="bg-why"><td colspan="7"><b>Why:</b> All $768 in 2026 cash came from individuals, about half from Shelton herself, and every entry is named. Her largest support was in-kind voter data from her party, which is reported as required. That meets the law.</td></tr>
+  </table></div>
+  <p class="bill-footnote"><b>Going beyond the law would look like:</b> saying what each "Campaign Expense" payment bought, and raising most of the money from people who live in the district.</p>
+  <div class="topic-head">2. Disclosure forms</div>
+  <div class="table-scroll"><table class="rubric">
+    <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
+    <tr class="bg-row"><td>Kyle</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-b">B</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-b">B</span></td></tr>
+    <tr class="bg-why"><td colspan="7"><b>Why:</b> His form lists his employer and job (EHS manager at Biomerics) and no business entities, outside income of $5,000 or more, stock holdings or board seats. He also lists his wife's current and previous employers, which the form asks for only when a candidate believes the job may be a conflict. That goes beyond what the form requires.</td></tr>
+    <tr class="bg-row"><td>James</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td></tr>
+    <tr class="bg-why"><td colspan="7"><b>Why:</b> Her form lists her current job (part-time chaplain at Ogden Regional Medical Center, through Episcopal Community Services), her previous one (pastor, First United Methodist Church) and her seat as chair of the Mountain Sky Conference's Board of Pension &amp; Health, a board seat the form requires. No business entities, outside income or stock holdings are listed. That meets the law.</td></tr>
+    <tr class="bg-row"><td>Shelton</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-b">B</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-b">B</span></td></tr>
+    <tr class="bg-why"><td colspan="7"><b>Why:</b> Her employers and spouse's name are withheld under the state provision that allows it (Utah Code 20A-11-1604(7)(a)), which is legal. She lists her unpaid office in the Weber County Utah Forward Party (secretary, now vice chair), a role the form's board-and-paid-leadership question does not clearly require. That goes beyond what the form asks.</td></tr>
+  </table></div>
+  <p class="bill-footnote"><b>Going beyond the law would look like:</b> listing more than the form asks, such as a spouse's business or unpaid roles, as Kay McRae did in Senate District 20.</p>
 
   <h2 class="sect">The bill docket</h2>
   <p>Every 2026 bill tied to Kyle's name, sortable by category or status. Click a bill to read the full record.</p>
@@ -276,12 +336,12 @@
 
   <h2 class="sect">The other candidates</h2>
   <h3 class="sub-head">Kim James (D)</h3>
-  <p>Retired United Methodist pastor (Ogden First UMC, 2013–2025), 40 years in ministry across Colorado and Utah, lives on Ogden's East Bench. Campaign is heavily family- and small-dollar-funded: repeated in-kind and cash gifts from "Kimal James" and "Oscar James" (same home address as the candidate), plus a broad out-of-state small-dollar donor base consistent with a long ministry network. Received a one-time $7,500 gift from UINPAC (Utah Investment Network PAC, part of the Utah Donor Collaborative's multi-candidate Democratic slate) in the 2026 convention period — not a recurring funder; no PAC money appears in any subsequent report. Total 2026-cycle-to-date fundraising, combining all reports through the interim general-period ledger, runs well above $40,000, almost entirely small-dollar and local.</p>
+  <p>Retired United Methodist pastor (Ogden First UMC, 2013&ndash;2025), 40 years in ministry across Colorado and Utah, lives on Ogden's East Bench; now a part-time chaplain at Ogden Regional Medical Center. Her campaign is funded mostly by individuals, including her own gifts (she files as Kimal James) and gifts from "Oscar James" at the same address and a small out-of-state donor base consistent with a long ministry career. Her group money in 2026: UINPAC (Utah Investment Network PAC) $7,500 in the convention period, the Weber County Democratic Party $2,000, Teamsters Local 222 $750 and the Women's Democratic Club $300. Raised $32,143 in 2026 through Sept. 25, per the state's data export of her filings.</p>
 
   <h3 class="sub-head">Libby Shelton (Utah Forward Party)</h3>
   <p>Full name per her own site: Libby Hernandez Shelton (CFIS/COI filings use Elizabeth Anne Shelton). Weber County resident 20+ years; works as a therapist specializing in substance use and domestic violence treatment (MSW, Utah State University; BA Anthropology, Weber State University). Politically active for 15 years as a state/county caucus delegate, including a decade as her local caucus's vice chair before switching to the Forward Party in 2025. Currently Weber County Vice-Chair of the Forward Party of Utah &mdash; a local party officer, not just a candidate. Platform centers on election reform (fair maps, open primaries, expanded voting access), ethics and campaign-finance oversight of lawmakers, and a balanced-market economic approach; as a Forward Party candidate she says she isn't bound to any single party platform.</p>
-  <p><b>Campaign finance is almost entirely self- and small-dollar-funded.</b> Her 2026 Convention Report (1/1&ndash;3/30/26) was 100% self-funded &mdash; $386.96 total, all three contributions from Shelton herself, covering the filing fee and campaign setup costs. Her Primary Report (3/31&ndash;6/11/26) added $381.10 in real money from five individual donors ($41.50&ndash;$103 each), plus two in-kind gifts that don't count toward her cash total: $110.47 in T-shirts from a supporter, and a $2,365.00 voter-data package from the Forward Party of Utah &mdash; by far her largest contribution of any kind, but data/services from the state party rather than cash. YTD cash total: $768.06.</p>
-  <div class="flag-open">Two things worth noting for context: <b>no general-period report has been filed yet</b> &mdash; her most recent filing on record is the primary report ending 6/11/26, so any dollar comparison to Kyle (filed through 8/4/26) or James (filed through 8/21/26) is comparing different points in time, not a fundraising lull. And <b>every single itemized contribution in both her reports was entered as an amendment, not in the original filing</b> &mdash; the same "shell report, add real numbers later" pattern already documented for HD10's Jim Alvey. Legally compliant if each amendment lands within Utah's 31-day window, but it means her filings look current on the surface while the real contribution data arrives afterward. A genuine deletion also appears in her Primary Report: a $53.99 in-kind "door hangers" gift was fully wiped via amendment on 6/16/26.</div>
+  <p><b>Campaign finance is almost entirely self- and small-dollar-funded.</b> Her 2026 Convention Report (1/1&ndash;3/30/26) was 100% self-funded &mdash; $386.96 total, all three contributions from Shelton herself, covering the filing fee and campaign setup costs. Her Primary Report (3/31&ndash;6/11/26) added $381.10 in real money from five individual donors ($41.50&ndash;$103 each), plus two in-kind gifts that don't count toward her cash total: $110.47 in T-shirts from a supporter, and a $2,365.00 voter-data package from the Forward Party of Utah &mdash; by far her largest contribution of any kind, but data/services from the state party rather than cash. YTD cash total: $768.06 (unchanged through Sept. 25; see the September 30th section above).</p>
+  <div class="flag-open">Two notes on her filings. Most of her itemized entries in the state's data file are marked as amendments rather than original entries. And a $53.99 in-kind door-hanger gift from MoveForwardWithUs, first dated April 29, was removed by amendment on June 16; the same gift, same amount and description, appears again in her September 30th period dated Aug. 1. Earlier versions of this page described it only as removed.</div>
 
 
   <section>
@@ -289,8 +349,10 @@
       <summary>Full sourcing</summary>
       <div class="details-body">
         <ul class="sources">
-          <li>Jason Kyle campaign finance disclosures, disclosures.utah.gov — 2018, 2022, 2023 Year End, 2024, 2025 Year End, 2026 Convention/Primary Reports (through 6/11/2026)</li>
-          <li>Kim James campaign finance disclosures, disclosures.utah.gov — 2025 Year End through 2026 interim general-period ledger</li>
+          <li>Jason Kyle campaign finance disclosures, disclosures.utah.gov — 2018, 2022, 2023 Year End, 2024, 2025 Year End, 2026 Convention/Primary Reports, and 2026 September 30th Report (6/12–9/25/2026, submitted 9/29/2026)</li>
+          <li>Kim James and Libby Shelton, state data exports (DEX) of 2026 Convention, Primary and September 30th filings, disclosures.utah.gov, pulled 9/30/2026</li>
+          <li>Conflict-of-interest disclosure forms for Jason Kyle, Kimal (Kim) James and Elizabeth (Libby) Shelton, disclosures.utah.gov</li>
+          <li>Kim James campaign finance disclosures, disclosures.utah.gov — 2025 Year End through 2026 September 30th period</li>
           <li>UINPAC (Utah Investment Network PAC) 2026 Convention Report and 2024 Convention Report, disclosures.utah.gov</li>
           <li>jasonbkyle.com, campaign messaging</li>
           <li>Utah State Legislature, HB 300, HB 236, HB 449/HJR 20, HJR 5, HB 424, HB 262, HB 530, HB 543 — full enrolled/substitute bill text and floor vote records, le.utah.gov</li>
@@ -397,5 +459,6 @@
   });
 </script>
 
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 </body>
 </html>
