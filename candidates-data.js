@@ -259,7 +259,8 @@ const CANDIDATES = [
     verdict: "The Three-PAC Ecosystem",
     tags: ["Speaker of the House", "PAC Network", "Platform vs. Record"],
     stamp: "Active",
-    href: "hd12-graff-schultz.html"
+    href: "hd12-graff-schultz.html",
+    dateUpdated: "2026-09-30"
   },
   {
     id: "hd11-calder-hall",
@@ -283,7 +284,8 @@ const CANDIDATES = [
     verdict: "The Nonprofit That Wasn't",
     tags: ["Open Seat", "Corporate Filing", "PAC Network"],
     stamp: "Active",
-    href: "hd10-lesser-alvey.html"
+    href: "hd10-lesser-alvey.html",
+    dateUpdated: "2026-09-30"
   },
   {
     id: "hd9-choberka-sawyer",
