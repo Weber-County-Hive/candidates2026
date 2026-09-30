@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Case File: Graff vs. Schultz — House District 12 | The Weber County Hive</title>
+<link rel="icon" type="image/png" href="hive-bee.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -11,10 +12,10 @@
   :root {
     --color-bg: #f4f0e6;
     --color-card-bg: #fbf9f3;
-    --color-header-start: #5c1a2b;
-    --color-header-end: #3d0f1c;
-    --gradient-header: linear-gradient(135deg, var(--color-header-start), var(--color-header-end));
-    --color-link: #c0572e;
+    --color-header-start: #1f4e6b;
+    --color-header-end: #12304a;
+    --gradient-header: linear-gradient(160deg, #1f5e6b 0%, #1f4e6b 45%, var(--color-header-end) 100%);
+    --color-link: #1d6b57;
     --color-stat: #d9a441;
     --color-ink: #241c18;
     --color-ink-soft: #5a4f47;
@@ -328,14 +329,40 @@
     .fund-bar-amt { width: 74px; }
   }
 
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .table-scroll{overflow-x:auto;}
+  table.led{width:100%;border-collapse:collapse;margin:14px 0 18px;font-size:15.5px;}
+  table.led th{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;text-align:left;color:var(--color-ink-soft);border-bottom:2px solid var(--color-border);padding:6px 10px 8px 0;}
+  table.led td{padding:7px 10px 7px 0;border-bottom:1px solid var(--color-border);vertical-align:top;}
+  table.rubric{width:100%;border-collapse:collapse;margin:10px 0 14px;font-size:15px;background:var(--color-card-bg);border:1px solid var(--color-border);}
+  table.rubric th{font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--color-ink-soft);text-align:center;border-bottom:2px solid var(--color-border);padding:8px 6px;}
+  table.rubric th:first-child{text-align:left;}
+  table.rubric tr.bg-row td{padding:10px 6px 4px;text-align:center;}
+  table.rubric tr.bg-row td:first-child{text-align:left;font-weight:600;white-space:nowrap;}
+  table.rubric tr.bg-why td{font-size:14.5px;color:var(--color-ink-soft);padding:2px 10px 14px;border-bottom:1px solid var(--color-border);}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:var(--font-headline);font-weight:900;font-size:16px;color:#fff;border-radius:3px;padding:1px 6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--color-stat);} .g-d{background:#b5652f;} .g-f{background:#a5301e;} .g-na{background:#9a9186;font-size:12px;}
+  .topic-head{font-family:var(--font-headline);font-size:1.15rem;font-weight:700;color:var(--color-header-end);margin:26px 0 6px;}
+  .note{font-size:0.92rem;color:var(--color-ink-soft);}
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
 
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+
 <div class="header-band">
   <div class="wrap">
-    <a class="brand" href="#"><span class="dot">⬡</span> The Weber County Hive</a>
+    <a class="brand" href="index.html"><span class="dot">⬡</span> 2026 Candidates &middot; Case Files</a>
     <nav>
       <a href="index.html">Docket</a>
       <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
@@ -348,7 +375,7 @@
   <div class="case-hero">
     <div class="kicker">House District 12 · General Election, Nov. 3, 2026</div>
     <h1>Anna Graff <span class="vs">vs.</span> Mike Schultz</h1>
-    <p class="dek">A grassroots challenger running on individual, small-dollar support against the sitting Speaker of the Utah House, whose personal account and three-PAC network hold nearly three-quarters of a million dollars combined. Roy and Hooper, Weber County.</p>
+    <p class="dek">A grassroots challenger running on individual, small-dollar support against the sitting Speaker of the Utah House, whose personal account and three-PAC network hold more than $700,000 combined. Roy and Hooper, Weber County.</p>
     <div class="case-meta">
       <span>Incumbent: <b>Mike Schultz (R)</b>, Speaker of the House, since 2015</span>
       <span>Challenger: <b>Anna Graff (D)</b></span>
@@ -358,14 +385,16 @@
 
   <div class="verdict-box">
     <span class="label">What the records show</span>
-    <p>Graff's campaign has raised roughly $3,575 across the 2026 cycle so far, all of it from individual donors, the Democratic party, and in-kind support — no PAC or corporate money at all.</p>
-    <p>Schultz's personal campaign account and the three PACs he controls or has decision-making authority over — House Speaker Leadership PAC, Utah House Republican Election Committee, and Northern Wasatch HBA PAC — hold a combined <b>~$712,000</b> in cash on hand, funded entirely by corporate PACs, industry associations, and major individual donors giving in the thousands.</p>
-    <p style="font-size: 0.92rem; color: var(--color-ink-soft);">These figures update our July 2, 2026 piece, "Two Funding Frameworks," which reported $989.68 for Graff and $335,150 combined for Schultz's ecosystem at that point in the cycle. The totals below reflect newer disclosure filings through August 2026.</p>
+    <p>Graff's campaign has raised about $4,341 in 2026, based on contributions filed through Sept. 16. About two-thirds came from individual donors, most in gifts of $5 to $100; the rest came from Democratic party groups, in-kind support and $157 of her own money. No PAC or corporate money.</p>
+    <p>Schultz's personal campaign account has raised $73,100 in 2026. $35,000 of it (48%) is his own money, given on Aug. 13; $36,100 (49%) came from companies, PACs and associations. It held $89,282.60 on Sept. 25.</p>
+    <p>Through their August reports, Schultz's personal campaign account and the three PACs he controls or has decision-making authority over — House Speaker Leadership PAC, Utah House Republican Election Committee, and Northern Wasatch HBA PAC — hold a combined <b>~$712,000</b> in cash on hand. The PACs are funded by corporate PACs, industry associations and major individual donors giving in the thousands; his personal account is now about half his own money.</p>
+    <p style="font-size: 0.92rem; color: var(--color-ink-soft);">These figures update our July 2, 2026 piece, "Two Funding Frameworks," which reported $989.68 for Graff and $335,150 combined for Schultz's ecosystem at that point in the cycle. Updated Sept. 30, 2026: Schultz's personal account uses his September 30th Report; Graff's figures use her contributions filed through Sept. 16; the three PACs still use their August filings.</p>
   </div>
 
   <div class="stat-row">
-    <div class="stat"><span class="num">$3,575</span><span class="lbl">Graff — total raised, 2026 cycle</span></div>
-    <div class="stat"><span class="num">$712K+</span><span class="lbl">Schultz ecosystem — combined cash on hand</span></div>
+    <div class="stat"><span class="num">$4,341</span><span class="lbl">Graff — raised in 2026 (through 9/16)</span></div>
+    <div class="stat"><span class="num">$73,100</span><span class="lbl">Schultz personal account — raised in 2026, 48% his own money</span></div>
+    <div class="stat"><span class="num">$712K+</span><span class="lbl">Schultz ecosystem — combined cash on hand, August reports</span></div>
     <div class="stat"><span class="num">$38,305</span><span class="lbl">Paid to Irish Elk LLC in PAC "admin" fees</span></div>
     <div class="stat"><span class="num">$35,225</span><span class="lbl">Single fundraiser, Little America Hotel, one day</span></div>
   </div>
@@ -382,39 +411,19 @@
 
     <div class="fund-panel active" data-panel="graff">
       <div class="fund-donut-wrap">
-        <div class="fund-donut" style="background: conic-gradient(var(--color-link) 0% 28%, var(--color-header-start) 28% 52%, var(--color-stat) 52% 96%, var(--color-ink-soft) 96% 100%);">
-          <div class="fund-donut-center">GRAFF</div>
+        <div class="fund-donut" style="background: conic-gradient(#3fa37f 0% 67.6%, #12304a 67.6% 96.4%, #9a9186 96.4% 100%);">
+          <div class="fund-donut-center">GRAFF<br>$4,341</div>
         </div>
         <div class="fund-donut-legend">
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-link);"></span><span class="fund-donut-legend-amt">28%</span> <span class="fund-donut-legend-lbl">Largest single gift (Clive Walker, $1,000)</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-header-start);"></span><span class="fund-donut-legend-amt">24%</span> <span class="fund-donut-legend-lbl">Democratic party &amp; in-kind support</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-stat);"></span><span class="fund-donut-legend-amt">44%</span> <span class="fund-donut-legend-lbl">All other individual donors</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-ink-soft);"></span><span class="fund-donut-legend-amt">4%</span> <span class="fund-donut-legend-lbl">Self-funded</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #3fa37f;"></span><span class="fund-donut-legend-amt">68%</span> <span class="fund-donut-legend-lbl">Individual donors (about $2,934, including Clive Walker's $1,000)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #12304a;"></span><span class="fund-donut-legend-amt">29%</span> <span class="fund-donut-legend-lbl">Democratic party groups &amp; in-kind ($1,250)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #9a9186;"></span><span class="fund-donut-legend-amt">4%</span> <span class="fund-donut-legend-lbl">Her own money ($157)</span></div>
         </div>
-      </div>
-      <div class="fund-bar-row">
-        <div class="fund-bar-label">Largest single gift</div>
-        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 28%; background: var(--color-link);"></div></div>
-        <div class="fund-bar-amt">28%</div>
-      </div>
-      <div class="fund-bar-row">
-        <div class="fund-bar-label">Party &amp; in-kind</div>
-        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 24%; background: var(--color-header-start);"></div></div>
-        <div class="fund-bar-amt">24%</div>
-      </div>
-      <div class="fund-bar-row">
-        <div class="fund-bar-label">Other individual donors</div>
-        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 44%; background: var(--color-stat);"></div></div>
-        <div class="fund-bar-amt">44%</div>
-      </div>
-      <div class="fund-bar-row">
-        <div class="fund-bar-label">Self-funded</div>
-        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 4%; background: var(--color-ink-soft);"></div></div>
-        <div class="fund-bar-amt">4%</div>
       </div>
 
       <h3 class="sub-title">Graff's donor base, in full</h3>
-      <p>Every dollar Graff has raised this cycle traces to an individual or a Democratic party committee. The largest single gift is $1,000, from Clive Walker of Layton — 28% of her entire haul. Several donors give in recurring small amounts: Catherine McNeel gives $5 every month; Luke Maynes gives $10 every month; Pete Shay has given twice, $25 then $30.</p>
+      <p>Every dollar Graff has raised this cycle traces to an individual or a Democratic party committee. The largest single gift is $1,000, from Clive Walker of Layton — 23% of her total. Several donors give in recurring small amounts: Catherine McNeel gives $5 every month; Luke Maynes gives $10 every month; Pete Shay has given twice, $25 then $30.</p>
+      <p>Newest filings (Aug. 23 to Sept. 16) add $765: the Women's Democratic Club ($400); Roy and Hooper donors James Magruder ($50), Linda Rose ($50) and Peggy Milos ($60); four out-of-state donors from Missouri and Kansas ($20 to $50 each); and repeat monthly gifts from McNeel, Maynes and Jamie Prather-Newton. Jeremy A Thompson of Roy gave a second time, $25 on Aug. 23.</p>
       <p>One donor is worth flagging for a cross-race pattern: <b>Jeremy A Thompson gave Graff $100 on 7/23/2026 from Roy, UT</b> — the same donor name, city, date, and amount that also appears giving to Bianca Mittendorf's HD7 campaign the same day, and to Kacee Weaver's USBE campaign the same day. Three separate Democratic-aligned candidates, one $100 gift each, all dated 7/23/2026 — this reads as a single donor deliberately spreading support across several races in one sitting, not three coincidences.</p>
     </div>
 
@@ -426,7 +435,7 @@
         <div class="fund-donut-legend">
           <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-link);"></span><span class="fund-donut-legend-amt">73%</span> <span class="fund-donut-legend-lbl">Utah House Republican Election Committee ($253,750)</span></div>
           <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-stat);"></span><span class="fund-donut-legend-amt">23%</span> <span class="fund-donut-legend-lbl">House Speaker Leadership PAC ($79,400)</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-header-start);"></span><span class="fund-donut-legend-amt">3.6%</span> <span class="fund-donut-legend-lbl">Personal campaign account ($12,500)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-header-start);"></span><span class="fund-donut-legend-amt">3.6%</span> <span class="fund-donut-legend-lbl">Personal campaign account ($12,500 at the time; $73,100 through 9/25)</span></div>
           <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-ink-soft);"></span><span class="fund-donut-legend-amt">0.8%</span> <span class="fund-donut-legend-lbl">Northern Wasatch HBA PAC ($2,650)</span></div>
         </div>
       </div>
@@ -451,6 +460,20 @@
         <div class="fund-bar-amt">$2,650</div>
       </div>
 
+      <h3 class="sub-title">Schultz's own campaign account, 2026</h3>
+      <div class="fund-donut-wrap">
+        <div class="fund-donut" style="background: conic-gradient(#12304a 0% 49.4%, #9a9186 49.4% 97.3%, #3fa37f 97.3% 98.6%, #d8cfbc 98.6% 100%);">
+          <div class="fund-donut-center">SCHULTZ<br>$73,100</div>
+        </div>
+        <div class="fund-donut-legend">
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #12304a;"></span><span class="fund-donut-legend-amt">49%</span> <span class="fund-donut-legend-lbl">Companies, PACs &amp; associations ($36,100)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #9a9186;"></span><span class="fund-donut-legend-amt">48%</span> <span class="fund-donut-legend-lbl">His own money ($35,000, Aug. 13)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #3fa37f;"></span><span class="fund-donut-legend-amt">1%</span> <span class="fund-donut-legend-lbl">Other individuals ($1,000, Leslie Carpenter)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #d8cfbc;"></span><span class="fund-donut-legend-amt">1%</span> <span class="fund-donut-legend-lbl">"State of Utah — Abandoned Property" ($1,000)</span></div>
+        </div>
+      </div>
+      <p>His September 30th Report (June 12 to Sept. 25, submitted Sept. 24) lists $58,600 in contributions and no spending. Besides his own $35,000, the largest checks came from Utah HOSPAC ($10,000), the Utah Association of Realtors ($4,500 in two checks) and the Pharmaceutical Care Management Association ($2,500). NUPAC, Boeing's PAC, HF Sinclair's PAC and Maverik gave $1,000 each; Doers Network, Republic Services and T-Mobile gave smaller amounts. The $1,000 listed from "State of Utah" at the Unclaimed Property Division's address is marked "Abandoned Property" on the report; it reads as returned unclaimed funds, not a donation from the state. The report header also lists him as having "Primary Decision Making Authority" for the Northern Wasatch HBA PAC.</p>
+
       <h3 class="sub-title">The three-PAC ecosystem</h3>
       <div class="record-card">
         <div class="rc-head"><span class="rc-name">House Speaker Leadership PAC</span><span class="rc-amount">$346,195 balance</span></div>
@@ -469,6 +492,31 @@
   </section>
 
   <!-- ============ SECTION: WHERE IT GOES ============ -->
+  <section class="sect" id="grades">
+    <h2 class="sect-title"><span class="n">&#9733;</span> Where the money stands, and the grades</h2>
+    <div class="table-scroll"><table class="led">
+      <tr><th></th><th>Graff (D)</th><th>Schultz (R), personal account</th></tr>
+      <tr><td>Raised in 2026</td><td>About $4,341 (through 9/16)</td><td>$73,100 (through 9/25)</td></tr>
+      <tr><td>From individuals</td><td>About 68%</td><td>1% (plus 48% his own money)</td></tr>
+      <tr><td>From PACs, parties, companies &amp; groups</td><td>29% (party groups &amp; in-kind)</td><td>49%</td></tr>
+      <tr><td>Cash on hand</td><td>Not shown on the list filed through 9/16</td><td>$89,282.60 (9/25)</td></tr>
+    </table></div>
+    <p class="note">Schultz also directs three PACs (House Speaker Leadership PAC, UHREC and Northern Wasatch HBA PAC). Their balances above come from their August filings.</p>
+
+    <p>Every item is graded on the same five questions used across this project: Power, Transparency, Financial accountability, Environmental impact and Community impact. A C means the record meets what Utah law requires, the status quo. A B or A means the candidate went beyond it, and the record shows it. D means something is vague or bundled, or a public check is weakened; F means something required is missing, or a check is removed with nothing in its place.</p>
+    <div class="topic-head">Campaign money</div>
+    <div class="table-scroll"><table class="rubric">
+      <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
+      <tr class="bg-row"><td>Graff</td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> About two-thirds of her money comes from individuals, most in gifts of $5 to $100; the rest from Democratic party groups and in-kind support. Every contributor is named. That meets the law.</td></tr>
+      <tr class="bg-row"><td>Schultz</td><td><span class="gl g-d">D</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-d">D</span></td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> His own account is funded by himself (48%) and by companies, PACs and associations (49%); one individual other than Schultz gave, $1,000. He also directs three PACs that held more than $680,000 in August and fund other candidates. A $5,000 contribution is listed from "PAC Management Services" (VIPGateKeeper), a platform that passes along money from donors who are not named on Utah's report.<br><b>What would have scored higher for the collective:</b> Naming the donors behind the VIPGateKeeper contribution, and a base of district donors.</td></tr>
+    </table></div>
+    <p class="note"><b>Going beyond the law would look like:</b> saying what each "Campaign Expense" payment bought, and raising most of the money from people who live in the district.</p>
+    <div class="topic-head">Disclosure forms</div>
+    <p class="note">Not graded yet. Neither candidate's conflict-of-interest form has been reviewed for this page. <b>Going beyond the law would look like:</b> listing more than the form asks, such as a spouse's business or unpaid roles, as Kay McRae did in Senate District 20.</p>
+  </section>
+
   <section class="sect" id="downstream">
     <h2 class="sect-title"><span class="n">02</span> Where the money goes</h2>
     <p>Beyond what Schultz's PACs raise, the record shows where it flows once it arrives — a consulting fee here, a network candidate there, and one unresolved, unusual line item.</p>
@@ -540,7 +588,8 @@
   <details class="sourcing">
     <summary>Sourcing &amp; methodology</summary>
     <ul>
-      <li>Campaign finance figures: disclosures.utah.gov, individual candidate and PAC reports, 2026 Convention, Primary, and interim general-period filings for Graff, Schultz's personal account, House Speaker Leadership PAC, Utah House Republican Election Committee, and Northern Wasatch HBA PAC.</li>
+      <li>Schultz's 2026 September 30th Report and Graff's contributions filed through Sept. 16, 2026, disclosures.utah.gov, as displayed Sept. 30, 2026.</li>
+        <li>Campaign finance figures: disclosures.utah.gov, individual candidate and PAC reports, 2026 Convention, Primary, and interim general-period filings for Graff, Schultz's personal account, House Speaker Leadership PAC, Utah House Republican Election Committee, and Northern Wasatch HBA PAC.</li>
       <li>PAC and network cross-references: prior Weber County Hive reporting on NUPAC, Irish Elk LLC/Kyle Palmer, Election Hive LLC, and the Operation Gigawatt donor networks.</li>
       <li>PAC Management Services/VIPGateKeeper: vipgatekeeper.com, linkedin.com/company/pac-management-services, and national cross-reference via FollowTheMoney/OpenSecrets.</li>
       <li>Preserving Utah Values PAC donation: reported via Utah Politics News, citing financial disclosures filed with the state.</li>
@@ -565,6 +614,8 @@
     });
   });
 </script>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 
 </body>
 </html>
