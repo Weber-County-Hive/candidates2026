@@ -331,9 +331,10 @@ const CANDIDATES = [
     caseNumber: "CASE 00",
     names: "Kerry vs. Weaver",
     verdict: "The Path Forward Utah Network",
-    tags: ["COI Omissions", "PAC Network", "USBE"],
+    tags: ["Kerry Withdrew", "COI Omissions", "USBE"],
     stamp: "Active",
-    href: "joseph-kerry.html"
+    href: "joseph-kerry.html",
+    dateUpdated: "2026-09-30"
   },
   {
     id: "davis-county-lee-millburn",

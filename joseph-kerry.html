@@ -14,10 +14,10 @@
     --ink:#2a261e;
     --ink-soft:#5c5647;
     --ink-faint:#8b8470;
-    --rust:#c0572e;
+    --rust:#1d6b57;
     --amber:#d9a441;
-    --burgundy:#5c1a2b;
-    --burgundy-deep:#3d0f1c;
+    --burgundy:#1f4e6b;
+    --burgundy-deep:#12304a;
     --line:#ddd6c4;
     --line-strong:#c7bda3;
     --red:#a5301e;
@@ -40,7 +40,7 @@
 
   .header-band{
     background:var(--burgundy-deep);
-    background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);
+    background-image:linear-gradient(160deg, #1f5e6b 0%, #1f4e6b 45%, var(--burgundy-deep) 100%);
     padding:34px 0 30px;
   }
   .header-inner{
@@ -302,9 +302,22 @@
   footer a{
     color:var(--rust);
   }
+    .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .withdrawn{border:2px solid var(--burgundy);background:#eef4f7;padding:16px 18px;margin:22px 0 8px;border-radius:4px;font-size:16px;line-height:1.55;}
+  .withdrawn .wd-label{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);font-weight:600;display:block;margin-bottom:6px;}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
 <div class="header-band">
   <div class="header-inner">
@@ -319,7 +332,8 @@
 <div class="wrap">
   <h1 class="headline">Joseph Kerry: Six-Layer Regulatory Capture Through a USBE Board Position</h1>
   <p class="dek">A sitting state education official chairs an USBE committee while simultaneously chairing a nonprofit funded by charter-school executives, running a private education-advocacy firm, and receiving donations from those same charter leaders. Disclosure forms show omissions.</p>
-  <p class="byline">Reporting: <b>The Weber County Hive</b> | Updated: August 25, 2026</p>
+  <p class="byline">Reporting: <b>The Weber County Hive</b> | Updated: Sept. 30, 2026</p>
+  <div class="withdrawn"><span class="wd-label">Update &middot; Sept. 30, 2026</span>Joseph Kerry has left the race. He announced on Facebook on Sept. 11, 2026, that he was resigning his District 2 seat on the State Board of Education and ending his reelection campaign because he is moving to another part of the state to care for his mother, according to <a href="https://www.sltrib.com/news/education/2026/09/14/joe-kerry-utah-state-school-board/" target="_blank" rel="noopener">The Salt Lake Tribune</a> (Sept. 14, 2026). As of Sept. 30, the Weber County Elections candidate list still showed him as a candidate; this page will be updated when the county or state confirms whether his name stays on the Nov. 3 ballot and who fills the seat. The records below describe his time on the board and his campaign through August 2026, and remain on file as part of the public record.</div>
 
   <section>
     <h2 class="section-head">Utah State Board of Education District 2: The Race</h2>
@@ -328,7 +342,7 @@
       <b>District coverage:</b> USBE District 2 represents Ogden Valley and surrounding areas in Weber County. The board member makes decisions affecting charter-school oversight, educator licensing and discipline (UPPAC), curriculum standards, and school finance policy statewide.
     </div>
 
-    <h3 class="sub-head">Kerry — Incumbent</h3>
+    <h3 class="sub-head">Kerry — Incumbent (withdrew Sept. 2026)</h3>
     <div class="stat-grid">
       <div class="stat">
         <div class="label">Full Legal Name</div>
@@ -890,5 +904,6 @@
   });
 </script>
 
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 </body>
 </html>
