@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lesser vs. Alvey — Case File | The Weber County Hive</title>
+<link rel="icon" type="image/png" href="hive-bee.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,10 +15,10 @@
     --ink:#2a261e;
     --ink-soft:#5c5647;
     --ink-faint:#8b8470;
-    --rust:#c0572e;
+    --rust:#1d6b57;
     --amber:#d9a441;
-    --burgundy:#5c1a2b;
-    --burgundy-deep:#3d0f1c;
+    --burgundy:#1f4e6b;
+    --burgundy-deep:#12304a;
     --line:#ddd6c4;
     --line-strong:#c7bda3;
     --red:#a5301e;
@@ -31,10 +32,10 @@
   a{color:var(--rust);text-decoration:none;}
   a:hover{text-decoration:underline;}
 
-  .header-band{background:var(--burgundy-deep);background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);padding:34px 0 30px;}
+  .header-band{background:var(--burgundy-deep);background-image:linear-gradient(160deg, #1f5e6b 0%, #1f4e6b 45%, var(--burgundy-deep) 100%);padding:34px 0 30px;}
   .header-inner{max-width:880px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:16px;}
   .hex{width:46px;height:46px;flex:0 0 auto;}
-  .hd-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#d9b8bf;}
+  .hd-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#b9d3d6;}
   .hd-title{font-family:var(--display);font-size:21px;font-weight:700;color:#f4e9dd;}
 
   .wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px;}
@@ -118,6 +119,27 @@
   ul.sources{margin:0;padding-left:20px;font-size:14.5px;color:var(--ink-soft);}
   ul.sources li{margin-bottom:6px;}
 
+  .table-scroll{overflow-x:auto;}
+  table.rubric{width:100%;border-collapse:collapse;margin:10px 0 22px;font-size:15px;background:var(--paper-card);border:1px solid var(--line-strong);}
+  table.rubric th{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);text-align:center;border-bottom:2px solid var(--line-strong);padding:8px 6px;}
+  table.rubric th:first-child{text-align:left;}
+  table.rubric tr.bg-row td{padding:10px 6px 4px;text-align:center;}
+  table.rubric tr.bg-row td:first-child{text-align:left;font-weight:600;white-space:nowrap;}
+  table.rubric tr.bg-why td{font-size:14.5px;color:var(--ink-soft);padding:2px 10px 14px;border-bottom:1px solid var(--line);}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:var(--display);font-weight:900;font-size:16px;color:#fff;border-radius:3px;padding:1px 6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--amber);} .g-d{background:#b5652f;} .g-f{background:var(--red);} .g-na{background:#9a9186;font-size:12px;}
+  .topic-head{font-family:var(--display);font-size:18px;font-weight:700;color:var(--burgundy-deep);margin:26px 0 6px;}
+  .updated{font-family:var(--mono);font-size:12px;color:var(--ink-faint);margin-top:12px;}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
   footer{margin-top:60px;padding-top:24px;border-top:2px solid var(--line-strong);}
   .tagline{font-family:var(--display);font-style:italic;font-size:16px;color:var(--burgundy);margin-bottom:10px;}
   footer nav{display:flex;gap:18px;flex-wrap:wrap;}
@@ -126,11 +148,13 @@
 </head>
 <body>
 
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+
 <div class="header-band">
   <div class="header-inner">
-    <svg class="hex" viewBox="0 0 100 100"><polygon points="50,3 93,25 93,75 50,97 7,75 7,25" fill="none" stroke="#d9a441" stroke-width="4"/><text x="50" y="60" font-family="Playfair Display" font-size="34" font-weight="900" fill="#f4e9dd" text-anchor="middle">H</text></svg>
+    <img class="hex" src="hive-bee.png" alt="The Hive bee seal">
     <div>
-      <div class="hd-kicker">The Weber County Hive</div>
+      <div class="hd-kicker">Utah Hive Politics &middot; The Weber County Hive</div>
       <div class="hd-title">2026 Candidates — Case File</div>
     </div>
   </div>
@@ -141,7 +165,8 @@
   <div class="case-hero">
     <div class="case-kicker">Case 04 &middot; Utah House District 10 &middot; East Ogden / South Ogden</div>
     <h1 class="case-title">The Nonprofit That Wasn't</h1>
-    <p class="case-dek">Rosemary Lesser (D) vs. Jim Alvey (R) for the open seat Jill Koford is vacating to run for state Senate. A $35,000 same-day PAC infusion, a same-day-filed election calendar, and a nonprofit corporation Alvey dissolved the same day he was asked about it.</p>
+    <p class="case-dek">Rosemary Lesser (D) vs. Jim Alvey (R) for the open seat Jill Koford is vacating to run for state Senate. $60,000 from three PACs that list the same treasurer, an election calendar filed before its reporting periods began, and a nonprofit corporation Alvey dissolved the same day he was asked about it.</p>
+    <p class="updated">Updated Sept. 30, 2026, with both candidates' September 30th reports and Alvey's General Report entries through 9/29.</p>
   </div>
 
   <div class="verdict-box">
@@ -149,25 +174,39 @@
   </div>
 
   <div class="stat-row">
-    <div class="stat"><div class="stat-num">$90,013</div><div class="stat-label">Lesser's total raised, 2026</div></div>
-    <div class="stat"><div class="stat-num">$35,000</div><div class="stat-label">Alvey's same-day PAC infusion</div></div>
+    <div class="stat"><div class="stat-num">$121,791</div><div class="stat-label">Lesser raised, 2026 (through 9/25)</div></div>
+    <div class="stat"><div class="stat-num">$78,310</div><div class="stat-label">Alvey raised, 2026 (through 9/29)</div></div>
+    <div class="stat"><div class="stat-num">77%</div><div class="stat-label">of Alvey's money from 3 PACs, one treasurer</div></div>
     <div class="stat"><div class="stat-num">1 day</div><div class="stat-label">from Shauna's question to dissolution</div></div>
   </div>
+
+  <h2 class="sect">Where the money stands</h2>
+  <p>Both candidates' September 30th reports cover the same window, June 12 through Sept. 25, 2026. The figures below come from each report's own balance summary.</p>
+  <div class="table-scroll"><table class="led">
+    <tr><th></th><th>Lesser (D)</th><th>Alvey (R)</th></tr>
+    <tr><td>Raised, 6/12&ndash;9/25</td><td>$64,856.48</td><td>$72,095.00</td></tr>
+    <tr><td>Share from PACs, parties and other groups</td><td>26.1% ($16,915 from 18 groups)</td><td>92.9% ($67,000 in 5 checks)</td></tr>
+    <tr><td>Spent, 6/12&ndash;9/25</td><td>$38,979.87</td><td>$22,047.88</td></tr>
+    <tr><td>Cash on hand, 9/25</td><td>$66,869.83</td><td>$50,389.43</td></tr>
+    <tr><td>Raised, all of 2026</td><td>$121,791.34</td><td>$78,310.00 (through 9/29)</td></tr>
+    <tr><td>Report submitted</td><td>9/26/26, the day after the period closed</td><td>6/15/26, three days after the period began; entries added by amendment through 9/29</td></tr>
+  </table></div>
+  <p class="bill-footnote">Lesser's year-to-date figure is the report's own, which leaves out in-kind gifts. It replaces the $90,013 figure shown on an earlier version of this page, which predated these contributions.</p>
 
   <h2 class="sect">The money, by donor</h2>
   <p>Every large contribution on file for both candidates this cycle. Filter by candidate or click a card for the full detail.</p>
 
   <div class="docket-filters">
-    <button class="filter-btn active" data-filter="all">All (18)</button>
-    <button class="filter-btn" data-filter="lesser">Lesser (8)</button>
-    <button class="filter-btn" data-filter="alvey">Alvey (10)</button>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="lesser">Lesser</button>
+    <button class="filter-btn" data-filter="alvey">Alvey</button>
   </div>
 
   <div id="money-grid" class="bill-grid"></div>
 
   <div class="record-card">
     <div class="rc-title">Same reporting-gap pattern already documented for Shelton and Sawyer</div>
-    <p style="margin-bottom:0;">Alvey's entire 2026 report calendar &mdash; Convention, Primary, September 30th, and General &mdash; was pre-filed as empty shells well before each report's own period even began, then backfilled via amendment as real money arrived. His Primary Report was submitted 4/20/26, 52 days before that period even ended. His September 30th and General reports were both submitted 6/15/26 &mdash; the General Report covers 9/26&ndash;10/22/26, meaning it was "filed" over three months before its own period starts. A comparison check against NUPAC, H3 PAC, and Utah Forward PAC filings found none with a submission date predating their own report period &mdash; this pattern is not standard practice. Legally compliant (each amendment lands within the 31-day window) but it collapses public reporting checkpoints into one early "filed" status, so the $35,000 PAC infusion entered the record with no new filing event to signal it.</p>
+    <p style="margin-bottom:0;">Alvey's entire 2026 report calendar &mdash; Convention, Primary, September 30th, and General &mdash; was pre-filed as empty shells well before each report's own period even began, then backfilled via amendment as real money arrived. His Primary Report was submitted 4/20/26, 52 days before that period even ended. His September 30th and General reports were both submitted 6/15/26 &mdash; the General Report covers 9/26&ndash;10/22/26, meaning it was "filed" over three months before its own period starts. A comparison check against NUPAC, H3 PAC, and Utah Forward PAC filings found none with a submission date predating their own report period &mdash; this pattern is not standard practice. Legally compliant (each amendment lands within the 31-day window) but it collapses public reporting checkpoints into one early "filed" status, so the $35,000 PAC infusion entered the record with no new filing event to signal it. The pattern held through the September 30th deadline: that report still shows a 6/15/26 submit date, with 32 contributions and 15 expenditures added by amendment between 7/30 and 9/29. Lesser's September 30th Report, for comparison, was submitted once, on 9/26/26, the day after its period closed.</p>
   </div>
 
   <h2 class="sect">2026 money: individual donors vs. PAC/institutional</h2>
@@ -176,27 +215,42 @@
   <div class="bubble-row">
     <div class="bubble-col">
       <svg viewBox="0 0 200 200" class="bubble-svg">
-        <path d="M 100 100 L 100 10 A 90 90 0 1 1 11.91 81.56 Z" fill="var(--rust)"/>
-        <path d="M 100 100 L 11.91 81.56 A 90 90 0 0 1 100 10 Z" fill="var(--burgundy)"/>
+        <path d="M 100 100 L 100 10 A 90 90 0 1 1 14.23 127.27 Z" fill="#3fa37f"/>
+        <path d="M 100 100 L 14.23 127.27 A 90 90 0 0 1 100 10 Z" fill="#12304a"/>
       </svg>
       <div class="bubble-name">Rosemary Lesser (D)</div>
-      <div class="bubble-total">$90,013 total</div>
-      <div class="bubble-split"><span style="color:var(--rust);">&#9679;</span> $70,513 individual (78%) &nbsp; <span style="color:var(--burgundy);">&#9679;</span> $19,500 PAC/institutional (22%)</div>
+      <div class="bubble-total">$121,791 total</div>
+      <div class="bubble-split"><span style="color:#3fa37f;">&#9679;</span> $85,376 individual (70%) &nbsp; <span style="color:#12304a;">&#9679;</span> $36,415 PAC/institutional (30%)</div>
     </div>
     <div class="bubble-col">
       <svg viewBox="0 0 200 200" class="bubble-svg">
-        <path d="M 100 100 L 100 39 A 61 61 0 1 1 50.7 64.1 Z" fill="var(--burgundy)"/>
-        <path d="M 100 100 L 50.7 64.1 A 61 61 0 0 1 100 39 Z" fill="var(--rust)"/>
+        <path d="M 100 100 L 100 27.83 A 72.17 72.17 0 1 1 50.97 47.05 Z" fill="#12304a"/>
+        <path d="M 100 100 L 50.97 47.05 A 72.17 72.17 0 0 1 100 27.83 Z" fill="#3fa37f"/>
       </svg>
       <div class="bubble-name">Jim Alvey (R)</div>
-      <div class="bubble-total">$41,210 total</div>
-      <div class="bubble-split"><span style="color:var(--burgundy);">&#9679;</span> $35,000 PAC/institutional (85%) &nbsp; <span style="color:var(--rust);">&#9679;</span> $6,210 individual (15%)</div>
+      <div class="bubble-total">$78,310 total</div>
+      <div class="bubble-split"><span style="color:#12304a;">&#9679;</span> $69,000 PAC/party (88%) &nbsp; <span style="color:#3fa37f;">&#9679;</span> $9,310 individual (12%)</div>
     </div>
   </div>
-  <p class="bill-footnote">Lesser's split treats her named large PAC/union gifts as institutional and everything else &mdash; named individuals plus smaller undocumented donors &mdash; as individual, since Utah requires itemizing all contributions and institutional gifts tend to be the large, already-documented ones. Alvey's split is a complete reconciliation: $35,000 + $6,210 accounts for his exact $41,210 year-to-date total.</p>
+  <p class="bill-footnote">Lesser's split counts every group gift on her September 30th Report ($16,915, fully itemized) plus the named large PAC and union gifts from her January&ndash;June reports ($19,500); everything else is counted as individual, so her group share before June may be slightly understated. Alvey's split is a complete reconciliation: $69,000 from UHREC, House Speaker Leadership PAC, Northern Utah PAC and the Weber County GOP, plus $9,310 from individuals, equals his $78,310 year-to-date total.</p>
 
   <h2 class="sect">The address, and the negative balance</h2>
   <p>Alvey's very first 2026 filing, the Convention Report, already lists his campaign address as 6066 S 2400 E &mdash; the neighbor's parcel, not his own trust property &mdash; meaning this wasn't a late typo picked up along the way, it's been on file since the start. That same report shows he spent nearly $1,900 more than he'd raised at that point ($250.00 in, $2,148.69 out), including $450.00 paid to "Copper Nickel" &mdash; the event venue LLC Sheri Alvey founded in 2016 as its original organizer and sole member. Utah's corporate registry currently lists a different person, Craig Goodliffe, as the LLC's registered agent and manager &mdash; consistent with the Alveys' own bio claim that they sold the business in 2021, though the registry itself doesn't document that transaction. Current control isn't the Alveys, so this reads as a legitimate vendor payment rather than a self-dealing one.</p>
+  <p>On Aug. 17, Alvey said publicly that the address "has been corrected." As displayed on disclosures.utah.gov on Sept. 30, both his September 30th and General reports still list 6066 S 2400 E. His September 30th Report also lists a $500 contribution on 9/20 from Mike Stevens at 6066 South 2400 East, the same address; Weber County records show that parcel is owned by the John Michael Stevens Revocable Trust.</p>
+
+  <h2 class="sect">Where the money went</h2>
+  <p>The largest payees on each candidate's September 30th Report, plus Alvey's General Report entries through 9/29.</p>
+  <div class="table-scroll"><table class="led">
+    <tr><th>Lesser (D)</th><th>Amount</th><th>Alvey (R)</th><th>Amount</th></tr>
+    <tr><td>Elevate Campaign Strategies (3 months)</td><td>$7,500.00</td><td>Bell Printing (4 payments)</td><td>$9,197.89</td></tr>
+    <tr><td>Technicolor Campaigns</td><td>$7,200.00</td><td>Reagan Outdoor (2 payments)</td><td>$3,255.20</td></tr>
+    <tr><td>Sun Lithography and Printing (2)</td><td>$5,443.72</td><td>Deseret News</td><td>$3,142.22</td></tr>
+    <tr><td>BW Productions</td><td>$5,000.00</td><td>"State Inicia" (supplies)</td><td>$3,140.00</td></tr>
+    <tr><td>StackAdapt</td><td>$4,800.00</td><td>Gathering, Inc. (2 payments)</td><td>$2,864.00</td></tr>
+    <tr><td>JM Alexander (2)</td><td>$1,958.68</td><td>Roost (4 payments)</td><td>$2,006.18</td></tr>
+  </table></div>
+  <p><b>Gathering, Inc.</b> Alvey's campaign reported $2,864 in advertising payments to Gathering, Inc. ($2,289 on 9/21 and $575 on 9/29). Utah's corporate registry lists Casey Hill as an officer, and his Weber State University biography says he founded the ballot-access company. Hill is a registered lobbyist and a founding partner of Lincoln Hill Partners.</p>
+  <p><b>Alvey's Candies.</b> The campaign paid Alvey's Candies $232.59 on 9/2, listed as a campaign expense. A separate $200 "Alvey Candies" advertising line was entered in the contributions section on 9/13 and deleted the same day. The record doesn't show whether Alvey has any connection to the business beyond the shared name.</p>
 
   <h2 class="sect">The nonprofit corporation</h2>
   <p>Utah's corporate registry shows Alvey formed a nonprofit corporation, <b>"VoteJimAlvey"</b> (entity #14665172-0140), on 2/24/2026 &mdash; a separate legal entity from his CFIS-registered personal campaign committee of the same name. The Articles of Incorporation state a purpose of "organized exclusively for supporting a political candidate in the pursuit of public office," answer "No" to the charitable-organization questionnaire, specify no voting members, and list perpetual duration. Both "Jim Alvey" and "James Manley Alvey" signed as incorporators. A search of disclosures.utah.gov for "VOTEJIMALVEY" across all 2026 transaction types &mdash; contributions and expenditures &mdash; returns zero results.</p>
@@ -222,6 +276,27 @@
 
   <div class="flag-open">The contradictions in Alvey's own account: the entity's status was Active, not a pending bank application. The Articles contain a specific typed purpose clause naming political-candidate support, not a generic nonprofit checkbox. "No" was answered on the charitable-org questionnaire. No voting members and perpetual duration were both explicitly specified &mdash; unusual detail for something he describes as a formality. And the entity name is run together as one word with no spaces, which reads as intentional rather than accidental for something meant to be easily searchable.</div>
 
+  <h2 class="sect" id="grades">Grades on the five questions</h2>
+  <p>Every item is graded on the same five questions used across this project: Power, Transparency, Financial accountability, Environmental impact and Community impact. A C means the record meets what Utah law requires, the status quo. A B or A means the candidate went beyond it, and the record shows it. D means something is vague or bundled, or a public check is weakened; F means something required is missing, or a check is removed with nothing in its place.</p>
+  <div class="topic-head">1. Campaign money</div>
+  <div class="table-scroll"><table class="rubric">
+    <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
+    <tr class="bg-row"><td>Lesser</td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td></tr>
+    <tr class="bg-why"><td colspan="7"><b>Why:</b> About 70% of 2026 money from individuals, many in small gifts; the rest from unions, professional PACs and party groups. Every contributor and payee is named, and the September 30th Report was filed once, the day after the period closed. That meets the law.</td></tr>
+    <tr class="bg-row"><td>Alvey</td><td><span class="gl g-d">D</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-d">D</span></td></tr>
+    <tr class="bg-why"><td colspan="7"><b>Why:</b> $60,000 of $78,310 (77%) came from three PACs that list the same treasurer, Kyle Palmer: UHREC, House Speaker Leadership PAC and Northern Utah PAC. Another $9,000 came from the Weber County GOP; individuals gave 12%. Every 2026 report was submitted before its period ended (the General Report before its period even began), and money was added later by amendment, so the deadlines never marked a new filing. Legal, but it weakens the public checkpoint the deadlines provide.<br><b>What would have scored higher for the collective:</b> Filing each report after its period closes, and a broader base of district donors.</td></tr>
+  </table></div>
+  <p class="bill-footnote"><b>Going beyond the law would look like:</b> saying what each "Campaign Expense" payment bought, and raising most of the money from people who live in the district.</p>
+  <div class="topic-head">2. Disclosure and filings</div>
+  <div class="table-scroll"><table class="rubric">
+    <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
+    <tr class="bg-row"><td>Lesser</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td></tr>
+    <tr class="bg-why"><td colspan="7"><b>Why:</b> Her form lists her board seats, and her answers on employment follow the form's one-year rule.</td></tr>
+    <tr class="bg-row"><td>Alvey</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td></tr>
+    <tr class="bg-why"><td colspan="7"><b>Why:</b> His form lists him as retired with no current business entities, while his campaign bio describes Alvey Media Group as still operating with national clients. The VoteJimAlvey nonprofit corporation (formed 2/24/26, dissolved 8/17/26) never appeared on the form. His filings list a neighbor's parcel as his address, still shown on his Sept. 30 reports after he said it had been corrected.<br><b>What would have scored higher for the collective:</b> An updated form explaining Alvey Media Group's status, and a corrected address on his filings.</td></tr>
+  </table></div>
+  <p class="bill-footnote"><b>Going beyond the law would look like:</b> listing more than the form asks, such as a spouse's business or unpaid roles, as Kay McRae did in Senate District 20.</p>
+
   <h2 class="sect">Lesser's background</h2>
   <p>OB/GYN physician and U.S. Air Force veteran &mdash; part of the first class of women admitted to the University of Notre Dame, medical degree from the Uniformed Services University, 15 years in the Air Force serving military families in Germany and Texas. Practiced OB/GYN in Ogden from 1992&ndash;2020 at Ogden Women's Clinic, Ogden Regional Medical Center, and McKay-Dee Hospital. Appointed to HD10 in January 2021 to finish Rep. Lou Shurtliff's term after Shurtliff's death that December &mdash; Lesser learned of the vacancy on her last day of medical practice, was selected by Weber County Democratic delegates, and was appointed by Gov. Cox. Her husband Dave is also a physician; the two have volunteered providing surgical and emergency care in Mali and post-earthquake Haiti. Current board memberships: Boys &amp; Girls Clubs of Weber-Davis, Envision Utah, Onstage Ogden, the Olene Walker Institute of Politics &amp; Public Service, the Richards Institute for Ethics at Weber State University, the Women in Business Committee of the Ogden-Weber Chamber of Commerce, and Blue Star Families of Utah.</p>
   <p><b>Community recognition:</b> 2024 Ogden School Board Adult Education Champion Award; 2024 Community Leader Award, United Way of Northern Utah (for promoting the Connection Learning Campus and obtaining 211 Program funding); 2023 Community Champion, Utah Association for Infant Mental Health &mdash; for extending postpartum Medicaid benefits from 60 days to one year; 2023 award, Utah Public Employees' Association; "Outstanding Contribution by an Elected Official," Utah Association of Local Boards of Health, for her work on the House Health and Human Services Committee; Athena 2025, Ogden-Weber Chamber of Commerce; and the Salt Lake Chamber of Commerce's Legislative Business Champion Award four consecutive years.</p>
@@ -236,7 +311,10 @@
       <summary>Full sourcing</summary>
       <div class="details-body">
         <ul class="sources">
-          <li>Rosemary Lesser and Jim Alvey campaign finance disclosures, disclosures.utah.gov &mdash; Convention, Primary, September 30th, and General Reports, 2026</li>
+          <li>Rosemary Lesser and Jim Alvey campaign finance disclosures, disclosures.utah.gov &mdash; Convention, Primary, September 30th, and General Reports, 2026; September 30th and General report pages as displayed Sept. 30, 2026</li>
+          <li>Northern Utah Legislative PAC statement of organization, disclosures.utah.gov (officers and treasurer)</li>
+          <li>Utah Division of Corporations &mdash; Gathering, Inc. (entity #9637579-0142), principal information</li>
+          <li><a href="https://www.weber.edu/national-advisory-council/casey-hill.html" target="_blank" rel="noopener">Casey Hill biography, Weber State University National Advisory Council</a></li>
           <li>Utah Division of Corporations and Commercial Code (Utah SOS) &mdash; VoteJimAlvey entity #14665172-0140, Articles of Incorporation and status history</li>
           <li>Weber County property records &mdash; Parcels 070880008 and 070880009</li>
           <li>UHREC and House Speaker Leadership PAC disclosure filings, disclosures.utah.gov</li>
@@ -258,8 +336,19 @@
 </div>
 <script>
   const MONEY_ITEMS = [
-    { num: "$90,013", title: "Combined total raised, 2026 cycle", cand: "lesser",
-      body: "Across the Convention/Primary period and the general-period report to date. Recurring vendor: Elevate Campaign Strategies, roughly $2,500/month." },
+    { num: "$121,791", title: "Total raised, 2026 (through 9/25)", cand: "lesser",
+      body: "From her September 30th Report's year-to-date line, which leaves out in-kind gifts. $60,492.02 spent and $66,869.83 on hand as of 9/25. Recurring vendor: Elevate Campaign Strategies, $2,500/month." },
+    { num: "$5,000", title: "Utah House Dem Leadership Council", cand: "lesser", body: "8/21/26. Her largest single group gift of the summer." },
+    { num: "$5,550", title: "John Thomas", cand: "lesser", body: "Five gifts between 7/8 and 9/10/26 ($250, $200, $50, $5,000 and $50), Salt Lake City. Her largest individual donor this period." },
+    { num: "$5,000", title: "Nancy Zefo", cand: "lesser", body: "6/28/26, Houston, Texas." },
+    { num: "$2,500", title: "Ryan Greenberg", cand: "lesser", body: "8/25/26, Montclair, New Jersey." },
+    { num: "$2,000", title: "Operating Engineers Local #3", cand: "lesser", body: "7/2/26. Union contribution." },
+    { num: "$2,000", title: "Rochelle Kaplan", cand: "lesser", body: "7/8/26, Salt Lake City." },
+    { num: "$1,000", title: "Equality Utah", cand: "lesser", body: "9/15/26." },
+    { num: "$1,000", title: "SMART TD PAC", cand: "lesser", body: "9/22/26, Independence, Ohio. Transportation workers' union PAC." },
+    { num: "$1,000", title: "Sentry Financial", cand: "lesser", body: "9/22/26, Salt Lake City." },
+    { num: "$500", title: "Utah Bankers Association", cand: "lesser", body: "9/17/26." },
+    { num: "$50", title: "Angela Choberka", cand: "lesser", body: "9/16/26. The Democratic candidate in House District 9 (Case 03)." },
     { num: "$7,500", title: "Utah Investment Network PAC", cand: "lesser",
       body: "Same PAC that gave Kim James (HD8) and Angela Choberka (HD9) $7,500 each, same day — part of a documented multi-candidate Democratic slate." },
     { num: "$11,600", title: "Dr. John David Lesser (her husband)", cand: "lesser",
@@ -267,12 +356,17 @@
     { num: "$5,000", title: "George and Mary Hall", cand: "lesser", body: "Individual contribution." },
     { num: "$5,000", title: "Utah Women and Politics PAC", cand: "lesser", body: "Institutional contribution." },
     { num: "$2,500", title: "Fresh Air PAC", cand: "lesser", body: "Institutional contribution." },
-    { num: "$2,500", title: "Education First Utah", cand: "lesser", body: "Institutional contribution." },
+    { num: "$5,000", title: "Education First Utah", cand: "lesser", body: "Two gifts: $2,500 on 2/15/26 and $2,500 on 8/24/26." },
     { num: "$250", title: "Gage Froerer", cand: "lesser", body: "Individual contribution, 4/8/26." },
     { num: "$20,000", title: "Utah House Republican Election Committee (UHREC)", cand: "alvey",
       body: "Landed 8/12/26, the same day as the House Speaker Leadership PAC gift below. UHREC's named officers are Speaker Mike Schultz and Rep. Casey Snider, but Kyle Palmer actually runs it as Treasurer/Director." },
-    { num: "$15,000", title: "House Speaker Leadership PAC", cand: "alvey",
-      body: "Schultz's own separate PAC, landed the same day (8/12/26) as the UHREC gift. Also Kyle Palmer as CFO/Treasurer — combined, these two gifts are $35,000, roughly 85% of everything Alvey has raised this cycle. Palmer separately controls NUPAC, Adams Leadership PAC, and Election Hive LLC — the same apparatus already documented paying Jill Koford ($60,000), Jordan Teuscher ($32,000), and Matt MacPherson ($50,000) from UHREC in connection with specific legislative vote patterns elsewhere in this tracker." },
+    { num: "$25,000", title: "House Speaker Leadership PAC", cand: "alvey",
+      body: "Schultz's own separate PAC. $15,000 landed the same day (8/12/26) as the UHREC gift, and another $10,000 on 9/23/26. Also Kyle Palmer as CFO/Treasurer. Palmer separately controls NUPAC, Adams Leadership PAC, and Election Hive LLC — the same apparatus already documented paying Jill Koford ($60,000), Jordan Teuscher ($32,000), and Matt MacPherson ($50,000) from UHREC in connection with specific legislative vote patterns elsewhere in this tracker." },
+    { num: "$15,000", title: "Northern Utah PAC (NUPAC)", cand: "alvey",
+      body: "9/21/26, listed as \"Northern Utah PAC\" at 1123 E Fairfield Rd, Layton, the address of the Northern Utah Legislative PAC. Its statement of organization lists Sen. Ann Millner and Rep. Casey Snider as officers and Kyle Palmer as treasurer. With UHREC and House Speaker Leadership PAC, that is $60,000 from three PACs listing the same treasurer, 77% of Alvey's $78,310 raised in 2026." },
+    { num: "$9,000", title: "Weber County GOP", cand: "alvey", body: "$7,000 on 8/27/26 and $2,000 on 9/29/26." },
+    { num: "$1,000", title: "Chris Ford", cand: "alvey", body: "9/7/26, Ogden. First entered as $500; on 9/29 that entry was deleted and replaced with $1,000 under the same date." },
+    { num: "$500", title: "Mike Stevens", cand: "alvey", body: "9/20/26, listed at 6066 South 2400 East, the same address Alvey's filings give as his own. Weber County records show that parcel is owned by the John Michael Stevens Revocable Trust." },
     { num: "$200", title: "Jill Koford", cand: "alvey",
       body: "8/9/26 — the outgoing HD10 officeholder, now running for Senate District 5, giving to the Republican candidate for the seat she's vacating. She also formally endorsed him on his campaign site." },
     { num: "$1,000", title: "Curt Geiger", cand: "alvey", body: "4/15/26, Ogden — one of only two entries in his early reports not backfilled via same-day amendment." },
@@ -313,6 +407,8 @@
     });
   });
 </script>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 
 </body>
 </html>
