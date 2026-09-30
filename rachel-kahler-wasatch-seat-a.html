@@ -12,10 +12,10 @@
     --color-paper: #f4f0e6;
     --color-ink: #241c14;
     --color-ink-soft: #5a4f42;
-    --color-link: #c0572e;
+    --color-link: #1d6b57;
     --color-stat: #d9a441;
-    --color-burgundy-light: #5c1a2b;
-    --color-burgundy-deep: #3d0f1c;
+    --color-burgundy-light: #1f4e6b;
+    --color-burgundy-deep: #12304a;
     --color-line: #d8cfbe;
     --color-card: #fbf9f3;
   }
@@ -32,7 +32,7 @@
 
   header.masthead {
     background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep));
-    color: #f4ece5;
+    color: #eef3f5;
     padding: 18px 24px;
   }
   .masthead-row {
@@ -51,7 +51,7 @@
     letter-spacing: 0.02em;
   }
   .masthead-nav a {
-    color: #f0d9c9;
+    color: #d6e5ea;
     text-decoration: none;
     margin-left: 18px;
     font-family: 'IBM Plex Mono', monospace;
@@ -61,14 +61,14 @@
 
   .hero {
     background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep));
-    color: #f4ece5;
+    color: #eef3f5;
     padding: 56px 24px 64px;
   }
   .hero-inner { max-width: 780px; margin: 0 auto; }
   .case-label {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.78rem;
-    color: #e0b89a;
+    color: #a9cbd6;
     margin-bottom: 14px;
   }
   h1.headline {
@@ -80,14 +80,14 @@
   }
   .dek {
     font-size: 1.15rem;
-    color: #ecd9cc;
+    color: #dce8ec;
     max-width: 640px;
     margin: 0;
   }
   .byline {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.78rem;
-    color: #e0b89a;
+    color: #a9cbd6;
     margin-top: 18px;
   }
 
@@ -265,7 +265,7 @@
   .rubric-overall .grade-letter { font-size: 2rem; }
 
   .callout-warning {
-    background: #fbf0e4;
+    background: #eef4f3;
     border: 1px solid var(--color-stat);
     border-left: 4px solid var(--color-stat);
     padding: 16px 20px;
@@ -273,9 +273,22 @@
     font-size: 0.98rem;
   }
   .callout-warning strong { color: var(--color-burgundy-light); }
+
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .updated-line{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#d6e5ea;margin-top:12px;}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
 <header class="masthead">
   <div class="masthead-row">
@@ -291,9 +304,9 @@
   <div class="hero-inner">
     <div class="case-label">WASATCH COUNTY COUNCIL — SEAT A (AT-LARGE) · FOUR-CANDIDATE FIELD</div>
     <h1 class="headline">What the Park Email Left Out</h1>
-    <p class="dek">Four candidates are now on the ballot for Seat A. Two have filed disclosures that check out on
-      paper but raise their own questions; two are too new to the race to have a record yet.</p>
-    <div class="byline">Published Sept. 1, 2026 · Last updated Sept. 11, 2026</div>
+    <p class="dek">Four candidates are on the ballot for Seat A. Here is what each one's disclosure form
+      says, and what the public record shows next to it.</p>
+    <div class="byline">Published Sept. 1, 2026 · Updated Sept. 30, 2026: McNeill’s Sept. 1 declaration and the state disclosure law; Hewlett regraded on her updated form</div>
   </div>
 </div>
 
@@ -663,8 +676,8 @@
       Disclosure Forms page as of Sept. 30, 2026 (both read from the rendered pages). No campaign finance report
       has been located yet either.</p>
     <p>State law says a county clerk "may not accept a declaration of candidacy" for a county office until the
-      clerk receives a complete conflict-of-interest disclosure statement (Utah Code §17-70-304; the matching rule
-      for city candidates is §10-3-301.5). Whether the county received a statement from McNeill and has not posted
+      clerk receives a complete conflict-of-interest disclosure statement (Utah Code §17-70-304(4)). The exception for
+      incumbents seeking reelection does not apply to him. Whether the county received a statement from McNeill and has not posted
       it is a question for the Clerk/Auditor's office.</p>
     <p>One business is confirmed tied to him on the state registry: Here We Go Productions, Inc., based in Heber
       City — his own production company, consistent with his real production credits (Executive Producer/Director
@@ -773,5 +786,6 @@
   KSL, "Letter shared in business owner's name prompts removal of Heber City commission member" (Nov. 6, 2024).
 </footer>
 
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 </body>
 </html>

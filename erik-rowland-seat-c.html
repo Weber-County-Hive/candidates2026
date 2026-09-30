@@ -12,10 +12,10 @@
     --color-paper: #f4f0e6;
     --color-ink: #241c14;
     --color-ink-soft: #5a4f42;
-    --color-link: #c0572e;
+    --color-link: #1d6b57;
     --color-stat: #d9a441;
-    --color-burgundy-light: #5c1a2b;
-    --color-burgundy-deep: #3d0f1c;
+    --color-burgundy-light: #1f4e6b;
+    --color-burgundy-deep: #12304a;
     --color-line: #d8cfbe;
     --color-card: #fbf9f3;
   }
@@ -32,7 +32,7 @@
 
   header.masthead {
     background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep));
-    color: #f4ece5;
+    color: #eef3f5;
     padding: 18px 24px;
   }
   .masthead-row {
@@ -51,7 +51,7 @@
     letter-spacing: 0.02em;
   }
   .masthead-nav a {
-    color: #f0d9c9;
+    color: #d6e5ea;
     text-decoration: none;
     margin-left: 18px;
     font-family: 'IBM Plex Mono', monospace;
@@ -61,14 +61,14 @@
 
   .hero {
     background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep));
-    color: #f4ece5;
+    color: #eef3f5;
     padding: 56px 24px 64px;
   }
   .hero-inner { max-width: 780px; margin: 0 auto; }
   .case-label {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.78rem;
-    color: #e0b89a;
+    color: #a9cbd6;
     margin-bottom: 14px;
   }
   h1.headline {
@@ -80,7 +80,7 @@
   }
   .dek {
     font-size: 1.15rem;
-    color: #ecd9cc;
+    color: #dce8ec;
     max-width: 640px;
     margin: 0;
   }
@@ -199,7 +199,7 @@
   }
   .flip-card-front {
     background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep));
-    color: #f4ece5;
+    color: #eef3f5;
     text-align: center;
   }
   .flip-card-front .num {
@@ -219,7 +219,7 @@
   .flip-card-front .tap-hint {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.65rem;
-    color: #e0b89a;
+    color: #a9cbd6;
     margin-top: 12px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -290,6 +290,18 @@
     color: var(--color-ink-soft);
     border-top: 1px solid var(--color-line);
   }
+
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .updated-line{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#d6e5ea;margin-top:12px;}
 </style>
 <style>
   .diagram-wrap {
@@ -311,7 +323,7 @@
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 1.3rem;
-    color: #f4ece5;
+    color: #eef3f5;
     background: linear-gradient(160deg, var(--color-burgundy-light), var(--color-burgundy-deep));
     padding: 14px 20px;
     margin: 0 auto 24px;
@@ -322,7 +334,7 @@
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 400;
     font-size: 0.72rem;
-    color: #e0b89a;
+    color: #a9cbd6;
     margin-top: 4px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -428,6 +440,7 @@
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
 <header class="masthead">
   <div class="masthead-row">
@@ -447,6 +460,7 @@
       Folmer. He also sits on a state authority that requires a detailed annual disclosure — and on the authority's
       own website, his listed disclosure is a blank county form that doesn't ask the questions the state form
       does.</p>
+    <div class="updated-line">Updated Sept. 30, 2026: Open Lands Board roster wording.</div>
   </div>
 </div>
 
@@ -858,5 +872,6 @@
   The Weber County Hive — public records reporting on Wasatch and Weber County government.
 </footer>
 
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 </body>
 </html>

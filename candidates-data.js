@@ -361,7 +361,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "rachel-kahler-wasatch-seat-a.html",
     datePosted: "2026-09-01",
-    dateUpdated: "2026-09-27"
+    dateUpdated: "2026-09-30"
   },
   {
     id: "wasatch-seat-c-rowland",
@@ -375,7 +375,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "erik-rowland-seat-c.html",
     datePosted: "2026-09-02",
-    dateUpdated: "2026-09-11"
+    dateUpdated: "2026-09-30"
   },
   {
     id: "hd59-searle-johnson",
@@ -387,7 +387,8 @@ const CANDIDATES = [
     verdict: "Half the Ledger, Six PACs",
     tags: ["PAC Network", "Open Seat", "Fundraising"],
     stamp: "Active",
-    href: "luke-searle-hd59.html"
+    href: "luke-searle-hd59.html",
+    dateUpdated: "2026-09-30"
   },
   {
     id: "box-elder-seat-a-smith-williams",
