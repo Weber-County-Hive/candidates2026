@@ -270,10 +270,9 @@ const CANDIDATES = [
     caseNumber: "CASE 05",
     names: "Calder vs. Hall",
     verdict: "The Stock Portfolio That Funds Her Campaign",
-    tags: ["Stock Overlap", "Disclosure Gap", "Sept. 30 Reports", "Graded"],
+    tags: ["Stock Overlap", "Disclosure Gap", "PAC Funding"],
     stamp: "Active",
-    href: "hd11-calder-hall.html",
-    dateUpdated: "2026-10-01"
+    href: "hd11-calder-hall.html"
   },
   {
     id: "hd10-lesser-alvey",
@@ -296,10 +295,9 @@ const CANDIDATES = [
     caseNumber: "CASE 03",
     names: "Choberka vs. Sawyer",
     verdict: "The Vendor Loop",
-    tags: ["Rematch", "Sept. 30 Reports", "Graded"],
+    tags: ["Vendor Network", "Deletion Pattern", "Rematch"],
     stamp: "Active",
-    href: "hd9-choberka-sawyer.html",
-    dateUpdated: "2026-10-01"
+    href: "hd9-choberka-sawyer.html"
   },
   {
     id: "hd8-kyle-james-shelton",
@@ -322,10 +320,9 @@ const CANDIDATES = [
     caseNumber: "CASE 01",
     names: "Mittendorf vs. Wilcox",
     verdict: "The Uncle, The PAC, and the Amendment Pattern",
-    tags: ["Family Network", "Sept. 30 Reports", "Graded"],
+    tags: ["Family Network", "PAC Money Flow", "Amendment Rate"],
     stamp: "Active",
-    href: "hd7-mittendorf-wilcox.html",
-    dateUpdated: "2026-10-01"
+    href: "hd7-mittendorf-wilcox.html"
   },
   {
     id: "joseph-kerry",
@@ -364,7 +361,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "rachel-kahler-wasatch-seat-a.html",
     datePosted: "2026-09-01",
-    dateUpdated: "2026-09-27"
+    dateUpdated: "2026-09-30"
   },
   {
     id: "wasatch-seat-c-rowland",
@@ -378,7 +375,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "erik-rowland-seat-c.html",
     datePosted: "2026-09-02",
-    dateUpdated: "2026-09-11"
+    dateUpdated: "2026-09-30"
   },
   {
     id: "hd59-searle-johnson",
@@ -390,7 +387,8 @@ const CANDIDATES = [
     verdict: "Half the Ledger, Six PACs",
     tags: ["PAC Network", "Open Seat", "Fundraising"],
     stamp: "Active",
-    href: "luke-searle-hd59.html"
+    href: "luke-searle-hd59.html",
+    dateUpdated: "2026-09-30"
   },
   {
     id: "box-elder-seat-a-smith-williams",
@@ -436,11 +434,11 @@ const CANDIDATES = [
     caseNumber: "CASE 16",
     names: "Koford vs. Hernandez",
     verdict: "The Seat Her Own PAC Built",
-    tags: ["PAC Network", "Irish Elk LLC", "Legislative Record: D", "Sept. 30 Reports", "Graded"],
+    tags: ["PAC Network", "Irish Elk LLC", "Legislative Record: D"],
     stamp: "Active",
     href: "sd5-koford-hernandez.html",
     datePosted: "2026-09-10",
-    dateUpdated: "2026-10-01"
+    dateUpdated: "2026-09-10"
   },
   {
     id: "wasatch-seat-c-rowland-folmer",
