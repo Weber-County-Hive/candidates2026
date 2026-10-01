@@ -14,10 +14,10 @@
 --ink:#2a261e;
 --ink-soft:#5c5647;
 --ink-faint:#8b8470;
---rust:#c0572e;
+--rust:#1d6b57;
 --amber:#d9a441;
---burgundy:#5c1a2b;
---burgundy-deep:#3d0f1c;
+--burgundy:#1f4e6b;
+--burgundy-deep:#12304a;
 --line:#ddd6c4;
 --line-strong:#c7bda3;
 --red:#a5301e;
@@ -30,10 +30,10 @@
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.65;font-size:17px;}
 a{color:var(--rust);text-decoration:none;}
 a:hover{text-decoration:underline;}
-.header-band{background:var(--burgundy-deep);background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);padding:34px 0 30px;}
+.header-band{background:var(--burgundy-deep);background-image:linear-gradient(160deg, #1f5e6b 0%, #1f4e6b 45%, var(--burgundy-deep) 100%);padding:34px 0 30px;}
 .header-inner{max-width:880px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:16px;}
 .hex{width:46px;height:46px;flex:0 0 auto;}
-.hd-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#d9b8bf;}
+.hd-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#b9d3dc;}
 .hd-title{font-family:var(--display);font-size:21px;font-weight:700;color:#f4e9dd;}
 .wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px;}
 .case-hero{padding:8px 0 28px;border-bottom:2px solid var(--line-strong);margin-bottom:32px;}
@@ -183,9 +183,31 @@ padding:9px 18px;border-radius:20px;cursor:pointer;
 .donor-bar-track{flex:1;background:var(--paper-card);height:22px;border:1px solid var(--line);position:relative;}
 .donor-bar-fill{height:100%;background:var(--rust);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;min-width:fit-content;}
 .donor-bar-fill span{color:#fff;font-family:var(--mono);font-size:11.5px;font-weight:700;white-space:nowrap;padding:0 4px;}
+  .table-scroll{overflow-x:auto;}
+  table.rubric{width:100%;border-collapse:collapse;margin:10px 0 22px;font-size:15px;background:var(--paper-card);border:1px solid var(--line-strong);}
+  table.rubric th{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);text-align:center;border-bottom:2px solid var(--line-strong);padding:8px 6px;}
+  table.rubric th:first-child{text-align:left;}
+  table.rubric tr.bg-row td{padding:10px 6px 4px;text-align:center;}
+  table.rubric tr.bg-row td:first-child{text-align:left;font-weight:600;white-space:nowrap;}
+  table.rubric tr.bg-why td{font-size:14.5px;color:var(--ink-soft);padding:2px 10px 14px;border-bottom:1px solid var(--line);}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:var(--display);font-weight:900;font-size:16px;color:#fff;border-radius:3px;padding:1px 6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--amber);} .g-d{background:#b5652f;} .g-f{background:var(--red);} .g-na{background:#9a9186;font-size:12px;}
+  .topic-head{font-family:var(--display);font-size:18px;font-weight:700;color:var(--burgundy-deep);margin:26px 0 6px;}
+  .updated{font-family:var(--mono);font-size:12px;color:var(--ink-faint);margin-top:12px;}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 <div class="header-band">
 <div class="header-inner">
 <svg class="hex" viewBox="0 0 100 100"><polygon points="50,3 93,25 93,75 50,97 7,75 7,25" fill="none" stroke="#d9a441" stroke-width="4"/><text x="50" y="60" font-family="Playfair Display" font-size="34" font-weight="900" fill="#f4e9dd" text-anchor="middle">H</text></svg>
@@ -200,7 +222,8 @@ padding:9px 18px;border-radius:20px;cursor:pointer;
 <div class="case-hero">
 <div class="case-kicker">Case 03 &middot; Utah House District 9 &middot; West Haven</div>
 <h1 class="case-title">The Vendor Loop</h1>
-<p class="case-dek">Rep. Jake Sawyer's (R) campaign money runs through vendors owned by the same family network already documented across three other Weber County races. District 9 covers portions of central Ogden, northern Roy, and West Haven.</p>
+<p class="case-dek">Rep. Jake Sawyer's (R) campaign money runs through vendors owned by the same family network already documented across three other Weber County races. District 9 covers portions of central Ogden, northern Roy, and West Haven. Both candidates have now filed September 30th reports: Sawyer's $22,951 this period came entirely from PACs, the party and businesses, while about three-quarters of Choberka's $20,339 came from individuals.</p>
+<p class="updated">Updated Oct. 1, 2026, with both candidates' September 30th Reports (period June 12&ndash;Sept. 25) and grades.</p>
 </div>
 
 <div class="verdict-box">
@@ -208,8 +231,8 @@ padding:9px 18px;border-radius:20px;cursor:pointer;
 </div>
 
 <div class="stat-row">
-<div class="stat"><div class="stat-num">$93,200</div><div class="stat-label">Sawyer's all-years total, 2024-26</div></div>
-<div class="stat"><div class="stat-num">$122,917</div><div class="stat-label">Choberka's all-years total, 2024-26</div></div>
+<div class="stat"><div class="stat-num">$94,901</div><div class="stat-label">Sawyer's all-years total, 2024-26</div></div>
+<div class="stat"><div class="stat-num">$137,268</div><div class="stat-label">Choberka's all-years total, 2024-26</div></div>
 <div class="stat"><div class="stat-num">$1,550</div><div class="stat-label">Sawyer's late-filing fines</div></div>
 <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Choberka raised all of 2025</div></div>
 </div>
@@ -227,36 +250,36 @@ padding:9px 18px;border-radius:20px;cursor:pointer;
 <div class="pie-row">
 <div class="pie-col">
 <svg viewBox="0 0 42 42" class="pie-svg">
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--burgundy)" stroke-width="6"/>
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--amber)" stroke-width="6" stroke-dasharray="9.2 90.8" stroke-dashoffset="25"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="#3fa37f" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="#12304a" stroke-width="6" stroke-dasharray="24.8 75.2" stroke-dashoffset="25"/>
 </svg>
-<div class="pie-title">Choberka — Composition</div>
-<div class="pie-legend"><span class="dot" style="background:var(--amber);"></span>Institutional 9.2% ($1,250)<br><span class="dot" style="background:var(--burgundy);"></span>Individual 90.8% ($12,387)</div>
+<div class="pie-title">Choberka &mdash; Sept. 30 Report</div>
+<div class="pie-legend"><span class="dot" style="background:#3fa37f;"></span>Individuals 75.2% ($15,289)<br><span class="dot" style="background:#12304a;"></span>PACs, parties &amp; businesses 24.8% ($5,050)</div>
 </div>
 <div class="pie-col">
 <svg viewBox="0 0 42 42" class="pie-svg">
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--burgundy)" stroke-width="6"/>
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--amber)" stroke-width="6" stroke-dasharray="98.5 1.5" stroke-dashoffset="25"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="#3fa37f" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="#12304a" stroke-width="6" stroke-dasharray="98.5 1.5" stroke-dashoffset="25"/>
 </svg>
-<div class="pie-title">Sawyer — Composition</div>
-<div class="pie-legend"><span class="dot" style="background:var(--amber);"></span>Institutional 98.5% ($91,815)<br><span class="dot" style="background:var(--burgundy);"></span>Individual 1.5% ($1,385)</div>
+<div class="pie-title">Sawyer &mdash; All Years, 2024&ndash;26</div>
+<div class="pie-legend"><span class="dot" style="background:#3fa37f;"></span>Individuals 1.5% ($1,385)<br><span class="dot" style="background:#12304a;"></span>PACs, parties &amp; businesses 98.5% ($93,516)</div>
 </div>
 </div>
-<p class="pie-caption">Not a like-for-like time period: Sawyer's chart covers his full all-years total ($93,200); Choberka's covers only her narrowest, most-itemized recent report ($13,637 of her $122,917 all-years total) &mdash; the only slice of her fundraising itemized down to this level so far.</p>
+<p class="pie-caption">Not a like-for-like time period: Sawyer's chart covers his full all-years total ($94,901); Choberka's covers her September 30th Report ($20,339 of her $137,268 all-years total), the most recent report broken down to this level. For a same-period comparison, see "2026 Cycle Only."</p>
 
 <div class="pie-row" style="margin-top:8px;">
 <div class="pie-col">
 <svg viewBox="0 0 42 42" class="pie-svg">
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--line)" stroke-width="6"/>
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--rust)" stroke-width="6" stroke-dasharray="56.9 43.1" stroke-dashoffset="25"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--line-strong)" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--rust)" stroke-width="6" stroke-dasharray="59.1 40.9" stroke-dashoffset="25"/>
 </svg>
 <div class="pie-title">All-Years Fundraising Share</div>
-<div class="pie-legend"><span class="dot" style="background:var(--rust);"></span>Choberka $122,917 (56.9%)<br><span class="dot" style="background:var(--line-strong);"></span>Sawyer $93,200 (43.1%)</div>
+<div class="pie-legend"><span class="dot" style="background:var(--rust);"></span>Choberka $137,268 (59.1%)<br><span class="dot" style="background:var(--line-strong);"></span>Sawyer $94,901 (40.9%)</div>
 </div>
 </div>
 
 <div class="verdict-box">
-<b>Worth sitting with:</b> Choberka out-raises the incumbent overall ($122,917 to $93,200) &mdash; and she does it built almost entirely on individual, public support (90.8% in her most-itemized report). Sawyer's fundraising runs the opposite direction: 98.5% institutional, meaning he isn't building a public individual-donor base at anywhere near the same scale, even though he's the one currently holding the seat.
+<b>Worth sitting with:</b> Choberka has raised more than the incumbent across all years ($137,268 to $94,901), and about 75% of her latest report came from individuals. Sawyer's money runs the other way: 98.5% of everything he has raised since 2024 came from PACs, parties and businesses, and none of the 14 gifts in his September 30th Report came from an individual.
 </div>
 
 <details class="grade-card">
@@ -275,10 +298,10 @@ padding:9px 18px;border-radius:20px;cursor:pointer;
 <tr><td>Sawyer</td><td class="amt">$7,150.00</td><td class="period-date">Full Year End report, 1/1&ndash;12/31/25, raw export uploaded 9/13/26. Unlike Choberka, he kept fundraising in his off-year (17 contributions, 13 expenditures).</td></tr>
 <tr><td rowspan="2">2024&ndash;2025 combined</td><td>Sawyer</td><td class="amt">$62,950.00</td><td class="period-date">$55,800.00 (2024) + $7,150.00 (2025) &mdash; confirmed via full raw exports for both years, uploaded 9/13/26.</td></tr>
 <tr><td colspan="2" class="period-date">This resolves an earlier ~$4,500 gap: a prior "$58,450 through 2025" estimate undercounted by exactly $4,500. The corrected $62,950 figure now reconciles with his separately-stated career total (below) to within 39 cents.</td></tr>
-<tr><td rowspan="2">2026</td><td>Choberka</td><td class="amt">$33,949.59</td><td class="period-date">Cycle-to-date, Convention+Primary+interim General.</td></tr>
-<tr><td>Sawyer</td><td class="amt">$9,000.00 + $21,250.00</td><td class="period-date">2026 Primary YTD ($9,000.00) plus a newly confirmed 8/21&ndash;8/31/26 report ($21,250.00, uploaded 9/12/26).</td></tr>
-<tr><td><b>All-years total</b></td><td><b>Choberka</b></td><td class="amt"><b>$122,916.53</b></td><td class="period-date">Sum of the three clean, non-overlapping year totals above.</td></tr>
-<tr><td><b>All-years total</b></td><td><b>Sawyer</b></td><td class="amt"><b>$93,200.39</b></td><td class="period-date">$62,950.00 (2024-2025, confirmed above) + $9,000.00 (2026 Primary YTD) + $21,250.00 (Aug. 2026 report) = $93,200.00 &mdash; matching his separately-stated "$71,950.39 career total + $21,250.00" derivation ($93,200.39) to within 39 cents. Both methods now agree.</td></tr>
+<tr><td rowspan="2">2026</td><td>Choberka</td><td class="amt">$48,300.97</td><td class="period-date">Year to date through 9/25/26, from her September 30th Report (submitted 9/29/26).</td></tr>
+<tr><td>Sawyer</td><td class="amt">$31,951.00</td><td class="period-date">Year to date through 9/25/26, from his September 30th Report (submitted 9/30/26): $9,000.00 through the primary plus $22,951.00 this period.</td></tr>
+<tr><td><b>All-years total</b></td><td><b>Choberka</b></td><td class="amt"><b>$137,267.91</b></td><td class="period-date">Sum of the three clean, non-overlapping year totals above.</td></tr>
+<tr><td><b>All-years total</b></td><td><b>Sawyer</b></td><td class="amt"><b>$94,901.00</b></td><td class="period-date">$62,950.00 (2024-2025, confirmed above) + $31,951.00 (2026 through 9/25). His earlier career-total method matches this to within 39 cents.</td></tr>
 </tbody>
 </table>
 </div>
@@ -287,54 +310,89 @@ padding:9px 18px;border-radius:20px;cursor:pointer;
 
 <div id="view-cycle" class="view-panel">
 
-
 <div class="pie-row">
 <div class="pie-col">
 <svg viewBox="0 0 42 42" class="pie-svg">
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--line)" stroke-width="6"/>
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--rust)" stroke-width="6" stroke-dasharray="52.9 47.1" stroke-dashoffset="25"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--line-strong)" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--rust)" stroke-width="6" stroke-dasharray="60.2 39.8" stroke-dashoffset="25"/>
 </svg>
 <div class="pie-title">2026 Fundraising Share</div>
-<div class="pie-legend"><span class="dot" style="background:var(--rust);"></span>Choberka $33,950 (52.9%)<br><span class="dot" style="background:var(--line-strong);"></span>Sawyer $30,250 (47.1%)</div>
+<div class="pie-legend"><span class="dot" style="background:var(--rust);"></span>Choberka $48,301 (60.2%)<br><span class="dot" style="background:var(--line-strong);"></span>Sawyer $31,951 (39.8%)</div>
 </div>
 <div class="pie-col">
 <svg viewBox="0 0 42 42" class="pie-svg">
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--burgundy)" stroke-width="6"/>
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--amber)" stroke-width="6" stroke-dasharray="9.2 90.8" stroke-dashoffset="25"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="#3fa37f" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="#12304a" stroke-width="6" stroke-dasharray="24.8 75.2" stroke-dashoffset="25"/>
 </svg>
-<div class="pie-title">Choberka — Her Most Recent Report Only</div>
-<div class="pie-legend"><span class="dot" style="background:var(--amber);"></span>Institutional 9.2% ($1,250)<br><span class="dot" style="background:var(--burgundy);"></span>Individual 90.8% ($12,387)</div>
+<div class="pie-title">Choberka &mdash; Sept. 30 Report</div>
+<div class="pie-legend"><span class="dot" style="background:#3fa37f;"></span>Individuals 75.2% ($15,289)<br><span class="dot" style="background:#12304a;"></span>PACs, parties &amp; businesses 24.8% ($5,050)</div>
 </div>
 <div class="pie-col">
 <svg viewBox="0 0 42 42" class="pie-svg">
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--burgundy)" stroke-width="6"/>
-<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="var(--amber)" stroke-width="6" stroke-dasharray="100 0" stroke-dashoffset="25"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="#3fa37f" stroke-width="6"/>
+<circle r="15.91549430918954" cx="21" cy="21" fill="transparent" stroke="#12304a" stroke-width="6" stroke-dasharray="100 0" stroke-dashoffset="25"/>
 </svg>
-<div class="pie-title">Sawyer — Both Confirmed 2026 Reports</div>
-<div class="pie-legend"><span class="dot" style="background:var(--amber);"></span>Institutional 100% ($30,250)<br><span class="dot" style="background:var(--burgundy);"></span>Individual 0%</div>
+<div class="pie-title">Sawyer &mdash; Sept. 30 Report</div>
+<div class="pie-legend"><span class="dot" style="background:#3fa37f;"></span>Individuals 0% ($0)<br><span class="dot" style="background:#12304a;"></span>PACs, parties &amp; businesses 100% ($22,951)</div>
 </div>
 </div>
-<p class="pie-caption">Choberka's chart covers only her narrowest, most-itemized report ($13,637.25 of her $33,949.59 cycle-to-date) &mdash; not a like-for-like scope match with Sawyer's, which covers his two fully-itemized 2026 reports.</p>
+<p class="pie-caption">Same period for both: June 12&ndash;Sept. 25, 2026. Cash contributions only; in-kind gifts are listed separately below.</p>
 
 <details class="grade-card">
 <summary>
 <span class="grade-chevron">&#9656;</span>
-<span class="grade-title">Full 2026-cycle detail (dates, sources, and scope caveats)</span>
+<span class="grade-title">Full 2026 detail (dates and sources)</span>
 </summary>
 <div class="grade-body" style="padding:14px 18px 18px;">
 <table class="year-table">
 <thead><tr><th>Candidate</th><th>Period</th><th>Amount</th><th>Detail</th></tr></thead>
 <tbody>
-<tr><td rowspan="2">Choberka</td><td class="period-date">Cycle-to-date (Convention+Primary+interim General)</td><td class="amt">$33,949.59</td><td>Broadest 2026 figure on file.</td></tr>
-<tr><td class="period-date">Itemized sub-period, roughly 6/15&ndash;9/12/26</td><td class="amt">$13,637.25</td><td>Her most recent, fully-itemized report &mdash; 90.8% individual ($12,387.25, 79 named donors) / 9.2% institutional ($1,250: Fresh Air PAC $1,000, Women's Democratic Club of Utah $200, Friends of Elizabeth Weight $50). This is a subset of the cycle-to-date total above, not an additional amount.</td></tr>
-<tr><td rowspan="2">Sawyer</td><td class="period-date">Primary Report, 3/31&ndash;6/11/26</td><td class="amt">$3,000.00 this period ($9,000.00 YTD)</td><td>All three contributions institutional: Utah Bankers Association $500, Utah Association of Realtors $1,500, NUPAC $1,000.</td></tr>
-<tr><td class="period-date">Later report, 8/21&ndash;8/31/26</td><td class="amt">$21,250.00</td><td>9 line items, <b>100% institutional, zero individual donors</b> &mdash; the starkest documented institutional-only fundraising window found anywhere in this project.</td></tr>
+<tr><td rowspan="2">Choberka</td><td class="period-date">2026 year to date, through 9/25/26</td><td class="amt">$48,300.97</td><td>From her September 30th Report's balance summary.</td></tr>
+<tr><td class="period-date">September 30th Report, 6/12&ndash;9/25/26 (submitted 9/29/26)</td><td class="amt">$20,339.13</td><td>Individuals $15,289.13 (75.2%, about 106 names); groups $5,050 (24.8%): Weber County Democratic Party $2,000, Fresh Air PAC $1,000, SMART TD PAC $1,000, Local 222 Drive Chapter $500, Utah AFL-CIO $300, Women's Democratic Club $200, Friends of Elizabeth Weight $50. In-kind, not in the total: $8,145.71, mostly a $6,000 data-analytics gift from Jake Rugh.</td></tr>
+<tr><td rowspan="3">Sawyer</td><td class="period-date">2026 year to date, through 9/25/26</td><td class="amt">$31,951.00</td><td>From his September 30th Report's balance summary.</td></tr>
+<tr><td class="period-date">Primary Report, 3/31&ndash;6/11/26</td><td class="amt">$3,000.00 this period ($9,000.00 YTD)</td><td>Utah Bankers Association $500, Utah Association of Realtors $1,500, NUPAC $1,000.</td></tr>
+<tr><td class="period-date">September 30th Report, 6/12&ndash;9/25/26 (submitted 9/30/26)</td><td class="amt">$22,951.00</td><td>14 gifts, all from PACs, the party or businesses: House Speaker Leadership PAC $10,000, UHREC $5,000, Weber County Republican Party $3,000, Google Client Services $1,000, U-Car PAC $751, Home Builders Association of Utah PAC $750, Maverik $500, 1-800 Contacts $500, and $250 or less each from Strata Networks, Association of Utah Nurse Practitioners, SEL Inc, Holland &amp; Hart, WCF Mutual and Parsons Behle &amp; Latimer. It includes all nine gifts from his earlier 8/21&ndash;8/31 report.</td></tr>
 </tbody>
 </table>
-<p class="bill-footnote">Sawyer's full 2026-only total can't be cleanly stated as a single number yet &mdash; these are the two confirmed, non-overlapping pieces on file, not necessarily his complete 2026 activity.</p>
 </div>
 </details>
 </div>
+
+<h2 class="sect">The September 30th Reports</h2>
+<p>Both candidates' own filings on disclosures.utah.gov, period June 12&ndash;Sept. 25, 2026.</p>
+<div class="table-scroll"><table class="led">
+<tr><th></th><th>Choberka (D)</th><th>Sawyer (R)</th></tr>
+<tr><td>Submitted</td><td>Sept. 29</td><td>Sept. 30 (due date)</td></tr>
+<tr><td>Raised this period</td><td>$20,339.13</td><td>$22,951.00</td></tr>
+<tr><td>Spent this period</td><td>$14,568.07</td><td>$8,114.92</td></tr>
+<tr><td>Cash on hand, Sept. 25</td><td>$12,241.37</td><td>$20,516.76</td></tr>
+<tr><td>Raised, all of 2026</td><td>$48,300.97</td><td>$31,951.00</td></tr>
+<tr><td>From individuals, this period</td><td>75%</td><td>0%</td></tr>
+<tr><td>From PACs, parties &amp; businesses, this period</td><td>25%</td><td>100%</td></tr>
+</table></div>
+<p><b>Sawyer:</b> Two groups gave $15,000 of his $22,951 (65%) on the same day, Aug. 24: the House Speaker Leadership PAC ($10,000) and the Utah House Republican Election Committee ($5,000). He spent $8,115, mostly on Garret Muchinson ($3,597.44, advertising; $8,924.76 across three payments in 2026), Golden Key Consulting ($3,130, "Campaign Expense," 9/17) and James Humphreys ($1,000, "Campaign Expense," 7/4). Utah Division of Corporations records show Golden Key Consulting's registration expired April 5, 2023, and list James Clayton Humphreys II of Ogden as its registered agent (registry checked June 2026). The same vendor received $8,103.71 from Weber County Commission candidate Richard Hyer's campaign in 2026.</p>
+<p><b>Choberka:</b> About 106 individuals gave $15,289, many in small amounts; new larger gifts include Robert Steiner, Aldy Milliken and Sean Bishop ($500 each). Groups gave $5,050, led by the Weber County Democratic Party ($2,000). She spent $14,568, mostly on Elevate Strategies ($6,471.28) and Apollo Political ($4,200), both listed as "Campaign Expense," plus $1,500 in advertising with Eye Contact Media.</p>
+
+<h2 class="sect" id="grades">Grades on the five questions</h2>
+<p>Every item is graded on the same five questions used across this project: Power, Transparency, Financial accountability, Environmental impact and Community impact. A C means the record meets what Utah law requires, the status quo. A B or A means the candidate went beyond it, and the record shows it. D means something is vague or bundled, or a public check is weakened; F means something required is missing, or a check is removed with nothing in its place.</p>
+<div class="topic-head">1. Campaign money</div>
+<div class="table-scroll"><table class="rubric">
+<tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
+<tr class="bg-row"><td>Sawyer</td><td><span class="gl g-d">D</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-d">D</span></td></tr>
+<tr class="bg-why"><td colspan="7"><b>Why:</b> All 14 gifts this period came from PACs, the party and businesses; none came from individuals. Two House Republican leadership groups gave 65% of it on one day. Across all years, 98.5% of his money has come from groups. Every contributor and payee is named, but this much reliance on a few leadership-linked groups weakens the check that a broad base of voters provides. His largest new payment this period, $3,130 to Golden Key Consulting, went to a business whose Utah registration expired in 2023, listed only as "Campaign Expense," so the public can't tell what it bought or who stands behind it.<br><b>What would have scored higher for the collective:</b> a donor base that includes people who live in the district.</td></tr>
+<tr class="bg-row"><td>Choberka</td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td></tr>
+<tr class="bg-why"><td colspan="7"><b>Why:</b> About 75% of her money this period came from roughly 106 individuals, and the rest from seven groups, the largest being the county Democratic Party. Every contributor and payee is named and in-kind gifts are reported. Most spending lines say only "Campaign Expense." That meets the law.</td></tr>
+</table></div>
+<p class="bill-footnote"><b>Going beyond the law would look like:</b> saying what each "Campaign Expense" payment bought, and raising most of the money from people who live in the district.</p>
+<div class="topic-head">2. Disclosure forms</div>
+<div class="table-scroll"><table class="rubric">
+<tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
+<tr class="bg-row"><td>Sawyer</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td></tr>
+<tr class="bg-why"><td colspan="7"><b>Why:</b> His most recent form lists his employer as Sawyer &amp; Co, a company he owns, but answers "n/a" to the question about businesses he owns or serves as an officer of. Utah's business registry lists Sawyer &amp; Co, LLC (formed 7/8/2026) with Jacob Read Sawyer as a member. The two answers on the same form don't match, which leaves the ownership question unclear to readers.</td></tr>
+<tr class="bg-row"><td>Choberka</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td></tr>
+<tr class="bg-why"><td colspan="7"><b>Why:</b> Her form lists her jobs (Select Health program manager; Weber State adjunct) and her board seats (Lantern House, the Weber-Morgan Board of Health, the Weber Local Homeless Trust and the MLK Jr. Human Rights Commission). No owned businesses, $5,000-plus stock holdings or other outside income are listed. That meets the law.</td></tr>
+</table></div>
+<p class="bill-footnote"><b>Going beyond the law would look like:</b> listing more than the form asks, such as a spouse's business or unpaid roles, as Kay McRae did in Senate District 20.</p>
 
 <h2 class="sect">Where Sawyer's money goes</h2>
 <p>Every major donor and vendor connection on file, filterable by type. Click a card to read the full detail.</p>
@@ -397,7 +455,7 @@ padding:9px 18px;border-radius:20px;cursor:pointer;
 <p style="margin-bottom:0;">His filings also show <b>15 <code>[DELETED]</code> entries</b>. Only one carries a recoverable amendment comment: a <b>$3,000 UHREC contribution dated 9/16/24</b>, wiped via amendment on 10/8/24.</p>
 </div>
 
-<div class="flag-open">Sawyer's newest confirmed filing (period 8/21&ndash;8/31/2026, uploaded 9/12/26) reconciles exactly to $21,250.00 across 9 line items &mdash; House Speaker Leadership PAC $10,000, UHREC $5,000, Weber County Republican Party $3,000, Home Builders Association of Utah PAC Fund $750, Google Client Services LLC $1,000, Maverik Group LLC $500, 1-800 Contacts $500, Strata Networks $250, Association of Utah Nurse Practitioners $250. Not one individual donor across all nine gifts.</div>
+<div class="flag-open">Sawyer's September 30th Report (period 6/12&ndash;9/25/2026, submitted 9/30/26) includes all nine gifts from his earlier 8/21&ndash;8/31 report ($21,250) plus $1,701 more from U-Car PAC and four businesses, for $22,951 in all. Not one of the 14 gifts came from an individual.</div>
 
 <h2 class="sect">What he promised vs. what he's sponsored</h2>
 
@@ -598,7 +656,7 @@ padding:9px 18px;border-radius:20px;cursor:pointer;
 
 <p><b>2025: zero contributions raised all year</b> &mdash; with only routine platform fees ($2,123.76 total across 24 transactions) and small community-goodwill gifts (Youth Impact, Boys &amp; Girls Club, Ogden Contemporary Art, the Innocence Project) on the ledger.</p>
 
-<p><b>2026 cycle-to-date: $33,949.59 raised.</b> Received the same $7,500 UINPAC gift as Kim James, same day, part of the documented multi-candidate Democratic slate. Heavy consultant spend &mdash; Elevate Strategies ($8,755.29) and Apollo Political ($6,939.00) together are over 70% of 2026 spending, a professionally-run operation distinct from a DIY campaign. Cross-Democratic-slate giving continues: David and Rosemary Lesser combined $2,500 across four separate gifts, and a mutual-support pattern with Bianca Mittendorf's HD7 campaign (each gave the other's campaign a small direct gift).</p>
+<p><b>2026 through Sept. 25: $48,300.97 raised</b> (September 30th Report). Received the same $7,500 UINPAC gift as Kim James, same day, part of the documented multi-candidate Democratic slate. Heavy consultant spend &mdash; Elevate Strategies ($8,755.29) and Apollo Political ($6,939.00) together are over 70% of 2026 spending, a professionally-run operation distinct from a DIY campaign. Cross-Democratic-slate giving continues: David and Rosemary Lesser combined $2,500 across four separate gifts, and a mutual-support pattern with Bianca Mittendorf's HD7 campaign (each gave the other's campaign a small direct gift).</p>
 
 <div class="record-card">
 <div class="rc-title">Her most recent report, fully itemized (period ~6/15&ndash;9/12/26, uploaded 9/12/26)</div>
@@ -645,8 +703,10 @@ padding:9px 18px;border-radius:20px;cursor:pointer;
 <ul class="sources">
 <li>Jake Sawyer and Angela Choberka campaign finance disclosures, disclosures.utah.gov — full raw DEX exports for both candidates, 2024 through the most recent 2026 filings, last pulled 9/12/26</li>
 <li>Choberka 2024 full-cycle and 2025 full-year raw exports, uploaded and reconciled 9/12/26; her itemized ~6/15&ndash;9/12/26 report, also reconciled 9/12/26</li>
-<li>Sawyer's 2026 Primary Report (period 3/31&ndash;6/11/26, uploaded 8/24/26) and his 8/21&ndash;8/31/26 report (uploaded 9/12/26)</li>
-<li>Utah corporate registry (bes.utah.gov) — Xalisco entity #13140947-0160, Sawyer & Co LLC entity #14713048-0160</li>
+<li>Sawyer's 2026 Primary Report (period 3/31&ndash;6/11/26, uploaded 8/24/26), his 8/21&ndash;8/31/26 report (uploaded 9/12/26) and his 2026 September 30th Report (6/12&ndash;9/25/26, submitted 9/30/26), disclosures.utah.gov</li>
+<li>Choberka's 2026 September 30th Report (6/12&ndash;9/25/26, submitted 9/29/26), disclosures.utah.gov</li>
+<li>Conflict-of-interest disclosure forms for Jake Sawyer and Angela Choberka, disclosures.utah.gov</li>
+<li>Utah corporate registry (bes.utah.gov) — Xalisco entity #13140947-0160, Sawyer & Co LLC entity #14713048-0160; Golden Key Consulting (status Expired, 4/5/2023; registered agent James Clayton Humphreys II), checked June 2026</li>
 <li>House Business/Labor/Commerce Committee minutes, 6/18/25, 10/15/25, 11/19/25 — house.utleg.gov</li>
 <li>NUPAC and UHREC disclosure filings and leadership records, disclosures.utah.gov</li>
 <li>The Weber County Hive's prior Nadolski investigation (Luis Lopez/Xalisco cross-reference)</li>
@@ -725,5 +785,6 @@ document.getElementById('view-' + btn.dataset.view).classList.add('active');
 });
 });
 </script>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 </body>
 </html>
