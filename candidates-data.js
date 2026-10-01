@@ -270,9 +270,10 @@ const CANDIDATES = [
     caseNumber: "CASE 05",
     names: "Calder vs. Hall",
     verdict: "The Stock Portfolio That Funds Her Campaign",
-    tags: ["Stock Overlap", "Disclosure Gap", "PAC Funding"],
+    tags: ["Stock Overlap", "Disclosure Gap", "Sept. 30 Reports", "Graded"],
     stamp: "Active",
-    href: "hd11-calder-hall.html"
+    href: "hd11-calder-hall.html",
+    dateUpdated: "2026-10-01"
   },
   {
     id: "hd10-lesser-alvey",
@@ -435,11 +436,11 @@ const CANDIDATES = [
     caseNumber: "CASE 16",
     names: "Koford vs. Hernandez",
     verdict: "The Seat Her Own PAC Built",
-    tags: ["PAC Network", "Irish Elk LLC", "Legislative Record: D"],
+    tags: ["PAC Network", "Irish Elk LLC", "Legislative Record: D", "Sept. 30 Reports", "Graded"],
     stamp: "Active",
     href: "sd5-koford-hernandez.html",
     datePosted: "2026-09-10",
-    dateUpdated: "2026-09-10"
+    dateUpdated: "2026-10-01"
   },
   {
     id: "wasatch-seat-c-rowland-folmer",

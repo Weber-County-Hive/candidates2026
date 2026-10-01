@@ -11,10 +11,10 @@
   :root {
     --color-bg: #f4f0e6;
     --color-card-bg: #fbf9f3;
-    --color-header-start: #5c1a2b;
-    --color-header-end: #3d0f1c;
+    --color-header-start: #1f4e6b;
+    --color-header-end: #12304a;
     --gradient-header: linear-gradient(135deg, var(--color-header-start), var(--color-header-end));
-    --color-link: #c0572e;
+    --color-link: #1d6b57;
     --color-stat: #d9a441;
     --color-ink: #241c18;
     --color-ink-soft: #5a4f47;
@@ -523,9 +523,34 @@
   .status-cell .sc-status.pass { color: #4a7c59; }
   .status-cell .sc-status.fail { color: var(--color-header-start); }
 
+  .table-scroll{overflow-x:auto;}
+  table.rubric{width:100%;border-collapse:collapse;margin:10px 0 22px;font-size:15px;background:#fbf9f3;border:1px solid #c7bda3;}
+  table.rubric th{font-family:'IBM Plex Mono', monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:#8b8470;text-align:center;border-bottom:2px solid #c7bda3;padding:8px 6px;}
+  table.rubric th:first-child{text-align:left;}
+  table.rubric tr.bg-row td{padding:10px 6px 4px;text-align:center;}
+  table.rubric tr.bg-row td:first-child{text-align:left;font-weight:600;white-space:nowrap;}
+  table.rubric tr.bg-why td{font-size:14.5px;color:#5a4f47;padding:2px 10px 14px;border-bottom:1px solid #ddd3c2;}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display', serif;font-weight:900;font-size:16px;color:#fff;border-radius:3px;padding:1px 6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:#d9a441;} .g-d{background:#b5652f;} .g-f{background:#a5301e;} .g-na{background:#9a9186;font-size:12px;}
+  .topic-head{font-family:'Playfair Display', serif;font-size:18px;font-weight:700;color:#12304a;margin:26px 0 6px;}
+  .updated{font-family:'IBM Plex Mono', monospace;font-size:12px;color:#8b8470;margin-top:12px;}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  table.led{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:16px;}
+  table.led th{font-family:var(--font-mono);font-size:12px;text-transform:uppercase;text-align:left;color:var(--color-ink-soft);border-bottom:2px solid var(--color-border);padding:6px 10px 8px 0;}
+  table.led td{padding:8px 10px 8px 0;border-bottom:1px solid var(--color-border);}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
 <div class="header-band">
   <div class="wrap">
@@ -543,6 +568,7 @@
     <div class="kicker">Senate District 5 · General Election, Nov. 3, 2026</div>
     <h1>Jill Koford <span class="vs">vs.</span> CJ Hernandez</h1>
     <p class="dek">An open seat, vacated by one of the network's own founding officers, going to the same PAC treasurer's network that first funded her rise. Davis, Morgan, and Weber counties.</p>
+    <p class="updated">Updated Oct. 1, 2026, with both candidates' September 30th Reports (period June 12&ndash;Sept. 25), their disclosure forms, and new money and disclosure grades.</p>
     <div class="case-meta">
       <span>Seat: <b>Open</b> — Sen. Ann Millner (R) not seeking reelection</span>
       <span>Republican: <b>Rep. Jill Koford</b>, House District 10 since 2025</span>
@@ -670,7 +696,7 @@
     <span class="label">What the records show</span>
     <p>Koford's rise runs directly through the Northern Utah Legislative PAC (NUPAC) — a committee controlled by Sen. Ann Millner, Rep. Casey Snider, and treasurer Kyle Palmer, who operates through his own firm, Irish Elk LLC. NUPAC seeded Koford's first House run in 2024; Irish Elk took over her campaign's compliance work in 2025; and when Millner declined to seek reelection to Senate District 5 in January 2026, Koford filed for that exact seat and ran unopposed through convention.</p>
     <p>Full raw disclosure exports covering every report Koford has filed since 2021 show <b>$426,114.03</b> raised and $330,347.88 spent over her career. Five PAC or party committees account for $177,500 of that: UHREC, NUPAC, the Weber County Republican Party, House Speaker Leadership PAC, and Wilson Leadership PAC. Across her own campaign and the two committees most closely tied to it (NUPAC and UHREC), Kyle Palmer's Irish Elk LLC and its principal have been paid <b>$229,830.73</b> combined — while serving as treasurer of the committees making those payments.</p>
-    <p>Hernandez's full 2026 record — Convention, Primary, and a General-period report running through 9/9/2026 — shows a different shape: $73,877.15 raised, $25,000 of it (34%) her own money. No PAC or party money appears until after her June 23 primary win; since then, five committees have given $12,550, led by two $5,000 checks from Women and Politics PAC. The remaining $36,327.15 comes from individual donors, including several sitting Utah Democratic legislators giving personally.</p>
+    <p>Hernandez's 2026 record through her September 30th Report shows a different shape: $88,524.51 raised, $25,000 of it (28%) her own money. No PAC or party money appears until after her June 23 primary win; since then, groups have given $17,006.25, led by two $5,000 checks from Women and Politics PAC and $3,000 from the Weber County Democratic Party. The rest, about $46,518, comes from individual donors, including several sitting Utah Democratic legislators giving personally.</p>
   </div>
 
   <table class="rubric-table">
@@ -685,13 +711,55 @@
         <td><span class="grade-letter">$24,215</span> <span style="font-size:0.8em;color:var(--color-ink-soft);">(6% of total)</span></td>
       </tr>
       <tr>
-        <td>Hernandez (2026 cycle to date)</td>
-        <td><span class="grade-letter">$73,877</span></td>
-        <td>$12,550 <span style="font-size:0.8em;color:var(--color-ink-soft);">(began after her primary win)</span></td>
-        <td><span class="grade-letter">34%</span> <span style="font-size:0.8em;color:var(--color-ink-soft);">of her total</span></td>
+        <td>Hernandez (2026, through Sept. 25)</td>
+        <td><span class="grade-letter">$88,525</span></td>
+        <td>$17,006 <span style="font-size:0.8em;color:var(--color-ink-soft);">(began after her primary win)</span></td>
+        <td><span class="grade-letter">28%</span> <span style="font-size:0.8em;color:var(--color-ink-soft);">of her total</span></td>
       </tr>
     </tbody>
   </table>
+
+  <!-- ============ SEPT. 30 REPORTS AND GRADES ============ -->
+  <section class="sect" id="sept30">
+    <h2 class="sect-title">New: the September 30th Reports</h2>
+    <p>Both candidates' own filings on disclosures.utah.gov, period June 12&ndash;Sept. 25, 2026.</p>
+    <div class="table-scroll"><table class="led">
+      <tr><th></th><th>Koford (R)</th><th>Hernandez (D)</th></tr>
+      <tr><td>Submitted</td><td>Sept. 26 (on time)</td><td>Sept. 30, the due date (on time)</td></tr>
+      <tr><td>Raised this period</td><td>$21,950.00</td><td>$49,744.51</td></tr>
+      <tr><td>Spent this period</td><td>$36,742.72</td><td>$51,259.01</td></tr>
+      <tr><td>Cash on hand, Sept. 25</td><td>$42,916.40</td><td>$8,861.00</td></tr>
+      <tr><td>Raised, all of 2026</td><td>$82,848.67 (incl. $12,873.67 moved from her House account)</td><td>$88,524.51 (incl. $25,000 of her own)</td></tr>
+      <tr><td>From individuals, this period</td><td>27%</td><td>66%</td></tr>
+      <tr><td>From PACs, parties, businesses &amp; other campaigns, this period</td><td>73%</td><td>34%</td></tr>
+    </table></div>
+    <p><b>Koford:</b> Other legislators' campaigns gave $9,000 (Cullimore for Senate $5,000, Friends of Chris Wilson $2,000, Evan Vickers $1,500, Lincoln Fillmore $500). Businesses and PACs gave $7,000, including the Great Salt Lake Brine Shrimp Cooperative ($2,500), AFCU Development Fund ($1,500) and three personal-injury law firms (Robert J. DeBry &amp; Associates $1,000, Craig Swapp $500, Driggs Bills &amp; Day $500). Individuals gave $5,950, led by Joshua and Jennifer Romney ($2,500) and Sens. Scott Sandall ($1,000) and Wayne Harper ($750). She spent $36,743, including $6,500 to Roost, $6,320 to the Utah Republican Party, $5,543 to the Deseret News, $5,112 to Renaissance Signs, $2,695 to Kyle Palmer's Irish Elk and $2,289 to Gathering Inc.</p>
+    <p><b>Hernandez:</b> About 137 individuals gave $32,738, most in amounts under $500 from Ogden-area addresses; her husband, Dominic Dewitte, gave $1,000. Groups gave $17,006: Women and Politics PAC ($5,000 twice), the Weber County Democratic Party ($3,000), Operating Engineers 3 PAC ($1,000), the Utah Democratic Party ($1,250), Teamsters Local 222 ($750), the AFL-CIO ($500), the Women's Democratic Club ($300) and SMART TD PAC ($200). She spent $51,259, led by Apollo Political (about $16,525), Eye Contact Digital ($8,865), Hometown Values Magazine ($6,090) and the Deseret News ($6,090). Every contribution was added to her report within 11 days of the date it was received. Three small gifts list no donor name ("Anonymous" $50 and $40, and a $7.14 gift with a blank name); Utah law allows a candidate to keep a gift of $50 or less from an unknown source.</p>
+    <p style="font-family:var(--font-mono);font-size:13px;color:var(--color-ink-soft);">Koford's report has no "added on" dates for its entries, so whether each gift appeared within 31 days of receipt can't be checked from the records in hand. That is no finding either way.</p>
+  </section>
+
+  <section class="sect" id="grades">
+    <h2 class="sect-title">Money and disclosure grades</h2>
+    <p>Every candidate on this site is graded on the same five questions: Power, Transparency, Financial accountability, Environmental impact and Community impact. A C means the record meets what Utah law requires, the status quo. A B or A means the candidate went beyond it, and the record shows it. D means something is vague, late or bundled, or a public check is weakened; F means something required is missing, or a check is removed with nothing in its place. One required item missing from a filing is graded D, since it can be a mistake; several missing from the same filing is graded F. <b>How a grade can change:</b> candidates can file an amended report or an updated disclosure form at any time. When the missing or unclear item is fixed on the public record, we update the grade and note the date. (Koford's legislative-record grades are in section 07 below.)</p>
+    <div class="topic-head">1. Campaign money</div>
+    <div class="table-scroll"><table class="rubric">
+      <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
+      <tr class="bg-row"><td>Koford</td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> About 59% of her 2026 money came from groups and other candidates' campaigns, spread across many givers with no single one dominant, and 41% from individuals. Her report was filed on time and every contributor and payee is named. Most spending lines say only "Campaign Expense." That meets the law.</td></tr>
+      <tr class="bg-row"><td>Hernandez</td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> About 66% of her money this period came from individuals, and every gift was added within 11 days of receipt. Her three unnamed gifts are $50 or less, which the law allows. Nearly every spending line says only "Campaign Expense." That meets the law.</td></tr>
+    </table></div>
+    <p style="font-size:14px;color:var(--color-ink-soft);"><b>Going beyond the law would look like:</b> saying what each "Campaign Expense" payment bought, and raising most of the money from people who live in the district.</p>
+    <div class="topic-head">2. Disclosure forms</div>
+    <div class="table-scroll"><table class="rubric">
+      <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
+      <tr class="bg-row"><td>Koford</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-f">F</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-f">F</span></td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> Her January 10, 2026 form is detailed in places: 21 businesses she manages or belongs to, 33 stock holdings and two unpaid boards (the Major Brent Taylor Foundation and Weber State's College of Social Sciences &amp; Education advisory board, which she chairs). But Utah's business registry shows three roles the form requires that aren't on it: director of North Fork Meadows Owners Association, manager of Scoots Industries LLC, and director of Ogden Regional Airport Association, which was still in existence when she filed (it was dissolved April 21, 2026). Three required items missing from one form is graded F.</td></tr>
+      <tr class="bg-row"><td>Hernandez</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-b">B</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-b">B</span></td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> Her form lists her retirement from the U.S. Department of State, her federal retirement income, the mutual funds in her IRA and her unpaid seat on Weber State University's National Advisory Council. She also lists her husband's previous employer (Raytheon/Collins), her stepson's job and her home, which the form asks for only if she believes they may be a conflict. That goes beyond what the form requires.</td></tr>
+    </table></div>
+    <p style="font-size:14px;color:var(--color-ink-soft);"><b>Going beyond the law would look like:</b> listing more than the form asks, such as a spouse's business or unpaid roles, as Kay McRae did in Senate District 20.</p>
+  </section>
 
   <!-- ============ SECTION: THE NUPAC PIPELINE ============ -->
   <section class="sect" id="pipeline">
@@ -729,7 +797,7 @@
   <!-- ============ SECTION: FOLLOW THE MONEY ============ -->
   <section class="sect" id="money">
     <h2 class="sect-title"><span class="n">02</span> Follow the money</h2>
-    <p>Full raw disclosure exports for both candidates are now in hand — though Hernandez's most recent report runs further into the year (through 9/9/2026) than Koford's (through her Primary report, early June). That gap is noted below rather than smoothed over.</p>
+    <p>Both candidates' September 30th Reports are now in hand, so the 2026 figures below cover the same period for both, through Sept. 25, 2026.</p>
 
     <figure class="flow-diagram">
       <svg viewBox="0 0 680 380" role="img" aria-label="Diagram showing how PAC money reaches Jill Koford's campaign and Kyle Palmer">
@@ -780,17 +848,16 @@
 
     <div class="fund-panel active" data-panel="koford">
       <div class="fund-donut-wrap">
-        <div class="fund-donut" style="background: conic-gradient(var(--color-stat) 0% 54.3%, var(--color-link) 54.3% 69.1%, var(--color-header-start) 69.1% 78.9%, var(--color-ink-soft) 78.9% 100%);">
+        <div class="fund-donut" style="background: conic-gradient(#3fa37f 0% 34.3%, #12304a 34.3% 84.5%, #9a9186 84.5% 100%);">
           <div class="fund-donut-center">KOFORD<br>2026</div>
         </div>
         <div class="fund-donut-legend">
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-stat);"></span><span class="fund-donut-legend-amt">54.3%</span> <span class="fund-donut-legend-lbl">Individual donors ($33,177.47)</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-link);"></span><span class="fund-donut-legend-amt">14.8%</span> <span class="fund-donut-legend-lbl">PACs, party &amp; trade associations ($9,050)</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-header-start);"></span><span class="fund-donut-legend-amt">9.8%</span> <span class="fund-donut-legend-lbl">Corporate donors ($6,000)</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-ink-soft);"></span><span class="fund-donut-legend-amt">21.1%</span> <span class="fund-donut-legend-lbl">Transfer from House account ($12,873.67)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #3fa37f;"></span><span class="fund-donut-legend-amt">34.3%</span> <span class="fund-donut-legend-lbl">Individual donors ($28,425)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #12304a;"></span><span class="fund-donut-legend-amt">50.2%</span> <span class="fund-donut-legend-lbl">PACs, party, businesses &amp; other campaigns ($41,550)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #9a9186;"></span><span class="fund-donut-legend-amt">15.5%</span> <span class="fund-donut-legend-lbl">Transfer from House account ($12,873.67)</span></div>
         </div>
       </div>
-      <p>Koford's 2026 cycle (Convention + Primary reports) raised $61,101.14. Zoomed out to her full career (2021&ndash;2026, every report), the picture skews further toward institutional money: $426,114.03 raised lifetime, with $177,500 of it from just five PACs and party committees.</p>
+      <p>Koford's 2026 cycle through Sept. 25 (Convention, Primary and September 30th reports) raised $82,848.67, including the $12,873.67 moved from her House account. Of the $69,975 in new money, 59% came from PACs, party committees, businesses and other legislators' campaigns ($18,500 from campaigns alone) and 41% from individuals. Zoomed out to her full career (2021&ndash;2026, every report), the picture skews further toward institutional money: $426,114.03 raised lifetime, with $177,500 of it from just five PACs and party committees.</p>
 
       <div class="record-card">
         <div class="rc-head"><span class="rc-name">Five PACs and party committees</span><span class="rc-amount">$177,500 combined, lifetime</span></div>
@@ -882,20 +949,20 @@
 
     <div class="fund-panel" data-panel="hernandez">
       <div class="fund-donut-wrap">
-        <div class="fund-donut" style="background: conic-gradient(var(--color-link) 0% 33.8%, var(--color-stat) 33.8% 83%, var(--color-header-start) 83% 100%);">
+        <div class="fund-donut" style="background: conic-gradient(#d9a441 0% 28.2%, #3fa37f 28.2% 80.8%, #12304a 80.8% 100%);">
           <div class="fund-donut-center">HERNANDEZ<br>2026</div>
         </div>
         <div class="fund-donut-legend">
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-link);"></span><span class="fund-donut-legend-amt">33.8%</span> <span class="fund-donut-legend-lbl">Self-funded ($25,000)</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-stat);"></span><span class="fund-donut-legend-amt">49.2%</span> <span class="fund-donut-legend-lbl">Individual donors ($36,327.15)</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-header-start);"></span><span class="fund-donut-legend-amt">17.0%</span> <span class="fund-donut-legend-lbl">PACs &amp; party committees ($12,550)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #d9a441;"></span><span class="fund-donut-legend-amt">28.2%</span> <span class="fund-donut-legend-lbl">Her own money ($25,000)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #3fa37f;"></span><span class="fund-donut-legend-amt">52.5%</span> <span class="fund-donut-legend-lbl">Individual donors (about $46,518)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #12304a;"></span><span class="fund-donut-legend-amt">19.2%</span> <span class="fund-donut-legend-lbl">PACs, party &amp; union committees ($17,006)</span></div>
         </div>
       </div>
-      <p>Hernandez's full 2026 record now runs through her Convention, Primary, and a General-period report covering 6/17&ndash;9/9/2026 — later than Koford's most recent report on file (Primary, through early June). Across all three: $73,877.15 raised, $25,000 of it her own money (contributed 2/25/2026). Individual donors, all periods combined, account for $36,327.15. PAC and party money — $12,550 — didn't appear until after she won her primary.</p>
+      <p>Hernandez's 2026 record now runs through her September 30th Report (Sept. 25), the same point as Koford's. She has raised $88,524.51, $25,000 of it her own money (contributed 2/25/2026). Groups gave $17,006.25, all of it after she won her June 23 primary; individuals account for the rest, about $46,518. The individual figure is computed from her report totals.</p>
 
       <div class="record-card">
-        <div class="rc-head"><span class="rc-name">PAC money arrives after the primary</span><span class="rc-amount">$12,550</span></div>
-        <p>No PAC or party money appears in Hernandez's Convention or Primary reports. After her June 23 primary win, five committees gave: Women and Politics PAC $5,000 (7/23/2026) and another $5,000 (8/27/2026); Operating Engineers 3 PAC $1,000; Teamsters Local Union No. 222 $750; Utah Democratic Party $500 cash (plus a separate $500 in-kind contribution, "reduced service cost," not counted in this total); and the Women's Democratic Club of Utah $300.</p>
+        <div class="rc-head"><span class="rc-name">PAC money arrives after the primary</span><span class="rc-amount">$17,006</span></div>
+        <p>No PAC or party money appears in Hernandez's Convention or Primary reports. After her June 23 primary win, five committees gave: Women and Politics PAC $5,000 (7/23/2026) and another $5,000 (8/27/2026); Operating Engineers 3 PAC $1,000; Teamsters Local Union No. 222 $750; Utah Democratic Party $500 cash (plus a separate $500 in-kind contribution, "reduced service cost," not counted in this total); and the Women's Democratic Club of Utah $300. Her September 30th Report adds the Weber County Democratic Party ($3,000, 9/22), another $750 from the Utah Democratic Party, the AFL-CIO ($500), SMART TD PAC ($200) and Peter Crosby for Congress ($6.25).</p>
       </div>
 
       <div class="record-card">
@@ -904,8 +971,8 @@
       </div>
 
       <div class="record-card">
-        <div class="rc-head"><span class="rc-name">Rosemary Lesser</span><span class="rc-amount">$1,750 combined</span></div>
-        <p>The former HD10 representative Koford unseated in 2024 has now given Hernandez $1,750 across four contributions spanning the Convention, Primary, and General periods — the largest total from any individual besides Hernandez herself.</p>
+        <div class="rc-head"><span class="rc-name">Rosemary Lesser</span><span class="rc-amount">$2,750 combined</span></div>
+        <p>The former HD10 representative Koford unseated in 2024 has now given Hernandez $2,750 across five contributions, including $1,000 on Sept. 23 — the largest total from any individual besides Hernandez herself.</p>
       </div>
 
       <div class="record-card">
@@ -915,7 +982,7 @@
 
       <div class="record-card">
         <div class="rc-head"><span class="rc-name">Apollo Political</span><span class="rc-amount">~$19,426 combined</span></div>
-        <p>Hernandez's dominant vendor through her Primary report, appearing under three slightly different name spellings across dozens of line items — digital/media consulting, by far her largest expenditure category to that point. Other spending includes $3,105 to the Utah State Democratic Party's coordinated campaign and ActBlue accounts, and smaller print/design vendors (Lyon Printing, Service Press, Sun Lithographing). Expenditure detail for the General-reporting period hasn't been provided yet — only its contributions have.</p>
+        <p>Hernandez's dominant vendor through her Primary report, appearing under three slightly different name spellings across dozens of line items — digital/media consulting, by far her largest expenditure category to that point. Other spending includes $3,105 to the Utah State Democratic Party's coordinated campaign and ActBlue accounts, and smaller print/design vendors (Lyon Printing, Service Press, Sun Lithographing). Her September 30th Report adds about $16,525 more to Apollo Political, plus Eye Contact Digital ($8,865), Hometown Values Magazine ($6,090) and the Deseret News ($6,090). Earlier note: expenditure detail for the General-reporting period hasn't been provided yet — only its contributions have.</p>
       </div>
     </div>
 
@@ -1143,7 +1210,7 @@
     <h2 class="sect-title"><span class="n">06</span> CJ Hernandez</h2>
     <p>Christina "CJ" Hernandez was raised in Weber County by a single mother who worked as a public-school teacher. She and her husband are raising a blended family of five young adults. This is her first run for state office; she has no prior elected record to compare against her platform.</p>
     <p>Hernandez's campaign site organizes her platform around five stated priorities: lowering the cost of housing, health care, child care, and groceries; strengthening public schools through investment in teachers and classrooms; protecting Utah's air, water, public lands, and the Great Salt Lake; building an economy that supports small businesses and job growth; and increasing government transparency and accountability.</p>
-    <p>She defeated Dakota Wurth in the June 23, 2026 Democratic primary and is endorsed by the Weber Democratic Women's Club. Her 2026 campaign has raised $73,877.15 to date — $25,000 of it a self-funded contribution she made 2/25/2026 — with PAC and party money ($12,550) only beginning to arrive after her primary win. Full detail in the "Follow the money" section above.</p>
+    <p>She defeated Dakota Wurth in the June 23, 2026 Democratic primary and is endorsed by the Weber Democratic Women's Club. Her 2026 campaign has raised $88,524.51 through Sept. 25 — $25,000 of it a self-funded contribution she made 2/25/2026 — with PAC and party money ($17,006) only beginning to arrive after her primary win. She is a retired U.S. diplomat (Department of State, 2005&ndash;2020), per her disclosure form. Full detail in the "Follow the money" section above.</p>
   </section>
 
   <!-- ============ SECTION: GRADED BY THE RUBRIC ============ -->
@@ -1195,6 +1262,8 @@
       <li>Koford campaign finance: full raw DEX transaction exports from disclosures.utah.gov, covering every report filed 2021 Year End through 2026 Convention (846 transaction rows).</li>
       <li>Hernandez campaign finance: full raw DEX transaction export from disclosures.utah.gov for her 2026 Convention and Primary reports (222 transaction rows), plus a separately-provided Contributions Received report for the General period, 6/17&ndash;9/9/2026.</li>
       <li>Hernandez biographical and platform information: cjforsenate.com (candidate's own campaign site), accessed directly.</li>
+      <li>September 30th Reports (6/12&ndash;9/25/2026): Koford, submitted 9/26/2026, and Hernandez, submitted 9/30/2026, disclosures.utah.gov; Koford's Senate data export (DEX20260930_111150.csv).</li>
+      <li>Disclosure forms: Koford's form dated 1/10/2026 and Hernandez's current form, disclosures.utah.gov (read as pasted text, 10/1/2026). Unknown-source contribution rule: Utah Code 20A-11-301.</li>
       <li>Primary and convention results: Ballotpedia's Utah State Senate District 5 and Jill Koford candidate pages; Weber Democrats' own post confirming Hernandez's primary win over Dakota Wurth.</li>
       <li>Legislative record and committee assignments: le.utah.gov official House and Senate listings.</li>
       <li>Koford's campaign platform: her own campaign website's issues page, accessed directly.</li>
@@ -1233,6 +1302,7 @@
     tile.addEventListener('click', function() { tile.classList.toggle('flipped'); });
   });
 </script>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 
 </body>
 </html>

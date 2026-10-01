@@ -11,10 +11,10 @@
   :root {
     --color-bg: #f4f0e6;
     --color-card-bg: #fbf9f3;
-    --color-header-start: #5c1a2b;
-    --color-header-end: #3d0f1c;
+    --color-header-start: #1f4e6b;
+    --color-header-end: #12304a;
     --gradient-header: linear-gradient(135deg, var(--color-header-start), var(--color-header-end));
-    --color-link: #c0572e;
+    --color-link: #1d6b57;
     --color-stat: #d9a441;
     --color-ink: #241c18;
     --color-ink-soft: #5a4f47;
@@ -449,16 +449,41 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
   }
+  .table-scroll{overflow-x:auto;}
+  table.rubric{width:100%;border-collapse:collapse;margin:10px 0 22px;font-size:15px;background:#fbf9f3;border:1px solid #c7bda3;}
+  table.rubric th{font-family:'IBM Plex Mono', monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:#8b8470;text-align:center;border-bottom:2px solid #c7bda3;padding:8px 6px;}
+  table.rubric th:first-child{text-align:left;}
+  table.rubric tr.bg-row td{padding:10px 6px 4px;text-align:center;}
+  table.rubric tr.bg-row td:first-child{text-align:left;font-weight:600;white-space:nowrap;}
+  table.rubric tr.bg-why td{font-size:14.5px;color:#5a4f47;padding:2px 10px 14px;border-bottom:1px solid #ddd3c2;}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display', serif;font-weight:900;font-size:16px;color:#fff;border-radius:3px;padding:1px 6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:#d9a441;} .g-d{background:#b5652f;} .g-f{background:#a5301e;} .g-na{background:#9a9186;font-size:12px;}
+  .topic-head{font-family:'Playfair Display', serif;font-size:18px;font-weight:700;color:#12304a;margin:26px 0 6px;}
+  .updated{font-family:'IBM Plex Mono', monospace;font-size:12px;color:#8b8470;margin-top:12px;}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  table.led{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:16px;}
+  table.led th{font-family:var(--font-mono);font-size:12px;text-transform:uppercase;text-align:left;color:var(--color-ink-soft);border-bottom:2px solid var(--color-border);padding:6px 10px 8px 0;}
+  table.led td{padding:8px 10px 8px 0;border-bottom:1px solid var(--color-border);}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
 <div class="header-band">
   <div class="wrap">
     <a class="brand" href="#"><span class="dot">⬡</span> The Weber County Hive</a>
     <nav>
-      <a href="#">Docket</a>
-      <a href="#">Substack</a>
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
     </nav>
   </div>
 </div>
@@ -468,7 +493,8 @@
   <div class="case-hero">
     <div class="kicker">House District 11 · General Election, Nov. 3, 2026</div>
     <h1>Katy Hall <span class="vs">vs.</span> Dave Calder</h1>
-    <p class="dek">A registered nurse turned four-year incumbent, funded almost entirely by out-of-district PACs and industry committees, against a first-time Air Force veteran running on small-dollar and family support. Washington Terrace and Riverdale, Weber and Davis counties.</p>
+    <p class="dek">Both candidates filed their September 30th reports on time. Rep. Katy Hall (R) raised $20,951 this period, 54% from PACs, parties and businesses; Dave Calder (D) raised $5,361, 57% from individuals. Washington Terrace and Riverdale, Weber and Davis counties.</p>
+    <p class="updated">Updated Oct. 1, 2026, with both candidates' September 30th Reports (period June 12&ndash;Sept. 25), Hall's July 11 disclosure form, and money and disclosure grades.</p>
     <div class="case-meta">
       <span>Incumbent: <b>Katy Hall (R)</b>, since 2023</span>
       <span>Challenger: <b>Dave Calder (D)</b></span>
@@ -478,16 +504,58 @@
 
   <div class="verdict-box">
     <span class="label">What the records show</span>
-    <p>Hall's campaign has raised roughly $77,800 across the 2022&ndash;2026 cycles, the large majority of it from PACs, industry committees, and legislator-to-legislator transfers rather than individual constituents. Calder's campaign has raised roughly $6,000, almost entirely from himself, neighbors, and Democratic candidates in adjoining districts.</p>
-    <p>Hall's own financial disclosures show a $500&ndash;plus stake in three companies whose PACs also fund her campaign, and a family financial footprint inside the same regional hospital system where she works as a nurse. Her July 2026 disclosure omits conflict-of-interest detail that appeared on her January 2026 filing.</p>
+    <p>Hall's campaign has raised roughly $77,800 across the 2022&ndash;2026 cycles, much of it from PACs, industry committees and other legislators' campaigns; in her latest report, 54% came from groups and 46% from individuals, many of them South Ogden neighbors. Calder's campaign has raised $10,767 in 2026, mostly from individuals, with $2,000 from the Weber County Democratic Party in September.</p>
+    <p>Hall's own financial disclosures show stock worth $5,000 or more in three companies whose PACs also fund her campaign, and a family financial footprint inside the same regional hospital system where she works as a nurse. Her July 2026 disclosure omits conflict-of-interest detail that appeared on her January 2026 filing.</p>
   </div>
 
   <div class="stat-row">
-    <div class="stat"><span class="num">$77.8K</span><span class="lbl">Hall total raised, 2022&ndash;26</span></div>
-    <div class="stat"><span class="num">$6.1K</span><span class="lbl">Calder total raised, 2025&ndash;26</span></div>
-    <div class="stat"><span class="num">~90%</span><span class="lbl">Hall funding from PACs &amp; committees</span></div>
-    <div class="stat"><span class="num">~90%</span><span class="lbl">Calder funding from individuals</span></div>
+    <div class="stat"><span class="num">$31.8K</span><span class="lbl">Hall raised in 2026, through Sept. 25</span></div>
+    <div class="stat"><span class="num">$10.8K</span><span class="lbl">Calder raised in 2026, through Sept. 25</span></div>
+    <div class="stat"><span class="num">54%</span><span class="lbl">Hall's latest report from PACs, parties &amp; businesses</span></div>
+    <div class="stat"><span class="num">57%</span><span class="lbl">Calder's latest report from individuals</span></div>
   </div>
+
+  <!-- ============ SEPT. 30 REPORTS AND GRADES ============ -->
+  <section class="sect" id="sept30">
+    <h2 class="sect-title">New: the September 30th Reports</h2>
+    <p>Both candidates' own filings on disclosures.utah.gov, period June 12&ndash;Sept. 25, 2026.</p>
+    <div class="table-scroll"><table class="led">
+      <tr><th></th><th>Calder (D)</th><th>Hall (R)</th></tr>
+      <tr><td>Submitted</td><td>Sept. 29 (on time)</td><td>Sept. 24, one day before the period closed (on time)</td></tr>
+      <tr><td>Raised this period</td><td>$5,361.08</td><td>$20,951.00</td></tr>
+      <tr><td>Spent this period</td><td>$4,379.17</td><td>$9,409.42</td></tr>
+      <tr><td>Cash on hand, Sept. 25</td><td>$3,772.09</td><td>$36,692.16</td></tr>
+      <tr><td>Raised, all of 2026</td><td>$10,766.89</td><td>$31,802.00</td></tr>
+      <tr><td>From individuals, this period</td><td>57%</td><td>46%</td></tr>
+      <tr><td>From PACs, parties &amp; businesses, this period</td><td>43%</td><td>54%</td></tr>
+    </table></div>
+    <p><b>Hall:</b> Fifteen groups gave $11,350, led by the Weber County Republican Party ($2,000), the Utah Health Care Association ($1,500), and $1,000 each from the Utah Credit Union PAC, Google, the Utah House Republican Election Committee and Republican Women Lead; Utah Medical PAC gave $900. About 45 individuals gave $9,601, many from South Ogden and Ogden; the largest were Eddie Jordan ($1,001), Michael Grant, Frank and Tara Redd, and John Chevalier ($1,000 each). She spent $9,409, mostly on Vistaprint printing (about $6,611), plus $500 to Jim Alvey's campaign ("Donations") and $500 to Kyle Hall ("Campaign Expense"). Every payee is named.</p>
+    <p><b>Calder:</b> About 35 individuals gave $3,061, mostly $5 to $500 from Washington Terrace, South Ogden and Ogden; his largest supporters were neighbors David and Vickie Hamilton and RuthAnn Stirling. Groups gave $2,300: the Weber County Democratic Party ($2,000), SMART TD PAC ($200) and the Women's Democratic Club ($100). He spent $4,379, mostly with Service Press ($2,971 in two payments) and many small WalmartPhoto print orders. Every payee is named.</p>
+    <p style="font-family:var(--font-mono);font-size:13px;color:var(--color-ink-soft);">Neither report shows "added on" dates for its entries, so whether each gift appeared within 31 days of receipt can't be checked from the records in hand. That is no finding either way for both candidates.</p>
+  </section>
+
+  <section class="sect" id="grades">
+    <h2 class="sect-title">Money and disclosure grades</h2>
+    <p>Every candidate on this site is graded on the same five questions: Power, Transparency, Financial accountability, Environmental impact and Community impact. A C means the record meets what Utah law requires, the status quo. A B or A means the candidate went beyond it, and the record shows it. D means something is vague, late or bundled, or a public check is weakened; F means something required is missing, or a check is removed with nothing in its place. One required item missing from a filing is graded D, since it can be a mistake; several missing from the same filing is graded F. <b>How a grade can change:</b> candidates can file an amended report or an updated disclosure form at any time. When the missing or unclear item is fixed on the public record, we update the grade and note the date.</p>
+    <div class="topic-head">1. Campaign money</div>
+    <div class="table-scroll"><table class="rubric">
+      <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
+      <tr class="bg-row"><td>Calder</td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> About 57% of his money this period came from individuals, most from nearby cities, and the rest from the county party and two small groups. His report was filed on time and every contributor and payee is named. That meets the law.</td></tr>
+      <tr class="bg-row"><td>Hall</td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> About 54% of her money this period came from 15 different groups, none dominant, and 46% from individuals. Her report was filed before the due date and every contributor and payee is named. Most spending lines say only "Campaign Expense." That meets the law.</td></tr>
+    </table></div>
+    <p style="font-size:14px;color:var(--color-ink-soft);"><b>Going beyond the law would look like:</b> saying what each "Campaign Expense" payment bought, and raising most of the money from people who live in the district.</p>
+    <div class="topic-head">2. Disclosure forms</div>
+    <div class="table-scroll"><table class="rubric">
+      <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
+      <tr class="bg-row"><td>Calder</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> His form lists his job, his military retirement pay, his unpaid seat on his neighborhood HOA board and his spouse. Everything the form requires is there. That meets the law.</td></tr>
+      <tr class="bg-row"><td>Hall</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> Her January 2026 form said she owns Tava Town LLC. Her July 11, 2026 form answers "n/a" to the question about businesses she owns, though the form asks for anything owned during the preceding year, so Tava Town should still be listed. One required item missing is graded D. Her July form also no longer mentions her husband's surgical-center ownership or his Ogden Regional board seat; those were optional items, so they are described here but not graded. Her form does list her 29 stock holdings, her two employers and, under an optional question, her five properties.</td></tr>
+    </table></div>
+    <p style="font-size:14px;color:var(--color-ink-soft);"><b>Going beyond the law would look like:</b> listing more than the form asks, such as a spouse's business or unpaid roles, as Kay McRae did in Senate District 20.</p>
+  </section>
 
   <!-- ============ SECTION: THE RACE ============ -->
   <section class="sect" id="race">
@@ -530,7 +598,7 @@
   <!-- ============ SECTION: FOLLOW THE MONEY ============ -->
   <section class="sect" id="money">
     <h2 class="sect-title"><span class="n">03</span> Follow the money</h2>
-    <p>The two candidates' funding bases look nothing alike. Toggle between them below.</p>
+    <p>Toggle between the two candidates to compare their September 30th Reports. <span style="color:#3fa37f;">&#9679;</span> Individuals &nbsp; <span style="color:#12304a;">&#9679;</span> PACs, parties &amp; businesses</p>
 
     <div class="fund-toggle">
       <button class="active" data-target="hall">Katy Hall</button>
@@ -539,24 +607,25 @@
 
     <div class="fund-panel active" data-panel="hall">
       <div class="fund-donut-wrap">
-        <div class="fund-donut" style="background: conic-gradient(var(--color-link) 0% 90%, var(--color-stat) 90% 100%);">
+        <div class="fund-donut" style="background: conic-gradient(#12304a 0% 54.2%, #3fa37f 54.2% 100%);">
           <div class="fund-donut-center">HALL</div>
         </div>
         <div class="fund-donut-legend">
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-link);"></span><span class="fund-donut-legend-amt">~90%</span> <span class="fund-donut-legend-lbl">PACs &amp; committees</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-stat);"></span><span class="fund-donut-legend-amt">~10%</span> <span class="fund-donut-legend-lbl">Individual donors</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #12304a;"></span><span class="fund-donut-legend-amt">54%</span> <span class="fund-donut-legend-lbl">PACs, parties &amp; businesses ($11,350)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #3fa37f;"></span><span class="fund-donut-legend-amt">46%</span> <span class="fund-donut-legend-lbl">Individual donors ($9,601)</span></div>
         </div>
       </div>
       <div class="fund-bar-row">
-        <div class="fund-bar-label">PACs &amp; committees</div>
-        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 90%;"></div></div>
-        <div class="fund-bar-amt">~90%</div>
+        <div class="fund-bar-label">PACs, parties &amp; businesses</div>
+        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 54%;background:#12304a;"></div></div>
+        <div class="fund-bar-amt">54%</div>
       </div>
       <div class="fund-bar-row">
         <div class="fund-bar-label">Individual donors</div>
-        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 10%;"></div></div>
-        <div class="fund-bar-amt">~10%</div>
+        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 46%;background:#3fa37f;"></div></div>
+        <div class="fund-bar-amt">46%</div>
       </div>
+      <p style="font-size:14px;color:var(--color-ink-soft);">September 30th Report, June 12&ndash;Sept. 25, 2026. Earlier versions of this page showed about 90% from PACs and committees; that was an estimate across her full 2022&ndash;2026 record, replaced here with the latest filed report.</p>
 
       <h3 class="sub-title">Where Hall's PAC money comes from</h3>
 
@@ -603,30 +672,25 @@
 
     <div class="fund-panel" data-panel="calder">
       <div class="fund-donut-wrap">
-        <div class="fund-donut" style="background: conic-gradient(var(--color-ink-soft) 0% 15%, var(--color-stat) 15% 98%, var(--color-link) 98% 100%);">
+        <div class="fund-donut" style="background: conic-gradient(#3fa37f 0% 57.1%, #12304a 57.1% 100%);">
           <div class="fund-donut-center">CALDER</div>
         </div>
         <div class="fund-donut-legend">
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-ink-soft);"></span><span class="fund-donut-legend-amt">~15%</span> <span class="fund-donut-legend-lbl">Self-funded &amp; family</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-stat);"></span><span class="fund-donut-legend-amt">~83%</span> <span class="fund-donut-legend-lbl">Individual donors</span></div>
-          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: var(--color-link);"></span><span class="fund-donut-legend-amt">~2%</span> <span class="fund-donut-legend-lbl">Party &amp; PAC</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #3fa37f;"></span><span class="fund-donut-legend-amt">57%</span> <span class="fund-donut-legend-lbl">Individual donors ($3,061)</span></div>
+          <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #12304a;"></span><span class="fund-donut-legend-amt">43%</span> <span class="fund-donut-legend-lbl">Party &amp; PACs ($2,300)</span></div>
         </div>
       </div>
       <div class="fund-bar-row">
-        <div class="fund-bar-label">Self-funded &amp; family</div>
-        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 15%;"></div></div>
-        <div class="fund-bar-amt">~15%</div>
-      </div>
-      <div class="fund-bar-row">
         <div class="fund-bar-label">Individual donors</div>
-        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 83%;"></div></div>
-        <div class="fund-bar-amt">~83%</div>
+        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 57%;background:#3fa37f;"></div></div>
+        <div class="fund-bar-amt">57%</div>
       </div>
       <div class="fund-bar-row">
-        <div class="fund-bar-label">Party &amp; PAC</div>
-        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 2%;"></div></div>
-        <div class="fund-bar-amt">~2%</div>
+        <div class="fund-bar-label">Party &amp; PACs</div>
+        <div class="fund-bar-track"><div class="fund-bar-fill" style="width: 43%;background:#12304a;"></div></div>
+        <div class="fund-bar-amt">43%</div>
       </div>
+      <p style="font-size:14px;color:var(--color-ink-soft);">September 30th Report, June 12&ndash;Sept. 25, 2026. His in-kind gifts (sign stakes and hardware, $356) aren't counted.</p>
     </div>
   </section>
 
@@ -647,7 +711,7 @@
 
     <div class="flag-open">
       <span class="fo-label">Disclosure gap, dated</span>
-      <p>Hall's January 2026 conflict-of-interest filing disclosed her spouse's surgical-center ownership, his hospital board seat, and her own ownership in a separate LLC. Her July 2026 filing, submitted five months later, leaves that entire section blank.</p>
+      <p>Hall's January 2026 conflict-of-interest filing disclosed her spouse's surgical-center ownership, his hospital board seat, and her own ownership in Tava Town LLC. Her July 11, 2026 filing leaves that section blank and answers "n/a" to the question about businesses she owns. See the disclosure grade above.</p>
     </div>
   </section>
 
@@ -677,7 +741,8 @@
     <summary>Sourcing &amp; methodology</summary>
     <ul>
       <li>Campaign finance figures: disclosures.utah.gov, individual candidate reports, 2022&ndash;2026 filings for both candidates.</li>
-      <li>Conflict-of-interest disclosures: disclosures.utah.gov, filings dated January and July 2026 (Hall) and 2026 (Calder).</li>
+      <li>Conflict-of-interest disclosures: disclosures.utah.gov, filings dated January and July 11, 2026 (Hall; July form re-read as pasted text 10/1/2026) and 2026 (Calder).</li>
+      <li>September 30th Reports (6/12&ndash;9/25/2026): Hall (filed as "Hall, Katrina"), submitted 9/24/2026, and Calder, submitted 9/29/2026, disclosures.utah.gov.</li>
       <li>Legislative record: Utah State Legislature bill tracking (le.utah.gov), House floor vote records.</li>
       <li>PAC and network cross-references: prior Weber County Hive reporting on NUPAC, H3 PAC, Doers Network, the Nordic Village Public Infrastructure District, and Operation Gigawatt donor networks.</li>
       <li>Candidates' own campaign websites: <a href="https://www.katyhallutah.com/" target="_blank" rel="noopener">katyhallutah.com</a> (Hall) and <a href="https://www.votedavecalder.com/" target="_blank" rel="noopener">votedavecalder.com</a> (Calder), for platform and biographical claims attributed to each candidate directly.</li>
@@ -700,6 +765,7 @@
     });
   });
 </script>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 
 </body>
 </html>
