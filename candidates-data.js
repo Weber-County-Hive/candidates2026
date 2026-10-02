@@ -42,6 +42,20 @@ const CANDIDATES = [
     dateUpdated: "2026-09-15"
   },
   {
+    id: "sd21-brammer-smith-myers-woodfield",
+    race: "Senate District 21 — Highland, Utah County",
+    level: "State",
+    county: "Utah",
+    caseNumber: "CASE 33",
+    names: "Brammer vs. Myers vs. Woodfield",
+    verdict: "The Primary a Judicial-Independence PAC Came For",
+    tags: ["Incumbent", "Primary PAC", "Judicial Independence", "Fundraising"],
+    stamp: "Active",
+    href: "sd21-brammer-smith-myers-woodfield.html",
+    datePosted: "2026-09-12",
+    dateUpdated: "2026-10-02"
+  },
+  {
     id: "hd27-loubet-oates",
     race: "House District 27 — Kearns, Magna and the West Side",
     level: "State",
@@ -350,6 +364,34 @@ const CANDIDATES = [
     href: "davis-county-commission-2026.html"
   },
   {
+    id: "wasatch-2026-voter-guide",
+    race: "Wasatch County — 2026 General Election Voter Guide",
+    level: "County",
+    county: "Wasatch",
+    caseNumber: "GUIDE 01",
+    names: "Every race on the Wasatch ballot",
+    verdict: "What to Look At Before You Vote",
+    tags: ["Voter Guide", "Ballot", "Report Cards", "Disclosure Law", "Key Dates"],
+    stamp: "Active",
+    href: "wasatch-2026-voter-guide.html",
+    datePosted: "2026-10-01",
+    dateUpdated: "2026-10-02"
+  },
+  {
+    id: "wasatch-sd20-winterton-mcrae",
+    race: "Senate District 20 — Daggett, Duchesne, Summit, Uintah, Wasatch (also on Wasatch ballots)",
+    level: "State",
+    county: "Wasatch",
+    caseNumber: "CASE 28",
+    names: "Winterton vs. McRae",
+    verdict: "A Campaign Balance Below Zero vs. $180 in Cash",
+    tags: ["Incumbent", "Forward Party", "Oil and Gas", "Negative Balance", "Disclosure Forms"],
+    stamp: "Active",
+    href: "sd20-winterton-mcrae.html",
+    datePosted: "2026-09-24",
+    dateUpdated: "2026-09-24"
+  },
+  {
     id: "wasatch-seat-a-kahler",
     race: "Wasatch County Council — Seat A (At-Large)",
     level: "County",
@@ -446,13 +488,13 @@ const CANDIDATES = [
     level: "County",
     county: "Wasatch",
     caseNumber: "CASE 17",
-    names: "Rowland vs. Folmer",
+    names: "Folmer vs. Rowland",
     verdict: "One Disclosed. One Didn't.",
     tags: ["Disclosure Gap", "Write-In Challenger", "Legislative Record: D"],
     stamp: "Active",
     href: "rowland-folmer-seat-c.html",
     datePosted: "2026-09-11",
-    dateUpdated: "2026-09-11"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "ut2-crosby-statement",
