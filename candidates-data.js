@@ -361,7 +361,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "rachel-kahler-wasatch-seat-a.html",
     datePosted: "2026-09-01",
-    dateUpdated: "2026-09-30"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "wasatch-seat-c-rowland",
