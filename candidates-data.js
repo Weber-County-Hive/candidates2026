@@ -343,6 +343,20 @@ const CANDIDATES = [
     dateUpdated: "2026-10-02"
   },
   {
+    id: "sd7-hollist-rushforth-ostler",
+    race: "Senate District 7 — Fruit Heights, Farmington, Kaysville, Morgan",
+    level: "State",
+    county: "Davis",
+    caseNumber: "CASE 36",
+    names: "Hollist vs. Rushforth vs. Ostler",
+    verdict: "One Donor Gave $200,248. The Candidate Loaned $113,677.",
+    tags: ["Single-Donor Money", "Candidate Loans", "Beat the Senate President", "Self-Reimbursement", "Disclosure Forms"],
+    stamp: "Active",
+    href: "sd7-hollist-rushforth-ostler.html",
+    datePosted: "2026-10-02",
+    dateUpdated: "2026-10-02"
+  },
+  {
     id: "ut2-moore-crosby",
     race: "US House District 2 (Utah)",
     level: "Federal",
