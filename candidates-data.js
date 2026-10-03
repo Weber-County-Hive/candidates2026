@@ -67,7 +67,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "hd27-loubet-oates.html",
     datePosted: "2026-09-25",
-    dateUpdated: "2026-09-25"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "hd26-macpherson-finch",
@@ -81,7 +81,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "hd26-macpherson-finch.html",
     datePosted: "2026-09-25",
-    dateUpdated: "2026-09-25"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "sd19-cullimore-anderson",
@@ -95,7 +95,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "sd19-cullimore-anderson.html",
     datePosted: "2026-09-25",
-    dateUpdated: "2026-09-25"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "sd23-grover-smith",
@@ -109,7 +109,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "sd23-grover-smith.html",
     datePosted: "2026-09-24",
-    dateUpdated: "2026-09-24"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "sd20-winterton-mcrae",
@@ -123,7 +123,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "sd20-winterton-mcrae.html",
     datePosted: "2026-09-24",
-    dateUpdated: "2026-09-24"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "sd18-fiefia-anderson",
@@ -137,7 +137,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "sd18-fiefia-anderson.html",
     datePosted: "2026-09-24",
-    dateUpdated: "2026-09-24"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "sd13-catten-smith-mahoney",
@@ -151,7 +151,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "sd13-catten-smith-mahoney.html",
     datePosted: "2026-09-24",
-    dateUpdated: "2026-09-24"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "sd12-kwan-tyler",
@@ -165,7 +165,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "sd12-kwan-tyler.html",
     datePosted: "2026-09-24",
-    dateUpdated: "2026-09-24"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "sd11-buss-benson",
@@ -179,7 +179,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "sd11-buss-benson.html",
     datePosted: "2026-09-24",
-    dateUpdated: "2026-09-24"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "sd9-plumb-evans-snow",
@@ -193,7 +193,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "sd9-plumb-evans-snow.html",
     datePosted: "2026-09-24",
-    dateUpdated: "2026-09-24"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "hd17-bitner-last",
@@ -207,7 +207,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "hd17-bitner-last.html",
     datePosted: "2026-09-23",
-    dateUpdated: "2026-09-23"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "sd6-tran-neal",
@@ -221,7 +221,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "sd6-tran-neal.html",
     datePosted: "2026-09-23",
-    dateUpdated: "2026-09-23"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "hd16-stevenson-treasure",
@@ -264,6 +264,20 @@ const CANDIDATES = [
     href: "hd42-okerlund-williams.html"
   },
   {
+    id: "weber-2026-voter-guide",
+    race: "Weber County — 2026 General Election Voter Guide",
+    level: "County",
+    county: "Weber",
+    caseNumber: "GUIDE 02",
+    names: "Every race on the Weber ballot",
+    verdict: "What to Look At Before You Vote",
+    tags: ["Voter Guide", "Ballot", "Report Cards", "PAC Network", "Key Dates"],
+    stamp: "Active",
+    href: "weber-2026-voter-guide.html",
+    datePosted: "2026-10-02",
+    dateUpdated: "2026-10-02"
+  },
+  {
     id: "hd12-graff-schultz",
     race: "House District 12 — Roy / Hooper",
     level: "State",
@@ -274,7 +288,7 @@ const CANDIDATES = [
     tags: ["Speaker of the House", "PAC Network", "Platform vs. Record"],
     stamp: "Active",
     href: "hd12-graff-schultz.html",
-    dateUpdated: "2026-09-30"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "hd11-calder-hall",
@@ -286,7 +300,8 @@ const CANDIDATES = [
     verdict: "The Stock Portfolio That Funds Her Campaign",
     tags: ["Stock Overlap", "Disclosure Gap", "PAC Funding"],
     stamp: "Active",
-    href: "hd11-calder-hall.html"
+    href: "hd11-calder-hall.html",
+    dateUpdated: "2026-10-02"
   },
   {
     id: "hd10-lesser-alvey",
@@ -299,7 +314,7 @@ const CANDIDATES = [
     tags: ["Open Seat", "Corporate Filing", "PAC Network"],
     stamp: "Active",
     href: "hd10-lesser-alvey.html",
-    dateUpdated: "2026-09-30"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "hd9-choberka-sawyer",
@@ -311,7 +326,8 @@ const CANDIDATES = [
     verdict: "The Vendor Loop",
     tags: ["Vendor Network", "Deletion Pattern", "Rematch"],
     stamp: "Active",
-    href: "hd9-choberka-sawyer.html"
+    href: "hd9-choberka-sawyer.html",
+    dateUpdated: "2026-10-02"
   },
   {
     id: "hd8-kyle-james-shelton",
@@ -324,7 +340,35 @@ const CANDIDATES = [
     tags: ["Three-Way Race", "Sept. 30 Reports", "Graded"],
     stamp: "Active",
     href: "jason-kyle-hd8.html",
-    dateUpdated: "2026-09-30"
+    dateUpdated: "2026-10-02"
+  },
+  {
+    id: "ut2-moore-crosby",
+    race: "US House District 2 (Utah)",
+    level: "Federal",
+    county: "Weber",
+    caseNumber: "CASE 35",
+    names: "Moore vs. Crosby",
+    verdict: "$2.5 Million, Mostly From PACs, vs. $60,000 From People",
+    tags: ["PAC Money", "Election Hive", "Accomplishments Checked", "Earmarks", "Super PACs"],
+    stamp: "Active",
+    href: "ut2-moore-crosby.html",
+    datePosted: "2026-10-02",
+    dateUpdated: "2026-10-02"
+  },
+  {
+    id: "hd6-bishop-rich",
+    race: "House District 6 — Plain City, Willard, Perry",
+    level: "State",
+    county: "Weber",
+    caseNumber: "CASE 34",
+    names: "Bishop vs. Rich",
+    verdict: "Trade-Group Money and Two Consultants vs. Party Data",
+    tags: ["Donor-Vendor Overlap", "Website Board vs. Registry", "Forward Party In-Kind", "Congressional Record"],
+    stamp: "Active",
+    href: "hd6-bishop-rich.html",
+    datePosted: "2026-10-02",
+    dateUpdated: "2026-10-02"
   },
   {
     id: "hd7-mittendorf-wilcox",
@@ -336,7 +380,8 @@ const CANDIDATES = [
     verdict: "The Uncle, The PAC, and the Amendment Pattern",
     tags: ["Family Network", "PAC Money Flow", "Amendment Rate"],
     stamp: "Active",
-    href: "hd7-mittendorf-wilcox.html"
+    href: "hd7-mittendorf-wilcox.html",
+    dateUpdated: "2026-10-02"
   },
   {
     id: "joseph-kerry",
@@ -346,10 +391,10 @@ const CANDIDATES = [
     caseNumber: "CASE 00",
     names: "Kerry vs. Weaver",
     verdict: "The Path Forward Utah Network",
-    tags: ["Kerry Withdrew", "COI Omissions", "USBE"],
+    tags: ["Kerry Resigned, Not Running", "COI Omissions", "USBE"],
     stamp: "Active",
     href: "joseph-kerry.html",
-    dateUpdated: "2026-09-30"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "davis-county-lee-millburn",
@@ -480,7 +525,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "sd5-koford-hernandez.html",
     datePosted: "2026-09-10",
-    dateUpdated: "2026-09-10"
+    dateUpdated: "2026-10-02"
   },
   {
     id: "wasatch-seat-c-rowland-folmer",

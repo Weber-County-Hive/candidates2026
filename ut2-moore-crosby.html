@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UT-2: Moore vs. Crosby | Utah Hive Politics</title>
+<meta name="description" content="Utah 2nd Congressional District, 2026. Rep. Blake Moore (R) vs. Peter Crosby (D). Where the campaign money comes from and goes, outside spending, Moore's financial disclosure, his accomplishments checked against the laws, earmarks, connections and grades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-paper:#f4f0e6;
+    --color-paper-deep:#e9ece4;
+    --color-ink:#1f2a2a;
+    --color-ink-soft:#4f5b58;
+    --color-link:#1d6b57;
+    --color-stat:#d9a441;
+    --color-blue:#1f4e6b;
+    --color-blue-deep:#12304a;
+    --color-line:#d3d6cb;
+    --color-card:#fbf9f3;
+    --color-good:#3f7a5c;
+    --color-flag:#a5301e;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.6;font-size:17px;}
+  h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif;font-weight:700;margin:0 0 .4em;color:var(--color-blue-deep);}
+  .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:.74rem;letter-spacing:.06em;color:var(--color-ink-soft);}
+  a{color:var(--color-link);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+
+  header.band{background:linear-gradient(160deg,#1f5e6b 0%,var(--color-blue) 45%,var(--color-blue-deep) 100%);color:#eef4f2;padding:20px 0;}
+  header.band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .brandmark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#eef4f2;text-decoration:none;}
+  nav.topnav a{color:#d7e6e2;text-decoration:none;margin-left:18px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;}
+
+  .hero{padding:48px 0 36px;border-bottom:1px solid var(--color-line);}
+  .hero h1{font-size:2.4rem;line-height:1.15;max-width:780px;margin-top:12px;}
+  .hero .dek{font-size:1.1rem;color:var(--color-ink-soft);max-width:680px;margin-top:12px;}
+  .updated{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--color-ink-soft);margin-top:10px;}
+  .hero-meta{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap;}
+  .hero-meta .stat-num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-stat);}
+  .hero-meta .stat-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);max-width:180px;}
+
+  .jumpnav{background:var(--color-paper-deep);border-bottom:1px solid var(--color-line);padding:12px 0;position:sticky;top:0;z-index:5;}
+  .jumpnav .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .jumpnav a{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--color-ink);text-decoration:none;}
+  .jumpnav a:hover{color:var(--color-link);text-decoration:underline;}
+  @media (max-width:680px){.jumpnav{position:static;}}
+
+  section{padding:42px 0;border-bottom:1px solid var(--color-line);}
+  section[id]{scroll-margin-top:60px;}
+  section h2{font-size:1.65rem;margin-bottom:8px;}
+  .section-dek{color:var(--color-ink-soft);max-width:700px;margin-bottom:22px;}
+  .plain{background:#eef6f2;border-left:4px solid var(--color-link);padding:12px 16px;margin:0 0 18px;font-size:1rem;}
+  .plain b{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;color:var(--color-link);margin-right:8px;}
+  .start-here{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-stat);padding:18px 22px;}
+  .start-here ol{margin:6px 0 0;padding-left:20px;}
+  .start-here li{margin-bottom:9px;}
+
+  .tl{position:relative;margin:18px 0 8px;padding-left:26px;border-left:4px solid var(--color-blue);}
+  .tl-item{position:relative;margin:0 0 18px;}
+  .tl-item:before{content:"";position:absolute;left:-36px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--color-stat);border:3px solid var(--color-blue-deep);}
+  .tl-yr{font-family:'IBM Plex Mono',monospace;font-size:1.05rem;font-weight:700;color:var(--color-blue-deep);}
+  .tl-item p{margin:.2em 0;font-size:1.02rem;}
+  .unv{border-left:5px solid var(--color-stat);}
+  .record-card{background:var(--color-card);border:1px solid var(--color-line);padding:20px 22px;margin:16px 0;}
+  .record-card h3{font-size:1.15rem;}
+  .record-card p{margin:.55em 0;}
+  .flag{background:#fbf3e6;border:1px dashed var(--color-stat);padding:14px 18px;margin:16px 0;font-size:.98rem;}
+  .quote-block{border-left:3px solid var(--color-stat);padding:4px 0 4px 16px;font-style:italic;color:var(--color-ink-soft);margin:12px 0;}
+  .rc-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-link);border:1px solid var(--color-link);padding:3px 9px;border-radius:20px;margin:2px 6px 2px 0;}
+  .rc-flag{border-color:var(--color-flag);color:var(--color-flag);}
+
+  .table-scroll{overflow-x:auto;}
+  .entity-table{width:100%;border-collapse:collapse;font-size:.93rem;}
+  .entity-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:8px 10px;background:var(--color-paper-deep);}
+  .entity-table td{padding:9px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .entity-table td.num{font-family:'IBM Plex Mono',monospace;font-size:.85rem;white-space:nowrap;text-align:right;}
+
+  .fund-bar-row{margin-bottom:11px;}
+  .fund-bar-row .bar-label{display:flex;justify-content:space-between;gap:12px;font-size:.92rem;margin-bottom:4px;}
+  .fund-bar-track{background:#e3e6dc;border-radius:3px;height:10px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);}
+  .fund-bar-fill.alt{background:var(--color-blue);}
+
+  .chart-card{background:var(--color-card);border:1px solid var(--color-line);padding:16px 18px;margin:20px 0;}
+  .chart-card h3{font-size:1.05rem;}
+  .chart-card .cap{font-size:.88rem;color:var(--color-ink-soft);margin:0 0 10px;}
+  .chart-box{position:relative;height:300px;}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media (max-width:760px){.two{grid-template-columns:1fr;}}
+
+  .mermaid-wrap{background:var(--color-card);border:1px solid var(--color-line);padding:16px;margin:22px 0;overflow-x:auto;}
+  .mermaid-wrap .cap{font-size:.9rem;color:var(--color-ink-soft);margin:10px 0 0;}
+  .mermaid{text-align:center;}
+
+  .map-card{border:1px solid var(--color-line);background:var(--color-card);padding:14px;margin:18px 0;}
+  .map-card svg{width:100%;height:auto;display:block;max-width:760px;margin:0 auto;}
+  .map-card .cap{font-size:.88rem;color:var(--color-ink-soft);margin-top:8px;}
+
+  .flip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0;}
+  @media (max-width:900px){.flip-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.flip-grid{grid-template-columns:1fr;}}
+  .flip{perspective:900px;background:none;border:0;padding:0;cursor:pointer;text-align:left;font:inherit;color:inherit;min-height:230px;}
+  .flip-inner{position:relative;width:100%;height:100%;min-height:230px;transition:transform .5s;transform-style:preserve-3d;}
+  .flip.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:18px 20px;display:flex;flex-direction:column;justify-content:center;}
+  .flip-front{text-align:center;}
+  .flip-front .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.6rem;color:var(--color-link);}
+  .flip-front .label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);margin-top:6px;}
+  .flip-front .hint{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--color-ink-soft);margin-top:10px;opacity:.75;}
+  .flip-back{transform:rotateY(180deg);background:var(--color-blue-deep);color:#eef4f2;border-color:var(--color-blue-deep);font-size:.92rem;line-height:1.5;overflow:auto;}
+
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--color-line);background:var(--color-card);}
+  .vs-grid > div{padding:14px 18px;border-bottom:1px solid var(--color-line);}
+  .vs-grid > div:nth-child(odd){border-right:1px solid var(--color-line);}
+  .vs-head{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  @media (max-width:760px){.vs-grid{grid-template-columns:1fr;} .vs-grid > div:nth-child(odd){border-right:none;}}
+
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media (max-width:760px){.conn-grid{grid-template-columns:1fr;}}
+  .conn-card{background:var(--color-card);border:1px solid var(--color-line);border-top:4px solid var(--color-link);padding:16px 18px;}
+  .conn-card.gold{border-top-color:var(--color-stat);}
+  .conn-card.unres{border-top-color:#9a8a4e;border-top-style:dashed;}
+  .conn-card .case{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);}
+  .conn-card h4{font-size:1.05rem;margin:4px 0 6px;}
+  .conn-card p{margin:.4em 0;font-size:.95rem;}
+
+  details.ledger{background:var(--color-card);border:1px solid var(--color-line);padding:12px 16px;margin:12px 0;}
+  details.ledger summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--color-blue);font-weight:600;}
+  details.ledger .table-scroll{max-height:460px;overflow:auto;margin-top:10px;}
+
+  .rubric-table{width:100%;border-collapse:collapse;font-size:.94rem;background:var(--color-card);border:1px solid var(--color-line);}
+  .rubric-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:9px 10px;background:var(--color-paper-deep);}
+  .rubric-table td{padding:11px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .rubric-table td:first-child{font-weight:600;width:170px;}
+  @media (max-width:680px){.rubric-table td:first-child{width:auto;}}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:#fff;border-radius:3px;padding:1px 6px;margin-right:6px;}
+  .g-a{background:#3f7a5c;} .g-b{background:#5c8a6a;} .g-c{background:var(--color-stat);} .g-d{background:#b5652f;} .g-f{background:var(--color-flag);} .g-na{background:#8d948f;font-size:.78rem;} .g-p{background:var(--color-blue);font-size:.72rem;}
+  .topic-head{font-family:'Playfair Display',serif;font-size:1.18rem;margin:26px 0 8px;color:var(--color-blue-deep);}
+  .better{margin:10px 0 4px;padding:10px 14px;border-left:4px solid var(--color-link);background:rgba(0,0,0,.03);font-size:.96rem;}
+  .summary-grid{width:100%;border-collapse:collapse;background:var(--color-card);border:1px solid var(--color-line);font-size:.93rem;}
+  .summary-grid th,.summary-grid td{padding:9px 8px;border-bottom:1px solid var(--color-line);text-align:center;}
+  .summary-grid th{font-family:'IBM Plex Mono',monospace;font-size:.66rem;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  .summary-grid td:first-child,.summary-grid th:first-child{text-align:left;}
+
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:var(--color-blue);font-weight:600;}
+  details.sources ol{font-size:.92rem;color:var(--color-ink-soft);padding-left:22px;}
+  details.sources li{margin-bottom:7px;}
+  footer{padding:36px 0 50px;text-align:center;color:var(--color-ink-soft);font-size:.88rem;}
+  .lmap{height:520px;border:2px solid var(--color-stat);border-radius:2px;background:#d8d4c8;}
+  @media (max-width:600px){.lmap{height:400px;}}
+  .county-label{background:none;border:none;}
+  .county-label span{display:block;transform:translate(-50%,-50%);font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#14213D;white-space:nowrap;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff;pointer-events:none;}
+  .city-label{background:none;border:none;}
+  .city-label.key span{font-weight:700;font-size:14px;color:#14213D;}
+  .city-label span{display:block;transform:translate(-50%,-50%);font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4a2f55;white-space:nowrap;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff;pointer-events:none;}
+  .dlabel{background:none;border:none;}
+  .dlabel span{display:block;transform:translate(-50%,-50%);font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:700;color:#fff;background:rgba(18,48,74,.88);padding:2px 7px;border-radius:3px;white-space:nowrap;pointer-events:none;}
+  .map-card .lmap svg{width:auto;height:auto;max-width:none;display:inline;margin:0;}
+  .map-key{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;margin:10px 0 0;}
+  .map-key i{display:inline-block;width:22px;height:12px;vertical-align:middle;margin-right:6px;border:2px solid;}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://weber-county-hive.github.io/utah-maps/utah-geo.js"></script>
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+
+<header class="band"><div class="wrap">
+  <a class="brandmark" href="index.html">The Weber County Hive — Candidates 2026</a>
+  <nav class="topnav"><a href="index.html">Docket</a><a href="weber-2026-voter-guide.html">Weber voter guide</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">CASE 35 · U.S. HOUSE, UTAH'S 2ND DISTRICT (BOX ELDER, CACHE, RICH, DAVIS AND MUCH OF WEBER) · GENERAL ELECTION NOV. 3, 2026</div>
+  <h1>$2.5 Million, Mostly From PACs, vs. $60,000 From People</h1>
+  <p class="dek">Rep. Blake Moore (R) has represented northern Utah since 2021 and serves in House Republican leadership. Democrat Peter Crosby of Cache Valley is a first-time candidate. This page follows both campaigns' money, checks Moore's list of accomplishments against the laws themselves, reads his financial disclosure, and grades what the record shows.</p>
+  <p class="updated">Updated Oct. 2, 2026. Federal reports run through June 30, 2026; the next reports (through Sept. 30) are due Oct. 15.</p>
+  <div class="hero-meta">
+    <div><div class="stat-num">$2,565,317</div><div class="stat-label">MOORE RAISED, CYCLE TO DATE (HIS JULY REPORT)</div></div>
+    <div><div class="stat-num">58.5%</div><div class="stat-label">OF MOORE'S CONTRIBUTIONS FROM PACS AND OTHER COMMITTEES</div></div>
+    <div><div class="stat-num">$60,225</div><div class="stat-label">CROSBY RAISED, ALL FROM INDIVIDUALS AND HIMSELF</div></div>
+    <div><div class="stat-num">$150,318</div><div class="stat-label">MOORE'S CAMPAIGN PAID ELECTION HIVE, 2025–26</div></div>
+  </div>
+</div></div>
+
+<nav class="jumpnav" aria-label="Sections"><div class="wrap">
+  <a href="#start">Start here</a><a href="#district">The district</a><a href="#words">Words</a><a href="#moore-money">Moore's money</a><a href="#flow">Where it goes</a><a href="#crosby-money">Crosby's money</a><a href="#outside">Outside money</a><a href="#disclosure">Disclosure</a><a href="#record">Moore's record</a><a href="#earmarks">Earmarks</a><a href="#stands">Own words</a><a href="#connections">Connections</a><a href="#compete">Can they compete?</a><a href="#rubric">Grades</a><a href="#ask">Who to ask</a><a href="#limits">Limits</a><a href="#sources">Sources</a>
+</div></nav>
+
+<section id="start"><div class="wrap">
+  <div class="eyebrow">START HERE</div>
+  <h2>Eight Things the Records Show</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>The incumbent has about 42 times more money than his challenger, and most of it comes from political committees, not people. Most of his accomplishments check out, but one is listed under the wrong year, and several were other members' bills that he cosponsored.</p>
+  <div class="start-here"><ol>
+    <li><strong>Most of Moore's money comes from committees.</strong> His July report shows $1,426,000 from PACs and other political committees and $1,011,572.23 from individuals since the 2024 election: 58.5% committees, 41.5% people. He has not put in any of his own money.</li>
+    <li><strong>Crosby's money comes from people.</strong> He reports $60,224.97, all from individuals except $175.48 of his own. No PAC money, no loans.</li>
+    <li><strong>Election Hive was paid $150,318.11.</strong> Moore's campaign made 14 payments to Election Hive for consulting from February 2025 to May 2026, $69,777.83 of it on May 6, 2026, seven weeks before the primary. Election Hive is the Salt Lake firm the Hive has followed through state campaigns, including Katrina Gibson's in Weber County.</li>
+    <li><strong>Two more names from other Hive files.</strong> Moore's campaign paid Gathering Inc. of Ogden $164,090 for polling and canvassing, and Irish Elk LLC of Layton $86,281.50 for fundraising consulting. Both appear in the Hive's state-level files.</li>
+    <li><strong>One accomplishment is listed under the wrong year.</strong> His website credits his Chinese circuit-board provisions to the 2024 defense bill. His own 2021 press release, the law and a 2026 federal rule all place them in the 2022 defense bill.</li>
+    <li><strong>Several "laws" were other members' bills.</strong> The Great Salt Lake saline-lakes act, the cybercrime metrics act and the Medal of Honor monument became law as bills sponsored by others. Moore sponsored the House version or cosponsored. His page lists them as signed into law without saying so.</li>
+    <li><strong>The lake program was authorized, not funded.</strong> The saline-lakes law allows $5 million a year for 2022 through 2027. The Hive found no spending bill that provided money for that program.</li>
+    <li><strong>His family's money is mostly in real estate.</strong> His 2025 disclosure lists a blind trust ($1–5 million), a Washington rental property ($1–5 million), and his wife's stakes in Boyer family partnerships, each over $1 million, including one tied to The Boyer Company, a commercial developer.</li>
+  </ol></div>
+</div></section>
+
+<section id="district"><div class="wrap">
+  <div class="eyebrow">THE DISTRICT</div>
+  <h2>A New Map, Five Counties</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Utah's congressional map was redrawn under court order, so this district is new. Moore used to represent the 1st District. Weber County is split between the 2nd and 3rd districts, so check your sample ballot.</p>
+  <div class="map-card">
+    <div id="ut2map" class="lmap" role="img" aria-label="Map of the counties in Utah's 2nd Congressional District"></div>
+    <div class="map-key"><span><i style="background:rgba(18,48,74,.30);border-color:#12304a"></i>In the 2nd District</span><span><i style="background:rgba(217,164,65,.35);border-color:#a9822f;border-style:dashed"></i>Weber: split between the 2nd and 3rd</span><span><i style="background:none;border-color:#A9822F"></i>State line</span></div
+    <p class="cap">County and state lines from the Hive's <a href="https://weber-county-hive.github.io/utah-maps/">Utah Maps</a> boundary file (U.S. Census Bureau). The congressional lines themselves are not drawn: Utah's map was redrawn under a 2026 court order, and the Hive's map files don't include the new lines yet. County list from the Daily Utah Chronicle (June 25, 2026) and Box Elder County's 2026 election notice; Weber County's 2026 ballot lists both the 2nd and 3rd districts. Your sample ballot at vote.utah.gov shows which one you vote in. Drag or zoom the map to see town names.</p>
+  </div>
+  <p><strong>Who Moore is.</strong> Born in Ogden in 1980. University of Utah (behavioral science and health) and Northwestern (public policy). He worked in the U.S. Foreign Service and was a principal at Cicero Group, a Salt Lake consulting firm. Before running, he co-chaired Better Boundaries, the group behind Utah's 2018 independent redistricting initiative (Proposition 4). Elected in 2020. He sits on Ways and Means and was elected House Republican Conference Vice Chair on Nov. 8, 2023, and again Nov. 13, 2024 (Roll Call; Deseret News).</p>
+  <p><strong>How he got here this year.</strong> Rep. Karianne Lisonbee won the Republican convention, 61.5% to 33.7% (Ballotpedia). Moore won the June 23 primary, 58.3% to 41.7% (Deseret News, AP count).</p>
+  <p><strong>Who Crosby is.</strong> Lives in Cache Valley, where he has lived 19 years, with his wife and three daughters. Bachelor's and master's in political science from Utah State; an adjunct at USU's Center for Anticipatory Intelligence; earlier, operations and analytics work in a large company (his campaign site; UPR). He sent the Hive a statement, printed whole: <a href="crosby-statement-ut2.html">In His Own Words</a>.</p>
+  <p><strong>Also on the ballot:</strong> Daniel Cottam (Libertarian), Carlton E. Bowen (Independent American) and Robert M. Moesinger (unaffiliated). Moesinger reports $8,805.75 raised and $5,401.76 in cash. Cottam's and Bowen's FEC pages show no money reports for 2025–26.</p>
+  <p><strong>Dates.</strong> The Utah Debate Commission's 2nd District debate is <strong>Tuesday, Oct. 13</strong>, the day ballots mail (per Crosby's campaign releases; check utahdebatecommission.org).</p>
+</div></section>
+
+<section id="words"><div class="wrap">
+  <div class="eyebrow">QUICK RECAP</div>
+  <h2>Words Used on This Page</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Tap any card to see what the word means.</p>
+  <div class="flip-grid">
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">PAC</div><div class="label">POLITICAL ACTION COMMITTEE</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>A committee that pools money, often from a company's or trade group's employees or members, and gives it to candidates. Federal PACs can give a House candidate $5,000 per election.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">Leadership PAC</div><div class="label">A MEMBER'S SECOND COMMITTEE</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>A PAC sponsored by a member of Congress that gives to other candidates and the party. Moore's is Expect More Leadership PAC.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">Joint fundraising</div><div class="label">ONE CHECK, SPLIT LATER</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>A committee that raises money once and divides it among several committees. Its shares show up on the campaign report as "transfers."</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">Super PAC</div><div class="label">OUTSIDE SPENDING</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>A committee that can raise unlimited money and run ads for or against a candidate, as long as it doesn't coordinate with the campaign. Its ads are reported as "independent expenditures."</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">Authorized vs. funded</div><div class="label">PERMISSION ISN'T MONEY</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>A law can "authorize" spending up to an amount. The money only exists when a separate spending bill provides it.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">Earmark</div><div class="label">COMMUNITY PROJECT FUNDING</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>Money a member asks Congress to set aside for a named local project. Members must post their requests; the final spending bill decides what is funded.</div></div></div></button>
+  </div>
+</div></section>
+
+<section id="moore-money"><div class="wrap">
+  <div class="eyebrow">MOORE'S MONEY IN</div>
+  <h2>$1.43 Million From Committees, $1.01 Million From People</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Most of Moore's money comes from company, trade-group and member PACs. He also has a second committee of his own that gives to the national party.</p>
+  <p class="section-dek">From his July Quarterly report, FEC-1995405 (filed July 15, 2026, covering June 4 to June 30), Column B, "election cycle to date." Shauna read the report's summary page directly on fec.gov. FEC's website shows totals about $29,000 lower ($2,536,636.22 raised) for Jan. 1, 2025 to June 30, 2026; the report's own cycle column appears to begin after the November 2024 election.</p>
+  <div class="two">
+    <div class="chart-card"><h3>Where his receipts came from</h3><p class="cap">Total receipts, cycle to date: $2,565,317.31</p><div class="chart-box"><canvas id="mooreDonut"></canvas></div></div>
+    <div class="chart-card"><h3>Raised and cash on hand, June 30, 2026</h3><p class="cap">From fec.gov's two-year totals, the same source for each candidate</p><div class="chart-box"><canvas id="compareChart"></canvas></div></div>
+  </div>
+  <div class="flip-grid">
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$1,886,961.70</div><div class="label">MOORE'S CASH ON JUNE 30</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>He started June with $1,949,408.27, raised $250,143.93 and spent $312,590.50. No debts. His reports show no money of his own.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$552,000.37</div><div class="label">THROUGH WINRED</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>WinRed is the Republican online-donation platform. The aggregate printed on his May 20 entry is money passed through from individual online donors, not one donor's gift.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$161,000</div><div class="label">TO THE NATIONAL PARTY</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>His campaign gave the National Republican Congressional Committee $65,000 (Dec. 18, 2025) and $96,000 (Jan. 26, 2026). His leadership PAC gave it $99,000 more on Jan. 26.</div></div></div></button>
+  </div>
+  <div class="record-card">
+    <h3>PAC and committee givers on the 2026 reports read</h3>
+    <p>From the PAC pages (line 11C) of his first-quarter, pre-primary (amended) and July reports. The 2025 pages were not all readable, so this is a sample of the cycle, not a top-20 list.</p>
+    <div class="fund-bar-row"><div class="bar-label"><span>$15,000: TTM Technologies PAC; Nucor Corp. PAC</span><span>$30,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:30%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>$12,500: American Sportfishing Association PAC</span><span>$12,500</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:13%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>$10,000 each, banks and accounting: UBS Americas, Fidelity (FMR), American Bankers Assn., PwC, Ernst &amp; Young, American Institute of CPAs</span><span>$60,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:60%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>$10,000 each, health care: Medtronic, Cambia, Molina, Fresenius, Abbott, two physicians' groups</span><span>$70,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:70%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>$10,000 each, building and housing: National Assn. of Realtors, National Multifamily Housing Council, CRH Americas, National Stone, Sand &amp; Gravel, National Ready Mixed Concrete</span><span>$50,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:50%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>$10,000 each, defense and energy: BAE Systems, Honeywell, PacifiCorp, National Rural Electric Cooperative Assn.</span><span>$40,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill alt" style="width:40%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Other Utah companies: Management &amp; Training Corp. $10,000; EnergySolutions $7,000; Snap Finance $5,000; Utah Medical PAC $3,500; PROG Holdings $3,000; USANA $2,500; Rio Tinto $2,000</span><span>$33,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill alt" style="width:33%"></div></div></div>
+    <div class="fund-bar-row"><div class="bar-label"><span>Other members' committees: Eye of the Tiger PAC, Emmer PAC $5,000 each; Jordan, Smith, Arrington, "Rudy for Indiana" $4,000 each; Emmer for Congress, Scalise $2,000 each</span><span>$30,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill alt" style="width:30%"></div></div></div>
+    <p style="font-size:.9rem;color:var(--color-ink-soft);">Also on line 11C: AIPAC, with an aggregate of $38,058.99 printed on its May 21 entry. How that aggregate is made up was not confirmed. A full list of $10,000 givers is in the sources.</p>
+  </div>
+  <div class="record-card">
+    <h3>His second and third committees</h3>
+    <p><strong>Expect More Leadership PAC</strong> (C00757922) lists Moore as its sponsor and has the same treasurer. Through Aug. 31, 2026: $320,821.22 in ($191,000 from PACs, $76,750 from individuals), $299,716.18 out, including $166,500 to other committees. The gifts read went to the national party and to Dan Crenshaw for Congress ($1,000); no Utah recipients were found in the months read.</p>
+    <p><strong>Team Moore Joint Fundraising Committee</strong> (C00757930): $182,585.53 raised, $162,613.47 passed on to the committees it raises for. <strong>218 Committee</strong> (C00930149), a joint fundraising committee registered Dec. 10, 2025: $290,000 raised, all from individuals; its other members were not confirmed.</p>
+  </div>
+</div></section>
+
+<section id="flow"><div class="wrap">
+  <div class="eyebrow">WHERE MOORE'S MONEY GOES</div>
+  <h2>Ads, Fundraisers, Canvassers and a Familiar Consultant</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>The biggest checks went to an Ohio ad buyer, fundraising consultants, a canvassing firm in Ogden and Election Hive. Two of those names show up in the Hive's state and county files.</p>
+  <div class="chart-card"><h3>Largest payees, 2025–26</h3><p class="cap">Sums of the itemized payments read (rows of $1,000 or more). Not every report page was readable.</p><div class="chart-box" style="height:440px;"><canvas id="vendorChart"></canvas></div></div>
+  <div class="mermaid-wrap">
+<pre class="mermaid">
+flowchart LR
+  IND["People<br/>$1,011,572"] --> BM(["BLAKE MOORE<br/>FOR CONGRESS"])
+  PAC["PACs and<br/>committees<br/>$1,426,000"] --> BM
+  JFC["Joint fundraising<br/>transfers<br/>$125,745"] --> BM
+  BM -->|"$499,746"| SMP["Strategic Media<br/>Placement (ads)"]
+  BM -->|"$259,777"| KB["KB Strategic Group<br/>(fundraising)"]
+  BM -->|"$164,090"| GI["Gathering Inc.<br/>Ogden"]
+  BM -->|"$161,000"| NRCC["National Republican<br/>Congressional Committee"]
+  BM -->|"$150,318"| EH["Election Hive<br/>Salt Lake City"]
+  BM -->|"$86,282"| IE["Irish Elk LLC<br/>Layton"]
+  LP["Expect More<br/>Leadership PAC"] -->|"$99,000"| NRCC
+</pre>
+    <p class="cap">Dollar amounts from his FEC reports; payee sums cover the pages read. The leadership PAC gift is net of a $6,000 void.</p>
+  </div>
+  <div class="record-card">
+    <h3>The Election Hive payments</h3>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Date</th><th>Purpose on the report</th><th>Amount</th></tr>
+      <tr><td>2/5/2025</td><td>General Campaign Consulting</td><td class="num">$5,976.65</td></tr>
+      <tr><td>7/11/2025</td><td>General Campaign Consulting (3 payments)</td><td class="num">$4,641.02</td></tr>
+      <tr><td>9/3/2025</td><td>General Campaign Consulting</td><td class="num">$6,162.30</td></tr>
+      <tr><td>10/21/2025</td><td>Strategic campaign consulting</td><td class="num">$15,000.00</td></tr>
+      <tr><td>11/14/2025</td><td>Strategic campaign consulting</td><td class="num">$8,000.00</td></tr>
+      <tr><td>11/20/2025, 12/11/2025, 2/20/2026</td><td>Strategic campaign consulting ($7,988.03 each)</td><td class="num">$23,964.09</td></tr>
+      <tr><td>4/22/2026</td><td>Strategic Campaign Consulting</td><td class="num">$16,796.22</td></tr>
+      <tr><td>5/6/2026</td><td>Strategic Campaign Consulting (3 payments: $25,963.80, $23,814.03, $20,000)</td><td class="num">$69,777.83</td></tr>
+      <tr><td colspan="2"><strong>Total, 14 payments</strong></td><td class="num"><strong>$150,318.11</strong></td></tr>
+    </table></div>
+    <p>The reports name only "Election Hive." Utah business records list Matthew Lusty as its manager and registered agent. Election Hive's own website names Moore among its clients. No Election Hive payment appears on the June 4–30 report.</p>
+  </div>
+  <div class="record-card">
+    <h3>Gifts out to Utah campaigns and causes</h3>
+    <p>Celeste for Congress $6,000; Mike Kennedy for Utah $6,000; Elect John Adams for County Commission $5,000 (Jan. 15, 2026); Committee to Elect Bob Stevenson $2,500 (May 1, 2026); Elect Kara Toone $1,000 (June 2, 2026); Davis County GOP $3,000; Weber County GOP $2,125; Major Brent Taylor Foundation $1,500; Wolf Creek Foundation (Eden) $1,250.</p>
+  </div>
+</div></section>
+
+<section id="crosby-money"><div class="wrap">
+  <div class="eyebrow">CROSBY'S MONEY</div>
+  <h2>$60,224.97, No PACs</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Crosby's campaign runs on donations from individuals, more than a third of it in gifts too small to list by name.</p>
+  <div class="two">
+    <div class="chart-card"><h3>Where Crosby's receipts came from</h3><p class="cap">Aug. 1, 2025 to June 30, 2026 (fec.gov)</p><div class="chart-box"><canvas id="crosbyDonut"></canvas></div></div>
+    <div class="record-card" style="margin-top:20px;">
+      <h3>The numbers</h3>
+      <p>Raised $60,224.97: $37,119.00 itemized from individuals, $22,930.49 in small unitemized gifts, $175.48 his own. Spent $31,698.28. Cash on June 30: $23,283.12. No debts, no loans, no PAC money.</p>
+      <p>In his last period (June 4–30) he reported 22 itemized gifts totaling $13,890, nearly all from Utah. The largest: Robert Steiner of Alsco Inc. $5,000 (total $7,000), Jeremy A. Thompson $3,500 and Clive Walker $2,000 (total $3,250).</p>
+      <p style="font-size:.9rem;color:var(--color-ink-soft);">His July report's own cycle column shows $50,891.49 raised and $27,608.37 spent, lower than fec.gov's figures. The Hive has not resolved the difference.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="outside"><div class="wrap">
+  <div class="eyebrow">OUTSIDE MONEY</div>
+  <h2>Two Super PACs in the Primary</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Groups that aren't the campaigns spent more than $600,000 on ads in June. One attacked Moore; the other backed him and attacked his opponent.</p>
+  <div class="record-card">
+    <p><strong>Defending Conservative Values PAC</strong> (C00950097, Hudson, Wis., registered May 9, 2026) reported $485,213.07 in independent expenditures from May 29 to June 20, all paid to Conservative Action Group of Casper, Wyo., for digital and web ads about Moore. The Deseret News described its ads as opposing Moore: they "depict Moore as a man in a suit with a rubber stamp for a head."</p>
+    <p><strong>Defending Utah Values Federal Super PAC</strong> (C00950865, Cottonwood Heights, registered May 15, 2026) reported $130,735.51 in June, about $64,700 of it in the 2nd District race (rows naming Lisonbee $47,554.41; rows naming Moore $17,181.10) and $66,000 in the 3rd District. The Deseret News reported it was "run by Owen Fuller, a close ally of Utah Gov. Spencer Cox," spent "$29,500 against Lisonbee and is supporting Moore." <strong>Its vendor for the $66,000 in 3rd District ad buys was Election Hive</strong> (June 30, 2026).</p>
+    <p style="font-size:.9rem;color:var(--color-ink-soft);">Support/oppose labels come from the Deseret News (June 16, 2026). The FEC rows were read through a text reader that labeled every row "support," which conflicts with the news account, so the labels on the FEC pages have not been confirmed. No outside spending is reported yet for the general election.</p>
+  </div>
+</div></section>
+
+<section id="disclosure"><div class="wrap">
+  <div class="eyebrow">FINANCIAL DISCLOSURE</div>
+  <h2>A Blind Trust, a Rental, and a Family Partnership</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Members of Congress file a yearly report of what they own, owe and earn. The values are ranges, not exact amounts.</p>
+  <div class="record-card">
+    <h3>Moore's 2025 report (filed Aug. 7, 2026)</h3>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Holding</th><th>Owner</th><th>Value range</th><th>Income</th></tr>
+      <tr><td>Blake D. Moore Blind Trust</td><td>Moore</td><td>$1,000,001–$5,000,000</td><td>—</td></tr>
+      <tr><td>Residential rental property, Washington, D.C.</td><td>Moore</td><td>$1,000,001–$5,000,000</td><td>Rent $15,001–$50,000</td></tr>
+      <tr><td>Hawkins Development (commercial development; Vasa Fitness locations in Nebraska and Colorado)</td><td>Moore</td><td>$100,001–$250,000</td><td>$15,001–$50,000</td></tr>
+      <tr><td>Wells Fargo savings; Zions Bank checking</td><td>Moore</td><td>$250,001–$500,000; $100,001–$250,000</td><td>—</td></tr>
+      <tr><td>Blue Crimson LLC ("real estate property investment firm")</td><td>Moore</td><td>$15,001–$50,000</td><td>—</td></tr>
+      <tr><td>H. Roger Boyer Family Partnership / R&amp;S Boyer</td><td>Spouse</td><td>Over $1,000,000</td><td>$100,001–$1,000,000</td></tr>
+      <tr><td>H. Roger Boyer Family Partnership / Boyer Company ("commercial real estate development and management")</td><td>Spouse</td><td>Over $1,000,000</td><td>Over $1,000,000</td></tr>
+    </table></div>
+    <p>Also listed: an IRA holding two index funds, four Utah college-savings (my529) accounts, a U.S. Bank mortgage ($500,001–$1,000,000) and a car loan. Positions: unpaid board seats with Raise the Future and the Utah Sports Commission. Gifts, travel and agreements: "None disclosed."</p>
+    <p style="font-size:.9rem;color:var(--color-ink-soft);">The annual report is due May 15; the House allows extensions. Whether an extension was granted for this report was not checked, so its timeliness isn't graded.</p>
+  </div>
+  <div class="record-card">
+    <h3>The 2021 stock-trade reports</h3>
+    <p>Members must report most stock trades within 45 days. On July 29, 2021, the Campaign Legal Center filed a complaint with the Office of Congressional Ethics saying "Rep. Moore failed to properly disclose 70 separate stock and stock-option trades together worth at least $70,000 and as much as $1.1 million." The Salt Lake Tribune (July 26, 2021) reported that one report filed July 17, 2021 covered trades back to February, that his office tied the delay to a 401(k) transfer to Iron Gate Global Advisors, and that he "paid a late filing fee in full." No House Ethics finding was found. His later trade reports (August 2021 to February 2022) list trades in Bank of America, Berkshire Hathaway, Boeing, Disney, Apple, Wynn Resorts and options on Nvidia and Wynn. His 2025 report lists his holdings in a blind trust.</p>
+  </div>
+  <div class="record-card">
+    <h3>Crosby</h3>
+    <p>House candidates also file a financial disclosure. The Hive has not read Crosby's, so it isn't graded.</p>
+  </div>
+</div></section>
+
+<section id="record"><div class="wrap">
+  <div class="eyebrow">MOORE'S RECORD</div>
+  <h2>His Accomplishments List, Checked Against the Laws</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Most of what Moore lists did become law. A few were other members' bills he helped with, one is under the wrong year, and the Great Salt Lake program was allowed but not given money.</p>
+  <div class="table-scroll"><table class="entity-table">
+    <tr><th>What his page lists</th><th>His role</th><th>What the record shows</th></tr>
+    <tr><td>"Trump Accounts" for children (Money Accounts for Growth and Advancement Act, H.R. 3407)</td><td>Sponsor</td><td>Became law in the One Big Beautiful Bill Act, P.L. 119-21, July 4, 2025 (Sec. 70204).</td></tr>
+    <tr><td>Charitable deduction for people who don't itemize</td><td>Named in his release</td><td>Became law in P.L. 119-21 (Sec. 70424) at $1,000 ($2,000 joint) starting in 2026, larger than the $150/$300 House version he announced.</td></tr>
+    <tr><td>Tax exemption for troops in the Sinai and "Sahel"</td><td>Named in his release</td><td>P.L. 119-21, Sec. 70118. The law says the Sinai and "additional areas"; "Sahel" is his word.</td></tr>
+    <tr><td>Small-business expensing cap from $1M to $2.5M</td><td>Named in his release</td><td>P.L. 119-21, Sec. 70306.</td></tr>
+    <tr><td>Court Improvement Program Enhancement Act (H.R. 8460)</td><td>Sponsor</td><td>Carried in P.L. 118-258, Jan. 4, 2025 (Sec. 104).</td></tr>
+    <tr><td>Range Access Act (H.R. 1614)</td><td>Sponsor</td><td>Carried in the EXPLORE Act, P.L. 118-234, Jan. 4, 2025 (Sec. 123).</td></tr>
+    <tr><td>MAPLand Act (H.R. 3113), public-land access maps</td><td>Sponsor</td><td>P.L. 117-114, April 29, 2022.</td></tr>
+    <tr><td>Saline Lake Ecosystems in the Great Basin States Program Act</td><td>Sponsor of the House version (H.R. 5345)</td><td>The Senate bill, S. 1466, became P.L. 117-318 on Dec. 27, 2022. It authorizes "$5,000,000 for each of fiscal years 2022 through 2027." No appropriation for this program was found.</td></tr>
+    <tr><td>Better Cybercrime Metrics Act</td><td>Original cosponsor</td><td>S. 2629 became law May 5, 2022.</td></tr>
+    <tr><td>National Medal of Honor Monument Act</td><td>Cosponsor ("co-introduced," his release)</td><td>H.R. 1664 (sponsor Rep. Veasey), P.L. 117-80.</td></tr>
+    <tr><td>Chinese printed circuit boards, "FY2024 NDAA"</td><td>Sponsor (H.R. 6162)</td><td><strong>Wrong year on his page.</strong> His Dec. 8, 2021 release, the U.S. Code notes and a July 2, 2026 Federal Register rule place it in the FY2022 defense bill, Sec. 851, P.L. 117-81.</td></tr>
+    <tr><td>Hill AFB items, FY2025 defense bill</td><td>Per his releases</td><td>His release lists $28 million to finish the F-35/T-7A East Campus and $50 million for a future T-7A maintenance complex (P.L. 118-159). Not checked against the law's text.</td></tr>
+    <tr><td>Afghanistan Accountability Act (H.R. 5066)</td><td>Sponsor</td><td>Never left committee. His release says the House defense bill required an after-action report; that the language reached the final law was not confirmed.</td></tr>
+  </table></div>
+  <div class="record-card">
+    <h3>Recorded votes, 2025–2026</h3>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Bill</th><th>Date</th><th>Moore</th><th>Result</th></tr>
+      <tr><td>H.R. 1, One Big Beautiful Bill Act, House passage (roll call 145)</td><td>5/22/2025</td><td>Yes</td><td>Passed 215–214</td></tr>
+      <tr><td>H.R. 1, final passage of the Senate version (roll call 190)</td><td>7/3/2025</td><td>Yes</td><td>Passed 218–214; P.L. 119-21</td></tr>
+      <tr><td>H.R. 4, Rescissions Act (roll call 168)</td><td>6/12/2025</td><td>Yes</td><td>Passed 214–212; became law July 24, 2025</td></tr>
+      <tr><td>H.R. 1968, full-year FY2025 stopgap (roll call 70)</td><td>3/11/2025</td><td>Yes</td><td>Passed 217–213</td></tr>
+      <tr><td>H.R. 5371, FY2026 stopgap, final (roll call 285)</td><td>11/12/2025</td><td>Yes</td><td>Passed 222–209; ended the shutdown</td></tr>
+      <tr><td>H.R. 4405, Epstein Files Transparency Act (roll call 289)</td><td>11/18/2025</td><td>Yes</td><td>Passed 427–1</td></tr>
+      <tr><td>H.R. 7148, FY2026 spending package (roll call 53)</td><td>2/3/2026</td><td>Yes</td><td>Passed 217–214; P.L. 119-75</td></tr>
+    </table></div>
+    <p>Roll calls read on clerk.house.gov. These large bills have many parts and are not graded on this page. A proposal to sell federal land in Washington and Beaver counties was added to H.R. 1 in committee and removed before the May 22 House vote; no public statement by Moore on it was found.</p>
+  </div>
+  <div class="record-card">
+    <h3>The Great Salt Lake</h3>
+    <p>Besides the saline-lakes law, he backed $1 billion for the lake in the president's 2027 budget request at an April 2026 House Budget hearing, and the House's 2027 transportation and housing bill includes $4.5 million he requested for a Stansbury Bay project (Deseret News, June 19, 2026). That bill is not law. The $200 million he cited when signing the GSL2034 Charter in September 2025 is private pledges (Great Salt Lake Rising and Ducks Unlimited), not federal money.</p>
+  </div>
+</div></section>
+
+<section id="earmarks"><div class="wrap">
+  <div class="eyebrow">EARMARKS</div>
+  <h2>What He Asked For Near Weber County, and What Congress Gave</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Moore posts every local project request on his website. For 2026, Congress funded about one dollar for every nine he asked for in these six requests, mostly because the Hill Air Force Base request was cut from $59 million to $2.6 million. In 2025, Congress funded no earmarks at all.</p>
+  <div class="chart-card"><h3>Fiscal 2026: requested vs. enacted</h3><p class="cap">From his FY2026 Community Project Funding page. Hill AFB ($59 million requested, $2.6 million enacted) is left off the chart so the smaller projects are readable.</p><div class="chart-box" style="height:360px;"><canvas id="earmarkChart"></canvas></div></div>
+  <div class="record-card">
+    <p><strong>2023 (the Weber items on his accomplishments page):</strong> Weber State physician assistant program $1.5 million; Weber Housing Authority $1.5 million; Ogden River trail $2 million (of $4 million asked); Mantua Main Street $1,354,000; Hooper $624,000; Ogden-Hinckley Airport $0.</p>
+    <p><strong>2025:</strong> his Weber-area requests (Ogden police simulator, Pleasant View stormwater, Roy water line, Weber County storm drain) got nothing, because Congress passed a full-year stopgap instead of spending bills (National League of Cities).</p>
+    <p><strong>2027, pending:</strong> Ogden accessibility $5 million; Hooper wastewater $6 million; Weber Basin generator $1,914,813.58; Great Salt Lake Commissioner $6 million.</p>
+  </div>
+</div></section>
+
+<section id="stands"><div class="wrap">
+  <div class="eyebrow">WHERE THEY STAND</div>
+  <h2>In Their Own Words</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>What each candidate has said. These are their words, not checked facts.</p>
+  <div class="vs-grid">
+    <div class="vs-head">MOORE (R)</div><div class="vs-head">CROSBY (D)</div>
+    <div><strong>Great Salt Lake (2026):</strong> "This may sound like it's a large price tag. This investment is monumental, but I want to ensure my colleagues that the investment now will save taxpayers down the road from future calamity." (KSL and Deseret News, April 2026)</div>
+    <div><strong>Stewardship:</strong> "Protecting our public lands, restoring the Great Salt Lake, and standing up for communities against corporate developments like the Stratos data center project in Box Elder." (his campaign site)</div>
+    <div><strong>The tax and spending bill (2025):</strong> "While I wish the Senate had been able to keep more of the spending cuts proposed in the House version, I couldn't be more excited to make permanent the 2017 Tax Cuts and Jobs Act." (July 3, 2025)</div>
+    <div><strong>Affordability:</strong> "Confronting the housing crisis and the rising cost of living, including our healthcare costs, and standing up for the local jobs and small businesses that hold our towns together." (his campaign site)</div>
+    <div><strong>Medicaid (2025):</strong> "We want to focus that Medicaid funding on the individuals that it's designed to support." (Deseret News, July 30, 2025)</div>
+    <div><strong>Accountability:</strong> "Banning congressional stock trades, opening a real conversation on term limits, and getting corporate dark money out of our politics." (his campaign site)</div>
+    <div><strong>Redistricting (2026):</strong> "blue states and red states should follow redistricting standards. I supported that then and I support it now." (Deseret News, Feb. 26, 2026)</div>
+    <div><strong>Tariffs and data:</strong> "bring an end to this illegal tariff regime"; "Americans should own their data, full stop." (his policies page)</div>
+    <div><strong>A Trump Jr. wedding gift (2026):</strong> "Maybe one of the most tone-deaf things I've ever seen, to take money from a Russian oligarch for a wedding." (Utah News Dispatch, Sept. 24, 2026)</div>
+    <div><strong>The job:</strong> "The role of a Representative is to represent the needs and interests of their constituents." (his statement to the Hive, <a href="crosby-statement-ut2.html">printed whole</a>)</div>
+  </div>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;margin-top:12px;"><strong>How this was read:</strong> quotes were read through a text reader on the pages named and should be checked against the live pages before they are quoted elsewhere. Crosby's statement to the Hive was received directly. Crosby says his own polls show him ahead; those are campaign polls.</p>
+</div></section>
+
+<section id="connections"><div class="wrap">
+  <div class="eyebrow">THE CONNECTIONS</div>
+  <h2>Where This Race Meets the Rest of the Docket</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Several of the businesses paid in this race also show up in state and county races the Hive has covered. A connection is not an accusation.</p>
+  <div class="mermaid-wrap">
+<pre class="mermaid">
+flowchart TB
+  BM(["BLAKE MOORE<br/>FOR CONGRESS"]) -->|"$150,318"| EH["Election Hive<br/>mgr: Matthew Lusty"]
+  KG["Katrina Gibson<br/>Weber Commission A"] -->|"$819"| EH
+  KG -->|"$11,576"| HC["Honey Communications<br/>member: Matthew Lusty"]
+  DUV["Defending Utah Values<br/>super PAC"] -->|"$66,000 UT-3 ads"| EH
+  DUV -. "backed Moore in<br/>the primary" .-> BM
+  BM -->|"$164,090"| GI["Gathering Inc.<br/>Ogden"]
+  KG -->|"$4,076"| GI
+  BM -->|"$86,282"| IE["Irish Elk LLC<br/>Layton"]
+  KOF["Jill Koford<br/>SD-5"] -->|"$38,712"| IE
+</pre>
+    <p class="cap">Amounts from the FEC reports and the Hive's county and SD-5 files. The dashed line is the Deseret News's description of the super PAC's spending.</p>
+  </div>
+  <div class="conn-grid">
+    <div class="conn-card gold">
+      <div class="case">ELECTION HIVE · HONEY COMMUNICATIONS</div>
+      <h4>One consultant, from Congress to the County Commission</h4>
+      <p>Moore's campaign paid Election Hive $150,318.11. In Weber County, Katrina Gibson's commission campaign paid Election Hive $819.33 and Honey Communications $11,576 in about seven weeks. State records list Matthew Lusty as Election Hive's manager and as Honey Communications' sole member. A super PAC that backed Moore in June used Election Hive for its 3rd District ads. See the <a href="weber-2026-voter-guide.html">Weber voter guide</a>.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case">GATHERING INC.</div>
+      <h4>Canvassing, Ogden</h4>
+      <p>Moore's campaign paid Gathering Inc. $164,090 for polling and canvassing; Gibson's paid it $4,076. Gathering Inc. also canvassed signatures for Gov. Cox's 2024 campaign (Utah News Dispatch, March 11, 2025).</p>
+    </div>
+    <div class="conn-card">
+      <div class="case">IRISH ELK LLC · SD-5</div>
+      <h4>Fundraising consulting, Layton</h4>
+      <p>Moore's campaign paid Irish Elk LLC $86,281.50. The Hive's SD-5 file shows Jill Koford's campaign paid Irish Elk $38,712 and identifies it as Kyle Palmer's firm. See <a href="sd5-koford-hernandez.html">SD-5</a>.</p>
+    </div>
+    <div class="conn-card unres">
+      <div class="case">NAME MATCH, NOT CONFIRMED</div>
+      <h4>A payment to "Kyle Palmer"</h4>
+      <p>Moore's campaign paid "Kyle Palmer" of Layton $5,744.58 on June 10, 2025, listed as "SEE MEMO ITEMS." Whether this is the same Kyle Palmer is not confirmed.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case">THE BOYER COMPANY</div>
+      <h4>His wife's family business</h4>
+      <p>His 2025 disclosure lists his wife's interests in H. Roger Boyer Family Partnership holdings, including The Boyer Company, a commercial real estate developer, each worth more than $1 million.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case">HD-6 · WEBER GUIDE</div>
+      <h4>Other races on the same ballot</h4>
+      <p>Weber voters in the 2nd District also choose a state House member. See <a href="hd6-bishop-rich.html">HD-6</a>, <a href="hd7-mittendorf-wilcox.html">HD-7</a>, <a href="jason-kyle-hd8.html">HD-8</a>, <a href="hd9-choberka-sawyer.html">HD-9</a>, <a href="hd11-calder-hall.html">HD-11</a> and <a href="hd12-graff-schultz.html">HD-12</a>.</p>
+    </div>
+  </div>
+</div></section>
+
+<style>
+.cc{max-width:960px;margin:0 auto;padding:36px 20px;border-bottom:1px solid #d3d6cb;font-size:16.5px;line-height:1.55}
+.cc .cc-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.06em;color:#4f5b58}
+.cc h2{font-size:1.6rem;margin:4px 0 8px}
+.cc .cc-plain{background:#eef6f2;border-left:4px solid #1d6b57;padding:12px 16px;margin:0 0 18px}
+.cc .cc-cand{background:#fbf9f3;border:1px solid #d3d6cb;padding:14px 16px;margin:12px 0}
+.cc .cc-name{font-weight:700;font-size:1.08rem}
+.cc .cc-total{font-family:'IBM Plex Mono',monospace;font-size:.9rem;color:#1f2a2a}
+.cc .cc-bar{display:flex;height:26px;border-radius:3px;overflow:hidden;background:#e3e6dc;margin:8px 0}
+.cc .cc-bar span{display:block;height:100%}
+.cc .cc-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.88rem}
+.cc .cc-legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.cc .cc-meta{font-size:.92rem;margin-top:8px;color:#33403d}
+.cc .cc-flags{background:#fbf3e6;border:1px dashed #d9a441;padding:12px 16px;margin:14px 0}
+.cc .cc-flags ul{margin:6px 0 0;padding-left:20px}
+.cc .cc-note{font-size:.86rem;color:#4f5b58}
+</style>
+<div class="cc" id="compete">
+<div class="cc-eyebrow">CAN THEY COMPETE?</div>
+<h2>Who Has the Money, and Where It Came From</h2>
+<p class="cc-plain"><b style="font-family:IBM Plex Mono,monospace;font-size:.72rem;color:#1d6b57;margin-right:8px">IN PLAIN WORDS</b>Every dollar each campaign reported, sorted into piles: people, caucus and leadership PACs, other organizations, party help and the candidate's own money. Bars are drawn to the same scale, so a short bar means less money. These are facts from the filings; they are shown here, not graded.</p>
+<div class="cc-cand"><div class="cc-name">Blake Moore (R) <span class="cc-total">· $2,565,317.31 total</span></div><div class="cc-bar" role="img" aria-label="Blake Moore: $2,565,317.31 total"><span style="width:39.433%;background:#3fa37f" title="Individual people: $1,011,572.23"></span><span style="width:55.588%;background:#5b7fa6" title="Other organizations: $1,426,000"></span><span style="width:4.980%;background:#b0b7b4" title="Other / not split: $127,745.08"></span></div><div class="cc-legend"><span><i style="background:#3fa37f"></i>Individual people: $1,011,572.23</span><span><i style="background:#5b7fa6"></i>Other organizations: $1,426,000</span><span><i style="background:#b0b7b4"></i>Other / not split: $127,745.08</span></div><div class="cc-meta"><b>Period:</b> cycle to date through June 30, 2026.<br><b>From their own disclosure form:</b> 2025 House disclosure: blind trust ($1–5 million), Washington, D.C. rental ($1–5 million), Hawkins Development and Blue Crimson LLC; his wife's Boyer family partnership holdings, each over $1 million, with over $1 million in income from The Boyer Company.</div></div>
+<div class="cc-cand"><div class="cc-name">Peter Crosby (D) <span class="cc-total">· $60,224.97 total</span></div><div class="cc-bar" role="img" aria-label="Peter Crosby: $60,224.97 total"><span style="width:2.341%;background:#3fa37f" title="Individual people: $60,049.49"></span><span style="width:0.007%;background:#8e7cc3" title="Own money: $175.48"></span></div><div class="cc-legend"><span><i style="background:#3fa37f"></i>Individual people: $60,049.49</span><span><i style="background:#8e7cc3"></i>Own money: $175.48</span></div><div class="cc-meta"><b>Period:</b> Aug. 1, 2025–June 30, 2026.<br><b>From their own disclosure form:</b> His House candidate disclosure has not been read yet.</div></div>
+<div class="cc-cand"><div class="cc-name">Robert Moesinger (Unaffiliated) <span class="cc-total">· $8,805.75 total</span></div><div class="cc-bar" role="img" aria-label="Robert Moesinger: $8,805.75 total"><span style="width:0.331%;background:#3fa37f" title="Individual people: $8,500"></span><span style="width:0.012%;background:#8e7cc3" title="Own money: $305.75"></span></div><div class="cc-legend"><span><i style="background:#3fa37f"></i>Individual people: $8,500</span><span><i style="background:#8e7cc3"></i>Own money: $305.75</span></div><div class="cc-meta"><b>Period:</b> through June 30, 2026.<br><b>From their own disclosure form:</b> Not reviewed.</div></div>
+<div class="cc-flags"><b>What the filings show side by side</b><ul><li>Blake Moore's campaign reported about 43 times as much money as Peter Crosby's ($2,565,317.31 to $60,224.97).</li></ul></div>
+<p class="cc-note">Periods differ where the filings in hand differ; each candidate's period is listed with their bar. "Own money" includes loans and money moved from the candidate's own earlier campaign account, as labeled. Disclosure-form lines come from each candidate's own form as described on this page. Added Oct. 2, 2026.</p></div>
+<section id="rubric"><div class="wrap">
+  <div class="eyebrow">THE GRADES</div>
+  <h2>Graded Topic by Topic</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Each topic gets a grade, A (best) to F (worst), on five questions: Does it check power? Can the public see it? Is it clear who pays? What does it do to air, water and land? Do the people affected get a real say? N/A means the question doesn't fit. A dash means the record isn't documented enough to grade.</p>
+  <p class="section-dek"><strong>How to read these:</strong> grades judge only what is already in the record as of Oct. 2, 2026. They judge the record, not the person. A C means the record meets what the law requires, the status quo. A B or A means the candidate went beyond it, and the record shows it. Power on campaign money uses a fixed scale, the same for every candidate and party: A when 90% or more of the counted money comes from individual people, B at 67–89%, C at 34–66%, D at 10–33%, F under 10%. Party help and the candidate's own money are shown but not counted; own money is always stated. D means something is vague or bundled, or a public check is weakened; F means something required is missing, or a check is removed with nothing in its place. Candidates can amend a report at any time; when the record changes, the grade is updated and dated. Corrections are welcome at <a href="mailto:webercountyhive@gmail.com">webercountyhive@gmail.com</a>.</p>
+  <p class="pmnote" style="font-size:.92rem;margin:8px 0 12px;">Overall is the average of the graded questions (A = 4, B = 3, C = 2, D = 1, F = 0; N/A and dashes are left out). A plus or minus shows where the average falls between letters, and an average exactly halfway counts toward the higher letter with a minus. Added Oct. 2, 2026.</p>
+  <div class="table-scroll"><table class="summary-grid">
+    <tr><th>Topic</th><th>Power</th><th>Transparency</th><th>Money</th><th>Environment</th><th>Community</th><th>Overall</th></tr>
+    <tr><td>Moore · campaign money</td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">—</span></td><td><span class="gl g-c">C</span></td></tr>
+    <tr><td>Crosby · campaign money</td><td><span class="gl g-a">A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">—</span></td><td><span class="gl g-b">B−</span></td></tr>
+    <tr><td>Moore · 2025 financial disclosure</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td></tr>
+    <tr><td>Moore · 2021 stock-trade reports</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-na">—</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td></tr>
+    <tr><td>Moore · record items</td><td colspan="6" style="text-align:left;">Graded item by item below: saline-lakes law <span class="gl g-b">B</span> accomplishments page <span class="gl g-d">D</span> earmark disclosure <span class="gl g-b">B</span></td></tr>
+    <tr><td>Crosby · financial disclosure</td><td colspan="6" style="text-align:left;"><span class="gl g-na">—</span> not read yet</td></tr>
+  </table></div>
+
+  <div class="topic-head">1. Moore's campaign money</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Question</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-c">C</span>58.5% of his contributions came from PACs and other committees, many from industries with business before Congress, and 41.5% from individuals. No single committee gave most of it, and giving limits apply. The same standard as Bishop's 57% from groups in HD-6, graded C. His campaign also paid Irish Elk LLC; unlike SD-5, the Hive has not found Palmer-run committees among his donors, so that is noted, not graded. <b>The money, by category (cycle to date through June 30, 2026):</b> individuals $1,011,572.23 (39.4%); caucus and leadership PACs not broken out on the filings in hand; other organizations $1,426,000 (55.6%); party help $0 (0.0%); joint-fundraising transfers and other receipts, not split by source $127,745.08 (5.0%). <b>Own money:</b> none. Own money is stated here, not graded. <b>Power C:</b> 41.5% of the counted money came from individual people (joint-fundraising transfers are left out because the reports read do not split them by donor type). Checked Oct. 2, 2026 on the Hive's fixed scale; unchanged. Scale: A = 90% or more of the counted money from individual people; B = 67–89%; C = 34–66%; D = 10–33%; F = under 10%. Counted money is individuals plus caucus and leadership PACs plus other organizations (businesses, trade and union PACs, other candidates' campaigns). Ordinary party help and the candidate's own money are shown but not counted.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-c">C</span>Donors and payees are named on federal reports. WinRed is a pass-through platform, and its donors are itemized as the law requires.</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>Vendors are named with purposes such as "Strategic Campaign Consulting." No debts. $161,000 went to the national party, which is common and legal.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>A campaign report doesn't decide land or water use.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-na">—</span>The share of his individual money from inside the district hasn't been counted yet. This will be graded when it is.</td></tr>
+  </table></div>
+  <div class="better"><strong>Going beyond the law would look like:</strong> saying what each consulting payment bought, and raising most of the money from people who live in the district.</div>
+
+  <div class="topic-head">2. Crosby's campaign money</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Question</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-a">A</span>All but $175.48 of his money is from individual donors, with no PAC, party or business money. <b>The money, by category (Aug. 1, 2025 to June 30, 2026):</b> individuals $60,049.49 (99.7%); caucus and leadership PACs $0 (0.0%); other organizations $0 (0.0%); party help $0 (0.0%). <b>Own money:</b> $175.48 (0.3% of everything raised). Own money is stated here, not graded. <b>Power A:</b> 100.0% of the counted money came from individual people. Regraded Oct. 2, 2026 on the Hive's fixed scale; earlier: C, then B under the grassroots rule earlier today. Scale: A = 90% or more of the counted money from individual people; B = 67–89%; C = 34–66%; D = 10–33%; F = under 10%. Counted money is individuals plus caucus and leadership PACs plus other organizations (businesses, trade and union PACs, other candidates' campaigns). Ordinary party help and the candidate's own money are shown but not counted.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-c">C</span>Itemized donors are named. About 38% is in unitemized small gifts, which the law allows.</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>No debts or loans. His report's cycle column and fec.gov's totals differ; the Hive hasn't resolved why, so it isn't counted against him.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>A campaign report doesn't decide land or water use.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-na">—</span>The share from inside the district hasn't been counted yet.</td></tr>
+  </table></div>
+  <div class="better"><strong>Going beyond the law would look like:</strong> listing every donor by name, even under $200, and raising most of the money from people who live in the district.</div>
+
+  <div class="topic-head">3. Moore's financial disclosures</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Question</th><th>Grade and reason</th></tr>
+    <tr><td>Transparency (2025 report)</td><td><span class="gl g-c">C</span>Assets, spouse's holdings, liabilities and board seats are listed in the ranges the form uses. Whether it was filed on time depends on an extension not checked here.</td></tr>
+    <tr><td>Transparency (2021 trade reports)</td><td><span class="gl g-d">D</span>Trades from as early as February 2021 were reported July 17, 2021, past the 45-day window, and his office paid the late fee (Salt Lake Tribune). Late items are graded D under the Hive's timing rule. He has since moved his holdings into a blind trust.</td></tr>
+  </table></div>
+
+  <div class="topic-head">4. Moore's record, item by item</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Item</th><th>Grade and reason</th></tr>
+    <tr><td>Saline-lakes law (P.L. 117-318)</td><td><span class="gl g-b">B</span>Environment: sets up a federal program to monitor the Great Salt Lake and other saline lakes and the birds that depend on them, with a public work plan and report to Congress, and protects existing water rights and compacts. It authorizes money that hasn't been provided, so the benefit depends on future spending bills.</td></tr>
+    <tr><td>His accomplishments page</td><td><span class="gl g-d">D</span>Transparency: lists one provision under the wrong defense bill and presents three bills sponsored by others as "signed into law" without stating his role. Vague or inaccurate public claims are graded D.</td></tr>
+    <tr><td>Earmark disclosure</td><td><span class="gl g-b">B</span>Transparency: his website posts every year's requests and, for 2026, the amount enacted beside each one, so voters can see what was asked and what came.</td></tr>
+  </table></div>
+  <div class="better"><strong>How a grade can change:</strong> correcting the year and noting his role on each item would move the accomplishments page to C.</div>
+</div></section>
+
+<section id="ask"><div class="wrap">
+  <div class="eyebrow">YOUR TURN</div>
+  <h2>Questions From the Records, and Who Can Answer Them</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>These offices keep the records on this page. They answer questions from anyone.</p>
+  <div class="record-card"><ul style="margin:0;padding-left:18px;">
+    <li><strong>Federal Election Commission</strong> (fec.gov; 1-800-424-9530): Why does a campaign report's "cycle to date" column differ from the totals on fec.gov? Where can I see a super PAC's ads marked "support" or "oppose"?</li>
+    <li><strong>Clerk of the House, Legislative Resource Center</strong> (disclosures-clerk.house.gov): Was an extension granted for a member's 2025 financial disclosure? Where are candidates' disclosures posted?</li>
+    <li><strong>Office of Congressional Ethics</strong> (oce.house.gov): Does the office publish what happened to a complaint about late stock-trade reports?</li>
+    <li><strong>House Appropriations Committee</strong> (appropriations.house.gov): Which community projects were funded in the final spending law for each year?</li>
+    <li><strong>Weber County Elections</strong> (801-399-8034): Am I in the 2nd or 3rd Congressional District?</li>
+    <li><strong>Utah Debate Commission</strong> (utahdebatecommission.org): When and where is the 2nd District debate, and how can I submit a question?</li>
+  </ul></div>
+</div></section>
+
+<section id="limits"><div class="wrap">
+  <div class="eyebrow">WHAT THIS DOESN'T SHOW</div>
+  <h2>Limits of the Record</h2>
+  <div class="record-card"><ul style="margin:0;padding-left:18px;">
+    <li>Moore's cycle totals are from his July report's summary page, as Shauna read it on fec.gov Oct. 2, 2026. Other FEC pages, the House Clerk disclosures and the laws were read through a text reader that returns a condensed reading of each page; amounts were copied to the cent but should be checked on the live pages before reuse.</li>
+    <li>Several FEC report pages could not be opened (2025 receipt pages; some leadership PAC months; a super PAC's latest report). Payee totals are sums of the itemized rows read, mostly payments of $1,000 or more, so they are floors, not complete totals. Honey Communications did not appear in the rows read.</li>
+    <li>No district-share count of individual donors was done for either candidate. Industry totals from OpenSecrets were not reachable.</li>
+    <li>congress.gov and GovTrack blocked automated reading; bill roles come from the laws on govinfo.gov, his own releases and secondary bill trackers. The Afghanistan language and the Hill AFB figures weren't checked against the final law.</li>
+    <li>The super PACs' support/oppose labels are from the Deseret News, not confirmed on the FEC pages.</li>
+    <li>Reports through Sept. 30 are due Oct. 15; this page will be updated when they're filed.</li>
+  </ul></div>
+</div></section>
+
+<section id="sources"><div class="wrap">
+  <details class="sources">
+    <summary>View all sources (24)</summary>
+    <ol>
+      <li>Blake Moore for Congress (C00738872), July Quarterly report FEC-1995405, summary pages (fec.gov, read Oct. 2, 2026); itemized pages of filings 1995405, 1995370, 1961020, 1940609, 1923271, 1902097, 1887008, docquery.fec.gov</li>
+      <li>fec.gov candidate pages: Moore H0UT01205; Crosby H6UT01160; Cottam H4UT01165; Bowen H6UT02259 and H6UT02549; Moesinger H6UT02531; Lisonbee H6UT02523</li>
+      <li>Peter Crosby for Congress (C00913582), filing 1989878, docquery.fec.gov</li>
+      <li>Expect More Leadership PAC (C00757922), statement of organization 1937998 and filings 1939780, 1949275, 1954402; Team Moore JFC (C00757930); 218 Committee (C00930149), fec.gov</li>
+      <li>Defending Conservative Values PAC (C00950097), filing 1987868; Defending Utah Values Federal Super PAC (C00950865), filing 2000903, fec.gov and docquery.fec.gov</li>
+      <li>Moore, 2025 Financial Disclosure Report, House Clerk PDF 10074823; periodic transaction reports 20019307, 20019637, 20020135, 20020344</li>
+      <li>Campaign Legal Center, complaint to the Office of Congressional Ethics (July 29, 2021); Salt Lake Tribune (July 26, 2021)</li>
+      <li>blakemoore.house.gov: Accomplishments; About; press releases of Dec. 8, 2021 (circuit boards), May 14 and May 22, 2025 (tax bill), Dec. 11, 2024 (FY2025 NDAA), MAPLand, Medal of Honor, GSL2034 Charter; Community Project Funding pages FY2022–FY2027</li>
+      <li>govinfo.gov public laws: P.L. 119-21, 117-318, 118-258, 118-234; bill text H.R. 8460; Federal Register, July 2, 2026 (DFARS rule); U.S. Code 10 U.S.C. 4873 notes</li>
+      <li>Saline Lake Ecosystems Act discussion draft (May 10, 2021), sent to the Hive; USGS Saline Lake Ecosystems Integrated Water Availability Assessment page; House amendment MOORUT_064 (FY2024 Interior)</li>
+      <li>clerk.house.gov roll calls 2025-70, 145, 168, 190, 202, 203, 281, 285, 289; 2026-42, 53</li>
+      <li>Biden White House archive: bills signed May 5, 2022 (S. 2629) and Dec. 23, 2024 (H.R. 5009)</li>
+      <li>Roll Call (Nov. 8, 2023); Deseret News (Nov. 13, 2024; July 30, 2025; Feb. 26, 2026; April 16, 2026; June 16, 2026; June 19, 2026; June 23, 2026)</li>
+      <li>KSL: saline-lakes bill (Dec. 2022); public-lands sale amendment (May 2025); GSL budget hearing (April 2026); KUNC (May 23, 2025)</li>
+      <li>Utah News Dispatch (March 11, 2025; Sept. 24, 2026); Daily Utah Chronicle (June 25, 2026); Ballotpedia (June 24, 2026)</li>
+      <li>Standard-Examiner (March 19, 2024; April 8, 2026)</li>
+      <li>National League of Cities, FY2025 community project funding; Citizens Against Government Waste earmark record</li>
+      <li>Tax summaries of P.L. 119-21: Taft Law; The Tax Adviser; ASTHO</li>
+      <li>The Lugar Center Bipartisan Index (2023 House); Cicero Group release</li>
+      <li>petercrosbyforcongress.org: home, policies, about, debate releases (July 10 and 23, 2026)</li>
+      <li>Peter Crosby, statement to The Weber County Hive (printed Sept. 12, 2026)</li>
+      <li>Utah Division of Corporations records for Election Hive LLC and Honey Communications LLC, as recorded in the Hive's Election Hive file</li>
+      <li>Weber County candidate financial reports, Katrina Gibson (pre-primary and post-elimination), read page by page Oct. 2, 2026</li>
+      <li>The Hive's SD-5 case file (Irish Elk LLC payments)</li>
+    </ol>
+  </details>
+</div></section>
+
+<footer><div class="wrap">
+  We report public records. You decide. · Public records only · No comment requested.<br>
+  <a href="index.html">&larr; Back to the Candidates 2026 docket</a> · <a href="weber-2026-voter-guide.html">Weber County 2026 voter guide</a>
+</div></footer>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
+<script>
+if (window.mermaid) { mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'IBM Plex Mono, monospace', themeVariables: { fontSize: '20px' }, flowchart:{htmlLabels:true, curve:'basis', useMaxWidth:true} }); }
+document.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('flipped');b.setAttribute('aria-pressed',b.classList.contains('flipped'));}));
+
+if (window.L && typeof UTAH_GEO !== 'undefined') {
+  const m = L.map('ut2map', { scrollWheelZoom: false, zoomSnap: 0.25 });
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors', maxZoom: 18 }).addTo(m);
+  const IN = ['Box Elder','Cache','Rich','Davis'], SPLIT = ['Weber'];
+  m.createPane('ut2'); m.getPane('ut2').style.zIndex = 420;
+  const lay = L.geoJSON(UTAH_GEO.counties, { pane: 'ut2', filter: f => IN.includes(f.properties.n) || SPLIT.includes(f.properties.n),
+    style: f => SPLIT.includes(f.properties.n) ? { color:'#a9822f', weight:3, dashArray:'8 6', fillColor:'#d9a441', fillOpacity:.35 } : { color:'#12304a', weight:3, fillColor:'#12304a', fillOpacity:.30 } }).addTo(m);
+  lay.eachLayer(l => l.bindTooltip(l.feature.properties.n + ' County' + (SPLIT.includes(l.feature.properties.n) ? ': split between UT-2 and UT-3' : ': in UT-2'), { sticky: true }));
+  addUtahOutlines(m, { alwaysLabel: ['Logan','Brigham City','Ogden','Layton'], cityLabelZoom: 10 });
+  m.fitBounds(lay.getBounds(), { padding: [10, 10] });
+}
+if (window.Chart) {
+  Chart.defaults.font.family = "'Source Serif 4', Georgia, serif"; Chart.defaults.font.size = 14; Chart.defaults.color = '#4f5b58';
+  const money = v => '$' + Number(v).toLocaleString(undefined,{maximumFractionDigits:2});
+  const pct = (c) => { const t = c.dataset.data.reduce((a,b)=>a+b,0); return ' ' + money(c.parsed) + ' (' + (100*c.parsed/t).toFixed(1) + '%)'; };
+  new Chart(document.getElementById('mooreDonut'), { type:'doughnut',
+    data:{ labels:['PACs and other committees','Individuals','Joint fundraising transfers','Other receipts'], datasets:[{ data:[1426000,1011572.23,125745.08,2000], backgroundColor:['#12304a','#3fa37f','#d9a441','#9a8a4e'] }] },
+    options:{ maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, tooltip:{callbacks:{label:pct}} } } });
+  new Chart(document.getElementById('crosbyDonut'), { type:'doughnut',
+    data:{ labels:['Individuals, itemized','Individuals, small unitemized','Himself'], datasets:[{ data:[37119,22930.49,175.48], backgroundColor:['#3fa37f','#9cc4b5','#d9a441'] }] },
+    options:{ maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, tooltip:{callbacks:{label:pct}} } } });
+  new Chart(document.getElementById('compareChart'), { type:'bar',
+    data:{ labels:['Moore (R)','Crosby (D)','Moesinger (U)'], datasets:[
+      {label:'Raised', data:[2536636.22,60224.97,8805.75], backgroundColor:'#12304a'},
+      {label:'Cash on hand', data:[1886961.70,23283.12,5401.76], backgroundColor:'#3fa37f'} ] },
+    options:{ maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+money(c.parsed.y)}} }, scales:{ y:{ ticks:{callback:money}, grid:{color:'#e3e6dc'} }, x:{grid:{display:false}} } } });
+  new Chart(document.getElementById('vendorChart'), { type:'bar',
+    data:{ labels:['Strategic Media Placement (ads)','KB Strategic Group (fundraising)','Gathering Inc. (polling, canvassing)','NRCC (party)','Election Hive (consulting)','Irish Elk LLC (fundraising)','Tarrance Group','Stone Mountain Press (printing)','Strategy Group for Media','The Political Group (phones)'],
+      datasets:[{label:'Paid', data:[499746.36,259776.66,164090,161000,150318.11,86281.50,59515,50139.16,48818.64,35117.86], backgroundColor:['#12304a','#12304a','#d9a441','#7a93a8','#d9a441','#d9a441','#12304a','#12304a','#12304a','#12304a'] }] },
+    options:{ indexAxis:'y', maintainAspectRatio:false, plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>' '+money(c.parsed.x)}} }, scales:{ x:{ ticks:{callback:money}, grid:{color:'#e3e6dc'} }, y:{grid:{display:false}} } } });
+  new Chart(document.getElementById('earmarkChart'), { type:'bar',
+    data:{ labels:['Ogden Canyon Trail','Ogden police simulator','North Ogden detention pond','Weber County storm drain','Weber Basin vault (Layton)'], datasets:[
+      {label:'Requested', data:[2000000,1113000,4510773.75,1033280,1160691.92], backgroundColor:'#7a93a8'},
+      {label:'Enacted', data:[1000000,630000,1000000,1033280,1160691], backgroundColor:'#3fa37f'} ] },
+    options:{ maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+money(c.parsed.y)}} }, scales:{ y:{ ticks:{callback:money}, grid:{color:'#e3e6dc'} }, x:{grid:{display:false}} } } });
+}
+</script>
+</body>
+</html>

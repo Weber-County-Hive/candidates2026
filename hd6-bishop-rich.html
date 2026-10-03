@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HD-6: Bishop vs. Rich | Utah Hive Politics</title>
+<meta name="description" content="Utah House District 6, 2026. Rep. Rob Bishop (R) vs. James Rich (Forward). Where the campaign money comes from and goes, the disclosure forms, Bishop's record, connections to other case files, and report-card grades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-paper:#f4f0e6;
+    --color-paper-deep:#e9ece4;
+    --color-ink:#1f2a2a;
+    --color-ink-soft:#4f5b58;
+    --color-link:#1d6b57;
+    --color-stat:#d9a441;
+    --color-blue:#1f4e6b;
+    --color-blue-deep:#12304a;
+    --color-line:#d3d6cb;
+    --color-card:#fbf9f3;
+    --color-good:#3f7a5c;
+    --color-flag:#a5301e;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.6;font-size:17px;}
+  h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif;font-weight:700;margin:0 0 .4em;color:var(--color-blue-deep);}
+  .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:.74rem;letter-spacing:.06em;color:var(--color-ink-soft);}
+  a{color:var(--color-link);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+
+  header.band{background:linear-gradient(160deg,#1f5e6b 0%,var(--color-blue) 45%,var(--color-blue-deep) 100%);color:#eef4f2;padding:20px 0;}
+  header.band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .brandmark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#eef4f2;text-decoration:none;}
+  nav.topnav a{color:#d7e6e2;text-decoration:none;margin-left:18px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;}
+
+  .hero{padding:48px 0 36px;border-bottom:1px solid var(--color-line);}
+  .hero h1{font-size:2.4rem;line-height:1.15;max-width:780px;margin-top:12px;}
+  .hero .dek{font-size:1.1rem;color:var(--color-ink-soft);max-width:680px;margin-top:12px;}
+  .updated{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--color-ink-soft);margin-top:10px;}
+  .hero-meta{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap;}
+  .hero-meta .stat-num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-stat);}
+  .hero-meta .stat-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);max-width:180px;}
+
+  .jumpnav{background:var(--color-paper-deep);border-bottom:1px solid var(--color-line);padding:12px 0;position:sticky;top:0;z-index:5;}
+  .jumpnav .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .jumpnav a{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--color-ink);text-decoration:none;}
+  .jumpnav a:hover{color:var(--color-link);text-decoration:underline;}
+  @media (max-width:680px){.jumpnav{position:static;}}
+
+  section{padding:42px 0;border-bottom:1px solid var(--color-line);}
+  section[id]{scroll-margin-top:60px;}
+  section h2{font-size:1.65rem;margin-bottom:8px;}
+  .section-dek{color:var(--color-ink-soft);max-width:700px;margin-bottom:22px;}
+  .plain{background:#eef6f2;border-left:4px solid var(--color-link);padding:12px 16px;margin:0 0 18px;font-size:1rem;}
+  .plain b{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;color:var(--color-link);margin-right:8px;}
+  .start-here{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-stat);padding:18px 22px;}
+  .start-here ol{margin:6px 0 0;padding-left:20px;}
+  .start-here li{margin-bottom:9px;}
+
+  .tl{position:relative;margin:18px 0 8px;padding-left:26px;border-left:4px solid var(--color-blue);}
+  .tl-item{position:relative;margin:0 0 18px;}
+  .tl-item:before{content:"";position:absolute;left:-36px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--color-stat);border:3px solid var(--color-blue-deep);}
+  .tl-yr{font-family:'IBM Plex Mono',monospace;font-size:1.05rem;font-weight:700;color:var(--color-blue-deep);}
+  .tl-item p{margin:.2em 0;font-size:1.02rem;}
+  .unv{border-left:5px solid var(--color-stat);}
+  .record-card{background:var(--color-card);border:1px solid var(--color-line);padding:20px 22px;margin:16px 0;}
+  .record-card h3{font-size:1.15rem;}
+  .record-card p{margin:.55em 0;}
+  .flag{background:#fbf3e6;border:1px dashed var(--color-stat);padding:14px 18px;margin:16px 0;font-size:.98rem;}
+  .quote-block{border-left:3px solid var(--color-stat);padding:4px 0 4px 16px;font-style:italic;color:var(--color-ink-soft);margin:12px 0;}
+  .rc-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-link);border:1px solid var(--color-link);padding:3px 9px;border-radius:20px;margin:2px 6px 2px 0;}
+  .rc-flag{border-color:var(--color-flag);color:var(--color-flag);}
+
+  .table-scroll{overflow-x:auto;}
+  .entity-table{width:100%;border-collapse:collapse;font-size:.93rem;}
+  .entity-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:8px 10px;background:var(--color-paper-deep);}
+  .entity-table td{padding:9px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .entity-table td.num{font-family:'IBM Plex Mono',monospace;font-size:.85rem;white-space:nowrap;text-align:right;}
+
+  .fund-bar-row{margin-bottom:11px;}
+  .fund-bar-row .bar-label{display:flex;justify-content:space-between;gap:12px;font-size:.92rem;margin-bottom:4px;}
+  .fund-bar-track{background:#e3e6dc;border-radius:3px;height:10px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);}
+  .fund-bar-fill.alt{background:var(--color-blue);}
+
+  .chart-card{background:var(--color-card);border:1px solid var(--color-line);padding:16px 18px;margin:20px 0;}
+  .chart-card h3{font-size:1.05rem;}
+  .chart-card .cap{font-size:.88rem;color:var(--color-ink-soft);margin:0 0 10px;}
+  .chart-box{position:relative;height:300px;}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media (max-width:760px){.two{grid-template-columns:1fr;}}
+
+  .mermaid-wrap{background:var(--color-card);border:1px solid var(--color-line);padding:16px;margin:22px 0;overflow-x:auto;}
+  .mermaid-wrap .cap{font-size:.9rem;color:var(--color-ink-soft);margin:10px 0 0;}
+  .mermaid{text-align:center;}
+
+  .map-card{border:1px solid var(--color-line);background:var(--color-card);padding:14px;margin:18px 0;}
+  .map-card svg{width:100%;height:auto;display:block;max-width:760px;margin:0 auto;}
+  .map-card .cap{font-size:.88rem;color:var(--color-ink-soft);margin-top:8px;}
+
+  .flip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0;}
+  @media (max-width:900px){.flip-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.flip-grid{grid-template-columns:1fr;}}
+  .flip{perspective:900px;background:none;border:0;padding:0;cursor:pointer;text-align:left;font:inherit;color:inherit;min-height:230px;}
+  .flip-inner{position:relative;width:100%;height:100%;min-height:230px;transition:transform .5s;transform-style:preserve-3d;}
+  .flip.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:18px 20px;display:flex;flex-direction:column;justify-content:center;}
+  .flip-front{text-align:center;}
+  .flip-front .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.6rem;color:var(--color-link);}
+  .flip-front .label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);margin-top:6px;}
+  .flip-front .hint{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--color-ink-soft);margin-top:10px;opacity:.75;}
+  .flip-back{transform:rotateY(180deg);background:var(--color-blue-deep);color:#eef4f2;border-color:var(--color-blue-deep);font-size:.92rem;line-height:1.5;overflow:auto;}
+
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--color-line);background:var(--color-card);}
+  .vs-grid > div{padding:14px 18px;border-bottom:1px solid var(--color-line);}
+  .vs-grid > div:nth-child(odd){border-right:1px solid var(--color-line);}
+  .vs-head{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  @media (max-width:760px){.vs-grid{grid-template-columns:1fr;} .vs-grid > div:nth-child(odd){border-right:none;}}
+
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media (max-width:760px){.conn-grid{grid-template-columns:1fr;}}
+  .conn-card{background:var(--color-card);border:1px solid var(--color-line);border-top:4px solid var(--color-link);padding:16px 18px;}
+  .conn-card.gold{border-top-color:var(--color-stat);}
+  .conn-card.unres{border-top-color:#9a8a4e;border-top-style:dashed;}
+  .conn-card .case{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);}
+  .conn-card h4{font-size:1.05rem;margin:4px 0 6px;}
+  .conn-card p{margin:.4em 0;font-size:.95rem;}
+
+  details.ledger{background:var(--color-card);border:1px solid var(--color-line);padding:12px 16px;margin:12px 0;}
+  details.ledger summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--color-blue);font-weight:600;}
+  details.ledger .table-scroll{max-height:460px;overflow:auto;margin-top:10px;}
+
+  .rubric-table{width:100%;border-collapse:collapse;font-size:.94rem;background:var(--color-card);border:1px solid var(--color-line);}
+  .rubric-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:9px 10px;background:var(--color-paper-deep);}
+  .rubric-table td{padding:11px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .rubric-table td:first-child{font-weight:600;width:170px;}
+  @media (max-width:680px){.rubric-table td:first-child{width:auto;}}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:#fff;border-radius:3px;padding:1px 6px;margin-right:6px;}
+  .g-a{background:#3f7a5c;} .g-b{background:#5c8a6a;} .g-c{background:var(--color-stat);} .g-d{background:#b5652f;} .g-f{background:var(--color-flag);} .g-na{background:#8d948f;font-size:.78rem;} .g-p{background:var(--color-blue);font-size:.72rem;}
+  .topic-head{font-family:'Playfair Display',serif;font-size:1.18rem;margin:26px 0 8px;color:var(--color-blue-deep);}
+  .better{margin:10px 0 4px;padding:10px 14px;border-left:4px solid var(--color-link);background:rgba(0,0,0,.03);font-size:.96rem;}
+  .summary-grid{width:100%;border-collapse:collapse;background:var(--color-card);border:1px solid var(--color-line);font-size:.93rem;}
+  .summary-grid th,.summary-grid td{padding:9px 8px;border-bottom:1px solid var(--color-line);text-align:center;}
+  .summary-grid th{font-family:'IBM Plex Mono',monospace;font-size:.66rem;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  .summary-grid td:first-child,.summary-grid th:first-child{text-align:left;}
+
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:var(--color-blue);font-weight:600;}
+  details.sources ol{font-size:.92rem;color:var(--color-ink-soft);padding-left:22px;}
+  details.sources li{margin-bottom:7px;}
+  footer{padding:36px 0 50px;text-align:center;color:var(--color-ink-soft);font-size:.88rem;}
+  .lmap{height:520px;border:2px solid var(--color-stat);border-radius:2px;background:#d8d4c8;}
+  @media (max-width:600px){.lmap{height:400px;}}
+  .county-label{background:none;border:none;}
+  .county-label span{display:block;transform:translate(-50%,-50%);font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#14213D;white-space:nowrap;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff;pointer-events:none;}
+  .city-label{background:none;border:none;}
+  .city-label.key span{font-weight:700;font-size:14px;color:#14213D;}
+  .city-label span{display:block;transform:translate(-50%,-50%);font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4a2f55;white-space:nowrap;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff;pointer-events:none;}
+  .dlabel{background:none;border:none;}
+  .dlabel span{display:block;transform:translate(-50%,-50%);font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:700;color:#fff;background:rgba(18,48,74,.88);padding:2px 7px;border-radius:3px;white-space:nowrap;pointer-events:none;}
+  .map-card .lmap svg{width:auto;height:auto;max-width:none;display:inline;margin:0;}
+  .map-key{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;margin:10px 0 0;}
+  .map-key i{display:inline-block;width:22px;height:12px;vertical-align:middle;margin-right:6px;border:2px solid;}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://weber-county-hive.github.io/utah-maps/utah-geo.js"></script>
+<script src="https://weber-county-hive.github.io/utah-maps/utah-districts.js"></script>
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+
+<header class="band"><div class="wrap">
+  <a class="brandmark" href="index.html">The Weber County Hive — Candidates 2026</a>
+  <nav class="topnav"><a href="index.html">Docket</a><a href="weber-2026-voter-guide.html">Weber voter guide</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">CASE 34 · UTAH HOUSE DISTRICT 6 (PLAIN CITY, WILLARD, PERRY, PARTS OF FARR WEST AND MARRIOTT-SLATERVILLE) · GENERAL ELECTION NOV. 3, 2026</div>
+  <h1>Trade-Group Money and Two Consultants vs. Party Data and $1,149 in Cash</h1>
+  <p class="dek">Rep. Rob Bishop (R), the former congressman, took the seat in May. His 2026 reports list $32,181, 57% from businesses, PACs and associations, and very little from the district. James Rich (Forward) of Perry reports $5,183, most of it voter data and video from his party, reported as in-kind help. This page follows both campaigns' money in and out, compares their disclosure forms, and grades Bishop's record.</p>
+  <p class="updated">Updated Oct. 2, 2026, with both candidates' Convention, Primary and September 30th filings (state data exports pulled Oct. 2) and their disclosure forms.</p>
+  <div class="hero-meta">
+    <div><div class="stat-num">$32,181</div><div class="stat-label">BISHOP RAISED IN 2026 (INCL. $2,000 OF HIS OWN, MARKED AS LOANS)</div></div>
+    <div><div class="stat-num">57%</div><div class="stat-label">OF BISHOP'S MONEY FROM BUSINESSES, PACS AND ASSOCIATIONS</div></div>
+    <div><div class="stat-num">$5,183</div><div class="stat-label">RICH'S SUPPORT IN 2026 ($1,149 CASH + $4,034 IN-KIND)</div></div>
+    <div><div class="stat-num">59%</div><div class="stat-label">OF RICH'S SUPPORT IS IN-KIND FROM THE FORWARD PARTY</div></div>
+  </div>
+</div></div>
+
+<nav class="jumpnav" aria-label="Sections"><div class="wrap">
+  <a href="#start">Start here</a><a href="#district">The district</a><a href="#words">Words</a><a href="#bishop-money">Bishop's money</a><a href="#loop">Where it flows</a><a href="#rich-money">Rich's money</a><a href="#periods">By report</a><a href="#disclosure">Disclosure forms</a><a href="#record">Bishop's record</a><a href="#past">Before 2026</a><a href="#stands">Own words</a><a href="#connections">Connections</a><a href="#compete">Can they compete?</a><a href="#rubric">Grades</a><a href="#ask">Who to ask</a><a href="#limits">Limits</a><a href="#sources">Sources</a>
+</div></nav>
+
+<section id="start"><div class="wrap">
+  <div class="eyebrow">START HERE</div>
+  <h2>Eight Things the Records Show</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>A long-time Washington lawmaker is back in the Utah House. Much of his money comes from lobbying firms, trade groups and companies, and a few dollars come from the towns he represents. His opponent runs almost entirely on help from his party and his own company.</p>
+  <div class="start-here"><ol>
+    <li><strong>Bishop's money comes mostly from groups, and from outside the district.</strong> 22 businesses, PACs and associations gave $18,251 (56.7%). 16 individuals gave $11,930 (37.1%). He lent or gave $2,000 himself (6.2%). Only one gift, $100 from Brigham City, lists a Box Elder or Weber County address other than his own.</li>
+    <li><strong>A lobbying firm's check, and the same owner's campaign vendor.</strong> Stokes Strategies gave $1,000 on May 5. Bishop's largest vendor, Roost Co. ($3,303.15), is Roost Communications LLC, whose state-listed members are Spencer Stokes and Matthew J. Holton, at the same South Temple address as Stokes Strategies.</li>
+    <li><strong>Three Doers Network board members gave $2,100.</strong> Adam Gardiner ($1,000), Cody Stewart ($1,000) and Steve Hiatt ($100) sit on the Doers Network's county boards. The Doers Network itself does not appear as a Bishop donor in the state's 2026 records.</li>
+    <li><strong>$6,000 arrived the day before he was sworn in.</strong> On May 5, seven checks came from UCU PAC, Stokes Strategies, the Utah Association of Realtors, Comcast, Lincoln Hill Partners PAC, MJH Advisors and one individual. He took the oath May 6.</li>
+    <li><strong>One gift is reported differently by the giver.</strong> Bishop's report lists $1,000 from the Utah Association of Realtors. The Realtors' own Primary Report, amended June 16, lists a $1,000 payment to "Bishop for House" as deleted.</li>
+    <li><strong>A board seat on his form, and one that isn't.</strong> His form lists one board, Cambridge Prep Academy, a Provo charter school. The website of Utah Citizens, a group that organizes residents to contact legislators, presents him on its home page under "Our Leadership" and lists him on its "Board of Directors" page, but the group's state registry filing lists four directors and he is not one of them.</li>
+    <li><strong>Rich's campaign runs on party help.</strong> The Forward Party of Utah gave $2,554.42 in voter-data analysis and $500 in video production. His software company gave $550. Individuals gave $1,286, about $185 of it from Perry.</li>
+    <li><strong>Bishop has no state House votes yet.</strong> He was sworn in after the 2026 session ended, and no special session has been held since. His congressional record on public lands is graded below.</li>
+  </ol></div>
+</div></section>
+
+<section id="district"><div class="wrap">
+  <div class="eyebrow">THE DISTRICT</div>
+  <h2>Two Counties, One Seat</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>House District 6 crosses the Box Elder–Weber county line north and west of Ogden. Both candidates live in Box Elder County.</p>
+  <div class="map-card">
+    <div id="hd6map" class="lmap" role="img" aria-label="Map of Utah House District 6"></div>
+    <div class="map-key"><span><i style="background:rgba(18,48,74,.30);border-color:#12304a"></i>House District 6</span><span><i style="background:none;border-color:#14213D;border-width:1px"></i>County lines</span><span><i style="background:none;border-color:#6E4A78;border-style:dashed;border-width:1px"></i>City and town lines</span></div>
+    <p class="cap">District line from the Utah Geospatial Resource Center's 2022–2032 House districts; county, city and town lines from the U.S. Census Bureau, both through the Hive's <a href="https://weber-county-hive.github.io/utah-maps/">Utah Maps</a> files. Zoom in to see town names.</p>
+  </div>
+  <div class="map-card">
+<svg viewBox="0 0 800 560" role="img" aria-label="Schematic of places in Utah House District 6">
+  <rect x="0" y="0" width="800" height="560" fill="#f4f0e6"/>
+  <rect x="40" y="30" width="720" height="250" fill="#e3ece6" stroke="#9fb3a8" stroke-width="2"/>
+  <rect x="40" y="290" width="720" height="240" fill="#e6e9ef" stroke="#9fa9b8" stroke-width="2"/>
+  <text x="60" y="66" font-family="IBM Plex Mono, monospace" font-size="22" fill="#1d6b57" font-weight="600">BOX ELDER COUNTY</text>
+  <text x="60" y="326" font-family="IBM Plex Mono, monospace" font-size="22" fill="#1f4e6b" font-weight="600">WEBER COUNTY</text>
+  <line x1="40" y1="285" x2="760" y2="285" stroke="#5c6b66" stroke-width="3" stroke-dasharray="10 8"/>
+  <text x="560" y="276" font-family="IBM Plex Mono, monospace" font-size="16" fill="#4f5b58">county line</text>
+  <rect x="120" y="190" width="300" height="300" fill="none" stroke="#d9a441" stroke-width="4" stroke-dasharray="14 8" rx="16"/>
+  <text x="430" y="480" font-family="IBM Plex Mono, monospace" font-size="17" fill="#8a6d1f">places named in HD-6</text>
+  <circle cx="470" cy="110" r="10" fill="#4f5b58"/><text x="490" y="117" font-family="Source Serif 4, serif" font-size="24" fill="#1f2a2a">Brigham City</text>
+  <circle cx="300" cy="215" r="12" fill="#1d6b57"/><text x="320" y="223" font-family="Source Serif 4, serif" font-size="26" fill="#1f2a2a" font-weight="600">Perry</text>
+  <circle cx="230" cy="255" r="12" fill="#1d6b57"/><text x="250" y="270" font-family="Source Serif 4, serif" font-size="26" fill="#1f2a2a" font-weight="600">Willard</text>
+  <circle cx="200" cy="360" r="12" fill="#1f4e6b"/><text x="220" y="368" font-family="Source Serif 4, serif" font-size="26" fill="#1f2a2a" font-weight="600">Plain City</text>
+  <circle cx="300" cy="410" r="12" fill="#1f4e6b"/><text x="320" y="418" font-family="Source Serif 4, serif" font-size="26" fill="#1f2a2a" font-weight="600">Farr West (part)</text>
+  <circle cx="330" cy="460" r="12" fill="#1f4e6b"/><text x="350" y="468" font-family="Source Serif 4, serif" font-size="24" fill="#1f2a2a" font-weight="600">Marriott-Slaterville (part)</text>
+  <circle cx="610" cy="430" r="10" fill="#4f5b58"/><text x="630" y="437" font-family="Source Serif 4, serif" font-size="24" fill="#1f2a2a">Ogden</text>
+  <text x="60" y="140" font-family="IBM Plex Mono, monospace" font-size="16" fill="#4f5b58">Great Salt Lake &larr; west</text>
+</svg>
+    <p class="cap">A schematic, not a boundary map. Places are positioned roughly north to south. The list of places in the district is from the Standard-Examiner (Dec. 31, 2025). Ogden is shown for reference only; part of Brigham City is in the district (see the map above). For the exact line, use the Utah Legislature's House District 6 profile or its interactive district map. Rich's campaign site lists two more places as part of the district: "the east side of Brigham" and Pleasant View. The state's district map above agrees: the district takes in Pleasant View and reaches into part of Brigham City.</p>
+  </div>
+  <p><strong>How Bishop got the seat.</strong> Rep. Matthew Gwynn resigned in March, citing family reasons (KSL). Republican delegates picked Bishop at the state convention on April 25 (KSL). He was sworn in May 6 and serves through January 2027 (KUTV). He is also the Republican nominee for the full term.</p>
+  <p><strong>Who he is.</strong> He taught high school history, government, debate and German at Box Elder and Ben Lomond high schools from 1974 to 2002, served in the Utah House from 1979 to 1994 (Speaker in his last two years), chaired the Utah Republican Party from 1997 to 2001, and represented Utah's 1st Congressional District from 2003 to 2021, where he chaired the House Natural Resources Committee (his bio on utahconstitution.com; KUTV). His disclosure form lists him as retired, most recently an adjunct teacher at Utah State University.</p>
+  <p><strong>Who Rich is.</strong> James David Rich of Perry is president and a full-time software developer at Edward A.E. Rich and Associates, a Salt Lake City business-accounting software company (his disclosure form). BallotReady lists a University of Utah bachelor's degree (2002) and his presidency of the company since 2008. He is the Forward Party nominee. No Democrat filed.</p>
+  <p><strong>In his own bio.</strong> His campaign site says he started at the company in an entry-level job, learned business software programming from his father, and bought the company in 2008. He studied jazz composition at the University of Utah, along with math and physics, and was student body vice president at Olympus High School in Salt Lake City. He calls Perry his hometown and says he volunteers as a morning crossing guard at Promontory School (move.forwardwith.us, About and People and Places pages, read Oct. 2, 2026).</p>
+</div></section>
+
+<section id="words"><div class="wrap">
+  <div class="eyebrow">QUICK RECAP</div>
+  <h2>Words Used on This Page</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Tap any card to see what the word means.</p>
+  <div class="flip-grid">
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">In-kind</div><div class="label">HELP INSTEAD OF CASH</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>Goods or services given to a campaign and reported at their value, like voter data, video work or T-shirts.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">Lobbying firm</div><div class="label">PAID TO PERSUADE LAWMAKERS</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>A business hired by companies or groups to talk to legislators about bills. Several of Bishop's donors are lobbying firms or their PACs.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">Campaign vendor</div><div class="label">WHO THE CAMPAIGN PAYS</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>A business paid from campaign funds, such as a consultant, printer or mail house. Bishop's largest is Roost Co.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">Amended / deleted</div><div class="label">AN ENTRY CHANGED AFTER FILING</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>The state system marks entries that were changed or removed after a report was first filed. Amending a report is allowed and common.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">Disclosure form</div><div class="label">THE CONFLICT-OF-INTEREST FORM</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>A state form every legislative candidate files listing jobs, businesses, income sources, stocks and board seats, paid or unpaid.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">Antiquities Act</div><div class="label">HOW PRESIDENTS CREATE MONUMENTS</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>A 1906 law letting a president protect federal land as a national monument. Bishop's 2017 bill would have changed it; it did not pass.</div></div></div></button>
+  </div>
+</div></section>
+
+<section id="bishop-money"><div class="wrap">
+  <div class="eyebrow">BISHOP'S MONEY IN</div>
+  <h2>$32,181 From 40 Entries; One From a District Town</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>About half of Bishop's money came from businesses and trade groups that work with the Legislature. Most of the rest came from people in Salt Lake, Davis and Utah counties, plus two big personal checks from Logan and Salt Lake City.</p>
+  <p class="section-dek">From his state data export (Convention, Primary and September 30th reports, Jan. 1 to Sept. 25, 2026). No rows are marked deleted. Eleven entries, all from late April and May, are marked as amended. The export has no balance summary, so cash on hand isn't shown. By our math, money in minus money out for 2026 is $24,572.07, not counting any balance carried from earlier years.</p>
+  <div class="two">
+    <div class="chart-card"><h3>Who gave</h3><p class="cap">Share of $32,181</p><div class="chart-box"><canvas id="bishopDonut" aria-label="Donut chart of Bishop contributions by type"></canvas></div></div>
+    <div class="chart-card"><h3>Groups by industry</h3><p class="cap">The $18,251 from 22 businesses, PACs and associations</p>
+      <div class="fund-bar-row"><div class="bar-label"><span>Mining, construction and home building: Provo Mining and Construction $5,000, Home Builders Association $750, Utah Mining Association $500, Clyde Companies $500</span><span>$6,750</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:100%"></div></div></div>
+      <div class="fund-bar-row"><div class="bar-label"><span>Credit unions, realtors, auto dealers, bankers: UCU PAC $2,000, Utah Assn. of Realtors $1,000, UCAR PAC $751, Utah Bankers PAC $250</span><span>$4,001</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:59%"></div></div></div>
+      <div class="fund-bar-row"><div class="bar-label"><span>Lobbying and law: Stokes Strategies $1,000, Utah Assn. for Justice $1,000, Lincoln Hill Partners PAC $500, MJH Advisors $250, Holland &amp; Hart $250</span><span>$3,000</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:44%"></div></div></div>
+      <div class="fund-bar-row"><div class="bar-label"><span>Energy, telecom and tech: Comcast $1,000, Marathon Petroleum $500, Utah Rural Electric PAC $500, SEL Inc $250</span><span>$2,250</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:33%"></div></div></div>
+      <div class="fund-bar-row"><div class="bar-label"><span>Education, public employees and other: Education First Utah $1,000, Citizen Action by Public Employees $500, Arts Learning Program friends group $250, TAXPAC $250, Utah Victory PAC (Bethesda, Md.) $250</span><span>$2,250</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:33%"></div></div></div>
+    </div>
+  </div>
+  <div class="flip-grid">
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$10,000</div><div class="label">IN TWO CHECKS</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>Provo Mining and Construction of Spanish Fork gave $5,000 (Feb. 26). Tim &amp; Marcia Stewart of Logan gave $5,000 (April 28). Together they are 31% of everything he raised.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$6,000</div><div class="label">ON MAY 5, THE DAY BEFORE THE OATH</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>UCU PAC $2,000; Stokes Strategies, Utah Assn. of Realtors and Comcast $1,000 each; Lincoln Hill Partners PAC $500; MJH Advisors and Wayne Bradshaw $250 each. The filing shows dates, not how the checks were gathered.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$5,200</div><div class="label">FROM 9 PEOPLE ON JUNE 22</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>Thomas E. Wright $2,500, Cody Stewart $1,000, Luke Johnson $500, five people at $250 or $100, and Steve Hiatt $100. All list Davis, Salt Lake or Utah County addresses.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$100</div><div class="label">FROM A BOX ELDER OR WEBER ADDRESS</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>Ernie Harwell of Brigham City, $100 (April 17). No donor lists Plain City, Willard, Perry, Pleasant View, Farr West or Marriott-Slaterville. Only part of Brigham City is in the district, so whether this gift is from inside it isn't known. Bishop's own $2,000 lists his Brigham City address.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$2,000</div><div class="label">FROM HIMSELF, MARKED AS LOANS</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>$1,000 on Jan. 7 and $1,000 on Feb. 10, both in the loan column. On April 17 the campaign paid "Rob Bishop" $1,094.56, purpose "Other." The export doesn't say whether that repaid a loan or reimbursed expenses.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$1,850</div><div class="label">FROM OUT OF STATE</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>Comcast Financial Agency Corp. (Philadelphia) $1,000, Marathon Petroleum (Findlay, Ohio) $500, Utah Victory PAC (Bethesda, Md.) $250 and David Ure (Elk Creek, Mo.) $100.</div></div></div></button>
+  </div>
+  <details class="ledger"><summary>See all 40 Bishop contributions</summary><div class="table-scroll"><table class="entity-table">
+    <tr><th>Date</th><th>From</th><th>City</th><th>Report</th><th>Note</th><th>Amount</th></tr>
+    <tr><td>1/6/26</td><td>Jennifer Brown</td><td>Bountiful</td><td>Convention</td><td></td><td class="num">$30.00</td></tr>
+    <tr><td>1/7/26</td><td>Utah Association for Justice Inc</td><td>Salt Lake City</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+    <tr><td>1/7/26</td><td>Rob Bishop</td><td>Brigham City</td><td>Convention</td><td>Loan</td><td class="num">$1,000.00</td></tr>
+    <tr><td>2/10/26</td><td>Rob Bishop</td><td>Brigham City</td><td>Convention</td><td>Loan</td><td class="num">$1,000.00</td></tr>
+    <tr><td>2/11/26</td><td>Education First Utah</td><td>Centerville</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+    <tr><td>2/26/26</td><td>Adam Gardiner</td><td>West Jordan</td><td>Convention</td><td></td><td class="num">$1,000.00</td></tr>
+    <tr><td>2/26/26</td><td>Provo Mining and Construction</td><td>Spanish Fork</td><td>Convention</td><td></td><td class="num">$5,000.00</td></tr>
+    <tr><td>4/16/26</td><td>Stuart Clason</td><td>Salt Lake City</td><td>Primary</td><td></td><td class="num">$250.00</td></tr>
+    <tr><td>4/17/26</td><td>Utah Rural Electric PAC</td><td>South Jordan</td><td>Primary</td><td></td><td class="num">$500.00</td></tr>
+    <tr><td>4/17/26</td><td>David Ure</td><td>Elk Creek, Mo.</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+    <tr><td>4/17/26</td><td>Ernie Harwell</td><td>Brigham City</td><td>Primary</td><td></td><td class="num">$100.00</td></tr>
+    <tr><td>4/28/26</td><td>Utah Mining Association</td><td>Salt Lake City</td><td>Primary</td><td>Amended</td><td class="num">$500.00</td></tr>
+    <tr><td>4/28/26</td><td>Tim &amp; Marcia Stewart</td><td>Logan</td><td>Primary</td><td>Amended</td><td class="num">$5,000.00</td></tr>
+    <tr><td>4/28/26</td><td>TAXPAC</td><td>Salt Lake City</td><td>Primary</td><td>Amended</td><td class="num">$250.00</td></tr>
+    <tr><td>5/5/26</td><td>MJH Advisors</td><td>Salt Lake City</td><td>Primary</td><td>Amended</td><td class="num">$250.00</td></tr>
+    <tr><td>5/5/26</td><td>Stokes Strategies</td><td>Salt Lake City</td><td>Primary</td><td>Amended</td><td class="num">$1,000.00</td></tr>
+    <tr><td>5/5/26</td><td>Utah Association of Realtors</td><td>Sandy</td><td>Primary</td><td>Amended</td><td class="num">$1,000.00</td></tr>
+    <tr><td>5/5/26</td><td>Wayne Bradshaw</td><td>Salt Lake City</td><td>Primary</td><td>Amended</td><td class="num">$250.00</td></tr>
+    <tr><td>5/5/26</td><td>Lincoln Hill Partners PAC</td><td>Salt Lake City</td><td>Primary</td><td>Amended</td><td class="num">$500.00</td></tr>
+    <tr><td>5/5/26</td><td>UCU Political Action Committee</td><td>Salt Lake City</td><td>Primary</td><td>Amended</td><td class="num">$2,000.00</td></tr>
+    <tr><td>5/5/26</td><td>Comcast Financial Agency Corporation</td><td>Philadelphia, Pa.</td><td>Primary</td><td>Amended</td><td class="num">$1,000.00</td></tr>
+    <tr><td>6/15/26</td><td>Marathon Petroleum Corporation</td><td>Findlay, Ohio</td><td>Sept. 30th</td><td></td><td class="num">$500.00</td></tr>
+    <tr><td>6/15/26</td><td>Clyde Companies Inc</td><td>Orem</td><td>Sept. 30th</td><td></td><td class="num">$500.00</td></tr>
+    <tr><td>6/15/26</td><td>Utah Victory PAC</td><td>Bethesda, Md.</td><td>Sept. 30th</td><td></td><td class="num">$250.00</td></tr>
+    <tr><td>6/17/26</td><td>Friends of the Beverly Taylor Sorenson Art Learning Program</td><td>Salt Lake City</td><td>Sept. 30th</td><td></td><td class="num">$250.00</td></tr>
+    <tr><td>6/22/26</td><td>Cody Stewart</td><td>Farmington</td><td>Sept. 30th</td><td></td><td class="num">$1,000.00</td></tr>
+    <tr><td>6/22/26</td><td>Luke Johnson</td><td>Farmington</td><td>Sept. 30th</td><td></td><td class="num">$500.00</td></tr>
+    <tr><td>6/22/26</td><td>Steve Hiatt</td><td>Kaysville</td><td>Sept. 30th</td><td></td><td class="num">$100.00</td></tr>
+    <tr><td>6/22/26</td><td>Amy Newson</td><td>Salt Lake City</td><td>Sept. 30th</td><td></td><td class="num">$250.00</td></tr>
+    <tr><td>6/22/26</td><td>Alexander Tarbet</td><td>Kaysville</td><td>Sept. 30th</td><td></td><td class="num">$250.00</td></tr>
+    <tr><td>6/22/26</td><td>Thomas E. Wright</td><td>Salt Lake City</td><td>Sept. 30th</td><td></td><td class="num">$2,500.00</td></tr>
+    <tr><td>6/22/26</td><td>Michael Squires</td><td>Murray</td><td>Sept. 30th</td><td></td><td class="num">$250.00</td></tr>
+    <tr><td>6/22/26</td><td>Jeff Hartley</td><td>Highland</td><td>Sept. 30th</td><td></td><td class="num">$250.00</td></tr>
+    <tr><td>6/22/26</td><td>Michael Green</td><td>Draper</td><td>Sept. 30th</td><td></td><td class="num">$100.00</td></tr>
+    <tr><td>6/26/26</td><td>Utah Bankers Association State PAC</td><td>Salt Lake City</td><td>Sept. 30th</td><td></td><td class="num">$250.00</td></tr>
+    <tr><td>9/8/26</td><td>Citizen Action by Public Employees</td><td>Murray</td><td>Sept. 30th</td><td></td><td class="num">$500.00</td></tr>
+    <tr><td>9/8/26</td><td>Holland &amp; Hart</td><td>Salt Lake City</td><td>Sept. 30th</td><td></td><td class="num">$250.00</td></tr>
+    <tr><td>9/8/26</td><td>UCAR PAC</td><td>Murray</td><td>Sept. 30th</td><td></td><td class="num">$751.00</td></tr>
+    <tr><td>9/8/26</td><td>SEL Inc</td><td>Pleasant Grove</td><td>Sept. 30th</td><td></td><td class="num">$250.00</td></tr>
+    <tr><td>9/8/26</td><td>Home Builders Association of Utah</td><td>Draper</td><td>Sept. 30th</td><td></td><td class="num">$750.00</td></tr>
+    <tr><td colspan="5"><strong>Total</strong></td><td class="num"><strong>$32,181.00</strong></td></tr>
+  </table></div></details>
+</div></section>
+
+<section id="loop"><div class="wrap">
+  <div class="eyebrow">WHERE BISHOP'S MONEY GOES, AND WHO IS ON BOTH ENDS</div>
+  <h2>$7,608.93 Out: 77% to Two Consulting Firms</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Most of what Bishop's campaign spent went to two consulting firms. One of them is co-owned by the man whose lobbying firm also gave Bishop money. That is legal. It means the same people are on both sides of the ledger.</p>
+  <div class="table-scroll"><table class="entity-table">
+    <tr><th>Paid to</th><th>Dates</th><th>Purpose on the report</th><th>Amount</th></tr>
+    <tr><td>Roost Co.</td><td>4/17, 4/28 (amended)</td><td>Campaign Expense</td><td class="num">$3,303.15</td></tr>
+    <tr><td>AC Strategies</td><td>7/21</td><td>Campaign Expense</td><td class="num">$2,553.05</td></tr>
+    <tr><td>Rob Bishop</td><td>4/17</td><td>Other</td><td class="num">$1,094.56</td></tr>
+    <tr><td>Weber County GOP</td><td>9/4</td><td>Donations</td><td class="num">$250.00</td></tr>
+    <tr><td>USPS</td><td>4/8, 4/15 (two)</td><td>Campaign Expense</td><td class="num">$225.99</td></tr>
+    <tr><td>Stripe</td><td>6/22</td><td>Campaign Expense</td><td class="num">$153.50</td></tr>
+    <tr><td>AFCU</td><td>1/4</td><td>Campaign Expense</td><td class="num">$28.68</td></tr>
+    <tr><td colspan="3"><strong>Total</strong></td><td class="num"><strong>$7,608.93</strong></td></tr>
+  </table></div>
+  <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    SS["Stokes Strategies<br/>(Spencer Stokes's firm)"] -->|"$1,000 · May 5"| RB(["REP. ROB BISHOP<br/>HD-6"])
+    MJH["MJH Advisors"] -->|"$250 · May 5"| RB
+    RB -->|"$3,303.15"| RO["Roost Co.<br/>members: Spencer Stokes,<br/>Matthew J. Holton"]
+    RB -->|"$2,553.05"| AC["AC Strategies"]
+    SS -.-|"same owner,<br/>same address"| RO
+    UAR["Utah Assn. of Realtors"] -->|"$1,000 on his report"| RB
+    UAR -.->|"paid AC Strategies;<br/>those 3 entries deleted 6/16"| AC
+</div>
+<p class="cap">Solid arrows are money as filed on Bishop's report. Dotted lines are ownership from state business records, or entries on the Realtors' own report. A connection is not an accusation.</p>
+  </div>
+  <div class="record-card">
+    <h3>Who these firms are</h3>
+    <p><strong>Roost Co.</strong> is Roost Communications LLC (state entity 13310231-0160, formed March 15, 2023). State business records list its members as Spencer Stokes and Matthew J. Holton, with Stokes as registered agent, at 505 East South Temple, Suite 200. Stokes Strategies, Stokes's lobbying firm, gives from the same address; Bishop's report lists that address for its $1,000. Roost also appears as a vendor in the Hive's HD-10, HD-17 and SD-5 files.</p>
+    <p><strong>MJH Advisors</strong> ($250) is the firm of registered lobbyist Matt Holton, per the Hive's earlier lobbyist research. State records list Roost member Matthew J. Holton at 7430 South Parkridge Circle; Bishop's report lists MJH Advisors at 7340 South Parkridge Circle. If these are the same Holton, both of Roost's owners' lobbying firms gave on May 5, and Roost was Bishop's largest vendor.</p>
+    <p><strong>AC Strategies</strong> received $2,553.05 on July 21. Bishop's report gives no address for it. Utah's Division of Corporations lists one Utah company by that name: <strong>AC Strategies, LLC</strong> (entity 12115697-0160), formed Jan. 14, 2021, with one member, Richard Austin Cox of Midvale. The state <strong>administratively dissolved it on June 26, 2024</strong> after it missed its renewal; it shows as inactive. Bishop's payment is dated July 21, 2026, two years later. His report gives no address for the payee, so the record doesn't show whether this is the same business, a business using the name another way, or a company registered elsewhere (active companies named AC Strategies exist in Delaware, California, Maryland, Tennessee, Ohio, Texas and Alabama). Education First and the Utah Association of Realtors also reported 2026 payments to "AC Strategies" (below). Education First, which gave Bishop $1,000, paid AC Strategies $1,355 for signature gathering on May 1, 2026, per the Hive's Education First file. The Utah Association of Realtors' own Primary Report shows three payments to "AC Strategies LLC" ($20,000, $3,000 and $2,500, the last for "Signature Gathering"), all marked deleted in its June 16 amendment.</p>
+  </div>
+  <div class="flag"><strong>Two filings, two answers.</strong> Bishop's report lists $1,000 from the Utah Association of Realtors, dated May 5, marked as amended. The Realtors' own Primary Report, amended June 16, lists a $1,000 payment to "Bishop for House" dated May 6 among 433 entries it deleted. Both amounts are shown here; the filings don't explain the difference.</div>
+</div></section>
+
+<section id="rich-money"><div class="wrap">
+  <div class="eyebrow">RICH'S MONEY</div>
+  <h2>$1,149 in Cash, $4,034 in Help</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Rich has raised little cash. Most of his support is work done for him: voter data and a video from the Forward Party, web tools from his own company, and shirts, signs and photos from supporters.</p>
+  <p class="section-dek">From his state data export (Convention, Primary and September 30th reports). Three rows are marked deleted with no details. Seven expense rows, mostly bank fees, are marked amended. By our math, cash in minus cash out for 2026 is $161.69.</p>
+  <div class="two">
+    <div class="chart-card"><h3>Who gave</h3><p class="cap">Share of $5,182.86, cash and in-kind</p><div class="chart-box"><canvas id="richDonut" aria-label="Donut chart of Rich support by type"></canvas></div></div>
+    <div class="chart-card"><h3>The largest pieces</h3><p class="cap">Every entry of $150 or more</p>
+      <div class="fund-bar-row"><div class="bar-label"><span>Forward Party of Utah: voter data analysis, in-kind (May 18)</span><span>$2,554.42</span></div><div class="fund-bar-track"><div class="fund-bar-fill alt" style="width:100%"></div></div></div>
+      <div class="fund-bar-row"><div class="bar-label"><span>Edward A.E. Rich &amp; Associates (his company): web development tools, in-kind (Jan. 31)</span><span>$500</span></div><div class="fund-bar-track"><div class="fund-bar-fill alt" style="width:20%"></div></div></div>
+      <div class="fund-bar-row"><div class="bar-label"><span>Forward Party of Utah: video production, in-kind (Aug. 18)</span><span>$500</span></div><div class="fund-bar-track"><div class="fund-bar-fill alt" style="width:20%"></div></div></div>
+      <div class="fund-bar-row"><div class="bar-label"><span>Mike Sims, Ogden: shirts and signs, in-kind (Aug. 27)</span><span>$304.59</span></div><div class="fund-bar-track"><div class="fund-bar-fill alt" style="width:12%"></div></div></div>
+      <div class="fund-bar-row"><div class="bar-label"><span>Cal-Pro Inc., Ogden (June 12)</span><span>$200</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:8%"></div></div></div>
+      <div class="fund-bar-row"><div class="bar-label"><span>John Goodell, Salt Lake City (two gifts)</span><span>$200</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:8%"></div></div></div>
+      <div class="fund-bar-row"><div class="bar-label"><span>Rachel Smith, Perry: photography, in-kind (two)</span><span>$175</span></div><div class="fund-bar-track"><div class="fund-bar-fill" style="width:7%"></div></div></div>
+    </div>
+  </div>
+  <div class="flip-grid">
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$301</div><div class="label">FROM THREE DONORS NAMED RICH</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>Amy Rich ($100), Edward Rich ($101) and Morrissa Rich ($100), all at one Holladay address. The filing doesn't state their relationship to the candidate.</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$107.99</div><div class="label">GIVEN TO TWO OTHER FORWARD CANDIDATES</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>On April 29 his campaign paid "Libby for Utah" $53.99 (HD-8's Libby Shelton) and the "Gary C. New Campaign" $54 (Weber Commission Seat A), both filed as "Donations."</div></div></div></button>
+    <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+      <div class="flip-face flip-front"><div class="num">$987.16</div><div class="label">SPENT IN 2026</div><div class="hint">tap for the detail</div></div>
+      <div class="flip-face flip-back"><div>Vistaprint $298.35, CheaperThanShirt $197.91, campaignverify.org $95, Box Elder County Clerk filing fee $83.86, Zions Bank fees $72, WinCo $42.26, Women's Work $35 ("Political Support"), PayPal fees, Maverik and a web domain.</div></div></div></button>
+  </div>
+  <div class="flag"><strong>One gift, two descriptions.</strong> Rich's report shows $53.99 paid to "Libby for Utah" on April 29, filed as a donation. Shelton's report shows a $53.99 in-kind gift of door hangers from "MoveForwardWithUs," first dated April 29, removed by amendment June 16 and entered again dated Aug. 1. "MoveForwardWithUs" is the name in the copyright line of Rich's campaign website. The amounts and first dates match; the filings don't say whether these are the same door hangers. Separately, Shelton's report lists a Sept. 5 Tomato Days booth that "will be reimbursed by Gary C New $34 and James Rich $33"; Rich's report through Sept. 25 shows no $33 payment.</div>
+  <details class="ledger"><summary>See all 22 Rich contributions</summary><div class="table-scroll"><table class="entity-table">
+    <tr><th>Date</th><th>From</th><th>City</th><th>Type</th><th>Amount</th></tr>
+    <tr><td>1/6/26</td><td>James Rich</td><td>Perry</td><td>Cash (filing fee)</td><td class="num">$83.86</td></tr>
+    <tr><td>1/19/26</td><td>James Rich</td><td>Perry</td><td>Cash (web domain)</td><td class="num">$8.99</td></tr>
+    <tr><td>1/29/26</td><td>Edward A. E. Rich &amp; Associates</td><td>Salt Lake City</td><td>Cash</td><td class="num">$50.00</td></tr>
+    <tr><td>1/31/26</td><td>Rachel Smith</td><td>Perry</td><td>In-kind: photo shoot</td><td class="num">$150.00</td></tr>
+    <tr><td>1/31/26</td><td>Edward A. E. Rich &amp; Associates</td><td>Salt Lake City</td><td>In-kind: web development tools</td><td class="num">$500.00</td></tr>
+    <tr><td>2/2/26</td><td>Albert Lyons</td><td>Salt Lake City</td><td>Cash</td><td class="num">$100.00</td></tr>
+    <tr><td>2/2/26</td><td>Amy Rich</td><td>Holladay</td><td>Cash</td><td class="num">$100.00</td></tr>
+    <tr><td>2/4/26</td><td>Rachel Smith</td><td>Perry</td><td>In-kind: photography</td><td class="num">$25.00</td></tr>
+    <tr><td>2/11/26</td><td>John Goodell</td><td>Salt Lake City</td><td>Cash</td><td class="num">$100.00</td></tr>
+    <tr><td>2/12/26</td><td>Edward Rich</td><td>Holladay</td><td>Cash</td><td class="num">$100.00</td></tr>
+    <tr><td>2/12/26</td><td>Morrissa Rich</td><td>Holladay</td><td>Cash</td><td class="num">$100.00</td></tr>
+    <tr><td>2/12/26</td><td>Edward Rich</td><td>Holladay</td><td>Cash</td><td class="num">$1.00</td></tr>
+    <tr><td>3/30/26</td><td>Greg Greer</td><td>Meridian, Idaho</td><td>Cash</td><td class="num">$25.00</td></tr>
+    <tr><td>5/18/26</td><td>Forward Party of Utah</td><td>Draper</td><td>In-kind: voter data analysis</td><td class="num">$2,554.42</td></tr>
+    <tr><td>6/12/26</td><td>Cal-Pro Inc.</td><td>Ogden</td><td>Cash</td><td class="num">$200.00</td></tr>
+    <tr><td>7/14/26</td><td>David Hinckley</td><td>Orem</td><td>Cash</td><td class="num">$20.00</td></tr>
+    <tr><td>7/17/26</td><td>John Goodell</td><td>Salt Lake City</td><td>Cash</td><td class="num">$100.00</td></tr>
+    <tr><td>8/18/26</td><td>Forward Party of Utah</td><td>Draper</td><td>In-kind: video production</td><td class="num">$500.00</td></tr>
+    <tr><td>8/27/26</td><td>Mike Sims</td><td>Ogden</td><td>In-kind: shirts and signs</td><td class="num">$304.59</td></tr>
+    <tr><td>9/8/26</td><td>Nathan Carl Tenney</td><td>Perry</td><td>Cash</td><td class="num">$10.00</td></tr>
+    <tr><td>9/12/26</td><td>Kerry Wayne</td><td>Ogden</td><td>Cash</td><td class="num">$100.00</td></tr>
+    <tr><td>9/23/26</td><td>Elena Montenegro-Long</td><td>Ogden</td><td>Cash</td><td class="num">$50.00</td></tr>
+    <tr><td colspan="4"><strong>Total ($1,148.85 cash + $4,034.01 in-kind)</strong></td><td class="num"><strong>$5,182.86</strong></td></tr>
+  </table></div></details>
+</div></section>
+
+<section id="periods"><div class="wrap">
+  <div class="eyebrow">REPORT BY REPORT</div>
+  <h2>When the Money Came In</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Bishop raised money steadily all year. Rich's biggest month was the voter data his party gave him in May.</p>
+  <div class="chart-card"><h3>Raised and spent, by report</h3><p class="cap">Convention (through March 30), Primary (March 31 to June 11) and September 30th (June 12 to Sept. 25). Rich's in-kind help is counted as raised.</p><div class="chart-box" style="height:320px;"><canvas id="periodChart" aria-label="Bar chart of money raised and spent by report period"></canvas></div></div>
+  <div class="table-scroll"><table class="entity-table">
+    <tr><th>Report</th><th>Bishop raised</th><th>Bishop spent</th><th>Rich raised</th><th>Rich spent</th></tr>
+    <tr><td>Convention</td><td class="num">$10,030.00</td><td class="num">$124.17</td><td class="num">$1,343.85</td><td class="num">$142.48</td></tr>
+    <tr><td>Primary</td><td class="num">$12,700.00</td><td class="num">$4,528.21</td><td class="num">$2,554.42</td><td class="num">$289.22</td></tr>
+    <tr><td>September 30th</td><td class="num">$9,451.00</td><td class="num">$2,956.55</td><td class="num">$1,284.59</td><td class="num">$555.46</td></tr>
+    <tr><td><strong>2026 total</strong></td><td class="num"><strong>$32,181.00</strong></td><td class="num"><strong>$7,608.93</strong></td><td class="num"><strong>$5,182.86</strong></td><td class="num"><strong>$987.16</strong></td></tr>
+  </table></div>
+</div></section>
+
+<section id="disclosure"><div class="wrap">
+  <div class="eyebrow">THE DISCLOSURE FORMS</div>
+  <h2>What Each Candidate Listed</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Rich listed his company, his income source, two stocks and his wife's employer. Bishop listed himself as retired with one board seat. A group's website lists him on its board, and that group isn't on his form.</p>
+  <div class="table-scroll"><table class="entity-table">
+    <tr><th>Item</th><th>Bishop (R), signed "Rob Bishop"</th><th>Rich (Forward), signed "James Rich"</th></tr>
+    <tr><td>Employers</td><td>Current: Retired. Previous: Utah State University, Logan, adjunct teacher</td><td>Edward A.E. Rich and Associates, Salt Lake City; full-time software developer, President (current and previous)</td></tr>
+    <tr><td>Owner or officer</td><td>N/A</td><td>Edward A.E. Rich and Associates (business accounting software development), President</td></tr>
+    <tr><td>$5,000+ income</td><td>N/A</td><td>Edward A.E. Rich and Associates</td></tr>
+    <tr><td>Stocks of $5,000+</td><td>N/A</td><td>Advanced Micro Devices ("Computer microchips"); Ferrari N.V. ("Luxury vehicles")</td></tr>
+    <tr><td>Boards, paid or unpaid</td><td>Cambridge Prep Academy, board member</td><td>None</td></tr>
+    <tr><td>Optional: property</td><td>"Homeowner"</td><td>Blank</td></tr>
+    <tr><td>Spouse</td><td>Jeralynn; no employers listed</td><td>Amy Ann Rich; employer Paramount Massage (listed under the question asked only if the filer sees a possible conflict)</td></tr>
+    <tr><td>Optional: other</td><td>Blank</td><td>Blank</td></tr>
+  </table></div>
+  <p style="font-size:.9rem;color:var(--color-ink-soft);margin-top:8px;">Both forms were read as filed text, pasted from disclosures.utah.gov on Oct. 2, 2026.</p>
+  <div class="record-card">
+    <h3>The board seat on his form: Cambridge Prep</h3>
+    <p>Cambridge Preparatory Academy is a K-8 charter school at 1724 South State Street in Provo, capped at 450 students, authorized by the State Charter School Board. Its charter application, posted on the state's Public Notice Website, lists "Robert Bishop (Director)" with the bio "Educator-Semi-retired." The board chair listed is Stan Lockhart. On Feb. 12, 2026, the State Charter School Board voted to let the school open in fall 2026 instead of 2027-28. The Hive did not confirm that it opened.</p>
+    <p>Cambridge Preparatory Academy, Inc. is a Utah nonprofit corporation (entity 14592591-0140) formed July 21, 2025; Stan Lockhart is its registered agent and incorporator. March 2026 State Board of Education minutes record the school withdrawing a waiver request.</p>
+    <p><strong>Where it meets his donors:</strong> SEL Inc of Pleasant Grove gave Bishop $250 on Sept. 8. The Hive's earlier research, from a copy of state business records, lists Stan Lockhart as SEL Inc's registered agent. Education First Utah, an education-policy group, gave $1,000. As a legislator he votes on charter-school funding and rules.</p>
+  </div>
+  <div class="record-card">
+    <h3>A board page that isn't on his form: Utah Citizens</h3>
+    <p>The website utahconstitution.com, signed "Utah Citizens," organizes "Impact Councils" of residents who text and email their legislators weekly using talking points the group provides. Its home page quotes Bishop under "Our Leadership": "Federalism is the government system that provides the solution to our problems and the salvation of our nation." Its page headed "Board of Directors" lists him with eight others, including former Rep. Phil Lyman and Jen Brown.</p>
+    <p>The state form asks for every entity in which the filer serves "in a paid or unpaid position on a board of directors." His form lists only Cambridge Prep. The site gives no legal name, nonprofit status or address. Utah's Division of Corporations lists <strong>Utah Citizens for the Constitution</strong>, a nonprofit corporation (entity 12373457-0140) formed June 30, 2021, active and last renewed June 30, 2026. Jennifer Brown, who is on the site's board list, is its registered agent and one of its directors. The site itself never uses the full name, so the match between the website and the registered corporation rests on the name and on Jennifer Brown appearing on both. The registry lists four directors, last updated in September 2024: Brooke Johnson, Douglas Brunnette, Kent Nelson and Jennifer Brown. <strong>Bishop is not among the directors in the state registry.</strong> So the group's website and its state filing list different boards: the website names nine people, including Bishop, while the registry names four, three of whom appear on the website only as profile pages. On this record, his form's answer matches the state registry; the website does not.</p>
+    <span class="rc-tag">Site pages read through a text fetch, Oct. 2, 2026; registry record from the Utah Division of Corporations page, pasted Oct. 2, 2026</span>
+    <p><strong>His old federal committee gave it money.</strong> On March 4, 2022, "Rob Bishop for Congress" paid Utah Citizens for the Constitution $2,000, listed as a contribution (FEC report #1579478). See "Forty-Seven Years in Utah Politics."</p>
+    <p><strong>One of its directors gave to Bishop.</strong> Bishop's $30 donor on Jan. 6, 2026, "Jennifer Brown" of Bountiful, lists the same mailing address the registry gives for Utah Citizens for the Constitution. Jennifer Brown is the group's registered agent and a director.</p>
+  </div>
+  <div class="record-card">
+    <h3>Rich's form</h3>
+    <p>Every required section is filled in. He also lists his wife's employer, which the form asks for only when the filer believes it may be a conflict. His company is a private software business; his stocks are in two large public companies.</p>
+  </div>
+</div></section>
+
+<section id="record"><div class="wrap">
+  <div class="eyebrow">BISHOP'S RECORD</div>
+  <h2>No State Votes Yet; a Long Federal Record</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Bishop joined after this year's session, so he hasn't cast a vote in the Utah House this term. He serves on the Legislature's Federalism Commission. In Congress, his best-known work was on federal land, and that record is graded below.</p>
+  <div class="record-card">
+    <h3>Utah House, 2026</h3>
+    <p>Sworn in May 6, 2026, after the 2026 General Session ended March 6. The Legislature's website lists no special session since then, so there are no floor votes to grade. <strong>Grade: PENDING.</strong></p>
+    <p><strong>Committee.</strong> The Legislature's 2026 interim roster for the Federalism Commission lists Rep. Rob Bishop as a voting member. Its nonvoting members include former congressmen Jason Chaffetz, Chris Stewart and Ben McAdams. Before he returned to the Legislature, an Aug. 18, 2025 commission agenda listed him presenting on federal involvement in education.</p>
+    <p><strong>Not on the record:</strong> no public statement by Bishop on the proposed Stratos data center in Box Elder County's Hansel Valley was found in KSL, Utah News Dispatch, the Salt Lake Tribune, KUER or UPR coverage.</p>
+  </div>
+  <div class="record-card">
+    <h3>Congress, 2003–2021: items tied to public land and conservation</h3>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Item</th><th>His role</th><th>What happened</th></tr>
+      <tr><td>S. 47, John D. Dingell Jr. Conservation, Management, and Recreation Act (2019)</td><td>Voted yes (House roll call 95, Feb. 26, 2019, 363–62)</td><td>Became law. It permanently reauthorized the Land and Water Conservation Fund and designated more than 700,000 acres of new wilderness in Emery County, Utah (Senate Republican Policy Committee summary).</td></tr>
+      <tr><td>H.R. 1957, Great American Outdoors Act (2020)</td><td>Voted no (House roll call 155, July 22, 2020, 310–107)</td><td>Became law Aug. 4, 2020. It set permanent, mandatory funding of $900 million a year for the Land and Water Conservation Fund and $9.5 billion over five years for maintenance on public lands. Utah Reps. Curtis and Stewart also voted no; Rep. McAdams voted yes.</td></tr>
+      <tr><td>Land and Water Conservation Fund lapses (2015, 2018)</td><td>Committee chair</td><td>The fund expired Sept. 30, 2015 and again Sept. 30, 2018. In 2015 he told the Salt Lake Tribune, "I'm not going to sell out short, just because someone wants to keep abusing this money and create a slush fund." In September 2018 his committee approved his substitute to H.R. 502, a reauthorization, by voice vote (House Report 115-1091).</td></tr>
+      <tr><td>H.R. 3990, National Monument Creation and Protection Act (2017)</td><td>Primary sponsor</td><td>Would have changed the Antiquities Act, requiring county, state legislature and governor approval for mid-size monuments and congressional approval for the largest. His committee approved it 23–17 on Oct. 11, 2017; it never got a floor vote.</td></tr>
+      <tr><td>H.R. 5780, Utah Public Lands Initiative Act (2016)</td><td>Primary sponsor</td><td>Reported by his committee Sept. 22, 2016; never got a floor vote.</td></tr>
+    </table></div>
+    <p style="font-size:.9rem;color:var(--color-ink-soft);">Roll calls read on clerk.house.gov. Bill status from GovTrack and the House Natural Resources Committee's own roll-call record. The 2015 quote is from the Salt Lake Tribune (Nov. 2, 2015).</p>
+  </div>
+</div></section>
+
+<section id="past"><div class="wrap">
+  <div class="eyebrow">BEFORE 2026</div>
+  <h2>Forty-Seven Years in Utah Politics</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Bishop isn't new. He served in the Utah House, chaired the state Republican Party, spent 18 years in Congress and ran for lieutenant governor before returning to the Legislature this year. This section lays out that record and where his old federal campaign money went. Facts are marked with their source. Anything we could not confirm is listed separately at the end.</p>
+
+  <div class="tl">
+    <div class="tl-item"><div class="tl-yr">1979–1994</div><p><strong>Utah House of Representatives; Speaker in the early 1990s.</strong> Sources disagree on the exact years. The House Historian lists 1979–1994 and Speaker 1992–1994; LegiStorm lists Speaker 1991–1993. The Hive uses the House Historian's dates.</p></div>
+    <div class="tl-item"><div class="tl-yr">1997–2001</div><p><strong>Utah Republican Party chair</strong>, May 1997 to August 2001 (Wikipedia, secondary).</p></div>
+    <div class="tl-item"><div class="tl-yr">2003–2021</div><p><strong>U.S. House, 1st District.</strong> He chaired the House Natural Resources Committee and later served as its ranking Republican. The House Historian lists his occupations as "teacher; professional advocate."</p></div>
+    <div class="tl-item"><div class="tl-yr">2012</div><p>Attended the signing of Utah's <strong>Transfer of Public Lands Act</strong> (H.B. 148), which demanded the federal government turn over federal land to the state.</p></div>
+    <div class="tl-item"><div class="tl-yr">2017</div><p>Advocated the <strong>Bears Ears and Grand Staircase-Escalante</strong> reductions. His Antiquities Act rewrite, H.R. 3990, cleared his committee 23–17 (graded above).</p></div>
+    <div class="tl-item"><div class="tl-yr">Jan. 2020</div><p>Named <strong>running mate</strong> for Thomas Wright's campaign for governor. The ticket finished behind Spencer Cox in the June primary (KSL).</p></div>
+    <div class="tl-item"><div class="tl-yr">Dec. 2020</div><p>Had a mild stroke shortly before leaving Congress (Salt Lake Tribune, Dec. 9, 2020).</p></div>
+    <div class="tl-item"><div class="tl-yr">2021</div><p>Appointed by Speaker Brad Wilson to the <strong>Utah Independent Redistricting Commission</strong>; resigned Oct. 25, 2021 (KSL).</p></div>
+    <div class="tl-item"><div class="tl-yr">2021–2022</div><p>His federal committee gave away its last money, including <strong>$2,000 to Utah Citizens for the Constitution</strong>, and closed July 6, 2022.</p></div>
+    <div class="tl-item"><div class="tl-yr">2023–2025</div><p>Spoke at UVU's Herbert Institute (Nov. 2023), appeared on the PoliticIt podcast (Oct. 2024), and presented to the Legislature's Federalism Commission (Aug. 2025).</p></div>
+    <div class="tl-item"><div class="tl-yr">2026</div><p>Won the House District 6 special election by delegate vote April 25 and was sworn in May 6.</p></div>
+  </div>
+
+  <div class="record-card">
+    <h3>Where his federal campaign money went when he left</h3>
+    <p>"Rob Bishop for Congress" (FEC committee C00374231, treasurer Mike McCauley) took in $12.54 in 2021–22, spent $29,269.81 and filed a termination report July 6, 2022, with $0 left. Leftover campaign money can lawfully go to charities, other candidates and party groups. These are the recipients on the itemized pages of three reports, read on the FEC's filing archive:</p>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Date</th><th>Recipient</th><th>Listed purpose</th><th>FEC report</th><th>Amount</th></tr>
+      <tr><td>6/30/21</td><td>Golden Spike Foundation</td><td>Contribution</td><td>July 2021 (#1523283)</td><td class="num">$5,000.00</td></tr>
+      <tr><td>6/26/21</td><td>Robertson for Congress (Henderson, Nev.)</td><td>Contribution</td><td>July 2021 (#1523283)</td><td class="num">$1,500.00</td></tr>
+      <tr><td><strong>3/4/22</strong></td><td><strong>Utah Citizens for the Constitution (Ogden)</strong></td><td>Contribution</td><td>April 2022 (#1579478)</td><td class="num"><strong>$2,000.00</strong></td></tr>
+      <tr><td>3/7/22, 3/28/22</td><td>Tina Cannon for Congress</td><td>Contribution</td><td>April 2022 (#1579478)</td><td class="num">$2,500.00</td></tr>
+      <tr><td>2022</td><td>McCauley &amp; Associates</td><td>Accounting</td><td>April 2022 and termination</td><td class="num">$2,000.00</td></tr>
+      <tr><td>6/30/22</td><td>Golden Spike Foundation</td><td>Contribution – Non Profit</td><td>Termination (#1606929)</td><td class="num">$4,221.28</td></tr>
+      <tr><td>2022</td><td>Tina Cannon for Congress</td><td>Contribution</td><td>Termination (#1606929)</td><td class="num">$1,000.00</td></tr>
+      <tr><td>2022</td><td>Citizens for Turner (Ohio)</td><td>Contribution</td><td>Termination (#1606929)</td><td class="num">$1,000.00</td></tr>
+      <tr><td>2022</td><td>Allied TeleServices (Cedar City)</td><td>Communications consulting</td><td>Termination (#1606929)</td><td class="num">$2,859.20</td></tr>
+    </table></div>
+    <p><strong>The Utah Citizens payment.</strong> Utah Citizens for the Constitution was registered with the state June 30, 2021. Eight months later, his closing federal committee gave it $2,000. It is the same nonprofit whose website now lists Bishop under "Our Leadership" and on its board page (see "What Each Candidate Listed"). The state registry still does not list him as a director.</p>
+    <p><strong>Golden Spike Foundation</strong> received $9,221.28 in two gifts. <strong>McCauley &amp; Associates</strong> is the committee's own treasurer's accounting firm; the Hive's PAC files show the same firm doing compliance work for other Utah political committees.</p>
+    <p style="font-size:.9rem;color:var(--color-ink-soft);">Not shown: one 2021 report could not be opened, so this is not every payment. FEC's summary shows $2,000 as a "transfer to other authorized committee" that couldn't be matched to a line. Nothing here went to his 2026 state campaign; the federal committee closed four years before that race.</p>
+  </div>
+
+  <div class="record-card">
+    <h3>Who funded him in Congress</h3>
+    <p>The Center for Responsive Politics' industry totals couldn't be opened directly, so these come from news reports that cite them:</p>
+    <ul style="margin:.4em 0;padding-left:20px;">
+      <li><strong>Oil and gas</strong> was his top source over his career, about $500,000 (Truthdig, March 17, 2019).</li>
+      <li>In the 2018 cycle, oil and gas gave more than $108,000, "mostly from political action committees," followed by casinos and gaming, lawyers, Realtors and lobbyists (Salt Lake Tribune, Aug. 25, 2019).</li>
+      <li>In 2016, 92.6% of his donations came from outside Utah (KUER, July 20, 2016). His response: "I am still getting the same amount of money I always have from the district. Now there are a lot of other sources that are adding to it, which changes the percentages."</li>
+    </ul>
+  </div>
+
+  <div class="record-card">
+    <h3>His last federal financial disclosure we could read</h3>
+    <p>Calendar year 2019, filed July 30, 2020 (House Clerk). Assets: an America First Credit Union account ($15,001–$50,000) and an Invesco Large Cap Growth Fund ($1,001–$15,000). Earned income, liabilities, outside positions and gifts: "None disclosed." He reported continuing in the Utah Retirement System pension "as a former public school teacher," and a Congressional Study Group trip to Germany and Paris, Sept. 2–7, 2019.</p>
+  </div>
+
+  <div class="record-card">
+    <h3>In his own words, then</h3>
+    <ul style="margin:.4em 0;padding-left:20px;">
+      <li><strong>On the Transfer of Public Lands Act (2012):</strong> "Signing this bill into law is a vital step in our united efforts to return the land back to the State of Utah where it rightfully belongs." (Sen. Mike Lee press release)</li>
+      <li><strong>On federal payments to rural counties (2014):</strong> "I want it to be identified. I want to fight over it every year. I want people in the East to realize how much it costs them to control the West." (KUER, Feb. 21, 2014, on Payments in Lieu of Taxes)</li>
+      <li><strong>On the Antiquities Act (2017):</strong> "Congress never intended to give one individual the power to unilaterally dictate." (Agri-Pulse)</li>
+      <li><strong>On ethics guidance for his committee staff (2017):</strong> "The Ethics Committee was consulted well in advance and has provided guidance related to staff assisting with the transition." (E&amp;E News, Feb. 8, 2017)</li>
+      <li><strong>On joining Wright's ticket (2020):</strong> "I don't think I was willing to put in, like, the time and effort to be a governor." (KSL)</li>
+      <li><strong>On leaving the redistricting commission (2021):</strong> "this commission is designed not to work," and "I respect each of you as an individual, but I'm sorry, as a group we suck." (KSL)</li>
+    </ul>
+  </div>
+
+  <div class="record-card">
+    <h3>Former staff</h3>
+    <p>Cody Stewart, his Natural Resources Committee staff director, went to the lobbying firm National Environmental Strategies as senior vice president in 2019 (LegiStorm). He is now Director of Strategic Engagement at the Colorado River Authority of Utah, a state agency (its own staff page).</p>
+  </div>
+
+  <div class="record-card unv">
+    <h3>Checked and not confirmed</h3>
+    <ul style="margin:.4em 0;padding-left:20px;">
+      <li><strong>No ethics case found.</strong> A 2020 Office of Congressional Ethics review that comes up when you search "Bishop" is about Rep. Sanford Bishop of Georgia, not Rob Bishop. No House Ethics or OCE matter involving Rob Bishop was found.</li>
+      <li><strong>No leadership PAC or lobbying registration found</strong> after 2021. Some databases were closed to us, so this isn't proof none exists.</li>
+      <li><strong>PROMESA (Puerto Rico, 2016)</strong> and the <strong>Utah Test and Training Range bill (H.R. 4579)</strong> are tied to him in search results; congress.gov could not be opened to confirm his sponsorship or whether either became law.</li>
+      <li>A $1,500 gift to Friends for Chris Stewart appears only on a secondary site.</li>
+      <li>His Utah House bills from 1979–1994 were not searched. That requires the Utah Digital Newspapers archive by hand.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="stands"><div class="wrap">
+  <div class="eyebrow">WHERE THEY STAND</div>
+  <h2>In Their Own Words</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>What each candidate says they'll work on. These are their claims, not checked facts.</p>
+  <div class="vs-grid">
+    <div class="vs-head">BISHOP (R)</div><div class="vs-head">RICH (FORWARD)</div>
+    <div><strong>Why he ran:</strong> "I wanted to make sure that northern Utah is not forgotten in Salt Lake City, that the issues that are important to the constituents in Box Elder and in Weber county are going to be given a voice down in Salt Lake City." (Standard-Examiner, Dec. 31, 2025)</div>
+    <div><strong>Great Salt Lake:</strong> "Finding ways to preserve and restore the Great Salt Lake while also providing water to agriculture and other needs is a high priority." (BallotReady profile)</div>
+    <div><strong>Water:</strong> "Water issues are going to be extremely important in the future." (Standard-Examiner)</div>
+    <div><strong>Data center:</strong> BallotReady shows him opposing the Box Elder County data center "for not only these economic and environmental reasons, but also because Utahns do not want it."</div>
+    <div><strong>Federal power:</strong> "We have an administration that is ready to work with us in getting more authority back to states." (Standard-Examiner)</div>
+    <div><strong>Spending:</strong> his site says he will "work for responsible and transparent reporting of tax expenditures."</div>
+    <div><strong>On returning:</strong> "...to make sure that Utah citizens are not going to be bullied by either the federal or the state government and will actually be heard by those bodies." (KSL, May 10, 2026)</div>
+    <div><strong>His pitch:</strong> his site, move.forwardwith.us, lists restoring the Great Salt Lake, wise use of tax dollars and natural resources, local businesses and easier access to state services.</div>
+    <div><strong>How long:</strong> "I would like to spend maybe a couple of terms in the Utah legislature." (Standard-Examiner)</div>
+    <div>&nbsp;</div>
+  </div>
+  <p style="color:var(--color-ink-soft);font-size:.92rem;margin-top:12px;"><strong>How this was read:</strong> Bishop's quotes were read on the Standard-Examiner and KSL pages through a text fetch. Rich's data center and lake quotes appear on his BallotReady profile, which draws on his campaign; they were not found on his site's home page. His site's Home, About and People and Places pages were read as captured Oct. 2, 2026; the home page names "restoring the Great Salt Lake" among his goals. No Bishop campaign website was found.</p>
+</div></section>
+
+<section id="connections"><div class="wrap">
+  <div class="eyebrow">THE CONNECTIONS</div>
+  <h2>Where This Race Meets the Rest of the Docket</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Many of the names in this race show up in other Hive files. A connection is not an accusation.</p>
+  <div class="mermaid-wrap">
+<div class="mermaid">
+flowchart LR
+    subgraph DOERS["Doers Network county boards"]
+      AG["Adam Gardiner<br/>$1,000"]
+      CS["Cody Stewart<br/>$1,000"]
+      SH["Steve Hiatt<br/>$100"]
+    end
+    AG --> RB(["ROB BISHOP<br/>HD-6 (R)"])
+    CS --> RB
+    SH --> RB
+    TW["Thomas E. Wright<br/>$2,500"] --> RB
+    RB -->|"$1,000, Feb. 2026<br/>(her report)"| KG["Katrina Gibson<br/>Commission Seat A"]
+    RB --- UC["Utah Citizens<br/>website board page"]
+    UC -.->|"director gave $30"| RB
+    RB --- CP["Cambridge Prep<br/>board"]
+    FP["Forward Party<br/>of Utah"] -->|"$3,054 in-kind"| JR(["JAMES RICH<br/>HD-6 (Forward)"])
+    FP -->|"$2,365 voter data"| LS["Libby Shelton<br/>HD-8"]
+    JR -->|"$53.99"| LS
+    JR -->|"$54"| GN["Gary C. New<br/>Commission Seat A"]
+</div>
+<p class="cap">Arrows are money as filed. Plain lines are board listings. Shelton's figure is from her own report, per the HD-8 file.</p>
+  </div>
+  <div class="conn-grid">
+    <div class="conn-card gold">
+      <div class="case"><a href="doers-network.html">DOERS NETWORK</a></div>
+      <h4>Three board members, $2,100</h4>
+      <p>Adam Gardiner (Salt Lake County board) runs ASG Consulting, a lobbying firm; the Hive's Doers file notes he was an aide and campaign manager for Bishop's 2010 congressional race, per his bio. Cody Stewart and Steve Hiatt sit on the Davis County board. A Cody Stewart was staff director of the House Natural Resources Committee under Bishop (LegiStorm, 2019); the Hive matched him to the Farmington donor by name, city and career history. The Doers Network itself gave to dozens of 2026 legislative candidates; Bishop is not among them in the state's records.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case">ROOST · STOKES STRATEGIES</div>
+      <h4>Donor and vendor share an owner</h4>
+      <p>Spencer Stokes is a member of Roost Communications and of Stokes Strategies. Roost is also paid by candidates in the HD-10, HD-17 and SD-5 files, and by the Adams Leadership PAC.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case"><a href="jason-kyle-hd8.html">CASE 02 · HD-8</a></div>
+      <h4>Forward Party help, two races</h4>
+      <p>The Forward Party gave Libby Shelton $2,365 in voter data and Rich $2,554.42. Mike Sims of Ogden gave in-kind shirts to both, per the HD-8 file. Rich's campaign paid Shelton's campaign $53.99 (see the flag above). The same party's voter data also appears in the SD-11, SD-13 and SD-20 files.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case"><a href="weber-2026-voter-guide.html">WEBER GUIDE · COMMISSION SEAT A</a></div>
+      <h4>Gary C. New</h4>
+      <p>Rich's campaign gave $54 to the Forward Party's candidate for Weber County Commission Seat A.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case">LOBBY FIRMS AND TRADE GROUPS</div>
+      <h4>Familiar names from other files</h4>
+      <p>Lincoln Hill Partners PAC, UCU PAC, Utah Rural Electric PAC, Clyde Companies, Education First Utah, Holland &amp; Hart, SEL Inc, the Home Builders Association, the Realtors and Utah Victory PAC each appear as donors in several other Hive case files, including HD-7, HD-9, HD-17, HD-26, HD-27, SD-11, SD-19 and SD-20.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case">THOMAS E. WRIGHT</div>
+      <h4>$2,500, his largest individual gift after the Stewarts</h4>
+      <p>A Thomas E. Wright of Salt Lake City gave $2,500 on June 22. Former Utah GOP chair Thomas Wright named Bishop as his running mate in his 2020 run for governor (KSL). The Hive matched these by name only.</p>
+    </div>
+    <div class="conn-card unres">
+      <div class="case">NAME MATCHES, NOT CONFIRMED</div>
+      <h4>Shared names</h4>
+      <p>A Jennifer Brown is a nonvoting Federalism Commission member; whether she is the same Jennifer Brown who directs Utah Citizens for the Constitution and gave Bishop $30 is not confirmed. (The $30 donor's address does match the group's registered mailing address; see the disclosure section.) ABC4 reported that Bishop beat Brad Borrowes and "Karry Wayne" at the convention; a Kerry Wayne of Ogden gave Rich $100. None of these are confirmed as the same people.</p>
+    </div>
+    <div class="conn-card gold">
+      <div class="case"><a href="weber-2026-voter-guide.html">WEBER GUIDE · THE GIBSON EXAMPLE</a></div>
+      <h4>$1,000 to Katrina Gibson</h4>
+      <p>Katrina Gibson's 2026 Weber County Commission Seat A report lists $1,000 from Rob Bishop of Brigham City in February 2026, as read by the Hive in June. Bishop's campaign report shows no payment to her, so it would have come from another account; the record doesn't say which. Gibson's family ties, and the Utah Forward PAC she runs, are the Weber guide's first example of connections the forms don't ask about.</p>
+    </div>
+    <div class="conn-card">
+      <div class="case">STRATOS DATA CENTER</div>
+      <h4>Next door to the district</h4>
+      <p>The O'Leary Digital project in Box Elder County's Hansel Valley is outside HD-6. Willard and Perry voters are Box Elder County residents. Rich has stated opposition; no Bishop statement was found.</p>
+    </div>
+  </div>
+</div></section>
+
+<style>
+.cc{max-width:960px;margin:0 auto;padding:36px 20px;border-bottom:1px solid #d3d6cb;font-size:16.5px;line-height:1.55}
+.cc .cc-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.06em;color:#4f5b58}
+.cc h2{font-size:1.6rem;margin:4px 0 8px}
+.cc .cc-plain{background:#eef6f2;border-left:4px solid #1d6b57;padding:12px 16px;margin:0 0 18px}
+.cc .cc-cand{background:#fbf9f3;border:1px solid #d3d6cb;padding:14px 16px;margin:12px 0}
+.cc .cc-name{font-weight:700;font-size:1.08rem}
+.cc .cc-total{font-family:'IBM Plex Mono',monospace;font-size:.9rem;color:#1f2a2a}
+.cc .cc-bar{display:flex;height:26px;border-radius:3px;overflow:hidden;background:#e3e6dc;margin:8px 0}
+.cc .cc-bar span{display:block;height:100%}
+.cc .cc-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.88rem}
+.cc .cc-legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.cc .cc-meta{font-size:.92rem;margin-top:8px;color:#33403d}
+.cc .cc-flags{background:#fbf3e6;border:1px dashed #d9a441;padding:12px 16px;margin:14px 0}
+.cc .cc-flags ul{margin:6px 0 0;padding-left:20px}
+.cc .cc-note{font-size:.86rem;color:#4f5b58}
+</style>
+<div class="cc" id="compete">
+<div class="cc-eyebrow">CAN THEY COMPETE?</div>
+<h2>Who Has the Money, and Where It Came From</h2>
+<p class="cc-plain"><b style="font-family:IBM Plex Mono,monospace;font-size:.72rem;color:#1d6b57;margin-right:8px">IN PLAIN WORDS</b>Every dollar each campaign reported, sorted into piles: people, caucus and leadership PACs, other organizations, party help and the candidate's own money. Bars are drawn to the same scale, so a short bar means less money. These are facts from the filings; they are shown here, not graded.</p>
+<div class="cc-cand"><div class="cc-name">Rob Bishop (R) <span class="cc-total">· $32,181 total</span></div><div class="cc-bar" role="img" aria-label="Rob Bishop: $32,181 total"><span style="width:37.072%;background:#3fa37f" title="Individual people: $11,930"></span><span style="width:56.714%;background:#5b7fa6" title="Other organizations: $18,251"></span><span style="width:6.215%;background:#8e7cc3" title="Own money: $2,000"></span></div><div class="cc-legend"><span><i style="background:#3fa37f"></i>Individual people: $11,930</span><span><i style="background:#5b7fa6"></i>Other organizations: $18,251</span><span><i style="background:#8e7cc3"></i>Own money: $2,000</span></div><div class="cc-meta"><b>Individual donors:</b> 16. <b>Period:</b> 2026 through Sept. 25.<br><b>From their own disclosure form:</b> Retired (former USU adjunct teacher); no businesses, stocks or $5,000+ income listed; one board (Cambridge Prep Academy).</div></div>
+<div class="cc-cand"><div class="cc-name">James Rich (Forward) <span class="cc-total">· $5,182.86 total</span></div><div class="cc-bar" role="img" aria-label="James Rich: $5,182.86 total"><span style="width:3.995%;background:#3fa37f" title="Individual people: $1,285.59"></span><span style="width:0.621%;background:#5b7fa6" title="Other organizations: $200"></span><span style="width:9.491%;background:#d9a441" title="Party help: $3,054.42"></span><span style="width:1.998%;background:#8e7cc3" title="Own money: $642.85"></span></div><div class="cc-legend"><span><i style="background:#3fa37f"></i>Individual people: $1,285.59</span><span><i style="background:#5b7fa6"></i>Other organizations: $200</span><span><i style="background:#d9a441"></i>Party help: $3,054.42</span><span><i style="background:#8e7cc3"></i>Own money, including his company's: $642.85</span></div><div class="cc-meta"><b>Individual donors:</b> 12. <b>Period:</b> 2026 through Sept. 25, cash and in-kind.<br><b>From their own disclosure form:</b> President of his own software company, Edward A.E. Rich &amp; Associates; two stocks (AMD, Ferrari); spouse works at Paramount Massage.</div></div>
+<div class="cc-flags"><b>What the filings show side by side</b><ul><li>Rob Bishop's campaign reported about 6 times as much money as James Rich's ($32,181 to $5,182.86).</li></ul></div>
+<p class="cc-note">Periods differ where the filings in hand differ; each candidate's period is listed with their bar. "Own money" includes loans and money moved from the candidate's own earlier campaign account, as labeled. Disclosure-form lines come from each candidate's own form as described on this page. Added Oct. 2, 2026.</p></div>
+<section id="rubric"><div class="wrap">
+  <div class="eyebrow">THE GRADES</div>
+  <h2>Graded Topic by Topic</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>Each topic gets a grade, A (best) to F (worst), on five questions: Does it check power? Can the public see it? Is it clear who pays? What does it do to air, water and land? Do the people affected get a real say? N/A means the question doesn't fit. PENDING means it hasn't happened yet.</p>
+  <p class="section-dek"><strong>How to read these:</strong> grades judge only what is already in the record as of Oct. 2, 2026. They judge the record, not the person. C means the record meets what Utah law requires, the status quo. B or A means it goes beyond that in a way the record shows. D means something is vague or bundled, or a public check is weakened. F means something required is missing, or a check is removed with nothing in its place. Candidates can amend a report or form at any time; when the record changes, the grade is updated and dated. Corrections are welcome at <a href="mailto:webercountyhive@gmail.com">webercountyhive@gmail.com</a>.</p>
+  <p class="pmnote" style="font-size:.92rem;margin:8px 0 12px;">Overall is the average of the graded questions (A = 4, B = 3, C = 2, D = 1, F = 0; N/A and dashes are left out). A plus or minus shows where the average falls between letters, and an average exactly halfway counts toward the higher letter with a minus. Added Oct. 2, 2026.</p>
+  <div class="table-scroll"><table class="summary-grid">
+    <tr><th>Topic</th><th>Power</th><th>Transparency</th><th>Money</th><th>Environment</th><th>Community</th><th>Overall</th></tr>
+    <tr><td>Bishop · campaign money</td><td><span class="gl g-c">C</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-c">C−</span></td></tr>
+    <tr><td>Rich · campaign money</td><td><span class="gl g-b">B</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-c">C</span></td></tr>
+    <tr><td>Bishop · disclosure form</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td></tr>
+    <tr><td>Rich · disclosure form</td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-b">B</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-b">B</span></td></tr>
+    <tr><td>Bishop · Utah House record</td><td colspan="6"><span class="gl g-p">PENDING</span> no votes cast yet this term</td></tr>
+    <tr><td>Bishop · congressional land record</td><td colspan="6" style="text-align:left;">Graded item by item below: S. 47 <span class="gl g-b">B</span> H.R. 1957 <span class="gl g-d">D</span> LWCF lapses <span class="gl g-d">D</span></td></tr>
+  </table></div>
+
+  <div class="topic-head">1. Bishop's campaign money</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Question</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-c">C</span>57% came from 22 groups, many with business before the Legislature, and 37% from individuals. No single group gave most of it. That is common and legal. <b>The money, by category (2026 through Sept. 25):</b> individuals $11,930 (37.1%); caucus and leadership PACs $0 (0.0%); other organizations $18,251 (56.7%); party help $0 (0.0%). <b>Own money:</b> $2,000 (6.2% of everything raised), all marked as loans; the April 17 payment of $1,094.56 to him is not explained on the report. Own money is stated here, not graded. <b>Power C:</b> 39.5% of the counted money came from individual people. Checked Oct. 2, 2026 on the Hive's fixed scale; unchanged. Scale: A = 90% or more of the counted money from individual people; B = 67–89%; C = 34–66%; D = 10–33%; F = under 10%. Counted money is individuals plus caucus and leadership PACs plus other organizations (businesses, trade and union PACs, other candidates' campaigns). Ordinary party help and the candidate's own money are shown but not counted.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-d">D</span>Every donor and payee is named. But $1,094.56 is paid to the candidate himself with the purpose "Other," with no description of what it covered or whether it repaid his $2,000 in loans. (The Realtors' deleted entry is on the Realtors' report, not his, and isn't counted against him here.)</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>Spending is small and the vendors are named. Most lines show only "Campaign Expense," which is what the state form allows.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>A campaign report doesn't decide land or water use.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-d">D</span>One gift, $100, lists a Box Elder or Weber County address besides his own. It is from Brigham City, which the district only partly includes, so at most one gift may come from inside the district.</td></tr>
+  </table></div>
+  <div class="better"><strong>What would have scored higher for the collective:</strong> describing what the $1,094.56 payment to himself covered and showing any loan balance, and raising more from people in Plain City, Willard, Perry, Farr West and Marriott-Slaterville.</div>
+
+  <div class="topic-head">2. Rich's campaign money</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Question</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-b">B</span>59% of his support is in-kind help from his own party, and another 11% is from his own company. Party support for its nominee is common and legal. <b>The money, by category (2026 through Sept. 25, cash and in-kind):</b> individuals $1,285.59 (24.8%); caucus and leadership PACs $0 (0.0%); other organizations $200 (3.9%); party help $3,054.42 (58.9%). <b>Own money:</b> $642.85 (12.4% of everything raised) ($92.85 from him and $550 from his own company, Edward A.E. Rich &amp; Associates, which his disclosure form lists as his). Own money is stated here, not graded. <b>Power B:</b> 86.5% of the counted money came from individual people. Regraded Oct. 2, 2026 on the Hive's fixed scale; earlier: C. Scale: A = 90% or more of the counted money from individual people; B = 67–89%; C = 34–66%; D = 10–33%; F = under 10%. Counted money is individuals plus caucus and leadership PACs plus other organizations (businesses, trade and union PACs, other candidates' campaigns). Ordinary party help and the candidate's own money are shown but not counted.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-c">C</span>Every donor and payee is named, and in-kind gifts are described. A $35 payment to Women's Work says only "Political Support."</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>Small and itemized, down to bank fees. The party's voter data is valued but not broken down.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>A campaign report doesn't decide land or water use.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-d">D</span>About $185 from two Perry supporters, under 4% of his support, comes from inside the district. The same standard is applied to both candidates.</td></tr>
+  </table></div>
+  <div class="better"><strong>What would have scored higher for the collective:</strong> showing what the $2,554.42 in voter data covered, describing the Women's Work payment, and drawing more support from district residents.</div>
+
+  <div class="topic-head">3. Bishop's disclosure form</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Question</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-c">C</span>He lists Cambridge Prep and added "Homeowner" in the optional section. Utah Citizens' website lists him on its "Board of Directors"; the form doesn't. The group's website presents him under "Our Leadership" on its home page and lists him on its "Board of Directors" page, but the state registry for Utah Citizens for the Constitution lists four directors, and he is not one of them. The form asks about board seats and paid leadership roles; nothing in the record shows he is paid. His form matches the registry, so nothing required is shown missing. That meets the law. <b>Revised Oct. 2, 2026</b> from D after the registry's director list was read.</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>Employment, income, business and stock items are answered.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-na">N/A</span>A form doesn't decide who bears a cost.</td></tr>
+  </table></div>
+  <div class="better"><strong>What would have scored higher for the collective:</strong> saying publicly whether he serves on Utah Citizens' board, since its website says he does, and using the optional section to note that he governs a charter school while voting on charter-school law.</div>
+
+  <div class="topic-head">4. Rich's disclosure form</div>
+  <div class="table-scroll"><table class="rubric-table">
+    <tr><th>Question</th><th>Grade and reason</th></tr>
+    <tr><td>Power</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Transparency</td><td><span class="gl g-b">B</span>Every section answered, and he lists his wife's employer, which the form asks for only if the filer sees a possible conflict.</td></tr>
+    <tr><td>Financial accountability</td><td><span class="gl g-c">C</span>His company, income source and stocks are listed, as required.</td></tr>
+    <tr><td>Environmental impact</td><td><span class="gl g-na">N/A</span>Not applicable.</td></tr>
+    <tr><td>Community impact</td><td><span class="gl g-na">N/A</span>A form doesn't decide who bears a cost.</td></tr>
+  </table></div>
+  <div class="better"><strong>What would have scored higher for the collective:</strong> nothing required is missing. An A would take volunteering more, such as the company's state contracts or clients, if any.</div>
+
+  <div class="topic-head">5. Bishop's record</div>
+  <p class="section-dek"><strong>Utah House, 2026: PENDING.</strong> No votes cast yet. His congressional votes and bills are graded one by one below, each as a whole, on the same five questions.</p>
+  <div class="table-scroll"><table class="rubric-table" style="min-width:640px;">
+    <tr><th>Item</th><th>Grade and why</th><th>What would have scored higher for the collective</th></tr>
+    <tr><td>S. 47 (2019), voted yes</td><td><span class="gl g-b">B</span>Made the Land and Water Conservation Fund permanent and added more than 700,000 acres of wilderness in Emery County.</td><td>Already above the line. Pairing it with full funding would have locked in the benefit.</td></tr>
+    <tr><td>H.R. 1957 (2020), voted no</td><td><span class="gl g-d">D</span>Voted against permanent, mandatory conservation funding and the public-lands maintenance fund, which passed 310–107.</td><td>Supporting the funding, or proposing an alternative that kept a guaranteed amount for land and water projects.</td></tr>
+    <tr><td>LWCF lapses (2015, 2018)</td><td><span class="gl g-d">D</span>The fund lapsed twice while he chaired the committee that handles it; his 2018 substitute did advance by voice vote.</td><td>Moving a reauthorization before the deadlines, with his reforms debated in the open.</td></tr>
+    <tr><td>H.R. 3990 (2017), primary sponsor</td><td><span class="gl g-na">N/A</span>Not graded: it never reached a floor vote, so it did not change anything.</td><td>—</td></tr>
+    <tr><td>H.R. 5780 (2016), primary sponsor</td><td><span class="gl g-na">N/A</span>Not graded: it never reached a floor vote.</td><td>—</td></tr>
+  </table></div>
+</div></section>
+
+<section id="ask"><div class="wrap">
+  <div class="eyebrow">WHO TO ASK</div>
+  <h2>Questions From the Records, and Who Can Answer Them</h2>
+  <p class="plain"><b>IN PLAIN WORDS</b>These come from what the filings show and what they leave out. Each one goes to the office that keeps or reviews the record. None assumes anything improper.</p>
+  <div class="record-card">
+    <h3>Lieutenant Governor's Office, Elections (disclosures.utah.gov; elections@utah.gov)</h3>
+    <ul style="margin:0;padding-left:18px;">
+      <li>Does the disclosure form's board question cover an unincorporated group that lists a legislator on a "Board of Directors" web page?</li>
+      <li>When a giver's report deletes a payment that the recipient's report still shows, as with the Realtors' $1,000 to Bishop, which record stands, and who reconciles them?</li>
+      <li>When a campaign pays its own candidate with the purpose "Other," what description does the office expect?</li>
+    </ul>
+  </div>
+  <div class="record-card">
+    <h3>State Charter School Board (schools.utah.gov/charterschools)</h3>
+    <ul style="margin:0;padding-left:18px;">
+      <li>Who sits on Cambridge Preparatory Academy's governing board today, and did the school open this fall?</li>
+    </ul>
+  </div>
+  <div class="record-card">
+    <h3>Things you can check yourself</h3>
+    <ul style="margin:0;padding-left:18px;">
+      <li>Look up Bishop's and Rich's reports at disclosures.utah.gov and compare them with the Realtors' and Shelton's reports.</li>
+      <li>Utah Division of Corporations (businessregistration.utah.gov): whether AC Strategies, LLC (entity 12115697-0160) has been reinstated since its 2024 dissolution, or whether "AC Strategies" is registered as an assumed name.</li>
+      <li>Watch the Federalism Commission's interim meetings at le.utah.gov to see how Bishop votes there.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="limits"><div class="wrap">
+  <div class="eyebrow">WHAT THIS DOESN'T SHOW</div>
+  <h2>Limits of the Record</h2>
+  <div class="record-card"><ul style="margin:0;padding-left:18px;">
+    <li>Figures are from the state's data exports of each candidate's filings, pulled Oct. 2, 2026. They cover Jan. 1 to Sept. 25, 2026; the exports have no balance summaries, so cash on hand isn't shown, and any balance from Bishop's earlier campaigns isn't counted.</li>
+    <li>The Realtors' deleted entries and the AC Strategies payments come from the Hive's earlier read of that PAC's own export (August 2026), not re-read for this page. Shelton's entries come from the HD-8 case file. Katrina Gibson's $1,000 from Bishop comes from the Hive's June 2026 read of her county report; the exact day wasn't recorded. MJH Advisors' owner comes from the Hive's August 2026 lobbyist research.</li>
+    <li>Roost Communications' members come from state business records as captured by the Hive (via Bizapedia and OpenCorporates copies of state records). SEL Inc's registered agent comes from an OpenCorporates copy, not the state site. MJH Advisors and AC Strategies were not found in the registry search.</li>
+    <li>The Cambridge Prep board list comes from its charter application on the Public Notice Website; the current board wasn't confirmed. Utah Citizens' pages were read through a text fetch, not a browser; the registry entry for Utah Citizens for the Constitution comes from the Division of Corporations page as pasted Oct. 2, 2026; its director list was last updated in September 2024.</li>
+    <li>Identities matched by name only are labeled. The Doers Network board roles come from the Hive's Doers file, built from the group's own website.</li>
+    <li>The district's list of places comes from the Standard-Examiner; the map is a schematic. Rich's quotes on the data center and lake come from BallotReady, which draws on his campaign.</li>
+    <li>The "Before 2026" section: the FEC itemized pages were read on docquery.fec.gov; FEC's main data search, OpenSecrets and congress.gov blocked automated reading, so industry totals come from news reports that cite the Center for Responsive Politics. One 2021 FEC report could not be opened.</li>
+    <li>The congressional record covers selected land and conservation items, not his full 18 years. H.R. 3990's details come from the committee's markup memo as summarized, not the bill text.</li>
+  </ul></div>
+</div></section>
+
+<section id="sources"><div class="wrap">
+  <details class="sources">
+    <summary>View all sources (23)</summary>
+    <ol>
+      <li>Rob Bishop, state data export DEX20261002_153434.csv (Convention, Primary and September 30th reports, 2026), disclosures.utah.gov</li>
+      <li>James Rich, state data export DEX20261002_153558.csv (Convention, Primary and September 30th reports, 2026), disclosures.utah.gov</li>
+      <li>Rob Bishop and James David Rich, conflict-of-interest disclosure forms, House District 6 (disclosures.utah.gov), read as filed text Oct. 2, 2026</li>
+      <li>Utah Association of Realtors PAC, state data export (2026 Primary Report, as amended June 16, 2026), as read by the Hive in August 2026</li>
+      <li>Libby Shelton, 2026 filings, as recorded in the Hive's HD-8 case file</li>
+      <li>Doers Network 2026 contributions, disclosures.utah.gov Individual Contributions search (pulled Oct. 2, 2026); Doers Network board roster from doersnetwork.org, as recorded in the Hive's Doers file</li>
+      <li>Roost Communications LLC (13310231-0160) and Stokes Strategies, L.L.C. (2059908-0160), Utah business records via OpenCorporates and Bizapedia copies</li>
+      <li>Cambridge Preparatory Academy charter application and State Charter School Board minutes, Utah Public Notice Website (pmn files 1412159, 1371791, 1403047)</li>
+      <li>utahconstitution.com: home, Board and Rob Bishop pages, read Oct. 2, 2026</li>
+      <li>Utah Legislature: 2026 Federalism Commission interim roster; Aug. 18, 2025 commission agenda; le.utah.gov session calendar</li>
+      <li>KSL, "Former congressman wins special election to Utah Legislature" (April 2026) and "Rob Bishop joins the Utah Legislature — again" (Bridger Beal-Cvetko, May 10, 2026)</li>
+      <li>KUTV, "Former Congressman Rob Bishop sworn into Utah House again" (May 2026)</li>
+      <li>Standard-Examiner, "Former US Congressman Rob Bishop confirms candidacy for state legislature" (Jared Lloyd, Dec. 31, 2025)</li>
+      <li>ABC4, Bishop convention win (April 2026)</li>
+      <li>BallotReady, James Rich profile; move.forwardwith.us (home page)</li>
+      <li>clerk.house.gov roll calls 2019-95 (S. 47) and 2020-155 (H.R. 1957); GovTrack, H.R. 5780 (114th) and H.R. 3990 (115th); House Natural Resources Committee roll call on H.R. 3990 (Oct. 11, 2017); House Report 115-1091</li>
+      <li>Senate Republican Policy Committee, S. 47 legislative notice (Feb. 1, 2019); Holland &amp; Hart, "The Great American Outdoors Act Becomes Law" (2020)</li>
+      <li>Salt Lake Tribune, Bishop and the Land and Water Conservation Fund (Nov. 2, 2015)</li>
+      <li>LegiStorm, Natural Resources staff director moves to lobby shop (2019); KSL, Thomas Wright names Bishop as running mate (January 2020)</li>
+      <li>FEC, Rob Bishop for Congress (C00374231): reports #1523283 (July 2021), #1579478 (April 2022), #1606929 (termination, July 6, 2022), docquery.fec.gov; House Clerk financial disclosure 10037395 (CY2019); House Historian biography</li>
+      <li>Truthdig (March 17, 2019); Salt Lake Tribune (Aug. 25, 2019; Dec. 9, 2020); KUER (Feb. 21, 2014; July 20, 2016); E&amp;E News (Feb. 8, 2017); Agri-Pulse (Oct. 2017); Arizona Public Media (Dec. 2017); Sen. Mike Lee press release (March 23, 2012)</li>
+      <li>KSL: redistricting commission resignation (Oct. 25, 2021); Wright ticket and 2020 primary; Colorado River Authority of Utah staff page; UVU Herbert Institute event page (Nov. 29, 2023); PoliticIt podcast page (Oct. 7, 2024)</li>
+      <li>Stratos coverage: Salt Lake Tribune (April 25 and Sept. 15, 2026), Utah News Dispatch (June 4 and July 27, 2026), KUER (May 28, 2026), UPR (Aug. 21, 2026)</li>
+    </ol>
+  </details>
+</div></section>
+
+<footer><div class="wrap">
+  We report public records. You decide. · Public records only · No comment requested.<br>
+  <a href="index.html">&larr; Back to the Candidates 2026 docket</a> · <a href="weber-2026-voter-guide.html">Weber County 2026 voter guide</a>
+</div></footer>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
+<script>
+if (window.mermaid) { mermaid.initialize({ startOnLoad: true, theme: 'neutral', fontFamily: 'IBM Plex Mono, monospace', themeVariables: { fontSize: '20px' }, flowchart:{htmlLabels:true, curve:'basis', useMaxWidth:true} }); }
+document.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('flipped');b.setAttribute('aria-pressed',b.classList.contains('flipped'));}));
+
+if (window.L && typeof UTAH_GEO !== 'undefined' && typeof UTAH_DISTRICTS !== 'undefined') {
+  const m = L.map('hd6map', { scrollWheelZoom: false, zoomSnap: 0.25 });
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors', maxZoom: 18 }).addTo(m);
+  m.createPane('hd'); m.getPane('hd').style.zIndex = 420;
+  const lay = L.geoJSON(UTAH_DISTRICTS.house, { pane: 'hd', filter: f => +f.properties.d === 6, style: { color:'#12304a', weight:3.5, fillColor:'#12304a', fillOpacity:.25 } }).addTo(m);
+  lay.bindTooltip('Utah House District 6', { sticky: true });
+  addUtahOutlines(m, { alwaysLabel: ['Perry','Willard','Plain City','Farr West','Marriott-Slaterville','Pleasant View','Brigham City','Ogden'], cityLabelZoom: 11 });
+  m.fitBounds(lay.getBounds(), { padding: [12, 12] });
+}
+if (window.Chart) {
+  Chart.defaults.font.family = "'Source Serif 4', Georgia, serif"; Chart.defaults.font.size = 14; Chart.defaults.color = '#4f5b58';
+  const money = v => '$' + Number(v).toLocaleString(undefined,{maximumFractionDigits:2});
+  const pct = (c) => { const t = c.dataset.data.reduce((a,b)=>a+b,0); return ' ' + money(c.parsed) + ' (' + (100*c.parsed/t).toFixed(1) + '%)'; };
+  new Chart(document.getElementById('bishopDonut'), { type:'doughnut',
+    data:{ labels:['Businesses, PACs, associations (22)','Individuals (16)','Himself, marked as loans (2)'], datasets:[{ data:[18251,11930,2000], backgroundColor:['#12304a','#1d6b57','#d9a441'] }] },
+    options:{ maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, tooltip:{callbacks:{label:pct}} } } });
+  new Chart(document.getElementById('richDonut'), { type:'doughnut',
+    data:{ labels:['Forward Party, in-kind','Individuals, cash and in-kind','His company','Cal-Pro Inc.','Himself'], datasets:[{ data:[3054.42,1285.59,550,200,92.85], backgroundColor:['#1f4e6b','#1d6b57','#7aa59a','#9a8a4e','#d9a441'] }] },
+    options:{ maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, tooltip:{callbacks:{label:pct}} } } });
+  new Chart(document.getElementById('periodChart'), { type:'bar',
+    data:{ labels:['Convention','Primary','September 30th'], datasets:[
+      {label:'Bishop raised', data:[10030,12700,9451], backgroundColor:'#12304a'},
+      {label:'Bishop spent', data:[124.17,4528.21,2956.55], backgroundColor:'#7a93a8'},
+      {label:'Rich raised', data:[1343.85,2554.42,1284.59], backgroundColor:'#1d6b57'},
+      {label:'Rich spent', data:[142.48,289.22,555.46], backgroundColor:'#9cc4b5'} ] },
+    options:{ maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+money(c.parsed.y)}} }, scales:{ y:{ ticks:{callback:money}, grid:{color:'#e3e6dc'} }, x:{grid:{display:false}} } } });
+}
+</script>
+</body>
+</html>
