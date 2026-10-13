@@ -371,6 +371,20 @@ const CANDIDATES = [
     dateUpdated: "2026-10-02"
   },
   {
+    id: "hd66-shelley-mashek-hatch",
+    race: "House District 66 — Juab and Sanpete Counties",
+    level: "State",
+    county: "Juab / Sanpete",
+    caseNumber: "CASE 37",
+    names: "Shelley vs. Mashek vs. Hatch",
+    verdict: "No Individual Donors, and a Carbon Bill With a CO2 Exclusion",
+    tags: ["Leadership PAC Money", "Disclosure Gap (pending)", "Bill vs. Business Listings", "Company Loan", "Three-Way Money Contrast"],
+    stamp: "Active",
+    href: "hd66-shelley-mashek-hatch.html",
+    datePosted: "2026-10-13",
+    dateUpdated: "2026-10-13"
+  },
+  {
     id: "hd6-bishop-rich",
     race: "House District 6 — Plain City, Willard, Perry",
     level: "State",
