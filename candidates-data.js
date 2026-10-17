@@ -1,5 +1,19 @@
 const CANDIDATES = [
   {
+    id: "research-your-candidates",
+    race: "Statewide — How-To Guide",
+    level: "Resource",
+    caseNumber: "RESOURCE 04",
+    names: "How to Research Your Candidates",
+    verdict: "Take-Home Guide and Slides from the Oct. 17 Talk",
+    tags: ["How-To", "Every Link", "Filing Deadlines", "Slides"],
+    stamp: "Pinned",
+    href: "research-your-candidates.html",
+    pinned: true,
+    datePosted: "2026-10-17",
+    dateUpdated: "2026-10-17"
+  },
+  {
     id: "questions-every-candidate",
     race: "Statewide — All 2026 Candidates",
     level: "Resource",
