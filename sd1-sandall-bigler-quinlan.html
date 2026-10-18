@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD-1: Sandall vs. Bigler vs. Quinlan | The Weber County Hive</title>
+<meta name="description" content="Utah Senate District 1, 2026. Sen. Scott Sandall (R) reports $67,651 raised in 2026 plus $45,425 received since Sept. 26; Claudia Bigler (D) and Julie Quinlan (Forward) report small campaigns. Their money, conflict-of-interest forms, Sandall's 2026 bills, and what the records show.">
+<link rel="icon" type="image/png" href="hive-bee.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-paper:#f4f0e6;
+    --color-paper-deep:#ece5d4;
+    --color-ink:#241a16;
+    --color-ink-soft:#5c534c;
+    --color-link:#1d6b57;
+    --color-stat:#d9a441;
+    --color-burgundy-light:#1f4e6b;
+    --color-burgundy-deep:#12304a;
+    --color-line:#d8cfbc;
+    --color-card:#fbf8f1;
+    --color-good:#4d7c5f;
+    --color-flag:#a5372a;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:'Source Serif 4', Georgia, serif;line-height:1.6;}
+  h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif;font-weight:700;margin:0 0 .4em;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:.72rem;letter-spacing:.06em;color:var(--color-ink-soft);}
+  a{color:var(--color-link);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header.band{background:var(--color-burgundy-deep);background-image:linear-gradient(160deg,#1f5e6b 0%,#1f4e6b 45%,var(--color-burgundy-deep) 100%);color:#f4ece6;padding:22px 0;}
+  header.band .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .brandmark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:#f4ece6;text-decoration:none;}
+  nav.topnav a{color:#f4ece6cc;text-decoration:none;margin-left:22px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.03em;border-bottom:1px solid transparent;}
+  nav.topnav a:hover{border-bottom-color:#f4ece6cc;}
+
+  .hero{padding:56px 0 40px;border-bottom:1px solid var(--color-line);}
+  .hero .eyebrow{margin-bottom:14px;}
+  .hero h1{font-size:2.5rem;line-height:1.15;max-width:760px;}
+  .hero .dek{font-size:1.12rem;color:var(--color-ink-soft);max-width:660px;margin-top:14px;}
+  .hero-meta{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+  .hero-meta .stat-num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-stat);}
+  .hero-meta .stat-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--color-ink-soft);letter-spacing:.02em;max-width:170px;}
+
+  section{padding:44px 0;border-bottom:1px solid var(--color-line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:1.6rem;margin-bottom:6px;}
+  section .section-dek{color:var(--color-ink-soft);max-width:660px;margin-bottom:26px;font-size:1rem;}
+
+  .start-here{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-stat);padding:20px 24px;}
+  .start-here ol{margin:8px 0 0;padding-left:20px;}
+  .start-here li{margin-bottom:8px;}
+
+  .record-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:2px;padding:24px 26px;margin-bottom:18px;}
+  .record-card h3{font-size:1.15rem;margin-bottom:8px;}
+  .record-card p{margin:.6em 0;}
+  .record-card p:first-of-type{margin-top:0;}
+  .rc-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-link);border:1px solid var(--color-link);padding:3px 9px;border-radius:20px;margin:2px 6px 2px 0;text-decoration:none;}
+  a.rc-tag:hover{background:var(--color-link);color:#fff;}
+  .rc-flag{border-color:var(--color-flag);color:var(--color-flag);}
+  .rc-good{border-color:var(--color-good);color:var(--color-good);}
+
+  .quote-block{border-left:3px solid var(--color-stat);padding:4px 0 4px 18px;font-style:italic;color:var(--color-ink-soft);margin:14px 0;}
+
+  .fund-row{display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;margin-bottom:20px;}
+  .fund-donut{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fund-donut-center{width:96px;height:96px;background:var(--color-paper);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+  .fund-donut-center .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.1rem;color:var(--color-ink);}
+  .fund-donut-center .lbl{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--color-ink-soft);}
+  .fund-donut-legend{list-style:none;padding:0;margin:8px 0 0;font-size:.92rem;}
+  .fund-donut-legend li{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0;}
+  .fund-bar-row{margin-bottom:10px;}
+  .fund-bar-row .bar-label{display:flex;justify-content:space-between;gap:12px;font-size:.86rem;margin-bottom:4px;}
+  .fund-bar-track{background:var(--color-paper-deep);border-radius:3px;height:8px;overflow:hidden;}
+  .fund-bar-fill{height:100%;background:var(--color-link);}
+  .fund-bar-fill.alt{background:var(--color-stat);}
+
+  .table-scroll{overflow-x:auto;}
+  .entity-table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:4px;}
+  .entity-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:8px 10px;}
+  .entity-table td{padding:10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .entity-table td.num{font-family:'IBM Plex Mono',monospace;font-size:.85rem;white-space:nowrap;}
+  .status-pill{font-family:'IBM Plex Mono',monospace;font-size:.65rem;padding:3px 8px;border-radius:12px;white-space:nowrap;display:inline-block;}
+  .status-confirmed{background:#e2ede4;color:var(--color-good);}
+  .status-flag{background:#f3dedb;color:var(--color-flag);}
+  .status-unresolved{background:#f4ecd9;color:#8a6d1f;}
+
+  .timeline{border-left:2px solid var(--color-line);padding-left:22px;margin-left:6px;}
+  .timeline-item{position:relative;margin-bottom:22px;}
+  .timeline-item::before{content:"";position:absolute;left:-28px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--color-stat);}
+  .timeline-item.key::before{background:var(--color-flag);}
+  .timeline-item .t-date{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);}
+  .timeline-item h4{font-size:1rem;margin:.2em 0;}
+  .timeline-item p{margin:.2em 0;font-size:.95rem;color:var(--color-ink-soft);}
+
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--color-line);background:var(--color-card);}
+  .vs-grid > div{padding:16px 20px;border-bottom:1px solid var(--color-line);}
+  .vs-grid > div:nth-child(odd){border-right:1px solid var(--color-line);}
+  .vs-grid .vs-head{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);background:var(--color-paper-deep);}
+  .vs-grid .said{font-style:italic;}
+
+  /* connections */
+  .hub{background:var(--color-burgundy-deep);color:#f4ece6;padding:22px 26px;border-radius:2px;margin-bottom:22px;}
+  .hub .eyebrow{color:#d9a441;}
+  .hub h3{color:#f4ece6;font-size:1.3rem;margin:6px 0 4px;}
+  .hub p{margin:0;color:#e8d9c8;font-size:.95rem;}
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .conn-card{background:var(--color-card);border:1px solid var(--color-line);border-top:4px solid var(--color-link);padding:18px 20px;}
+  .conn-card.doers{border-top-color:var(--color-burgundy-light);}
+  .conn-card.gold{border-top-color:var(--color-stat);}
+  .conn-card.unres{border-top-color:#b8952e;border-top-style:dashed;}
+  .conn-card .case{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .conn-card h4{font-size:1.05rem;margin:4px 0 8px;}
+  .conn-card p{margin:.4em 0;font-size:.94rem;}
+  .conn-card ul{margin:.4em 0;padding-left:18px;font-size:.93rem;}
+  .conn-card li{margin-bottom:4px;}
+
+  details.sources{margin-top:6px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.05em;color:var(--color-burgundy-light);font-weight:600;}
+  details.sources ol{font-size:.9rem;color:var(--color-ink-soft);padding-left:22px;}
+  details.sources li{margin-bottom:7px;}
+
+  @media (max-width:680px){
+    .hero h1{font-size:1.9rem;}
+    .fund-row{flex-direction:column;}
+    .conn-grid{grid-template-columns:1fr;}
+    .vs-grid{grid-template-columns:1fr;}
+    .vs-grid > div:nth-child(odd){border-right:none;}
+    .vs-grid .vs-head:nth-child(2){display:none;}
+  }
+  footer{padding:40px 0 60px;text-align:center;color:var(--color-ink-soft);font-size:.85rem;}
+  footer a{color:var(--color-link);}
+  .jumpnav{background:var(--color-paper-deep);border-bottom:1px solid var(--color-line);padding:12px 0;position:sticky;top:0;z-index:5;}
+  .jumpnav .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .jumpnav a{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.03em;color:var(--color-ink);text-decoration:none;border-bottom:1px solid transparent;}
+  .jumpnav a:hover{border-bottom-color:var(--color-link);color:var(--color-link);}
+  section[id]{scroll-margin-top:60px;}
+  .race-strip{display:grid;grid-template-columns:repeat(8,1fr);margin-top:26px;border-top:1px solid var(--color-line);border-left:1px solid var(--color-line);background:var(--color-card);}
+  .race-strip > div{padding:12px 12px 14px;border-right:1px solid var(--color-line);border-bottom:1px solid var(--color-line);min-width:0;}
+  .race-strip .d{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--color-link);font-weight:600;white-space:nowrap;}
+  .race-strip .e{font-size:.84rem;line-height:1.35;margin-top:6px;hyphens:none;overflow-wrap:normal;}
+  .race-strip .future .d{color:var(--color-ink-soft);}
+  @media (max-width:1000px){.race-strip{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:560px){.race-strip{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:680px){.jumpnav{position:static;} .rubric-table td:first-child{width:auto;}}
+  .chart-card{background:var(--color-card);border:1px solid var(--color-line);padding:18px 20px;margin:22px 0;}
+  .chart-card h3{font-size:1.05rem;margin-bottom:4px;}
+  .chart-card .cap{font-size:.86rem;color:var(--color-ink-soft);margin:0 0 12px;}
+  .chart-box{position:relative;height:260px;}
+  .mermaid-wrap{background:var(--color-card);border:1px solid var(--color-line);padding:18px;margin:22px 0;overflow-x:auto;}
+  .mermaid-wrap .cap{font-size:.86rem;color:var(--color-ink-soft);margin:10px 0 0;}
+  .mermaid{text-align:center;}
+  details.ledger{background:var(--color-card);border:1px solid var(--color-line);padding:12px 18px;margin:12px 0;}
+  details.ledger summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.04em;color:var(--color-burgundy-light);font-weight:600;}
+  details.ledger .table-scroll{max-height:460px;overflow:auto;margin-top:10px;}
+  .rubric-table{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--color-card);border:1px solid var(--color-line);}
+  .rubric-table th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.03em;color:var(--color-ink-soft);border-bottom:1px solid var(--color-line);padding:10px;background:var(--color-paper-deep);}
+  .rubric-table td{padding:12px 10px;border-bottom:1px solid var(--color-line);vertical-align:top;}
+  .rubric-table td:first-child{font-weight:600;width:170px;}
+  .gl{display:inline-block;min-width:30px;text-align:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:#fff;border-radius:3px;padding:1px 6px;margin-right:6px;}
+  .g-a{background:#4a7c59;} .g-b{background:#5c8a6a;} .g-c{background:var(--color-stat);} .g-d{background:#b5652f;} .g-f{background:var(--color-burgundy-light);} .g-na{background:#9a9186;font-size:.8rem;}
+  .topic-head{font-family:'Playfair Display',serif;font-size:1.15rem;margin:26px 0 8px;}
+  .compare-table td.num{text-align:right;}
+
+  .flip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0;}
+  @media (max-width:900px){.flip-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.flip-grid{grid-template-columns:1fr;}}
+  .flip{perspective:900px;background:none;border:0;padding:0;cursor:pointer;text-align:left;font:inherit;color:inherit;min-height:250px;}
+  .flip-inner{position:relative;width:100%;height:100%;min-height:250px;transition:transform .5s;transform-style:preserve-3d;}
+  .flip.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:18px 20px;display:flex;flex-direction:column;justify-content:center;}
+  .flip-front{text-align:center;}
+  .flip-front .num{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  .flip-front .label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--color-ink-soft);letter-spacing:.03em;margin-top:6px;}
+  .flip-front .hint{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--color-ink-soft);margin-top:10px;opacity:.75;}
+  .flip-back{transform:rotateY(180deg);background:var(--color-burgundy-deep);color:#f4ece6;border-color:var(--color-burgundy-deep);font-size:.9rem;line-height:1.5;overflow:auto;}
+  .flip-back strong{color:var(--color-stat);}
+  .plain{background:#fff8e6;border-left:4px solid var(--color-stat);padding:12px 16px;margin:0 0 16px;font-size:.98rem;}
+  .plain b{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.06em;color:#8a6d1f;margin-right:8px;}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--color-line);background:var(--color-card);margin:18px 0;}
+  .three > div{padding:16px 18px;border-right:1px solid var(--color-line);}
+  .three > div:last-child{border-right:none;}
+  .three .who{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);}
+  .three .amt{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
+  @media (max-width:760px){.three{grid-template-columns:1fr;} .three > div{border-right:none;border-bottom:1px solid var(--color-line);}}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  .brandmark{display:flex;align-items:center;gap:12px;}
+  .brandmark img{width:40px;height:40px;flex:none;}
+  .page-dates{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--color-ink-soft);margin-top:14px;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .map-box{height:420px;border:1px solid var(--color-line);border-radius:4px;margin:12px 0 6px;background:#eef0ec;}
+  .county-label{background:none;border:none;}
+  .county-label span{display:block;transform:translate(-50%,-50%);font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#14213D;white-space:nowrap;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff;pointer-events:none;}
+  .city-label{background:none;border:none;} .city-label span{display:block;transform:translate(-50%,-50%);font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4a2f55;white-space:nowrap;text-shadow:0 0 3px #fff,0 0 3px #fff;pointer-events:none;}
+  .ask-list{display:flex;flex-direction:column;gap:12px;}
+  .ask{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-link);padding:12px 16px;}
+  .ask-who{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--color-burgundy-light);font-weight:600;margin-bottom:4px;}
+  .mermaid{font-size:20px;}
+  .note-unv{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:#8a6d1f;background:#f4ecd9;padding:1px 6px;border-radius:8px;}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://weber-county-hive.github.io/utah-maps/utah-geo.js"></script>
+</head>
+
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+
+<header class="band">
+  <div class="wrap">
+    <a class="brandmark" href="index.html"><img src="hive-bee.png" alt="The Hive bee seal">Weber County Hive — Candidates 2026</a>
+    <nav class="topnav">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">CASE 38 · UTAH SENATE DISTRICT 1 (BOX ELDER, PARTS OF CACHE AND TOOELE) — GENERAL ELECTION NOV. 3, 2026</div>
+    <h1>$67,651 Raised, $115,013 Spent, and $45,425 More in Four Days</h1>
+    <p class="dek">Sen. Scott Sandall (R) has served in the Legislature since 2015. His 2026 reports list $67,651 raised and $115,013 spent. Between Oct. 3 and Oct. 6 he received another $45,425 that has not yet reached a filed report. His challengers, Democrat Claudia Bigler and Forward Party candidate Julie Quinlan, report small campaigns. His own conflict-of-interest form lists him as chair of the Utah Fairpark Area Investment and Restoration District.</p>
+    <p class="page-dates">Posted Oct. 17, 2026 &middot; Updated Oct. 17, 2026 &middot; Money through each candidate&rsquo;s latest filed report, plus contributions received through Oct. 17</p>
+    <div class="hero-meta">
+      <div><div class="stat-num">$67,651</div><div class="stat-label">SANDALL, RAISED ON 2026 REPORTS</div></div>
+      <div><div class="stat-num">$45,425</div><div class="stat-label">SANDALL, RECEIVED OCT. 3&ndash;6 (NOT YET ON A REPORT)</div></div>
+      <div><div class="stat-num">$0</div><div class="stat-label">BIGLER, CONTRIBUTIONS ITEMIZED</div></div>
+      <div><div class="stat-num">$7,379</div><div class="stat-label">QUINLAN, RAISED (92% IN-KIND, MOSTLY FROM HER PARTY)</div></div>
+    </div>
+  </div>
+</div>
+
+<nav class="jumpnav" aria-label="Sections"><div class="wrap">
+  <a href="#start">Start here</a><a href="#map">Map</a><a href="#words">Words</a><a href="#money">Sandall&rsquo;s money</a><a href="#spending">Spending</a><a href="#new">New money</a><a href="#record">Bills</a><a href="#disclosure">Disclosure forms</a><a href="#challengers">Bigler &amp; Quinlan</a><a href="#stands">Where they stand</a><a href="#connections">Connections</a><a href="#rubric">Rubric</a><a href="#ask">Questions</a><a href="#limits">Limits</a>
+</div></nav>
+
+<section id="start">
+  <div class="wrap">
+    <div class="eyebrow">START HERE</div>
+    <h2>Six Things the Records Show</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Three people are running for this state Senate seat. One is a longtime senator with a large campaign account. The other two report very little money. Everything on this page comes from public filings the candidates made themselves, plus the Legislature&rsquo;s own bill records.</p>
+    <div class="start-here">
+      <ol>
+        <li><strong>Sandall&rsquo;s 2026 reports list $67,651 raised and $115,013 spent.</strong> He started 2026 with money from 2025: his 2025 Year End report lists $95,857 raised and $59,197 spent.</li>
+        <li><strong>The largest share of his 2026 spending, $43,105, is listed as &ldquo;Donations.&rdquo;</strong> That includes $9,000 each to three other Republican legislative campaigns (Thomas Petersen, Chris Wilson and Casey Snider).</li>
+        <li><strong>$30,299 is listed as &ldquo;Travel Expenses,&rdquo;</strong> including hotels in Zurich, Berlin, Oslo and India. The filings name the payee, not the purpose of each trip.</li>
+        <li><strong>He received $45,425 from 33 contributors between Oct. 3 and Oct. 6.</strong> These sit on the state&rsquo;s temporary &ldquo;Received Contributions&rdquo; list until his General Report is filed (due Oct. 27).</li>
+        <li><strong>His conflict-of-interest form lists four family businesses and one board seat:</strong> &ldquo;Chair &ndash; Utah Fairpark Area Investment and Restoration District.&rdquo;</li>
+        <li><strong>Bigler and Quinlan report small campaigns.</strong> Bigler&rsquo;s 2026 file has two expense lines ($217.73) and no itemized contributions. Most of Quinlan&rsquo;s $7,379 is in-kind help from the Utah Forward Party.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="wrap">
+    <div class="eyebrow">WHERE THIS RACE IS</div>
+    <h2>Box Elder, Plus Parts of Cache and Tooele</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Senate District 1 covers all of Box Elder County and parts of Cache and Tooele counties. The map shades those three counties. It does not draw the district&rsquo;s exact line.</p>
+    <div id="sdMap" class="map-box" role="img" aria-label="Map of Box Elder, Cache and Tooele counties"></div>
+    <p class="cap" style="font-size:.86rem;color:var(--color-ink-soft);">District description: Sandall&rsquo;s Senate biography (&ldquo;all of Box Elder County and parts of Cache and Tooele counties&rdquo;) and the Salt Lake Tribune, Oct. 12, 2026. County outlines: Utah Hive Politics map file. Exact district boundaries: see the Legislature&rsquo;s district maps.</p>
+  </div>
+</section>
+
+<section id="words">
+  <div class="wrap">
+    <div class="eyebrow">WORDS ON THIS PAGE</div>
+    <h2>Six Terms, Explained</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Tap a card to flip it.</p>
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Received list</div><div class="label">MONEY NOT YET ON A REPORT</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>The state requires candidates to post each contribution soon after they get it. It sits on a temporary &ldquo;Received Contributions&rdquo; list until the next report is filed, then moves onto that report.</div></div></div></button>
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">In-kind</div><div class="label">HELP INSTEAD OF CASH</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Goods or services reported at a dollar value. Sandall lists <strong>$11,250</strong> from CMV PAC for &ldquo;Signature gathering.&rdquo; Quinlan lists <strong>$6,730</strong> from the Utah Forward Party for &ldquo;Voter Registry Value.&rdquo;</div></div></div></button>
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Signature path</div><div class="label">ANOTHER WAY ONTO THE BALLOT</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>Utah candidates can reach a primary ballot through the party convention, by gathering voter signatures, or both. Sandall&rsquo;s report lists <strong>$12,750</strong> paid to Gather Inc. for &ldquo;Signature Gathering.&rdquo;</div></div></div></button>
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">COI form</div><div class="label">CONFLICT-OF-INTEREST DISCLOSURE</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>A yearly state form listing a candidate&rsquo;s jobs, businesses they own, income sources over $5,000, stocks, and board seats.</div></div></div></button>
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">UFAIR</div><div class="label">THE FAIRPARK DISTRICT</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>The Utah Fairpark Area Investment and Restoration District. Sandall&rsquo;s own form lists him as its chair and describes its work as &ldquo;Development of UFAIR area.&rdquo;</div></div></div></button>
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">Floor sponsor</div><div class="label">CARRYING THE OTHER CHAMBER&rsquo;S BILL</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div>The senator who runs a House bill through the Senate. In 2026 Sandall did this for <strong>16 House bills</strong>, including several water bills.</div></div></div></button>
+    </div>
+  </div>
+</section>
+
+<section id="money">
+  <div class="wrap">
+    <div class="eyebrow">SANDALL&rsquo;S MONEY IN</div>
+    <h2>$67,651 on Three 2026 Reports</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Most of Sandall&rsquo;s 2026 money came from political action committees, trade groups and businesses. Two entries make up 39% of it: $15,000 from the Utah Republican Senate PAC and $11,250 of signature-gathering help from CMV PAC.</p>
+    <div class="three">
+      <div><div class="who">CONVENTION REPORT</div><div class="amt">$37,500</div><div>raised &middot; $64,167 spent</div></div>
+      <div><div class="who">PRIMARY REPORT</div><div class="amt">$8,500</div><div>raised &middot; $20,597 spent</div></div>
+      <div><div class="who">SEPTEMBER 30 REPORT</div><div class="amt">$21,651</div><div>raised &middot; $30,248 spent</div></div>
+    </div>
+    <div class="chart-card">
+      <h3>All three candidates, money in by report</h3>
+      <p class="cap">Dollars as listed on each candidate&rsquo;s 2026 filings. Quinlan&rsquo;s file lists Convention, Primary and General reports.</p>
+      <div class="chart-box"><canvas id="periodChart"></canvas></div>
+    </div>
+    <h3 class="topic-head">Sandall&rsquo;s largest 2026 contributors</h3>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Contributor (as filed)</th><th>Date</th><th>Amount</th></tr>
+      <tr><td>Utah Republican Senate PAC</td><td>1/15/2026</td><td class="num">$15,000</td></tr>
+      <tr><td>CMV PAC (in-kind, &ldquo;Signature gathering&rdquo;)</td><td>1/18/2026</td><td class="num">$11,250</td></tr>
+      <tr><td>Aryan Bhatt (Berkeley, Calif.)</td><td>1/15/2026</td><td class="num">$3,000</td></tr>
+      <tr><td>Friends of Chris Wilson</td><td>4/3/2026</td><td class="num">$3,000</td></tr>
+      <tr><td>PhRMA</td><td>5/11/2026</td><td class="num">$2,500</td></tr>
+      <tr><td>State of Utah</td><td>5/11/2026</td><td class="num">$2,500</td></tr>
+      <tr><td>Utah Realtors Assoc.</td><td>7/7/2026</td><td class="num">$2,500</td></tr>
+      <tr><td>Great Salt Lake Recycling LLC</td><td>8/5/2026</td><td class="num">$2,500</td></tr>
+      <tr><td>Margaret Jahries</td><td>8/5/2026</td><td class="num">$2,500</td></tr>
+      <tr><td>Altria Client Services LLC</td><td>9/2/2026</td><td class="num">$2,500</td></tr>
+      <tr><td>Johnson &amp; Johnson PAC; Google Client Services LLC</td><td>5/11, 8/27/2026</td><td class="num">$2,000 each</td></tr>
+    </table></div>
+    <p style="font-size:.9rem;color:var(--color-ink-soft);">The &ldquo;State of Utah&rdquo; line is listed on his Primary Report as a $2,500 contribution, with no other detail. The filing does not explain it. Seven rows on his 2026 file read &ldquo;[DELETED]&rdquo; with $0 and no detail.</p>
+    <details class="ledger"><summary>Every Sandall 2026 contribution as filed (33 entries)</summary><div class="table-scroll"><table class="entity-table">
+      <tr><th>Report</th><th>Date</th><th>Contributor</th><th>City</th><th>Amount</th></tr>
+      <tr><td>Convention</td><td>1/15</td><td>Holland &amp; Hart</td><td>Salt Lake City</td><td class="num">$250</td></tr>
+      <tr><td>Convention</td><td>1/15</td><td>American Property Casualty Ins. Assoc</td><td>Chicago, IL</td><td class="num">$500</td></tr>
+      <tr><td>Convention</td><td>1/15</td><td>NAMIC Administrative Fund</td><td>Indianapolis, IN</td><td class="num">$500</td></tr>
+      <tr><td>Convention</td><td>1/15</td><td>Utah Trucking Assoc.</td><td>West Valley City</td><td class="num">$500</td></tr>
+      <tr><td>Convention</td><td>1/15</td><td>Utah Republican Senate PAC</td><td>Layton</td><td class="num">$15,000</td></tr>
+      <tr><td>Convention</td><td>1/15</td><td>Aryan Bhatt</td><td>Berkeley, CA</td><td class="num">$3,000</td></tr>
+      <tr><td>Convention</td><td>1/15</td><td>Utah Dental Assoc</td><td>Woods Cross</td><td class="num">$500</td></tr>
+      <tr><td>Convention</td><td>1/18</td><td>CMV PAC (in-kind: signature gathering)</td><td>Draper</td><td class="num">$11,250</td></tr>
+      <tr><td>Convention</td><td>3/9</td><td>Maverik Inc</td><td>Salt Lake City</td><td class="num">$1,000</td></tr>
+      <tr><td>Convention</td><td>3/9</td><td>Utah Behavior Services Inc</td><td>Taylorsville</td><td class="num">$1,000</td></tr>
+      <tr><td>Convention</td><td>4/3</td><td>Friends of Chris Wilson</td><td>Logan</td><td class="num">$3,000</td></tr>
+      <tr><td>Convention</td><td>4/3</td><td>Salt Lake Bing Kong Tong</td><td>Sandy</td><td class="num">$1,000</td></tr>
+      <tr><td>Primary</td><td>5/11</td><td>PhRMA</td><td>Washington, DC</td><td class="num">$2,500</td></tr>
+      <tr><td>Primary</td><td>5/11</td><td>State of Utah</td><td>Salt Lake</td><td class="num">$2,500</td></tr>
+      <tr><td>Primary</td><td>5/11</td><td>Johnson &amp; Johnson PAC</td><td>Washington, DC</td><td class="num">$2,000</td></tr>
+      <tr><td>Primary</td><td>5/11</td><td>SEL Inc.</td><td>Pleasant Grove</td><td class="num">$500</td></tr>
+      <tr><td>Primary</td><td>5/11</td><td>Utah Farm Bureau AGPAC</td><td>Sandy</td><td class="num">$1,000</td></tr>
+      <tr><td>Sept. 30</td><td>6/14</td><td>American Property Casualty Ins. Assoc</td><td>Chicago, IL</td><td class="num">$500</td></tr>
+      <tr><td>Sept. 30</td><td>6/14</td><td>Clyde Companies Inc. (filed &ldquo;Compainies&rdquo;)</td><td>Orem</td><td class="num">$1,000</td></tr>
+      <tr><td>Sept. 30</td><td>6/14</td><td>Mountainstar Healthcare Good Government</td><td>Cottonwood Heights</td><td class="num">$1,000</td></tr>
+      <tr><td>Sept. 30</td><td>7/7</td><td>Utah Realtors Assoc.</td><td>Sandy</td><td class="num">$2,500</td></tr>
+      <tr><td>Sept. 30</td><td>7/7</td><td>Utah Public Power PAC</td><td>Salt Lake City</td><td class="num">$500</td></tr>
+      <tr><td>Sept. 30</td><td>8/5</td><td>Great Salt Lake Recycling LLC</td><td>Magna</td><td class="num">$2,500</td></tr>
+      <tr><td>Sept. 30</td><td>8/5</td><td>Margaret Jahries</td><td>Park City</td><td class="num">$2,500</td></tr>
+      <tr><td>Sept. 30</td><td>8/17</td><td>1-800 Contacts</td><td>Draper</td><td class="num">$1,000</td></tr>
+      <tr><td>Sept. 30</td><td>8/17</td><td>Holland &amp; Hart</td><td>Salt Lake City</td><td class="num">$250</td></tr>
+      <tr><td>Sept. 30</td><td>8/17</td><td>rPlus Energies LLC</td><td>Salt Lake City</td><td class="num">$1,000</td></tr>
+      <tr><td>Sept. 30</td><td>8/27</td><td>Google Client Services LLC</td><td>Mountain View, CA</td><td class="num">$2,000</td></tr>
+      <tr><td>Sept. 30</td><td>8/27</td><td>Home Builders Assoc of Utah PAC Fund</td><td>Draper</td><td class="num">$1,000</td></tr>
+      <tr><td>Sept. 30</td><td>9/2</td><td>Altria Client Services LLC</td><td>Richmond, VA</td><td class="num">$2,500</td></tr>
+      <tr><td>Sept. 30</td><td>9/2</td><td>U-CAR PAC</td><td>Murray</td><td class="num">$1,001</td></tr>
+      <tr><td>Sept. 30</td><td>9/2</td><td>Utah Petroleum Assoc</td><td>Salt Lake City</td><td class="num">$400</td></tr>
+      <tr><td>Sept. 30</td><td>9/2</td><td>PCMA</td><td>Washington, DC</td><td class="num">$1,500</td></tr>
+      <tr><td>Sept. 30</td><td>9/2</td><td>ER Squibb &amp; Sons LLC</td><td>Tampa, FL</td><td class="num">$500</td></tr>
+    </table></div></details>
+  </div>
+</section>
+
+<section id="spending">
+  <div class="wrap">
+    <div class="eyebrow">SANDALL&rsquo;S MONEY OUT</div>
+    <h2>$115,013 Spent in 2026</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Sandall spent more than he raised in 2026, using money left over from 2025. The biggest piles are gifts to other campaigns and groups, travel, and campaign services. Each line below uses the purpose label his campaign chose.</p>
+    <div class="chart-card">
+      <h3>Spending by the purpose label on his filings</h3>
+      <p class="cap">2026 Convention, Primary and September 30 reports combined.</p>
+      <div class="chart-box" style="height:320px;"><canvas id="spendChart"></canvas></div>
+    </div>
+    <div class="mermaid-wrap">
+      <pre class="mermaid">
+flowchart LR
+  A["PACs, trade groups<br/>and businesses"] --> S["Sandall campaign<br/>$67,651 in (2026)"]
+  B["CMV PAC<br/>$11,250 in-kind"] --> S
+  C["Leftover from 2025"] --> S
+  S --> D["Other campaigns<br/>and local groups<br/>$43,105"]
+  S --> T["Travel<br/>$30,299"]
+  S --> E["Campaign services<br/>$25,194"]
+  S --> G["Gather Inc.<br/>signatures $12,750"]
+  style S fill:#12304a,color:#f4ece6,stroke:#12304a
+      </pre>
+      <p class="cap">Dollar figures are his own purpose labels added up. &ldquo;Campaign services&rdquo; is the label &ldquo;Campaign Expense.&rdquo;</p>
+    </div>
+    <h3 class="topic-head">Where the &ldquo;Donations&rdquo; went</h3>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Recipient (as filed)</th><th>Date</th><th>Amount</th></tr>
+      <tr><td>Committee to Elect Thomas Petersen</td><td>1/9</td><td class="num">$9,000</td></tr>
+      <tr><td>Friends of Chris Wilson</td><td>1/14</td><td class="num">$9,000</td></tr>
+      <tr><td>Committee to Elect Casey Snider</td><td>1/14</td><td class="num">$9,000</td></tr>
+      <tr><td>Elect Brady Brammer &middot; Friends of Dan McKay (filed spelling)</td><td>6/5</td><td class="num">$2,500 each</td></tr>
+      <tr><td>Box Elder Jr Livestock</td><td>9/25</td><td class="num">$2,054.82</td></tr>
+      <tr><td>Committee to Elect Lincoln Fillmore</td><td>5/11, 6/23</td><td class="num">$2,000 total</td></tr>
+      <tr><td>Sloan for Senate</td><td>1/8</td><td class="num">$1,500</td></tr>
+      <tr><td>Brooks Benson 4 Utah &middot; Fiefia for Utah &middot; Friends of Tami Tran &middot; Committee to Elect Jason Thompson</td><td>7/15, 9/15</td><td class="num">$1,000 each</td></tr>
+      <tr><td>Pro Life Utah; Boys and Girls Club (filed &ldquo;Culb&rdquo;, two entries); West Corinne Rec Club; Box Elder County Chamber</td><td>various</td><td class="num">$100&ndash;$500</td></tr>
+    </table></div>
+    <p style="font-size:.9rem;color:var(--color-ink-soft);">He also paid the Jill Koford campaign account $1,000 (7/15), filed under &ldquo;Advertising.&rdquo; Several of these campaigns have their own Hive case files; see <a href="#connections">Connections</a>.</p>
+    <h3 class="topic-head">Travel entries over $1,000</h3>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Payee (as filed)</th><th>Date</th><th>Amount</th></tr>
+      <tr><td>AMEX Delta airlines</td><td>6/30</td><td class="num">$6,032.60</td></tr>
+      <tr><td>Hotel Continental Oslo</td><td>8/11</td><td class="num">$3,298.09</td></tr>
+      <tr><td>AMEX Delta airlines</td><td>5/6</td><td class="num">$3,075.46</td></tr>
+      <tr><td>World Trade Center</td><td>5/6</td><td class="num">$2,000.00</td></tr>
+      <tr><td>Renaissance Zurich</td><td>4/20</td><td class="num">$1,956.96</td></tr>
+      <tr><td>AMEX Delta airlines</td><td>5/6</td><td class="num">$1,824.36</td></tr>
+      <tr><td>UBER</td><td>3/31</td><td class="num">$1,500.00</td></tr>
+      <tr><td>AMEX Delta airlines</td><td>1/5</td><td class="num">$1,418.99</td></tr>
+      <tr><td>AMEX Hotel India</td><td>8/3</td><td class="num">$1,385.22</td></tr>
+      <tr><td>marriot hotel Berlin</td><td>4/23</td><td class="num">$1,098.68</td></tr>
+    </table></div>
+    <p style="font-size:.9rem;color:var(--color-ink-soft);">The filings list each payee and the label &ldquo;Travel Expenses&rdquo; but do not say what each trip was for. Nothing here says a rule was broken.</p>
+    <h3 class="topic-head">Campaign services over $1,000</h3>
+    <p>Irish Elk LLC $8,775 (1/23); Roost Co $5,090.63 (4/3) plus smaller Roost entries ($6,548.30 total); Maddox $4,814.47 (9/17); Box Elder Republicans $1,075 (9/11); Cache Republican Party $1,000 (1/14); Katherine Crouch $1,000 (3/9, &ldquo;Constituent Services&rdquo;).</p>
+  </div>
+</section>
+
+<section id="new">
+  <div class="wrap">
+    <div class="eyebrow">MONEY SINCE SEPT. 26</div>
+    <h2>$45,425 From 33 Contributors in Four Days</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>This money came in after his last report closed. It is posted on the state&rsquo;s temporary list now and will move onto his General Report, due Oct. 27.</p>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Contributor (as listed)</th><th>Date</th><th>Amount</th></tr>
+      <tr><td>Margaret Jahries</td><td>10/5</td><td class="num">$7,500</td></tr>
+      <tr><td>Nucor Corp PAC</td><td>10/5</td><td class="num">$5,000</td></tr>
+      <tr><td>UCU PAC</td><td>10/5</td><td class="num">$4,000</td></tr>
+      <tr><td>Lincoln Hill Partners PAC</td><td>10/5</td><td class="num">$2,500</td></tr>
+      <tr><td>Operating Engineers 3 Statewide PAC</td><td>10/5</td><td class="num">$2,500</td></tr>
+      <tr><td>Utah Assisted Living Assoc</td><td>10/6</td><td class="num">$2,500</td></tr>
+      <tr><td>Utah Farm Bureau AGPAC</td><td>10/6</td><td class="num">$2,500</td></tr>
+      <tr><td>Reagan Outdoor Advertising; Utah Metal Works</td><td>10/5, 10/6</td><td class="num">$1,250 each</td></tr>
+      <tr><td>Utah Bankers Assoc; Utah HOSPAC; Joel Ferry; Utah Restaurant Assoc.; Committee to Expand the Middle Class; Utah Public Power PAC; Building Construction Partners; Sepro; Select Health; WCF</td><td>10/3&ndash;10/6</td><td class="num">$1,000 each</td></tr>
+      <tr><td>Utah Assoc for Justice Inc</td><td>10/6</td><td class="num">$625</td></tr>
+      <tr><td>Regence; NAIFA Utah IFAPAC; Utah Dental Assoc; Cigna Holding Co.; Republic Services; Utah Apartment Assoc. PAC; Utah Property Rights Coalition; Associated General Contractors; Dorsey National Fund; PacifiCorp; Utah Rural Telecom Assoc</td><td>10/3&ndash;10/6</td><td class="num">$500 each</td></tr>
+      <tr><td>Parsons Behle &amp; Latimer</td><td>10/5</td><td class="num">$300</td></tr>
+      <tr><td colspan="2"><strong>Subtotal shown by the state</strong></td><td class="num"><strong>$45,425</strong></td></tr>
+    </table></div>
+    <p style="font-size:.9rem;color:var(--color-ink-soft);">Joel Ferry is listed with a Brigham City address. Lincoln Hill Partners PAC appears in other Hive files (see Connections).</p>
+  </div>
+</section>
+
+<section id="record">
+  <div class="wrap">
+    <div class="eyebrow">SANDALL&rsquo;S 2026 BILLS</div>
+    <h2>Nine Bills and Resolutions as Primary Sponsor</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>These are the bills Sandall introduced himself in the 2026 session, with what happened to each, from the Legislature&rsquo;s own records.</p>
+    <div class="flip-grid">
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">4 of 9</div><div class="label">SIGNED BY THE GOVERNOR</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div><strong>S.B. 8</strong> (state agency and higher education compensation), <strong>S.B. 117</strong> (occupational licensing), <strong>S.B. 140</strong> (election adjustments) and <strong>S.B. 251</strong> (local health departments and DEQ coordination).</div></div></div></button>
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">2</div><div class="label">RESOLUTIONS SENT TO THE LT. GOVERNOR</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div><strong>S.J.R. 6</strong> (amending court rules) and <strong>S.R. 4</strong> (encouraging agriculture in residential development).</div></div></div></button>
+      <button class="flip" type="button" aria-pressed="false"><div class="flip-inner">
+        <div class="flip-face flip-front"><div class="num">3</div><div class="label">LEFT FILED (DID NOT PASS)</div><div class="hint">tap for the detail</div></div>
+        <div class="flip-face flip-back"><div><strong>S.B. 198</strong> (water project management), <strong>S.B. 231</strong> (energy users) and <strong>S.J.R. 9</strong> (friendship and support for Taiwan).</div></div></div></button>
+    </div>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Bill</th><th>Short title</th><th>House sponsor</th><th>Result</th></tr>
+      <tr><td>S.B. 8</td><td>State Agency and Higher Education Compensation Appropriations</td><td>Walt Brooks</td><td><span class="status-pill status-confirmed">Governor signed</span></td></tr>
+      <tr><td>S.B. 117</td><td>Occupational and Professional Licensing Amendments</td><td>A. Cory Maloy</td><td><span class="status-pill status-confirmed">Governor signed</span></td></tr>
+      <tr><td>S.B. 140</td><td>Election Adjustments</td><td>Candice B. Pierucci</td><td><span class="status-pill status-confirmed">Governor signed</span></td></tr>
+      <tr><td>S.B. 198</td><td>Water Project Management Amendments</td><td>&mdash;</td><td><span class="status-pill status-unresolved">Filed, did not pass</span></td></tr>
+      <tr><td>S.B. 231</td><td>Energy User Amendments</td><td>Calvin Roberts</td><td><span class="status-pill status-unresolved">Filed, did not pass</span></td></tr>
+      <tr><td>S.B. 251</td><td>Local Health Department and Department of Environmental Quality Coordination</td><td>Karen M. Peterson</td><td><span class="status-pill status-confirmed">Governor signed</span></td></tr>
+      <tr><td>S.J.R. 6</td><td>Joint Resolution Amending Court Rules</td><td>Katy Hall</td><td><span class="status-pill status-confirmed">To Lt. Governor</span></td></tr>
+      <tr><td>S.J.R. 9</td><td>Joint Resolution Expressing Friendship and Support for Taiwan</td><td>&mdash;</td><td><span class="status-pill status-unresolved">Filed, did not pass</span></td></tr>
+      <tr><td>S.R. 4</td><td>Resolution Encouraging the Integration of Agriculture into Residential Development</td><td>&mdash;</td><td><span class="status-pill status-confirmed">To Lt. Governor</span></td></tr>
+    </table></div>
+    <h3 class="topic-head">House bills he carried in the Senate</h3>
+    <p>He was Senate floor sponsor of 16 House bills in 2026. Among them: H.B. 76 Data Center Water Transparency Amendments (Koford, signed), H.B. 247 Great Salt Lake Related Amendments (Ward, signed), H.B. 348 Dedicated Water Amendments (Koford, signed), H.B. 410 Water Leasing Amendments (Koford, signed) and H.B. 501 Water Modifications (Bolinder; last action listed as Senate 2nd Reading Calendar to Rules). H.B. 76 is covered on the <a href="sd5-koford-hernandez.html">SD-5 Koford case file</a>.</p>
+    <h3 class="topic-head">Other roles on the record</h3>
+    <ul>
+      <li>The Deseret News (Sept. 18, 2025) names Sandall co-chair of the 2025 Legislative Redistricting Committee and reports he co-chaired the 2021 committee whose maps a state judge voided in 2025.</li>
+      <li>His undated Senate biography lists him as Vice-Chair of Executive Appropriations. A 2026 committee roster could not be confirmed from the Legislature&rsquo;s site.</li>
+      <li>The Hive&rsquo;s <a href="six-questions-every-candidate.html">questionnaire page</a> lists him among members of the state&rsquo;s nuclear strategy group that first met in October 2025.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="disclosure">
+  <div class="wrap">
+    <div class="eyebrow">CONFLICT-OF-INTEREST FORMS</div>
+    <h2>What Each Candidate Listed</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Each candidate files this form every year. Below is what each one wrote, item by item, from the 2026 forms on the state site. Home addresses are left out.</p>
+    <div class="table-scroll"><table class="entity-table">
+      <tr><th>Item</th><th>Sandall (filed 1/1/2026)</th><th>Bigler (filed 1/8/2026)</th><th>Quinlan (filed 1/7/2026)</th></tr>
+      <tr><td>Job</td><td>Partner, Sandall Farm &amp; Ranch Family Partnership; State of Utah, legislator</td><td>Retired; previously teacher, Box Elder School District</td><td>Self-employed reseller (thrift and yard-sale items resold online)</td></tr>
+      <tr><td>Businesses owned or led</td><td>Sandall Farm &amp; Ranch Family Partnership; Sandall Trucking LLC (general freight); S&amp;P Investments LLC (commercial rental property); Sandall Holdings and Investments LLC (commercial rental property and investment) &mdash; partner in each</td><td>None; serves on a local Fine Arts Center board</td><td>None</td></tr>
+      <tr><td>Boards and public roles listed</td><td><strong>&ldquo;Chair &ndash; Utah Fairpark Area Investment and Restoration District&rdquo;</strong> (&ldquo;Development of UFAIR area&rdquo;)</td><td>Fine Arts Center board (local)</td><td>None</td></tr>
+      <tr><td>Income over $5,000</td><td>The four entities above, and State of Utah (legislative)</td><td>Utah State Retirement System, Social Security, personal investments</td><td>None</td></tr>
+      <tr><td>Stocks over $5,000</td><td>&ldquo;na&rdquo;</td><td>Ameriprise, Corebridge (retirement savings)</td><td>None</td></tr>
+      <tr><td>Real property (optional)</td><td>&ldquo;none&rdquo;</td><td>Her residence, co-owned</td><td>None</td></tr>
+      <tr><td>Spouse&rsquo;s employer (if a possible conflict)</td><td>&ldquo;none&rdquo;</td><td>Retired; previously owner, Brigham City Taco Time</td><td>None; previously Stanford University Linear Accelerator</td></tr>
+    </table></div>
+    <p style="font-size:.9rem;color:var(--color-ink-soft);">Read as web-form pages on disclosures.utah.gov (typed values, not a scan). Sandall lists the Fairpark district under Item 2A (entities he owns or is an officer of), not Item 5A (boards).</p>
+  </div>
+</section>
+
+<section id="challengers">
+  <div class="wrap">
+    <div class="eyebrow">THE CHALLENGERS</div>
+    <h2>Claudia Bigler (D) and Julie Quinlan (Forward)</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>Both report very small campaigns. Bigler, a retired choir teacher, has no itemized contributions. Quinlan&rsquo;s campaign is funded mostly by help from her party and her own money.</p>
+    <div class="conn-grid">
+      <div class="conn-card">
+        <div class="case">DEMOCRAT</div>
+        <h4>Claudia Bigler</h4>
+        <ul>
+          <li>2026 file: two expenses, both to Box Elder County ($117.73 on 1/12 and $100 on 3/16). No contributions itemized.</li>
+          <li>Her folder lists Convention, Primary and September 30th reports. Nothing new on the received list.</li>
+          <li>Ran for Utah House District 1 in 2024 (closed 2023 House-1 folder on the state site).</li>
+          <li>The Tribune (Oct. 12) says she retired in 2025 after 24 years teaching choir at Box Elder High School and directs the Cache Children&rsquo;s Choir. No campaign website found.</li>
+        </ul>
+      </div>
+      <div class="conn-card gold">
+        <div class="case">FORWARD PARTY</div>
+        <h4>Julie Quinlan</h4>
+        <ul>
+          <li>2026 filed reports: $7,379.23 raised, $262.17 spent. The Utah Forward Party gave $6,795.48 in-kind, including $6,730.12 labeled &ldquo;Voter Registry Value&rdquo; (9/30). Website and domain help from the party: $65.36.</li>
+          <li>Her folder, as read Oct. 17, lists Convention, Primary and General reports. <strong>No September 30th report appears in the list.</strong> Contributions from July and August, mostly her own money, are still on the temporary received list ($2,800.42 total).</li>
+          <li>Several of her own payments are marked as loans on her file.</li>
+          <li>Campaign site: julieq4utah.com.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="chart-card">
+      <h3>The three campaigns side by side</h3>
+      <div class="table-scroll"><table class="entity-table compare-table">
+        <tr><th></th><th>Sandall</th><th>Bigler</th><th>Quinlan</th></tr>
+        <tr><td>Raised on 2026 reports</td><td class="num">$67,651.00</td><td class="num">$0.00</td><td class="num">$7,379.23</td></tr>
+        <tr><td>Spent on 2026 reports</td><td class="num">$115,012.81</td><td class="num">$217.73</td><td class="num">$262.17</td></tr>
+        <tr><td>On the received list now</td><td class="num">$45,425.00</td><td class="num">$0.00</td><td class="num">$2,800.42</td></tr>
+        <tr><td>In-kind share of money raised</td><td class="num">16.6%</td><td class="num">&mdash;</td><td class="num">92.4%</td></tr>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+<section id="stands">
+  <div class="wrap">
+    <div class="eyebrow">IN THEIR OWN WORDS</div>
+    <h2>Where They Stand</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>What each candidate has said in public, with who reported it. The Salt Lake Tribune sent all three a questionnaire; Sandall and Bigler did not respond.</p>
+    <div class="vs-grid">
+      <div class="vs-head">TOPIC</div><div class="vs-head">WHAT WAS SAID</div>
+      <div>Stratos data center (Box Elder)</div><div><strong>Sandall</strong> declined KSL interviews and sent a statement that he will &ldquo;watch closely to make sure any and all permits are properly vetted.&rdquo; <strong>Bigler</strong> called it &ldquo;a provisional &lsquo;no&rsquo; until more study was done.&rdquo; <strong>Quinlan:</strong> &ldquo;No data centers in the greater Great Salt Lake basin.&rdquo; (KSL, July 18, 2026)</div>
+      <div>MIDA</div><div><strong>Quinlan</strong> said every candidate should pledge to dissolve MIDA. <strong>Bigler</strong> said she was not sure. (KSL, July 18, 2026)</div>
+      <div>Amendments A and B</div><div><strong>Quinlan</strong> opposes both (Tribune, Oct. 12). Sandall and Bigler did not answer the Tribune.</div>
+      <div>Voting maps</div><div><strong>Quinlan</strong> says she is running for fair maps and says Sandall worked against that effort. That is her claim, as reported by the Tribune; Sandall co-chaired the 2021 and 2025 redistricting committees (Deseret News).</div>
+      <div>Water and the Great Salt Lake</div><div><strong>Quinlan</strong> (her site): require all water districts to conserve and restrict development that threatens the lake&rsquo;s inflow. <strong>Sandall</strong> carried several water bills in the Senate in 2026 (see Bills).</div>
+    </div>
+    <p style="font-size:.86rem;color:var(--color-ink-soft);margin-top:10px;">Quotes were collected through a page reader and are being checked word for word against the original articles before this page is published. <span class="note-unv">CHECK BEFORE PUBLISHING</span></p>
+  </div>
+</section>
+
+<section id="connections">
+  <div class="wrap">
+    <div class="eyebrow">CONNECTIONS TO OTHER HIVE FILES</div>
+    <h2>Names That Appear Elsewhere</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>A shared name is a connection worth knowing about, not an accusation. Each card says where the name shows up in Sandall&rsquo;s filings and where else the Hive has documented it.</p>
+    <div class="conn-grid">
+      <div class="conn-card gold"><div class="case">CMV PAC (COUNT MY VOTE)</div><h4>$11,250 in signature gathering</h4><p>Sandall lists CMV PAC&rsquo;s help as in-kind &ldquo;Signature gathering&rdquo; (1/18). The Hive&rsquo;s CMV PAC research found the same $11,250 amount went to several 2026 candidates, including <a href="sd6-tran-neal.html">Tami Tran (SD-6)</a>.</p></div>
+      <div class="conn-card"><div class="case">GATHER INC.</div><h4>$12,750 for signatures</h4><p>Paid 1/26 for &ldquo;Signature Gathering.&rdquo; Casey Hill&rsquo;s Weber State biography says he founded &ldquo;Gather Inc.&rdquo; Casey Hill is a co-founder of Lincoln Hill Partners.</p></div>
+      <div class="conn-card"><div class="case">LINCOLN HILL PARTNERS PAC</div><h4>$2,500 on Oct. 5</h4><p>On his received list. The Salt Lake Tribune reported in May 2026 that Lincoln Hill&rsquo;s Lincoln Shurtz represents MIDA, the authority behind the Stratos project area in Box Elder County.</p></div>
+      <div class="conn-card"><div class="case">ROOST CO</div><h4>$6,548 in campaign services</h4><p>The same vendor appears on the <a href="sd5-koford-hernandez.html">SD-5 Koford</a> file ($6,500).</p></div>
+      <div class="conn-card doers"><div class="case">CAMPAIGNS HE FUNDED</div><h4>Hive case-file candidates</h4><ul><li><a href="sd11-buss-benson.html">Brooks Benson (SD-11)</a>: $1,000</li><li><a href="sd18-fiefia-anderson.html">Fiefia (SD-18)</a>: $1,000</li><li><a href="sd6-tran-neal.html">Tami Tran (SD-6)</a>: $1,000</li><li><a href="sd5-koford-hernandez.html">Jill Koford (SD-5)</a>: $1,000</li><li><a href="sd21-brammer-smith-myers-woodfield.html">Brady Brammer (SD-21)</a>: $2,500</li></ul></div>
+      <div class="conn-card"><div class="case">THE SAME CHECK, SEEN FROM THE OTHER SIDE</div><h4>Gifts Sandall&rsquo;s campaign gave, on other Hive pages</h4><p>The <a href="sd5-koford-hernandez.html">SD-5</a>, <a href="sd11-buss-benson.html">SD-11</a> and <a href="sd19-cullimore-anderson.html">SD-19</a> case files list contributions from Sandall or his campaign fund on those candidates&rsquo; own reports.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="rubric">
+  <div class="wrap">
+    <div class="eyebrow">THE HIVE RUBRIC</div>
+    <h2>Graded on What Has Already Happened</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>The Hive grades the record, not the person. A letter means the record has something to grade. PENDING means it doesn&rsquo;t yet. Every candidate gets the same five questions.</p>
+    <div class="table-scroll"><table class="rubric-table">
+      <tr><th>Question</th><th>Sandall</th><th>Bigler</th><th>Quinlan</th></tr>
+      <tr><td>Power &mdash; who gains control?</td><td><span class="gl g-na">PENDING</span>Holds a Senate budget leadership post and chairs a state development district, both listed in public records. No vote on Stratos yet.</td><td><span class="gl g-na">PENDING</span>No office held.</td><td><span class="gl g-na">PENDING</span>No office held.</td></tr>
+      <tr><td>Transparency &mdash; is it disclosed?</td><td><span class="gl g-b">B</span>All three 2026 reports filed; COI form lists each business and the Fairpark district chair seat. Seven &ldquo;[DELETED]&rdquo; rows. Did not respond to the Tribune questionnaire; declined KSL interviews.</td><td><span class="gl g-b">B</span>All three reports filed; COI form complete. Did not answer the Tribune questionnaire.</td><td><span class="gl g-c">C</span>COI form complete. No September 30th report appears in her folder as of Oct. 17; July&ndash;August money is still on the temporary list.</td></tr>
+      <tr><td>Financial accountability &mdash; can you follow the money?</td><td><span class="gl g-c">C</span>Every payee is named, but $30,299 of travel (including hotels abroad) carries only the label &ldquo;Travel Expenses,&rdquo; and a $2,500 &ldquo;State of Utah&rdquo; contribution has no explanation.</td><td><span class="gl g-b">B</span>Two small expenses, both named. No contributions to trace.</td><td><span class="gl g-b">B</span>Payees and in-kind items are described (website, domain, voter file).</td></tr>
+      <tr><td>Environmental impact</td><td><span class="gl g-na">PENDING</span>Water bills carried in 2026 are listed; outcomes for the Great Salt Lake are not yet measurable.</td><td><span class="gl g-na">PENDING</span>No record.</td><td><span class="gl g-na">PENDING</span>No record.</td></tr>
+      <tr><td>Community impact</td><td><span class="gl g-na">PENDING</span></td><td><span class="gl g-na">PENDING</span></td><td><span class="gl g-na">PENDING</span></td></tr>
+    </table></div>
+    <p style="font-size:.86rem;color:var(--color-ink-soft);margin-top:10px;"><strong>How to read these:</strong> A = the record clearly meets the test; B = meets it with small gaps; C = real gaps a voter can see; D/F = the record works against the test. Grades cover records as of Oct. 17, 2026 and will be revisited after the Oct. 27 General Reports.</p>
+  </div>
+</section>
+
+<section id="ask">
+  <div class="wrap">
+    <div class="eyebrow">QUESTIONS YOU CAN ASK</div>
+    <h2>Who Can Answer What</h2>
+    <p class="plain"><b>IN PLAIN WORDS</b>These are questions for the offices that keep the records. Anyone can ask them.</p>
+    <div class="ask-list">
+      <div class="ask"><div class="ask-who">Lt. Governor&rsquo;s Elections Office (disclosure@utah.gov)</div><div>What does a &ldquo;State of Utah&rdquo; contribution on a candidate&rsquo;s report usually mean, and how should a voter read it?</div></div>
+      <div class="ask"><div class="ask-who">Lt. Governor&rsquo;s Elections Office</div><div>What do &ldquo;[DELETED]&rdquo; rows on a campaign&rsquo;s export mean, and can the public see what was removed?</div></div>
+      <div class="ask"><div class="ask-who">Lt. Governor&rsquo;s Elections Office</div><div>When a candidate&rsquo;s folder shows no September 30th report, what happens next?</div></div>
+      <div class="ask"><div class="ask-who">Utah Senate (senate.utah.gov)</div><div>Which campaign-paid trips in 2026 were legislative business, and is there a public list of official travel?</div></div>
+      <div class="ask"><div class="ask-who">Utah Fairpark Area Investment and Restoration District</div><div>Where are the district board&rsquo;s meeting minutes, budget and votes posted?</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="limits">
+  <div class="wrap">
+    <div class="eyebrow">WHAT THIS DOESN&rsquo;T SHOW</div>
+    <h2>Limits of the Record</h2>
+    <div class="start-here" style="border-left-color:var(--color-line);">
+      <ul>
+        <li>Money covers the 2026 Convention, Primary and September 30 reports, plus contributions on the received list as of Oct. 17, 2026. The General Report (due Oct. 27) is not out yet.</li>
+        <li>Sandall&rsquo;s 2025 Year End totals are included for context only; earlier years were not re-checked.</li>
+        <li>Purpose labels (&ldquo;Donations,&rdquo; &ldquo;Travel Expenses&rdquo;) are the campaign&rsquo;s own. This page adds them up but does not relabel them.</li>
+        <li>Sandall&rsquo;s campaign website could not be read. His 2026 committee roster could not be confirmed on the Legislature&rsquo;s site.</li>
+        <li>The district map shades whole counties; the district includes only parts of Cache and Tooele.</li>
+        <li>Nothing here suggests any rule was broken.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <details class="sources"><summary>View all sources (12)</summary>
+      <ol>
+        <li>Utah Lt. Governor, disclosures.utah.gov: Sandall, Scott (2024 Senate-1) folder &mdash; 2026 CSV of filed reports, 2025 CSV, Received Contributions Report (2026), Conflict of Interest form 1/1/2026. Read Oct. 17, 2026 (web pages and CSV).</li>
+        <li>disclosures.utah.gov: Bigler, Claudia (2026 Utah Senator-1) &mdash; 2026 CSV, received list, COI form 1/8/2026.</li>
+        <li>disclosures.utah.gov: Quinlan, Julie (2026 Senate-1) &mdash; 2026 CSV, received list, COI form 1/7/2026.</li>
+        <li><a href="https://le.utah.gov/bills/billSearch.jsp?sess=2026GS&amp;disp=all&amp;sen=SANDASD" target="_blank" rel="noopener">le.utah.gov, 2026 General Session bills, Sen. Sandall</a></li>
+        <li><a href="https://senate.utah.gov/wp-content/uploads/SANDASD_bio.pdf" target="_blank" rel="noopener">Utah Senate, Scott D. Sandall biography (PDF, undated)</a></li>
+        <li><a href="https://www.deseret.com/utah/2025/09/18/utah-legislature-redistricting-committee/" target="_blank" rel="noopener">Deseret News, &ldquo;Legislative redistricting committee to start redrawing Utah&rsquo;s congressional map,&rdquo; Sept. 18, 2025</a></li>
+        <li><a href="https://www.ksl.com/article/51598787/candidates-seeking-box-elder-senate-seat-weigh-in-on-controversial-stratos-project" target="_blank" rel="noopener">KSL, &ldquo;Candidates seeking Box Elder Senate seat weigh in on controversial Stratos project,&rdquo; July 18, 2026</a></li>
+        <li>Salt Lake Tribune, 2026 legislative candidate questionnaire, Senate District 1, Oct. 12, 2026.</li>
+        <li><a href="https://vote.utah.gov/2026-candidate-filings/" target="_blank" rel="noopener">vote.utah.gov, 2026 Candidate Filings</a></li>
+        <li><a href="https://julieq4utah.com" target="_blank" rel="noopener">julieq4utah.com (Quinlan campaign site)</a></li>
+        <li><a href="https://disclosures.utah.gov/File/308" target="_blank" rel="noopener">Lt. Governor&rsquo;s Office, 2026 campaign financial disclosure dates</a></li>
+        <li>Weber State University National Advisory Council biography, Casey Hill; Salt Lake Tribune, May 19, 2026 (Lincoln Hill Partners lobbying).</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Compiled from Utah campaign-finance disclosures (disclosures.utah.gov), the candidates&rsquo; own conflict-of-interest forms, and le.utah.gov. Public records only &middot; No comment requested.<br>
+    <a href="index.html">&larr; Back to the Candidates 2026 docket</a>
+  </div>
+</footer>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
+<script>
+document.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('flipped');b.setAttribute('aria-pressed',b.classList.contains('flipped'));}));
+if (window.mermaid) { mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { fontSize: '20px', fontFamily: 'Georgia, serif', primaryColor:'#fbf9f3', primaryBorderColor:'#1f4e6b', primaryTextColor:'#12304a', lineColor:'#1f4e6b' }, flowchart:{htmlLabels:true, curve:'basis', useMaxWidth:true} }); }
+if (window.Chart) {
+  Chart.defaults.font.family = "'Source Serif 4', Georgia, serif"; Chart.defaults.font.size = 15;
+  Chart.defaults.color = '#5c534c';
+  const money = v => '$' + Number(v).toLocaleString();
+  new Chart(document.getElementById('periodChart'), {
+    type: 'bar',
+    data: { labels: ['Convention report', 'Primary report', 'Sept. 30 report', 'General report'],
+      datasets: [
+        { label: 'Sandall', data: [37500, 8500, 21651, null], backgroundColor: '#1f4e6b', borderRadius: 2 },
+        { label: 'Bigler', data: [0, 0, 0, null], backgroundColor: '#d9a441', borderRadius: 2 },
+        { label: 'Quinlan', data: [117.73, 479.38, null, 6782.12], backgroundColor: '#1d6b57', borderRadius: 2 } ] },
+    options: { maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + money(c.parsed.y) } } },
+      scales: { y: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, x: { grid: { display: false } } } }
+  });
+  new Chart(document.getElementById('spendChart'), {
+    type: 'bar',
+    data: { labels: ['Donations', 'Travel Expenses', 'Campaign Expense', 'Signature Gathering', 'Advertising', 'Constituent Services', 'Other labels'],
+      datasets: [{ data: [43104.82, 30298.66, 25193.69, 12750, 1989.71, 1383.94, 291.99], backgroundColor: '#1f4e6b', borderRadius: 3 }] },
+    options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => money(c.parsed.x) } } },
+      scales: { x: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, y: { grid: { display: false } } } }
+  });
+}
+(function(){
+  function draw(){
+    if (!(window.L && typeof UTAH_GEO !== 'undefined')) return false;
+    var want = ['Box Elder','Cache','Tooele'];
+    var m = L.map('sdMap', {scrollWheelZoom:false, zoomSnap:0.25});
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors', maxZoom:18}).addTo(m);
+    var cl = L.geoJSON(UTAH_GEO.counties, {filter:function(f){return want.indexOf(f.properties.n) > -1;}, style:function(f){return {color:'#12304a', weight:2.5, fillColor: f.properties.n==='Box Elder' ? '#1d6b57' : '#d9a441', fillOpacity:0.28};}}).addTo(m);
+    cl.eachLayer(function(l){ l.bindTooltip(l.feature.properties.n + ' County' + (l.feature.properties.n==='Box Elder' ? ' (all of it in SD-1)' : ' (part in SD-1)'), {sticky:true}); });
+    if (typeof addUtahOutlines === 'function') addUtahOutlines(m, {});
+    m.fitBounds(cl.getBounds(), {padding:[18,18]});
+    return true;
+  }
+  function fail(){ var b=document.getElementById('sdMap'); if (b && !b.querySelector('.leaflet-pane')) { b.style.display='flex'; b.style.alignItems='center'; b.style.justifyContent='center'; b.style.padding='24px'; b.style.textAlign='center'; b.innerHTML='<p style="max-width:460px;margin:0;">The map could not load in this view. It loads on the live page.</p>'; } }
+  if (!draw()) { setTimeout(function(){ if(!draw()) fail(); }, 2500); }
+})();
+</script>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
