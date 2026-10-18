@@ -1,5 +1,19 @@
 const CANDIDATES = [
   {
+    id: "judges-2026",
+    race: "Statewide — Judicial Retention, All 57 Judges",
+    level: "Resource",
+    caseNumber: "RESOURCE 05",
+    names: "Judges on Your 2026 Ballot",
+    verdict: "JPEC Findings and Hive Grades for All 57 Judges",
+    tags: ["Judges", "Retention", "JPEC", "County Ballot Finder"],
+    stamp: "Pinned",
+    href: "judges/index.html",
+    pinned: true,
+    datePosted: "2026-10-17",
+    dateUpdated: "2026-10-17"
+  },
+  {
     id: "research-your-candidates",
     race: "Statewide — How-To Guide",
     level: "Resource",
