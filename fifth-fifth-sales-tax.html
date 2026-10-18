@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="hive-bee.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fifth-Fifth Sales Tax — Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f4f0e6;
+    --paper:#fbf9f3;
+    --ink:#2a261e;
+    --ink-soft:#5c5647;
+    --rust:#1d6b57;
+    --amber:#d9a441;
+    --burgundy-light:#1f4e6b;
+    --burgundy-deep:#12304a;
+    --line:#ddd6c4;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    line-height:1.6;
+  }
+  a{color:var(--rust);}
+  header.band{
+    background:linear-gradient(135deg, var(--burgundy-light), var(--burgundy-deep));
+    color:#f4e9dd;
+    padding:1.1rem 1.5rem;
+  }
+  .band-inner{
+    max-width:920px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:.5rem;
+  }
+  .brand{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:.08em;
+    font-size:.78rem;
+    color:#e7cfc0;
+  }
+  nav.top a{
+    color:#f4e9dd;
+    text-decoration:none;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.78rem;
+    letter-spacing:.05em;
+    margin-left:1.25rem;
+  }
+  nav.top a:hover{color:var(--amber);}
+  main{max-width:920px; margin:0 auto; padding:2.5rem 1.5rem 4rem;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.75rem;
+    letter-spacing:.1em;
+    color:var(--rust);
+    margin-bottom:.6rem;
+  }
+  h1{
+    font-family:'Playfair Display', serif;
+    font-size:2.5rem;
+    line-height:1.15;
+    margin:0 0 .5rem;
+  }
+  .dek{
+    font-size:1.1rem;
+    color:var(--ink-soft);
+    max-width:60ch;
+    margin-bottom:1.4rem;
+  }
+  .prep-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.82rem;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:.7rem 0;
+    margin-bottom:1.8rem;
+  }
+  .prep-line a{color:var(--ink-soft); text-decoration:underline;}
+  .note-box{
+    background:var(--paper);
+    border-left:3px solid var(--amber);
+    padding:1rem 1.25rem;
+    font-size:.96rem;
+    color:var(--ink-soft);
+    margin-bottom:2.2rem;
+  }
+  .note-box strong{color:var(--ink);}
+  .checklist{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0 2.5rem;
+  }
+  @media (max-width: 760px){
+    .checklist{grid-template-columns:1fr;}
+    h1{font-size:1.9rem;}
+  }
+  .checklist ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .checklist li{
+    display:flex;
+    gap:.65rem;
+    padding:0 0 1.3rem;
+    border-bottom:1px solid var(--line);
+    margin-bottom:1.3rem;
+  }
+  .checklist li:last-child{border-bottom:none;}
+  .box{
+    flex:0 0 auto;
+    width:1.05rem;
+    height:1.05rem;
+    border:1.5px solid var(--rust);
+    margin-top:.28rem;
+  }
+  .item-text q, .item-text .quote{font-style:italic;}
+  footer{
+    max-width:920px;
+    margin:0 auto;
+    padding:2rem 1.5rem 3rem;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.75rem;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+  }
+  footer a{color:var(--ink-soft);}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  header.band{background:linear-gradient(160deg,#1f5e6b 0%,#1f4e6b 45%,var(--burgundy-deep) 100%);}
+  .dates{font-family:'IBM Plex Mono', monospace;font-size:.78rem;color:var(--ink-soft);margin:-.4rem 0 1.4rem;}
+  .byline{font-family:'Source Serif 4', Georgia, serif;font-style:italic;font-size:1.02rem;color:var(--ink-soft);margin:0 0 .9rem;}
+</style>
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+
+<header class="band">
+  <div class="band-inner">
+    <span class="brand">UTAH HIVE POLITICS &middot; WEBER COUNTY HIVE &middot; 2026 CANDIDATES</span>
+    <nav class="top">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">Pinned Resource &middot; Reader-Submitted Document</div>
+  <h1>The Fifth-Fifth Sales Tax</h1>
+  <p class="byline">By Dr. Ronald Mortensen, Ph.D. &middot; Co-Founder, Citizens for Tax Fairness</p>
+  <p class="dates">Posted Sept. 15, 2026 &middot; Updated Oct. 17, 2026 (page restored; colors updated to match the docket)</p>
+  <p class="dek">Talking points opposing Davis County's proposed 0.20% (two-cents-per-ten-dollars) county-wide sales tax increase, prepared by a local tax-fairness advocate ahead of a commission vote.</p>
+
+  <p class="prep-line">
+    Author contact: <a href="mailto:citizensfortaxfairness.org@gmail.com">citizensfortaxfairness.org@gmail.com</a>
+  </p>
+
+  <div class="note-box">
+    <strong>About this document.</strong> Written and prepared by Dr. Ronald Mortensen, Co-Founder of Citizens for Tax Fairness, and reproduced here in full with attribution as a resource for readers and candidates. This is his own set of talking points and arguments, not Weber County Hive reporting or analysis &mdash; the figures, characterizations, and opinions below are his.
+  </div>
+
+  <div class="checklist">
+    <ul>
+      <li>
+        <span class="box"></span>
+        <span class="item-text">When the People are already struggling to cover the rising costs of clothing, housing, food, taxes, utilities, school supplies, insurance, etc., elected officials should be looking for ways to <em>reduce</em> their tax burden, not increase it.</span>
+      </li>
+      <li>
+        <span class="box"></span>
+        <span class="item-text">Sales taxes drive up inflation. If adopted, the proposed sales tax will immediately inflate the price of every taxable item by 0.20% and the county-wide sales tax will increase to 7.35%. When the price of a car goes up by $2,000, after the sales tax is added the total increase will be $2,147.</span>
+      </li>
+      <li>
+        <span class="box"></span>
+        <span class="item-text">According to the Wasatch Front Regional Council, the new tax of only 2 cents on each $10 will generate $15,982,529 in new tax revenue. What the Council doesn't say is that it costs each of the 384,000 residents of Davis County $41.62 per year ($166 for a family of four) &mdash; and it doesn't say how many gallons of milk, how much fresh produce, or how many pounds of hamburger a family of four could buy with that $166.</span>
+      </li>
+      <li>
+        <span class="box"></span>
+        <span class="item-text">This is a bait-and-switch proposal, since the county and cities get some unrestricted revenue for three years and then all of the revenue goes to transportation, including a full 50% to the Utah Transit Authority (UTA).</span>
+      </li>
+      <li>
+        <span class="box"></span>
+        <span class="item-text">This is just another example of the governor and legislature's Pontius Pilate approach to taxation &mdash; legislators pass and the governor signs bills that incentivize (bribe) or even require local elected officials to raise taxes, while at the same time bragging about lowering the state income tax by pennies for the average Utahn.</span>
+      </li>
+      <li>
+        <span class="box"></span>
+        <span class="item-text">As Commissioner Lorene Kamalu noted, Davis County households are already paying $400 annually for transit and not getting much for their money. This new tax will increase that amount to around $566 annually.</span>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <span class="box"></span>
+        <span class="item-text">Commissioner Bob Stephenson's assertion that commissioners who don't support the tax increase are "not doing your duty with what you were sworn to office to do" is very troubling. He seems to see his role as always putting governments' needs ahead of those of the People.</span>
+      </li>
+      <li>
+        <span class="box"></span>
+        <span class="item-text">City managers making $200K and $250K believe that increasing the sales tax is "a no-brainer," and that citizens will vote for the increase if it is put on the ballot.</span>
+      </li>
+      <li>
+        <span class="box"></span>
+        <span class="item-text">Lame-duck commissioners who have already raised taxes multiple times, and shown that they don't know how to handle one-time funds, should not be raising taxes during the waning days of their tenure.</span>
+      </li>
+      <li>
+        <span class="box"></span>
+        <span class="item-text">The Court Facilities Director told the Standard-Examiner that county attorneys will be able to stay in their current location until construction of the new courthouse is completed; therefore, this tax increase is <strong>not</strong> needed for new office space.</span>
+      </li>
+      <li>
+        <span class="box"></span>
+        <span class="item-text">Commissioners need to step up and let the legislature and governor know that they stand with the People &mdash; not with unelected, overpaid city managers, the Wasatch Front Regional Council, mayors and city councils who never saw a tax increase they didn't like, or those trying to route taxpayer funds into 2034 Olympic-related projects. Citizens are already facing multiple property tax increases this year and don't need this added on top of those. County commissioners should <strong>NOT</strong> approve this additional sales tax.</span>
+      </li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  Written by Dr. Ronald Mortensen, Co-Founder, Citizens for Tax Fairness &middot; hosted by Weber County Hive &middot; <a href="index.html">2026 Candidates Docket</a> &middot; <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">webercountyhive.substack.com</a>
+</footer>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

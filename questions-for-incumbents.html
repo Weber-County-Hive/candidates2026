@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="hive-bee.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questions for Incumbents — Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f4f0e6;
+    --paper:#fbf9f3;
+    --ink:#2a261e;
+    --ink-soft:#5c5647;
+    --rust:#1d6b57;
+    --amber:#d9a441;
+    --burgundy-light:#1f4e6b;
+    --burgundy-deep:#12304a;
+    --line:#ddd6c4;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    line-height:1.6;
+  }
+  a{color:var(--rust);}
+  header.band{
+    background:linear-gradient(135deg, var(--burgundy-light), var(--burgundy-deep));
+    color:#f4e9dd;
+    padding:1.1rem 1.5rem;
+  }
+  .band-inner{
+    max-width:920px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:.5rem;
+  }
+  .brand{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:.08em;
+    font-size:.78rem;
+    color:#e7cfc0;
+  }
+  nav.top a{
+    color:#f4e9dd;
+    text-decoration:none;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.78rem;
+    letter-spacing:.05em;
+    margin-left:1.25rem;
+  }
+  nav.top a:hover{color:var(--amber);}
+  main{max-width:760px; margin:0 auto; padding:2.5rem 1.5rem 4rem;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.75rem;
+    letter-spacing:.1em;
+    color:var(--rust);
+    margin-bottom:.6rem;
+  }
+  h1{
+    font-family:'Playfair Display', serif;
+    font-size:2.5rem;
+    line-height:1.15;
+    margin:0 0 .5rem;
+  }
+  .dek{
+    font-size:1.1rem;
+    color:var(--ink-soft);
+    max-width:60ch;
+    margin-bottom:1.4rem;
+  }
+  .prep-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.82rem;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:.7rem 0;
+    margin-bottom:1.8rem;
+  }
+  .prep-line a{color:var(--ink-soft); text-decoration:underline;}
+  .note-box{
+    background:var(--paper);
+    border-left:3px solid var(--amber);
+    padding:1rem 1.25rem;
+    font-size:.96rem;
+    color:var(--ink-soft);
+    margin-bottom:2.2rem;
+  }
+  .note-box strong{color:var(--ink);}
+  ol.questions{
+    list-style:none;
+    counter-reset:q 1;
+    margin:0;
+    padding:0;
+  }
+  ol.questions > li{
+    counter-increment:q;
+    position:relative;
+    padding:0 0 1.6rem 2.6rem;
+    border-bottom:1px solid var(--line);
+    margin-bottom:1.6rem;
+  }
+  ol.questions > li:last-child{border-bottom:none;}
+  ol.questions > li::before{
+    content:counter(q);
+    position:absolute;
+    left:0;
+    top:0;
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    font-size:1.3rem;
+    color:var(--amber);
+  }
+  ol.sub{
+    list-style:lower-alpha;
+    margin:.75rem 0 0;
+    padding-left:1.3rem;
+  }
+  ol.sub li{
+    margin-bottom:.55rem;
+    font-size:.97rem;
+  }
+  .cite{
+    color:var(--rust);
+    text-decoration:underline;
+    white-space:nowrap;
+  }
+  .skip-note{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.8rem;
+    color:var(--ink-soft);
+    font-style:normal;
+    margin:0 0 1.6rem;
+  }
+  footer{
+    max-width:760px;
+    margin:0 auto;
+    padding:2rem 1.5rem 3rem;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:.75rem;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+  }
+  footer a{color:var(--ink-soft);}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  header.band{background:linear-gradient(160deg,#1f5e6b 0%,#1f4e6b 45%,var(--burgundy-deep) 100%);}
+  .dates{font-family:'IBM Plex Mono', monospace;font-size:.78rem;color:var(--ink-soft);margin:-.4rem 0 1.4rem;}
+  .byline{font-family:'Source Serif 4', Georgia, serif;font-style:italic;font-size:1.02rem;color:var(--ink-soft);margin:0 0 .9rem;}
+</style>
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+
+<header class="band">
+  <div class="band-inner">
+    <span class="brand">UTAH HIVE POLITICS &middot; WEBER COUNTY HIVE &middot; 2026 CANDIDATES</span>
+    <nav class="top">
+      <a href="index.html">Docket</a>
+      <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">Pinned Resource &middot; Reader-Submitted Document</div>
+  <h1>Questions for Incumbents</h1>
+  <p class="byline">By Dr. Ronald Mortensen, Ph.D. &middot; Co-Founder, Citizens for Tax Fairness</p>
+  <p class="dates">Posted Sept. 15, 2026 &middot; Updated Oct. 17, 2026 (page restored; colors updated to match the docket)</p>
+  <p class="dek">A set of questions for sitting legislators on their votes on MIDA expansion, Public Infrastructure Districts, stadium and developer tax breaks, water metering, and legislative pay &mdash; each tied to a specific bill.</p>
+
+  <div class="note-box">
+    <strong>About this document.</strong> Written and prepared by Dr. Ronald Mortensen, Co-Founder of Citizens for Tax Fairness, and reproduced here in full with attribution as a resource for readers and candidates. This is his own set of questions, not Weber County Hive reporting or analysis. Bill citations below have been linked directly to each bill's page on the Utah State Legislature's website for readers who want to check the record themselves.
+  </div>
+
+  <p class="skip-note">Item 1 was blank in the source document; numbering below starts at 2, as in the original.</p>
+
+  <ol class="questions" start="2">
+    <li>Would you support the direct election of all governing boards that have taxing authority, in order to end the current practice of taxation without representation that comes with appointed boards?</li>
+
+    <li>How many of these bills that expanded MIDA's authority did you vote against while serving in the legislature?
+      <ol class="sub">
+        <li><a class="cite" href="https://le.utah.gov/~2018/bills/static/SB0240.html" target="_blank" rel="noopener">S.B. 240 (2018)</a> &mdash; MIDA accommodations tax; sales-tax and property-tax changes in project areas.</li>
+        <li><a class="cite" href="https://le.utah.gov/~2019/bills/static/SB0269.html" target="_blank" rel="noopener">S.B. 269 (2019)</a> &mdash; Board appointment rules and other MIDA amendments.</li>
+        <li><a class="cite" href="https://le.utah.gov/~2020/bills/static/SB0192.html" target="_blank" rel="noopener">S.B. 192 (2020)</a> &mdash; Tied MIDA to the new PID statute; land-use and project-area updates.</li>
+        <li><a class="cite" href="https://le.utah.gov/~2021/bills/static/SB0243.html" target="_blank" rel="noopener">S.B. 243 (2021)</a> &mdash; Further MIDA and development-authority amendments.</li>
+        <li><a class="cite" href="https://le.utah.gov/~2023/bills/static/SB0020.html" target="_blank" rel="noopener">S.B. 20 (2023)</a> &mdash; MIDA can create subsidiary PIDs without the usual voter petition; a lessee of military land can act as "owner"; UDOT can transfer former rail lines to MIDA at no cost.</li>
+        <li><a class="cite" href="https://le.utah.gov/~2024/bills/static/SB0169.html" target="_blank" rel="noopener">S.B. 169 (2024)</a> &mdash; Authorizes levy of an additional resort-communities' sales tax and an accommodations tax; broader "military land" definition.</li>
+        <li><a class="cite" href="https://le.utah.gov/~2025/bills/static/SB0241.html" target="_blank" rel="noopener">S.B. 241 (2025)</a> &mdash; Defines a public infrastructure district as a local entity (Stevenson/Cutler).</li>
+        <li><a class="cite" href="https://le.utah.gov/~2025/bills/static/SB0316.html" target="_blank" rel="noopener">S.B. 316 (2025)</a> &mdash; Military Installation Development Authority and Other Development Zone Amendments: use of project-area revenue outside the project area if the land is state or State Armory Board land; PIDs may be MIDA subsidiaries; cities cannot tax transactions inside a MIDA project area the same way; sales-tax distribution clarifications.</li>
+      </ol>
+    </li>
+
+    <li>If serving in 2019 (Ballard, Ward, Weiler), did you vote against the bill that created Public Infrastructure Districts &mdash; PIDs? (<a class="cite" href="https://le.utah.gov/~2019/bills/static/SB0218.html" target="_blank" rel="noopener">2019 S.B. 218</a>)</li>
+
+    <li>Did you vote against bills granting billionaires tax breaks for stadiums and other developments? (<a class="cite" href="https://le.utah.gov/~2024/bills/static/SB0272.html" target="_blank" rel="noopener">S.B. 272</a> and <a class="cite" href="https://le.utah.gov/~2024/bills/static/HB0562.html" target="_blank" rel="noopener">H.B. 562 (2024)</a>, <a class="cite" href="https://le.utah.gov/~2025/bills/static/SB0026.html" target="_blank" rel="noopener">S.B. 26 (2025)</a>)</li>
+
+    <li>Did you vote against the bill that mandated the installation of meters on irrigation water in order to reduce usage, even though imported Weber Water accounts for as much as 40% of our aquifer's recharge and the aquifer has declined 25 feet in the past 20 years? (<a class="cite" href="https://le.utah.gov/~2022/bills/static/HB0242.html" target="_blank" rel="noopener">H.B. 242 (2022)</a>)</li>
+
+    <li>Did you vote against <a class="cite" href="https://le.utah.gov/~2024/bills/static/SB0258.html" target="_blank" rel="noopener">2024 S.B. 258</a>, which authorizes developers to create their own cities in rural counties?</li>
+
+    <li>Did you stand with Wasatch County when the governor, through his housing czar, <a class="cite" href="https://www.parkrecord.com/2026/08/21/adviser-invokes-governor-in-threatening-to-cut-state-funding-from-wasatch-county-over-development-decisions/" target="_blank" rel="noopener">threatened</a> Wasatch County with the loss of road funds when locally elected officials pushed back against <a class="cite" href="https://le.utah.gov/~2024/bills/static/SB0258.html" target="_blank" rel="noopener">2024 S.B. 258</a>?</li>
+
+    <li>Did you vote against <a class="cite" href="https://le.utah.gov/~2026/bills/static/SB0242.html" target="_blank" rel="noopener">2026 S.B. 242</a>, which strongly incentivizes Davis County commissioners to adopt an additional 0.20% transportation sales tax?</li>
+
+    <li>Do you tell your constituents that you voted to end the state income tax on Social Security benefits, even though the state continues to tax the Social Security benefits of single Utahns with retirement incomes of more than $54,000? (<a class="cite" href="https://le.utah.gov/~2025/bills/static/SB0071.html" target="_blank" rel="noopener">2025 S.B. 71</a>)</li>
+
+    <li>If you were in the legislature in 2019 (Ballard, Ward, Weiler), did you vote against the tax-reform bill that would have reinstated the state sales tax on food and on additional services? (<a class="cite" href="https://le.utah.gov/~2019s2/bills/static/SB2001.html" target="_blank" rel="noopener">2019 S.B. 2001</a>)</li>
+
+    <li>Did you vote against the bill that increased the governor's salary by 29% to $249,250? (<a class="cite" href="https://le.utah.gov/~2026/bills/static/SB0235.html" target="_blank" rel="noopener">2026 S.B. 235</a>)</li>
+
+    <li>Did you oppose paying top House and Senate staffers over $300,000 per year?</li>
+  </ol>
+
+</main>
+
+<footer>
+  Written by Dr. Ronald Mortensen, Co-Founder, Citizens for Tax Fairness &middot; hosted by Weber County Hive &middot; <a href="index.html">2026 Candidates Docket</a> &middot; <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">webercountyhive.substack.com</a>
+</footer>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -135,6 +135,13 @@
 .hb-foot .hb-name{font-size:14px;}
 .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
 @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}.header-inner{align-items:flex-start}}
+  .judges-callout{display:block;margin:22px 0 4px;padding:18px 22px;background:var(--paper-card,#fbf9f3);border:1px solid var(--line-strong,#c7bda3);border-left:5px solid var(--rust);border-radius:4px;text-decoration:none;color:var(--ink);}
+  .judges-callout:hover{border-color:var(--rust);text-decoration:none;}
+  .jc-kicker{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--rust);}
+  .jc-title{display:block;font-family:var(--display);font-size:22px;font-weight:700;color:var(--burgundy-deep);margin:4px 0;}
+  .jc-sub{display:block;font-size:15.5px;color:var(--ink-soft);}
+  a.stat{color:inherit;text-decoration:none;} a.stat:hover .stat-label{color:var(--rust);}
+  #level-groups{scroll-margin-top:16px;}
 </style>
 </head>
 <body>
@@ -155,6 +162,11 @@
 
   <p class="intro">Every candidate profile is built entirely from public filings &mdash; campaign finance disclosures, corporate registry records, property records, and candidates' own campaign materials. Click a case to read the full file.</p>
 
+  <a class="judges-callout" href="judges-index.html">
+    <span class="jc-kicker">New &middot; Judges on your 2026 ballot</span>
+    <span class="jc-title">All 57 judges up for retention, graded the same way &rarr;</span>
+    <span class="jc-sub">Find the judges on your county&rsquo;s ballot, JPEC&rsquo;s full findings, and how judges get there.</span>
+  </a>
   <div id="stat-strip" class="stat-strip"></div>
 
   <div class="docket-filters">
@@ -180,7 +192,7 @@
 </div>
 <div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
 
-<script src="candidates-data.js?v=33"></script>
+<script src="candidates-data.js?v=34"></script>
 <script>
   const pinnedGroupEl = document.getElementById('pinned-group');
   const groupsEl = document.getElementById('level-groups');
@@ -201,19 +213,30 @@
   const daysToElection = Math.ceil((new Date('2026-11-03') - new Date()) / 86400000);
   const federalCount = CANDIDATES.filter(c => c.level === "Federal").length;
   const stateCount = CANDIDATES.filter(c => c.level === "State" || c.level === "County").length;
+  // Candidates named on case files ("A vs. B vs. C"), counted once per race even if a race has two cards.
+  const candidateKeys = new Set();
+  CANDIDATES.filter(c => ["State","County","Federal"].includes(c.level) && /\bvs\.?\s/i.test(c.names)).forEach(c => {
+    c.names.split(/\s+vs\.?\s+/i).forEach(n => candidateKeys.add((c.county || c.level) + '|' + c.race.split(/\s+[\u2014-]\s+/)[0] + '|' + n.trim().toLowerCase()));
+  });
+  const caseFiles = CANDIDATES.filter(c => c.level !== "Resource").length;
+  const JUDGE_COUNT = 57;
   statStrip.innerHTML = `
-    <div class="stat"><div class="stat-num">${CANDIDATES.length}</div><div class="stat-label">Races &amp; resources on file</div></div>
-    <div class="stat"><div class="stat-num">${CANDIDATES.length * 2}+</div><div class="stat-label">Candidates covered</div></div>
-    <div class="stat"><div class="stat-num">${stateCount} / ${federalCount}</div><div class="stat-label">State / Federal</div></div>
+    <div class="stat"><div class="stat-num">${caseFiles}</div><div class="stat-label">Case files &amp; guides on file</div></div>
+    <div class="stat"><div class="stat-num">${candidateKeys.size}</div><div class="stat-label">Candidates named in case files</div></div>
+    <a class="stat" href="judges-index.html"><div class="stat-num">${JUDGE_COUNT}</div><div class="stat-label">Judges graded &rarr;</div></a>
+    <div class="stat"><div class="stat-num">${stateCount} / ${federalCount}</div><div class="stat-label">State &amp; county / Federal</div></div>
     <div class="stat"><div class="stat-num">${daysToElection}</div><div class="stat-label">Days to election</div></div>
   `;
 
+
   let activeScope = 'all';
+
+  function countyLabel(c){ return c === 'Statewide' ? 'Statewide' : (c.indexOf('/') > -1 ? c + ' Counties' : c + ' County'); }
 
   function buildCountyButtons(){
     const counties = stateCounties(CANDIDATES);
     countyFilterBtns.innerHTML = counties.map(county =>
-      `<button class="filter-btn" data-scope="${county}">${county} County</button>`
+      `<button class="filter-btn" data-scope="${county}">${countyLabel(county)}</button>`
     ).join('');
   }
 
@@ -222,6 +245,11 @@
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     applyFilters();
+    // Results sit below the pinned box; bring them into view so the click visibly does something.
+    if(scope !== 'all'){
+      const target = document.getElementById('level-groups');
+      if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    }
   }
 
   document.querySelectorAll('.docket-filters').forEach(container => {
@@ -291,6 +319,7 @@
     );
     pinnedGroupEl.innerHTML = '';
     if(pinnedList.length === 0) return;
+    if(activeScope !== 'all') return;
     const section = document.createElement('div');
     section.className = 'level-section pinned-section';
     const heading = document.createElement('div');
@@ -393,7 +422,7 @@
         countySection.className = 'county-section';
         const countyHeading = document.createElement('div');
         countyHeading.className = 'county-heading';
-        countyHeading.innerHTML = `${county} County <span class="county-count">(${inCounty.length} race${inCounty.length === 1 ? '' : 's'})</span>`;
+        countyHeading.innerHTML = `${countyLabel(county)} <span class="county-count">(${inCounty.length} race${inCounty.length === 1 ? '' : 's'})</span>`;
         countySection.appendChild(countyHeading);
         if(inCounty.length === 0){
           const empty = document.createElement('div');

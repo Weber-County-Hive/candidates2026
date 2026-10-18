@@ -14,6 +14,81 @@ const CANDIDATES = [
     dateUpdated: "2026-10-17"
   },
   {
+    id: "research-your-candidates-slides",
+    race: "Statewide — How-To Guide",
+    level: "Resource",
+    caseNumber: "RESOURCE 04B",
+    names: "How to Research Your Candidates: Slides",
+    verdict: "The Slides from the Oct. 17 Talk",
+    tags: ["How-To", "Slides", "Weber Examples"],
+    stamp: "Pinned",
+    href: "research-your-candidates-slides.html",
+    pinned: true,
+    datePosted: "2026-10-17",
+    dateUpdated: "2026-10-17"
+  },
+  {
+    id: "wasatch-seat-a-on-the-record",
+    race: "Wasatch County Council Seat A — Every Exchange, Published in Full",
+    level: "County",
+    county: "Wasatch",
+    caseNumber: "ON THE RECORD",
+    names: "Wasatch County Council Seat A",
+    verdict: "On the Record",
+    tags: ["Candidate Exchanges", "Published in Full", "Seat A"],
+    stamp: "Active",
+    href: "wasatch-seat-a-on-the-record.html",
+    datePosted: "2026-09-27",
+    dateUpdated: "2026-09-27"
+  },
+  {
+    id: "dallin-koecher",
+    race: "Unelected Power — Wasatch Open Lands Board",
+    level: "County",
+    county: "Wasatch",
+    caseNumber: "PROFILE",
+    names: "Dallin Koecher",
+    verdict: "One Line, Four Boards Short",
+    tags: ["Unelected Power", "Disclosure Form", "Heber Valley Chamber"],
+    stamp: "Active",
+    href: "dallin-koecher.html"
+  },
+  {
+    id: "matt-brower",
+    race: "Unelected Power — Heber City Manager",
+    level: "County",
+    county: "Wasatch",
+    caseNumber: "PROFILE",
+    names: "Matt Brower",
+    verdict: "The Board Seat That Never Came Up",
+    tags: ["Unelected Power", "CAMS Contract", "Heber City"],
+    stamp: "Active",
+    href: "matt-brower.html"
+  },
+  {
+    id: "weber-hive-doers-network",
+    race: "Statewide — PAC / Endorsement Network",
+    level: "State",
+    county: "Statewide",
+    caseNumber: "NETWORK",
+    names: "Doers Network: The Endorsement List",
+    verdict: "36 Endorsed, and Who It Actually Paid",
+    tags: ["Endorsements", "Who It Paid", "2026 Cycle"],
+    stamp: "Active",
+    href: "weber-hive-doers-network.html"
+  },
+  {
+    id: "h1b-visa-explainer",
+    race: "Federal — Explainer for the UT-4 Race",
+    level: "Federal",
+    caseNumber: "EXPLAINER",
+    names: "How the H-1B Visa Actually Works",
+    verdict: "Lottery, Fees and the Rulebook Congress Keeps Rewriting",
+    tags: ["Explainer", "UT-4", "Immigration Policy"],
+    stamp: "Active",
+    href: "h1b-visa-explainer.html"
+  },
+  {
     id: "research-your-candidates",
     race: "Statewide — How-To Guide",
     level: "Resource",
@@ -53,7 +128,7 @@ const CANDIDATES = [
     href: "questions-for-incumbents.html",
     pinned: true,
     datePosted: "2026-09-15",
-    dateUpdated: "2026-09-15"
+    dateUpdated: "2026-10-17"
   },
   {
     id: "fifth-fifth-sales-tax",
@@ -67,7 +142,7 @@ const CANDIDATES = [
     href: "fifth-fifth-sales-tax.html",
     pinned: true,
     datePosted: "2026-09-15",
-    dateUpdated: "2026-09-15"
+    dateUpdated: "2026-10-17"
   },
   {
     id: "sd21-brammer-smith-myers-woodfield",
