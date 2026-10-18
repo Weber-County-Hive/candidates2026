@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 Judges on Your Ballot — Utah Retention Case Files</title>
+<meta name="description" content="All 57 judges on Utah 2026 ballots, with JPEC findings and Hive judge-rubric grades applied the same way to every judge.">
+<meta property="og:title" content="2026 Judges on Your Ballot — Utah Retention Case Files">
+<meta property="og:description" content="All 57 judges on Utah 2026 ballots, with JPEC findings and Hive judge-rubric grades applied the same way to every judge.">
+<link rel="icon" type="image/png" href="hive-bee.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="judges.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="header-band"><div class="header-inner">
+  <img class="hex" src="hive-bee.png" alt="The Hive bee seal">
+  <div><div class="hd-kicker">Utah Hive Politics &middot; The Weber County Hive</div><div class="hd-title">2026 Judges &mdash; On Your Ballot</div></div>
+</div></div>
+<nav class="topnav"><div class="wrap-nav"><a href="index.html">&larr; 2026 Candidates docket</a><a href="judges-index.html">All 57 judges</a><a href="how-judges-get-on-your-ballot.html">How judges get on your ballot</a><a href="weber-2026-voter-guide.html">Weber voter guide</a></div></nav>
+<div class="wrap">
+  <div class="case-hero">
+    <div class="case-kicker">Candidates 2026 &middot; Judicial retention &middot; General election Nov. 3, 2026</div>
+    <h1 class="case-title">The 57 Judges on Utah&rsquo;s 2026 Ballot</h1>
+    <p class="case-dek">Every judge Utah voters will be asked to keep or remove this year, with the Judicial Performance Evaluation Commission&rsquo;s full 2026 findings and the Hive&rsquo;s judge-rubric grades, applied the same way to all 57.</p>
+    <p class="updated">Posted Oct. 17, 2026 &middot; Updated Oct. 17, 2026.</p>
+  </div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-num">57</div><div class="stat-label">Judges on 2026 ballots statewide</div></div>
+    <div class="stat"><div class="stat-num">1</div><div class="stat-label">JPEC says does not meet standards (Trent Nelson)</div></div>
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label">On every ballot: 1 Supreme Court, 6 Court of Appeals</div></div>
+    <div class="stat"><div class="stat-num">1</div><div class="stat-label">Name on the ballot who withdrew (Matthew Bell)</div></div>
+  </div>
+  <div class="verdict-box"><b>What you are voting on:</b> Judges don&rsquo;t run against anyone. Your ballot asks whether each judge should be retained. More Yes than No votes keeps the judge for a new term (10 years for the Supreme Court, 6 for all other courts). Start with <a href="how-judges-get-on-your-ballot.html">how judges get on your ballot</a> for the plain-words version.</div>
+  <p class="scale-line"><b>How to read the grades:</b> A C means the record meets what Utah law requires, the status quo. A B or A means the judge went beyond it, and the record shows it. D means the judge passed JPEC&rsquo;s minimum but JPEC rates that area below the judge&rsquo;s peers; F means below JPEC&rsquo;s legal minimum score of 3.6. Every grade is taken from JPEC&rsquo;s own published wording, the same way for all 57 judges. No grade is based on how any case came out, or on who appointed the judge.</p>
+  <h2 class="sect">Find the judges on your ballot</h2>
+  <p>Pick your county to see the judges you will vote on. Statewide judges appear for every county. For justice courts, each voter sees only the judge for their own city or county court.</p>
+  <div class="filters">
+    <select id="county" aria-label="County"><option value="">All counties</option><option value="Beaver">Beaver County</option><option value="Box Elder">Box Elder County</option><option value="Cache">Cache County</option><option value="Carbon">Carbon County</option><option value="Daggett">Daggett County</option><option value="Davis">Davis County</option><option value="Duchesne">Duchesne County</option><option value="Emery">Emery County</option><option value="Garfield">Garfield County</option><option value="Grand">Grand County</option><option value="Iron">Iron County</option><option value="Juab">Juab County</option><option value="Kane">Kane County</option><option value="Millard">Millard County</option><option value="Morgan">Morgan County</option><option value="Piute">Piute County</option><option value="Rich">Rich County</option><option value="Salt Lake">Salt Lake County</option><option value="San Juan">San Juan County</option><option value="Sanpete">Sanpete County</option><option value="Sevier">Sevier County</option><option value="Summit">Summit County</option><option value="Tooele">Tooele County</option><option value="Uintah">Uintah County</option><option value="Utah">Utah County</option><option value="Wasatch">Wasatch County</option><option value="Washington">Washington County</option><option value="Wayne">Wayne County</option><option value="Weber">Weber County</option></select>
+    <input id="q" type="search" placeholder="Search a judge or city" aria-label="Search">
+  </div>
+  <div class="filters" id="courtBtns">
+    <button class="filter-btn active" data-c="">All courts</button><button class="filter-btn" data-c="Supreme Court">Supreme Court</button><button class="filter-btn" data-c="Court of Appeals">Court of Appeals</button><button class="filter-btn" data-c="District Court">District</button><button class="filter-btn" data-c="Juvenile Court">Juvenile</button><button class="filter-btn" data-c="Justice Court">Justice</button>
+  </div>
+  <div class="count-line" id="count"></div>
+  <div class="table-scroll"><table class="jt"><thead><tr><th>Judge</th><th>JPEC</th><th class="hide-sm">% recommend</th><th>1 Fair</th><th>2 Law</th><th>3 Temper</th><th>4 Court</th><th>Overall</th></tr></thead><tbody id="rows"></tbody></table></div>
+  <p class="note">Columns 1&ndash;4 are the Hive judge-rubric grades taken from JPEC&rsquo;s own peer comparisons. Part-time justice court judges are not surveyed by JPEC, so their survey questions show N/A and are not counted against them.</p>
+
+  <h2 class="sect">Weber County&rsquo;s judges, at a glance</h2>
+  <p>18 judges serve Weber County voters: the 7 statewide judges, the Second District&rsquo;s district and juvenile judges, and the justice court judges for Weber cities. See the <a href="weber-2026-voter-guide.html">Weber voter guide</a> for every other Weber race.</p>
+  <div class="mermaid-wrap"><div class="mermaid">
+flowchart TD
+  W["A Weber County ballot"] --> S["Statewide: Supreme Court (Pohlman)<br/>and 6 Court of Appeals judges"]
+  W --> D["Second District Court:<br/>Jason Nelson, Rawson, Valencia"]
+  W --> J["Second District Juvenile Court:<br/>Neill, Noland, Westmoreland"]
+  W --> X["Your city's justice court judge:<br/>Trent Nelson (Roy, unincorporated Weber, West Haven, Hooper)<br/>Junk (Ogden, North Ogden) &middot; Stucki (Ogden)<br/>Olds (Farr West, Pleasant View, Washington Terrace)<br/>Memmott (Plain City, Uintah)"]
+  classDef hi fill:#e8f1ee,stroke:#1d6b57,stroke-width:2px,color:#12304a;
+  class W hi;
+</div></div>
+
+  <details><summary>Sources</summary><div class="details-body"><ul class="sources">
+  <li><a href="https://judges.utah.gov/s/know-your-judges" target="_blank" rel="noopener">JPEC: Know Your Judges, 2026 reports for all 57 judges</a> (read Oct. 17, 2026)</li>
+  <li><a href="https://vote.utah.gov/2026-candidate-filings/" target="_blank" rel="noopener">Lieutenant Governor: 2026 Candidate Filings (State Judicial; Bell marked Withdrew)</a></li>
+  <li><a href="https://www.kpcw.org/state-regional/2026-10-13/how-voters-can-learn-about-the-57-judges-on-utahs-ballots-this-year" target="_blank" rel="noopener">Salt Lake Tribune via KPCW: How voters can learn about the 57 judges (Oct. 13, 2026)</a></li>
+  </ul></div></details>
+  <footer><div class="tagline">Public records, read in full, for the people who pay for them.</div>
+  <nav><a class="nav" href="how-judges-get-on-your-ballot.html">How judges get on your ballot</a><a class="nav" href="index.html">2026 Candidates docket</a></nav></footer>
+</div>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+<script src="judges-data.js"></script>
+<script>
+(function(){
+  var rows=document.getElementById('rows'), q=document.getElementById('q'), county=document.getElementById('county'), cnt=document.getElementById('count'), court='';
+  function chip(g){ if(!g||g==='N/A') return '<span class="gl g-na">N/A</span>'; return '<span class="gl g-'+g[0].toLowerCase()+'">'+g+'</span>'; }
+  function esc(s){ return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function render(){
+    var t=(q.value||'').toLowerCase(), c=county.value, n=0, html='';
+    JUDGES.forEach(function(j){
+      if(court && j.court!==court) return;
+      if(c && !(j.statewide || j.counties.indexOf(c)>-1)) return;
+      if(t && (j.n+' '+j.serving+' '+j.cities.join(' ')).toLowerCase().indexOf(t)<0) return;
+      n++;
+      html+='<tr class="'+(j.rec==='Does not meet'?'dn':'')+'"><td><a href="'+j.slug+'.html"><b>'+esc(j.n)+'</b></a>'+(j.withdrew?' <span class="sub">Withdrew; confirmed to Utah Supreme Court</span>':'')+'<span class="sub">'+esc(j.court)+' &middot; '+esc(j.serving)+'</span></td><td>'+esc(j.rec)+'<span class="sub">vote '+esc(j.vote)+'</span></td><td class="hide-sm">'+esc(j.pct)+'</td><td>'+chip(j.g.PF)+'</td><td>'+chip(j.g.LA)+'</td><td>'+chip(j.g.IT)+'</td><td>'+chip(j.g.AS)+'</td><td>'+chip(j.overall)+'</td></tr>';
+    });
+    rows.innerHTML=html; cnt.textContent=n+' judge'+(n===1?'':'s')+' shown'+(c?' for '+c+' County voters (statewide judges included)':'');
+  }
+  document.querySelectorAll('#courtBtns .filter-btn').forEach(function(b){ b.addEventListener('click',function(){ document.querySelectorAll('#courtBtns .filter-btn').forEach(function(x){x.classList.remove('active');}); b.classList.add('active'); court=b.getAttribute('data-c'); render(); }); });
+  q.addEventListener('input',render); county.addEventListener('change',render); render();
+})();
+</script>
+<script src="judges-site.js"></script>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

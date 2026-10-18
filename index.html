@@ -3,94 +3,443 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 Judges on Your Ballot — Utah Retention Case Files</title>
-<meta name="description" content="All 57 judges on Utah 2026 ballots, with JPEC findings and Hive judge-rubric grades applied the same way to every judge.">
-<meta property="og:title" content="2026 Judges on Your Ballot — Utah Retention Case Files">
-<meta property="og:description" content="All 57 judges on Utah 2026 ballots, with JPEC findings and Hive judge-rubric grades applied the same way to every judge.">
-<link rel="icon" type="image/png" href="../hive-bee.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="judges.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<link rel="icon" type="image/png" href="hive-bee.png">
+<title>2026 Candidates — Case Files | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4f0e6;
+    --paper-card:#fbf9f3;
+    --ink:#2a261e;
+    --ink-soft:#5c5647;
+    --ink-faint:#8b8470;
+    --rust:#1d6b57;
+    --amber:#d9a441;
+    --burgundy:#1f4e6b;
+    --burgundy-deep:#12304a;
+    --line:#ddd6c4;
+    --line-strong:#c7bda3;
+    --serif:'Source Serif 4', Georgia, serif;
+    --display:'Playfair Display', Georgia, serif;
+    --mono:'IBM Plex Mono', 'Courier New', monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.65;font-size:17px;}
+  a{color:var(--rust);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  .header-band{background:var(--burgundy-deep);background-image:linear-gradient(160deg, #1f5e6b 0%, #1f4e6b 45%, var(--burgundy-deep) 100%);padding:44px 0 40px;}
+  .header-inner{max-width:920px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:18px;}
+  .hex{width:64px;height:64px;flex:0 0 auto;}
+  .hd-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#a8d5c6;margin-bottom:4px;}
+  .hd-title{font-family:var(--display);font-size:28px;font-weight:900;color:#f4e9dd;line-height:1.15;}
+  .hd-sub{font-family:var(--serif);font-size:15px;color:#d6e6ea;margin-top:6px;max-width:520px;}
+
+  .wrap{max-width:920px;margin:0 auto;padding:40px 24px 80px;}
+
+  .intro{font-size:17px;color:var(--ink-soft);max-width:620px;margin-bottom:8px;}
+  .stat-strip{display:flex;gap:32px;flex-wrap:wrap;margin:28px 0 40px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stat{flex:0 0 auto;}
+  .stat-num{font-family:var(--display);font-size:32px;font-weight:900;color:var(--amber);line-height:1;}
+  .stat-label{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-faint);text-transform:uppercase;margin-top:5px;}
+
+  .docket-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;align-items:center;}
+  .filter-btn{
+    font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+    background:var(--paper-card);border:1px solid var(--line-strong);color:var(--ink-soft);
+    padding:8px 16px;border-radius:20px;cursor:pointer;transition:all .15s ease;
+  }
+  .filter-btn:hover{border-color:var(--rust);color:var(--rust);}
+  .filter-btn.active{background:var(--burgundy);border-color:var(--burgundy);color:#f4e9dd;}
+  .filter-divider{width:1px;height:20px;background:var(--line-strong);margin:0 4px;}
+  .search-box{
+    font-family:var(--serif);font-size:14px;color:var(--ink);
+    background:var(--paper-card);border:1px solid var(--line-strong);border-radius:20px;
+    padding:8px 16px;flex:1 1 200px;min-width:180px;
+  }
+  .search-box::placeholder{color:var(--ink-faint);}
+
+  .level-section{margin-bottom:44px;}
+  .level-section:last-child{margin-bottom:0;}
+  .level-heading{
+    font-family:var(--display);font-size:20px;font-weight:900;color:var(--burgundy);
+    margin-bottom:18px;display:flex;align-items:baseline;gap:10px;
+  }
+  .level-count{
+    font-family:var(--mono);font-size:12px;color:var(--ink-faint);font-weight:400;letter-spacing:.02em;
+  }
+
+  .pinned-section{margin-bottom:44px;}
+  .pinned-section .level-heading{color:var(--rust);}
+  .pinned-note{font-family:var(--serif);font-size:14px;color:var(--ink-faint);margin:-8px 0 16px;}
+  .pinned-section .case-card{border-left-color:var(--amber);background:#fbf7ea;}
+  .pinned-section .case-card:hover{border-left-color:var(--rust);}
+
+  .county-section{margin-bottom:28px;}
+  .county-section:last-child{margin-bottom:0;}
+  .county-heading{
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:600;margin-bottom:14px;padding-bottom:8px;
+    border-bottom:1px solid var(--line-strong);display:flex;align-items:baseline;gap:10px;
+  }
+  .county-count{color:var(--ink-faint);font-weight:400;letter-spacing:.02em;text-transform:none;}
+  .county-empty{
+    font-family:var(--mono);font-size:13px;color:var(--ink-faint);
+    background:var(--paper-card);border:1px dashed var(--line-strong);border-radius:4px;
+    padding:16px 20px;
+  }
+
+  .case-grid{display:flex;flex-direction:column;gap:14px;}
+  .case-card{
+    display:block;background:var(--paper-card);border:1px solid var(--line-strong);border-left:4px solid var(--burgundy);
+    border-radius:4px;padding:20px 24px;transition:border-color .15s ease, transform .15s ease;
+  }
+  .case-card:hover{border-left-color:var(--rust);transform:translateX(2px);text-decoration:none;}
+  .case-top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px;}
+  .case-num{font-family:var(--mono);font-size:12px;color:var(--burgundy);font-weight:600;letter-spacing:.04em;}
+  .case-race{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;}
+  .case-names{font-family:var(--display);font-size:20px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+  .case-verdict{font-family:var(--serif);font-style:italic;font-size:15.5px;color:var(--ink-soft);margin-bottom:10px;}
+  .case-tags{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;background:#efe6d8;color:var(--ink-soft);padding:3px 10px;border-radius:10px;}
+  .updated-badge{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;
+    background:#d4ecd8;color:#1e7a3b;padding:3px 10px;border-radius:10px;
+    display:inline-flex;align-items:center;gap:4px;
+    border:1px solid #8fcf9e;
+  }
+  .pinned-badge{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;
+    background:#fbead0;color:#8a5a17;padding:3px 10px;border-radius:10px;
+    display:inline-flex;align-items:center;gap:4px;
+    border:1px solid var(--amber);
+  }
+  .case-dates{
+    font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.02em;
+    margin-top:8px;
+  }
+
+  footer{margin-top:60px;padding-top:24px;border-top:2px solid var(--line-strong);}
+  .tagline{font-family:var(--display);font-style:italic;font-size:16px;color:var(--burgundy);margin-bottom:10px;}
+  footer nav{display:flex;gap:18px;flex-wrap:wrap;}
+  .nav{font-family:var(--mono);font-size:13px;letter-spacing:.04em;}
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+@media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}.header-inner{align-items:flex-start}}
+</style>
 </head>
 <body>
-<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="../uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
-<div class="header-band"><div class="header-inner">
-  <img class="hex" src="../hive-bee.png" alt="The Hive bee seal">
-  <div><div class="hd-kicker">Utah Hive Politics &middot; The Weber County Hive</div><div class="hd-title">2026 Judges &mdash; On Your Ballot</div></div>
-</div></div>
-<nav class="topnav"><div class="wrap-nav"><a href="../index.html">&larr; 2026 Candidates docket</a><a href="index.html">All 57 judges</a><a href="how-judges-get-on-your-ballot.html">How judges get on your ballot</a><a href="../weber-2026-voter-guide.html">Weber voter guide</a></div></nav>
-<div class="wrap">
-  <div class="case-hero">
-    <div class="case-kicker">Candidates 2026 &middot; Judicial retention &middot; General election Nov. 3, 2026</div>
-    <h1 class="case-title">The 57 Judges on Utah&rsquo;s 2026 Ballot</h1>
-    <p class="case-dek">Every judge Utah voters will be asked to keep or remove this year, with the Judicial Performance Evaluation Commission&rsquo;s full 2026 findings and the Hive&rsquo;s judge-rubric grades, applied the same way to all 57.</p>
-    <p class="updated">Posted Oct. 17, 2026 &middot; Updated Oct. 17, 2026.</p>
-  </div>
-  <div class="stat-row">
-    <div class="stat"><div class="stat-num">57</div><div class="stat-label">Judges on 2026 ballots statewide</div></div>
-    <div class="stat"><div class="stat-num">1</div><div class="stat-label">JPEC says does not meet standards (Trent Nelson)</div></div>
-    <div class="stat"><div class="stat-num">7</div><div class="stat-label">On every ballot: 1 Supreme Court, 6 Court of Appeals</div></div>
-    <div class="stat"><div class="stat-num">1</div><div class="stat-label">Name on the ballot who withdrew (Matthew Bell)</div></div>
-  </div>
-  <div class="verdict-box"><b>What you are voting on:</b> Judges don&rsquo;t run against anyone. Your ballot asks whether each judge should be retained. More Yes than No votes keeps the judge for a new term (10 years for the Supreme Court, 6 for all other courts). Start with <a href="how-judges-get-on-your-ballot.html">how judges get on your ballot</a> for the plain-words version.</div>
-  <p class="scale-line"><b>How to read the grades:</b> A C means the record meets what Utah law requires, the status quo. A B or A means the judge went beyond it, and the record shows it. D means the judge passed JPEC&rsquo;s minimum but JPEC rates that area below the judge&rsquo;s peers; F means below JPEC&rsquo;s legal minimum score of 3.6. Every grade is taken from JPEC&rsquo;s own published wording, the same way for all 57 judges. No grade is based on how any case came out, or on who appointed the judge.</p>
-  <h2 class="sect">Find the judges on your ballot</h2>
-  <p>Pick your county to see the judges you will vote on. Statewide judges appear for every county. For justice courts, each voter sees only the judge for their own city or county court.</p>
-  <div class="filters">
-    <select id="county" aria-label="County"><option value="">All counties</option><option value="Beaver">Beaver County</option><option value="Box Elder">Box Elder County</option><option value="Cache">Cache County</option><option value="Carbon">Carbon County</option><option value="Daggett">Daggett County</option><option value="Davis">Davis County</option><option value="Duchesne">Duchesne County</option><option value="Emery">Emery County</option><option value="Garfield">Garfield County</option><option value="Grand">Grand County</option><option value="Iron">Iron County</option><option value="Juab">Juab County</option><option value="Kane">Kane County</option><option value="Millard">Millard County</option><option value="Morgan">Morgan County</option><option value="Piute">Piute County</option><option value="Rich">Rich County</option><option value="Salt Lake">Salt Lake County</option><option value="San Juan">San Juan County</option><option value="Sanpete">Sanpete County</option><option value="Sevier">Sevier County</option><option value="Summit">Summit County</option><option value="Tooele">Tooele County</option><option value="Uintah">Uintah County</option><option value="Utah">Utah County</option><option value="Wasatch">Wasatch County</option><option value="Washington">Washington County</option><option value="Wayne">Wayne County</option><option value="Weber">Weber County</option></select>
-    <input id="q" type="search" placeholder="Search a judge or city" aria-label="Search">
-  </div>
-  <div class="filters" id="courtBtns">
-    <button class="filter-btn active" data-c="">All courts</button><button class="filter-btn" data-c="Supreme Court">Supreme Court</button><button class="filter-btn" data-c="Court of Appeals">Court of Appeals</button><button class="filter-btn" data-c="District Court">District</button><button class="filter-btn" data-c="Juvenile Court">Juvenile</button><button class="filter-btn" data-c="Justice Court">Justice</button>
-  </div>
-  <div class="count-line" id="count"></div>
-  <div class="table-scroll"><table class="jt"><thead><tr><th>Judge</th><th>JPEC</th><th class="hide-sm">% recommend</th><th>1 Fair</th><th>2 Law</th><th>3 Temper</th><th>4 Court</th><th>Overall</th></tr></thead><tbody id="rows"></tbody></table></div>
-  <p class="note">Columns 1&ndash;4 are the Hive judge-rubric grades taken from JPEC&rsquo;s own peer comparisons. Part-time justice court judges are not surveyed by JPEC, so their survey questions show N/A and are not counted against them.</p>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
-  <h2 class="sect">Weber County&rsquo;s judges, at a glance</h2>
-  <p>18 judges serve Weber County voters: the 7 statewide judges, the Second District&rsquo;s district and juvenile judges, and the justice court judges for Weber cities. See the <a href="../weber-2026-voter-guide.html">Weber voter guide</a> for every other Weber race.</p>
-  <div class="mermaid-wrap"><div class="mermaid">
-flowchart TD
-  W["A Weber County ballot"] --> S["Statewide: Supreme Court (Pohlman)<br/>and 6 Court of Appeals judges"]
-  W --> D["Second District Court:<br/>Jason Nelson, Rawson, Valencia"]
-  W --> J["Second District Juvenile Court:<br/>Neill, Noland, Westmoreland"]
-  W --> X["Your city's justice court judge:<br/>Trent Nelson (Roy, unincorporated Weber, West Haven, Hooper)<br/>Junk (Ogden, North Ogden) &middot; Stucki (Ogden)<br/>Olds (Farr West, Pleasant View, Washington Terrace)<br/>Memmott (Plain City, Uintah)"]
-  classDef hi fill:#e8f1ee,stroke:#1d6b57,stroke-width:2px,color:#12304a;
-  class W hi;
-</div></div>
-
-  <details><summary>Sources</summary><div class="details-body"><ul class="sources">
-  <li><a href="https://judges.utah.gov/s/know-your-judges" target="_blank" rel="noopener">JPEC: Know Your Judges, 2026 reports for all 57 judges</a> (read Oct. 17, 2026)</li>
-  <li><a href="https://vote.utah.gov/2026-candidate-filings/" target="_blank" rel="noopener">Lieutenant Governor: 2026 Candidate Filings (State Judicial; Bell marked Withdrew)</a></li>
-  <li><a href="https://www.kpcw.org/state-regional/2026-10-13/how-voters-can-learn-about-the-57-judges-on-utahs-ballots-this-year" target="_blank" rel="noopener">Salt Lake Tribune via KPCW: How voters can learn about the 57 judges (Oct. 13, 2026)</a></li>
-  </ul></div></details>
-  <footer><div class="tagline">Public records, read in full, for the people who pay for them.</div>
-  <nav><a class="nav" href="how-judges-get-on-your-ballot.html">How judges get on your ballot</a><a class="nav" href="../index.html">2026 Candidates docket</a></nav></footer>
+<div class="header-band">
+  <div class="header-inner">
+    <img class="hex" src="hive-bee.png" alt="The Hive bee seal">
+    <div>
+      <div class="hd-kicker">Utah Hive Politics · The Weber County Hive</div>
+      <div class="hd-title">2026 Candidates — Case Files</div>
+      <div class="hd-sub">Public records on every race we're tracking heading into November — federal races first, then state races by county. We report what's documented. You decide.</div>
+    </div>
+  </div>
 </div>
-<div class="hb-foot"><img src="../hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
-<script src="judges-data.js"></script>
+
+<div class="wrap">
+
+  <p class="intro">Every candidate profile is built entirely from public filings &mdash; campaign finance disclosures, corporate registry records, property records, and candidates' own campaign materials. Click a case to read the full file.</p>
+
+  <div id="stat-strip" class="stat-strip"></div>
+
+  <div class="docket-filters">
+    <button class="filter-btn active" data-scope="all">All Races</button>
+    <button class="filter-btn" data-scope="Resource">Resources</button>
+    <button class="filter-btn" data-scope="Federal">Federal</button>
+    <button class="filter-btn" data-scope="Statement">Candidate Statements</button>
+    <span class="filter-divider"></span>
+    <div id="county-filter-buttons" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
+    <input id="search" class="search-box" type="text" placeholder="Search by name or race&hellip;">
+  </div>
+
+  <div id="pinned-group"></div>
+  <div id="level-groups"></div>
+
+  <footer>
+    <div class="tagline">We report public records. You decide.</div>
+    <nav>
+      <a class="nav" href="https://webercountyhive.substack.com" target="_blank" rel="noopener">The Weber County Hive</a>
+    </nav>
+  </footer>
+
+</div>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
+
+<script src="candidates-data.js?v=33"></script>
 <script>
-(function(){
-  var rows=document.getElementById('rows'), q=document.getElementById('q'), county=document.getElementById('county'), cnt=document.getElementById('count'), court='';
-  function chip(g){ if(!g||g==='N/A') return '<span class="gl g-na">N/A</span>'; return '<span class="gl g-'+g[0].toLowerCase()+'">'+g+'</span>'; }
-  function esc(s){ return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
-  function render(){
-    var t=(q.value||'').toLowerCase(), c=county.value, n=0, html='';
-    JUDGES.forEach(function(j){
-      if(court && j.court!==court) return;
-      if(c && !(j.statewide || j.counties.indexOf(c)>-1)) return;
-      if(t && (j.n+' '+j.serving+' '+j.cities.join(' ')).toLowerCase().indexOf(t)<0) return;
-      n++;
-      html+='<tr class="'+(j.rec==='Does not meet'?'dn':'')+'"><td><a href="'+j.slug+'.html"><b>'+esc(j.n)+'</b></a>'+(j.withdrew?' <span class="sub">Withdrew; confirmed to Utah Supreme Court</span>':'')+'<span class="sub">'+esc(j.court)+' &middot; '+esc(j.serving)+'</span></td><td>'+esc(j.rec)+'<span class="sub">vote '+esc(j.vote)+'</span></td><td class="hide-sm">'+esc(j.pct)+'</td><td>'+chip(j.g.PF)+'</td><td>'+chip(j.g.LA)+'</td><td>'+chip(j.g.IT)+'</td><td>'+chip(j.g.AS)+'</td><td>'+chip(j.overall)+'</td></tr>';
-    });
-    rows.innerHTML=html; cnt.textContent=n+' judge'+(n===1?'':'s')+' shown'+(c?' for '+c+' County voters (statewide judges included)':'');
+  const pinnedGroupEl = document.getElementById('pinned-group');
+  const groupsEl = document.getElementById('level-groups');
+  const statStrip = document.getElementById('stat-strip');
+  const search = document.getElementById('search');
+  const countyFilterBtns = document.getElementById('county-filter-buttons');
+
+  const COUNTY_ORDER = ["Box Elder", "Davis", "Wasatch", "Weber"];
+
+  function stateCounties(list){
+    const stateRaces = list.filter(c => c.level === "State" || c.level === "County");
+    const present = [...new Set(stateRaces.map(c => c.county || "Other"))];
+    const known = COUNTY_ORDER.filter(c => present.includes(c));
+    const unknown = present.filter(c => !COUNTY_ORDER.includes(c)).sort();
+    return [...known, ...unknown];
   }
-  document.querySelectorAll('#courtBtns .filter-btn').forEach(function(b){ b.addEventListener('click',function(){ document.querySelectorAll('#courtBtns .filter-btn').forEach(function(x){x.classList.remove('active');}); b.classList.add('active'); court=b.getAttribute('data-c'); render(); }); });
-  q.addEventListener('input',render); county.addEventListener('change',render); render();
-})();
+
+  const daysToElection = Math.ceil((new Date('2026-11-03') - new Date()) / 86400000);
+  const federalCount = CANDIDATES.filter(c => c.level === "Federal").length;
+  const stateCount = CANDIDATES.filter(c => c.level === "State" || c.level === "County").length;
+  statStrip.innerHTML = `
+    <div class="stat"><div class="stat-num">${CANDIDATES.length}</div><div class="stat-label">Races &amp; resources on file</div></div>
+    <div class="stat"><div class="stat-num">${CANDIDATES.length * 2}+</div><div class="stat-label">Candidates covered</div></div>
+    <div class="stat"><div class="stat-num">${stateCount} / ${federalCount}</div><div class="stat-label">State / Federal</div></div>
+    <div class="stat"><div class="stat-num">${daysToElection}</div><div class="stat-label">Days to election</div></div>
+  `;
+
+  let activeScope = 'all';
+
+  function buildCountyButtons(){
+    const counties = stateCounties(CANDIDATES);
+    countyFilterBtns.innerHTML = counties.map(county =>
+      `<button class="filter-btn" data-scope="${county}">${county} County</button>`
+    ).join('');
+  }
+
+  function setActiveScope(scope, btn){
+    activeScope = scope;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyFilters();
+  }
+
+  document.querySelectorAll('.docket-filters').forEach(container => {
+    container.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-btn');
+      if(!btn) return;
+      setActiveScope(btn.dataset.scope, btn);
+    });
+  });
+
+  // Dates: accepts 'YYYY-MM-DD' strings. Both fields are optional —
+  // cards render fine with neither, either, or both present.
+  function formatDate(iso){
+    if(!iso) return null;
+    const d = new Date(iso + 'T00:00:00');
+    if(isNaN(d)) return null;
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  function renderCaseGrid(list){
+    const grid = document.createElement('div');
+    grid.className = 'case-grid';
+    list.forEach(c => {
+      const a = document.createElement('a');
+      a.className = 'case-card';
+      a.href = c.href;
+
+      const posted = formatDate(c.datePosted);
+      const updated = formatDate(c.dateUpdated);
+
+      let datesHtml = '';
+      if(posted || updated){
+        const parts = [];
+        if(posted) parts.push(`Posted ${posted}`);
+        if(updated) parts.push(`Updated ${updated}`);
+        datesHtml = `<div class="case-dates">${parts.join(' &middot; ')}</div>`;
+      }
+
+      const updatedBadge = c.dateUpdated ? `<span class="updated-badge">&#10003; Updated</span>` : '';
+      const pinnedBadge = c.pinned ? `<span class="pinned-badge">&#9733; Pinned</span>` : '';
+
+      a.innerHTML = `
+        <div class="case-top">
+          <span class="case-num">${c.caseNumber}</span>
+          <span class="case-race">${c.race}</span>
+        </div>
+        <div class="case-names">${c.names}</div>
+        <div class="case-verdict">${c.verdict}</div>
+        <div class="case-tags">${c.tags.map(t => `<span class="tag">${t}</span>`).join('')}${pinnedBadge}${updatedBadge}</div>
+        ${datesHtml}
+      `;
+      grid.appendChild(a);
+    });
+    return grid;
+  }
+
+  // Pinned resources render in their own section, above every filtered/grouped
+  // view, unaffected by county/level filter buttons — only the search box
+  // narrows this section, same as everything else.
+  function renderPinned(){
+    const q = search.value.toLowerCase();
+    const pinnedList = CANDIDATES.filter(c => c.level === "Resource" && c.pinned).filter(c =>
+      c.names.toLowerCase().includes(q) ||
+      c.race.toLowerCase().includes(q) ||
+      c.verdict.toLowerCase().includes(q) ||
+      c.tags.some(t => t.toLowerCase().includes(q))
+    );
+    pinnedGroupEl.innerHTML = '';
+    if(pinnedList.length === 0) return;
+    const section = document.createElement('div');
+    section.className = 'level-section pinned-section';
+    const heading = document.createElement('div');
+    heading.className = 'level-heading';
+    heading.innerHTML = `&#9733; Pinned Resources <span class="level-count">(${pinnedList.length})</span>`;
+    section.appendChild(heading);
+    const note = document.createElement('p');
+    note.className = 'pinned-note';
+    note.textContent = 'Reference material and questionnaires for readers and candidates — not case files.';
+    section.appendChild(note);
+    section.appendChild(renderCaseGrid(pinnedList));
+    pinnedGroupEl.appendChild(section);
+  }
+
+  function renderGroups(list){
+    groupsEl.innerHTML = '';
+    const hasSearchTerm = search.value.trim().length > 0;
+    if(list.length === 0 && (activeScope === 'all' || hasSearchTerm)){
+      groupsEl.innerHTML = `<p style="color:var(--ink-faint);font-family:var(--mono);font-size:14px;">No matching case files.</p>`;
+      return;
+    }
+
+    const resourceList = list.filter(c => c.level === "Resource");
+    const federalList = list.filter(c => c.level === "Federal");
+    const statementList = list.filter(c => c.level === "Statement");
+    const stateList = list.filter(c => c.level === "State" || c.level === "County");
+
+    if(activeScope === 'Resource'){
+      const section = document.createElement('div');
+      section.className = 'level-section';
+      const heading = document.createElement('div');
+      heading.className = 'level-heading';
+      heading.innerHTML = `Resources <span class="level-count">(${resourceList.length})</span>`;
+      section.appendChild(heading);
+      if(resourceList.length === 0){
+        const empty = document.createElement('div');
+        empty.className = 'county-empty';
+        empty.textContent = 'No matching resources.';
+        section.appendChild(empty);
+      } else {
+        section.appendChild(renderCaseGrid(resourceList));
+      }
+      groupsEl.appendChild(section);
+      return;
+    }
+
+    if(federalList.length > 0 || activeScope === 'Federal'){
+      const section = document.createElement('div');
+      section.className = 'level-section';
+      const heading = document.createElement('div');
+      heading.className = 'level-heading';
+      heading.innerHTML = `Federal Races <span class="level-count">(${federalList.length})</span>`;
+      section.appendChild(heading);
+      if(federalList.length === 0){
+        const empty = document.createElement('div');
+        empty.className = 'county-empty';
+        empty.textContent = 'Case files coming soon.';
+        section.appendChild(empty);
+      } else {
+        section.appendChild(renderCaseGrid(federalList));
+      }
+      groupsEl.appendChild(section);
+    }
+
+    if(statementList.length > 0 || activeScope === 'Statement'){
+      const section = document.createElement('div');
+      section.className = 'level-section';
+      const heading = document.createElement('div');
+      heading.className = 'level-heading';
+      heading.innerHTML = `Candidate Statements <span class="level-count">(${statementList.length})</span>`;
+      section.appendChild(heading);
+      const note = document.createElement('p');
+      note.style.cssText = 'font-family:var(--serif);font-size:14px;color:var(--ink-faint);margin:-8px 0 16px;';
+      note.textContent = 'Submitted directly by candidates in their own words, printed as sent — not case files, and not independently reported.';
+      section.appendChild(note);
+      if(statementList.length === 0){
+        const empty = document.createElement('div');
+        empty.className = 'county-empty';
+        empty.textContent = 'No statements submitted yet.';
+        section.appendChild(empty);
+      } else {
+        section.appendChild(renderCaseGrid(statementList));
+      }
+      groupsEl.appendChild(section);
+    }
+
+    if(stateList.length > 0 || (activeScope !== 'Federal' && activeScope !== 'Statement')){
+      const stateSection = document.createElement('div');
+      stateSection.className = 'level-section';
+      const stateHeading = document.createElement('div');
+      stateHeading.className = 'level-heading';
+      stateHeading.innerHTML = `State &amp; County Races <span class="level-count">(${stateList.length})</span>`;
+      stateSection.appendChild(stateHeading);
+
+      const counties = stateCounties(list.length === CANDIDATES.length ? CANDIDATES : list);
+      counties.forEach(county => {
+        const inCounty = stateList.filter(c => (c.county || "Other") === county);
+        if(inCounty.length === 0 && activeScope !== county) return;
+        const countySection = document.createElement('div');
+        countySection.className = 'county-section';
+        const countyHeading = document.createElement('div');
+        countyHeading.className = 'county-heading';
+        countyHeading.innerHTML = `${county} County <span class="county-count">(${inCounty.length} race${inCounty.length === 1 ? '' : 's'})</span>`;
+        countySection.appendChild(countyHeading);
+        if(inCounty.length === 0){
+          const empty = document.createElement('div');
+          empty.className = 'county-empty';
+          empty.textContent = 'Case files coming soon.';
+          countySection.appendChild(empty);
+        } else {
+          countySection.appendChild(renderCaseGrid(inCounty));
+        }
+        stateSection.appendChild(countySection);
+      });
+      groupsEl.appendChild(stateSection);
+    }
+  }
+
+  function applyFilters(){
+    const q = search.value.toLowerCase();
+    let list = CANDIDATES.filter(c =>
+      c.names.toLowerCase().includes(q) ||
+      c.race.toLowerCase().includes(q) ||
+      c.verdict.toLowerCase().includes(q) ||
+      c.tags.some(t => t.toLowerCase().includes(q))
+    );
+    if(activeScope === 'Resource'){
+      list = list.filter(c => c.level === 'Resource');
+    } else if(activeScope === 'Federal'){
+      list = list.filter(c => c.level === 'Federal');
+    } else if(activeScope === 'Statement'){
+      list = list.filter(c => c.level === 'Statement');
+    } else if(activeScope !== 'all'){
+      list = list.filter(c => (c.level === 'State' || c.level === 'County') && (c.county || 'Other') === activeScope);
+    } else {
+      // Default "All Races" view excludes standalone resources from the
+      // main grouped list — they get their own pinned section instead.
+      list = list.filter(c => c.level !== 'Resource');
+    }
+    renderPinned();
+    renderGroups(list);
+  }
+
+  buildCountyButtons();
+  renderPinned();
+  renderGroups(CANDIDATES.filter(c => c.level !== 'Resource'));
+  search.addEventListener('input', applyFilters);
 </script>
-<script src="judges-site.js"></script>
+
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

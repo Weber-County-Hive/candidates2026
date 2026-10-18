@@ -8,7 +8,7 @@ const CANDIDATES = [
     verdict: "JPEC Findings and Hive Grades for All 57 Judges",
     tags: ["Judges", "Retention", "JPEC", "County Ballot Finder"],
     stamp: "Pinned",
-    href: "judges/index.html",
+    href: "judges-index.html",
     pinned: true,
     datePosted: "2026-10-17",
     dateUpdated: "2026-10-17"
