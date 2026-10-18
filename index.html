@@ -215,8 +215,10 @@
   const stateCount = CANDIDATES.filter(c => c.level === "State" || c.level === "County").length;
   // Candidates named on case files ("A vs. B vs. C"), counted once per race even if a race has two cards.
   const candidateKeys = new Set();
-  CANDIDATES.filter(c => ["State","County","Federal"].includes(c.level) && /\bvs\.?\s/i.test(c.names)).forEach(c => {
-    c.names.split(/\s+vs\.?\s+/i).forEach(n => candidateKeys.add((c.county || c.level) + '|' + c.race.split(/\s+[\u2014-]\s+/)[0] + '|' + n.trim().toLowerCase()));
+  CANDIDATES.filter(c => ["State","County","Federal"].includes(c.level) && /\s+vs\.?\s+/i.test(c.names)).forEach(c => {
+    const people = c.names.split(/\s+vs\.?\s+/i).map(n => n.trim().toLowerCase()).sort();
+    const race = people.join('|'); // same matchup on two cards = one race
+    people.forEach(n => candidateKeys.add(race + '#' + n));
   });
   const caseFiles = CANDIDATES.filter(c => c.level !== "Resource").length;
   const JUDGE_COUNT = 57;
