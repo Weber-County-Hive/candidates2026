@@ -481,11 +481,11 @@ const CANDIDATES = [
     caseNumber: "CASE 37",
     names: "Shelley vs. Mashek vs. Hatch",
     verdict: "No Individual Donors, and a Carbon Bill With a CO2 Exclusion",
-    tags: ["Leadership PAC Money", "Disclosure Gap (pending)", "Bill vs. Business Listings", "Company Loan", "Three-Way Money Contrast"],
+    tags: ["Leadership PAC Money", "Bill vs. Business Listings", "Company Loan", "Three-Way Money Contrast"],
     stamp: "Active",
     href: "hd66-shelley-mashek-hatch.html",
     datePosted: "2026-10-13",
-    dateUpdated: "2026-10-13"
+    dateUpdated: "2026-10-20"
   },
   {
     id: "hd6-bishop-rich",
