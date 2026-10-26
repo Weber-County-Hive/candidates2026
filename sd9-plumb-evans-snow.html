@@ -13,10 +13,10 @@
     --color-paper-deep:#ece5d4;
     --color-ink:#241a16;
     --color-ink-soft:#5c534c;
-    --color-link:#c0572e;
+    --color-link:#1d6b57;
     --color-stat:#d9a441;
-    --color-burgundy-light:#5c1a2b;
-    --color-burgundy-deep:#3d0f1c;
+    --color-burgundy-light:#1f4e6b;
+    --color-burgundy-deep:#12304a;
     --color-line:#d8cfbc;
     --color-card:#fbf8f1;
     --color-good:#4d7c5f;
@@ -185,12 +185,25 @@
   .three .who{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);}
   .three .amt{font-family:'Playfair Display',serif;font-weight:800;font-size:1.7rem;color:var(--color-link);}
   @media (max-width:760px){.three{grid-template-columns:1fr;} .three > div{border-right:none;border-bottom:1px solid var(--color-line);}}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .hb-dates{max-width:1100px;margin:0 auto;padding:8px 20px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5647;letter-spacing:.03em;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 </head>
 
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="hb-dates">Posted Sept. 24, 2026 · Updated Oct. 2, 2026</div>
 
 <header class="band">
   <div class="wrap">
@@ -337,7 +350,7 @@ flowchart LR
     IN["32 individual entries<br/>$6,011"] --> CAMP
     CAMP(["PLUMB CAMPAIGN<br/>$19,461 raised"])
     CAMP --> SP["Spent through 6/8/26<br/>$3,605.26"]
-    style CAMP fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style CAMP fill:#12304a,color:#f4ece6,stroke:#12304a
     style SD fill:#fbf3e6,stroke:#d9a441
 </div>
       <p class="cap">Money in runs through 9/11/26; money out through 6/8/26.</p>
@@ -618,7 +631,7 @@ flowchart LR
     FA -->|"also gave"| OT["Lesser HD-10, Stevenson HD-16,<br/>Okerlund HD-42, Smith SD-21"]
     HH -->|"also gave"| TB["Tran SD-6, Bitner HD-17"]
     JP -.->|"listed as an officer"| SD
-    style JP fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style JP fill:#12304a,color:#f4ece6,stroke:#12304a
     style SD fill:#fbf3e6,stroke:#d9a441
 </div>
       <p class="cap">Solid arrows are money. The dotted arrow is SenDemPAC's registration listing Plumb as an officer. SenDemPAC totals are from its own reports, 2022&ndash;2026.</p>
@@ -822,7 +835,7 @@ if (window.Chart) {
     type: 'bar',
     data: { labels: ['Convention (to 3/31)', 'Primary (4/2–6/8)', '6/13–9/11'],
       datasets: [
-        { label: 'Raised', data: [5356, 11775, 2330], backgroundColor: '#c0572e', borderRadius: 2 },
+        { label: 'Raised', data: [5356, 11775, 2330], backgroundColor: '#1d6b57', borderRadius: 2 },
         { label: 'Spent', data: [1382.58, 2222.68, null], backgroundColor: '#5c534c', borderRadius: 2 } ] },
     options: { maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + money(c.parsed.y) } } },
       scales: { y: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, x: { grid: { display: false } } } }
@@ -830,7 +843,7 @@ if (window.Chart) {
   new Chart(document.getElementById('spendChart'), {
     type: 'bar',
     data: { labels: ['Peter Hilyard', 'Interform Business', 'Costco', 'SL County Democratic Party', 'AT&T', 'NAACP SLC Branch', 'ActBlue', "Lt. Governor's Office", 'Saffron Valley', 'Wix.com', 'Brighton Bank', 'Fundhero'],
-      datasets: [{ data: [855, 696.31, 505.19, 403.56, 350.26, 300, 150.37, 117.73, 91.67, 85.37, 25, 24.80], backgroundColor: '#5c1a2b', borderRadius: 3 }] },
+      datasets: [{ data: [855, 696.31, 505.19, 403.56, 350.26, 300, 150.37, 117.73, 91.67, 85.37, 25, 24.80], backgroundColor: '#1f4e6b', borderRadius: 3 }] },
     options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => money(c.parsed.x) } } },
       scales: { x: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, y: { grid: { display: false } } } }
   });
@@ -838,13 +851,15 @@ if (window.Chart) {
     type: 'bar',
     data: { labels: ['Plumb (D)', 'Evans (R)', 'Snow (Forward)'],
       datasets: [
-        { label: 'Raised', data: [19461, 0, 0], backgroundColor: '#c0572e', borderRadius: 2 },
+        { label: 'Raised', data: [19461, 0, 0], backgroundColor: '#1d6b57', borderRadius: 2 },
         { label: 'Spent (reported)', data: [3605.26, 0, 446.19], backgroundColor: '#5c534c', borderRadius: 2 } ] },
     options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + money(c.parsed.x) } } },
       scales: { x: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, y: { grid: { display: false } } } }
   });
 }
 </script>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

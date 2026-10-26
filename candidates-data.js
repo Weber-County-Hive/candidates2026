@@ -51,7 +51,9 @@ const CANDIDATES = [
     verdict: "One Line, Four Boards Short",
     tags: ["Unelected Power", "Disclosure Form", "Heber Valley Chamber"],
     stamp: "Active",
-    href: "dallin-koecher.html"
+    href: "dallin-koecher.html",
+    datePosted: "2026-09-02",
+    dateUpdated: "2026-09-02"
   },
   {
     id: "matt-brower",
@@ -63,7 +65,9 @@ const CANDIDATES = [
     verdict: "The Board Seat That Never Came Up",
     tags: ["Unelected Power", "CAMS Contract", "Heber City"],
     stamp: "Active",
-    href: "matt-brower.html"
+    href: "matt-brower.html",
+    datePosted: "2026-09-02",
+    dateUpdated: "2026-10-25"
   },
   {
     id: "weber-hive-doers-network",
@@ -86,7 +90,9 @@ const CANDIDATES = [
     verdict: "Lottery, Fees and the Rulebook Congress Keeps Rewriting",
     tags: ["Explainer", "UT-4", "Immigration Policy"],
     stamp: "Active",
-    href: "h1b-visa-explainer.html"
+    href: "h1b-visa-explainer.html",
+    datePosted: "2026-09-13",
+    dateUpdated: "2026-10-25"
   },
   {
     id: "research-your-candidates",
@@ -152,11 +158,11 @@ const CANDIDATES = [
     caseNumber: "CASE 33",
     names: "Brammer vs. Myers vs. Woodfield",
     verdict: "The Primary a Judicial-Independence PAC Came For",
-    tags: ["Incumbent", "Primary PAC", "Judicial Independence", "Fundraising"],
+    tags: ["Incumbent", "Primary PAC", "Judicial Independence", "Fundraising", "Sept. 30 Report", "Court Docket"],
     stamp: "Active",
     href: "sd21-brammer-smith-myers-woodfield.html",
     datePosted: "2026-09-12",
-    dateUpdated: "2026-10-02"
+    dateUpdated: "2026-10-25"
   },
   {
     id: "hd27-loubet-oates",
@@ -364,7 +370,9 @@ const CANDIDATES = [
     verdict: "The Water Bill That Didn't Survive",
     tags: ["PAC Pipeline", "Water Bill Died", "Platform vs. Record"],
     stamp: "Active",
-    href: "hd42-okerlund-williams.html"
+    href: "hd42-okerlund-williams.html",
+    datePosted: "2026-08-28",
+    dateUpdated: "2026-10-25"
   },
   {
     id: "weber-2026-voter-guide",
@@ -391,7 +399,7 @@ const CANDIDATES = [
     tags: ["Speaker of the House", "PAC Network", "Platform vs. Record"],
     stamp: "Active",
     href: "hd12-graff-schultz.html",
-    dateUpdated: "2026-10-02"
+    dateUpdated: "2026-10-25"
   },
   {
     id: "hd11-calder-hall",
@@ -404,7 +412,7 @@ const CANDIDATES = [
     tags: ["Stock Overlap", "Disclosure Gap", "PAC Funding"],
     stamp: "Active",
     href: "hd11-calder-hall.html",
-    dateUpdated: "2026-10-02"
+    dateUpdated: "2026-10-25"
   },
   {
     id: "hd10-lesser-alvey",
@@ -430,7 +438,7 @@ const CANDIDATES = [
     tags: ["Vendor Network", "Deletion Pattern", "Rematch"],
     stamp: "Active",
     href: "hd9-choberka-sawyer.html",
-    dateUpdated: "2026-10-02"
+    dateUpdated: "2026-10-25"
   },
   {
     id: "hd8-kyle-james-shelton",
@@ -443,7 +451,7 @@ const CANDIDATES = [
     tags: ["Three-Way Race", "Sept. 30 Reports", "Graded"],
     stamp: "Active",
     href: "jason-kyle-hd8.html",
-    dateUpdated: "2026-10-02"
+    dateUpdated: "2026-10-25"
   },
   {
     id: "sd7-hollist-rushforth-ostler",
@@ -525,7 +533,7 @@ const CANDIDATES = [
     tags: ["Kerry Resigned, Not Running", "COI Omissions", "USBE"],
     stamp: "Active",
     href: "joseph-kerry.html",
-    dateUpdated: "2026-10-02"
+    dateUpdated: "2026-10-25"
   },
   {
     id: "davis-county-lee-millburn",
@@ -537,7 +545,9 @@ const CANDIDATES = [
     verdict: "Self-Funded vs. Unfiled",
     tags: ["Campaign Finance Gap", "Platform vs. Record", "Unopposed Seat"],
     stamp: "Active",
-    href: "davis-county-commission-2026.html"
+    href: "davis-county-commission-2026.html",
+    datePosted: "2026-08-28",
+    dateUpdated: "2026-10-25"
   },
   {
     id: "wasatch-2026-voter-guide",
@@ -551,7 +561,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "wasatch-2026-voter-guide.html",
     datePosted: "2026-10-01",
-    dateUpdated: "2026-10-02"
+    dateUpdated: "2026-10-25"
   },
   {
     id: "wasatch-sd20-winterton-mcrae",
@@ -579,7 +589,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "rachel-kahler-wasatch-seat-a.html",
     datePosted: "2026-09-01",
-    dateUpdated: "2026-10-02"
+    dateUpdated: "2026-10-25"
   },
   {
     id: "wasatch-seat-c-rowland",
@@ -593,7 +603,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "erik-rowland-seat-c.html",
     datePosted: "2026-09-02",
-    dateUpdated: "2026-09-30"
+    dateUpdated: "2026-10-25"
   },
   {
     id: "hd59-searle-johnson",
@@ -618,7 +628,9 @@ const CANDIDATES = [
     verdict: "Twenty Dollars In, Thirteen Thousand Out",
     tags: ["Campaign Finance Gap", "Business Network", "Voting Record"],
     stamp: "Active",
-    href: "box-elder-seat-a-smith-williams.html"
+    href: "box-elder-seat-a-smith-williams.html",
+    datePosted: "2026-09-09",
+    dateUpdated: "2026-09-09"
   },
   {
     id: "doers-network",
@@ -642,7 +654,9 @@ const CANDIDATES = [
     verdict: "Family Money and a Chair's Blessing",
     tags: ["Doers Network", "Family Funding", "Succession"],
     stamp: "Active",
-    href: "mike-bird-slco.html"
+    href: "mike-bird-slco.html",
+    datePosted: "2026-09-10",
+    dateUpdated: "2026-10-25"
   },
   {
     id: "sd5-koford-hernandez",
@@ -656,7 +670,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "sd5-koford-hernandez.html",
     datePosted: "2026-09-10",
-    dateUpdated: "2026-10-02"
+    dateUpdated: "2026-10-25"
   },
   {
     id: "wasatch-seat-c-rowland-folmer",
@@ -670,7 +684,7 @@ const CANDIDATES = [
     stamp: "Active",
     href: "rowland-folmer-seat-c.html",
     datePosted: "2026-09-11",
-    dateUpdated: "2026-10-02"
+    dateUpdated: "2026-10-25"
   },
   {
     id: "ut2-crosby-statement",

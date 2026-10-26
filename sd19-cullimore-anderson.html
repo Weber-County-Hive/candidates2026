@@ -13,10 +13,10 @@
     --color-paper-deep:#ece5d4;
     --color-ink:#241a16;
     --color-ink-soft:#5c534c;
-    --color-link:#c0572e;
+    --color-link:#1d6b57;
     --color-stat:#d9a441;
-    --color-burgundy-light:#5c1a2b;
-    --color-burgundy-deep:#3d0f1c;
+    --color-burgundy-light:#1f4e6b;
+    --color-burgundy-deep:#12304a;
     --color-line:#d8cfbc;
     --color-card:#fbf8f1;
     --color-good:#4d7c5f;
@@ -194,12 +194,25 @@
 .bill-grades tr.bg-why td{font-size:.93rem;color:var(--color-ink-soft);padding-top:2px;padding-bottom:14px;}
 @media (max-width:560px){.bill-grades th,.bill-grades td{padding-left:4px;padding-right:4px;} .bill-grades th{font-size:.62rem;} .bill-grades tr.bg-row td:first-child{font-size:.85rem;min-width:84px;} .bill-grades th:first-child{min-width:84px;} .bill-grades th{font-size:.55rem;letter-spacing:0;padding-left:2px;padding-right:2px;} .bill-grades tr.bg-row td:not(:first-child){padding-left:1px;padding-right:1px;} .bill-grades .gl{min-width:0;padding:2px 5px;font-size:.8rem;}}
 @media (max-width:560px){.prio-table tr,.prio-table td{display:block;width:auto !important;} .prio-table th{display:none;} .prio-table td{border-bottom:none;padding:4px 8px;} .prio-table tr{border-bottom:1px solid var(--color-rule,#ddd);padding:8px 0;} .prio-table td:nth-child(3):not(:empty)::before{content:"What would have scored higher: ";font-weight:700;}}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .hb-dates{max-width:1100px;margin:0 auto;padding:8px 20px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5647;letter-spacing:.03em;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 </head>
 
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="hb-dates">Posted Sept. 25, 2026 · Updated Oct. 2, 2026</div>
 <header class="band"><div class="wrap">
   <a class="brandmark" href="index.html">Weber County Hive — Candidates 2026</a>
   <nav class="topnav"><a href="index.html">Docket</a><a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a></nav>
@@ -1196,11 +1209,13 @@ document.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',()=>{b.
 if (window.Chart) {
   Chart.defaults.font.family = "'Source Serif 4', Georgia, serif"; Chart.defaults.color = '#5c534c';
   const money = v => '$' + Number(v).toLocaleString();
-  const mk=(id,labels,data)=>{ const el=document.getElementById(id); if(!el) return; new Chart(el,{type:'bar',data:{labels:labels,datasets:[{data:data,backgroundColor:'#5c1a2b',borderRadius:3}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>money(c.parsed.x)}}},scales:{x:{ticks:{callback:money},grid:{color:'#e6dfcf'}},y:{grid:{display:false}}}}}); };
+  const mk=(id,labels,data)=>{ const el=document.getElementById(id); if(!el) return; new Chart(el,{type:'bar',data:{labels:labels,datasets:[{data:data,backgroundColor:'#1f4e6b',borderRadius:3}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>money(c.parsed.x)}}},scales:{x:{ticks:{callback:money},grid:{color:'#e6dfcf'}},y:{grid:{display:false}}}}}); };
   mk('spendChartC',["Delta", "Friends of Dan McCay", "Elect Brammer", "Scott Sandall Campaign Fund", "Morgan Olson", "Committee to Elect Jordan Teuscher", "John Adams Political Campaign", "Marriott", "John Knotwell for State Senate", "Chris Sloan for Senate"],[5341.86, 5000.0, 5000.0, 5000.0, 4500.0, 2500.0, 2000.0, 1677.68, 1000.0, 1000.0]);
   mk('spendChartA',["Union Print Shop", "Giant Sequoia LLC", "Tissot Solutions", "Utah Democratic Party", "Salt Lake County Democratic Party", "ActBlue", "Briton Flynn", "DemCast", "DC Badge"],[3045.94, 2500.0, 2500.0, 772.71, 400.0, 360.08, 160.0, 50.0, 43.0]);
 }
 </script>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
