@@ -237,6 +237,21 @@
   @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
   .updated-line{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#d6e5ea;margin-top:12px;}
 </style>
+<style>
+  /* charts added Oct. 2026 */
+  .hvc-chart{background:var(--color-card);border:1px solid var(--color-line);padding:20px 22px;margin:28px 0;}
+  .hvc-title{font-family:'Playfair Display',serif;font-weight:600;font-size:1.25rem;margin:0 0 16px;line-height:1.3;}
+  .hvc-row{margin:0 0 16px;}
+  .hvc-label{display:flex;justify-content:space-between;gap:4px 12px;flex-wrap:wrap;font-size:1.08rem;margin-bottom:6px;}
+  .hvc-label b{font-family:'IBM Plex Mono',monospace;font-weight:600;}
+  .hvc-track{background:#e6e0d2;height:30px;}
+  .hvc-bar{height:100%;background:var(--color-burgundy-light);}
+  .hvc-bar.spent{background:var(--color-link);}
+  .hvc-na{font-family:'IBM Plex Mono',monospace;font-size:.95rem;color:var(--color-ink-soft);padding:4px 0;}
+  .hvc-cap{font-size:.95rem;color:var(--color-ink-soft);margin:14px 0 0;line-height:1.5;}
+  .hvc-mm .mermaid{text-align:center;}
+  @media(max-width:600px){.hvc-chart{margin:28px -16px;padding:16px 6px;}.hvc-title,.hvc-cap,.hvc-row{padding:0 8px;}}
+</style>
 </head>
 <body>
 <div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
@@ -257,7 +272,7 @@
     <h1 class="headline">One Disclosed. One Didn't.</h1>
     <p class="dek">Erik Rowland's own conflict-of-interest form says he has none to report. Alex Folmer, the
       write-in candidate now challenging him, checked the opposite box on the same county form and named her own.</p>
-    <div class="updated-line">Updated Sept. 30, 2026: corrected the Runa Digital dissolution date (July 21, 2025).</div>
+    <div class="updated-line">Updated Oct. 25, 2026: corrected the count to seven entities and positions plus an eighth board (WOLB), matching the Rowland case file. Sept. 30, 2026: corrected the Runa Digital dissolution date (July 21, 2025).</div>
   </div>
 </div>
 
@@ -283,12 +298,12 @@
     <p>Rowland's Wasatch County Conflict of Interest Disclosure Form, filed Jan. 2, 2026 and used to cover his
       county seat as well as his MIDA-linked positions, checks "I have no conflict of interest to report" and
       leaves every line blank. Independently confirmed against his own LinkedIn profile, his own words to the Park
-      Record, and Utah Division of Corporations filings, at least eight entities and positions don't appear
+      Record, and Utah Division of Corporations filings, seven entities and positions don't appear
       anywhere on that form: a CAMS board seat, ownership/officer roles in JASE Medical / SignalRx LLC and TimeMD
       Inc., sole membership in Rowland Development LLC, a manager role in Triumph Assurance Group LLC, and seats
       on the Heber Valley Tourism &amp; Economic Development Board and the North Village SSD Administrative
       Control Board.</p>
-    <p>A ninth board — the Wasatch Open Lands Board (WOLB), which reviews conservation-easement applications and
+    <p>An eighth board — the Wasatch Open Lands Board (WOLB), which reviews conservation-easement applications and
       recommends how the county's open-space bond money gets spent — has no disclosure form on file for Rowland at
       all, not even the wrong one. WOLB's own rule bars a member (or their spouse, parent, sibling, or child) from
       holding a 10%-or-greater interest in any property under consideration for that funding. Rowland owns a
@@ -318,8 +333,8 @@
         <tr>
           <td>Transparency</td>
           <td><span class="grade-letter">F</span> Bad</td>
-          <td>A blanket "no conflict of interest to report" against eight independently confirmed entities and
-            positions, plus a ninth board (WOLB) with no disclosure filed at all. MIDA's own site uses the same
+          <td>A blanket "no conflict of interest to report" against seven independently confirmed entities and
+            positions, plus an eighth board (WOLB) with no disclosure filed at all. MIDA's own site uses the same
             blank county form to cover four separate disclosure obligations.</td>
         </tr>
         <tr>
@@ -439,6 +454,22 @@
     </div>
   </section>
 
+  <div class="hvc-chart hvc-mm hvc-shot">
+    <p class="hvc-title">Two forms, side by side</p>
+<div class="mermaid">
+flowchart TD
+  R(["ERIK ROWLAND"]) -->|"form filed<br/>Jan. 2, 2026"| RF["'I have no conflict<br/>of interest to report'"]
+  RF -.->|"not listed"| RN["• CAMS board seat<br/>• JASE Medical / SignalRx<br/>• TimeMD Inc.<br/>• Rowland Development LLC<br/>• Triumph Assurance Group<br/>• Heber Valley Tourism and<br/>Econ. Dev. Board<br/>• North Village SSD<br/>Admin. Control Board"]
+  RN ~~~ W["Wasatch Open Lands<br/>Board: no form<br/>on file at all"]
+  R -.->|"seat on"| W
+  W ~~~ F
+  F(["ALEX FOLMER"]) -->|"form filed<br/>Aug. 31, 2026"| FF["'I have the following<br/>conflict of interest<br/>to report'"]
+  FF -->|"listed:<br/>employer"| U["University of Utah<br/>Software Design<br/>Engineer"]
+  FF -->|"listed:<br/>owner"| RD["Runa Digital, LLC<br/>(state marked it<br/>administratively<br/>dissolved July 21, 2025)"]
+</div>
+    <p class="hvc-cap">Facts from "Erik Rowland's disclosure record" and "Alex Folmer" above. Sources: both candidates' Wasatch County Conflict of Interest Disclosure Forms; Utah Division of Corporations registry; Rowland's LinkedIn and Park Record profile, as cited in "The Wrong Form, Four Times."</p>
+  </div>
+
   <section class="block">
     <h2 class="section-title">Follow the money</h2>
     <table class="claim-table">
@@ -455,6 +486,22 @@
         <td class="record">Not yet available — write-in filing closed Aug. 28, 2026</td>
       </tr>
     </table>
+    <div class="hvc-chart hvc-shot hvc-bars" role="img" aria-label="Seat C campaign money: Rowland raised $0 and spent $265.66; Folmer's record is not yet available">
+      <p class="hvc-title">Seat C campaign money, from the table above</p>
+      <div class="hvc-row">
+        <div class="hvc-label"><span>Erik Rowland — raised</span><b>$0</b></div>
+        <div class="hvc-track"><div class="hvc-bar" style="width:0%"></div></div>
+      </div>
+      <div class="hvc-row">
+        <div class="hvc-label"><span>Erik Rowland — spent (filing fee only)</span><b>$265.66</b></div>
+        <div class="hvc-track"><div class="hvc-bar spent" style="width:100%"></div></div>
+      </div>
+      <div class="hvc-row">
+        <div class="hvc-label"><span>Alex Folmer</span></div>
+        <div class="hvc-na">Not yet available — write-in filing closed Aug. 28, 2026</div>
+      </div>
+      <p class="hvc-cap">Figures from the "Follow the money" table. Source: Wasatch County candidate filing and campaign finance records.</p>
+    </div>
     <p>Rowland's is a no-fundraising campaign that ran for most of the year without an opponent to raise any of
       it. Folmer's own filings aren't due on a timeline that's produced anything yet; this will be revisited as
       her disclosure record develops.</p>
@@ -503,5 +550,12 @@
 
 <div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script>
+if (window.mermaid) { mermaid.initialize({ startOnLoad: false, theme: 'base', fontFamily: "'Source Serif 4', Georgia, serif", themeVariables: { fontSize: '18px', primaryColor: '#fbf9f3', primaryBorderColor: '#1f4e6b', primaryTextColor: '#241c14', lineColor: '#1f4e6b', edgeLabelBackground: '#f4f0e6', clusterBkg: '#f4f0e6', clusterBorder: '#d8cfbe', titleColor: '#1d6b57' }, flowchart: { htmlLabels: true, curve: 'basis', useMaxWidth: true, nodeSpacing: 30, rankSpacing: 50 } });
+  var hvcRun = function(){ mermaid.run({ querySelector: '.hvc-mm .mermaid' }); };
+  (document.fonts && document.fonts.ready) ? document.fonts.ready.then(hvcRun, hvcRun) : hvcRun(); }
+</script>
 </body>
 </html>

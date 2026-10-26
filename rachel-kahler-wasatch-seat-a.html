@@ -286,6 +286,27 @@
   @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
   .updated-line{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#d6e5ea;margin-top:12px;}
 
+
+  /* ---------- SOURCES (added) ---------- */
+  details.sources{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-burgundy-light);border-radius:3px;padding:16px 22px;margin:40px 0 24px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-burgundy-light);font-weight:600;}
+  details.sources[open] summary{margin-bottom:12px;}
+  details.sources .src-note{font-size:16px;color:var(--color-ink-soft);margin:0 0 10px;}
+  details.sources h4{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-ink-soft);margin:16px 0 6px;}
+  details.sources ul{margin:0;padding-left:22px;font-size:16.5px;line-height:1.55;color:var(--color-ink);}
+  details.sources li{margin-bottom:8px;}
+
+  /* ---------- CHART (added) ---------- */
+  .hive-chart{background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:20px 18px;margin:28px 0;}
+  .hive-chart h3.chart-title{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;margin:0 0 6px;}
+  .hive-chart .chart-dek{font-size:17px;color:var(--color-ink-soft);margin:0 0 14px;}
+  .hive-chart .mermaid{text-align:center;margin:10px 0 18px;}
+  .hive-chart .mermaid svg{max-width:100%;height:auto;}
+  @media(max-width:600px){.hive-chart{padding:16px 10px;}.hive-chart .mermaid{overflow-x:auto;-webkit-overflow-scrolling:touch;text-align:left;}.hive-chart .mermaid svg{min-width:540px;}.hive-chart .chart-swipe{display:block;}}
+  .hive-chart .chart-swipe{display:none;font-family:'IBM Plex Mono',monospace;font-size:13px;margin:0 0 4px;}
+  .hive-chart .chart-sub{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-burgundy-light);margin:18px 0 4px;}
+  .hive-chart .chart-note{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--color-ink-soft);margin:8px 0 0;line-height:1.5;}
+
   details.xd{background:var(--color-card);border:1px solid var(--color-line);border-left:4px solid var(--color-burgundy-light);margin:12px 0;padding:0;}
   details.xd summary{cursor:pointer;padding:14px 18px;font-size:1.05rem;line-height:1.4;list-style:none;}
   details.xd summary::-webkit-details-marker{display:none;}
@@ -319,7 +340,7 @@
     <h1 class="headline">What the Park Email Left Out</h1>
     <p class="dek">Four candidates are on the ballot for Seat A. Here is what each one's disclosure form
       says, and what the public record shows next to it.</p>
-    <div class="byline">Published Sept. 1, 2026 · Updated Oct. 2, 2026: added every candidate exchange in full; Sept. 30: McNeill’s Sept. 1 declaration, the state disclosure law, Hewlett regraded on her updated form</div>
+    <div class="byline">Published Sept. 1, 2026 · Updated Oct. 25, 2026: noted that her Heber Light &amp; Power seat was her Heber City Council seat on that board and ended in December 2023, and that the six form entries cover five entities. Oct. 2, 2026: added every candidate exchange in full; Sept. 30: McNeill’s Sept. 1 declaration, the state disclosure law, Hewlett regraded on her updated form</div>
   </div>
 </div>
 
@@ -423,6 +444,93 @@
     </div>
   </section>
 
+  <!-- ADDED: who's connected, using only entities named on this page -->
+  <section class="block" id="connections">
+    <h2 class="section-title">Who&rsquo;s connected: the Seat A field at a glance</h2>
+    <p>The boards, organizations, businesses and contracts this page names for each candidate, drawn as one chart per candidate. Each box says what this page reports about it, including whether it appears on the candidate&rsquo;s county disclosure form.</p>
+    <div class="hive-chart">
+      <span class="chart-swipe">On a phone, swipe the chart sideways to see all of it.</span>
+      <div class="chart-sub">Rachel Kahler (Republican nominee)</div>
+      <div class="mermaid">
+flowchart LR
+  K["<b>Rachel Kahler</b><br/>Her form: checked<br/>#quot;I have no conflict<br/>of interest to report#quot;"]
+  CAMS["<b>CAMS</b> (Community Alliance<br/>for Main Street)<br/>Executive Director, paid<br/>Heber City-funded contract,<br/>three years, $39,900 a year<br/><i>Not on her form</i>"]
+  RWB["<b>Red White and Blue Festival Inc.</b><br/>Director<br/><i>Not on her form</i>"]
+  LLC["<b>5 In The Hive, LLC</b><br/>Manager; 2023 filing purpose:<br/>real estate investments<br/><i>Not on her form</i>"]
+  NV["<b>North Village Special<br/>Service District</b><br/>Service, per her own<br/>campaign messaging<br/>(dates not yet confirmed)<br/><i>Not on her form</i>"]
+  HLP["<b>Heber Light and Power Board</b><br/>Past seat: Heber City Council<br/>rep., ended Dec. 2023,<br/>not current when she filed<br/><i>Not on her form</i>"]
+  K --> CAMS
+  K --> RWB
+  K --> LLC
+  K --> NV
+  K --> HLP
+  classDef person fill:#12304a,stroke:#12304a,color:#ffffff,stroke-width:2px;
+  classDef org fill:#fbf9f3,stroke:#1d6b57,stroke-width:2px,color:#241c14;
+  classDef gov fill:#eef4f3,stroke:#1f4e6b,stroke-width:2px,color:#241c14;
+  class K person;
+  class CAMS,RWB,LLC org;
+  class NV,HLP gov;
+      </div>
+
+      <div class="chart-sub">Jami Hewlett (write-in)</div>
+      <div class="mermaid">
+flowchart LR
+  J["<b>Jami Hewlett</b><br/>Her form: checked<br/>#quot;I have the following<br/>conflict of interest#quot;"]
+  SC["<b>Summit Cleaning, LLC</b><br/>Hers; registered agent and principal<br/><i>On her Aug. 26 form</i>"]
+  HL["<b>Hewlett Life and Health</b><br/>Owned by her husband<br/><i>On her Aug. 26 form</i>"]
+  LOT["<b>Lot on 100 S., Heber</b><br/><i>On her Aug. 26 form</i>"]
+  TPM["<b>Twelve Point Muley LLC</b><br/>Member; 1/4 interest in a<br/>Wyoming apartment (inheritance)<br/><i>Added on her Sept. 2 form</i>"]
+  WBH["<b>Wasatch Back Handyman LLC</b><br/>Owns 191 W 100 S<br/><i>Added on her Sept. 2 form</i>"]
+  PC["<b>Heber City Planning Commission</b><br/>Alternate seat;<br/>removed 4-1, Nov. 2024"]
+  J --> SC
+  J --> HL
+  J --> LOT
+  J --> TPM
+  J --> WBH
+  J --> PC
+  classDef person fill:#12304a,stroke:#12304a,color:#ffffff,stroke-width:2px;
+  classDef org fill:#fbf9f3,stroke:#1d6b57,stroke-width:2px,color:#241c14;
+  classDef gov fill:#eef4f3,stroke:#1f4e6b,stroke-width:2px,color:#241c14;
+  class J person;
+  class SC,HL,LOT,TPM,WBH org;
+  class PC gov;
+      </div>
+
+      <div class="chart-sub">Robert McNeill (Democratic nominee)</div>
+      <div class="mermaid">
+flowchart LR
+  M["<b>Robert McNeill</b><br/>No conflict-of-interest<br/>form posted as of<br/>Sept. 30, 2026"]
+  HWG["<b>Here We Go Productions, Inc.</b><br/>Heber City; his production<br/>company (state registry)"]
+  WCD["<b>Wasatch County<br/>Democratic Party</b><br/>Named him to the ballot<br/>Sept. 1, 2026"]
+  M --> HWG
+  M --> WCD
+  classDef person fill:#12304a,stroke:#12304a,color:#ffffff,stroke-width:2px;
+  classDef org fill:#fbf9f3,stroke:#1d6b57,stroke-width:2px,color:#241c14;
+  classDef gov fill:#eef4f3,stroke:#1f4e6b,stroke-width:2px,color:#241c14;
+  class M person;
+  class HWG,WCD org;
+      </div>
+
+      <div class="chart-sub">Shawn Taylor (write-in)</div>
+      <div class="mermaid">
+flowchart LR
+  T["<b>Shawn Taylor</b><br/>His form: checked<br/>#quot;I have no conflict<br/>of interest to report#quot;"]
+  GOP["<b>Wasatch County GOP Board</b><br/>Media Specialist, per his<br/>2026 campaign site<br/><i>Not on his form</i>"]
+  PCT["<b>Charleston GOP precinct</b><br/>Vice chair"]
+  NFIB["<b>NFIB State Legislative Council</b><br/>Member"]
+  T --> GOP
+  T --> PCT
+  T --> NFIB
+  classDef person fill:#12304a,stroke:#12304a,color:#ffffff,stroke-width:2px;
+  classDef org fill:#fbf9f3,stroke:#1d6b57,stroke-width:2px,color:#241c14;
+  classDef gov fill:#eef4f3,stroke:#1f4e6b,stroke-width:2px,color:#241c14;
+  class T person;
+  class GOP,PCT,NFIB org;
+      </div>
+      <p class="chart-note">Everything in these charts is taken from the sections below. &ldquo;Not on her form,&rdquo; &ldquo;not on his form&rdquo; and &ldquo;on her form&rdquo; refer to each candidate&rsquo;s Wasatch County Conflict of Interest Disclosure Form as described on this page.</p>
+    </div>
+  </section>
+
   <section class="block">
     <h2 class="section-title">Rachel Kahler's disclosure record</h2>
     <div class="record-card">
@@ -452,7 +560,10 @@
         <td>Boards you sit on — "volunteer or otherwise"</td>
         <td class="record"><strong>Red White &amp; Blue Festival Inc.</strong> (Director), <strong>North Village
           Special Service District</strong>, <strong>Heber Light &amp; Power Board</strong> — the latter two
-          self-disclosed by Kahler in her own campaign messaging, not found via records research</td>
+          self-disclosed by Kahler in her own campaign messaging. Heber Light &amp; Power&rsquo;s minutes show the
+          Heber Light &amp; Power seat was her Heber City Council seat on that board (Nov. 2021 through June 2023 in the
+          minutes), which ended with her council term in December 2023, so it was not a current seat when she filed
+          her January 2026 form, which asks about boards she sits on. North Village SSD dates are not yet confirmed.</td>
       </tr>
       <tr>
         <td>For-profit businesses — officer, manager, director, or majority shareholder</td>
@@ -463,15 +574,20 @@
         <td class="record"><strong>5 In The Hive, LLC</strong></td>
       </tr>
     </table>
-    <p>Six real entries — built entirely from her own state filings, her own CAMS contract, and her own campaign
-      posts. Every one was left blank on the form itself.</p>
+    <p>Six real entries covering five entities (5 In The Hive, LLC fits two of the form&rsquo;s categories) — built
+      entirely from her own state filings, her own CAMS contract, and her own campaign posts. Every one was left
+      blank on the form itself. One of them, the Heber Light &amp; Power seat, ended in December 2023, so it was not
+      current when she filed (see the note above).</p>
 
     <div class="record-card">
       <p>Left off that form: her paid CAMS directorship, a directorship of Red White and Blue Festival Inc., sole
         management of 5 In The Hive, LLC — an entity whose 2023 Certificate of Organization, which she signed,
         states its purpose as being "to acquire, own, sell, and otherwise manage real estate investments" — and,
         per her own campaign messaging, service on the North Village Special Service District and the Heber Light
-        &amp; Power Board.</p>
+        &amp; Power Board. The Heber Light &amp; Power seat was a past one: her board seat as a Heber City Council
+        member, which ended in December 2023, so it was not current when she filed her January 2026 form. Heber City&rsquo;s
+        2024 board-assignment sheet does not list her for North Village SSD either, which points to that being a
+        council-era seat too; its exact dates are not yet confirmed.</p>
       <p>The form's opening language does leave room for judgment — it asks candidates to list only what they
         "believe could contribute to a conflict of interest." So the question isn't simply whether the form was
         filled out correctly; it's whether concluding that an employer, two special-district/utility boards, a
@@ -493,8 +609,8 @@
         2023, which is the record above. Both are part of the story: what she filed, and what she now says about
         it.</p>
       <p>Her response doesn't address why CAMS — her employer, by the form's own category — her Red White &amp;
-        Blue Festival board seat, or her North Village SSD/Heber Light &amp; Power service, all covered by the
-        form's language, were left off entirely.</p>
+        Blue Festival board seat — both covered by the form&rsquo;s language — were left off entirely, or whether her
+        North Village SSD service was still current when she filed.</p>
     </div>
 
     <div class="record-card">
@@ -547,10 +663,11 @@
         <tr>
           <td>Transparency</td>
           <td><span class="grade-letter">F</span> Bad</td>
-          <td>A blanket "no conflict of interest to report" against six independently confirmed
-            entities/positions (CAMS, Red White &amp; Blue Festival Inc., 5 In The Hive LLC, North Village SSD,
-            Heber Light &amp; Power Board — two of the six self-disclosed by Kahler herself in campaign
-            messaging, after the fact). Separately, the Main Street Park email's explicit instruction not to post
+          <td>A blanket "no conflict of interest to report" against five independently confirmed
+            entities/positions across six form entries (CAMS, Red White &amp; Blue Festival Inc., 5 In The Hive LLC,
+            North Village SSD, Heber Light &amp; Power Board — the last two self-disclosed by Kahler herself in
+            campaign messaging, after the fact; the Heber Light &amp; Power seat ended in December 2023 and was
+            not current when she filed). Separately, the Main Street Park email's explicit instruction not to post
             the campaign publicly is its own transparency-relevant conduct, in her capacity as a paid public-facing
             official steering public opinion on a city decision.</td>
         </tr>
@@ -828,6 +945,54 @@
       alongside what the public record shows. Every exchange is published in full under <a href="#on-the-record">On the record</a>. The general election is Nov. 3, 2026.</p>
   </section>
 
+  <details class="sources">
+    <summary>Sources</summary>
+    <p class="src-note">The records and reporting this case file relies on, grouped by type. The one-line source note at the bottom of the page is kept as published. Links go to the public source where one could be confirmed; items without a link are listed by name.</p>
+    <h4>Disclosure forms and candidacy filings</h4>
+    <ul>
+      <li>Rachel Kahler, Wasatch County Conflict of Interest Disclosure Form, filed with her January 2026 Declaration of Candidacy &mdash; posted by Wasatch County as <a href="https://www.wasatchcounty.gov/downloads/file/913/county-council-seat-a-rachel-kahler-001" target="_blank" rel="noopener">&ldquo;County Council Seat A &mdash; Rachel Kahler&rdquo;</a>.</li>
+      <li>Luke Searle, Wasatch County Conflict of Interest Disclosure Form (Jan. 2025).</li>
+      <li>Jami Hewlett, Wasatch County Conflict of Interest Disclosure Forms dated Aug. 26, 2026 and Sept. 2, 2026 (the second provided by Hewlett with her Sept. 27, 2026 email).</li>
+      <li>Shawn Taylor, Wasatch County Conflict of Interest Disclosure Form, filed with his write-in candidacy (Aug. 27, 2026).</li>
+      <li>Robert McNeill, Declaration of Candidacy accepted Sept. 1, 2026, and Wasatch County&rsquo;s Conflict of Interest Disclosure Forms page as of Sept. 30, 2026 (both read from the rendered pages).</li>
+      <li>Utah&rsquo;s conflict-of-interest disclosure template for state-level candidates.</li>
+    </ul>
+    <h4>Business and contract records</h4>
+    <ul>
+      <li>Utah Division of Corporations business filings &mdash; <a href="https://businessregistration.utah.gov/" target="_blank" rel="noopener">businessregistration.utah.gov</a>: 5 In The Hive, LLC (2023 Certificate of Organization); Red White and Blue Festival Inc.; Summit Cleaning, LLC (#9699050-0160); Twelve Point Muley LLC (#13150857-0160); Here We Go Productions, Inc.</li>
+      <li>Heber City&rsquo;s three-year, $39,900-a-year contract with the Community Alliance for Main Street (CAMS).</li>
+    </ul>
+    <h4>The Main Street Park email</h4>
+    <ul>
+      <li>Rachel Kahler&rsquo;s CAMS email on the Main Street Park Phase 2 redesign, obtained by The Weber County Hive, with its two attachments: a Placer.ai visitor-analytics report on Main Street Park (June 4&ndash;July 9, 2026) and a map of the Duke property.</li>
+      <li>Terracon Consultants&rsquo; $15&ndash;18 million estimate for the Phase 2 concept, as cited on this page.</li>
+    </ul>
+    <h4>Laws</h4>
+    <ul>
+      <li>Utah Code <a href="https://le.utah.gov/xcode/Title17/Chapter70/17-70-S304.html" target="_blank" rel="noopener">&sect;17-70-304</a> (county candidate conflict-of-interest disclosure).</li>
+      <li>Utah Code <a href="https://le.utah.gov/xcode/Title20A/Chapter11/20A-11-S1604.html" target="_blank" rel="noopener">&sect;20A-11-1604</a> (items a disclosure statement must cover).</li>
+    </ul>
+    <h4>News reporting</h4>
+    <ul>
+      <li>Park Record, &ldquo;<a href="https://www.parkrecord.com/2025/10/28/mixed-use-development-in-heber-city-pitches-tax-sharing-proposal-worth-20m/" target="_blank" rel="noopener">Mixed-use development in Heber City pitches tax-sharing proposal worth $20M</a>,&rdquo; Oct. 28, 2025.</li>
+      <li>Park Record, &ldquo;<a href="https://www.parkrecord.com/2025/11/25/developer-says-station-seven-will-bring-millions-in-tax-revenue-to-heber-city/" target="_blank" rel="noopener">Developer says Station Seven will bring millions in tax revenue to Heber City</a>,&rdquo; Nov. 25, 2025.</li>
+      <li>KPCW, &ldquo;<a href="https://www.kpcw.org/heber-city/2025-10-20/heber-city-considers-tax-sharing-proposal-to-support-new-london-development" target="_blank" rel="noopener">Heber City considers tax sharing proposal to support New London development</a>,&rdquo; Oct. 20, 2025.</li>
+      <li>KPCW, &ldquo;<a href="https://www.kpcw.org/heber-city/2025-11-26/heber-leaders-narrowly-support-station-seven-redevelopment-plans" target="_blank" rel="noopener">Heber leaders narrowly support Station Seven redevelopment plans</a>,&rdquo; first posted Nov. 26, 2025, updated Dec. 2, 2025.</li>
+      <li>Park Record, &ldquo;<a href="https://www.parkrecord.com/2026/09/08/wasatch-county-democrat-withdraws-from-council-race-new-candidate-replaces-him/" target="_blank" rel="noopener">Wasatch County Democrat withdraws from council race; new candidate replaces him</a>,&rdquo; Sept. 8, 2026.</li>
+      <li>Park Record, &ldquo;Wasatch County Council candidate Robert McNeill values transparency, accountability,&rdquo; Sept. 11, 2026.</li>
+      <li>KPCW, &ldquo;<a href="https://www.kpcw.org/wasatch-county/2026-09-02/write-in-candidates-jump-into-wasatch-county-races" target="_blank" rel="noopener">Write-in candidates jump into Wasatch County races</a>,&rdquo; Sept. 2, 2026.</li>
+      <li>KSL, &ldquo;Letter shared in business owner&rsquo;s name prompts removal of Heber City commission member,&rdquo; Nov. 6, 2024; with Park Record and KPCW coverage of the same Nov. 2024 Planning Commission vote.</li>
+      <li>Park Record reporting (June 2025) on Hewlett&rsquo;s pending cases, mentioned but not detailed on this page.</li>
+    </ul>
+    <h4>Other public records</h4>
+    <ul>
+      <li>UDOT Heber Valley Corridor Environmental Impact Statement public records (Jan.&ndash;May 2026).</li>
+      <li>Rachel Kahler&rsquo;s public response, posted to The Weber County Hive&rsquo;s Facebook page (Sept. 1, 2026), and her own campaign messaging.</li>
+      <li>Shawn Taylor&rsquo;s 2026 campaign site and campaign materials.</li>
+      <li>Candidate exchanges published in full in Letters &amp; Essays to the Collective: <a href="https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/L-2026-001.html" target="_blank" rel="noopener">L-2026-001</a> (Kahler) and <a href="https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/L-2026-002.html" target="_blank" rel="noopener">L-2026-002</a> (Hewlett).</li>
+    </ul>
+  </details>
+
 </main>
 
 <footer class="pagefoot">
@@ -845,6 +1010,18 @@
 </footer>
 
 <div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'neutral',
+      securityLevel: 'loose',
+      themeVariables: { fontSize: '18px', fontFamily: 'Georgia, serif', primaryColor: '#fbf9f3', primaryBorderColor: '#1f4e6b', lineColor: '#1d6b57', primaryTextColor: '#241c14' },
+      flowchart: { useMaxWidth: true, htmlLabels: true, nodeSpacing: 34, rankSpacing: 46, padding: 14 }
+    });
+  }
+</script>
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

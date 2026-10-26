@@ -43,6 +43,26 @@ h2{font-family:'Playfair Display',Georgia,serif;font-size:24px;color:var(--deep)
 .ph{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#8a5a17;background:#fbf5e6;border:1px dashed var(--amber);padding:8px 12px}
 .note{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--soft);border-top:1px solid var(--line);padding-top:8px;margin-top:6px}
 .back{font-family:'IBM Plex Mono',monospace;font-size:13px;margin-top:20px;display:inline-block}
+
+  /* ---------- SOURCES (added) ---------- */
+  details.sources{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:3px;padding:16px 22px;margin:40px 0 24px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);font-weight:600;}
+  details.sources[open] summary{margin-bottom:12px;}
+  details.sources .src-note{font-size:16px;color:var(--soft);margin:0 0 10px;}
+  details.sources h4{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin:16px 0 6px;}
+  details.sources ul{margin:0;padding-left:22px;font-size:16.5px;line-height:1.55;color:var(--ink);}
+  details.sources li{margin-bottom:8px;}
+
+  /* ---------- CHART (added) ---------- */
+  .hive-chart{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:20px 18px;margin:28px 0;}
+  .hive-chart h3.chart-title{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;margin:0 0 6px;}
+  .hive-chart .chart-dek{font-size:17px;color:var(--soft);margin:0 0 14px;}
+  .hive-chart .mermaid{text-align:center;margin:10px 0 18px;}
+  .hive-chart .mermaid svg{max-width:100%;height:auto;}
+  @media(max-width:600px){.hive-chart{padding:16px 10px;}.hive-chart .mermaid{overflow-x:auto;-webkit-overflow-scrolling:touch;text-align:left;}.hive-chart .mermaid svg{min-width:540px;}.hive-chart .chart-swipe{display:block;}}
+  .hive-chart .chart-swipe{display:none;font-family:'IBM Plex Mono',monospace;font-size:13px;margin:0 0 4px;}
+  .hive-chart .chart-sub{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin:18px 0 4px;}
+  .hive-chart .chart-note{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--soft);margin:8px 0 0;line-height:1.5;}
 @media(max-width:600px){.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.ex{padding:14px 14px}}
 </style>
 </head>
@@ -62,6 +82,34 @@ h2{font-family:'Playfair Display',Georgia,serif;font-size:24px;color:var(--deep)
 <li>Only complete messages are posted. Nothing is shortened.</li>
 <li>Letters written for readers are published in <a href="https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/">Letters &amp; Essays to the Collective</a> and linked here.</li>
 </ul></div>
+<!-- ADDED: who's connected, from Kahler's own messages on this page -->
+<div class="hive-chart">
+  <h3 class="chart-title">Who&rsquo;s connected: the roles Kahler named</h3>
+  <p class="chart-dek">Built only from what Kahler wrote in the exchanges on this page. Each box uses her own description.</p>
+  <span class="chart-swipe">On a phone, swipe the chart sideways to see all of it.</span>
+
+  <div class="mermaid">
+flowchart LR
+  K["<b>Rachel Kahler</b><br/>Candidate, Wasatch<br/>County Council Seat A"]
+  CAMS["<b>CAMS</b> (Community Alliance<br/>for Main Street), a 501(c)(3)<br/>Executive Director;<br/>#quot;the only paid employee#quot;<br/>CAMS holds a three-year Heber City<br/>contract for event management,<br/>#quot;not with me personally#quot;"]
+  GR["<b>Grants to CAMS</b><br/>She applied for and administered<br/>them; awarded to CAMS,<br/>#quot;not to me personally#quot;"]
+  RWB["<b>Red, White and Blue Festival</b><br/>Volunteer; no salary,<br/>stipend or compensation"]
+  LLC["<b>5 in the Hive, LLC</b><br/>Her childhood home, owned with<br/>her siblings; long-term rental"]
+  HCC["<b>Heber City Council</b><br/>Her council record, described<br/>in her Sept. 15 email"]
+  K --> CAMS
+  K --> GR
+  K --> RWB
+  K --> LLC
+  K --> HCC
+  classDef person fill:#12304a,stroke:#12304a,color:#ffffff,stroke-width:2px;
+  classDef org fill:#fbf9f3,stroke:#1d6b57,stroke-width:2px,color:#2a261e;
+  classDef gov fill:#eef4f3,stroke:#1f4e6b,stroke-width:2px,color:#2a261e;
+  class K person;
+  class CAMS,GR,RWB,LLC org;
+  class HCC gov;
+      </div>
+  <p class="chart-note">These are Kahler&rsquo;s own descriptions from her Sept. 1 Facebook comment, her Sept. 15 messages and her Sept. 27 email. How they compare with her county disclosure form is covered in the <a href="rachel-kahler-wasatch-seat-a.html">Seat A case file</a>.</p>
+</div>
 <h2>Exchanges, newest first</h2>
 <article class="ex"><div class="exh"><div class="meta"><b>Sept. 27, 2026</b> · Email</div><div class="who">Rachel Kahler</div></div>
 <div class="from">Kahler wrote first</div><div class="body"><p>Shauna,</p><p>While I am perplexed as to how you obtained a private email, I stand by my position that Heber City should invest in additional park amenities throughout our community, particularly in areas where many families will reside.</p><p>The City Council recently reviewed the Main Street Park plans and is proceeding with a modified approach that includes relocating the playground to a safer location, improving the restrooms, and exploring options for an improved pavilion.</p><p>I believe this is a positive outcome for our community and, most importantly, for families with young children who use our parks.</p><p>Sent from my iPhone</p></div><div class="note">About the Main Street Park email quoted in the <a href="rachel-kahler-wasatch-seat-a.html">Seat A case file</a>. Her description of the City Council’s recent review is her statement; it has not yet been checked against council records.</div></article>
@@ -73,8 +121,32 @@ h2{font-family:'Playfair Display',Georgia,serif;font-size:24px;color:var(--deep)
 <div class="from">Kahler wrote first</div><div class="body"><p>Kahler introduced herself and her campaign, described her Heber City Council record and her role at CAMS, and invited a phone call. Her letter is published in full in the Collective: <a href="https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/L-2026-001.html">L-2026-001, “Why I’m Running for Seat A.”</a></p></div></article><article class="ex"><div class="exh"><div class="meta"><b>Sept. 1, 2026</b> · Facebook comment</div><div class="who">Rachel Kahler</div></div>
 <div class="from">Kahler commented first, publicly</div><div class="body"><p>Hello. I’m not sure what your interest in Wasatch County is, or who you really are. But since you’re so interested in me, I’ll share the details you didn’t have the time to research.</p><p>As a candidate for the Wasatch County Council, I believe transparency regarding my professional roles is important. I serve as Executive Director of the Community Alliance for Main Street (CAMS), a 501(c)(3) nonprofit organization dedicated to revitalizing downtown Heber City through historic preservation, economic development, beautification, and community-centered programming.</p><p>CAMS holds a three-year contract with Heber City to provide event management and related services. That agreement is between Heber City and CAMS as an independent nonprofit organization. The contract is not with me personally, nor do I personally hold the contract.</p><p>For that reason, I do not consider my employment with CAMS, by itself, to constitute a conflict of interest with service on the Wasatch County Council. It is, however, a professional relationship that I am fully willing to disclose in the interest of transparency.</p><p>Should a specific matter come before the County Council involving CAMS in a way that could create an actual or potential financial or professional conflict for me, I would disclose that relationship and follow all applicable County policies and Utah law regarding participation or recusal.</p><p>As part of my professional responsibilities with CAMS, I have applied for and administered a number of competitive, program-based grants during the past two years. These grants have been awarded to CAMS, not to me personally, and are designated for specific projects, programs, professional development, marketing, equipment, or contracted services.</p><p>If elected, I would distinguish between my responsibilities as Executive Director of CAMS and my responsibilities as a member of the County Council. If CAMS were to submit a funding request, grant application, contract, or other matter requiring County Council action, I would disclose my professional relationship with CAMS and follow applicable state law and County policies governing participation and recusal.</p><p>I serve as a volunteer with the Red, White &amp; Blue Festival, a nonprofit organization established to organize and produce a patriotic community celebration in Heber City in recognition of Independence Day and the Fourth of July.</p><p>My involvement with the organization is entirely voluntary, and I receive no salary, stipend, or other personal compensation for my service. My involvement is solely as a community volunteer working with others to provide an Independence Day celebration for residents and visitors to the Heber Valley.</p><p>Lastly, 5 in the Hive, LLC is a registered business established for the ownership and management of a residential rental property. The property is my childhood home, which my siblings and I purchased following the deaths of our parents in 2020 and 2023.</p><p>The LLC provides the structure through which our family jointly owns and manages the property. It is not an operating business that contracts with Wasatch County.</p><p>Since our family acquired the home, the property has been maintained as a long-term residential rental and has provided housing for several local families, as well as served as workforce housing with below market rate rental offered to seasonal workers.</p><p>So now that I have introduced myself. Who are you hiding behind AI created posts created content for the sole purpose of spreading nonsense.</p></div><div class="note">Posted publicly on The Hive’s Facebook page. Excerpts are quoted in the <a href="rachel-kahler-wasatch-seat-a.html">Seat A case file</a>.</div></article>
 <a class="back" href="rachel-kahler-wasatch-seat-a.html">← Back to the Seat A case file</a> · <a class="back" href="index.html">All races</a>
+<details class="sources">
+  <summary>Sources</summary>
+  <p class="src-note">Every item on this page is a message a candidate sent to The Hive, or The Hive&rsquo;s reply, published in full.</p>
+  <ul>
+    <li>Rachel Kahler, public comment on The Hive&rsquo;s Facebook page, Sept. 1, 2026.</li>
+    <li>Rachel Kahler, email to The Hive, Sept. 15, 2026, 12:07 a.m. &mdash; published in full as <a href="https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/L-2026-001.html" target="_blank" rel="noopener">L-2026-001, &ldquo;Why I&rsquo;m Running for Seat A&rdquo;</a>.</li>
+    <li>Email exchange between Shauna Miller (The Hive) and Rachel Kahler, Sept. 15, 2026 (2:37 p.m., 3:36 p.m. and 8:00 p.m.).</li>
+    <li>Jami Hewlett, email to The Hive with both of her conflict-of-interest disclosure forms attached, Sept. 27, 2026 &mdash; published in full as <a href="https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/L-2026-002.html" target="_blank" rel="noopener">L-2026-002, &ldquo;My Updated Disclosure&rdquo;</a>.</li>
+    <li>Rachel Kahler, email to The Hive, Sept. 27, 2026.</li>
+    <li>The records each message is checked against are listed in the <a href="rachel-kahler-wasatch-seat-a.html">Seat A case file</a>.</li>
+  </ul>
+</details>
 </main>
 <div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'neutral',
+      securityLevel: 'loose',
+      themeVariables: { fontSize: '18px', fontFamily: 'Georgia, serif', primaryColor: '#fbf9f3', primaryBorderColor: '#1f4e6b', lineColor: '#1d6b57', primaryTextColor: '#241c14' },
+      flowchart: { useMaxWidth: true, htmlLabels: true, nodeSpacing: 34, rankSpacing: 46, padding: 14 }
+    });
+  }
+</script>
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

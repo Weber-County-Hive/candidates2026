@@ -548,6 +548,24 @@
   table.led th{font-family:var(--font-mono);font-size:12px;text-transform:uppercase;text-align:left;color:var(--color-ink-soft);border-bottom:2px solid var(--color-border);padding:6px 10px 8px 0;}
   table.led td{padding:8px 10px 8px 0;border-bottom:1px solid var(--color-border);}
 @media(max-width:600px){table.rubric-table{display:block;overflow-x:auto;max-width:100%;}}
+
+  /* ---------- SOURCES (added) ---------- */
+  details.sources { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 3px; padding: 18px 24px; margin: 32px 0; }
+  details.sources summary { font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-header-start); cursor: pointer; font-weight: 600; }
+  details.sources[open] summary { margin-bottom: 14px; }
+  details.sources ul { margin: 0; padding-left: 22px; font-size: 1rem; line-height: 1.55; color: var(--color-ink-soft); }
+  details.sources li { margin-bottom: 10px; }
+  details.sources a { word-break: break-word; }
+  details.sources .src-note { font-size: 0.92rem; color: var(--color-ink-soft); margin: 12px 0 0; }
+  /* ---------- SIMPLE BAR CHART (added) ---------- */
+  .hv-chart { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 3px; padding: 18px 22px; margin: 24px 0; }
+  .hv-chart-title { font-weight: 700; font-size: 1.12rem; margin: 0 0 14px; }
+  .hv-row { margin-bottom: 14px; }
+  .hv-top { display: flex; justify-content: space-between; gap: 12px; font-size: 1.05rem; margin-bottom: 4px; flex-wrap: wrap; }
+  .hv-top b { font-family: 'IBM Plex Mono', monospace; font-size: 1.08rem; }
+  .hv-track { height: 22px; background: rgba(0,0,0,0.06); border-radius: 3px; overflow: hidden; }
+  .hv-fill { height: 100%; background: var(--color-header-start); border-radius: 3px; }
+  .hv-note { font-size: 0.95rem; color: var(--color-ink-soft); margin: 6px 0 0; }
 </style>
 </head>
 <body>
@@ -569,7 +587,7 @@
     <div class="kicker">Senate District 5 · General Election, Nov. 3, 2026</div>
     <h1>Jill Koford <span class="vs">vs.</span> CJ Hernandez</h1>
     <p class="dek">An open seat, vacated by one of the network's own founding officers, going to the same PAC treasurer's network that first funded her rise. Davis, Morgan, and Weber counties.</p>
-    <p class="updated">Updated Oct. 2, 2026: Koford's campaign-money grade revised (see Grades). Earlier update Oct. 1, 2026, with both candidates' September 30th Reports (period June 12&ndash;Sept. 25), their disclosure forms, and new money and disclosure grades.</p>
+    <p class="updated">Updated Oct. 25, 2026: added the $167,500 net figure (after UHREC&rsquo;s returned $10,000) next to every $177,500 gross figure; corrected one paragraph that dated NUPAC&rsquo;s first contribution to 2024 (it was 2022) and one that said 20 disclosed entities (it is 21). Updated Oct. 2, 2026: Koford's campaign-money grade revised (see Grades). Earlier update Oct. 1, 2026, with both candidates' September 30th Reports (period June 12&ndash;Sept. 25), their disclosure forms, and new money and disclosure grades.</p>
     <div class="case-meta">
       <span>Seat: <b>Open</b> — Sen. Ann Millner (R) not seeking reelection</span>
       <span>Republican: <b>Rep. Jill Koford</b>, House District 10 since 2025</span>
@@ -674,7 +692,7 @@
         </div>
         <div class="wface wback">
           <span class="wlabel">WHY THIS NAME MATTERS</span>
-          <p>Gave Koford $27,000 — one of the five PACs/party committees behind her $177,500 in institutional support. Schultz himself and his campaign also gave her money directly. Kyle Palmer's Irish Elk LLC draws fees from this PAC too, not just NUPAC and UHREC.</p>
+          <p>Gave Koford $27,000 — one of the five PACs/party committees behind her $177,500 in institutional support ($167,500 after UHREC's returned $10,000). Schultz himself and his campaign also gave her money directly. Kyle Palmer's Irish Elk LLC draws fees from this PAC too, not just NUPAC and UHREC.</p>
         </div>
       </div>
     </div>
@@ -695,8 +713,8 @@
 
   <div class="verdict-box">
     <span class="label">What the records show</span>
-    <p>Koford's rise runs directly through the Northern Utah Legislative PAC (NUPAC) — a committee controlled by Sen. Ann Millner, Rep. Casey Snider, and treasurer Kyle Palmer, who operates through his own firm, Irish Elk LLC. NUPAC seeded Koford's first House run in 2024; Irish Elk took over her campaign's compliance work in 2025; and when Millner declined to seek reelection to Senate District 5 in January 2026, Koford filed for that exact seat and ran unopposed through convention.</p>
-    <p>Full raw disclosure exports covering every report Koford has filed since 2021 show <b>$426,114.03</b> raised and $330,347.88 spent over her career. Five PAC or party committees account for $177,500 of that: UHREC, NUPAC, the Weber County Republican Party, House Speaker Leadership PAC, and Wilson Leadership PAC. Across her own campaign and the two committees most closely tied to it (NUPAC and UHREC), Kyle Palmer's Irish Elk LLC and its principal have been paid <b>$229,830.73</b> combined — while serving as treasurer of the committees making those payments.</p>
+    <p>Koford's rise runs directly through the Northern Utah Legislative PAC (NUPAC) — a committee controlled by Sen. Ann Millner, Rep. Casey Snider, and treasurer Kyle Palmer, who operates through his own firm, Irish Elk LLC. NUPAC seeded Koford's first House run in 2022 and gave again when she won the seat in 2024; Irish Elk took over her campaign's compliance work in 2025; and when Millner declined to seek reelection to Senate District 5 in January 2026, Koford filed for that exact seat and ran unopposed through convention.</p>
+    <p>Full raw disclosure exports covering every report Koford has filed since 2021 show <b>$426,114.03</b> raised and $330,347.88 spent over her career. Five PAC or party committees account for $177,500 of that ($167,500 after the $10,000 UHREC check she sent back): UHREC, NUPAC, the Weber County Republican Party, House Speaker Leadership PAC, and Wilson Leadership PAC. Across her own campaign and the two committees most closely tied to it (NUPAC and UHREC), Kyle Palmer's Irish Elk LLC and its principal have been paid <b>$229,830.73</b> combined — while serving as treasurer of the committees making those payments.</p>
     <p>Hernandez's 2026 record through her September 30th Report shows a different shape: $88,524.51 raised, $25,000 of it (28%) her own money. No PAC or party money appears until after her June 23 primary win; since then, groups have given $17,006.25, led by two $5,000 checks from Women and Politics PAC and $3,000 from the Weber County Democratic Party. The rest, about $46,518, comes from individual donors, including several sitting Utah Democratic legislators giving personally.</p>
   </div>
 
@@ -708,7 +726,7 @@
       <tr>
         <td>Koford (2021&ndash;2026, every report)</td>
         <td><span class="grade-letter">$426,114</span></td>
-        <td><span class="grade-letter">$177,500</span> <span style="font-size:0.8em;color:var(--color-ink-soft);">(5 PACs/party committees)</span></td>
+        <td><span class="grade-letter">$177,500</span> <span style="font-size:0.8em;color:var(--color-ink-soft);">(5 PACs/party committees; $167,500 after the returned $10,000)</span></td>
         <td><span class="grade-letter">$24,215</span> <span style="font-size:0.8em;color:var(--color-ink-soft);">(6% of total)</span></td>
       </tr>
       <tr>
@@ -771,7 +789,7 @@
     <div class="table-scroll"><table class="rubric">
       <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
       <tr class="bg-row"><td>Koford</td><td><span class="gl g-c">C</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C−</span></td></tr>
-      <tr class="bg-why"><td colspan="7"><b>Why:</b> About 59% of her 2026 money came from groups and other candidates' campaigns, and every contributor and payee is named. But the 2026 numbers aren't the whole record. Over her career, five PAC and party committees gave $177,500 of her $426,114.03, including $42,500 from NUPAC and $50,000 net from UHREC, both with Kyle Palmer as treasurer, and her campaign has paid Palmer's firm, Irish Elk LLC, $38,712. The same pattern appears in HD-10. On Transparency: UHREC's $10,000 came in December 2025 and went back Jan. 15, 2026; her entry for the return was deleted and never re-entered, so her public reports show the gift but not its return. One unclear item on the filings is graded D. <b>Regraded Oct. 2, 2026</b> (earlier: C on every question); the earlier grade looked only at 2026 and didn't weigh the career totals and the deleted return entry already documented on this page. <b>The money, by category (2026 through Sept. 25, cash; in-kind gifts are not broken out on this page):</b> individuals $28,425 (34.3%); caucus and leadership PACs $0 (0.0%); other organizations $41,550 (50.2%); party help $0 (0.0%). <b>Own money:</b> $12,873.67 (15.5% of everything raised), the balance moved from her own House campaign account; her lifetime self-funding is $24,215.40, filed as loans. Own money is stated here, not graded. <b>Power C:</b> 40.6% of the counted money came from individual people ($18,500 of the organization money came from other candidates' campaigns: Burton, Cullimore, Chris Wilson, McKell, Vickers, Millner and Fillmore. No caucus PAC gave in 2026; UHREC's $10,000 came in December 2025 and was returned. Her career totals from Palmer-treasured committees and her campaign's payments to Irish Elk LLC are described above and are not part of the scale). Regraded Oct. 2, 2026 on the Hive's fixed scale; earlier: D. Scale: A = 90% or more of the counted money from individual people; B = 67–89%; C = 34–66%; D = 10–33%; F = under 10%. Counted money is individuals plus caucus and leadership PACs plus other organizations (businesses, trade and union PACs, other candidates' campaigns). Ordinary party help and the candidate's own money are shown but not counted.<br><b>What would have scored higher for the collective:</b> re-entering the UHREC return so the public record matches what happened, and a donor base that relies less on committees run by the same treasurer her campaign pays.</td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> About 59% of her 2026 money came from groups and other candidates' campaigns, and every contributor and payee is named. But the 2026 numbers aren't the whole record. Over her career, five PAC and party committees gave $177,500 of her $426,114.03 ($167,500 after UHREC's returned $10,000), including $42,500 from NUPAC and $50,000 net from UHREC, both with Kyle Palmer as treasurer, and her campaign has paid Palmer's firm, Irish Elk LLC, $38,712. The same pattern appears in HD-10. On Transparency: UHREC's $10,000 came in December 2025 and went back Jan. 15, 2026; her entry for the return was deleted and never re-entered, so her public reports show the gift but not its return. One unclear item on the filings is graded D. <b>Regraded Oct. 2, 2026</b> (earlier: C on every question); the earlier grade looked only at 2026 and didn't weigh the career totals and the deleted return entry already documented on this page. <b>The money, by category (2026 through Sept. 25, cash; in-kind gifts are not broken out on this page):</b> individuals $28,425 (34.3%); caucus and leadership PACs $0 (0.0%); other organizations $41,550 (50.2%); party help $0 (0.0%). <b>Own money:</b> $12,873.67 (15.5% of everything raised), the balance moved from her own House campaign account; her lifetime self-funding is $24,215.40, filed as loans. Own money is stated here, not graded. <b>Power C:</b> 40.6% of the counted money came from individual people ($18,500 of the organization money came from other candidates' campaigns: Burton, Cullimore, Chris Wilson, McKell, Vickers, Millner and Fillmore. No caucus PAC gave in 2026; UHREC's $10,000 came in December 2025 and was returned. Her career totals from Palmer-treasured committees and her campaign's payments to Irish Elk LLC are described above and are not part of the scale). Regraded Oct. 2, 2026 on the Hive's fixed scale; earlier: D. Scale: A = 90% or more of the counted money from individual people; B = 67–89%; C = 34–66%; D = 10–33%; F = under 10%. Counted money is individuals plus caucus and leadership PACs plus other organizations (businesses, trade and union PACs, other candidates' campaigns). Ordinary party help and the candidate's own money are shown but not counted.<br><b>What would have scored higher for the collective:</b> re-entering the UHREC return so the public record matches what happened, and a donor base that relies less on committees run by the same treasurer her campaign pays.</td></tr>
       <tr class="bg-row"><td>Hernandez</td><td><span class="gl g-b">B</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-na">N/A</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C+</span></td></tr>
       <tr class="bg-why"><td colspan="7"><b>Why:</b> About 66% of her money this period came from individuals, and every gift was added within 11 days of receipt. Her three unnamed gifts are $50 or less, which the law allows. The public report lists nearly every spending line under the category "Campaign Expense." That meets the law. <b>The money, by category (2026 through Sept. 25, cash plus in-kind):</b> individuals $46,518.26 (49.9%); caucus and leadership PACs $4,140 (4.4%); other organizations $12,456.25 (13.4%); party help $5,050 (5.4%). <b>Own money:</b> $25,000 (26.8% of everything raised) (a contribution dated Feb. 25, 2026, not a loan). Own money is stated here, not graded. <b>Power B:</b> 73.7% of the counted money came from individual people (in-kind help counts the same way on every page: the Utah Senate Minority PAC's $4,140 "Combined Campaign" in-kind gift on Sept. 16 is counted as caucus money, and the Utah Democratic Party's $500 in-kind as party help). Regraded Oct. 2, 2026 on the Hive's fixed scale; earlier: C. Scale: A = 90% or more of the counted money from individual people; B = 67–89%; C = 34–66%; D = 10–33%; F = under 10%. Counted money is individuals plus caucus and leadership PACs plus other organizations (businesses, trade and union PACs, other candidates' campaigns). Ordinary party help and the candidate's own money are shown but not counted.</td></tr>
     </table></div>
@@ -833,7 +851,7 @@
           </marker>
         </defs>
         <path d="M340 96 L340 160" fill="none" stroke="#5a4f47" stroke-width="1" marker-end="url(#famarrow)"/>
-        <text x="360" y="132" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">$177,500</text>
+        <text x="360" y="132" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">$177,500 gross</text>
 
         <path d="M340 216 L340 280" fill="none" stroke="#5a4f47" stroke-width="1" marker-end="url(#famarrow)"/>
         <text x="360" y="252" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">$38,712 direct</text>
@@ -849,7 +867,7 @@
         <g>
           <rect x="190" y="40" width="300" height="56" rx="8" fill="#fbf9f3" stroke="#ddd3c2" stroke-width="0.5"/>
           <text x="340" y="60" text-anchor="middle" dominant-baseline="central" font-family="Playfair Display, serif" font-weight="700" font-size="14" fill="#241c18">PACs &amp; party committees</text>
-          <text x="340" y="80" text-anchor="middle" dominant-baseline="central" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">$177,500 to Koford</text>
+          <text x="340" y="80" text-anchor="middle" dominant-baseline="central" font-family="IBM Plex Mono, monospace" font-size="12" fill="#5a4f47">$177,500 gross to Koford</text>
         </g>
 
         <g>
@@ -883,13 +901,23 @@
           <div class="fund-donut-legend-row"><span class="fund-donut-swatch" style="background: #9a9186;"></span><span class="fund-donut-legend-amt">15.5%</span> <span class="fund-donut-legend-lbl">Transfer from House account ($12,873.67)</span></div>
         </div>
       </div>
-      <p>Koford's 2026 cycle through Sept. 25 (Convention, Primary and September 30th reports) raised $82,848.67, including the $12,873.67 moved from her House account. Of the $69,975 in new money, 59% came from PACs, party committees, businesses and other legislators' campaigns ($18,500 from campaigns alone) and 41% from individuals. Zoomed out to her full career (2021&ndash;2026, every report), the picture skews further toward institutional money: $426,114.03 raised lifetime, with $177,500 of it from just five PACs and party committees.</p>
+      <p>Koford's 2026 cycle through Sept. 25 (Convention, Primary and September 30th reports) raised $82,848.67, including the $12,873.67 moved from her House account. Of the $69,975 in new money, 59% came from PACs, party committees, businesses and other legislators' campaigns ($18,500 from campaigns alone) and 41% from individuals. Zoomed out to her full career (2021&ndash;2026, every report), the picture skews further toward institutional money: $426,114.03 raised lifetime, with $177,500 of it from just five PACs and party committees ($167,500 after the returned $10,000).</p>
 
       <div class="record-card">
-        <div class="rc-head"><span class="rc-name">Five PACs and party committees</span><span class="rc-amount">$177,500 combined, lifetime</span></div>
+        <div class="rc-head"><span class="rc-name">Five PACs and party committees</span><span class="rc-amount">$177,500 combined, lifetime ($167,500 net)</span></div>
         <p>Utah House Republican Election Committee (UHREC) — $60,000 gross across six $10,000 payments (9/22/22, 10/7/22, 8/28/24, 9/20/24, 10/17/24, 12/18/25), the last of which was returned (see below), for a net $50,000. Northern Utah Legislative PAC (NUPAC) — $42,500 across five payments, 2022–2024. Weber County Republican Party — $28,000. House Speaker Leadership PAC — $27,000 (Mike Schultz's own leadership PAC). Wilson Leadership PAC — $20,000 (former House Speaker Brad Wilson's leadership PAC).</p>
       </div>
 
+      <div class="hv-chart" role="img" aria-label="Bar chart of five committees giving to Koford: UHREC 60,000 dollars gross, NUPAC 42,500, Weber County Republican Party 28,000, House Speaker Leadership PAC 27,000, Wilson Leadership PAC 20,000.">
+        <div class="hv-chart-title">Five PACs and party committees: lifetime money to Koford ($177,500 combined; $167,500 after the returned $10,000)</div>
+        <div class="hv-row"><div class="hv-top"><span>UHREC (gross; $10,000 of it returned, $50,000 net)</span><b>$60,000</b></div><div class="hv-track"><div class="hv-fill" style="width:100.0%"></div></div></div>
+        <div class="hv-row"><div class="hv-top"><span>NUPAC</span><b>$42,500</b></div><div class="hv-track"><div class="hv-fill" style="width:70.8%"></div></div></div>
+        <div class="hv-row"><div class="hv-top"><span>Weber County Republican Party</span><b>$28,000</b></div><div class="hv-track"><div class="hv-fill" style="width:46.7%"></div></div></div>
+        <div class="hv-row"><div class="hv-top"><span>House Speaker Leadership PAC</span><b>$27,000</b></div><div class="hv-track"><div class="hv-fill" style="width:45.0%"></div></div></div>
+        <div class="hv-row"><div class="hv-top"><span>Wilson Leadership PAC</span><b>$20,000</b></div><div class="hv-track"><div class="hv-fill" style="width:33.3%"></div></div></div>
+        <p class="hv-note">Amounts as listed in the card above. Bars are drawn to the same scale. Added Oct. 25, 2026.</p>
+      </div>
+      
       <div class="record-card">
         <div class="rc-head"><span class="rc-name">The $10,000 round trip</span><span class="rc-amount">Resolved from both sides</span></div>
         <p>UHREC's own filings show a $10,000 expenditure to "Jill Koford Campaign" on 12/23/2025 (Koford recorded receiving it 12/18/2025), then a $10,000 <i>contribution</i> received FROM "Jill Koford Campaign" on 1/15/2026 — the money went back. The amendment record on Koford's own side reads verbatim: an entry dated 1/11/2025, payee "Utah House Repbulcain Election Committee," purpose "Return of a Contribution," amount ($10,000.00) — deleted in full on 1/11/2026 and never re-entered. Her current public filings show no record of returning any $10,000. A plausible, non-accusatory explanation: UHREC is the House caucus committee, and by mid-January 2026 Koford had already filed for a Senate seat.</p>
@@ -949,7 +977,7 @@
 
       <div class="flag-open">
         <span class="fo-label">Two entities not on her own disclosure form</span>
-        <p>A public corporate-registry search turns up two active roles that don't appear on her 2026 COI form's business-entity list (Item 2A), which asks for every entity where she is or was, in the preceding year, an owner or officer: she's listed as an active Director of North Fork Meadows Owners Association, Inc. (an HOA, since 2013) and as an active Manager of Scoots Industries, LLC (since 2015). Neither appears among the 20 entities she disclosed. A separate role — Director of Ogden Regional Airport Association Inc., a formal incorporated nonprofit, not just a "member" as her official House bio still describes it — missed its January 31, 2026 renewal deadline and was administratively dissolved April 21, 2026. Her official bio has not been updated to reflect that the entity no longer exists. Presented as a documented gap between public records, not a claim about intent — an HOA board seat, a dormant LLC, and an unrenewed nonprofit filing are common, easy things to leave off a form or a bio without meaning anything by it.</p>
+        <p>A public corporate-registry search turns up two active roles that don't appear on her 2026 COI form's business-entity list (Item 2A), which asks for every entity where she is or was, in the preceding year, an owner or officer: she's listed as an active Director of North Fork Meadows Owners Association, Inc. (an HOA, since 2013) and as an active Manager of Scoots Industries, LLC (since 2015). Neither appears among the 21 entities she disclosed. A separate role — Director of Ogden Regional Airport Association Inc., a formal incorporated nonprofit, not just a "member" as her official House bio still describes it — missed its January 31, 2026 renewal deadline and was administratively dissolved April 21, 2026. Her official bio has not been updated to reflect that the entity no longer exists. Presented as a documented gap between public records, not a claim about intent — an HOA board seat, a dormant LLC, and an unrenewed nonprofit filing are common, easy things to leave off a form or a bio without meaning anything by it.</p>
       </div>
 
       <div class="record-card">
@@ -1103,7 +1131,7 @@
     <details class="record-details">
       <summary><span class="bill-grade grade-d">D</span>S.B. 284, House floor sponsor <span class="rc-amount">Signed — absorbed her own dead bill</span></summary>
       <div class="rd-body">
-        <p>Senate chief sponsor Lincoln Fillmore. Creates a "reasonable future water requirement" standard that limits when a municipality can deny a water exaction to a developer — but the municipality can't rely on that standard unless it has a completed written water plan, and the rule defining the standard isn't due until January 1, 2028. HB 439 (Water Planning Amendments) was merged into it on the House floor on March 6, 2026.</p>
+        <p>Senate primary sponsor Lincoln Fillmore. Creates a "reasonable future water requirement" standard that limits when a municipality can deny a water exaction to a developer — but the municipality can't rely on that standard unless it has a completed written water plan, and the rule defining the standard isn't due until January 1, 2028. HB 439 (Water Planning Amendments) was merged into it on the House floor on March 6, 2026.</p>
         <p>The bill is bigger than its water-planning framing suggests. Koford's own HB 477 (Land Use Regulation Revisions, floor sponsor Kirk Cullimore) died as its own bill number at Sine Die — but its substance (municipal-incorporation feasibility requests, planning commission powers, a detached-ADU mandate, and infrastructure-assurance accounts) was carried into this same bill across later substitutes. SB 284 was retitled twice as its scope grew: "Local Land Use Modifications" by its 5th substitute, then "Local Land and Water Modifications" by its 7th. A bill Koford floor-sponsors under a water-planning name ended up absorbing land-use policy from her own dead bill — a documented pattern this outlet has tracked across several other 2026 bills, not unique to this one.</p>
         <p>The full introduced-to-final compare document confirms the water-exaction "kill switch" word for word: new §10-20-912(6) reads "a municipality may not impose an exaction for a water interest if... the municipality or the municipality's culinary water authority does not have a written plan," and that written plan isn't required until "beginning on January 1, 2028." It also adds a new §10-20-626, "Structure height," that's narrower and more specific than the bill's general land-use provisions: it bars a municipality from limiting the number of above-ground stories on any "commercial lodging structure" that had already been approved on or before September 1, 2025, so long as the new limit would conflict with a height the municipality had already approved. This outlet's prior reporting connected an earlier draft of this same structure-height provision to a specific Francis, Utah hotel project — that link is from separate research, not re-verified against this particular document, and is noted here as a lead worth confirming rather than a settled fact.</p>
       </div>
@@ -1120,7 +1148,7 @@
     <details class="record-details">
       <summary><span class="bill-grade grade-f">F</span>HB 533, the bill she killed <span class="rc-amount">Held in committee</span></summary>
       <div class="rd-body">
-        <p>The same legislative session, Koford personally moved to hold — killing in committee — a different water bill: H.B. 533, Groundwater Amendments, chief-sponsored by Rep. Michael L. Kohler. The official House Natural Resources, Agriculture, and Environment Committee minutes for 2/23/2026 record: "Rep. Koford moved to hold HB0533S02." HB 533 would have required land use authorities to weigh groundwater preservation before approving a change from agricultural to another land use — the kind of review that would complicate large-scale development on former farmland. Presented here as a documented committee action, not a claim about her reasoning for it.</p>
+        <p>The same legislative session, Koford personally moved to hold — killing in committee — a different water bill: H.B. 533, Groundwater Amendments, primary-sponsored by Rep. Michael L. Kohler. The official House Natural Resources, Agriculture, and Environment Committee minutes for 2/23/2026 record: "Rep. Koford moved to hold HB0533S02." HB 533 would have required land use authorities to weigh groundwater preservation before approving a change from agricultural to another land use — the kind of review that would complicate large-scale development on former farmland. Presented here as a documented committee action, not a claim about her reasoning for it.</p>
       </div>
     </details>
 
@@ -1128,7 +1156,7 @@
       <span class="fo-label">Worth noting, not a claim about intent</span>
       <p>UHREC gave Koford $60,000 gross across the same years she introduced and passed this package (2022, 2024, and a 2025 payment later returned) — the same PAC network already documented in the "Follow the money" section above. This is a timeline fact, not a claim about why the money moved.</p>
     </div>
-    <p>Her official le.utah.gov sponsor record also shows several other 2026 bills she chief- or floor-sponsored. One is substantive: <b>HJR 7</b> proposed a constitutional amendment raising the cap on Utah's residential property-tax exemption from 45% to 60% of a home's fair market value — a real, specific attempt at the property-tax relief her platform and later newsletter both talk about, not just rhetoric. But unlike HB 422, it never got a recorded vote anywhere: its full status history shows every action, including the House Revenue and Taxation Committee's own "recommends returned to Rules," with no vote tally attached. It simply sat, then expired via the same 11:59 PM enacting-clause strike on March 6, 2026 that killed HB 422, HB 468, HB 286, HB 349, HB 167, and SB 318 — dying by the clock running out, not by anyone voting it down. The rest of her 2026 record:</p>
+    <p>Her official le.utah.gov sponsor record also shows several other 2026 bills she primary- or floor-sponsored. One is substantive: <b>HJR 7</b> proposed a constitutional amendment raising the cap on Utah's residential property-tax exemption from 45% to 60% of a home's fair market value — a real, specific attempt at the property-tax relief her platform and later newsletter both talk about, not just rhetoric. But unlike HB 422, it never got a recorded vote anywhere: its full status history shows every action, including the House Revenue and Taxation Committee's own "recommends returned to Rules," with no vote tally attached. It simply sat, then expired via the same 11:59 PM enacting-clause strike on March 6, 2026 that killed HB 422, HB 468, HB 286, HB 349, HB 167, and SB 318 — dying by the clock running out, not by anyone voting it down. The rest of her 2026 record:</p>
     <div class="status-grid">
       <div class="status-cell"><span class="sc-bill">HB 161</span><span class="sc-status fail">Did not pass — path unconfirmed</span></div>
       <div class="status-cell"><span class="sc-bill">HB 477</span><span class="sc-status fail">Died — absorbed into SB 284</span></div>
@@ -1307,6 +1335,29 @@
       <li>Koford's full 2026 sponsor record (HB 422, HJR 7, HB 477, HB 441, HB 161, HB 150, HB 177, SB 252, SB 94, HB 124's actual status): her official le.utah.gov "Browse Bills by Legislator" page; HB 422's provisions and vote margins cross-checked against LegiScan and the bill's own substitute-comparison PDFs.</li>
       <li>Clyde Companies / Nordic Village PID cross-reference: this outlet's prior Nordic Village PID reporting.</li>
     </ul>
+  </details>
+
+  <details class="sources">
+    <summary>Sources</summary>
+    <ul>
+      <li>Campaign finance reports and data exports, <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a>: Jill Koford, every report from 2021 Year End through her 2026 September 30th Report (submitted 9/26/2026); CJ Hernandez, 2026 Convention and Primary reports, Contributions Received report for 6/17&ndash;9/9/2026, and September 30th Report (submitted 9/30/2026).</li>
+      <li>PAC filings, <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a>: Northern Utah Legislative PAC (NUPAC) Statement of Organization (Aug. 20, 2018) and data exports; Utah House Republican Election Committee (UHREC); House Speaker Leadership PAC; Wilson Leadership PAC; Johnson &amp; Johnson PAC 2026 Primary Report; Citizens to Elect Jeff Burton.</li>
+      <li>Conflict-of-interest disclosure forms, <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a>: Koford (dated Jan. 10, 2026) and Hernandez (current form).</li>
+      <li>Utah business registry, <a href="https://businessregistration.utah.gov/" target="_blank" rel="noopener">businessregistration.utah.gov</a>: Koford entities, Protean Edge, Inc., Rechieve LLC, North Fork Meadows Owners Association, Scoots Industries, LLC, Ogden Regional Airport Association, and Five T Corporation.</li>
+      <li>Bills, 2026 General Session, le.utah.gov: <a href="https://le.utah.gov/~2026/bills/static/HB0076.html" target="_blank" rel="noopener">H.B. 76 Data Center Water Policy Amendments</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0348.html" target="_blank" rel="noopener">H.B. 348 Dedicated Water Amendments</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0410.html" target="_blank" rel="noopener">H.B. 410 Great Salt Lake Preservation Program</a>, <a href="https://le.utah.gov/~2026/bills/static/SB0284.html" target="_blank" rel="noopener">S.B. 284</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0422.html" target="_blank" rel="noopener">H.B. 422 Public Infrastructure Districts Amendments</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0533.html" target="_blank" rel="noopener">H.B. 533 Groundwater Amendments</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0477.html" target="_blank" rel="noopener">H.B. 477 Land Use Regulation Revisions</a>, <a href="https://le.utah.gov/~2026/bills/static/HJR007.html" target="_blank" rel="noopener">H.J.R. 7</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0124.html" target="_blank" rel="noopener">H.B. 124</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0177.html" target="_blank" rel="noopener">H.B. 177 ROTC Resident Student Status</a>, <a href="https://le.utah.gov/~2026/bills/static/SB0022.html" target="_blank" rel="noopener">S.B. 22 Minor Driving Hours Amendments</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0125.html" target="_blank" rel="noopener">H.B. 125</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0236.html" target="_blank" rel="noopener">H.B. 236 Truth in Taxation Amendments</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0273.html" target="_blank" rel="noopener">H.B. 273 Classroom Technology Amendments</a>, <a href="https://le.utah.gov/~2026/bills/static/HCR009.html" target="_blank" rel="noopener">H.C.R. 9</a>. Also named from her sponsor record: H.B. 439, H.B. 161, H.B. 441, H.B. 150, S.B. 252 and S.B. 94.</li>
+      <li>House Natural Resources, Agriculture, and Environment Committee minutes, Feb. 23, 2026 (H.B. 533 motion to hold).</li>
+      <li><a href="https://le.utah.gov/" target="_blank" rel="noopener">le.utah.gov</a>: Koford&rsquo;s official House bio, sponsor record and committee assignments; Senate and House committee listings.</li>
+      <li>Utah Code 20A-11-301 (contributions of $50 or less from an unknown source).</li>
+      <li><a href="https://datacenterfrontier.com/google-buys-land-in-growing-cloud-cluster-in-utah/" target="_blank" rel="noopener">Data Center Frontier, &ldquo;Google Buys Land in Growing Cloud Cluster in Utah,&rdquo; Oct. 5, 2021</a>; DGTL Infra trade-press reporting.</li>
+      <li>Governor&rsquo;s Office of Economic Opportunity press release, August 2021, and Kyle Palmer&rsquo;s LinkedIn profile.</li>
+      <li>Ballotpedia pages for Utah State Senate District 5 and Jill Koford; Weber Democrats&rsquo; post on the June 23, 2026 primary.</li>
+      <li>Candidates&rsquo; own sites and mailings: cjforsenate.com (Hernandez); Koford&rsquo;s campaign issues, endorsement and &ldquo;Results&rdquo; pages; Koford&rsquo;s September 2026 constituent newsletter.</li>
+      <li>Clyde Companies&rsquo; own history page and a 2026 Staker Parson job posting (Oct. 19, 2026 correction).</li>
+      <li>Casey Snider biography: Wikipedia, Ballotpedia, and house.utleg.gov profile and House Majority Leader announcement.</li>
+      <li>Water-policy coverage named on this page: house.utleg.gov 2026 session summaries; ABC4, Deseret News, Fox 13 and Utah Public Radio; S.J. Quinney College of Law Great Salt Lake Project 2026 policy guide; LegiScan.</li>
+      <li>Prior Weber County Hive reporting: NUPAC, Nordic Village PID, and the &ldquo;Stratos legislative ecosystem&rdquo; water-bill research.</li>
+    </ul>
+    <p class="src-note">Records are listed by name; a link is given where a public page for the record could be confirmed. Items without a link are named as the page describes them.</p>
   </details>
 
 </div>
