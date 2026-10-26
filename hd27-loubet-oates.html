@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HD-27: Loubet vs. Oates | The Weber County Hive</title>
-<p class="pmnote" style="font-size:.92rem;margin:8px 0 12px;">Overall is the average of the graded questions (A = 4, B = 3, C = 2, D = 1, F = 0; N/A and dashes are left out). A plus or minus shows where the average falls between letters, and an average exactly halfway counts toward the higher letter with a minus. Added Oct. 2, 2026.</p>
   <meta name="description" content="House District 27 (Kearns, Magna, West Valley City, West Jordan and Copperton), 2026. Rep. Anthony Loubet (R) vs. Liz Oates (D). Campaign money since 2020, disclosure forms, how his bills changed from introduced to final, one rubric, and questions voters can ask.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,10 +13,10 @@
     --color-paper-deep:#ece5d4;
     --color-ink:#241a16;
     --color-ink-soft:#5c534c;
-    --color-link:#c0572e;
+    --color-link:#1d6b57;
     --color-stat:#d9a441;
-    --color-burgundy-light:#5c1a2b;
-    --color-burgundy-deep:#3d0f1c;
+    --color-burgundy-light:#1f4e6b;
+    --color-burgundy-deep:#12304a;
     --color-line:#d8cfbc;
     --color-card:#fbf8f1;
     --color-good:#4d7c5f;
@@ -197,7 +196,7 @@
 .stack-table{width:100%;}
 .stack-table td{vertical-align:top;}
 @media (max-width:620px){.stack-table tr,.stack-table td{display:block;width:auto !important;} .stack-table th{display:none;} .stack-table td{border-bottom:none;padding:4px 8px;} .stack-table tr{border-bottom:1px solid var(--color-rule,#ddd);padding:8px 0;} .stack-table td[data-l]::before{content:attr(data-l);display:block;font:700 .68rem/1.4 monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--color-ink-soft);margin-bottom:2px;}}
-.chg{border-left:4px solid #5c1a2b;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.35);}
+.chg{border-left:4px solid #1f4e6b;padding:10px 14px;margin:12px 0;background:rgba(255,255,255,.35);}
 .chg h3{margin:0 0 6px;}
 .chg .ba{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .chg .ba div{min-width:0;}
@@ -205,10 +204,10 @@
 @media (max-width:620px){.chg .ba{grid-template-columns:1fr;}}
 
 .pac-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin:14px 0;}
-.pac-card{border:1px solid var(--color-rule,#d8cfbc);border-top:4px solid #5c1a2b;background:rgba(255,255,255,.45);padding:12px 14px;min-width:0;}
+.pac-card{border:1px solid var(--color-rule,#d8cfbc);border-top:4px solid #1f4e6b;background:rgba(255,255,255,.45);padding:12px 14px;min-width:0;}
 .pac-card.d{border-top-color:#123449;}
 .pac-card h3{margin:0 0 2px;font-size:1.05rem;}
-.pac-card .amt{font:700 .78rem/1.4 monospace;letter-spacing:.04em;color:#5c1a2b;margin-bottom:8px;}
+.pac-card .amt{font:700 .78rem/1.4 monospace;letter-spacing:.04em;color:#1f4e6b;margin-bottom:8px;}
 .pac-card.d .amt{color:#123449;}
 .pac-card p{margin:6px 0;font-size:.95rem;}
 .pac-card b.k{font:700 .68rem/1.4 monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--color-ink-soft);display:block;}
@@ -217,12 +216,23 @@
 .gap h3{margin:0 0 6px;}
 .gap ul{margin:4px 0 6px;padding-left:18px;}
 .gap .add{border-left:3px solid #2f6b3a;padding-left:10px;margin-top:8px;}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 </head>
 
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 <header class="band"><div class="wrap">
   <a class="brandmark" href="index.html">Weber County Hive — Candidates 2026</a>
   <nav class="topnav"><a href="index.html">Docket</a><a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">Substack</a></nav>
@@ -2389,6 +2399,7 @@ flowchart LR
   <div class="eyebrow">RUBRIC</div>
   <h2>Grades on the Five Questions</h2>
   <p class="plain"><b>IN PLAIN WORDS</b>Every item is graded on the same five questions used across this project: Power, Transparency, Financial accountability, Environmental impact and Community impact. A or B goes beyond what the law requires; C meets it; D means a key part is vague or bundled, or a public check is weakened; F means required information is missing, or a check is removed with nothing in its place.</p>
+    <p class="pmnote" style="font-size:.92rem;margin:8px 0 12px;">Overall is the average of the graded questions (A = 4, B = 3, C = 2, D = 1, F = 0; N/A and dashes are left out). A plus or minus shows where the average falls between letters, and an average exactly halfway counts toward the higher letter with a minus. Added Oct. 2, 2026.</p>
   <div class="topic-head">1. Campaign money</div>
   <div class="table-scroll"><table class="rubric-table bill-grades">
     <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
@@ -2522,11 +2533,13 @@ if (window.mermaid) { mermaid.initialize({ startOnLoad: true, theme: 'neutral', 
 document.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',e=>{if(e.target.closest('a'))return;b.classList.toggle('flipped');b.setAttribute('aria-pressed',b.classList.contains('flipped'));}));
 if (window.Chart) {
   Chart.defaults.font.family = "'Source Serif 4', Georgia, serif"; Chart.defaults.color = '#5c534c';
-  const mk=(id,labels,data)=>{ const el=document.getElementById(id); if(!el) return; new Chart(el,{type:'bar',data:{labels:labels,datasets:[{data:data,backgroundColor:'#5c1a2b',borderRadius:3}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'$'+c.parsed.x.toLocaleString(undefined,{minimumFractionDigits:2})}}},scales:{x:{ticks:{callback:v=>'$'+Number(v).toLocaleString()}}}}}); };
+  const mk=(id,labels,data)=>{ const el=document.getElementById(id); if(!el) return; new Chart(el,{type:'bar',data:{labels:labels,datasets:[{data:data,backgroundColor:'#1f4e6b',borderRadius:3}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'$'+c.parsed.x.toLocaleString(undefined,{minimumFractionDigits:2})}}},scales:{x:{ticks:{callback:v=>'$'+Number(v).toLocaleString()}}}}}); };
   mk('spendChartL',["Election Hive", "In the Field LLC", "Tactical Campaigns", "Sun Print Solutions", "Arena", "Delta Airlines", "The Political Group", "Broadway Media LLC", "Christopherson Travel Agency", "Frank Carrasco TPG"],[52031.4, 37051.0, 24513.71, 20031.23, 10300.0, 6855.0, 6658.27, 6500.0, 3886.9, 3518.65]);
   mk('spendChartO',["Elevate Strategies", "Tissot Solutions", "Utah Democratic Party", "ActBlue", "SquareSpace", "Google WorkSpace"],[10842.45, 7606.69, 1932.5, 591.16, 134.3, 79.19]);
 }
 </script>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

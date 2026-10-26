@@ -12,12 +12,12 @@
     --color-bg:#f4f0e6;
     --color-ink:#241a14;
     --color-ink-soft:#6b5f52;
-    --color-link:#c0572e;
+    --color-link:#1d6b57;
     --color-stat:#d9a441;
     --color-card:#fffdf8;
     --color-border:#e2d9c8;
-    --band-light:#5c1a2b;
-    --band-deep:#3d0f1c;
+    --band-light:#1f4e6b;
+    --band-deep:#12304a;
     --r-blue:#2c5f8a;
     --d-blue:#1b3a54;
   }
@@ -252,9 +252,40 @@
     color:var(--color-ink-soft);
     border-top:1px solid var(--color-border);
   }
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .hb-dates{max-width:1100px;margin:0 auto;padding:8px 20px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5647;letter-spacing:.03em;}
+
+  /* ---------- SOURCES (added) ---------- */
+  details.sources { background: var(--color-card); border: 1px solid var(--color-border); border-radius: 3px; padding: 18px 24px; margin: 32px 0; }
+  details.sources summary { font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--band-light); cursor: pointer; font-weight: 600; }
+  details.sources[open] summary { margin-bottom: 14px; }
+  details.sources ul { margin: 0; padding-left: 22px; font-size: 1rem; line-height: 1.55; color: var(--color-ink-soft); }
+  details.sources li { margin-bottom: 10px; }
+  details.sources a { word-break: break-word; }
+  details.sources .src-note { font-size: 0.92rem; color: var(--color-ink-soft); margin: 12px 0 0; }
+  /* ---------- SIMPLE BAR CHART (added) ---------- */
+  .hv-chart { background: var(--color-card); border: 1px solid var(--color-border); border-radius: 3px; padding: 18px 22px; margin: 24px 0; }
+  .hv-chart-title { font-weight: 700; font-size: 1.12rem; margin: 0 0 14px; }
+  .hv-row { margin-bottom: 14px; }
+  .hv-top { display: flex; justify-content: space-between; gap: 12px; font-size: 1.05rem; margin-bottom: 4px; flex-wrap: wrap; }
+  .hv-top b { font-family: 'IBM Plex Mono', monospace; font-size: 1.08rem; }
+  .hv-track { height: 22px; background: rgba(0,0,0,0.06); border-radius: 3px; overflow: hidden; }
+  .hv-fill { height: 100%; background: var(--band-light); border-radius: 3px; }
+  .hv-note { font-size: 0.95rem; color: var(--color-ink-soft); margin: 6px 0 0; }
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="hb-dates">Posted Aug. 28, 2026 &middot; Updated Oct. 25, 2026</div>
 
 <header class="band">
   <div class="band-inner">
@@ -287,6 +318,12 @@
   </div>
 
   <h2>Who's Funding Each Campaign</h2>
+  <div class="hv-chart" role="img" aria-label="Bar chart: Okerlund raised 111.6 thousand dollars from 2024 to 2026; Williams raised 12.9 thousand dollars in 2026.">
+    <div class="hv-chart-title">Total raised, side by side</div>
+    <div class="hv-row"><div class="hv-top"><span>Okerlund (R), raised 2024&ndash;26</span><b>$111.6K</b></div><div class="hv-track"><div class="hv-fill" style="width:100.0%"></div></div></div>
+    <div class="hv-row"><div class="hv-top"><span>Williams (D), raised 2026</span><b>$12.9K</b></div><div class="hv-track"><div class="hv-fill" style="width:11.6%"></div></div></div>
+    <p class="hv-note">Figures from the totals at the top of this page. The periods differ: Okerlund&rsquo;s covers 2024&ndash;2026, Williams&rsquo; covers 2026. Bars are drawn to the same scale. Added Oct. 25, 2026.</p>
+  </div>
 
   <div class="fund-toggle">
     <button class="tbtn active" data-t="okerlund">Clint Okerlund (R)</button>
@@ -387,7 +424,7 @@
   </div>
 
   <h2>Did His Great Salt Lake Bills Actually Help the Lake?</h2>
-  <p>Restoring the Great Salt Lake is one of nine stated priorities on Okerlund's own campaign platform, and his legislative record shows five bills touching the issue this session — one as chief sponsor, four as co-sponsor. But sponsorship isn't impact. Here's what each bill actually does.</p>
+  <p>Restoring the Great Salt Lake is one of nine stated priorities on Okerlund's own campaign platform, and his legislative record shows five bills touching the issue this session — one as primary sponsor, four as co-sponsor. But sponsorship isn't impact. Here's what each bill actually does.</p>
 
   <div class="record-card">
     <strong>HB 328 (his own bill) — delivered nothing.</strong> Would have restricted wasteful sprinkler irrigation of purely decorative turf in the Great Salt Lake watershed. The introduced version required cities to withhold permit approval until developers complied; after sod-farming industry testimony, the House-passed version stripped that down to a notice-only requirement. The bill then died entirely in the Senate.
@@ -396,7 +433,7 @@
     <strong>HB 125 &amp; HB 76 (co-sponsored) — no direct water benefit.</strong> HB 125 gives DNR legal authority to fund water-rights litigation, but the appropriation meant to pay for it was added then removed before passage. HB 76 only requires data centers to report their water use — a transparency measure, not a cap.
   </div>
   <div class="record-card">
-    <strong>HB 247 &amp; HB 410 (co-sponsored, not chief-sponsored) — the two bills with real conservation mechanisms weren't his.</strong> HB 247 restructures mineral-extraction severance taxes to incentivize voluntary water-conservation deals; HB 410 creates a $2.75M fund for farmers to lease water to the state for the lake. Both are chief-sponsored by other representatives (Ward and Koford), with Okerlund one of roughly two dozen co-sponsors on each.
+    <strong>HB 247 &amp; HB 410 (co-sponsored, not primary-sponsored) — the two bills with real conservation mechanisms weren't his.</strong> HB 247 restructures mineral-extraction severance taxes to incentivize voluntary water-conservation deals; HB 410 creates a $2.75M fund for farmers to lease water to the state for the lake. Both are primary-sponsored by other representatives (Ward and Koford), with Okerlund one of roughly two dozen co-sponsors on each.
   </div>
   <p style="font-style:italic;">The one Great Salt Lake bill Okerlund actually led on didn't survive the session. The two bills in this cluster that could plausibly put water back in the lake belonged to someone else.</p>
 
@@ -404,6 +441,17 @@
     <h3>What the filings show, plainly</h3>
     <p>Okerlund is running a conventional incumbent's campaign: modest 2026 fundraising so far, backed by a well-established institutional PAC pipeline built over his first term. Williams is running a first-time challenger's campaign: heavy on small out-of-state donations and one large targeted PAC check, spending most of what she's raised on a single consulting vendor. Neither campaign's 2026 fundraising, so far, looks like a race either side is treating as a top priority yet — worth watching whether that changes as November approaches. And on his central campaign promise — restoring the Great Salt Lake — the bill count looks better than the substance: his own bill died, and the two bills in his legislative package with real conservation mechanisms belonged to other lawmakers.</p>
   </div>
+
+  <details class="sources">
+    <summary>Sources</summary>
+    <ul>
+      <li>Itemized contribution and expenditure exports (DEX), <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a>: Clint Okerlund, Convention through Primary reports, 2024&ndash;2026; Iva Williams, 2026.</li>
+      <li>Clint Okerlund&rsquo;s Conflict of Interest disclosure form, <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a> (FIOR LLC, Altair Bioscience, Ag Genius LLC).</li>
+      <li>Bills, 2026 General Session, le.utah.gov: <a href="https://le.utah.gov/~2026/bills/static/HB0328.html" target="_blank" rel="noopener">H.B. 328</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0125.html" target="_blank" rel="noopener">H.B. 125</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0076.html" target="_blank" rel="noopener">H.B. 76</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0247.html" target="_blank" rel="noopener">H.B. 247 Great Salt Lake Related Amendments</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0410.html" target="_blank" rel="noopener">H.B. 410</a>.</li>
+      <li>Each candidate&rsquo;s own campaign platform (Okerlund&rsquo;s nine stated priorities; Williams&rsquo; platform).</li>
+    </ul>
+    <p class="src-note">Records are listed by name; a link is given where a public page for the record could be confirmed. Items without a link are named as the page describes them.</p>
+  </details>
 
 </main>
 
@@ -421,6 +469,8 @@
     });
   });
 </script>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

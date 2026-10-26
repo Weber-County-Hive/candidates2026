@@ -14,10 +14,10 @@
 --ink:#2a261e;
 --ink-soft:#5c5647;
 --ink-faint:#8b8470;
---rust:#c0572e;
+--rust:#1d6b57;
 --amber:#d9a441;
---burgundy:#5c1a2b;
---burgundy-deep:#3d0f1c;
+--burgundy:#1f4e6b;
+--burgundy-deep:#12304a;
 --line:#ddd6c4;
 --line-strong:#c7bda3;
 --red:#a5301e;
@@ -108,9 +108,22 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap;}
 .flip-back .fb-body{font-size:12.5px;line-height:1.55;}
 .flip-back .fb-body b{color:#fff;}
 .flip-open-note{background:#fbf3e6;border:1px dashed var(--amber);border-radius:4px;padding:12px 16px;font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .hb-dates{max-width:1100px;margin:0 auto;padding:8px 20px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5647;letter-spacing:.03em;}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="hb-dates">Posted Sept. 21, 2026 · Updated Sept. 22, 2026</div>
 <div class="header-band">
 <div class="header-inner">
 <svg class="hex" viewBox="0 0 100 100"><polygon points="50,3 93,25 93,75 50,97 7,75 7,25" fill="none" stroke="#d9a441" stroke-width="4"/><text x="50" y="60" font-family="Playfair Display" font-size="34" font-weight="900" fill="#f4e9dd" text-anchor="middle">H</text></svg>
@@ -546,6 +559,8 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap;}
 </footer>
 
 </div>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

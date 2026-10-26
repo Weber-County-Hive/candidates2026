@@ -354,6 +354,24 @@
   .topic-head{font-family:var(--font-headline);font-size:1.15rem;font-weight:700;color:var(--color-header-end);margin:26px 0 6px;}
   .note{font-size:0.92rem;color:var(--color-ink-soft);}
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  /* ---------- SOURCES (added) ---------- */
+  details.sources { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 3px; padding: 18px 24px; margin: 32px 0; }
+  details.sources summary { font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-header-start); cursor: pointer; font-weight: 600; }
+  details.sources[open] summary { margin-bottom: 14px; }
+  details.sources ul { margin: 0; padding-left: 22px; font-size: 1rem; line-height: 1.55; color: var(--color-ink-soft); }
+  details.sources li { margin-bottom: 10px; }
+  details.sources a { word-break: break-word; }
+  details.sources .src-note { font-size: 0.92rem; color: var(--color-ink-soft); margin: 12px 0 0; }
+  /* ---------- SIMPLE BAR CHART (added) ---------- */
+  .hv-chart { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 3px; padding: 18px 22px; margin: 24px 0; }
+  .hv-chart-title { font-weight: 700; font-size: 1.12rem; margin: 0 0 14px; }
+  .hv-row { margin-bottom: 14px; }
+  .hv-top { display: flex; justify-content: space-between; gap: 12px; font-size: 1.05rem; margin-bottom: 4px; flex-wrap: wrap; }
+  .hv-top b { font-family: 'IBM Plex Mono', monospace; font-size: 1.08rem; }
+  .hv-track { height: 22px; background: rgba(0,0,0,0.06); border-radius: 3px; overflow: hidden; }
+  .hv-fill { height: 100%; background: var(--color-header-start); border-radius: 3px; }
+  .hv-note { font-size: 0.95rem; color: var(--color-ink-soft); margin: 6px 0 0; }
 </style>
 </head>
 <body>
@@ -376,7 +394,7 @@
     <div class="kicker">House District 12 · General Election, Nov. 3, 2026</div>
     <h1>Anna Graff <span class="vs">vs.</span> Mike Schultz</h1>
     <p class="dek">A grassroots challenger running on individual, small-dollar support against the sitting Speaker of the Utah House, whose personal account and three-PAC network hold more than $700,000 combined. Roy and Hooper, Weber County.</p>
-    <p style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; opacity: .8; margin-top: 12px;">Updated Oct. 2, 2026, with legislative-record grades and Schultz's disclosure-form grade added. Earlier update Sept. 30, 2026, with Schultz's September 30th Report and Graff's contributions through Sept. 16.</p>
+    <p style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; opacity: .8; margin-top: 12px;">Updated Oct. 25, 2026: corrected the session year for six of Schultz&rsquo;s bills (HB 447, HB 563, HB 464, HB 87, HCR 8 and HB 393 are 2025 bills; HB 274 is 2026). Updated Oct. 2, 2026, with legislative-record grades and Schultz's disclosure-form grade added. Earlier update Sept. 30, 2026, with Schultz's September 30th Report and Graff's contributions through Sept. 16.</p>
     <div class="case-meta">
       <span>Incumbent: <b>Mike Schultz (R)</b>, Speaker of the House, since 2015</span>
       <span>Challenger: <b>Anna Graff (D)</b></span>
@@ -553,7 +571,7 @@
     <div class="table-scroll"><table class="rubric">
       <tr><th>Candidate</th><th>Power</th><th>Trans&shy;parency</th><th>Money</th><th>Environ&shy;ment</th><th>Commun&shy;ity</th><th>Overall</th></tr>
       <tr class="bg-row"><td>Schultz</td><td><span class="gl g-d">D</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-c">C</span></td><td><span class="gl g-d">D</span></td><td><span class="gl g-d">D</span></td></tr>
-      <tr class="bg-why"><td colspan="7"><b>Why:</b> He voted for H.B. 392 (56&ndash;15&ndash;4). His 2023 HB 491 created a Great Salt Lake Commissioner with no authority over water rights, added a new protected-records category to the state records law, and had its funding cut from $40 million to $10 million at the Senate stage with no reason in the minutes; it also created real lake governance and a fund, with the dollar figures disclosed in each version. His 2026 HB 274 adds Sentencing Commission seats. HB 563 is still pending.<br><b>What would have scored higher for the collective:</b> giving the Great Salt Lake Commissioner standing on water-rights decisions, with no new records exemption, and recording the reason for the funding cut.</td></tr>
+      <tr class="bg-why"><td colspan="7"><b>Why:</b> He voted for H.B. 392 (56&ndash;15&ndash;4). His 2023 HB 491 created a Great Salt Lake Commissioner with no authority over water rights, added a new protected-records category to the state records law, and had its funding cut from $40 million to $10 million at the Senate stage with no reason in the minutes; it also created real lake governance and a fund, with the dollar figures disclosed in each version. His 2026 HB 274 adds Sentencing Commission seats. His 2025 HB 563 did not pass.<br><b>What would have scored higher for the collective:</b> giving the Great Salt Lake Commissioner standing on water-rights decisions, with no new records exemption, and recording the reason for the funding cut.</td></tr>
     </table></div>
     <p style="font-size:14px;color:#5c5647;">Graded only from the bills and votes this page and the Hive's research documents. &ldquo;&mdash;&rdquo; means not enough of the record is documented yet to grade that question fairly. The challenger has not held this office, so there is no record to grade. Added Oct. 2, 2026.</p>
 
@@ -591,6 +609,16 @@
       <li>Also funded once each: Trevor Lee, Jake Sawyer, and Nicholeen Peck ($2,500 each), Conservative Millennials PAC ($4,000, Teuscher's own PAC), Lili Bitner ($700)</li>
     </ul>
 
+    <div class="hv-chart" role="img" aria-label="Bar chart of money from Schultz-directed PACs: Jordan Teuscher 25,000 dollars, Logan Monson 21,000, Casey Saxton 15,000, Ken Ivory 6,000, Lisa Shepherd 3,500.">
+      <div class="hv-chart-title">Funding the network: the five largest recipients listed above</div>
+      <div class="hv-row"><div class="hv-top"><span>Jordan Teuscher</span><b>$25,000</b></div><div class="hv-track"><div class="hv-fill" style="width:100.0%"></div></div></div>
+      <div class="hv-row"><div class="hv-top"><span>Logan Monson</span><b>$21,000</b></div><div class="hv-track"><div class="hv-fill" style="width:84.0%"></div></div></div>
+      <div class="hv-row"><div class="hv-top"><span>Casey Saxton</span><b>$15,000</b></div><div class="hv-track"><div class="hv-fill" style="width:60.0%"></div></div></div>
+      <div class="hv-row"><div class="hv-top"><span>Ken Ivory</span><b>$6,000</b></div><div class="hv-track"><div class="hv-fill" style="width:24.0%"></div></div></div>
+      <div class="hv-row"><div class="hv-top"><span>Lisa Shepherd</span><b>$3,500</b></div><div class="hv-track"><div class="hv-fill" style="width:14.0%"></div></div></div>
+      <p class="hv-note">Totals across both PACs and both reporting periods, as listed above. Bars are drawn to the same scale. Added Oct. 25, 2026.</p>
+    </div>
+
     <div class="flag-open">
       <span class="fo-label">Open item, not yet resolved</span>
       <p>Schultz's <b>personal</b> campaign account made two payments coded as "Donations" and "Advertising" directly to municipal governments — $5,000 to Hooper City (3/19/2026) and $2,500 to West Haven City (3/19/2026), same date. Campaign finance filings don't explain what these payments actually purchased; city council minutes, agendas, or budget records — separate public records from the campaign disclosure — would be the next place to check before characterizing what a sitting House Speaker's campaign account paid two city governments for.</p>
@@ -604,7 +632,7 @@
     <p>Separately from this campaign-finance ecosystem, Schultz personally donated $120,000 to Preserving Utah Values PAC on Nov. 30, 2025 — reported as the PAC's sole financial backer. That PAC ran anti-transgender attack ads against more than a dozen Democratic candidates in the 2024 cycle, including messaging that helped target Rosemary Lesser, who lost her HD10 seat by 309 votes.</p>
 
     <h3 class="sub-title">Legislative record</h3>
-    <p>Schultz chief-sponsored three numbered bills in the 2026 session. Sentencing Amendments (HB 274, floor sponsor Sen. Michael K. McKell) and the Statewide Catalyst Campus Model (HB 447, floor sponsor Sen. Ann Millner) both passed and were signed into law. Ballot Title Amendments (HB 563, floor sponsor Senate President J. Stuart Adams) remains filed in the House and has not passed. A fourth bill, Occupational Licensing Revisions, was abandoned before it received a number. He also cosponsored several bills that passed, including the State Sovereignty Fund (HB 464) and Drug Trafficking Amendments (HB 087), and cosponsored two that did not pass this session: a resolution on transitioning people from government benefits to self-reliance (HCR 8) and a bill banning foreign funding in ballot propositions and elections (HB 393).</p>
+    <p>In the 2026 session, Schultz was the primary sponsor of Sentencing Amendments (HB 274, floor sponsor Sen. Michael K. McKell), which passed and was signed into law. In the 2025 session, he was the primary sponsor of the Statewide Catalyst Campus Model (HB 447, floor sponsor Sen. Ann Millner), which passed and was signed into law, and of Ballot Title Amendments (HB 563, floor sponsor Senate President J. Stuart Adams), which stayed in the House and did not pass. A fourth bill, Occupational Licensing Revisions, was abandoned before it received a number. In 2025 he also cosponsored several bills that passed, including the State Sovereignty Fund (HB 464) and Drug Trafficking Amendments (HB 87), and cosponsored two that did not pass that session: a resolution on transitioning people from government benefits to self-reliance (HCR 8) and a bill banning foreign funding in ballot propositions and elections (HB 393).</p>
     <p>HB 274's floor sponsor, Sen. McKell, also carried HB 392 and HB 366 as Senate sponsor — the bills that created Utah's new three-judge constitutional panels as part of the broader 2026 judicial-reform package (SB 134, HB 392, HB 366, SB 233, HB 540). When the Utah State Bar warned HB 366 could "threaten judicial stability," Schultz told KUER he was "confident in our constitutional authority to do what we've done."</p>
     <p>Schultz sits on the Business and Labor Interim Committee, Executive Appropriations Committee, House Business, Labor, and Commerce Committee, House Natural Resources, Agriculture, and Environment Committee, and the Natural Resources, Agriculture, and Environment Interim Committee, and chairs the Legislative Management Committee.</p>
 
@@ -638,6 +666,26 @@
       <li>Candidates' own campaign websites: electannagraff.com (Graff) and voteforschultz.com (Schultz), for platform and biographical claims attributed to each candidate directly.</li>
       <li>Legislative sponsor and committee records: le.utah.gov official sponsor tracking and committee listings.</li>
     </ul>
+  </details>
+
+  <details class="sources">
+    <summary>Sources</summary>
+    <ul>
+      <li>Campaign finance reports, <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a>: Mike Schultz&rsquo;s personal campaign account, 2026 filings including his September 30th Report; Anna Graff&rsquo;s 2026 contributions filed through Sept. 16, 2026; House Speaker Leadership PAC, Utah House Republican Election Committee and Northern Wasatch HBA PAC, 2026 Convention, Primary and August filings.</li>
+      <li>Cross-race filings, <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a>: Rep. Jason Thompson (HD 3) report showing the March 26, 2026 PAC Management Services gift; Bianca Mittendorf (HD 7) and Kacee Weaver (USBE) reports showing the July 23, 2026 Jeremy A Thompson gifts.</li>
+      <li>Conflict-of-interest disclosure forms, <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a>: Schultz&rsquo;s 2026 form (with his 2019 and 2023 forms for comparison) and Graff&rsquo;s form (pasted Oct. 2, 2026).</li>
+      <li>Utah Division of Corporations business registry, <a href="https://businessregistration.utah.gov/" target="_blank" rel="noopener">businessregistration.utah.gov</a>: Village at the Bluff Homeowners Association, Coles Crossing Homeowners Association, Syracuse Land Investments, LLC, Eastgate Affinity, LLC, and Kapp Auto.</li>
+      <li>Bills, 2026 General Session, le.utah.gov: <a href="https://le.utah.gov/~2026/bills/static/HB0274.html" target="_blank" rel="noopener">H.B. 274 Sentencing Amendments</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0392.html" target="_blank" rel="noopener">H.B. 392</a>, <a href="https://le.utah.gov/~2026/bills/static/HB0366.html" target="_blank" rel="noopener">H.B. 366</a>, <a href="https://le.utah.gov/~2026/bills/static/SB0134.html" target="_blank" rel="noopener">S.B. 134</a>; also named in the judicial package: S.B. 233 and H.B. 540.</li>
+      <li>Bills, 2023 General Session, le.utah.gov: <a href="https://le.utah.gov/~2023/bills/static/HB0491.html" target="_blank" rel="noopener">H.B. 491 Amendments Related to the Great Salt Lake</a>.</li>
+      <li>Bills named on this page that le.utah.gov lists under the 2025 General Session: <a href="https://le.utah.gov/~2025/bills/static/HB0447.html" target="_blank" rel="noopener">H.B. 447 Statewide Catalyst Campus Model</a>, <a href="https://le.utah.gov/~2025/bills/static/HB0563.html" target="_blank" rel="noopener">H.B. 563 Ballot Title Amendments</a>, <a href="https://le.utah.gov/~2025/bills/static/HB0464.html" target="_blank" rel="noopener">H.B. 464 State Sovereignty Fund</a>, <a href="https://le.utah.gov/~2025/bills/static/HB0087.html" target="_blank" rel="noopener">H.B. 87 Drug Trafficking Amendments</a>, <a href="https://le.utah.gov/~2025/bills/static/HCR008.html" target="_blank" rel="noopener">H.C.R. 8</a>, <a href="https://le.utah.gov/~2025/bills/static/HB0393.html" target="_blank" rel="noopener">H.B. 393</a>.</li>
+      <li><a href="https://le.utah.gov/" target="_blank" rel="noopener">le.utah.gov</a>: official sponsor tracking, committee listings and Schultz&rsquo;s House bio.</li>
+      <li>KUER interview with Schultz on H.B. 366 and the Utah State Bar&rsquo;s statement.</li>
+      <li>Utah Politics News report on the Preserving Utah Values PAC donation, citing state disclosures.</li>
+      <li>PAC Management Services / VIPGateKeeper: vipgatekeeper.com, its LinkedIn company page, and FollowTheMoney / OpenSecrets searches.</li>
+      <li>Candidates&rsquo; own campaign websites: electannagraff.com (Graff) and voteforschultz.com (Schultz).</li>
+      <li>Prior Weber County Hive reporting: &ldquo;Two Funding Frameworks&rdquo; (July 2, 2026), and research on NUPAC, Irish Elk LLC / Kyle Palmer, Election Hive LLC and the Operation Gigawatt donor networks.</li>
+    </ul>
+    <p class="src-note">Records are listed by name; a link is given where a public page for the record could be confirmed. Items without a link are named as the page describes them.</p>
   </details>
 
 </div>

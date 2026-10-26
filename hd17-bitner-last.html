@@ -13,10 +13,10 @@
     --color-paper-deep:#ece5d4;
     --color-ink:#241a16;
     --color-ink-soft:#5c534c;
-    --color-link:#c0572e;
+    --color-link:#1d6b57;
     --color-stat:#d9a441;
-    --color-burgundy-light:#5c1a2b;
-    --color-burgundy-deep:#3d0f1c;
+    --color-burgundy-light:#1f4e6b;
+    --color-burgundy-deep:#12304a;
     --color-line:#d8cfbc;
     --color-card:#fbf8f1;
     --color-good:#4d7c5f;
@@ -182,12 +182,25 @@
   .mismatch .amt{font-family:'Playfair Display',serif;font-weight:800;font-size:1.9rem;color:var(--color-flag);}
   .mismatch .who{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--color-ink-soft);}
   @media (max-width:680px){.mismatch{grid-template-columns:1fr;} .mismatch > div:first-child{border-right:none;border-bottom:1px solid var(--color-line);}}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .hb-dates{max-width:1100px;margin:0 auto;padding:8px 20px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5647;letter-spacing:.03em;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 </head>
 
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="hb-dates">Posted Sept. 23, 2026 · Updated Oct. 2, 2026</div>
 
 <header class="band">
   <div class="wrap">
@@ -314,7 +327,7 @@ flowchart LR
     CAMP --> FO["Food and events<br/>$1,046.03"]
     CAMP --> OT["Texts and supplies<br/>$721.75"]
     CAMP -.-> BAL["Balance 6/11/26<br/>$36,531.59"]
-    style CAMP fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style CAMP fill:#12304a,color:#f4ece6,stroke:#12304a
     style LOAN fill:#fbf3e6,stroke:#d9a441
     style BAL fill:#fbf8f1,stroke:#5c534c,stroke-dasharray:4 3
 </div>
@@ -442,9 +455,9 @@ flowchart TB
     B1["Bitner report, first entry<br/>$5,625 in-kind<br/>comment: Taylor Morgan"] -->|"deleted 4/12/26"| B2
     B2["Bitner report, current entry<br/>$1,687.50 in-kind"]
     B2 -.-> GAP(["$3,937.50 not on her report"])
-    style CMV fill:#fbf8f1,stroke:#5c1a2b
+    style CMV fill:#fbf8f1,stroke:#1f4e6b
     style B1 fill:#fbf8f1,stroke:#5c534c,stroke-dasharray:4 3
-    style B2 fill:#fbf8f1,stroke:#c0572e
+    style B2 fill:#fbf8f1,stroke:#1d6b57
     style GAP fill:#fdeeea,stroke:#a5372a
 </div>
       <p class="cap">$1,687.50 is 30% of $5,625. Neither report explains the change. This site's CMV PAC file lists Taylor Morgan as a CMV PAC director.</p>
@@ -604,10 +617,10 @@ flowchart LR
     AI -->|"$319.13 in-kind"| LB
     SPK -->|"$1,700"| LB
     TT -->|"$500 personal"| LB
-    style LB fill:#3d0f1c,color:#f4ece6,stroke:#3d0f1c
+    style LB fill:#12304a,color:#f4ece6,stroke:#12304a
     style CMV fill:#fdeeea,stroke:#a5372a
-    style DN fill:#fbf8f1,stroke:#5c1a2b
-    style AI fill:#fbf8f1,stroke:#5c1a2b
+    style DN fill:#fbf8f1,stroke:#1f4e6b
+    style AI fill:#fbf8f1,stroke:#1f4e6b
     style SPK fill:#fbf3e6,stroke:#d9a441
 </div>
       <p class="cap">Arrows into Bitner are money or in-kind help to her campaign. Left column: other 2026 candidates who received money from the same source. No money moved between those candidates. The $61,000 is the combined total this site's HD-12 file lists for Teuscher, Monson and Saxton from Schultz's two PACs.</p>
@@ -936,7 +949,7 @@ if (window.Chart) {
     type: 'bar',
     data: { labels: ['Convention (1/1–4/6)', 'Primary (4/7–6/11)', '6/23–8/10'],
       datasets: [
-        { label: 'Raised (cash)', data: [35605.20, 32866.80, 7000], backgroundColor: '#c0572e', borderRadius: 2 },
+        { label: 'Raised (cash)', data: [35605.20, 32866.80, 7000], backgroundColor: '#1d6b57', borderRadius: 2 },
         { label: 'Spent', data: [5208.18, 26732.23, null], backgroundColor: '#5c534c', borderRadius: 2 },
         { label: 'Ending balance', data: [30397.02, 36531.59, null], backgroundColor: '#d9a441', borderRadius: 2 } ] },
     options: { maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + money(c.parsed.y) } } },
@@ -945,14 +958,14 @@ if (window.Chart) {
   new Chart(document.getElementById('raceChart'), {
     type: 'bar',
     data: { labels: ['Bitner cash (through 8/10)', 'Last cash (through 9/14)'],
-      datasets: [{ data: [75472, 2291.10], backgroundColor: ['#c0572e','#5c534c'], borderRadius: 3 }] },
+      datasets: [{ data: [75472, 2291.10], backgroundColor: ['#1d6b57','#5c534c'], borderRadius: 3 }] },
     options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => money(c.parsed.x) } } },
       scales: { x: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, y: { grid: { display: false } } } }
   });
   new Chart(document.getElementById('spendChart'), {
     type: 'bar',
     data: { labels: ['Printing and mail', 'Roost', 'Shirts and swag', 'Davis County GOP', 'Food and events', 'Texts (Votivv)', 'Supplies'],
-      datasets: [{ data: [12259.20, 11153.46, 5559.97, 1200, 1046.03, 460, 261.75], backgroundColor: ['#c0572e','#5c1a2b','#d9a441','#8a6d1f','#5c534c','#5c534c','#5c534c'], borderRadius: 3 }] },
+      datasets: [{ data: [12259.20, 11153.46, 5559.97, 1200, 1046.03, 460, 261.75], backgroundColor: ['#1d6b57','#1f4e6b','#d9a441','#8a6d1f','#5c534c','#5c534c','#5c534c'], borderRadius: 3 }] },
     options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => money(c.parsed.x) } } },
       scales: { x: { ticks: { callback: money }, grid: { color: '#e6dfcf' } }, y: { grid: { display: false } } } }
   });
@@ -960,13 +973,15 @@ if (window.Chart) {
     type: 'bar',
     data: { labels: ['Convention, 2nd round', 'June 23 primary'],
       datasets: [
-        { label: 'Bitner', data: [84.5, 70.87], backgroundColor: '#c0572e', borderRadius: 2, stack: 'v' },
+        { label: 'Bitner', data: [84.5, 70.87], backgroundColor: '#1d6b57', borderRadius: 2, stack: 'v' },
         { label: 'Sam Barlow', data: [15.5, 29.13], backgroundColor: '#b8a58a', borderRadius: 2, stack: 'v' } ] },
     options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + c.parsed.x + '%' } } },
       scales: { x: { stacked: true, max: 100, ticks: { callback: v => v + '%' }, grid: { color: '#e6dfcf' } }, y: { stacked: true, grid: { display: false } } } }
   });
 }
 </script>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

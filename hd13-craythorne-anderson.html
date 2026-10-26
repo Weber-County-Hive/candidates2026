@@ -12,10 +12,10 @@
     --color-paper-deep:#ece5d4;
     --color-ink:#241a16;
     --color-ink-soft:#5c534c;
-    --color-link:#c0572e;
+    --color-link:#1d6b57;
     --color-stat:#d9a441;
-    --color-burgundy-light:#5c1a2b;
-    --color-burgundy-deep:#3d0f1c;
+    --color-burgundy-light:#1f4e6b;
+    --color-burgundy-deep:#12304a;
     --color-line:#d8cfbc;
     --color-card:#fbf8f1;
     --color-good:#4d7c5f;
@@ -178,9 +178,40 @@
 
   footer{padding:40px 0 60px;text-align:center;color:var(--color-ink-soft);font-size:.85rem;}
   footer a{color:var(--color-link);}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .hb-dates{max-width:1100px;margin:0 auto;padding:8px 20px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5647;letter-spacing:.03em;}
+
+  /* ---------- SOURCES (added) ---------- */
+  details.sources { background: var(--color-card); border: 1px solid var(--color-line); border-radius: 3px; padding: 18px 24px; margin: 32px 0; }
+  details.sources summary { font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-burgundy-light); cursor: pointer; font-weight: 600; }
+  details.sources[open] summary { margin-bottom: 14px; }
+  details.sources ul { margin: 0; padding-left: 22px; font-size: 1rem; line-height: 1.55; color: var(--color-ink-soft); }
+  details.sources li { margin-bottom: 10px; }
+  details.sources a { word-break: break-word; }
+  details.sources .src-note { font-size: 0.92rem; color: var(--color-ink-soft); margin: 12px 0 0; }
+  /* ---------- SIMPLE BAR CHART (added) ---------- */
+  .hv-chart { background: var(--color-card); border: 1px solid var(--color-line); border-radius: 3px; padding: 18px 22px; margin: 24px 0; }
+  .hv-chart-title { font-weight: 700; font-size: 1.12rem; margin: 0 0 14px; }
+  .hv-row { margin-bottom: 14px; }
+  .hv-top { display: flex; justify-content: space-between; gap: 12px; font-size: 1.05rem; margin-bottom: 4px; flex-wrap: wrap; }
+  .hv-top b { font-family: 'IBM Plex Mono', monospace; font-size: 1.08rem; }
+  .hv-track { height: 22px; background: rgba(0,0,0,0.06); border-radius: 3px; overflow: hidden; }
+  .hv-fill { height: 100%; background: var(--color-burgundy-light); border-radius: 3px; }
+  .hv-note { font-size: 0.95rem; color: var(--color-ink-soft); margin: 6px 0 0; }
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="hb-dates">Posted Sept. 10, 2026</div>
 
 <header class="band">
   <div class="wrap">
@@ -211,6 +242,14 @@
     <div class="eyebrow">THE MONEY</div>
     <h2>Where Each Candidate's Dollars Come From</h2>
     <p class="section-dek">Both party primaries went uncontested. Below is each candidate's full 2026 campaign finance picture, from their own disclosures.utah.gov filings.</p>
+
+    <div class="hv-chart" role="img" aria-label="Bar chart: Craythorne raised 5,500 dollars, Anderson raised 3,363 dollars, De Mille self-loaned 630 dollars.">
+      <div class="hv-chart-title">2026 money, side by side</div>
+      <div class="hv-row"><div class="hv-top"><span>Craythorne (R), raised</span><b>$5,500</b></div><div class="hv-track"><div class="hv-fill" style="width:100.0%"></div></div></div>
+      <div class="hv-row"><div class="hv-top"><span>Anderson (D), raised</span><b>$3,363</b></div><div class="hv-track"><div class="hv-fill" style="width:61.1%"></div></div></div>
+      <div class="hv-row"><div class="hv-top"><span>De Mille (UFP), self-loaned</span><b>$630</b></div><div class="hv-track"><div class="hv-fill" style="width:11.5%"></div></div></div>
+      <p class="hv-note">Figures from the totals at the top of this page. De Mille&rsquo;s $630 is a personal loan, not outside money. Bars are drawn to the same scale. Added Oct. 25, 2026.</p>
+    </div>
 
     <div class="fund-toggle">
       <button class="active" onclick="showFund('craythorne', this)">Craythorne (R)</button>
@@ -415,6 +454,26 @@
   </div>
 </section>
 
+<section>
+  <div class="wrap">
+    <details class="sources">
+      <summary>Sources</summary>
+      <ul>
+        <li>Campaign finance reports, <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a>: Erik Craythorne, Jeffrey Anderson and Tony De Mille, 2026 filings; Roxayn Elmer (zero activity reported).</li>
+        <li>Same-day filings, Feb. 12, 2026, <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a>: Craythorne&rsquo;s report ($3,750 from The Doers Network), Rep. Jordan Teuscher&rsquo;s report ($2,000 from The Doers Network) and Sen. Evan Vickers&rsquo; report ($4,518.44 to Election Hive LLC).</li>
+        <li>Conflict-of-interest disclosure forms, <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a>: Craythorne (eight entities and one board seat), Anderson, De Mille, and House Speaker Mike Schultz (Whitesides Place, LLC).</li>
+        <li>Utah corporate registry, <a href="https://businessregistration.utah.gov/" target="_blank" rel="noopener">businessregistration.utah.gov</a>: Willow Tree, LLC; Whitesides Place, LLC; Craythorne Inc.; Craythorne Construction Co., Inc.; Craythorne Commercial / Tin Cup, LLC; Sevier Canyon Properties, LLC; Craythorne Investment, LLC; Bennett Legacy Farms HOA.</li>
+        <li>Bill, 2026 General Session, le.utah.gov: <a href="https://le.utah.gov/~2026/bills/static/HB0033.html" target="_blank" rel="noopener">H.B. 33 Political Signs Amendments</a>.</li>
+        <li>West Point City Council minutes, Dec. 21, 2021 (Craythorne Homestead Subdivision Phase 1 item and recusal).</li>
+        <li>West Point City meeting document, March 2019 (Murray PRUD Overlay Zone and &ldquo;PRUD Overlay Zone &ndash; Craythorne Const.&rdquo; items).</li>
+        <li>West Point City records: Whitesides Place rezone and development agreement approval (June 20, 2023); December 2023 general plan amendment; Craythorn Homestead, LLC rezone application (May 2024).</li>
+        <li>Craythorne&rsquo;s company marketing for the &ldquo;Bennett Farms&rdquo; neighborhood.</li>
+      </ul>
+      <p class="src-note">Records are listed by name; a link is given where a public page for the record could be confirmed. Items without a link are named as the page describes them.</p>
+    </details>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     Compiled from itemized Utah campaign-finance disclosures (disclosures.utah.gov), candidates' own sworn conflict-of-interest forms, Utah corporate registry records, and West Point City's own public meeting minutes.<br>
@@ -430,6 +489,8 @@ function showFund(id, btn){
   btn.classList.add('active');
 }
 </script>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
