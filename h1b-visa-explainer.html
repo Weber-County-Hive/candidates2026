@@ -212,6 +212,27 @@
     line-height: 1.4;
   }
 
+
+  /* ---------- SOURCES (added) ---------- */
+  details.sources{background:#fbf9f3;border:1px solid var(--color-border);border-left:4px solid var(--color-band-light);border-radius:3px;padding:16px 22px;margin:40px 0 24px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-band-light);font-weight:600;}
+  details.sources[open] summary{margin-bottom:12px;}
+  details.sources .src-note{font-size:16px;color:var(--color-ink-soft);margin:0 0 10px;}
+  details.sources h4{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-ink-soft);margin:16px 0 6px;}
+  details.sources ul{margin:0;padding-left:22px;font-size:16.5px;line-height:1.55;color:var(--color-ink);}
+  details.sources li{margin-bottom:8px;}
+
+  /* ---------- CHART (added) ---------- */
+  .hive-chart{background:#fbf9f3;border:1px solid var(--color-border);border-radius:3px;padding:20px 18px;margin:28px 0;}
+  .hive-chart h3.chart-title{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;margin:0 0 6px;}
+  .hive-chart .chart-dek{font-size:17px;color:var(--color-ink-soft);margin:0 0 14px;}
+  .hive-chart .mermaid{text-align:center;margin:10px 0 18px;}
+  .hive-chart .mermaid svg{max-width:100%;height:auto;}
+  @media(max-width:600px){.hive-chart{padding:16px 10px;}.hive-chart .mermaid{overflow-x:auto;-webkit-overflow-scrolling:touch;text-align:left;}.hive-chart .mermaid svg{min-width:540px;}.hive-chart .chart-swipe{display:block;}}
+  .hive-chart .chart-swipe{display:none;font-family:'IBM Plex Mono',monospace;font-size:13px;margin:0 0 4px;}
+  .hive-chart .chart-sub{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-band-light);margin:18px 0 4px;}
+  .hive-chart .chart-note{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--color-ink-soft);margin:8px 0 0;line-height:1.5;}
+
   footer {
     text-align: center;
     padding: 24px;
@@ -220,14 +241,27 @@
     color: var(--color-ink-soft);
     border-top: 1px solid var(--color-border);
   }
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .hb-dates{max-width:1100px;margin:0 auto;padding:8px 20px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5647;letter-spacing:.03em;}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="hb-dates">Posted Sept. 13, 2026 &middot; Updated Oct. 25, 2026</div>
 
 <div class="header-band">
   <div class="eyebrow">Explainer</div>
   <h1>How the H-1B Visa Actually Works</h1>
-  <p class="subhead">A skilled-worker visa that runs on a lottery, a $100,000 new fee, and a rulebook Congress keeps trying to rewrite.</p>
+  <p class="subhead">A skilled-worker visa that runs on a lottery, a $100,000 fee now blocked in court, and a rulebook Congress keeps trying to rewrite.</p>
   <p style="font-family: var(--font-mono); font-size: 0.75rem; margin-top: 16px;"><a href="mike-kennedy-jonny-larsen-ut4.html" style="color: var(--color-stat);">&larr; Back to Kennedy v. Larsen case file</a></p>
 </div>
 
@@ -265,10 +299,43 @@
         <p>USCIS reviews the petition for fraud, wage compliance, and whether the job genuinely qualifies as a specialty occupation. If approved, the visa is authorized to start no earlier than October 1 of that fiscal year.</p>
       </li>
       <li>
-        <h3>Pay the new $100,000 fee, if it applies</h3>
-        <p>As of a September 2025 presidential proclamation, employers filing H-1B petitions for workers coming from abroad must pay a $100,000 fee per petition, on top of existing filing costs — the provision several members of Congress, including Kennedy, have introduced bills to carve exceptions into, particularly for healthcare workers.</p>
+        <h3>The $100,000 fee: on the books, blocked in court</h3>
+        <p>A September 2025 presidential proclamation added a $100,000 fee per petition for workers coming from abroad, on top of existing filing costs — the provision several members of Congress, including Kennedy, have introduced bills to carve exceptions into, particularly for healthcare workers. Federal courts have since blocked it. In June 2026 a federal court in Massachusetts ruled the policy unlawful in a case brought by 20 states. On Sept. 30, 2026, U.S. District Judge Haywood S. Gilliam Jr. in California struck down the agency policies that set the fee and barred enforcement, including under a Sept. 18, 2026 proclamation that extended the fee through Sept. 21, 2027. As of October 2026, employers are not being required to pay it while the cases continue.</p>
       </li>
     </ol>
+
+    <!-- ADDED: step diagram, using only the steps described above -->
+    <div class="hive-chart">
+      <h3 class="chart-title">The path at a glance</h3>
+      <p class="chart-dek">The same five steps listed above, as one chart.</p>
+      <span class="chart-swipe">On a phone, swipe the chart sideways to see all of it.</span>
+
+      <div class="mermaid">
+flowchart TD
+  A["<b>1. Employer registers</b><br/>Early March, with USCIS<br/>$215 per person<br/>One entry per person a year"]
+  B["<b>2. USCIS lottery</b><br/>85,000 new visas a year:<br/>65,000 regular + 20,000 for<br/>U.S. master's or higher<br/>Weighted toward higher<br/>wages from FY2027"]
+  N["Not selected"]
+  C["<b>3. File the full petition</b><br/>Window of at least 90 days<br/>Includes a Labor Condition<br/>Application certified by<br/>the Department of Labor"]
+  D["<b>4. USCIS reviews</b><br/>Fraud, wages, and whether<br/>the job is a specialty occupation"]
+  X["Denied"]
+  E["<b>Approved</b><br/>Starts no earlier than<br/>Oct. 1 of that fiscal year"]
+  F["<b>5. $100,000 fee, if it applies</b><br/>Per petition, for workers<br/>coming from abroad<br/>(Sept. 2025 proclamation;<br/>blocked by federal courts<br/>as of Oct. 2026)"]
+  A --> B
+  B -- "Selected" --> C
+  B -.-> N
+  C --> D
+  D -- "Approves" --> E
+  D -.-> X
+  E --> F
+  classDef step fill:#fbf9f3,stroke:#16324f,stroke-width:2px,color:#1c1a17;
+  classDef side fill:#ebe4d4,stroke:#6b6459,stroke-width:1px,color:#1c1a17;
+  classDef fee fill:#fdf3dc,stroke:#d9a441,stroke-width:2px,color:#1c1a17;
+  class A,B,C,D,E step;
+  class N,X side;
+  class F fee;
+      </div>
+      <p class="chart-note">Every figure in this chart appears in the step list above. Step 5 is shown last because that is the order this page lists it.</p>
+    </div>
   </section>
 
   <section id="glossary">
@@ -395,12 +462,41 @@
     </div>
   </section>
 
+  <details class="sources">
+    <summary>Sources</summary>
+    <p class="src-note">The public records this explainer relies on. Links go to the official source where one could be confirmed.</p>
+    <ul>
+      <li>U.S. Citizenship and Immigration Services, &ldquo;<a href="https://www.uscis.gov/working-united-states/temporary-workers/h-1b-specialty-occupations-and-fashion-models/h-1b-electronic-registration-process" target="_blank" rel="noopener">H-1B Electronic Registration Process</a>&rdquo; &mdash; registration, the $215 registration fee, the 65,000 regular cap and 20,000 U.S. advanced-degree exemption, and the 90-day filing window.</li>
+      <li>Department of Homeland Security final rule on weighted selection for cap-subject H-1B registrations, Federal Register Vol. 90, No. 245, Dec. 29, 2025 (document 2025-23853) &mdash; <a href="https://www.govinfo.gov/content/pkg/FR-2025-12-29/html/2025-23853.htm" target="_blank" rel="noopener">govinfo.gov</a>. The wage-weighted selection starting with the FY2027 cycle.</li>
+      <li>Presidential Proclamation, &ldquo;Restriction on Entry of Certain Nonimmigrant Workers,&rdquo; Sept. 19, 2025, as summarized by the U.S. Department of State &mdash; <a href="https://travel.state.gov/content/travel/en/News/visas-news/restriction-on-entry-of-certain-nonimmigrant-workers.html" target="_blank" rel="noopener">travel.state.gov</a>. The $100,000 payment per petition.</li>
+      <li>University of Colorado Boulder International Student &amp; Scholar Services, &ldquo;<a href="https://www.colorado.edu/isss/2026/10/07/100000-h-1b-fee-current-status" target="_blank" rel="noopener">$100,000 H-1B fee: current status</a>,&rdquo; Oct. 7, 2026 &mdash; the June 2026 Massachusetts ruling, the extension through Sept. 21, 2027, and that the fee is not currently required.</li>
+      <li>International Legal and Business Services Group, &ldquo;<a href="https://bizlegalservices.com/2026/10/06/second-federal-court-blocks-100000-h-1b-fee-plus-new-extension/" target="_blank" rel="noopener">Second Federal Court Blocks $100,000 H-1B Fee, Plus New Extension</a>,&rdquo; Oct. 6, 2026 &mdash; Judge Gilliam&rsquo;s Sept. 30, 2026 ruling and the Sept. 18, 2026 extension proclamation.</li>
+      <li>U.S. Department of Labor, Labor Condition Application for Nonimmigrant Workers, <a href="https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/eta9035.pdf" target="_blank" rel="noopener">Form ETA-9035</a>.</li>
+      <li>Immigration and Nationality Act, Section 101(a)(15)(H)(i)(b) &mdash; the specialty-occupation category (named on this page; not linked here).</li>
+      <li>Related Hive case file: <a href="mike-kennedy-jonny-larsen-ut4.html">Kennedy v. Larsen (UT-4)</a>, where Rep. Kennedy&rsquo;s H-1B legislation is covered.</li>
+    </ul>
+  </details>
+
 </main>
 
 <footer>
   THE WEBER COUNTY HIVE &middot; INDEPENDENT &middot; ACCOUNTABILITY &middot; JOURNALISM
 </footer>
 
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'neutral',
+      securityLevel: 'loose',
+      themeVariables: { fontSize: '18px', fontFamily: 'Georgia, serif', primaryColor: '#fbf9f3', primaryBorderColor: '#16324f', lineColor: '#c0572e', primaryTextColor: '#241c14' },
+      flowchart: { useMaxWidth: true, htmlLabels: true, nodeSpacing: 34, rankSpacing: 46, padding: 14 }
+    });
+  }
+</script>
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -12,10 +12,10 @@
     --paper:#faf7f0;
     --ink:#2a231d;
     --ink-soft:#5a4f45;
-    --rust:#c0572e;
+    --rust:#1d6b57;
     --amber:#d9a441;
-    --burgundy-light:#5c1a2b;
-    --burgundy-deep:#3d0f1c;
+    --burgundy-light:#1f4e6b;
+    --burgundy-deep:#12304a;
     --line:#dcd2bf;
   }
   *{box-sizing:border-box;}
@@ -265,9 +265,32 @@
     border-top:1px solid var(--line);
   }
   footer a{color:var(--ink-soft);}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+
+  /* ---------- SOURCES (added) ---------- */
+  details.sources{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--burgundy-light);border-radius:3px;padding:16px 22px;margin:40px 0 24px;}
+  details.sources summary{cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--burgundy-light);font-weight:600;}
+  details.sources[open] summary{margin-bottom:12px;}
+  details.sources .src-note{font-size:16px;color:var(--ink-soft);margin:0 0 10px;}
+  details.sources h4{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:16px 0 6px;}
+  details.sources ul{margin:0;padding-left:22px;font-size:16.5px;line-height:1.55;color:var(--ink);}
+  details.sources li{margin-bottom:8px;}
+
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .hb-dates{max-width:1100px;margin:0 auto;padding:8px 20px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5647;letter-spacing:.03em;}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="hb-dates">Posted Sept. 15, 2026</div>
 
 <header class="band">
   <div class="band-inner">
@@ -756,11 +779,47 @@
 
   <p class="closing">The questions are the same. The answers belong to the candidates. The judgment belongs to Utah voters.</p>
 
+  <details class="sources">
+    <summary>Sources</summary>
+    <p class="src-note">This page is The Weber County Hive&rsquo;s own candidate questionnaire. Below are the laws, bills and public records the page itself names. Utah bill links go to the Utah Legislature (le.utah.gov) and federal bill links to congress.gov; items without a link are listed by name because a link could not be confirmed. Figures quoted in the questions come from the Hive case files linked within each question.</p>
+    <h4>Utah bills and resolutions</h4>
+    <ul>
+      <li>2019 Second Special Session: <a href="https://le.utah.gov/~2019s2/bills/static/SB2001.html" target="_blank" rel="noopener">S.B. 2001</a> (Tax Restructuring Revisions).</li>
+      <li>2023: <a href="https://le.utah.gov/~2023/bills/static/HB0491.html" target="_blank" rel="noopener">H.B. 491</a> (Great Salt Lake).</li>
+      <li>2024: <a href="https://le.utah.gov/~2024/bills/static/SB0258.html" target="_blank" rel="noopener">S.B. 258</a>; <a href="https://le.utah.gov/~2024/bills/static/HB0062.html" target="_blank" rel="noopener">H.B. 62</a> (Utah Water Ways).</li>
+      <li>2025: <a href="https://le.utah.gov/~2025/bills/static/HB0037.html" target="_blank" rel="noopener">H.B. 37</a>; <a href="https://le.utah.gov/~2025/bills/static/HB0249.html" target="_blank" rel="noopener">H.B. 249</a> (Nuclear Consortium); <a href="https://le.utah.gov/~2025/bills/static/HB0444.html" target="_blank" rel="noopener">H.B. 444</a> (data privacy); <a href="https://le.utah.gov/~2025/bills/static/HB0468.html" target="_blank" rel="noopener">H.B. 468</a> (Automatic License Plate Reader Amendments, primary sponsor Rep. Kristen Chevrier); <a href="https://le.utah.gov/~2025/bills/static/SB0318.html" target="_blank" rel="noopener">S.B. 318</a> (Prosecutor Conduct Commission); <a href="https://le.utah.gov/~2025/bills/static/SB0337.html" target="_blank" rel="noopener">S.B. 337</a> (Beehive Development Agency).</li>
+      <li>2026: <a href="https://le.utah.gov/~2026/bills/static/HB0017.html" target="_blank" rel="noopener">H.B. 17</a>; <a href="https://le.utah.gov/~2026/bills/static/HB0060.html" target="_blank" rel="noopener">H.B. 60</a>; <a href="https://le.utah.gov/~2026/bills/static/HB0078.html" target="_blank" rel="noopener">H.B. 78</a>; H.B. 125 and H.B. 157; <a href="https://le.utah.gov/~2026/bills/static/HB0236.html" target="_blank" rel="noopener">H.B. 236</a>; <a href="https://le.utah.gov/~2026/bills/static/HB0262.html" target="_blank" rel="noopener">H.B. 262</a>; <a href="https://le.utah.gov/~2026/bills/static/HB0273.html" target="_blank" rel="noopener">H.B. 273</a>; H.B. 373; <a href="https://le.utah.gov/~2026/bills/static/HB0422.html" target="_blank" rel="noopener">H.B. 422</a>; <a href="https://le.utah.gov/~2026/bills/static/HB0424.html" target="_blank" rel="noopener">H.B. 424</a>; <a href="https://le.utah.gov/~2026/bills/static/HB0475.html" target="_blank" rel="noopener">H.B. 475</a>; <a href="https://le.utah.gov/~2026/bills/static/HB0492.html" target="_blank" rel="noopener">H.B. 492</a>; <a href="https://le.utah.gov/~2026/bills/static/HB0514.html" target="_blank" rel="noopener">H.B. 514</a>; <a href="https://le.utah.gov/~2026/bills/static/HJR005.html" target="_blank" rel="noopener">H.J.R. 5</a>; <a href="https://le.utah.gov/~2026/bills/static/HCR009.html" target="_blank" rel="noopener">H.C.R. 9</a>; <a href="https://le.utah.gov/~2026/bills/static/SB0123.html" target="_blank" rel="noopener">S.B. 123</a>; <a href="https://le.utah.gov/~2026/bills/static/SB0147.html" target="_blank" rel="noopener">S.B. 147</a>; <a href="https://le.utah.gov/~2026/bills/static/SB0235.html" target="_blank" rel="noopener">S.B. 235</a>; <a href="https://le.utah.gov/~2026/bills/static/SB0242.html" target="_blank" rel="noopener">S.B. 242</a>; S.B. 250; <a href="https://le.utah.gov/~2026/bills/static/SB0254.html" target="_blank" rel="noopener">S.B. 254</a>; <a href="https://le.utah.gov/~2026/bills/static/SB0284.html" target="_blank" rel="noopener">S.B. 284</a>.</li>
+      <li>Year not confirmed here: S.B. 231 (Utah Privacy Commission and Office of Data Privacy), named with H.B. 444 in Question 7.</li>
+    </ul>
+    <h4>Utah laws</h4>
+    <ul>
+      <li>Utah Code &sect;17-79-306 (state trust land and county/municipal zoning).</li>
+      <li>Utah Governors&rsquo; and Legislators&rsquo; Retirement Act, Utah Code Title 49.</li>
+      <li>Utah&rsquo;s Truth in Taxation notice-and-hearing law, and Utah&rsquo;s license-plate-reader data misuse statute (Class B misdemeanor), as named in the questions.</li>
+    </ul>
+    <h4>Federal bills and actions</h4>
+    <ul>
+      <li>&ldquo;Ending Presidential Overreach on Public Lands Act,&rdquo; <a href="https://www.congress.gov/bill/119th-congress/senate-bill/220" target="_blank" rel="noopener">S. 220</a> / <a href="https://www.congress.gov/bill/119th-congress/house-bill/521" target="_blank" rel="noopener">H.R. 521</a> (119th Congress).</li>
+      <li><a href="https://www.congress.gov/bill/119th-congress/house-bill/1501" target="_blank" rel="noopener">H.R. 1501</a> (119th Congress), the federal companion named in Question 13.</li>
+      <li>July 14, 2026 presidential proclamations reducing Bears Ears and Grand Staircase-Escalante National Monuments.</li>
+    </ul>
+    <h4>Other public records named on this page</h4>
+    <ul>
+      <li>Utah State Auditor&rsquo;s office figures on statewide PID debt and PID formations.</li>
+      <li>Weber County Commission approval of the Promontory Commerce Center PID bond, March 3, 2026, and Weber County&rsquo;s 2026 Tentative Budget.</li>
+      <li>Campaign finance reports on the state disclosure system &mdash; <a href="https://disclosures.utah.gov/" target="_blank" rel="noopener">disclosures.utah.gov</a> &mdash; and the conflict-of-interest disclosure forms named in Question 4.</li>
+      <li>Great Salt Lake Trust Council bylaws, and Utah&rsquo;s Public Notice Website listings for the Great Salt Lake Advisory Council.</li>
+      <li>Montana campaign-finance law and the Montana Commissioner of Political Practices, for the side-by-side comparison in Question 3.</li>
+    </ul>
+  </details>
+
 </main>
 
 <footer>
   The Weber County Hive &middot; <a href="index.html">2026 Candidates Docket</a> &middot; <a href="https://webercountyhive.substack.com" target="_blank" rel="noopener">webercountyhive.substack.com</a>
 </footer>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

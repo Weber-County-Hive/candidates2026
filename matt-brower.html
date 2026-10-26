@@ -165,9 +165,30 @@
     header.masthead{padding:40px 18px 28px;}
     main{padding:36px 18px 60px;}
   }
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .hb-dates{max-width:1100px;margin:0 auto;padding:8px 20px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5647;letter-spacing:.03em;}
+</style>
+<style>
+  /* chart added Oct. 2026 */
+  .hvc-chart{background:#fff;border:1px solid var(--line);border-left:4px solid var(--maroon);padding:20px 22px;margin:28px 0;}
+  .hvc-title{font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;margin:0 0 16px;line-height:1.3;}
+  .hvc-cap{font-size:.95rem;color:var(--ink-soft);margin:14px 0 0;line-height:1.5;}
+  .hvc-mm .mermaid{text-align:center;}
+  @media(max-width:600px){.hvc-chart{margin:28px -12px;padding:16px 6px;}.hvc-title,.hvc-cap{padding:0 8px;}}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="hb-dates">Posted Sept. 2, 2026 · Updated Oct. 25, 2026</div>
 
 <div class="topbar">
   <div class="wrap">
@@ -254,6 +275,24 @@
       Councilmember Yvonne Barney voted no.</p>
   </section>
 
+  <div class="hvc-chart hvc-mm hvc-shot">
+    <p class="hvc-title">Who's connected, as this page describes it</p>
+<div class="mermaid">
+flowchart TD
+  HC["Heber City<br/>Council"]
+  HC -->|"hired 2018;<br/>renewed 4-2,<br/>Apr. 14, 2026,<br/>through May 2029"| MB(["MATT BROWER<br/>City Manager"])
+  HC -->|"Jan. 20, 2026<br/>vote: 5-0"| V["CAMS contract:<br/>3 years x $39,900<br/>= $119,700,<br/>no bid<br/><i>Minutes: 'There<br/>were no conflicts<br/>disclosed.'</i>"]
+  V -->|"pays"| CAMS["CAMS"]
+  MB -->|"director<br/>since 2019"| CAMS
+  MB -->|"director<br/>since 2023"| RWB["Red White<br/>and Blue<br/>Festival Inc."]
+  CAMS -.- P["Also on these boards:<br/>Rachel Kahler (CAMS<br/>paid Executive Director)<br/>and Dallin Koecher"]
+  RWB -.- P
+  P ~~~ AUD
+  MB -.->|"complaint<br/>filed with"| AUD["Utah State<br/>Auditor's office"]
+</div>
+    <p class="hvc-cap">Facts from "The CAMS seat" and "A contentious contract, this spring" above. Sources: Jan. 20, 2026 Heber City Council draft minutes; CAMS's April 2026 board announcement and state filings; Park Record, KPCW and TownLift coverage of the April 2026 renewal. The April vote: Mayor Heidi Franco and Councilmember Yvonne Barney voted no.</p>
+  </div>
+
   <section class="block">
     <h2 class="section-title">Career, in brief</h2>
     <div class="timeline">
@@ -293,7 +332,7 @@
   <section class="block">
     <h2 class="section-title">Sources</h2>
     <details class="sources-collapse">
-      <summary>10 sources — tap to expand</summary>
+      <summary>9 sources — tap to expand</summary>
       <div class="record-card">
         <p style="margin:0 0 10px;">Jan. 20, 2026 Heber City Council draft minutes</p>
         <p style="margin:0 0 10px;">CAMS's own April 2026 board announcement; Utah Division of Corporations
@@ -330,6 +369,14 @@
   </div>
 </footer>
 
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script>
+if (window.mermaid) { mermaid.initialize({ startOnLoad: false, theme: 'base', fontFamily: "'Source Sans 3', Arial, sans-serif", themeVariables: { fontSize: '18px', primaryColor: '#ffffff', primaryBorderColor: '#6E1F2B', primaryTextColor: '#211714', lineColor: '#4A3B35', edgeLabelBackground: '#F3ECE0', clusterBkg: '#F3ECE0', clusterBorder: '#C9BBA4', titleColor: '#6E1F2B' }, flowchart: { htmlLabels: true, curve: 'basis', useMaxWidth: true, nodeSpacing: 30, rankSpacing: 50 } });
+  var hvcRun = function(){ mermaid.run({ querySelector: '.hvc-mm .mermaid' }); };
+  (document.fonts && document.fonts.ready) ? document.fonts.ready.then(hvcRun, hvcRun) : hvcRun(); }
+</script>
 </body>
 </html>

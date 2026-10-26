@@ -103,6 +103,16 @@
   .ov details{background:none;border:0;padding:0;margin:.4rem 0 0;}
   .table-scroll{overflow-x:auto;}
   @media(max-width:680px){.overlap{grid-template-columns:1fr;}}
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -110,6 +120,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
 
 <div class="band">
   <div class="band-inner">
@@ -537,6 +548,8 @@ if(window.Chart){Chart.defaults.font.family="'Source Serif 4', Georgia, serif";C
 new Chart(document.getElementById('paidChart'),{type:'bar',data:{labels:["Tamara Tran", "Jake Hunsaker", "Daniel McCay", "Brady Brammer", "Erik Craythorne", "Dave Parke", "Lili Bitner", "Matt MacPherson", "Jordan Teuscher", "Anthony Loubet", "David Benson", "JR Bird", "Casey Saxton", "Kirk Cullimore", "Jim Dunnigan", "Jon Hawkins", "Tracy Miller", "SAFE PAC (Utah Co. Sheriffs)", "Jason Thompson", "Terry Hutchinson", "Trina Christensen", "Mike Bird", "Erin Longacre", "Cal Roberts", "Jill Koford", "Ariel Defay", "Paul Cutler", "Stephanie Gricius", "Raymond Ward", "Darlene Pierucci", "Katrina Hall", "J Adams (Sen. Pres. Adams)", "Melissa Garff Ballard", "Steven Eliason", "Kristen Chevrier", "Mike Schultz (Speaker)", "Salt Lake County Republican Party"],datasets:[{data:[10600.0, 7000.0, 7000.0, 7000.0, 3750.0, 3750.0, 3750.0, 3500.0, 3500.0, 3500.0, 3000.0, 3000.0, 3000.0, 2000.0, 2000.0, 2000.0, 2000.0, 2000.0, 2000.0, 1500.0, 1500.0, 1500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 200.0],backgroundColor:["#c0572e", "#c0572e", "#123449", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#123449", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#123449", "#123449", "#123449", "#123449", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#c0572e", "#123449", "#123449", "#123449", "#123449", "#123449", "#c0572e", "#123449", "#123449"],borderRadius:2}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>money(c.parsed.x)}}},scales:{x:{ticks:{callback:money},grid:{color:'#e8e0cf'}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:11}}}}}});
 new Chart(document.getElementById('boardChart'),{type:'bar',data:{labels:['Utah County (8)','Salt Lake County (6)','Davis County (6)'],datasets:[{label:'Political / government background',data:[6,4,5],backgroundColor:'#c0572e',stack:'s'},{label:'Other',data:[2,2,1],backgroundColor:'#ddd5c3',stack:'s'}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{position:'bottom'}},scales:{x:{stacked:true,max:8,ticks:{stepSize:1}},y:{stacked:true,grid:{display:false}}}}});}
 </script>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

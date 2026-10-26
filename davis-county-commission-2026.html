@@ -6,8 +6,8 @@
 <title>Davis County Commission 2026 — The Weber County Hive</title>
 <style>
   :root {
-    --maroon: #3c1420;
-    --maroon-deep: #2a0e17;
+    --maroon: #1f4e6b;
+    --maroon-deep: #12304a;
     --cream: #f4f1ea;
     --gold: #c9a54a;
     --gold-bright: #d4af37;
@@ -234,9 +234,40 @@
   .full-story p { color: var(--ink); font-size: 16px; margin-bottom: 16px; }
   .full-story p.fs-sources { color: var(--ink-soft); font-size: 13px; margin-top: 28px; }
   .full-story p.fs-tag { font-style: italic; color: var(--maroon); text-align: center; margin-top: 20px; }
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .hb-dates{max-width:1100px;margin:0 auto;padding:8px 20px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5647;letter-spacing:.03em;}
+
+  /* ---------- SOURCES (added) ---------- */
+  details.sources { background: var(--card); border: 1px solid var(--card-border); border-radius: 3px; padding: 18px 24px; margin: 32px 0; }
+  details.sources summary { font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--maroon); cursor: pointer; font-weight: 600; }
+  details.sources[open] summary { margin-bottom: 14px; }
+  details.sources ul { margin: 0; padding-left: 22px; font-size: 1rem; line-height: 1.55; color: var(--ink-soft); }
+  details.sources li { margin-bottom: 10px; }
+  details.sources a { word-break: break-word; }
+  details.sources .src-note { font-size: 0.92rem; color: var(--ink-soft); margin: 12px 0 0; }
+  /* ---------- SIMPLE BAR CHART (added) ---------- */
+  .hv-chart { background: var(--card); border: 1px solid var(--card-border); border-radius: 3px; padding: 18px 22px; margin: 24px 0; }
+  .hv-chart-title { font-weight: 700; font-size: 1.12rem; margin: 0 0 14px; }
+  .hv-row { margin-bottom: 14px; }
+  .hv-top { display: flex; justify-content: space-between; gap: 12px; font-size: 1.05rem; margin-bottom: 4px; flex-wrap: wrap; }
+  .hv-top b { font-family: 'IBM Plex Mono', monospace; font-size: 1.08rem; }
+  .hv-track { height: 22px; background: rgba(0,0,0,0.06); border-radius: 3px; overflow: hidden; }
+  .hv-fill { height: 100%; background: var(--maroon); border-radius: 3px; }
+  .hv-note { font-size: 0.95rem; color: var(--ink-soft); margin: 6px 0 0; }
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="hb-dates">Posted Aug. 28, 2026 &middot; Updated Oct. 25, 2026</div>
 
 <header>
   <div class="header-inner">
@@ -269,12 +300,12 @@
         <div class="cc-col-name">Susan Lee</div>
         <div class="cc-col-total">$29,253.29 total raised</div>
         <svg viewBox="0 0 220 200" width="220" height="200">
-          <circle cx="110" cy="115" r="42.5" fill="#3c1420" opacity="0.85"/>
+          <circle cx="110" cy="115" r="42.5" fill="#1f4e6b" opacity="0.85"/>
           <circle cx="60" cy="60" r="28.4" fill="#c9a54a" opacity="0.85"/>
           <circle cx="165" cy="55" r="25" fill="#8a7256" opacity="0.85"/>
         </svg>
         <div class="cc-legend">
-          <div class="cc-legend-row"><span class="cc-swatch" style="background:#3c1420"></span>Self-funded<span class="amt">$16,298</span></div>
+          <div class="cc-legend-row"><span class="cc-swatch" style="background:#1f4e6b"></span>Self-funded<span class="amt">$16,298</span></div>
           <div class="cc-legend-row"><span class="cc-swatch" style="background:#c9a54a"></span>PAC / party<span class="amt">$7,285</span></div>
           <div class="cc-legend-row"><span class="cc-swatch" style="background:#8a7256"></span>Individuals<span class="amt">$5,670</span></div>
         </div>
@@ -286,10 +317,10 @@
         <svg viewBox="0 0 220 200" width="220" height="200">
           <circle cx="115" cy="105" r="85" fill="#8a7256" opacity="0.85"/>
           <circle cx="185" cy="30" r="20.1" fill="#c9a54a" opacity="0.9"/>
-          <circle cx="30" cy="25" r="7.4" fill="#3c1420" opacity="0.9"/>
+          <circle cx="30" cy="25" r="7.4" fill="#1f4e6b" opacity="0.9"/>
         </svg>
         <div class="cc-legend">
-          <div class="cc-legend-row"><span class="cc-swatch" style="background:#3c1420"></span>Self-funded<span class="amt">$500</span></div>
+          <div class="cc-legend-row"><span class="cc-swatch" style="background:#1f4e6b"></span>Self-funded<span class="amt">$500</span></div>
           <div class="cc-legend-row"><span class="cc-swatch" style="background:#c9a54a"></span>PAC / party<span class="amt">$3,651</span></div>
           <div class="cc-legend-row"><span class="cc-swatch" style="background:#8a7256"></span>Individuals<span class="amt">$65,332</span></div>
         </div>
@@ -469,6 +500,24 @@
     <p class="fs-tag">We report the filings. You decide.</p>
   </div>
 
+  <details class="sources">
+    <summary>Sources</summary>
+    <ul>
+      <li>Candidates&rsquo; own campaign sites: votesusanlee.com (Susan Lee) and bretmillburn.com (Bret Millburn).</li>
+      <li><a href="https://www.standard.net/news/2026/jun/02/susan-lee-emphasizes-fiscal-responsibility-in-davis-county-commission-race/" target="_blank" rel="noopener">&ldquo;Susan Lee emphasizes fiscal responsibility in Davis County Commission race,&rdquo;</a> Standard-Examiner (Ryan Comer), June 2, 2026.</li>
+      <li><a href="https://www.standard.net/news/local/2026/jun/23/bret-millburn-explains-entry-into-davis-county-commission-seat-b-race/" target="_blank" rel="noopener">&ldquo;Bret Millburn explains entry into Davis County Commission Seat B race,&rdquo;</a> Standard-Examiner (Ryan Comer), June 23, 2026.</li>
+      <li><a href="https://www.standard.net/news/local/2026/jun/23/former-davis-county-commissioner-bret-millburn-joins-seat-b-race/" target="_blank" rel="noopener">&ldquo;Former Davis County Commissioner Bret Millburn joins Seat B race as unaffiliated candidate,&rdquo;</a> Standard-Examiner (Ryan Comer), June 23, 2026.</li>
+      <li>Davis County campaign financial disclosure reports: Susan Lee and Kendalyn Harris, all four reports each.</li>
+      <li>Davis County Commission meeting records, including the December 2025 property-tax decision for the 2026 budget.</li>
+      <li><a href="https://www.daviscountyutah.gov/Sitefinity/WebsiteTemplates/email/2025-december-final.html" target="_blank" rel="noopener">Davis County December 2025 newsletter</a>: the Commission &ldquo;approved a 14.9% property tax increase for the County&rsquo;s general fund portion of property taxes,&rdquo; about $64 a year for a $500,000 home.</li>
+      <li><a href="https://www.ksl.com/article/51413684/davis-county-commission-oks-149-property-tax-increase" target="_blank" rel="noopener">&ldquo;Davis County Commission OKs 14.9% property tax increase,&rdquo;</a> KSL.com, Dec. 3, 2025.</li>
+      <li><a href="https://citizenportal.ai/articles/7976376/utah/davis-county/davis-county-citizen-journalism/susan-lee-candidate-for-davis-county-commissioner-pledges-spending-cuts-opposes-pids-and-questions-shelter-plan" target="_blank" rel="noopener">&ldquo;Susan Lee, candidate for Davis County commissioner, pledges spending cuts, opposes PIDs and questions shelter plan,&rdquo;</a> Citizen Portal, April 11, 2026 (her interview with Davis County Conservatives, where she called PIDs a &ldquo;hidden tax&rdquo;).</li>
+      <li>Davis County Clerk&rsquo;s Office (filing calendar for Millburn&rsquo;s first 2026 report).</li>
+      <li>Utah Republican Veterans&rsquo; Caucus press release, May 29, 2026.</li>
+    </ul>
+    <p class="src-note">Records are listed by name; a link is given where a public page for the record could be confirmed. Items without a link are named as the page describes them.</p>
+  </details>
+
 </main>
 
 <footer>
@@ -490,6 +539,8 @@
     });
   });
 </script>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
 
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

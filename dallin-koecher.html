@@ -196,9 +196,30 @@
     header.masthead{padding:40px 18px 28px;}
     main{padding:36px 18px 60px;}
   }
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+  .hb-dates{max-width:1100px;margin:0 auto;padding:8px 20px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5c5647;letter-spacing:.03em;}
+</style>
+<style>
+  /* chart added Oct. 2026 */
+  .hvc-chart{background:#fff;border:1px solid var(--line);border-left:4px solid var(--maroon);padding:20px 22px;margin:28px 0;}
+  .hvc-title{font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;margin:0 0 16px;line-height:1.3;}
+  .hvc-cap{font-size:.95rem;color:var(--ink-soft);margin:14px 0 0;line-height:1.5;}
+  .hvc-mm .mermaid{text-align:center;}
+  @media(max-width:600px){.hvc-chart{margin:28px -12px;padding:16px 6px;}.hvc-title,.hvc-cap{padding:0 8px;}}
 </style>
 </head>
 <body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="hb-dates">Posted Sept. 2, 2026</div>
 
 <div class="topbar">
   <div class="wrap">
@@ -262,6 +283,20 @@
       from OpenCorporates, Utah Division of Corporations state filings, and Heber City payroll records, not from
       any single leaked document.</p>
   </section>
+
+  <div class="hvc-chart hvc-mm hvc-shot">
+    <p class="hvc-title">His one form line, and the roles it leaves out</p>
+<div class="mermaid">
+flowchart TD
+  DK(["DALLIN KOECHER"])
+  DK -->|"Executive Director<br/>since March 2020"| CH["Heber Valley Chamber,<br/>Tourism, and Economic<br/>Development"]
+  DK -->|"board<br/>member"| W["Wasatch Open<br/>Lands Board"]
+  W -->|"annual form,<br/>signed Feb. 4, 2026"| F["One line: 'Heber Valley<br/>Chamber of Commerce<br/>— Director'"]
+  CH -.->|"listed, in<br/>shorthand"| F
+  F -.->|"not listed"| L["• CAMS: Director<br/>since 2019<br/>• Heber Valley Music:<br/>Director/Trustee<br/>since 2019<br/>• Wasatch County Arts<br/>Council: incorporator/<br/>Director since 2016<br/>• Red White and Blue<br/>Festival Inc.: Director<br/>• Heber City Board of<br/>Adjustments, 2019-2021"]
+</div>
+    <p class="hvc-cap">Facts from "What his own form says" above. Sources: his Feb. 4, 2026 Wasatch Open Lands Board disclosure form; Utah Division of Corporations filings; OpenCorporates; Heber City payroll records.</p>
+  </div>
 
   <section class="block">
     <h2 class="section-title">The entities, one at a time</h2>
@@ -351,6 +386,25 @@
       a tax designation, not a change in what kind of organization it's always been.</p>
   </section>
 
+  <div class="hvc-chart hvc-mm hvc-shot">
+    <p class="hvc-title">The hub at 475 N. Main Street</p>
+<div class="mermaid">
+flowchart TD
+  DK(["DALLIN KOECHER"])
+  DK -->|"attached to<br/>all three"| A
+  subgraph A["Same address: 475 N. Main St."]
+    direction TB
+    CAMS["<b>CAMS</b><br/>Koecher: director<br/>Matt Brower, City<br/>Manager: director<br/>since 2019<br/>Rachel Kahler: paid<br/>Executive Director"]
+    RWB["<b>Red White and Blue<br/>Festival Inc.</b><br/>Koecher: director<br/>Brower: director<br/>since 2023<br/>Kahler: board"]
+    ART["<b>Wasatch County<br/>Arts Council</b><br/>Koecher: incorporator,<br/>director"]
+    CAMS ~~~ RWB ~~~ ART
+  end
+  A ~~~ CH
+  DK -->|"Executive<br/>Director"| CH["<b>Heber Valley<br/>Chamber/CVB</b><br/>Executive Board chair:<br/>Mark Nelson, Wasatch<br/>County Councilman"]
+</div>
+    <p class="hvc-cap">Facts from "A small, tightly connected hub" above. Sources: Utah Division of Corporations filings and OpenCorporates officer records; CAMS's April 2026 board announcement; Heber Valley Chamber/CVB staff directory.</p>
+  </div>
+
   <section class="block">
     <h2 class="section-title">Where this stands</h2>
     <p>Koecher was not asked for comment, consistent with this publication's practice of reporting from public
@@ -393,6 +447,14 @@
   </div>
 </footer>
 
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent &middot; Accountability &middot; Journalism</span></div>
+
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script>
+if (window.mermaid) { mermaid.initialize({ startOnLoad: false, theme: 'base', fontFamily: "'Source Sans 3', Arial, sans-serif", themeVariables: { fontSize: '18px', primaryColor: '#ffffff', primaryBorderColor: '#6E1F2B', primaryTextColor: '#211714', lineColor: '#4A3B35', edgeLabelBackground: '#F3ECE0', clusterBkg: '#F3ECE0', clusterBorder: '#C9BBA4', titleColor: '#6E1F2B' }, flowchart: { htmlLabels: true, curve: 'basis', useMaxWidth: true, nodeSpacing: 30, rankSpacing: 50 } });
+  var hvcRun = function(){ mermaid.run({ querySelector: '.hvc-mm .mermaid' }); };
+  (document.fonts && document.fonts.ready) ? document.fonts.ready.then(hvcRun, hvcRun) : hvcRun(); }
+</script>
 </body>
 </html>
