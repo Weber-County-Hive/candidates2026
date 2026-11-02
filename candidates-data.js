@@ -482,6 +482,20 @@ const CANDIDATES = [
     dateUpdated: "2026-10-02"
   },
   {
+    id: "hd39-ivory-howells",
+    race: "House District 39 — West Jordan, Midvale and Sandy",
+    level: "State",
+    county: "Salt Lake",
+    caseNumber: "CASE 38",
+    names: "Ivory vs. Howells",
+    verdict: "Two House PACs, a Shared Vendor, and the Book Law’s Author",
+    tags: ["Leadership PAC Money", "Shared Vendor", "Book Laws", "Disclosure Forms", "Incumbent"],
+    stamp: "Active",
+    href: "hd39-ivory-howells.html",
+    datePosted: "2026-11-02",
+    dateUpdated: "2026-11-02"
+  },
+  {
     id: "hd66-shelley-mashek-hatch",
     race: "House District 66 — Juab and Sanpete Counties",
     level: "State",
